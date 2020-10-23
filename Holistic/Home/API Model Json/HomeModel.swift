@@ -23,3 +23,19 @@ struct TaskModel {
         return ["title" : title!, "time" : time!, "detail" : detail!, "image" : image!, "color" : color!]
     }
 }
+
+struct WakeupModel {
+    var imgBtn, title, desc :String!
+    var isExpand : Bool!
+    
+    init(_ dict : [String : Any]) {
+        imgBtn = dict["imgBtn"] as? String ?? ""
+        title = dict["title"] as? String ?? ""
+        desc = dict["desc"] as? String ?? ""
+        isExpand = dict["isExpand"] as? Bool ?? false
+    }
+    
+    func dictionary() -> [String : Any] {
+        return ["imgBtn" : imgBtn!, "title" : title!, "desc" : desc!, "isExpand" : isExpand!]
+    }
+}

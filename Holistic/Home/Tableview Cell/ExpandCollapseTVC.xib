@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Medium.ttf">
+            <string>WorkSans-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandCollapseTVC" id="KGk-i7-Jjw" customClass="ExpandCollapseTVC" customModule="Holistic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02E-41-ruW">
+                        <rect key="frame" x="10" y="10" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="JlO-DO-Scq"/>
+                            <constraint firstAttribute="height" constant="28" id="xRd-ld-ZpK"/>
+                        </constraints>
+                        <state key="normal" image="help"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV5-FJ-ZRb" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                        <rect key="frame" x="48" y="15" width="224" height="16"/>
+                        <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3D-eF-RxR">
+                        <rect key="frame" x="282" y="10" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="nPe-H4-wNu"/>
+                            <constraint firstAttribute="width" constant="28" id="wn6-WZ-K0L"/>
+                        </constraints>
+                        <state key="normal" image="plus"/>
+                        <state key="selected" image="minus"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KV5-FJ-ZRb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="2H4-Qf-oNz"/>
+                    <constraint firstItem="K3D-eF-RxR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7O7-wB-q2x"/>
+                    <constraint firstItem="KV5-FJ-ZRb" firstAttribute="leading" secondItem="02E-41-ruW" secondAttribute="trailing" constant="10" id="8z5-G3-cGq"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="02E-41-ruW" secondAttribute="bottom" constant="9" id="FPQ-7l-gqz"/>
+                    <constraint firstItem="K3D-eF-RxR" firstAttribute="leading" secondItem="KV5-FJ-ZRb" secondAttribute="trailing" constant="10" id="KIa-nA-ksk"/>
+                    <constraint firstAttribute="trailing" secondItem="K3D-eF-RxR" secondAttribute="trailing" constant="10" id="TRy-LU-OBi"/>
+                    <constraint firstItem="02E-41-ruW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Zx6-HC-pxk"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KV5-FJ-ZRb" secondAttribute="bottom" constant="16" id="ima-iW-lHM"/>
+                    <constraint firstItem="02E-41-ruW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vcl-uN-xkb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="expandBtn" destination="K3D-eF-RxR" id="slL-wi-LIn"/>
+                <outlet property="imgBtn" destination="02E-41-ruW" id="Lih-YU-COC"/>
+                <outlet property="titleLbl" destination="KV5-FJ-ZRb" id="WAh-aB-GWo"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="153"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="help" width="28" height="28"/>
+        <image name="minus" width="22" height="22"/>
+        <image name="plus" width="22" height="22"/>
+    </resources>
+</document>

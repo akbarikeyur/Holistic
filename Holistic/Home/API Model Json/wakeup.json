@@ -1,0 +1,26 @@
+[
+    {
+        "imgBtn" : "help",
+        "title" : "How",
+        "desc" : "How\n• Set an alarm\n• Wake up while the sun is rising",
+        "isExpand" : false
+    },
+    {
+        "imgBtn" : "like",
+        "title" : "Positive Effect (If Done) - Motivation",
+        "desc" : "Positive Effect (If Done) - Motivation\n• Being in tune with nature\n• More energetic throughout the day\n• More productive throughout the day",
+        "isExpand" : false
+    },
+    {
+        "imgBtn" : "unlike",
+        "title" : "Negative Effect (If Not Done)",
+        "desc" : "Negative Effect (If Not Done)\n• Out of tune with nature\n• Less energetic\n• Less productive",
+        "isExpand" : false
+    },
+    {
+        "imgBtn" : "alternatives",
+        "title" : "Alternatives",
+        "desc" : "Alternatives\n• Wake up 30 minutes earlier from your usual time every morning (gradually move your wake up time to time the sun rises)",
+        "isExpand" : false
+    }
+]
