@@ -14,4 +14,5 @@ target 'Holistic' do
   pod 'PEPhotoCropEditor'
   pod 'SKPhotoBrowser'
   pod 'Alamofire', '~> 4'
+  pod 'Charts'
 end

@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
   - DropDown (2.3.13)
   - IQKeyboardManagerSwift (6.5.5)
   - NVActivityIndicatorView (4.8.0):
@@ -14,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4)
+  - Charts
   - DropDown
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
@@ -25,6 +29,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - DropDown
     - IQKeyboardManagerSwift
     - NVActivityIndicatorView
@@ -35,6 +40,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
@@ -43,6 +49,6 @@ SPEC CHECKSUMS:
   SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: e068cafc8d3bec43f6301fb2c2ab3638343c8e5b
+PODFILE CHECKSUM: 1d36e7ac341e1ede24b0e7e75cd19010cee09243
 
 COCOAPODS: 1.9.3

@@ -18,8 +18,10 @@ class HolisticLifestyleTabVC: UIViewController {
     var selectedTab = 0
     
     let flowerTab : FlowerLifeTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "FlowerLifeTabVC") as! FlowerLifeTabVC
-    let taskTab : CurrentTaskTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "CurrentTaskTabVC") as! CurrentTaskTabVC
-    
+    let currentTab : CurrentTaskTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "CurrentTaskTabVC") as! CurrentTaskTabVC
+    let completedTab : CompletedTaskTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "CompletedTaskTabVC") as! CompletedTaskTabVC
+    let missedTab : MissedTaskTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "MissedTaskTabVC") as! MissedTaskTabVC
+    let statisticsTab : StatisticsTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "StatisticsTabVC") as! StatisticsTabVC
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,15 +93,29 @@ extension HolisticLifestyleTabVC : UICollectionViewDelegate, UICollectionViewDat
             flowerTab.setupDetails()
         }
         else if selectedTab == 1 {
-            displaySubViewtoParentView(mainContainerView, subview: taskTab.view)
-            taskTab.setupDetails()
+            displaySubViewtoParentView(mainContainerView, subview: currentTab.view)
+            currentTab.setupDetails()
+        }
+        else if selectedTab == 2 {
+            displaySubViewtoParentView(mainContainerView, subview: completedTab.view)
+            completedTab.setupDetails()
+        }
+        else if selectedTab == 3 {
+            displaySubViewtoParentView(mainContainerView, subview: missedTab.view)
+            missedTab.setupDetails()
+        }
+        else if selectedTab == 4 {
+            displaySubViewtoParentView(mainContainerView, subview: statisticsTab.view)
+            statisticsTab.setupDetails()
         }
     }
     
-    func resetContainerView()
-    {
+    func resetContainerView() {
         flowerTab.view.removeFromSuperview()
-        taskTab.view.removeFromSuperview()
+        currentTab.view.removeFromSuperview()
+        completedTab.view.removeFromSuperview()
+        missedTab.view.removeFromSuperview()
+        statisticsTab.view.removeFromSuperview()
     }
     
     @objc func updateHeight(_ noti : Notification) {

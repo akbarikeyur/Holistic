@@ -9,18 +9,19 @@
 import Foundation
 
 struct TaskModel {
-    var title, time, detail, image, color : String!
+    var title, time, action, action_img, image, color : String!
     
     init(_ dict : [String : Any]) {
         title = dict["title"] as? String ?? ""
         time = dict["time"] as? String ?? ""
-        detail = dict["detail"] as? String ?? ""
+        action = dict["action"] as? String ?? ""
+        action_img = dict["action_img"] as? String ?? ""
         image = dict["image"] as? String ?? ""
         color = dict["color"] as? String ?? ""
     }
     
     func dictionary() -> [String : Any] {
-        return ["title" : title!, "time" : time!, "detail" : detail!, "image" : image!, "color" : color!]
+        return ["title" : title!, "time" : time!, "action" : action!, "action_img" : action_img!, "image" : image!, "color" : color!]
     }
 }
 

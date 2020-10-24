@@ -24,8 +24,20 @@
 		79BC837225430FB7004A0B49 /* CurrentTaskTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC837125430FB7004A0B49 /* CurrentTaskTabVC.swift */; };
 		79BC83762543100A004A0B49 /* CurrentTaskTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC83742543100A004A0B49 /* CurrentTaskTVC.swift */; };
 		79BC83772543100A004A0B49 /* CurrentTaskTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79BC83752543100A004A0B49 /* CurrentTaskTVC.xib */; };
-		79BC837A25431207004A0B49 /* task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79BC837925431207004A0B49 /* task.json */; };
+		79BC837A25431207004A0B49 /* current_task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79BC837925431207004A0B49 /* current_task.json */; };
 		79BC837C2543141A004A0B49 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC837B2543141A004A0B49 /* HomeModel.swift */; };
+		79D6D0082543ECD000945D7C /* completed_task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D6D0072543ECD000945D7C /* completed_task.json */; };
+		79D6D00A2543ECE700945D7C /* missed_task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D6D0092543ECE700945D7C /* missed_task.json */; };
+		79D6D00C2543F2B300945D7C /* CompletedTaskTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D00B2543F2B300945D7C /* CompletedTaskTabVC.swift */; };
+		79D6D00E2543F40A00945D7C /* MissedTaskTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D00D2543F40A00945D7C /* MissedTaskTabVC.swift */; };
+		79D6D0122543FFB100945D7C /* StatisticsTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D0112543FFB100945D7C /* StatisticsTabVC.swift */; };
+		79D6D01B254408EA00945D7C /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D014254408E900945D7C /* XYMarkerView.swift */; };
+		79D6D01C254408EA00945D7C /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D015254408E900945D7C /* RadarMarkerView.swift */; };
+		79D6D01D254408EA00945D7C /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D017254408EA00945D7C /* IntAxisValueFormatter.swift */; };
+		79D6D01E254408EA00945D7C /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D018254408EA00945D7C /* DayAxisValueFormatter.swift */; };
+		79D6D01F254408EA00945D7C /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D019254408EA00945D7C /* DateValueFormatter.swift */; };
+		79D6D020254408EA00945D7C /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D01A254408EA00945D7C /* LargeValueFormatter.swift */; };
+		79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D0212544096300945D7C /* BalloonMarker.swift */; };
 		79EFD5BB2542BE0E006D06FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EFD5BA2542BE0E006D06FB /* AppDelegate.swift */; };
 		79EFD5BF2542BE0E006D06FB /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EFD5BE2542BE0E006D06FB /* WelcomeVC.swift */; };
 		79EFD5C22542BE0E006D06FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EFD5C02542BE0E006D06FB /* Main.storyboard */; };
@@ -96,8 +108,20 @@
 		79BC837125430FB7004A0B49 /* CurrentTaskTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTaskTabVC.swift; sourceTree = "<group>"; };
 		79BC83742543100A004A0B49 /* CurrentTaskTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTaskTVC.swift; sourceTree = "<group>"; };
 		79BC83752543100A004A0B49 /* CurrentTaskTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentTaskTVC.xib; sourceTree = "<group>"; };
-		79BC837925431207004A0B49 /* task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = task.json; sourceTree = "<group>"; };
+		79BC837925431207004A0B49 /* current_task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = current_task.json; sourceTree = "<group>"; };
 		79BC837B2543141A004A0B49 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		79D6D0072543ECD000945D7C /* completed_task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = completed_task.json; sourceTree = "<group>"; };
+		79D6D0092543ECE700945D7C /* missed_task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missed_task.json; sourceTree = "<group>"; };
+		79D6D00B2543F2B300945D7C /* CompletedTaskTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskTabVC.swift; sourceTree = "<group>"; };
+		79D6D00D2543F40A00945D7C /* MissedTaskTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissedTaskTabVC.swift; sourceTree = "<group>"; };
+		79D6D0112543FFB100945D7C /* StatisticsTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTabVC.swift; sourceTree = "<group>"; };
+		79D6D014254408E900945D7C /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		79D6D015254408E900945D7C /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
+		79D6D017254408EA00945D7C /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntAxisValueFormatter.swift; sourceTree = "<group>"; };
+		79D6D018254408EA00945D7C /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
+		79D6D019254408EA00945D7C /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		79D6D01A254408EA00945D7C /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
+		79D6D0212544096300945D7C /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		79EFD5B72542BE0E006D06FB /* Holistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EFD5BA2542BE0E006D06FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EFD5BE2542BE0E006D06FB /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -184,6 +208,9 @@
 				79BC836D25430784004A0B49 /* HolisticLifestyleTabVC.swift */,
 				79BC836F25430EBB004A0B49 /* FlowerLifeTabVC.swift */,
 				79BC837125430FB7004A0B49 /* CurrentTaskTabVC.swift */,
+				79D6D00B2543F2B300945D7C /* CompletedTaskTabVC.swift */,
+				79D6D00D2543F40A00945D7C /* MissedTaskTabVC.swift */,
+				79D6D0112543FFB100945D7C /* StatisticsTabVC.swift */,
 				79BC8378254311E0004A0B49 /* API Model Json */,
 				79BC837325430FF1004A0B49 /* Tableview Cell */,
 				79BC83682542FF1F004A0B49 /* Collectionview Cell */,
@@ -224,11 +251,34 @@
 		79BC8378254311E0004A0B49 /* API Model Json */ = {
 			isa = PBXGroup;
 			children = (
-				79BC837925431207004A0B49 /* task.json */,
+				79BC837925431207004A0B49 /* current_task.json */,
+				79D6D0072543ECD000945D7C /* completed_task.json */,
+				79D6D0092543ECE700945D7C /* missed_task.json */,
 				18B435AD25435C8200757513 /* wakeup.json */,
 				79BC837B2543141A004A0B49 /* HomeModel.swift */,
 			);
 			path = "API Model Json";
+			sourceTree = "<group>";
+		};
+		79D6D013254408E900945D7C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				79D6D0212544096300945D7C /* BalloonMarker.swift */,
+				79D6D014254408E900945D7C /* XYMarkerView.swift */,
+				79D6D015254408E900945D7C /* RadarMarkerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		79D6D016254408EA00945D7C /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				79D6D017254408EA00945D7C /* IntAxisValueFormatter.swift */,
+				79D6D018254408EA00945D7C /* DayAxisValueFormatter.swift */,
+				79D6D019254408EA00945D7C /* DateValueFormatter.swift */,
+				79D6D01A254408EA00945D7C /* LargeValueFormatter.swift */,
+			);
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 		79EFD5AE2542BE0E006D06FB = {
@@ -269,6 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				79EFD5CF2542C449006D06FB /* AppCommon */,
+				79D6D013254408E900945D7C /* Components */,
+				79D6D016254408EA00945D7C /* Formatters */,
 				79BC835F2542EF85004A0B49 /* Custom Tab Bar */,
 				79EFD6012542C44A006D06FB /* Objective C */,
 				79EFD5DC2542C449006D06FB /* ReusableInterfaces */,
@@ -456,14 +508,16 @@
 				18B435AE25435C8200757513 /* wakeup.json in Resources */,
 				79EFD5C72542BE10006D06FB /* LaunchScreen.storyboard in Resources */,
 				79BC835D2542EEDC004A0B49 /* Home.storyboard in Resources */,
+				79D6D0082543ECD000945D7C /* completed_task.json in Resources */,
 				79BC836C2542FFA5004A0B49 /* TabCVC.xib in Resources */,
 				79EFD63A2542CC11006D06FB /* WorkSans-Light.ttf in Resources */,
 				79EFD60C2542C44A006D06FB /* Localizable.strings in Resources */,
+				79D6D00A2543ECE700945D7C /* missed_task.json in Resources */,
 				18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */,
 				79BC83632542EF85004A0B49 /* CustomTabBarView.xib in Resources */,
 				79EFD5C42542BE10006D06FB /* Assets.xcassets in Resources */,
 				79EFD5C22542BE0E006D06FB /* Main.storyboard in Resources */,
-				79BC837A25431207004A0B49 /* task.json in Resources */,
+				79BC837A25431207004A0B49 /* current_task.json in Resources */,
 				79EFD63B2542CC11006D06FB /* WorkSans-Medium.ttf in Resources */,
 				79BC83772543100A004A0B49 /* CurrentTaskTVC.xib in Resources */,
 				79EFD6342542CBF5006D06FB /* WorkSans-Bold.ttf in Resources */,
@@ -522,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79BC836B2542FFA5004A0B49 /* TabCVC.swift in Sources */,
+				79D6D0122543FFB100945D7C /* StatisticsTabVC.swift in Sources */,
 				79EFD60D2542C44A006D06FB /* SHA1.swift in Sources */,
 				79BC83762543100A004A0B49 /* CurrentTaskTVC.swift in Sources */,
 				79EFD6312542C44A006D06FB /* UIImage+ProportionalFill.m in Sources */,
@@ -534,6 +589,7 @@
 				18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */,
 				79EFD6402542D040006D06FB /* SwipeButtonView.swift in Sources */,
 				79EFD60F2542C44A006D06FB /* UploadImageVC.swift in Sources */,
+				79D6D00C2543F2B300945D7C /* CompletedTaskTabVC.swift in Sources */,
 				79EFD6282542C44A006D06FB /* PlaceholderTextView.swift in Sources */,
 				79EFD6272542C44A006D06FB /* CollectionView.swift in Sources */,
 				79EFD6222542C44A006D06FB /* Fonts.swift in Sources */,
@@ -543,15 +599,19 @@
 				79EFD6052542C44A006D06FB /* GlobalConstant.swift in Sources */,
 				79EFD6122542C44A006D06FB /* Array+RUI.swift in Sources */,
 				79EFD6082542C44A006D06FB /* DatePickerManager.swift in Sources */,
+				79D6D01E254408EA00945D7C /* DayAxisValueFormatter.swift in Sources */,
 				79EFD6252542C44A006D06FB /* View.swift in Sources */,
+				79D6D01F254408EA00945D7C /* DateValueFormatter.swift in Sources */,
 				79EFD62D2542C44A006D06FB /* TextField.swift in Sources */,
 				79EFD61A2542C44A006D06FB /* UIImage+RUI.swift in Sources */,
 				79BC83672542F8C2004A0B49 /* HomeVC.swift in Sources */,
 				79BC837225430FB7004A0B49 /* CurrentTaskTabVC.swift in Sources */,
+				79D6D020254408EA00945D7C /* LargeValueFormatter.swift in Sources */,
 				79BC837C2543141A004A0B49 /* HomeModel.swift in Sources */,
 				79EFD6142542C44A006D06FB /* Data+RUI.swift in Sources */,
 				79EFD6292542C44A006D06FB /* TableViewCell.swift in Sources */,
 				79EFD62F2542C44A006D06FB /* ImageView.swift in Sources */,
+				79D6D01C254408EA00945D7C /* RadarMarkerView.swift in Sources */,
 				79EFD6062542C44A006D06FB /* DateTimeUtility.swift in Sources */,
 				79EFD6112542C44A006D06FB /* UIDevice+Type.swift in Sources */,
 				79EFD60B2542C44A006D06FB /* MD5.swift in Sources */,
@@ -560,7 +620,9 @@
 				79EFD62B2542C44A006D06FB /* GradientLayer.swift in Sources */,
 				79EFD6132542C44A006D06FB /* NSObject+Copy.swift in Sources */,
 				79EFD6162542C44A006D06FB /* String+RUI.swift in Sources */,
+				79D6D00E2543F40A00945D7C /* MissedTaskTabVC.swift in Sources */,
 				79EFD5BF2542BE0E006D06FB /* WelcomeVC.swift in Sources */,
+				79D6D01B254408EA00945D7C /* XYMarkerView.swift in Sources */,
 				79EFD6072542C44A006D06FB /* FloatRatingView.swift in Sources */,
 				79EFD6262542C44A006D06FB /* DatePicker.swift in Sources */,
 				79EFD6232542C44A006D06FB /* Colors.swift in Sources */,
@@ -569,6 +631,8 @@
 				79EFD6152542C44A006D06FB /* UIColor+RUI.swift in Sources */,
 				79BC83652542EF85004A0B49 /* CustomTabBarController.swift in Sources */,
 				79EFD62C2542C44A006D06FB /* TableView.swift in Sources */,
+				79D6D01D254408EA00945D7C /* IntAxisValueFormatter.swift in Sources */,
+				79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */,
 				79EFD6192542C44A006D06FB /* Date+RUI.swift in Sources */,
 				79EFD5BB2542BE0E006D06FB /* AppDelegate.swift in Sources */,
 				79EFD6302542C44A006D06FB /* Button.swift in Sources */,
@@ -718,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRJ7A3W5NN;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -737,6 +802,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRJ7A3W5NN;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

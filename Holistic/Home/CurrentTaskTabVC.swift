@@ -53,7 +53,7 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
         wakeTblView.register(UINib.init(nibName: "ExpandCollapseTVC", bundle: nil), forCellReuseIdentifier: "ExpandCollapseTVC")
         
         arrTaskData = [TaskModel]()
-        for temp in getJsonFromFile("task") {
+        for temp in getJsonFromFile("current_task") {
             arrTaskData.append(TaskModel.init(temp))
         }
         tblView.reloadData()

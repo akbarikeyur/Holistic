@@ -1,0 +1,30 @@
+[
+    {
+        "title" : "Time to wake up",
+        "time" : "5:30-6:00 AM",
+        "action" : "Details",
+        "image" : "ic_sun",
+        "color" : "FF7900"
+    },
+    {
+        "title" : "Start your day on alive water",
+        "time" : "6:00 AM",
+        "action" : "Details",
+        "image" : "ic_water",
+        "color" : "1E87FD"
+    },
+    {
+        "title" : "Time for yourself",
+        "time" : "9:30 AM",
+        "action" : "Details",
+        "image" : "ic_moon",
+        "color" : "4C5A81"
+    },
+    {
+        "title" : "Time to meditate",
+        "time" : "7:00 AM",
+        "action" : "Details",
+        "image" : "ic_medicate",
+        "color" : "8B80F8"
+    }
+]
