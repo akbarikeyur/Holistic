@@ -40,6 +40,8 @@ struct IMAGE {
 struct STORYBOARD {
     static var MAIN = UIStoryboard(name: "Main", bundle: nil)
     static var HOME = UIStoryboard(name: "Home", bundle: nil)
+    static var HOTEL = UIStoryboard(name: "Hotel", bundle: nil)
+    static var RESTAURANT = UIStoryboard(name: "Restaurant", bundle: nil)
 }
 
 struct NOTIFICATION {

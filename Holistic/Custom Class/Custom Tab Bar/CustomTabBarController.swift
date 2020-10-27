@@ -61,10 +61,10 @@ class CustomTabBarController: UITabBarController, CustomTabBarViewDelegate {
         let navController2 : UINavigationController = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HomeVCNav") as! UINavigationController
         viewControllers.append(navController2)
         
-        let navController3 : UINavigationController = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HomeVCNav") as! UINavigationController
+        let navController3 : UINavigationController = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsVCNav") as! UINavigationController
         viewControllers.append(navController3)
         
-        let navController4 : UINavigationController = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HomeVCNav") as! UINavigationController
+        let navController4 : UINavigationController = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantVCNav") as! UINavigationController
         viewControllers.append(navController4)
         
         let navController5 : UINavigationController = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HomeVCNav") as! UINavigationController
@@ -72,7 +72,7 @@ class CustomTabBarController: UITabBarController, CustomTabBarViewDelegate {
         
         self.viewControllers = viewControllers;
         
-        self.tabSelectedAtIndex(index: 2)
+        self.tabSelectedAtIndex(index: 0)
     }
     
     func tabSelectedAtIndex(index: Int) {

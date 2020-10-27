@@ -19,6 +19,8 @@ class HomeVC: UIViewController {
     var selectedTab = 0
     
     let holisticTab : HolisticLifestyleTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HolisticLifestyleTabVC") as! HolisticLifestyleTabVC
+    let restaurantTab : RestaurantTabVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantTabVC") as! RestaurantTabVC
+    let hotelTab : HotelsTabVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsTabVC") as! HotelsTabVC
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,7 @@ class HomeVC: UIViewController {
     
     //MARK:- Button click event
     @IBAction func clickToSideMenu(_ sender: Any) {
-        
+        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
     }
     
     @IBAction func clickToNotification(_ sender: Any) {
@@ -103,11 +105,22 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             displaySubViewtoParentView(mainContainerView, subview: holisticTab.view)
             holisticTab.setupDetails()
         }
+        else if selectedTab == 1 {
+            
+        }
+        else if selectedTab == 2 {
+            displaySubViewtoParentView(mainContainerView, subview: restaurantTab.view)
+            restaurantTab.setupDetails()
+        }
+        else if selectedTab == 3 {
+            displaySubViewtoParentView(mainContainerView, subview: hotelTab.view)
+            hotelTab.setupDetails()
+        }
     }
     
     func resetContainerView()
     {
         holisticTab.view.removeFromSuperview()
-        
+        hotelTab.view.removeFromSuperview()
     }
 }

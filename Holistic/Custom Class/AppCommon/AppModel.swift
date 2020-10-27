@@ -80,22 +80,17 @@ class AppModel: NSObject {
         }
         return 0
     }
-    
-//    func getRolesArrOfDictionary(arr:[RoleModel]) -> [[String:Any]] {
-//        let len:Int = arr.count
-//        var retArr:[[String:Any]] =  [[String:Any]] ()
-//        for i in 0..<len{
-//            retArr.append(arr[i].dictionary())
-//        }
-//        return retArr
-//    }
 }
 
 
 struct UserModel {
-    var id : String!
+    var id : Int!
     
     init(dict : [String : Any]) {
-        
+        id = AppModel.shared.getIntValue(dict, "id")
+    }
+    
+    func dictionary() -> [String : Any] {
+        return ["id" : id!]
     }
 }

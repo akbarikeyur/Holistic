@@ -316,6 +316,111 @@
             </objects>
             <point key="canvasLocation" x="1622" y="831"/>
         </scene>
+        <!--Side Menu Container View Controller-->
+        <scene sceneID="Wm0-8Z-hQd">
+            <objects>
+                <viewController storyboardIdentifier="MFSideMenuContainerViewController" id="rNt-R6-vYN" customClass="MFSideMenuContainerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kkd-QJ-5KT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2ou-CX-Ghy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cex-85-eR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622" y="138"/>
+        </scene>
+        <!--Side MenuVC-->
+        <scene sceneID="Jg7-PC-paf">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuVC" id="dqQ-LJ-PzZ" customClass="SideMenuVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F8n-ct-UtE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-zi-nQ1" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="270" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Mms-HB-eFq"/>
+                                    <constraint firstAttribute="height" constant="40" id="k3e-QP-e6s"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToClose:" destination="dqQ-LJ-PzZ" eventType="touchUpInside" id="0AM-y4-raz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Helen Herry," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEY-IK-USy" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="60" width="300" height="29.5"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="helen@dummy.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-GP-2Pv" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="89.5" width="300" height="19"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YPC-ZA-13U">
+                                <rect key="frame" x="0.0" y="128.5" width="320" height="439.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dqQ-LJ-PzZ" id="aTy-mB-QUQ"/>
+                                    <outlet property="delegate" destination="dqQ-LJ-PzZ" id="apb-7I-jki"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oEY-IK-USy" firstAttribute="top" secondItem="SJe-zi-nQ1" secondAttribute="bottom" id="0Zk-dP-I2t"/>
+                            <constraint firstItem="YPC-ZA-13U" firstAttribute="leading" secondItem="OKf-Mt-fzw" secondAttribute="leading" id="Wgq-1G-Awu"/>
+                            <constraint firstItem="OKf-Mt-fzw" firstAttribute="bottom" secondItem="YPC-ZA-13U" secondAttribute="bottom" id="YRO-i4-R4m"/>
+                            <constraint firstItem="oEY-IK-USy" firstAttribute="leading" secondItem="OKf-Mt-fzw" secondAttribute="leading" constant="10" id="eLH-O3-7IB"/>
+                            <constraint firstItem="b5v-GP-2Pv" firstAttribute="top" secondItem="oEY-IK-USy" secondAttribute="bottom" id="eOT-BL-EVw"/>
+                            <constraint firstItem="OKf-Mt-fzw" firstAttribute="trailing" secondItem="SJe-zi-nQ1" secondAttribute="trailing" constant="10" id="edc-aZ-YIq"/>
+                            <constraint firstItem="YPC-ZA-13U" firstAttribute="trailing" secondItem="OKf-Mt-fzw" secondAttribute="trailing" id="g4z-36-4Bb"/>
+                            <constraint firstItem="YPC-ZA-13U" firstAttribute="top" secondItem="b5v-GP-2Pv" secondAttribute="bottom" constant="20" id="gMi-NV-1bJ"/>
+                            <constraint firstItem="OKf-Mt-fzw" firstAttribute="trailing" secondItem="b5v-GP-2Pv" secondAttribute="trailing" constant="10" id="l4s-8h-Odh"/>
+                            <constraint firstItem="b5v-GP-2Pv" firstAttribute="leading" secondItem="OKf-Mt-fzw" secondAttribute="leading" constant="10" id="lNT-fw-i2c"/>
+                            <constraint firstItem="OKf-Mt-fzw" firstAttribute="trailing" secondItem="oEY-IK-USy" secondAttribute="trailing" constant="10" id="ucG-DT-XHr"/>
+                            <constraint firstItem="SJe-zi-nQ1" firstAttribute="top" secondItem="OKf-Mt-fzw" secondAttribute="top" constant="20" id="wfO-mo-JQJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OKf-Mt-fzw"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLbl" destination="b5v-GP-2Pv" id="xM1-G8-W3l"/>
+                        <outlet property="nameLbl" destination="oEY-IK-USy" id="1iZ-eL-eQH"/>
+                        <outlet property="tblView" destination="YPC-ZA-13U" id="UQf-g1-odK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTR-Vb-T3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2301" y="830"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bFl-K6-sK3">
             <objects>
@@ -354,6 +459,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="12.5" height="12.5"/>
         <image name="continue_btn" width="150" height="46"/>
         <image name="info_orange" width="38" height="38"/>
         <image name="logo_orange" width="136" height="138"/>

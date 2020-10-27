@@ -5,6 +5,7 @@ PODS:
   - Charts/Core (3.5.0)
   - DropDown (2.3.13)
   - IQKeyboardManagerSwift (6.5.5)
+  - MFSideMenu (0.5.5)
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
@@ -13,6 +14,7 @@ PODS:
     - SDWebImage/Core (= 5.8.1)
   - SDWebImage/Core (5.8.1)
   - SKPhotoBrowser (6.1.0)
+  - TagListView (1.4.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
@@ -20,10 +22,12 @@ DEPENDENCIES:
   - Charts
   - DropDown
   - IQKeyboardManagerSwift
+  - MFSideMenu
   - NVActivityIndicatorView
   - PEPhotoCropEditor
   - SDWebImage
   - SKPhotoBrowser
+  - TagListView
   - Toast-Swift
 
 SPEC REPOS:
@@ -32,10 +36,12 @@ SPEC REPOS:
     - Charts
     - DropDown
     - IQKeyboardManagerSwift
+    - MFSideMenu
     - NVActivityIndicatorView
     - PEPhotoCropEditor
     - SDWebImage
     - SKPhotoBrowser
+    - TagListView
     - Toast-Swift
 
 SPEC CHECKSUMS:
@@ -43,12 +49,14 @@ SPEC CHECKSUMS:
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  MFSideMenu: 268122e6894f2747fc3a2b48578100b232506c60
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   PEPhotoCropEditor: 613292fce009efd085e7aed975f1ebb3fec8bb7b
   SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
   SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
+  TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 1d36e7ac341e1ede24b0e7e75cd19010cee09243
+PODFILE CHECKSUM: 481877454f784fe7e92999b0d418e98662ceac91
 
 COCOAPODS: 1.9.3

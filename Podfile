@@ -15,4 +15,6 @@ target 'Holistic' do
   pod 'SKPhotoBrowser'
   pod 'Alamofire', '~> 4'
   pod 'Charts'
+  pod 'MFSideMenu'
+  pod 'TagListView'
 end
