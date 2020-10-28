@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Medium.ttf">
+            <string>WorkSans-Medium</string>
+        </array>
+        <array key="WorkSans-Regular.ttf">
+            <string>WorkSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodListTVC" id="KGk-i7-Jjw" customClass="FoodListTVC" customModule="Holistic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRh-cv-dWV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JF-6a-mvh" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_food" translatesAutoresizingMaskIntoConstraints="NO" id="yVV-Ai-Y2F">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yVV-Ai-Y2F" secondAttribute="bottom" id="5x8-pe-rG8"/>
+                                    <constraint firstItem="yVV-Ai-Y2F" firstAttribute="top" secondItem="6JF-6a-mvh" secondAttribute="top" id="EP9-JK-0Kv"/>
+                                    <constraint firstAttribute="width" constant="80" id="K6J-eR-coc"/>
+                                    <constraint firstItem="yVV-Ai-Y2F" firstAttribute="leading" secondItem="6JF-6a-mvh" secondAttribute="leading" id="uoR-dJ-bRH"/>
+                                    <constraint firstAttribute="trailing" secondItem="yVV-Ai-Y2F" secondAttribute="trailing" id="yS8-pU-x4H"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheese Mushroom Momos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQE-D6-FPX" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="100" y="10" width="210" height="16.5"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Cheese Lover's Delight With Mozzarella Cheese &amp; Mushrooms" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCU-h9-seN" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="100" y="31.5" width="210" height="23.5"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED 21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHf-9H-4hc" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="100" y="65" width="210" height="16.5"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ULH-4X-3D4" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99" width="320" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="HNm-Lo-X2u"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QHf-9H-4hc" firstAttribute="leading" secondItem="6JF-6a-mvh" secondAttribute="trailing" constant="10" id="12A-Y3-gVn"/>
+                            <constraint firstItem="6JF-6a-mvh" firstAttribute="leading" secondItem="cRh-cv-dWV" secondAttribute="leading" constant="10" id="12c-z8-fft"/>
+                            <constraint firstAttribute="trailing" secondItem="NCU-h9-seN" secondAttribute="trailing" constant="10" id="5iJ-6r-DeE"/>
+                            <constraint firstItem="NCU-h9-seN" firstAttribute="top" secondItem="jQE-D6-FPX" secondAttribute="bottom" constant="5" id="7lc-Eq-3gD"/>
+                            <constraint firstItem="NCU-h9-seN" firstAttribute="leading" secondItem="6JF-6a-mvh" secondAttribute="trailing" constant="10" id="9qi-hI-Udd"/>
+                            <constraint firstItem="QHf-9H-4hc" firstAttribute="top" secondItem="NCU-h9-seN" secondAttribute="bottom" constant="10" id="QQr-Dq-OgX"/>
+                            <constraint firstAttribute="trailing" secondItem="jQE-D6-FPX" secondAttribute="trailing" constant="10" id="SMX-5q-3IR"/>
+                            <constraint firstItem="jQE-D6-FPX" firstAttribute="top" secondItem="cRh-cv-dWV" secondAttribute="top" constant="10" id="VOb-eW-463"/>
+                            <constraint firstAttribute="bottom" secondItem="6JF-6a-mvh" secondAttribute="bottom" constant="10" id="aEa-Sr-Mle"/>
+                            <constraint firstItem="ULH-4X-3D4" firstAttribute="leading" secondItem="cRh-cv-dWV" secondAttribute="leading" id="gdf-ax-Nco"/>
+                            <constraint firstAttribute="trailing" secondItem="QHf-9H-4hc" secondAttribute="trailing" constant="10" id="pMK-cY-BFh"/>
+                            <constraint firstAttribute="trailing" secondItem="ULH-4X-3D4" secondAttribute="trailing" id="pSV-Dj-F49"/>
+                            <constraint firstItem="jQE-D6-FPX" firstAttribute="leading" secondItem="6JF-6a-mvh" secondAttribute="trailing" constant="10" id="wyb-p4-5Nw"/>
+                            <constraint firstAttribute="bottom" secondItem="ULH-4X-3D4" secondAttribute="bottom" id="xWX-tx-NiK"/>
+                            <constraint firstItem="6JF-6a-mvh" firstAttribute="top" secondItem="cRh-cv-dWV" secondAttribute="top" constant="10" id="xgp-2W-wtC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cRh-cv-dWV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5WS-SX-qvm"/>
+                    <constraint firstAttribute="trailing" secondItem="cRh-cv-dWV" secondAttribute="trailing" id="V3c-1E-hbI"/>
+                    <constraint firstAttribute="bottom" secondItem="cRh-cv-dWV" secondAttribute="bottom" id="dOh-ta-rjI"/>
+                    <constraint firstItem="cRh-cv-dWV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lMM-o8-wV1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descLbl" destination="NCU-h9-seN" id="LJR-Dh-5Mx"/>
+                <outlet property="imgView" destination="yVV-Ai-Y2F" id="fBs-dY-jy0"/>
+                <outlet property="nameLbl" destination="jQE-D6-FPX" id="qaH-LP-Nmb"/>
+                <outlet property="priceLbl" destination="QHf-9H-4hc" id="K6p-U1-O0n"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="154"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="temp_food" width="278" height="181"/>
+    </resources>
+</document>

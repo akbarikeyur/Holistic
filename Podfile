@@ -17,4 +17,5 @@ target 'Holistic' do
   pod 'Charts'
   pod 'MFSideMenu'
   pod 'TagListView'
+  pod 'MGSwipeTableCell'
 end

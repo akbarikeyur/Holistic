@@ -11,6 +11,21 @@
 		18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */; };
 		18B435AE25435C8200757513 /* wakeup.json in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AD25435C8200757513 /* wakeup.json */; };
 		4795D670F62A69E97956549D /* Pods_Holistic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059EB8287ED303FB69D1DABE /* Pods_Holistic.framework */; };
+		7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F29F25493D390002A276 /* FoodListSectionTVC.swift */; };
+		7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2A025493D390002A276 /* FoodListSectionTVC.xib */; };
+		7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2A325493E0D0002A276 /* FoodListTVC.swift */; };
+		7938F2A625493E0D0002A276 /* FoodListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2A425493E0D0002A276 /* FoodListTVC.xib */; };
+		7938F2A8254944C80002A276 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2A7254944C70002A276 /* Product.storyboard */; };
+		7938F2AB254947080002A276 /* ProductTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2AA254947080002A276 /* ProductTabVC.swift */; };
+		7938F2AF254947EC0002A276 /* ProductListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2AD254947EC0002A276 /* ProductListTVC.swift */; };
+		7938F2B0254947EC0002A276 /* ProductListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2AE254947EC0002A276 /* ProductListTVC.xib */; };
+		7938F2B2254952390002A276 /* ProductListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2B1254952390002A276 /* ProductListVC.swift */; };
+		7938F2B6254953340002A276 /* BannerImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2B4254953340002A276 /* BannerImageCVC.swift */; };
+		7938F2B7254953340002A276 /* BannerImageCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2B5254953340002A276 /* BannerImageCVC.xib */; };
+		7938F2BA254968CF0002A276 /* ProductDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2B8254968CF0002A276 /* ProductDetailTVC.swift */; };
+		7938F2BB254968CF0002A276 /* ProductDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2B9254968CF0002A276 /* ProductDetailTVC.xib */; };
+		7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BC25496B640002A276 /* ProductDetailVC.swift */; };
+		7938F2BF254982030002A276 /* MyCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BE254982030002A276 /* MyCartVC.swift */; };
 		798249D525483BD60035AB9E /* HotelPackageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249D325483BD60035AB9E /* HotelPackageTVC.swift */; };
 		798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798249D425483BD60035AB9E /* HotelPackageTVC.xib */; };
 		798249D925485B470035AB9E /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798249D825485B470035AB9E /* Restaurant.storyboard */; };
@@ -20,6 +35,8 @@
 		798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E1254860A80035AB9E /* RestaurantVC.swift */; };
 		798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */; };
 		799AB89B2546C57600033175 /* Hotel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799AB89A2546C57600033175 /* Hotel.storyboard */; };
+		79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE8215254986D400092603 /* ProductCartTVC.swift */; };
+		79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AE8216254986D400092603 /* ProductCartTVC.xib */; };
 		79BC835B2542E946004A0B49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC835A2542E946004A0B49 /* LoginVC.swift */; };
 		79BC835D2542EEDC004A0B49 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BC835C2542EEDC004A0B49 /* Home.storyboard */; };
 		79BC83632542EF85004A0B49 /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79BC83602542EF85004A0B49 /* CustomTabBarView.xib */; };
@@ -120,6 +137,21 @@
 		18B435A92543544A00757513 /* ExpandCollapseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCollapseTVC.swift; sourceTree = "<group>"; };
 		18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandCollapseTVC.xib; sourceTree = "<group>"; };
 		18B435AD25435C8200757513 /* wakeup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wakeup.json; sourceTree = "<group>"; };
+		7938F29F25493D390002A276 /* FoodListSectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListSectionTVC.swift; sourceTree = "<group>"; };
+		7938F2A025493D390002A276 /* FoodListSectionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListSectionTVC.xib; sourceTree = "<group>"; };
+		7938F2A325493E0D0002A276 /* FoodListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTVC.swift; sourceTree = "<group>"; };
+		7938F2A425493E0D0002A276 /* FoodListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListTVC.xib; sourceTree = "<group>"; };
+		7938F2A7254944C70002A276 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		7938F2AA254947080002A276 /* ProductTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTabVC.swift; sourceTree = "<group>"; };
+		7938F2AD254947EC0002A276 /* ProductListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTVC.swift; sourceTree = "<group>"; };
+		7938F2AE254947EC0002A276 /* ProductListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListTVC.xib; sourceTree = "<group>"; };
+		7938F2B1254952390002A276 /* ProductListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListVC.swift; sourceTree = "<group>"; };
+		7938F2B4254953340002A276 /* BannerImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImageCVC.swift; sourceTree = "<group>"; };
+		7938F2B5254953340002A276 /* BannerImageCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerImageCVC.xib; sourceTree = "<group>"; };
+		7938F2B8254968CF0002A276 /* ProductDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTVC.swift; sourceTree = "<group>"; };
+		7938F2B9254968CF0002A276 /* ProductDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailTVC.xib; sourceTree = "<group>"; };
+		7938F2BC25496B640002A276 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		7938F2BE254982030002A276 /* MyCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVC.swift; sourceTree = "<group>"; };
 		798249D325483BD60035AB9E /* HotelPackageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPackageTVC.swift; sourceTree = "<group>"; };
 		798249D425483BD60035AB9E /* HotelPackageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelPackageTVC.xib; sourceTree = "<group>"; };
 		798249D825485B470035AB9E /* Restaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurant.storyboard; sourceTree = "<group>"; };
@@ -129,6 +161,8 @@
 		798249E1254860A80035AB9E /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
 		798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
 		799AB89A2546C57600033175 /* Hotel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotel.storyboard; sourceTree = "<group>"; };
+		79AE8215254986D400092603 /* ProductCartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTVC.swift; sourceTree = "<group>"; };
+		79AE8216254986D400092603 /* ProductCartTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTVC.xib; sourceTree = "<group>"; };
 		79BC835A2542E946004A0B49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		79BC835C2542EEDC004A0B49 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		79BC83602542EF85004A0B49 /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
@@ -242,6 +276,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7938F2A9254946E30002A276 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				7938F2AA254947080002A276 /* ProductTabVC.swift */,
+				7938F2B1254952390002A276 /* ProductListVC.swift */,
+				7938F2BC25496B640002A276 /* ProductDetailVC.swift */,
+				7938F2BE254982030002A276 /* MyCartVC.swift */,
+				7938F2AC254947BC0002A276 /* Tableview Cell */,
+				7938F2B3254952EE0002A276 /* Collectionview Cell */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		7938F2AC254947BC0002A276 /* Tableview Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7938F2AD254947EC0002A276 /* ProductListTVC.swift */,
+				7938F2AE254947EC0002A276 /* ProductListTVC.xib */,
+				7938F2B8254968CF0002A276 /* ProductDetailTVC.swift */,
+				7938F2B9254968CF0002A276 /* ProductDetailTVC.xib */,
+				79AE8215254986D400092603 /* ProductCartTVC.swift */,
+				79AE8216254986D400092603 /* ProductCartTVC.xib */,
+			);
+			path = "Tableview Cell";
+			sourceTree = "<group>";
+		};
+		7938F2B3254952EE0002A276 /* Collectionview Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7938F2B4254953340002A276 /* BannerImageCVC.swift */,
+				7938F2B5254953340002A276 /* BannerImageCVC.xib */,
+			);
+			path = "Collectionview Cell";
+			sourceTree = "<group>";
+		};
 		798249D725485B110035AB9E /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +327,10 @@
 			children = (
 				798249DD25485C760035AB9E /* RestaurantListTVC.swift */,
 				798249DE25485C760035AB9E /* RestaurantListTVC.xib */,
+				7938F29F25493D390002A276 /* FoodListSectionTVC.swift */,
+				7938F2A025493D390002A276 /* FoodListSectionTVC.xib */,
+				7938F2A325493E0D0002A276 /* FoodListTVC.swift */,
+				7938F2A425493E0D0002A276 /* FoodListTVC.xib */,
 			);
 			path = "Tableview Cell";
 			sourceTree = "<group>";
@@ -392,10 +465,12 @@
 				79BC835C2542EEDC004A0B49 /* Home.storyboard */,
 				799AB89A2546C57600033175 /* Hotel.storyboard */,
 				798249D825485B470035AB9E /* Restaurant.storyboard */,
+				7938F2A7254944C70002A276 /* Product.storyboard */,
 				79BC83592542E59A004A0B49 /* Login */,
 				79BC835E2542EF08004A0B49 /* Home */,
 				799AB8992546C50600033175 /* Hotel */,
 				798249D725485B110035AB9E /* Restaurant */,
+				7938F2A9254946E30002A276 /* Product */,
 				79EFD5CE2542C3EA006D06FB /* Custom Class */,
 				79EFD5C32542BE10006D06FB /* Assets.xcassets */,
 				79EFD5C52542BE10006D06FB /* LaunchScreen.storyboard */,
@@ -636,17 +711,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7938F2BB254968CF0002A276 /* ProductDetailTVC.xib in Resources */,
 				18B435AE25435C8200757513 /* wakeup.json in Resources */,
 				79EFD5C72542BE10006D06FB /* LaunchScreen.storyboard in Resources */,
 				79F2184F254824A200D981C1 /* HotelImageCVC.xib in Resources */,
+				7938F2A8254944C80002A276 /* Product.storyboard in Resources */,
 				79BC835D2542EEDC004A0B49 /* Home.storyboard in Resources */,
 				79D6D0082543ECD000945D7C /* completed_task.json in Resources */,
+				79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */,
 				79BC836C2542FFA5004A0B49 /* TabCVC.xib in Resources */,
 				79EFD63A2542CC11006D06FB /* WorkSans-Light.ttf in Resources */,
+				7938F2A625493E0D0002A276 /* FoodListTVC.xib in Resources */,
 				79F218322547E28600D981C1 /* HotelsListTVC.xib in Resources */,
 				79EFD60C2542C44A006D06FB /* Localizable.strings in Resources */,
 				79D6D00A2543ECE700945D7C /* missed_task.json in Resources */,
+				7938F2B7254953340002A276 /* BannerImageCVC.xib in Resources */,
 				18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */,
+				7938F2B0254947EC0002A276 /* ProductListTVC.xib in Resources */,
 				798249D925485B470035AB9E /* Restaurant.storyboard in Resources */,
 				79F2183C2547F09900D981C1 /* menu.json in Resources */,
 				79F218492548164800D981C1 /* HotelFacilityCVC.xib in Resources */,
@@ -661,6 +742,7 @@
 				79EFD63B2542CC11006D06FB /* WorkSans-Medium.ttf in Resources */,
 				79BC83772543100A004A0B49 /* CurrentTaskTVC.xib in Resources */,
 				79EFD6342542CBF5006D06FB /* WorkSans-Bold.ttf in Resources */,
+				7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */,
 				79EFD63E2542CC11006D06FB /* WorkSans-ExtraBold.ttf in Resources */,
 				79EFD63C2542CC11006D06FB /* WorkSans-Regular.ttf in Resources */,
 				79F218452548123F00D981C1 /* HotelBenefitsCVC.xib in Resources */,
@@ -729,6 +811,7 @@
 				79EFD60A2542C44A006D06FB /* APIManager.swift in Sources */,
 				79F218482548164800D981C1 /* HotelFacilityCVC.swift in Sources */,
 				79EFD6092542C44A006D06FB /* AppModel.swift in Sources */,
+				7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */,
 				79EFD62E2542C44A006D06FB /* TextView.swift in Sources */,
 				18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */,
 				79EFD6402542D040006D06FB /* SwipeButtonView.swift in Sources */,
@@ -740,11 +823,14 @@
 				79EFD6222542C44A006D06FB /* Fonts.swift in Sources */,
 				79EFD60E2542C44A006D06FB /* Utility.swift in Sources */,
 				79BC836E25430784004A0B49 /* HolisticLifestyleTabVC.swift in Sources */,
+				7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */,
 				79EFD6172542C44A006D06FB /* Lable.swift in Sources */,
 				79EFD6052542C44A006D06FB /* GlobalConstant.swift in Sources */,
 				79EFD6122542C44A006D06FB /* Array+RUI.swift in Sources */,
 				79EFD6082542C44A006D06FB /* DatePickerManager.swift in Sources */,
+				7938F2AB254947080002A276 /* ProductTabVC.swift in Sources */,
 				79F2182D2547E24B00D981C1 /* HotelsTabVC.swift in Sources */,
+				7938F2B2254952390002A276 /* ProductListVC.swift in Sources */,
 				79D6D01E254408EA00945D7C /* DayAxisValueFormatter.swift in Sources */,
 				79EFD6252542C44A006D06FB /* View.swift in Sources */,
 				79D6D01F254408EA00945D7C /* DateValueFormatter.swift in Sources */,
@@ -758,15 +844,18 @@
 				79EFD6142542C44A006D06FB /* Data+RUI.swift in Sources */,
 				79EFD6292542C44A006D06FB /* TableViewCell.swift in Sources */,
 				79EFD62F2542C44A006D06FB /* ImageView.swift in Sources */,
+				7938F2BF254982030002A276 /* MyCartVC.swift in Sources */,
 				79D6D01C254408EA00945D7C /* RadarMarkerView.swift in Sources */,
 				79F218312547E28600D981C1 /* HotelsListTVC.swift in Sources */,
 				79EFD6062542C44A006D06FB /* DateTimeUtility.swift in Sources */,
+				79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */,
 				79EFD6112542C44A006D06FB /* UIDevice+Type.swift in Sources */,
 				79EFD60B2542C44A006D06FB /* MD5.swift in Sources */,
 				79BC83642542EF85004A0B49 /* CustomTabBarView.swift in Sources */,
 				79BC837025430EBC004A0B49 /* FlowerLifeTabVC.swift in Sources */,
 				79F218402547FB6800D981C1 /* HotelsVC.swift in Sources */,
 				79F218442548123F00D981C1 /* HotelBenefitsCVC.swift in Sources */,
+				7938F2AF254947EC0002A276 /* ProductListTVC.swift in Sources */,
 				79EFD62B2542C44A006D06FB /* GradientLayer.swift in Sources */,
 				798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */,
 				79EFD6132542C44A006D06FB /* NSObject+Copy.swift in Sources */,
@@ -779,12 +868,15 @@
 				79EFD6072542C44A006D06FB /* FloatRatingView.swift in Sources */,
 				79EFD6262542C44A006D06FB /* DatePicker.swift in Sources */,
 				79EFD6232542C44A006D06FB /* Colors.swift in Sources */,
+				7938F2B6254953340002A276 /* BannerImageCVC.swift in Sources */,
 				79EFD6182542C44A006D06FB /* NSError+RUI.swift in Sources */,
 				79EFD6242542C44A006D06FB /* Label.swift in Sources */,
 				79EFD6152542C44A006D06FB /* UIColor+RUI.swift in Sources */,
 				79BC83652542EF85004A0B49 /* CustomTabBarController.swift in Sources */,
 				79EFD62C2542C44A006D06FB /* TableView.swift in Sources */,
+				7938F2BA254968CF0002A276 /* ProductDetailTVC.swift in Sources */,
 				79D6D01D254408EA00945D7C /* IntAxisValueFormatter.swift in Sources */,
+				7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */,
 				79F2184B2548179800D981C1 /* HotelDetailVC.swift in Sources */,
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,

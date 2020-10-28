@@ -93,6 +93,8 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 3])
                 break
             case "Holistic Products":
+                let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
+                self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "My Loyalty Points":
                 break

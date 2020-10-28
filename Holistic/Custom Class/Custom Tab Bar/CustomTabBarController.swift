@@ -72,6 +72,9 @@ class CustomTabBarController: UITabBarController, CustomTabBarViewDelegate {
         
         self.viewControllers = viewControllers;
         
+        tabBarView.resetAllButton()
+        tabBarView.lastIndex = 0
+        tabBarView.selectTabButton()
         self.tabSelectedAtIndex(index: 0)
     }
     

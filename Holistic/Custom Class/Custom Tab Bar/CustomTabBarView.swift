@@ -20,6 +20,11 @@ class CustomTabBarView: UIView {
     @IBOutlet var btn3: UIButton!
     @IBOutlet var btn4: UIButton!
     @IBOutlet var btn5: UIButton!
+    @IBOutlet weak var tabView1: UIView!
+    @IBOutlet weak var tabView2: UIView!
+    @IBOutlet weak var tabView3: UIView!
+    @IBOutlet weak var tabView4: UIView!
+    @IBOutlet weak var tabView5: UIView!
     
     var delegate:CustomTabBarViewDelegate?
     var lastIndex : NSInteger!
@@ -64,6 +69,12 @@ class CustomTabBarView: UIView {
         btn3.isSelected = false
         btn4.isSelected = false
         btn5.isSelected = false
+        
+        tabView1.isHidden = true
+        tabView2.isHidden = true
+        tabView3.isHidden = true
+        tabView4.isHidden = true
+        tabView5.isHidden = true
     }
     
     func selectTabButton()
@@ -71,18 +82,23 @@ class CustomTabBarView: UIView {
         switch lastIndex {
             case 0:
                 btn1.isSelected = true
+                tabView1.isHidden = false
                 break
             case 1:
                 btn2.isSelected = true
+                tabView2.isHidden = false
                 break
             case 2:
                 btn3.isSelected = true
+                tabView3.isHidden = false
                 break
             case 3:
                 btn4.isSelected = true
+                tabView4.isHidden = false
                 break
             case 4:
                 btn5.isSelected = true
+                tabView5.isHidden = false
                 break
             default:
                 break

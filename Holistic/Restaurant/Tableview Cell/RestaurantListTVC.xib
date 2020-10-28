@@ -42,8 +42,7 @@
                                     <constraint firstAttribute="height" constant="15" id="Seh-3C-jmb"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star" catalog="system"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="star.fill" catalog="system"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="star_fill"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minRating">
                                         <integer key="value" value="0"/>
@@ -54,6 +53,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star_empty"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moshi - Momo &amp; Sushi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Rjb-Oc-2j0" customClass="Label" customModule="Holistic" customModuleProvider="target">
@@ -122,7 +122,7 @@
                                             <constraint firstAttribute="width" constant="35" id="suP-hj-N20"/>
                                         </constraints>
                                         <color key="tintColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="qrcode" catalog="system"/>
+                                        <state key="normal" image="code_orange"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get your code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="xsx-g1-Tfq" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                         <rect key="frame" x="35" y="0.0" width="155" height="30"/>
@@ -209,10 +209,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="location_pin" width="15" height="15"/>
-        <image name="qrcode" catalog="system" width="128" height="114"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="code_orange" width="20.5" height="8.5"/>
+        <image name="location_pin" width="10" height="14"/>
+        <image name="star_empty" width="14.5" height="14"/>
+        <image name="star_fill" width="12.5" height="11.5"/>
         <image name="temp_food" width="278" height="181"/>
     </resources>
 </document>

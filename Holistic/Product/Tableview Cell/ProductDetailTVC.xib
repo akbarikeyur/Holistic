@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Regular.ttf">
+            <string>WorkSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductDetailTVC" id="KGk-i7-Jjw" customClass="ProductDetailTVC" customModule="Holistic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="170-GI-fDF">
+                        <rect key="frame" x="12" y="0.0" width="1" height="17.5"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="biV-JJ-p8J"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-lg-m6D">
+                        <rect key="frame" x="10" y="17.5" width="5" height="5"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="0Wc-s7-nqI"/>
+                            <constraint firstAttribute="width" constant="5" id="nzl-gd-YaJ"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJa-rT-GtF">
+                        <rect key="frame" x="12" y="22.5" width="1" height="17.5"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="V5K-xM-P1t"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enterogermina helps in restoring the " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ8-nq-m35" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                        <rect key="frame" x="25" y="13" width="285" height="14"/>
+                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BJa-rT-GtF" firstAttribute="top" secondItem="6bG-lg-m6D" secondAttribute="bottom" id="0XT-YM-QYK"/>
+                    <constraint firstItem="6bG-lg-m6D" firstAttribute="top" secondItem="170-GI-fDF" secondAttribute="bottom" id="3pQ-ke-Gik"/>
+                    <constraint firstAttribute="trailing" secondItem="xZ8-nq-m35" secondAttribute="trailing" constant="10" id="5hc-dd-Gxe"/>
+                    <constraint firstItem="6bG-lg-m6D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7Mj-kU-EIG"/>
+                    <constraint firstAttribute="bottom" secondItem="BJa-rT-GtF" secondAttribute="bottom" id="DD8-0e-d7H"/>
+                    <constraint firstAttribute="bottom" secondItem="xZ8-nq-m35" secondAttribute="bottom" constant="13" id="FLu-1u-p1K"/>
+                    <constraint firstItem="xZ8-nq-m35" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="GnR-Vh-M6S"/>
+                    <constraint firstItem="6bG-lg-m6D" firstAttribute="centerX" secondItem="170-GI-fDF" secondAttribute="centerX" id="KKQ-vD-thI"/>
+                    <constraint firstItem="6bG-lg-m6D" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KYb-2D-owP"/>
+                    <constraint firstItem="BJa-rT-GtF" firstAttribute="centerX" secondItem="170-GI-fDF" secondAttribute="centerX" id="KnX-Jl-QdT"/>
+                    <constraint firstItem="xZ8-nq-m35" firstAttribute="leading" secondItem="6bG-lg-m6D" secondAttribute="trailing" constant="10" id="SVJ-ca-UXP"/>
+                    <constraint firstItem="170-GI-fDF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gnj-kG-SNh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomView" destination="BJa-rT-GtF" id="K2E-QY-9rv"/>
+                <outlet property="titleLbl" destination="xZ8-nq-m35" id="Gdn-Dk-hnM"/>
+                <outlet property="topView" destination="170-GI-fDF" id="fh0-YU-efa"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="154"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -15,12 +15,13 @@ class HomeVC: UIViewController {
     @IBOutlet weak var searchTxt: TextField!
     @IBOutlet weak var tabCV: UICollectionView!
     
-    var arrTabData = ["Holistic Lifestyle", "Holistic Clinic", "Holistic Restaurants", "Holistic Hotels"]
+    var arrTabData = ["Holistic Lifestyle", "Holistic Clinic", "Holistic Restaurants", "Holistic Hotels", "Holistic Products"]
     var selectedTab = 0
     
     let holisticTab : HolisticLifestyleTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HolisticLifestyleTabVC") as! HolisticLifestyleTabVC
     let restaurantTab : RestaurantTabVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantTabVC") as! RestaurantTabVC
     let hotelTab : HotelsTabVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsTabVC") as! HotelsTabVC
+    let productTab : ProductTabVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductTabVC") as! ProductTabVC
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,11 +117,17 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             displaySubViewtoParentView(mainContainerView, subview: hotelTab.view)
             hotelTab.setupDetails()
         }
+        else if selectedTab == 4 {
+            displaySubViewtoParentView(mainContainerView, subview: productTab.view)
+            productTab.setupDetails()
+        }
     }
     
     func resetContainerView()
     {
         holisticTab.view.removeFromSuperview()
+        restaurantTab.view.removeFromSuperview()
         hotelTab.view.removeFromSuperview()
+        productTab.view.removeFromSuperview()
     }
 }

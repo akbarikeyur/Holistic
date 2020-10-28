@@ -21,7 +21,7 @@ class RestaurantVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        AppDelegate().sharedDelegate().hideTabBar()
+        AppDelegate().sharedDelegate().showTabBar()
     }
     
     //MARK:- Button click event
