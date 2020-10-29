@@ -73,6 +73,11 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : SideMenuTVC = tblView.dequeueReusableCell(withIdentifier: "SideMenuTVC") as! SideMenuTVC
         cell.setupDetails(arrMenuData[indexPath.row])
+        if (arrMenuData.count - 1) == indexPath.row {
+            cell.titleLbl.textColor = OrangeColor
+        }else{
+            cell.titleLbl.textColor = BLACK_COLOR
+        }
         cell.selectionStyle = .none
         return cell
     }

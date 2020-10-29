@@ -1,38 +1,42 @@
 [
     {
         "title" : "Home",
-        "image" : ""
+        "image" : "menu_home"
     },
     {
         "title" : "Holistic Lifestyle",
-        "image" : ""
+        "image" : "menu_lifestyle"
     },
     {
         "title" : "Holistic Clinic",
-        "image" : ""
+        "image" : "menu_clinic"
     },
     {
         "title" : "Holistic Hotels",
-        "image" : ""
+        "image" : "menu_hotel"
     },
     {
         "title" : "Holistic Restaurants",
-        "image" : ""
+        "image" : "menu_restaurant"
     },
     {
         "title" : "Holistic Products",
-        "image" : ""
+        "image" : "menu_product"
     },
     {
         "title" : "My Loyalty Points",
-        "image" : ""
+        "image" : "menu_point"
+    },
+    {
+        "title" : "My Purchases",
+        "image" : "menu_purchase"
     },
     {
         "title" : "Profile",
-        "image" : ""
+        "image" : "menu_profile"
     },
     {
         "title" : "Logout",
-        "image" : ""
+        "image" : "menu_logout"
     }
 ]

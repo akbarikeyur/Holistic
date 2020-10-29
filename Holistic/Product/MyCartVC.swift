@@ -36,7 +36,8 @@ class MyCartVC: UIViewController {
     }
     
     @IBAction func clickToProcessToCheckout(_ sender: Any) {
-        
+        let vc : ContactInformationVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ContactInformationVC") as! ContactInformationVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
