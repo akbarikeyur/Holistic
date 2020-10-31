@@ -19,6 +19,7 @@ class HomeVC: UIViewController {
     var selectedTab = 0
     
     let holisticTab : HolisticLifestyleTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HolisticLifestyleTabVC") as! HolisticLifestyleTabVC
+    let clinicTab : ClinicTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "ClinicTabVC") as! ClinicTabVC
     let restaurantTab : RestaurantTabVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantTabVC") as! RestaurantTabVC
     let hotelTab : HotelsTabVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsTabVC") as! HotelsTabVC
     let productTab : ProductTabVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductTabVC") as! ProductTabVC
@@ -107,7 +108,8 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             holisticTab.setupDetails()
         }
         else if selectedTab == 1 {
-            
+            displaySubViewtoParentView(mainContainerView, subview: clinicTab.view)
+            clinicTab.setupDetails()
         }
         else if selectedTab == 2 {
             displaySubViewtoParentView(mainContainerView, subview: restaurantTab.view)

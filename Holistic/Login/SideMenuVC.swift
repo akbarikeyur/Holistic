@@ -103,6 +103,10 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 break
             case "My Loyalty Points":
                 break
+            case "My Purchases":
+                let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
             case "Profile":
                 break
             case "Logout":

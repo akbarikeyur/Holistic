@@ -1,0 +1,27 @@
+[
+    {
+        "name" : "Packages",
+        "image" : "clinic_package",
+        "color" : "AF8EFF"
+    },
+    {
+        "name" : "Diet Plans",
+        "image" : "clinic_diet_plan",
+        "color" : "8FABFE"
+    },
+    {
+        "name" : "Prescriptions",
+        "image" : "clinic_prescriptions",
+        "color" : "1D86FC"
+    },
+    {
+        "name" : "Family Members",
+        "image" : "clinic_family",
+        "color" : "FD9A8F"
+    },
+    {
+        "name" : "Appointments",
+        "image" : "clinic_appointment",
+        "color" : "4AD991"
+    }
+]

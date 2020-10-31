@@ -27,6 +27,11 @@
 		7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BC25496B640002A276 /* ProductDetailVC.swift */; };
 		7938F2BF254982030002A276 /* MyCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BE254982030002A276 /* MyCartVC.swift */; };
 		7950E8FC254ABC4F00EB8273 /* MyPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7950E8FB254ABC4F00EB8273 /* MyPurchaseVC.swift */; };
+		7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C022254C090600DF1BFA /* PurchaseProductTVC.swift */; };
+		7953C025254C090600DF1BFA /* PurchaseProductTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7953C023254C090600DF1BFA /* PurchaseProductTVC.xib */; };
+		7953C028254C0E1D00DF1BFA /* PurchaseProductCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */; };
+		7953C029254C0E1E00DF1BFA /* PurchaseProductCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */; };
+		7953C02C254C1D0400DF1BFA /* ClinicTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */; };
 		798249D525483BD60035AB9E /* HotelPackageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249D325483BD60035AB9E /* HotelPackageTVC.swift */; };
 		798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798249D425483BD60035AB9E /* HotelPackageTVC.xib */; };
 		798249D925485B470035AB9E /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798249D825485B470035AB9E /* Restaurant.storyboard */; };
@@ -36,6 +41,12 @@
 		798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E1254860A80035AB9E /* RestaurantVC.swift */; };
 		798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */; };
 		799AB89B2546C57600033175 /* Hotel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799AB89A2546C57600033175 /* Hotel.storyboard */; };
+		79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */; };
+		79AD21AC254D6AFD00C97A89 /* ClinicCategoryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */; };
+		79AD21AF254D6E6500C97A89 /* clinic_category.json in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21AE254D6E6500C97A89 /* clinic_category.json */; };
+		79AD21B1254D6F6B00C97A89 /* ClinicCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21B0254D6F6B00C97A89 /* ClinicCategoryModel.swift */; };
+		79AD21B5254D722700C97A89 /* ClinicAppointmentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21B3254D722700C97A89 /* ClinicAppointmentTVC.swift */; };
+		79AD21B6254D722700C97A89 /* ClinicAppointmentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */; };
 		79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE8215254986D400092603 /* ProductCartTVC.swift */; };
 		79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AE8216254986D400092603 /* ProductCartTVC.xib */; };
 		79BC835B2542E946004A0B49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC835A2542E946004A0B49 /* LoginVC.swift */; };
@@ -158,6 +169,11 @@
 		7938F2BC25496B640002A276 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		7938F2BE254982030002A276 /* MyCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVC.swift; sourceTree = "<group>"; };
 		7950E8FB254ABC4F00EB8273 /* MyPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPurchaseVC.swift; sourceTree = "<group>"; };
+		7953C022254C090600DF1BFA /* PurchaseProductTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductTVC.swift; sourceTree = "<group>"; };
+		7953C023254C090600DF1BFA /* PurchaseProductTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseProductTVC.xib; sourceTree = "<group>"; };
+		7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductCVC.swift; sourceTree = "<group>"; };
+		7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseProductCVC.xib; sourceTree = "<group>"; };
+		7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicTabVC.swift; sourceTree = "<group>"; };
 		798249D325483BD60035AB9E /* HotelPackageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPackageTVC.swift; sourceTree = "<group>"; };
 		798249D425483BD60035AB9E /* HotelPackageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelPackageTVC.xib; sourceTree = "<group>"; };
 		798249D825485B470035AB9E /* Restaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurant.storyboard; sourceTree = "<group>"; };
@@ -167,6 +183,12 @@
 		798249E1254860A80035AB9E /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
 		798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
 		799AB89A2546C57600033175 /* Hotel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotel.storyboard; sourceTree = "<group>"; };
+		79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCategoryCVC.swift; sourceTree = "<group>"; };
+		79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicCategoryCVC.xib; sourceTree = "<group>"; };
+		79AD21AE254D6E6500C97A89 /* clinic_category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clinic_category.json; sourceTree = "<group>"; };
+		79AD21B0254D6F6B00C97A89 /* ClinicCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCategoryModel.swift; sourceTree = "<group>"; };
+		79AD21B3254D722700C97A89 /* ClinicAppointmentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicAppointmentTVC.swift; sourceTree = "<group>"; };
+		79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicAppointmentTVC.xib; sourceTree = "<group>"; };
 		79AE8215254986D400092603 /* ProductCartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTVC.swift; sourceTree = "<group>"; };
 		79AE8216254986D400092603 /* ProductCartTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTVC.xib; sourceTree = "<group>"; };
 		79BC835A2542E946004A0B49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -313,6 +335,8 @@
 				79AE8216254986D400092603 /* ProductCartTVC.xib */,
 				79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */,
 				79C8F2B2254AA1FB00481BB8 /* OrderSummaryTVC.xib */,
+				7953C022254C090600DF1BFA /* PurchaseProductTVC.swift */,
+				7953C023254C090600DF1BFA /* PurchaseProductTVC.xib */,
 			);
 			path = "Tableview Cell";
 			sourceTree = "<group>";
@@ -322,8 +346,21 @@
 			children = (
 				7938F2B4254953340002A276 /* BannerImageCVC.swift */,
 				7938F2B5254953340002A276 /* BannerImageCVC.xib */,
+				7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */,
+				7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */,
 			);
 			path = "Collectionview Cell";
+			sourceTree = "<group>";
+		};
+		7953C02A254C19E800DF1BFA /* Clinic */ = {
+			isa = PBXGroup;
+			children = (
+				7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */,
+				79AD21AD254D6E2C00C97A89 /* API Model */,
+				79AD21B2254D70C200C97A89 /* Tableview Cell */,
+				79AD21A8254D6AD200C97A89 /* Collectionview Cell */,
+			);
+			path = Clinic;
 			sourceTree = "<group>";
 		};
 		798249D725485B110035AB9E /* Restaurant */ = {
@@ -360,6 +397,33 @@
 				79F2182E2547E25E00D981C1 /* Tableview Cell */,
 			);
 			path = Hotel;
+			sourceTree = "<group>";
+		};
+		79AD21A8254D6AD200C97A89 /* Collectionview Cell */ = {
+			isa = PBXGroup;
+			children = (
+				79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */,
+				79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */,
+			);
+			path = "Collectionview Cell";
+			sourceTree = "<group>";
+		};
+		79AD21AD254D6E2C00C97A89 /* API Model */ = {
+			isa = PBXGroup;
+			children = (
+				79AD21AE254D6E6500C97A89 /* clinic_category.json */,
+				79AD21B0254D6F6B00C97A89 /* ClinicCategoryModel.swift */,
+			);
+			path = "API Model";
+			sourceTree = "<group>";
+		};
+		79AD21B2254D70C200C97A89 /* Tableview Cell */ = {
+			isa = PBXGroup;
+			children = (
+				79AD21B3254D722700C97A89 /* ClinicAppointmentTVC.swift */,
+				79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */,
+			);
+			path = "Tableview Cell";
 			sourceTree = "<group>";
 		};
 		79BC83592542E59A004A0B49 /* Login */ = {
@@ -483,6 +547,7 @@
 				7938F2A7254944C70002A276 /* Product.storyboard */,
 				79BC83592542E59A004A0B49 /* Login */,
 				79BC835E2542EF08004A0B49 /* Home */,
+				7953C02A254C19E800DF1BFA /* Clinic */,
 				799AB8992546C50600033175 /* Hotel */,
 				798249D725485B110035AB9E /* Restaurant */,
 				7938F2A9254946E30002A276 /* Product */,
@@ -736,6 +801,8 @@
 				79D6D0082543ECD000945D7C /* completed_task.json in Resources */,
 				79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */,
 				79BC836C2542FFA5004A0B49 /* TabCVC.xib in Resources */,
+				79AD21B6254D722700C97A89 /* ClinicAppointmentTVC.xib in Resources */,
+				7953C025254C090600DF1BFA /* PurchaseProductTVC.xib in Resources */,
 				79EFD63A2542CC11006D06FB /* WorkSans-Light.ttf in Resources */,
 				7938F2A625493E0D0002A276 /* FoodListTVC.xib in Resources */,
 				79F218322547E28600D981C1 /* HotelsListTVC.xib in Resources */,
@@ -752,10 +819,13 @@
 				79F218372547EE1000D981C1 /* SideMenuTVC.xib in Resources */,
 				79EFD5C42542BE10006D06FB /* Assets.xcassets in Resources */,
 				798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */,
+				79AD21AF254D6E6500C97A89 /* clinic_category.json in Resources */,
 				79EFD5C22542BE0E006D06FB /* Main.storyboard in Resources */,
 				798249E025485C760035AB9E /* RestaurantListTVC.xib in Resources */,
 				79BC837A25431207004A0B49 /* current_task.json in Resources */,
+				79AD21AC254D6AFD00C97A89 /* ClinicCategoryCVC.xib in Resources */,
 				79EFD63B2542CC11006D06FB /* WorkSans-Medium.ttf in Resources */,
+				7953C029254C0E1E00DF1BFA /* PurchaseProductCVC.xib in Resources */,
 				79BC83772543100A004A0B49 /* CurrentTaskTVC.xib in Resources */,
 				79EFD6342542CBF5006D06FB /* WorkSans-Bold.ttf in Resources */,
 				7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */,
@@ -847,6 +917,7 @@
 				79EFD6122542C44A006D06FB /* Array+RUI.swift in Sources */,
 				79EFD6082542C44A006D06FB /* DatePickerManager.swift in Sources */,
 				7938F2AB254947080002A276 /* ProductTabVC.swift in Sources */,
+				79AD21B5254D722700C97A89 /* ClinicAppointmentTVC.swift in Sources */,
 				79F2182D2547E24B00D981C1 /* HotelsTabVC.swift in Sources */,
 				7938F2B2254952390002A276 /* ProductListVC.swift in Sources */,
 				79D6D01E254408EA00945D7C /* DayAxisValueFormatter.swift in Sources */,
@@ -868,6 +939,7 @@
 				79F218312547E28600D981C1 /* HotelsListTVC.swift in Sources */,
 				79EFD6062542C44A006D06FB /* DateTimeUtility.swift in Sources */,
 				79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */,
+				7953C02C254C1D0400DF1BFA /* ClinicTabVC.swift in Sources */,
 				79EFD6112542C44A006D06FB /* UIDevice+Type.swift in Sources */,
 				79EFD60B2542C44A006D06FB /* MD5.swift in Sources */,
 				79BC83642542EF85004A0B49 /* CustomTabBarView.swift in Sources */,
@@ -877,6 +949,7 @@
 				7938F2AF254947EC0002A276 /* ProductListTVC.swift in Sources */,
 				79EFD62B2542C44A006D06FB /* GradientLayer.swift in Sources */,
 				798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */,
+				7953C028254C0E1D00DF1BFA /* PurchaseProductCVC.swift in Sources */,
 				79EFD6132542C44A006D06FB /* NSObject+Copy.swift in Sources */,
 				79EFD6162542C44A006D06FB /* String+RUI.swift in Sources */,
 				798249D525483BD60035AB9E /* HotelPackageTVC.swift in Sources */,
@@ -889,6 +962,7 @@
 				79EFD6262542C44A006D06FB /* DatePicker.swift in Sources */,
 				79EFD6232542C44A006D06FB /* Colors.swift in Sources */,
 				7938F2B6254953340002A276 /* BannerImageCVC.swift in Sources */,
+				79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */,
 				79EFD6182542C44A006D06FB /* NSError+RUI.swift in Sources */,
 				79EFD6242542C44A006D06FB /* Label.swift in Sources */,
 				79EFD6152542C44A006D06FB /* UIColor+RUI.swift in Sources */,
@@ -896,8 +970,10 @@
 				79EFD62C2542C44A006D06FB /* TableView.swift in Sources */,
 				7938F2BA254968CF0002A276 /* ProductDetailTVC.swift in Sources */,
 				79D6D01D254408EA00945D7C /* IntAxisValueFormatter.swift in Sources */,
+				79AD21B1254D6F6B00C97A89 /* ClinicCategoryModel.swift in Sources */,
 				7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */,
 				79F2184B2548179800D981C1 /* HotelDetailVC.swift in Sources */,
+				7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */,
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,
 				79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */,
