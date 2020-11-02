@@ -86,6 +86,7 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
         self.menuContainerViewController.toggleLeftSideMenuCompletion {}
         switch arrMenuData[indexPath.row].title {
             case "Home":
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 0])
                 break
             case "Holistic Lifestyle":
                 break
@@ -98,18 +99,23 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 3])
                 break
             case "Holistic Products":
-                let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
-                self.navigationController?.pushViewController(vc, animated: true)
+//                let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
+//                self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "My Loyalty Points":
                 break
             case "My Purchases":
-                let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
+//                let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
+//                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case "Blogs":
+                let vc : BlogListVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "BlogListVC") as! BlogListVC
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Profile":
                 break
             case "Logout":
+                AppDelegate().sharedDelegate().logoutFromApp()
                 break
             default:
                 break

@@ -12,12 +12,14 @@ var ClearColor = UIColor.clear
 var BorderColor = LIGHT_GRAY_COLOR
 var LightBorderColor = colorFromHex(hex: "D8D8D8")
 var OrangeColor = colorFromHex(hex: "FF7900")
+var PurpleBorderColor = colorFromHex(hex: "ADADDC")
 
 enum ColorType : Int32 {
     case Clear = 0
     case Border = 1
     case LightBorder = 2
     case Orange = 3
+    case PurpleBorder = 4
 }
 
 extension ColorType {
@@ -32,6 +34,8 @@ extension ColorType {
                     return LightBorderColor
                 case .Orange:
                     return OrangeColor
+                case .PurpleBorder:
+                    return PurpleBorderColor
             }
         }
     }

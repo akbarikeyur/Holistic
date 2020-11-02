@@ -32,6 +32,10 @@
         "image" : "menu_purchase"
     },
     {
+        "title" : "Blogs",
+        "image" : "menu_product"
+    },
+    {
         "title" : "Profile",
         "image" : "menu_profile"
     },
