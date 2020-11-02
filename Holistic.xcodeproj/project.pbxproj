@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D4E56255071A000DE6715 /* ProfileVC.swift */; };
 		18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B435A92543544A00757513 /* ExpandCollapseTVC.swift */; };
 		18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */; };
 		18B435AE25435C8200757513 /* wakeup.json in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AD25435C8200757513 /* wakeup.json */; };
@@ -156,6 +157,7 @@
 
 /* Begin PBXFileReference section */
 		059EB8287ED303FB69D1DABE /* Pods_Holistic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holistic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		188D4E56255071A000DE6715 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		18B435A92543544A00757513 /* ExpandCollapseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCollapseTVC.swift; sourceTree = "<group>"; };
 		18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandCollapseTVC.xib; sourceTree = "<group>"; };
 		18B435AD25435C8200757513 /* wakeup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wakeup.json; sourceTree = "<group>"; };
@@ -320,6 +322,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188D4E552550718800DE6715 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				188D4E56255071A000DE6715 /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		79149D11254FE61400CBD522 /* Blog */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +603,7 @@
 				798249D725485B110035AB9E /* Restaurant */,
 				7938F2A9254946E30002A276 /* Product */,
 				79149D11254FE61400CBD522 /* Blog */,
+				188D4E552550718800DE6715 /* Profile */,
 				79EFD5CE2542C3EA006D06FB /* Custom Class */,
 				79EFD5C32542BE10006D06FB /* Assets.xcassets */,
 				79EFD5C52542BE10006D06FB /* LaunchScreen.storyboard */,
@@ -958,6 +969,7 @@
 				7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */,
 				79EFD6172542C44A006D06FB /* Lable.swift in Sources */,
 				79EFD6052542C44A006D06FB /* GlobalConstant.swift in Sources */,
+				188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */,
 				79EFD6122542C44A006D06FB /* Array+RUI.swift in Sources */,
 				794FAFB1254FFE41005E045A /* BlogDetailVC.swift in Sources */,
 				79EFD6082542C44A006D06FB /* DatePickerManager.swift in Sources */,
