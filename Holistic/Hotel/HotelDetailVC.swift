@@ -25,11 +25,11 @@ class HotelDetailVC: UIViewController {
     @IBOutlet weak var facilityCV: UICollectionView!
     @IBOutlet weak var constraintHeightFacilityCV: NSLayoutConstraint!
     @IBOutlet var codeView: UIView!
-    @IBOutlet var exploreView: UIView!
     
-    var selectedImageIndex = 0
+    var selectedImageIndex = 3
     var arrFacility = ["Swimming Pool", "Free WiFi", "Family Rooms", "Free parking", "Good fitness", "Tea/coffee maker", "Bar", "Beach front", "Restaurants", "Airport Shuttle"]
-    
+    var arrFacilityImg = ["swimming_pool", "free_wifi", "family_room", "free_parking", "good_fitness", "tea_maker", "bar", "beach_front", "restaurant", "airport_shuttle"]
+    var arrImage = ["hotel1", "hotel2", "hotel3", "hotel4", "hotel5", "hotel6", "hotel7"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,16 @@ class HotelDetailVC: UIViewController {
         registerCollectionView()
         registerTableViewMethod()
         constraintHeightFacilityCV.constant = CGFloat((arrFacility.count/2) * 100)
+        
+        setupDetails()
+    }
+    
+    func setupDetails() {
+        priceLbl.text = "AED 250"
+        hotelNameLbl.text = "Jumeirah Emirates Towers"
+        hotelAddressLbl.text = "Sheikh Zayed Road, Al Barsha, Dubai UAE."
+        hotelDescLbl.text = "Directly connected to Mall of the Emirates, Kempinski Hotel Mall of the Emirates is centrally situated with close proximity to areas such as Downtown Dubai, Dubai Marina and Palm Jumeirah​, with the Mall of the Emirates metro station a mere 5 minute walk. ​Guests enjoy."
+        
     }
     
     //MARK:- Button click event
@@ -63,14 +73,6 @@ class HotelDetailVC: UIViewController {
         codeView.removeFromSuperview()
     }
     
-    @IBAction func clickToCloseExploreView(_ sender: Any) {
-        exploreView.removeFromSuperview()
-    }
-    
-    @IBAction func clickToExploreNow(_ sender: Any) {
-        
-    }
-    
     /*
     // MARK: - Navigation
 
@@ -92,7 +94,7 @@ extension HotelDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == imageCV {
-            return 10
+            return arrImage.count
         }
         else{
             return arrFacility.count
@@ -112,11 +114,12 @@ extension HotelDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, 
         if collectionView == imageCV {
             let cell : HotelImageCVC = imageCV.dequeueReusableCell(withReuseIdentifier: "HotelImageCVC", for: indexPath) as! HotelImageCVC
             cell.setupDetails((indexPath.row == selectedImageIndex))
+            cell.imgView.image = UIImage(named: arrImage[indexPath.row])
             return cell
         }
         else{
             let cell : HotelFacilityCVC = facilityCV.dequeueReusableCell(withReuseIdentifier: "HotelFacilityCVC", for: indexPath) as! HotelFacilityCVC
-            cell.setupDetails(arrFacility[indexPath.row])
+            cell.setupDetails(arrFacility[indexPath.row], arrFacilityImg[indexPath.row])
             return cell
         }
     }
@@ -125,6 +128,7 @@ extension HotelDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, 
         if collectionView == imageCV {
             selectedImageIndex = indexPath.row
             imageCV.reloadData()
+            topImgView.image = UIImage(named: arrImage[indexPath.row])
         }
     }
 }

@@ -83,19 +83,28 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+//        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
         switch arrMenuData[indexPath.row].title {
             case "Home":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 0])
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_LIFESTYLE), object: nil)
                 break
             case "Holistic Lifestyle":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 0])
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_LIFESTYLE), object: nil)
                 break
             case "Holistic Clinic":
+//                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 0])
+//                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
                 break
             case "Holistic Hotels":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 2])
                 break
             case "Holistic Restaurants":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 3])
                 break
             case "Holistic Products":
@@ -109,12 +118,16 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
 //                self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Blogs":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 let vc : BlogListVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "BlogListVC") as! BlogListVC
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Profile":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 4])
                 break
             case "Logout":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 AppDelegate().sharedDelegate().logoutFromApp()
                 break
             default:

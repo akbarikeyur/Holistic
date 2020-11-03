@@ -16,6 +16,9 @@ class HotelPackageTVC: UITableViewCell, TagListViewDelegate {
     @IBOutlet weak var packageTagView: TagListView!
     @IBOutlet weak var constraintHeightPackageTagView: NSLayoutConstraint!
     
+    var arrImg = ["twinbeds", "adults", "nights"]
+    var arrTitle = ["Twin Bed", "Adults", "4 nights"]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -48,7 +51,7 @@ extension HotelPackageTVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return arrImg.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -57,7 +60,8 @@ extension HotelPackageTVC : UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : HotelBenefitsCVC = benifitsCV.dequeueReusableCell(withReuseIdentifier: "HotelBenefitsCVC", for: indexPath) as! HotelBenefitsCVC
-        
+        cell.imgBtn.setImage(UIImage(named: arrImg[indexPath.row]), for: .normal)
+        cell.titleLbl.text = arrTitle[indexPath.row]
         return cell
     }
 }

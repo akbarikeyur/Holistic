@@ -18,13 +18,19 @@ class RestaurantDetailVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     @IBOutlet var codeView: UIView!
-    @IBOutlet var exploreView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        setupDetails()
+    }
+    
+    func setupDetails() {
+        nameLbl.text = "Moshi - Momo & Sushi"
+        addressLbl.text = "Business Central Towers | Dubai Media City, Dubai, United Arab Emirates"
+        descLbl.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
     
     //MARK:- Button click event
@@ -38,14 +44,6 @@ class RestaurantDetailVC: UIViewController {
     
     @IBAction func clickToCloseCodeView(_ sender: Any) {
         codeView.removeFromSuperview()
-    }
-    
-    @IBAction func clickToCloseExploreView(_ sender: Any) {
-        exploreView.removeFromSuperview()
-    }
-    
-    @IBAction func clickToExploreNow(_ sender: Any) {
-        
     }
     
     

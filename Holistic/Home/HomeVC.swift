@@ -19,7 +19,7 @@ class HomeVC: UIViewController {
     var selectedTab = 0
     
     let holisticTab : HolisticLifestyleTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HolisticLifestyleTabVC") as! HolisticLifestyleTabVC
-    let clinicTab : ClinicTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "ClinicTabVC") as! ClinicTabVC
+    let clinicTab : ClinicTabVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicTabVC") as! ClinicTabVC
     let restaurantTab : RestaurantTabVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantTabVC") as! RestaurantTabVC
     let hotelTab : HotelsTabVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsTabVC") as! HotelsTabVC
     let productTab : ProductTabVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductTabVC") as! ProductTabVC
@@ -28,11 +28,24 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(redirectToHomeLifestyle), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_LIFESTYLE), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(redirectToHomeClinic), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
+        
         registerCollectionView()
         delay(2.0) {
             self.flowerView.isHidden = true
             self.selecteTab()
         }
+    }
+    
+    @objc func redirectToHomeLifestyle() {
+        selectedTab = 0
+        selecteTab()
+    }
+    
+    @objc func redirectToHomeClinic() {
+        selectedTab = 1
+        selecteTab()
     }
     
     //MARK:- Button click event

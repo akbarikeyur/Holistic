@@ -1,20 +1,16 @@
 //
-//  LoginVC.swift
+//  SignupVC.swift
 //  Holistic
 //
-//  Created by Keyur Akbari on 23/10/20.
+//  Created by Keyur Akbari on 03/11/20.
 //  Copyright © 2020 Keyur Akbari. All rights reserved.
 //
 
 import UIKit
 
-class LoginVC: UIViewController {
+class SignupVC: UIViewController {
 
-    @IBOutlet weak var flagImg: UIImageView!
-    @IBOutlet weak var phoneCodeLbl: Label!
-    @IBOutlet weak var phoneTxt: TextField!
-    @IBOutlet weak var signupBtn: Button!
-    
+    @IBOutlet weak var signinBtn: Button!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,22 +20,20 @@ class LoginVC: UIViewController {
     }
     
     func configUI() {
-        signupBtn.setAttributedTitle(attributedStringWithColor("If you are not already a member, Sign Up", ["Sign Up"], color: OrangeColor), for: .normal)
+        signinBtn.setAttributedTitle(attributedStringWithColor("Already member? Sign in", ["Sign in"], color: OrangeColor), for: .normal)
     }
+    
     
     //MARK:- Button click event
-    @IBAction func clickToSelectCountryCode(_ sender: UIButton) {
-        
+    @IBAction func clickToLogin(_ sender: Any) {
+        self.view.endEditing(true)
+        self.navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func clickToSignIn(_ sender: Any) {
+
+    @IBAction func clickToSignup(_ sender: Any) {
+        self.view.endEditing(true)
         AppDelegate().sharedDelegate().navigateToDashBoard()
     }
-    
-    @IBAction func clickToSignup(_ sender: Any) {
-        
-    }
-    
     
     /*
     // MARK: - Navigation

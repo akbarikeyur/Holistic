@@ -12,6 +12,7 @@ class RestaurantVC: UIViewController {
 
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet var headerView: UIView!
+    @IBOutlet var exploreView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,9 @@ class RestaurantVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().showTabBar()
+        delay(1.0) {
+            displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
+        }
     }
     
     //MARK:- Button click event
@@ -36,6 +40,15 @@ class RestaurantVC: UIViewController {
     @IBAction func clickToFilter(_ sender: Any) {
         
     }
+    
+    @IBAction func clickToCloseExploreView(_ sender: Any) {
+       exploreView.removeFromSuperview()
+   }
+   
+   @IBAction func clickToExploreNow(_ sender: Any) {
+       exploreView.removeFromSuperview()
+   }
+       
     
     /*
     // MARK: - Navigation

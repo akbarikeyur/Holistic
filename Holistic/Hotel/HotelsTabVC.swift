@@ -11,18 +11,31 @@ import UIKit
 class HotelsTabVC: UIViewController {
 
     @IBOutlet weak var tblView: UITableView!
+    @IBOutlet var exploreView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        
     }
     
     func setupDetails() {
         tblView.reloadData()
+        displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
     }
 
+    //MARK:- Button click event
+    @IBAction func clickToCloseExploreView(_ sender: Any) {
+        exploreView.removeFromSuperview()
+    }
+    
+    @IBAction func clickToExploreNow(_ sender: Any) {
+        exploreView.removeFromSuperview()
+    }
+    
+    
     /*
     // MARK: - Navigation
 

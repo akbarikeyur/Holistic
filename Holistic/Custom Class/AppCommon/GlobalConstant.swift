@@ -43,12 +43,15 @@ struct STORYBOARD {
     static var HOTEL = UIStoryboard(name: "Hotel", bundle: nil)
     static var RESTAURANT = UIStoryboard(name: "Restaurant", bundle: nil)
     static var PRODUCT = UIStoryboard(name: "Product", bundle: nil)
+    static var CLINIC = UIStoryboard(name: "Clinic", bundle: nil)
 }
 
 struct NOTIFICATION {
     static var UPDATE_CURRENT_USER_DATA     =   "UPDATE_CURRENT_USER_DATA"
     static var REDICT_TAB_BAR               =   "REDICT_TAB_BAR"
     static var NOTIFICATION_TAB_CLICK       =   "NOTIFICATION_TAB_CLICK"
+    static var REDIRECT_HOME_LIFESTYLE      =   "REDIRECT_HOME_LIFESTYLE"
+    static var REDIRECT_HOME_CLINIC         =   "REDIRECT_HOME_CLINIC"
 }
 
 struct Platform {

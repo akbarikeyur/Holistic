@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
         
-//        navigateToDashBoard()
+        if PLATFORM.isSimulator {
+            navigateToDashBoard()
+        }
         return true
     }
 
@@ -81,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func logoutFromApp() {
         removeUserDefaultValues()
-        let navigationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "LoginVCNav") as! UINavigationController
+        let navigationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVCNav") as! UINavigationController
         self.window?.rootViewController = navigationVC
     }
     

@@ -29,7 +29,16 @@ class CurrentTaskTabVC: UIViewController {
         updateHeight()
     }
 
+    //MARK:- Button click event
     @IBAction func clickToCloseWakeupView(_ sender: Any) {
+        wakeUpView.removeFromSuperview()
+    }
+    
+    @IBAction func clickToDoneWakeupView(_ sender: Any) {
+        wakeUpView.removeFromSuperview()
+    }
+    
+    @IBAction func clickToLaterWakeupView(_ sender: Any) {
         wakeUpView.removeFromSuperview()
     }
     

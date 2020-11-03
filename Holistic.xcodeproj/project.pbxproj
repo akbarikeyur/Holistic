@@ -17,6 +17,7 @@
 		79149D1A254FE86A00CBD522 /* BlogListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79149D18254FE86A00CBD522 /* BlogListTVC.swift */; };
 		79149D1B254FE86A00CBD522 /* BlogListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79149D19254FE86A00CBD522 /* BlogListTVC.xib */; };
 		79149D1D254FF46500CBD522 /* BlogListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79149D1C254FF46500CBD522 /* BlogListVC.swift */; };
+		791C547325518F0600327EF2 /* Clinic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791C547225518F0600327EF2 /* Clinic.storyboard */; };
 		7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F29F25493D390002A276 /* FoodListSectionTVC.swift */; };
 		7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2A025493D390002A276 /* FoodListSectionTVC.xib */; };
 		7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2A325493E0D0002A276 /* FoodListTVC.swift */; };
@@ -56,7 +57,7 @@
 		79AD21B6254D722700C97A89 /* ClinicAppointmentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */; };
 		79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE8215254986D400092603 /* ProductCartTVC.swift */; };
 		79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AE8216254986D400092603 /* ProductCartTVC.xib */; };
-		79BC835B2542E946004A0B49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC835A2542E946004A0B49 /* LoginVC.swift */; };
+		79BC835B2542E946004A0B49 /* MobileLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC835A2542E946004A0B49 /* MobileLoginVC.swift */; };
 		79BC835D2542EEDC004A0B49 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BC835C2542EEDC004A0B49 /* Home.storyboard */; };
 		79BC83632542EF85004A0B49 /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79BC83602542EF85004A0B49 /* CustomTabBarView.xib */; };
 		79BC83642542EF85004A0B49 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC83612542EF85004A0B49 /* CustomTabBarView.swift */; };
@@ -87,6 +88,10 @@
 		79D6D01F254408EA00945D7C /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D019254408EA00945D7C /* DateValueFormatter.swift */; };
 		79D6D020254408EA00945D7C /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D01A254408EA00945D7C /* LargeValueFormatter.swift */; };
 		79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D0212544096300945D7C /* BalloonMarker.swift */; };
+		79EC86FB25511904000C8F5E /* EmailLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EC86FA25511904000C8F5E /* EmailLoginVC.swift */; };
+		79EC86FD25511CE2000C8F5E /* OTPVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EC86FC25511CE2000C8F5E /* OTPVerificationVC.swift */; };
+		79EC86FF25511D01000C8F5E /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EC86FE25511D01000C8F5E /* ForgotPasswordVC.swift */; };
+		79EC8701255125AE000C8F5E /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EC8700255125AE000C8F5E /* SignupVC.swift */; };
 		79EFD5BB2542BE0E006D06FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EFD5BA2542BE0E006D06FB /* AppDelegate.swift */; };
 		79EFD5BF2542BE0E006D06FB /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EFD5BE2542BE0E006D06FB /* WelcomeVC.swift */; };
 		79EFD5C22542BE0E006D06FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EFD5C02542BE0E006D06FB /* Main.storyboard */; };
@@ -166,6 +171,7 @@
 		79149D18254FE86A00CBD522 /* BlogListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListTVC.swift; sourceTree = "<group>"; };
 		79149D19254FE86A00CBD522 /* BlogListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlogListTVC.xib; sourceTree = "<group>"; };
 		79149D1C254FF46500CBD522 /* BlogListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListVC.swift; sourceTree = "<group>"; };
+		791C547225518F0600327EF2 /* Clinic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clinic.storyboard; sourceTree = "<group>"; };
 		7938F29F25493D390002A276 /* FoodListSectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListSectionTVC.swift; sourceTree = "<group>"; };
 		7938F2A025493D390002A276 /* FoodListSectionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListSectionTVC.xib; sourceTree = "<group>"; };
 		7938F2A325493E0D0002A276 /* FoodListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTVC.swift; sourceTree = "<group>"; };
@@ -205,7 +211,7 @@
 		79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicAppointmentTVC.xib; sourceTree = "<group>"; };
 		79AE8215254986D400092603 /* ProductCartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTVC.swift; sourceTree = "<group>"; };
 		79AE8216254986D400092603 /* ProductCartTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTVC.xib; sourceTree = "<group>"; };
-		79BC835A2542E946004A0B49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		79BC835A2542E946004A0B49 /* MobileLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileLoginVC.swift; sourceTree = "<group>"; };
 		79BC835C2542EEDC004A0B49 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		79BC83602542EF85004A0B49 /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		79BC83612542EF85004A0B49 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
@@ -236,6 +242,10 @@
 		79D6D019254408EA00945D7C /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		79D6D01A254408EA00945D7C /* LargeValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
 		79D6D0212544096300945D7C /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		79EC86FA25511904000C8F5E /* EmailLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginVC.swift; sourceTree = "<group>"; };
+		79EC86FC25511CE2000C8F5E /* OTPVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationVC.swift; sourceTree = "<group>"; };
+		79EC86FE25511D01000C8F5E /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		79EC8700255125AE000C8F5E /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		79EFD5B72542BE0E006D06FB /* Holistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EFD5BA2542BE0E006D06FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EFD5BE2542BE0E006D06FB /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -481,7 +491,11 @@
 			isa = PBXGroup;
 			children = (
 				79EFD5BE2542BE0E006D06FB /* WelcomeVC.swift */,
-				79BC835A2542E946004A0B49 /* LoginVC.swift */,
+				79EC86FA25511904000C8F5E /* EmailLoginVC.swift */,
+				79BC835A2542E946004A0B49 /* MobileLoginVC.swift */,
+				79EC86FC25511CE2000C8F5E /* OTPVerificationVC.swift */,
+				79EC8700255125AE000C8F5E /* SignupVC.swift */,
+				79EC86FE25511D01000C8F5E /* ForgotPasswordVC.swift */,
 				79F218382547EFF400D981C1 /* SideMenuVC.swift */,
 				79F2183A2547F08600D981C1 /* API Model */,
 				79F218332547EDF000D981C1 /* Tableview Cell */,
@@ -593,6 +607,7 @@
 				79EFD5BA2542BE0E006D06FB /* AppDelegate.swift */,
 				79EFD5C02542BE0E006D06FB /* Main.storyboard */,
 				79BC835C2542EEDC004A0B49 /* Home.storyboard */,
+				791C547225518F0600327EF2 /* Clinic.storyboard */,
 				799AB89A2546C57600033175 /* Hotel.storyboard */,
 				798249D825485B470035AB9E /* Restaurant.storyboard */,
 				7938F2A7254944C70002A276 /* Product.storyboard */,
@@ -882,6 +897,7 @@
 				79EFD63B2542CC11006D06FB /* WorkSans-Medium.ttf in Resources */,
 				7953C029254C0E1E00DF1BFA /* PurchaseProductCVC.xib in Resources */,
 				79BC83772543100A004A0B49 /* CurrentTaskTVC.xib in Resources */,
+				791C547325518F0600327EF2 /* Clinic.storyboard in Resources */,
 				79EFD6342542CBF5006D06FB /* WorkSans-Bold.ttf in Resources */,
 				7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */,
 				79EFD63E2542CC11006D06FB /* WorkSans-ExtraBold.ttf in Resources */,
@@ -947,7 +963,7 @@
 				79BC83762543100A004A0B49 /* CurrentTaskTVC.swift in Sources */,
 				79EFD6312542C44A006D06FB /* UIImage+ProportionalFill.m in Sources */,
 				798249DF25485C760035AB9E /* RestaurantListTVC.swift in Sources */,
-				79BC835B2542E946004A0B49 /* LoginVC.swift in Sources */,
+				79BC835B2542E946004A0B49 /* MobileLoginVC.swift in Sources */,
 				79EFD6102542C44A006D06FB /* Preference.swift in Sources */,
 				798249DB25485C150035AB9E /* RestaurantTabVC.swift in Sources */,
 				79EFD61B2542C44A006D06FB /* UIView+ParentController.swift in Sources */,
@@ -956,8 +972,10 @@
 				79EFD6092542C44A006D06FB /* AppModel.swift in Sources */,
 				7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */,
 				79EFD62E2542C44A006D06FB /* TextView.swift in Sources */,
+				79EC86FD25511CE2000C8F5E /* OTPVerificationVC.swift in Sources */,
 				18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */,
 				79EFD6402542D040006D06FB /* SwipeButtonView.swift in Sources */,
+				79EC8701255125AE000C8F5E /* SignupVC.swift in Sources */,
 				79EFD60F2542C44A006D06FB /* UploadImageVC.swift in Sources */,
 				79D6D00C2543F2B300945D7C /* CompletedTaskTabVC.swift in Sources */,
 				79EFD6282542C44A006D06FB /* PlaceholderTextView.swift in Sources */,
@@ -967,6 +985,7 @@
 				79EFD60E2542C44A006D06FB /* Utility.swift in Sources */,
 				79BC836E25430784004A0B49 /* HolisticLifestyleTabVC.swift in Sources */,
 				7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */,
+				79EC86FF25511D01000C8F5E /* ForgotPasswordVC.swift in Sources */,
 				79EFD6172542C44A006D06FB /* Lable.swift in Sources */,
 				79EFD6052542C44A006D06FB /* GlobalConstant.swift in Sources */,
 				188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */,
@@ -1036,6 +1055,7 @@
 				7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */,
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,
+				79EC86FB25511904000C8F5E /* EmailLoginVC.swift in Sources */,
 				79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */,
 				79EFD6192542C44A006D06FB /* Date+RUI.swift in Sources */,
 				79EFD5BB2542BE0E006D06FB /* AppDelegate.swift in Sources */,

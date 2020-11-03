@@ -10,6 +10,10 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet weak var currentPasswordTxt: TextField!
+    @IBOutlet weak var newPasswordTxt: TextField!
+    @IBOutlet weak var confirmPasswordTxt: TextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +29,22 @@ class ProfileVC: UIViewController {
         
     }
 
+    @IBAction func clickToShowHideCurrentPassword(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        currentPasswordTxt.isSecureTextEntry = !sender.isSelected
+    }
+    
+    @IBAction func clickToShowHideNewPassword(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        newPasswordTxt.isSecureTextEntry = !sender.isSelected
+    }
+    
+    @IBAction func clickToShowHideConfirmPassword(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        confirmPasswordTxt.isSecureTextEntry = !sender.isSelected
+    }
+    
+    
     /*
     // MARK: - Navigation
 
