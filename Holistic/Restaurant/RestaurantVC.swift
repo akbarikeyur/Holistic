@@ -22,10 +22,10 @@ class RestaurantVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        AppDelegate().sharedDelegate().showTabBar()
-        delay(1.0) {
-            displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
-        }
+        AppDelegate().sharedDelegate().hideTabBar()
+//        delay(1.0) {
+//            displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
+//        }
     }
     
     //MARK:- Button click event

@@ -23,7 +23,7 @@ class HotelsTabVC: UIViewController {
     
     func setupDetails() {
         tblView.reloadData()
-        displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
+//        displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
     }
 
     //MARK:- Button click event

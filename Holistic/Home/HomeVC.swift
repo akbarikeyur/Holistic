@@ -38,6 +38,10 @@ class HomeVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().showTabBar()
+    }
+    
     @objc func redirectToHomeLifestyle() {
         selectedTab = 0
         selecteTab()

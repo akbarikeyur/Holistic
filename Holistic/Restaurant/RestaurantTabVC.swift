@@ -22,7 +22,7 @@ class RestaurantTabVC: UIViewController {
     }
     
     func setupDetails() {
-        displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
+//        displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
     }
 
     @IBAction func clickToCloseExploreView(_ sender: Any) {
