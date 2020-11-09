@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Medium.ttf">
+            <string>WorkSans-Medium</string>
+        </array>
+        <array key="WorkSans-Regular.ttf">
+            <string>WorkSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FamilyMemberCVC" id="gTV-IL-0wX" customClass="FamilyMemberCVC" customModule="Holistic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="133"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="133"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6k-OZ-Ogb">
+                        <rect key="frame" x="0.0" y="0.0" width="186" height="133"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="family_bg" translatesAutoresizingMaskIntoConstraints="NO" id="kmy-0y-CeL">
+                                <rect key="frame" x="0.0" y="0.0" width="186" height="133"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71T-sl-ViF" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="20" y="15" width="151" height="14.5"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helen Herry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndg-Ue-Sag" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="20" y="29.5" width="151" height="16.5"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-9B-haa" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="20" y="51" width="106" height="15"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dependent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBO-e6-NH3" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="20" y="66" width="106" height="17"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EBO-e6-NH3" firstAttribute="leading" secondItem="kLC-9B-haa" secondAttribute="leading" id="4eZ-Wp-cg6"/>
+                            <constraint firstAttribute="trailing" secondItem="71T-sl-ViF" secondAttribute="trailing" constant="15" id="EaM-eV-hHp"/>
+                            <constraint firstAttribute="trailing" secondItem="kmy-0y-CeL" secondAttribute="trailing" id="Hb4-Yo-sDo"/>
+                            <constraint firstItem="kmy-0y-CeL" firstAttribute="top" secondItem="h6k-OZ-Ogb" secondAttribute="top" id="HoD-pm-NcC"/>
+                            <constraint firstItem="ndg-Ue-Sag" firstAttribute="top" secondItem="71T-sl-ViF" secondAttribute="bottom" id="IQa-r8-4hH"/>
+                            <constraint firstItem="kLC-9B-haa" firstAttribute="top" secondItem="ndg-Ue-Sag" secondAttribute="bottom" constant="5" id="IiW-Xy-zz4"/>
+                            <constraint firstItem="kLC-9B-haa" firstAttribute="leading" secondItem="71T-sl-ViF" secondAttribute="leading" id="OgA-US-ch9"/>
+                            <constraint firstItem="EBO-e6-NH3" firstAttribute="trailing" secondItem="kLC-9B-haa" secondAttribute="trailing" id="RzG-0Y-HGb"/>
+                            <constraint firstAttribute="bottom" secondItem="kmy-0y-CeL" secondAttribute="bottom" id="TOF-Tt-idy"/>
+                            <constraint firstItem="ndg-Ue-Sag" firstAttribute="leading" secondItem="71T-sl-ViF" secondAttribute="leading" id="XFj-jS-2A3"/>
+                            <constraint firstItem="ndg-Ue-Sag" firstAttribute="trailing" secondItem="71T-sl-ViF" secondAttribute="trailing" id="fyi-hV-Z5X"/>
+                            <constraint firstItem="71T-sl-ViF" firstAttribute="top" secondItem="h6k-OZ-Ogb" secondAttribute="top" constant="15" id="hgd-gJ-hUT"/>
+                            <constraint firstItem="EBO-e6-NH3" firstAttribute="top" secondItem="kLC-9B-haa" secondAttribute="bottom" id="o8H-Ii-tMG"/>
+                            <constraint firstItem="71T-sl-ViF" firstAttribute="leading" secondItem="h6k-OZ-Ogb" secondAttribute="leading" constant="20" id="oTs-H2-fES"/>
+                            <constraint firstItem="kmy-0y-CeL" firstAttribute="leading" secondItem="h6k-OZ-Ogb" secondAttribute="leading" id="oca-mw-etx"/>
+                            <constraint firstAttribute="trailing" secondItem="kLC-9B-haa" secondAttribute="trailing" constant="60" id="yzg-FJ-Jhw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="h6k-OZ-Ogb" secondAttribute="bottom" id="dwb-oX-t2R"/>
+                <constraint firstAttribute="trailing" secondItem="h6k-OZ-Ogb" secondAttribute="trailing" id="f1w-3N-R4l"/>
+                <constraint firstItem="h6k-OZ-Ogb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qCh-Gz-3pz"/>
+                <constraint firstItem="h6k-OZ-Ogb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qph-SL-b2I"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="nameLbl" destination="ndg-Ue-Sag" id="aAo-0H-jUi"/>
+                <outlet property="relationLbl" destination="EBO-e6-NH3" id="v3g-Kc-ZHT"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="154"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="family_bg" width="186" height="133"/>
+    </resources>
+</document>

@@ -161,8 +161,8 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Diet Plan":
-                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Prescription":
                     let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
@@ -173,8 +173,8 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Family Members":
-                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    let vc : FamilyMemberVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "FamilyMemberVC") as! FamilyMemberVC
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 default:
                     break
