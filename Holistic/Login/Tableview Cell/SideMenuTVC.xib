@@ -29,6 +29,7 @@
                             <constraint firstAttribute="width" constant="35" id="dwC-ih-mH6"/>
                             <constraint firstAttribute="height" constant="35" id="hU6-Lc-ZBa"/>
                         </constraints>
+                        <state key="normal" image="menu_home"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="10"/>
@@ -47,21 +48,38 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yB-mF-3Iy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                        <state key="normal" image="arrow_down"/>
+                        <state key="selected" image="arrow_up"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="WPr-WT-YT1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="55n-A7-gMO"/>
+                    <constraint firstAttribute="bottom" secondItem="7yB-mF-3Iy" secondAttribute="bottom" id="5iW-TJ-cAe"/>
+                    <constraint firstAttribute="trailing" secondItem="7yB-mF-3Iy" secondAttribute="trailing" id="Cod-66-12Q"/>
                     <constraint firstItem="qdS-BL-JP0" firstAttribute="leading" secondItem="WPr-WT-YT1" secondAttribute="trailing" constant="10" id="Hpb-aN-pGP"/>
+                    <constraint firstItem="7yB-mF-3Iy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UTp-rH-vjK"/>
                     <constraint firstItem="WPr-WT-YT1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gKe-xC-V9i"/>
                     <constraint firstAttribute="trailing" secondItem="qdS-BL-JP0" secondAttribute="trailing" constant="10" id="lfI-a8-xIo"/>
                     <constraint firstItem="qdS-BL-JP0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mtJ-e7-DFr"/>
+                    <constraint firstItem="7yB-mF-3Iy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tGO-FM-BeA"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="expandBtn" destination="7yB-mF-3Iy" id="U70-NE-x5Z"/>
                 <outlet property="imgBtn" destination="WPr-WT-YT1" id="80p-U6-X02"/>
                 <outlet property="titleLbl" destination="qdS-BL-JP0" id="NVV-OA-muj"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="arrow_down" width="15" height="15"/>
+        <image name="arrow_up" width="15" height="15"/>
+        <image name="menu_home" width="40" height="40"/>
+    </resources>
 </document>

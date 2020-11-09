@@ -23,7 +23,7 @@ class HotelsVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        AppDelegate().sharedDelegate().hideTabBar()
+        AppDelegate().sharedDelegate().showTabBar()
 //        delay(1.0) {
 //            displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
 //        }

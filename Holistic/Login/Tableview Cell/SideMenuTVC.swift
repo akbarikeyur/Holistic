@@ -12,6 +12,7 @@ class SideMenuTVC: UITableViewCell {
 
     @IBOutlet weak var imgBtn: Button!
     @IBOutlet weak var titleLbl: Label!
+    @IBOutlet weak var expandBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +20,15 @@ class SideMenuTVC: UITableViewCell {
     }
 
     func setupDetails(_ dict : MenuModel) {
+        expandBtn.isHidden = (dict.data.count == 0)
         if dict.image != "" {
-            imgBtn.setImage(UIImage(named: dict.image), for: .normal)
+            if dict.isExpand {
+                titleLbl.textColor = OrangeColor
+                imgBtn.setImage(UIImage(named: dict.select_image), for: .normal)
+            }else{
+                titleLbl.textColor = BLACK_COLOR
+                imgBtn.setImage(UIImage(named: dict.image), for: .normal)
+            }
         }else{
             imgBtn.setImage(nil, for: .normal)
         }

@@ -38,10 +38,6 @@ class HomeVC: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        AppDelegate().sharedDelegate().showTabBar()
-    }
-    
     @objc func redirectToHomeLifestyle() {
         selectedTab = 0
         selecteTab()
@@ -125,8 +121,10 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             holisticTab.setupDetails()
         }
         else if selectedTab == 1 {
-//            displaySubViewtoParentView(mainContainerView, subview: clinicTab.view)
-//            clinicTab.setupDetails()
+            if PLATFORM.isSimulator {
+                displaySubViewtoParentView(mainContainerView, subview: clinicTab.view)
+                clinicTab.setupDetails()
+            }
         }
         else if selectedTab == 2 {
             displaySubViewtoParentView(mainContainerView, subview: restaurantTab.view)
@@ -137,8 +135,10 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             hotelTab.setupDetails()
         }
         else if selectedTab == 4 {
-//            displaySubViewtoParentView(mainContainerView, subview: productTab.view)
-//            productTab.setupDetails()
+            if PLATFORM.isSimulator {
+                displaySubViewtoParentView(mainContainerView, subview: productTab.view)
+                productTab.setupDetails()
+            }
         }
     }
     

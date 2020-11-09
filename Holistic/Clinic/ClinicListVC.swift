@@ -1,18 +1,18 @@
 //
-//  ClinicTabVC.swift
+//  ClinicListVC.swift
 //  Holistic
 //
-//  Created by Keyur Akbari on 30/10/20.
+//  Created by Keyur Akbari on 09/11/20.
 //  Copyright © 2020 Keyur Akbari. All rights reserved.
 //
 
 import UIKit
 
-class ClinicTabVC: UIViewController {
+class ClinicListVC: UIViewController {
 
-    @IBOutlet weak var clinicCV: UICollectionView!
-    @IBOutlet weak var fromDateTxt: UITextField!
-    @IBOutlet weak var toDateTxt: UITextField!
+    @IBOutlet weak var categoryCV: UICollectionView!
+    @IBOutlet weak var fromTxt: UITextField!
+    @IBOutlet weak var toTxt: UITextField!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
@@ -26,19 +26,23 @@ class ClinicTabVC: UIViewController {
         registerTableViewMethod()
     }
     
-    func setupDetails() {
-        
-    }
-    
     //MARK:- Button click event
-    @IBAction func clickToSelectFromDate(_ sender: UIButton) {
+    @IBAction func clickToSideMenu(_ sender: Any) {
         
     }
     
-    @IBAction func clickToSelectToDate(_ sender: UIButton) {
+    @IBAction func clickToNotification(_ sender: Any) {
         
     }
-
+    
+    @IBAction func clickToSelectFromDate(_ sender: Any) {
+        
+    }
+    
+    @IBAction func clickToSelectToDate(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -52,16 +56,16 @@ class ClinicTabVC: UIViewController {
 }
 
 //MARK:- CollectionView Method
-extension ClinicTabVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension ClinicListVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func registerCollectionView() {
-        clinicCV.register(UINib.init(nibName: "ClinicCategoryCVC", bundle: nil), forCellWithReuseIdentifier: "ClinicCategoryCVC")
+        categoryCV.register(UINib.init(nibName: "ClinicCategoryCVC", bundle: nil), forCellWithReuseIdentifier: "ClinicCategoryCVC")
         
         arrClinicCategory = [ClinicCategoryModel]()
         for temp in getJsonFromFile("clinic_category") {
             arrClinicCategory.append(ClinicCategoryModel.init(temp))
         }
-        clinicCV.reloadData()
+        categoryCV.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,14 +77,14 @@ extension ClinicTabVC : UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : ClinicCategoryCVC = clinicCV.dequeueReusableCell(withReuseIdentifier: "ClinicCategoryCVC", for: indexPath) as! ClinicCategoryCVC
+        let cell : ClinicCategoryCVC = categoryCV.dequeueReusableCell(withReuseIdentifier: "ClinicCategoryCVC", for: indexPath) as! ClinicCategoryCVC
         cell.setupDetails(arrClinicCategory[indexPath.row])
         return cell
     }
 }
 
 //MARK:- Tableview Method
-extension ClinicTabVC : UITableViewDelegate, UITableViewDataSource {
+extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         tblView.register(UINib.init(nibName: "ClinicAppointmentTVC", bundle: nil), forCellReuseIdentifier: "ClinicAppointmentTVC")

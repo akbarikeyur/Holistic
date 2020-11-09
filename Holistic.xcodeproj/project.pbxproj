@@ -49,6 +49,7 @@
 		798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E1254860A80035AB9E /* RestaurantVC.swift */; };
 		798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */; };
 		799AB89B2546C57600033175 /* Hotel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799AB89A2546C57600033175 /* Hotel.storyboard */; };
+		79A6A0892559339500E3CCD6 /* ClinicListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6A0882559339500E3CCD6 /* ClinicListVC.swift */; };
 		79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */; };
 		79AD21AC254D6AFD00C97A89 /* ClinicCategoryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */; };
 		79AD21AF254D6E6500C97A89 /* clinic_category.json in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21AE254D6E6500C97A89 /* clinic_category.json */; };
@@ -203,6 +204,7 @@
 		798249E1254860A80035AB9E /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
 		798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
 		799AB89A2546C57600033175 /* Hotel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotel.storyboard; sourceTree = "<group>"; };
+		79A6A0882559339500E3CCD6 /* ClinicListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListVC.swift; sourceTree = "<group>"; };
 		79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCategoryCVC.swift; sourceTree = "<group>"; };
 		79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicCategoryCVC.xib; sourceTree = "<group>"; };
 		79AD21AE254D6E6500C97A89 /* clinic_category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clinic_category.json; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */,
+				79A6A0882559339500E3CCD6 /* ClinicListVC.swift */,
 				79AD21AD254D6E2C00C97A89 /* API Model */,
 				79AD21B2254D70C200C97A89 /* Tableview Cell */,
 				79AD21A8254D6AD200C97A89 /* Collectionview Cell */,
@@ -980,6 +983,7 @@
 				79D6D00C2543F2B300945D7C /* CompletedTaskTabVC.swift in Sources */,
 				79EFD6282542C44A006D06FB /* PlaceholderTextView.swift in Sources */,
 				798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */,
+				79A6A0892559339500E3CCD6 /* ClinicListVC.swift in Sources */,
 				79EFD6272542C44A006D06FB /* CollectionView.swift in Sources */,
 				79EFD6222542C44A006D06FB /* Fonts.swift in Sources */,
 				79EFD60E2542C44A006D06FB /* Utility.swift in Sources */,

@@ -62,29 +62,28 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
         tblView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return arrMenuData.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell : SideMenuTVC = tblView.dequeueReusableCell(withIdentifier: "SideMenuTVC") as! SideMenuTVC
-        cell.setupDetails(arrMenuData[indexPath.row])
-        if (arrMenuData.count - 1) == indexPath.row {
-            cell.titleLbl.textColor = OrangeColor
-        }else{
-            cell.titleLbl.textColor = BLACK_COLOR
-        }
+        cell.imgBtn.isHidden = false
+        let dict = arrMenuData[section]
+        cell.setupDetails(dict)
+        cell.expandBtn.isSelected = dict.isExpand
+        cell.expandBtn.tag = section
+        cell.expandBtn.addTarget(self, action: #selector(clickToExpand(_:)), for: .touchUpInside)
         cell.selectionStyle = .none
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
-        switch arrMenuData[indexPath.row].title {
+    @objc func clickToExpand(_ sender : UIButton) {
+        switch arrMenuData[sender.tag].title {
             case "Home":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 0])
@@ -96,8 +95,8 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_LIFESTYLE), object: nil)
                 break
             case "Holistic Clinic":
-//                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 0])
-//                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
+                arrMenuData[sender.tag].isExpand = !arrMenuData[sender.tag].isExpand
+                tblView.reloadData()
                 break
             case "Holistic Hotels":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -108,14 +107,10 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 3])
                 break
             case "Holistic Products":
-//                let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
-//                self.navigationController?.pushViewController(vc, animated: true)
+                arrMenuData[sender.tag].isExpand = !arrMenuData[sender.tag].isExpand
+                tblView.reloadData()
                 break
             case "My Loyalty Points":
-                break
-            case "My Purchases":
-//                let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
-//                self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Blogs":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -132,6 +127,72 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 break
             default:
                 break
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if arrMenuData[section].isExpand && arrMenuData[section].data.count > 0 {
+            return arrMenuData[section].data.count
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : SideMenuTVC = tblView.dequeueReusableCell(withIdentifier: "SideMenuTVC") as! SideMenuTVC
+        cell.expandBtn.isHidden = true
+        cell.imgBtn.isHidden = true
+        cell.titleLbl.text = arrMenuData[indexPath.section].data[indexPath.row].title
+        cell.titleLbl.textColor = BLACK_COLOR
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+        let title = arrMenuData[indexPath.section].title
+        if title == "Holistic Clinic" {
+            switch arrMenuData[indexPath.section].data[indexPath.row].title {
+                case "Appointments":
+                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case "Diet Plan":
+                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case "Prescription":
+                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case "Package":
+                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case "Family Members":
+                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                default:
+                    break
+            }
+        }
+        else if title == "Holistic Products" {
+            switch arrMenuData[indexPath.section].data[indexPath.row].title {
+                case "All Products":
+                    let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case "My purchases":
+                    let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                default:
+                    break
+            }
         }
     }
 }

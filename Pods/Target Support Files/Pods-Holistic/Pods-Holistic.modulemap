@@ -1,6 +1,0 @@
-framework module Pods_Holistic {
-  umbrella header "Pods-Holistic-umbrella.h"
-
-  export *
-  module * { export * }
-}

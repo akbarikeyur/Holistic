@@ -42,10 +42,6 @@ class HotelDetailVC: UIViewController {
         setupDetails()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        AppDelegate().sharedDelegate().hideTabBar()
-    }
-    
     func setupDetails() {
         priceLbl.text = "AED 250"
         hotelNameLbl.text = "Jumeirah Emirates Towers"

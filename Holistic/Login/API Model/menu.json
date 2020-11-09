@@ -9,7 +9,26 @@
     },
     {
         "title" : "Holistic Clinic",
-        "image" : "menu_clinic"
+        "image" : "menu_clinic",
+        "select_image" : "menu_clinic_orange",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "Appointments"
+                    },
+                    {
+                        "title" : "Diet Plan"
+                    },
+                    {
+                        "title" : "Prescription"
+                    },
+                    {
+                        "title" : "Package"
+                    },
+                    {
+                        "title" : "Family Members"
+                    }
+                ]
     },
     {
         "title" : "Holistic Hotels",
@@ -21,15 +40,21 @@
     },
     {
         "title" : "Holistic Products",
-        "image" : "menu_product"
+        "image" : "menu_product",
+        "select_image" : "menu_product_orange",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "All Products"
+                    },
+                    {
+                        "title" : "My purchases"
+                    }
+                ]
     },
     {
         "title" : "My Loyalty Points",
         "image" : "menu_point"
-    },
-    {
-        "title" : "My Purchases",
-        "image" : "menu_purchase"
     },
     {
         "title" : "Blogs",
