@@ -20,7 +20,15 @@ class SideMenuTVC: UITableViewCell {
     }
 
     func setupDetails(_ dict : MenuModel) {
-        expandBtn.isHidden = (dict.data.count == 0)
+        
+        if dict.data.count > 0 {
+            expandBtn.setImage(UIImage(named: "arrow_down"), for: .normal)
+            expandBtn.setImage(UIImage(named: "arrow_up"), for: .selected)
+        }
+        else{
+            expandBtn.setImage(nil, for: .normal)
+            expandBtn.setImage(nil, for: .selected)
+        }
         if dict.image != "" {
             if dict.isExpand {
                 titleLbl.textColor = OrangeColor
