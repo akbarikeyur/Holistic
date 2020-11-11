@@ -19,6 +19,16 @@
 		79149D1D254FF46500CBD522 /* BlogListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79149D1C254FF46500CBD522 /* BlogListVC.swift */; };
 		791C547325518F0600327EF2 /* Clinic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791C547225518F0600327EF2 /* Clinic.storyboard */; };
 		791C864225597B060087ABA5 /* DietPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C864125597B060087ABA5 /* DietPlanVC.swift */; };
+		79333D1A255BB9A20092F567 /* DietPlanMealCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D18255BB9A20092F567 /* DietPlanMealCVC.swift */; };
+		79333D1B255BB9A20092F567 /* DietPlanMealCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D19255BB9A20092F567 /* DietPlanMealCVC.xib */; };
+		79333D1E255BBA230092F567 /* DietPlanMealTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D1C255BBA230092F567 /* DietPlanMealTVC.swift */; };
+		79333D1F255BBA230092F567 /* DietPlanMealTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D1D255BBA230092F567 /* DietPlanMealTVC.xib */; };
+		79333D22255BD7CB0092F567 /* ClinicPackageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D20255BD7CB0092F567 /* ClinicPackageTVC.swift */; };
+		79333D23255BD7CB0092F567 /* ClinicPackageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D21255BD7CB0092F567 /* ClinicPackageTVC.xib */; };
+		79333D25255BDF0B0092F567 /* ClinicPackageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D24255BDF0B0092F567 /* ClinicPackageVC.swift */; };
+		79333D27255BE7070092F567 /* ClinicPackageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D26255BE7070092F567 /* ClinicPackageDetailVC.swift */; };
+		79333D2A255BE7CF0092F567 /* ClinicPackageDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D28255BE7CF0092F567 /* ClinicPackageDetailTVC.swift */; };
+		79333D2B255BE7CF0092F567 /* ClinicPackageDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D29255BE7CF0092F567 /* ClinicPackageDetailTVC.xib */; };
 		7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F29F25493D390002A276 /* FoodListSectionTVC.swift */; };
 		7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2A025493D390002A276 /* FoodListSectionTVC.xib */; };
 		7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2A325493E0D0002A276 /* FoodListTVC.swift */; };
@@ -180,6 +190,16 @@
 		79149D1C254FF46500CBD522 /* BlogListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListVC.swift; sourceTree = "<group>"; };
 		791C547225518F0600327EF2 /* Clinic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clinic.storyboard; sourceTree = "<group>"; };
 		791C864125597B060087ABA5 /* DietPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanVC.swift; sourceTree = "<group>"; };
+		79333D18255BB9A20092F567 /* DietPlanMealCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanMealCVC.swift; sourceTree = "<group>"; };
+		79333D19255BB9A20092F567 /* DietPlanMealCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietPlanMealCVC.xib; sourceTree = "<group>"; };
+		79333D1C255BBA230092F567 /* DietPlanMealTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanMealTVC.swift; sourceTree = "<group>"; };
+		79333D1D255BBA230092F567 /* DietPlanMealTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietPlanMealTVC.xib; sourceTree = "<group>"; };
+		79333D20255BD7CB0092F567 /* ClinicPackageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageTVC.swift; sourceTree = "<group>"; };
+		79333D21255BD7CB0092F567 /* ClinicPackageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicPackageTVC.xib; sourceTree = "<group>"; };
+		79333D24255BDF0B0092F567 /* ClinicPackageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageVC.swift; sourceTree = "<group>"; };
+		79333D26255BE7070092F567 /* ClinicPackageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageDetailVC.swift; sourceTree = "<group>"; };
+		79333D28255BE7CF0092F567 /* ClinicPackageDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageDetailTVC.swift; sourceTree = "<group>"; };
+		79333D29255BE7CF0092F567 /* ClinicPackageDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicPackageDetailTVC.xib; sourceTree = "<group>"; };
 		7938F29F25493D390002A276 /* FoodListSectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListSectionTVC.swift; sourceTree = "<group>"; };
 		7938F2A025493D390002A276 /* FoodListSectionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListSectionTVC.xib; sourceTree = "<group>"; };
 		7938F2A325493E0D0002A276 /* FoodListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTVC.swift; sourceTree = "<group>"; };
@@ -434,6 +454,8 @@
 				79A6A0882559339500E3CCD6 /* ClinicListVC.swift */,
 				79C624D22559672000F9C385 /* FamilyMemberVC.swift */,
 				791C864125597B060087ABA5 /* DietPlanVC.swift */,
+				79333D24255BDF0B0092F567 /* ClinicPackageVC.swift */,
+				79333D26255BE7070092F567 /* ClinicPackageDetailVC.swift */,
 				79AD21AD254D6E2C00C97A89 /* API Model */,
 				79AD21B2254D70C200C97A89 /* Tableview Cell */,
 				79AD21A8254D6AD200C97A89 /* Collectionview Cell */,
@@ -484,6 +506,8 @@
 				79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */,
 				79C624D42559679F00F9C385 /* FamilyMemberCVC.swift */,
 				79C624D52559679F00F9C385 /* FamilyMemberCVC.xib */,
+				79333D18255BB9A20092F567 /* DietPlanMealCVC.swift */,
+				79333D19255BB9A20092F567 /* DietPlanMealCVC.xib */,
 			);
 			path = "Collectionview Cell";
 			sourceTree = "<group>";
@@ -504,6 +528,12 @@
 				79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */,
 				79C624D825596EF300F9C385 /* DietPlanTVC.swift */,
 				79C624D925596EF300F9C385 /* DietPlanTVC.xib */,
+				79333D1C255BBA230092F567 /* DietPlanMealTVC.swift */,
+				79333D1D255BBA230092F567 /* DietPlanMealTVC.xib */,
+				79333D20255BD7CB0092F567 /* ClinicPackageTVC.swift */,
+				79333D21255BD7CB0092F567 /* ClinicPackageTVC.xib */,
+				79333D28255BE7CF0092F567 /* ClinicPackageDetailTVC.swift */,
+				79333D29255BE7CF0092F567 /* ClinicPackageDetailTVC.xib */,
 			);
 			path = "Tableview Cell";
 			sourceTree = "<group>";
@@ -881,6 +911,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7938F2BB254968CF0002A276 /* ProductDetailTVC.xib in Resources */,
+				79333D1F255BBA230092F567 /* DietPlanMealTVC.xib in Resources */,
 				18B435AE25435C8200757513 /* wakeup.json in Resources */,
 				79EFD5C72542BE10006D06FB /* LaunchScreen.storyboard in Resources */,
 				79C8F2B4254AA1FB00481BB8 /* OrderSummaryTVC.xib in Resources */,
@@ -908,6 +939,7 @@
 				79BC83632542EF85004A0B49 /* CustomTabBarView.xib in Resources */,
 				79F218372547EE1000D981C1 /* SideMenuTVC.xib in Resources */,
 				79EFD5C42542BE10006D06FB /* Assets.xcassets in Resources */,
+				79333D23255BD7CB0092F567 /* ClinicPackageTVC.xib in Resources */,
 				79149D1B254FE86A00CBD522 /* BlogListTVC.xib in Resources */,
 				798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */,
 				79AD21AF254D6E6500C97A89 /* clinic_category.json in Resources */,
@@ -915,6 +947,7 @@
 				798249E025485C760035AB9E /* RestaurantListTVC.xib in Resources */,
 				79C624D72559679F00F9C385 /* FamilyMemberCVC.xib in Resources */,
 				79BC837A25431207004A0B49 /* current_task.json in Resources */,
+				79333D2B255BE7CF0092F567 /* ClinicPackageDetailTVC.xib in Resources */,
 				79149D15254FE64100CBD522 /* BlogListCVC.xib in Resources */,
 				79AD21AC254D6AFD00C97A89 /* ClinicCategoryCVC.xib in Resources */,
 				79EFD63B2542CC11006D06FB /* WorkSans-Medium.ttf in Resources */,
@@ -923,6 +956,7 @@
 				791C547325518F0600327EF2 /* Clinic.storyboard in Resources */,
 				79EFD6342542CBF5006D06FB /* WorkSans-Bold.ttf in Resources */,
 				7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */,
+				79333D1B255BB9A20092F567 /* DietPlanMealCVC.xib in Resources */,
 				79EFD63E2542CC11006D06FB /* WorkSans-ExtraBold.ttf in Resources */,
 				79EFD63C2542CC11006D06FB /* WorkSans-Regular.ttf in Resources */,
 				79F218452548123F00D981C1 /* HotelBenefitsCVC.xib in Resources */,
@@ -1002,6 +1036,7 @@
 				79EC8701255125AE000C8F5E /* SignupVC.swift in Sources */,
 				79EFD60F2542C44A006D06FB /* UploadImageVC.swift in Sources */,
 				79D6D00C2543F2B300945D7C /* CompletedTaskTabVC.swift in Sources */,
+				79333D27255BE7070092F567 /* ClinicPackageDetailVC.swift in Sources */,
 				79EFD6282542C44A006D06FB /* PlaceholderTextView.swift in Sources */,
 				798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */,
 				79A6A0892559339500E3CCD6 /* ClinicListVC.swift in Sources */,
@@ -1036,6 +1071,7 @@
 				79BC837C2543141A004A0B49 /* HomeModel.swift in Sources */,
 				791C864225597B060087ABA5 /* DietPlanVC.swift in Sources */,
 				79EFD6142542C44A006D06FB /* Data+RUI.swift in Sources */,
+				79333D22255BD7CB0092F567 /* ClinicPackageTVC.swift in Sources */,
 				79EFD6292542C44A006D06FB /* TableViewCell.swift in Sources */,
 				79EFD62F2542C44A006D06FB /* ImageView.swift in Sources */,
 				7938F2BF254982030002A276 /* MyCartVC.swift in Sources */,
@@ -1044,6 +1080,7 @@
 				79EFD6062542C44A006D06FB /* DateTimeUtility.swift in Sources */,
 				79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */,
 				7953C02C254C1D0400DF1BFA /* ClinicTabVC.swift in Sources */,
+				79333D25255BDF0B0092F567 /* ClinicPackageVC.swift in Sources */,
 				79EFD6112542C44A006D06FB /* UIDevice+Type.swift in Sources */,
 				79EFD60B2542C44A006D06FB /* MD5.swift in Sources */,
 				79BC83642542EF85004A0B49 /* CustomTabBarView.swift in Sources */,
@@ -1069,7 +1106,9 @@
 				7938F2B6254953340002A276 /* BannerImageCVC.swift in Sources */,
 				79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */,
 				79EFD6182542C44A006D06FB /* NSError+RUI.swift in Sources */,
+				79333D1E255BBA230092F567 /* DietPlanMealTVC.swift in Sources */,
 				79EFD6242542C44A006D06FB /* Label.swift in Sources */,
+				79333D1A255BB9A20092F567 /* DietPlanMealCVC.swift in Sources */,
 				79149D1A254FE86A00CBD522 /* BlogListTVC.swift in Sources */,
 				79EFD6152542C44A006D06FB /* UIColor+RUI.swift in Sources */,
 				79BC83652542EF85004A0B49 /* CustomTabBarController.swift in Sources */,
@@ -1080,6 +1119,7 @@
 				79AD21B1254D6F6B00C97A89 /* ClinicCategoryModel.swift in Sources */,
 				7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */,
 				79F2184B2548179800D981C1 /* HotelDetailVC.swift in Sources */,
+				79333D2A255BE7CF0092F567 /* ClinicPackageDetailTVC.swift in Sources */,
 				7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */,
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,

@@ -1,18 +1,18 @@
 //
-//  ClinicListVC.swift
+//  ClinicPackageVC.swift
 //  Holistic
 //
-//  Created by Keyur Akbari on 09/11/20.
+//  Created by Keyur Akbari on 11/11/20.
 //  Copyright © 2020 Keyur Akbari. All rights reserved.
 //
 
 import UIKit
 
-class ClinicListVC: UIViewController {
+class ClinicPackageVC: UIViewController {
 
     @IBOutlet weak var categoryCV: UICollectionView!
-    @IBOutlet weak var fromTxt: UITextField!
-    @IBOutlet weak var toTxt: UITextField!
+    @IBOutlet weak var fromDateTxt: UITextField!
+    @IBOutlet weak var toDateTxt: UITextField!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
@@ -27,14 +27,10 @@ class ClinicListVC: UIViewController {
     }
     
     //MARK:- Button click event
-    @IBAction func clickToSideMenu(_ sender: Any) {
-        
+    @IBAction func clickToBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func clickToNotification(_ sender: Any) {
-        
-    }
-    
+
     @IBAction func clickToSelectFromDate(_ sender: Any) {
         
     }
@@ -56,7 +52,7 @@ class ClinicListVC: UIViewController {
 }
 
 //MARK:- CollectionView Method
-extension ClinicListVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension ClinicPackageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func registerCollectionView() {
         categoryCV.register(UINib.init(nibName: "ClinicCategoryCVC", bundle: nil), forCellWithReuseIdentifier: "ClinicCategoryCVC")
@@ -66,6 +62,7 @@ extension ClinicListVC : UICollectionViewDelegate, UICollectionViewDataSource, U
             arrClinicCategory.append(ClinicCategoryModel.init(temp))
         }
         categoryCV.reloadData()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -83,11 +80,7 @@ extension ClinicListVC : UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if arrClinicCategory[indexPath.row].name == "Packages" {
-            let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
-            UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
-        }
-        else if arrClinicCategory[indexPath.row].name == "Family Members" {
+        if arrClinicCategory[indexPath.row].name == "Family Members" {
             let vc : FamilyMemberVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "FamilyMemberVC") as! FamilyMemberVC
             UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
         }
@@ -98,34 +91,36 @@ extension ClinicListVC : UICollectionViewDelegate, UICollectionViewDataSource, U
     }
 }
 
+
 //MARK:- Tableview Method
-extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
+extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
-        tblView.register(UINib.init(nibName: "ClinicAppointmentTVC", bundle: nil), forCellReuseIdentifier: "ClinicAppointmentTVC")
+        tblView.register(UINib.init(nibName: "ClinicPackageTVC", bundle: nil), forCellReuseIdentifier: "ClinicPackageTVC")
         updateTableviewHeight()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : ClinicAppointmentTVC = tblView.dequeueReusableCell(withIdentifier: "ClinicAppointmentTVC") as! ClinicAppointmentTVC
+        let cell : ClinicPackageTVC = tblView.dequeueReusableCell(withIdentifier: "ClinicPackageTVC") as! ClinicPackageTVC
         
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let vc : ClinicPackageDetailVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageDetailVC") as! ClinicPackageDetailVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func updateTableviewHeight() {
-        constraintHeightTblView.constant = 150 * 3
+        constraintHeightTblView.constant = 2 * 198
     }
 }
