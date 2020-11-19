@@ -13,6 +13,7 @@ var BorderColor = LIGHT_GRAY_COLOR
 var LightBorderColor = colorFromHex(hex: "D8D8D8")
 var OrangeColor = colorFromHex(hex: "FF7900")
 var PurpleBorderColor = colorFromHex(hex: "ADADDC")
+var WhiteColor = colorFromHex(hex: "FFFFFF")
 
 enum ColorType : Int32 {
     case Clear = 0
@@ -20,6 +21,7 @@ enum ColorType : Int32 {
     case LightBorder = 2
     case Orange = 3
     case PurpleBorder = 4
+    case White = 5
 }
 
 extension ColorType {
@@ -36,6 +38,8 @@ extension ColorType {
                     return OrangeColor
                 case .PurpleBorder:
                     return PurpleBorderColor
+                case .White:
+                    return WhiteColor
             }
         }
     }

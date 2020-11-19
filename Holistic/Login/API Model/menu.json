@@ -65,6 +65,10 @@
         "image" : "menu_profile"
     },
     {
+        "title" : "Refer Friend",
+        "image" : "menu_product"
+    },
+    {
         "title" : "Logout",
         "image" : "menu_logout"
     }

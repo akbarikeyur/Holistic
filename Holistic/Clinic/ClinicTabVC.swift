@@ -77,6 +77,21 @@ extension ClinicTabVC : UICollectionViewDelegate, UICollectionViewDataSource, UI
         cell.setupDetails(arrClinicCategory[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if arrClinicCategory[indexPath.row].name == "Packages" {
+            let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
+            UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if arrClinicCategory[indexPath.row].name == "Family Members" {
+            let vc : FamilyMemberVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "FamilyMemberVC") as! FamilyMemberVC
+            UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if arrClinicCategory[indexPath.row].name == "Diet Plans" {
+            let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
+            UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 //MARK:- Tableview Method

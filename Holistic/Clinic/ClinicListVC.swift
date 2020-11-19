@@ -27,8 +27,8 @@ class ClinicListVC: UIViewController {
     }
     
     //MARK:- Button click event
-    @IBAction func clickToSideMenu(_ sender: Any) {
-        
+    @IBAction func clickToBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func clickToNotification(_ sender: Any) {

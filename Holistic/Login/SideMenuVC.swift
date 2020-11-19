@@ -111,6 +111,9 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 tblView.reloadData()
                 break
             case "My Loyalty Points":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+                let vc : LoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityPointVC") as! LoyalityPointVC
+                self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Blogs":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -120,6 +123,11 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
             case "Profile":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 4])
+                break
+            case "Refer Friend":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+                let vc : ReferFriendVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "ReferFriendVC") as! ReferFriendVC
+                self.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Logout":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -169,7 +177,7 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Package":
-                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+                    let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Family Members":

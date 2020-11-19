@@ -67,7 +67,7 @@ class CustomTabBarController: UITabBarController, CustomTabBarViewDelegate {
         let navController4 : UINavigationController = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantVCNav") as! UINavigationController
         viewControllers.append(navController4)
         
-        let navController5 : UINavigationController = STORYBOARD.HOME.instantiateViewController(withIdentifier: "ProfileVCNav") as! UINavigationController
+        let navController5 : UINavigationController = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "ProfileVCNav") as! UINavigationController
         viewControllers.append(navController5)
         
         self.viewControllers = viewControllers;

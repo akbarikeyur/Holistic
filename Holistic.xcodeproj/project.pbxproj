@@ -29,6 +29,7 @@
 		79333D27255BE7070092F567 /* ClinicPackageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D26255BE7070092F567 /* ClinicPackageDetailVC.swift */; };
 		79333D2A255BE7CF0092F567 /* ClinicPackageDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D28255BE7CF0092F567 /* ClinicPackageDetailTVC.swift */; };
 		79333D2B255BE7CF0092F567 /* ClinicPackageDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D29255BE7CF0092F567 /* ClinicPackageDetailTVC.xib */; };
+		79357FE8256675F90053C851 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79357FE7256675F80053C851 /* Profile.storyboard */; };
 		7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F29F25493D390002A276 /* FoodListSectionTVC.swift */; };
 		7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2A025493D390002A276 /* FoodListSectionTVC.xib */; };
 		7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2A325493E0D0002A276 /* FoodListTVC.swift */; };
@@ -44,6 +45,11 @@
 		7938F2BB254968CF0002A276 /* ProductDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2B9254968CF0002A276 /* ProductDetailTVC.xib */; };
 		7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BC25496B640002A276 /* ProductDetailVC.swift */; };
 		7938F2BF254982030002A276 /* MyCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BE254982030002A276 /* MyCartVC.swift */; };
+		794EDD1F25669B6600F867EB /* ReferFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD1E25669B6600F867EB /* ReferFriendVC.swift */; };
+		794EDD2125669B7B00F867EB /* LoyalityPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */; };
+		794EDD2525669F0C00F867EB /* LoyalityPointCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD2325669F0C00F867EB /* LoyalityPointCVC.swift */; };
+		794EDD2625669F0C00F867EB /* LoyalityPointCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794EDD2425669F0C00F867EB /* LoyalityPointCVC.xib */; };
+		794EDD282566A6C000F867EB /* LoyalityDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */; };
 		794FAFB1254FFE41005E045A /* BlogDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794FAFB0254FFE41005E045A /* BlogDetailVC.swift */; };
 		7950E8FC254ABC4F00EB8273 /* MyPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7950E8FB254ABC4F00EB8273 /* MyPurchaseVC.swift */; };
 		7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C022254C090600DF1BFA /* PurchaseProductTVC.swift */; };
@@ -200,6 +206,7 @@
 		79333D26255BE7070092F567 /* ClinicPackageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageDetailVC.swift; sourceTree = "<group>"; };
 		79333D28255BE7CF0092F567 /* ClinicPackageDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageDetailTVC.swift; sourceTree = "<group>"; };
 		79333D29255BE7CF0092F567 /* ClinicPackageDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicPackageDetailTVC.xib; sourceTree = "<group>"; };
+		79357FE7256675F80053C851 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7938F29F25493D390002A276 /* FoodListSectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListSectionTVC.swift; sourceTree = "<group>"; };
 		7938F2A025493D390002A276 /* FoodListSectionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListSectionTVC.xib; sourceTree = "<group>"; };
 		7938F2A325493E0D0002A276 /* FoodListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTVC.swift; sourceTree = "<group>"; };
@@ -215,6 +222,11 @@
 		7938F2B9254968CF0002A276 /* ProductDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailTVC.xib; sourceTree = "<group>"; };
 		7938F2BC25496B640002A276 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		7938F2BE254982030002A276 /* MyCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVC.swift; sourceTree = "<group>"; };
+		794EDD1E25669B6600F867EB /* ReferFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferFriendVC.swift; sourceTree = "<group>"; };
+		794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityPointVC.swift; sourceTree = "<group>"; };
+		794EDD2325669F0C00F867EB /* LoyalityPointCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityPointCVC.swift; sourceTree = "<group>"; };
+		794EDD2425669F0C00F867EB /* LoyalityPointCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoyalityPointCVC.xib; sourceTree = "<group>"; };
+		794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityDetailVC.swift; sourceTree = "<group>"; };
 		794FAFB0254FFE41005E045A /* BlogDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailVC.swift; sourceTree = "<group>"; };
 		7950E8FB254ABC4F00EB8273 /* MyPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPurchaseVC.swift; sourceTree = "<group>"; };
 		7953C022254C090600DF1BFA /* PurchaseProductTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductTVC.swift; sourceTree = "<group>"; };
@@ -370,6 +382,10 @@
 			isa = PBXGroup;
 			children = (
 				188D4E56255071A000DE6715 /* ProfileVC.swift */,
+				794EDD1E25669B6600F867EB /* ReferFriendVC.swift */,
+				794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */,
+				794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */,
+				794EDD2225669EEC00F867EB /* Tableview Cell */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -445,6 +461,15 @@
 				7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */,
 			);
 			path = "Collectionview Cell";
+			sourceTree = "<group>";
+		};
+		794EDD2225669EEC00F867EB /* Tableview Cell */ = {
+			isa = PBXGroup;
+			children = (
+				794EDD2325669F0C00F867EB /* LoyalityPointCVC.swift */,
+				794EDD2425669F0C00F867EB /* LoyalityPointCVC.xib */,
+			);
+			path = "Tableview Cell";
 			sourceTree = "<group>";
 		};
 		7953C02A254C19E800DF1BFA /* Clinic */ = {
@@ -662,6 +687,7 @@
 				799AB89A2546C57600033175 /* Hotel.storyboard */,
 				798249D825485B470035AB9E /* Restaurant.storyboard */,
 				7938F2A7254944C70002A276 /* Product.storyboard */,
+				79357FE7256675F80053C851 /* Profile.storyboard */,
 				79BC83592542E59A004A0B49 /* Login */,
 				79BC835E2542EF08004A0B49 /* Home */,
 				7953C02A254C19E800DF1BFA /* Clinic */,
@@ -920,6 +946,7 @@
 				79BC835D2542EEDC004A0B49 /* Home.storyboard in Resources */,
 				79D6D0082543ECD000945D7C /* completed_task.json in Resources */,
 				79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */,
+				794EDD2625669F0C00F867EB /* LoyalityPointCVC.xib in Resources */,
 				79BC836C2542FFA5004A0B49 /* TabCVC.xib in Resources */,
 				79AD21B6254D722700C97A89 /* ClinicAppointmentTVC.xib in Resources */,
 				7953C025254C090600DF1BFA /* PurchaseProductTVC.xib in Resources */,
@@ -940,6 +967,7 @@
 				79F218372547EE1000D981C1 /* SideMenuTVC.xib in Resources */,
 				79EFD5C42542BE10006D06FB /* Assets.xcassets in Resources */,
 				79333D23255BD7CB0092F567 /* ClinicPackageTVC.xib in Resources */,
+				79357FE8256675F90053C851 /* Profile.storyboard in Resources */,
 				79149D1B254FE86A00CBD522 /* BlogListTVC.xib in Resources */,
 				798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */,
 				79AD21AF254D6E6500C97A89 /* clinic_category.json in Resources */,
@@ -1030,6 +1058,7 @@
 				79EFD6092542C44A006D06FB /* AppModel.swift in Sources */,
 				7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */,
 				79EFD62E2542C44A006D06FB /* TextView.swift in Sources */,
+				794EDD2125669B7B00F867EB /* LoyalityPointVC.swift in Sources */,
 				79EC86FD25511CE2000C8F5E /* OTPVerificationVC.swift in Sources */,
 				18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */,
 				79EFD6402542D040006D06FB /* SwipeButtonView.swift in Sources */,
@@ -1097,6 +1126,7 @@
 				798249D525483BD60035AB9E /* HotelPackageTVC.swift in Sources */,
 				79F218362547EE1000D981C1 /* SideMenuTVC.swift in Sources */,
 				79C8F2AE254A908700481BB8 /* ContactInformationVC.swift in Sources */,
+				794EDD2525669F0C00F867EB /* LoyalityPointCVC.swift in Sources */,
 				79D6D00E2543F40A00945D7C /* MissedTaskTabVC.swift in Sources */,
 				79EFD5BF2542BE0E006D06FB /* WelcomeVC.swift in Sources */,
 				79D6D01B254408EA00945D7C /* XYMarkerView.swift in Sources */,
@@ -1124,9 +1154,11 @@
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,
 				79EC86FB25511904000C8F5E /* EmailLoginVC.swift in Sources */,
+				794EDD282566A6C000F867EB /* LoyalityDetailVC.swift in Sources */,
 				79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */,
 				79EFD6192542C44A006D06FB /* Date+RUI.swift in Sources */,
 				79EFD5BB2542BE0E006D06FB /* AppDelegate.swift in Sources */,
+				794EDD1F25669B6600F867EB /* ReferFriendVC.swift in Sources */,
 				79EFD6302542C44A006D06FB /* Button.swift in Sources */,
 				79EFD62A2542C44A006D06FB /* CollectionViewCell.swift in Sources */,
 			);

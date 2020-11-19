@@ -44,6 +44,7 @@ struct STORYBOARD {
     static var RESTAURANT = UIStoryboard(name: "Restaurant", bundle: nil)
     static var PRODUCT = UIStoryboard(name: "Product", bundle: nil)
     static var CLINIC = UIStoryboard(name: "Clinic", bundle: nil)
+    static var PROFILE = UIStoryboard(name: "Profile", bundle: nil)
 }
 
 struct NOTIFICATION {
