@@ -1,5 +1,5 @@
 //
-//  DietPlanMealTVC.swift
+//  PrescriptionsTVC.swift
 //  Holistic
 //
 //  Created by Keyur Akbari on 11/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DietPlanMealTVC: UITableViewCell {
+class PrescriptionsTVC: UITableViewCell {
 
     @IBOutlet weak var titleLbl: Label!
     @IBOutlet weak var sizeLbl: Label!

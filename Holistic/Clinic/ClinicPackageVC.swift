@@ -10,7 +10,6 @@ import UIKit
 
 class ClinicPackageVC: UIViewController {
 
-    @IBOutlet weak var categoryCV: UICollectionView!
     @IBOutlet weak var fromDateTxt: UITextField!
     @IBOutlet weak var toDateTxt: UITextField!
     @IBOutlet weak var tblView: UITableView!
@@ -22,7 +21,6 @@ class ClinicPackageVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        registerCollectionView()
         registerTableViewMethod()
     }
     
@@ -39,6 +37,36 @@ class ClinicPackageVC: UIViewController {
         
     }
     
+    @IBAction func clickToDiet(_ sender: Any) {
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: DietPlanVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @IBAction func clickToAppointment(_ sender: Any) {
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ClinicListVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -50,47 +78,6 @@ class ClinicPackageVC: UIViewController {
     */
 
 }
-
-//MARK:- CollectionView Method
-extension ClinicPackageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-{
-    func registerCollectionView() {
-        categoryCV.register(UINib.init(nibName: "ClinicCategoryCVC", bundle: nil), forCellWithReuseIdentifier: "ClinicCategoryCVC")
-        
-        arrClinicCategory = [ClinicCategoryModel]()
-        for temp in getJsonFromFile("clinic_category") {
-            arrClinicCategory.append(ClinicCategoryModel.init(temp))
-        }
-        categoryCV.reloadData()
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrClinicCategory.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 110, height: collectionView.frame.size.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : ClinicCategoryCVC = categoryCV.dequeueReusableCell(withReuseIdentifier: "ClinicCategoryCVC", for: indexPath) as! ClinicCategoryCVC
-        cell.setupDetails(arrClinicCategory[indexPath.row])
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if arrClinicCategory[indexPath.row].name == "Family Members" {
-            let vc : FamilyMemberVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "FamilyMemberVC") as! FamilyMemberVC
-            UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
-        }
-        else if arrClinicCategory[indexPath.row].name == "Diet Plans" {
-            let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
-            UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-}
-
 
 //MARK:- Tableview Method
 extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
@@ -121,6 +108,9 @@ extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func updateTableviewHeight() {
-        constraintHeightTblView.constant = 2 * 198
+        constraintHeightTblView.constant = CGFloat.greatestFiniteMagnitude
+        tblView.reloadData()
+        tblView.layoutIfNeeded()
+        constraintHeightTblView.constant = tblView.contentSize.height
     }
 }

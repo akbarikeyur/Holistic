@@ -19,10 +19,10 @@
 		79149D1D254FF46500CBD522 /* BlogListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79149D1C254FF46500CBD522 /* BlogListVC.swift */; };
 		791C547325518F0600327EF2 /* Clinic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791C547225518F0600327EF2 /* Clinic.storyboard */; };
 		791C864225597B060087ABA5 /* DietPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C864125597B060087ABA5 /* DietPlanVC.swift */; };
-		79333D1A255BB9A20092F567 /* DietPlanMealCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D18255BB9A20092F567 /* DietPlanMealCVC.swift */; };
-		79333D1B255BB9A20092F567 /* DietPlanMealCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D19255BB9A20092F567 /* DietPlanMealCVC.xib */; };
-		79333D1E255BBA230092F567 /* DietPlanMealTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D1C255BBA230092F567 /* DietPlanMealTVC.swift */; };
-		79333D1F255BBA230092F567 /* DietPlanMealTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D1D255BBA230092F567 /* DietPlanMealTVC.xib */; };
+		79333D1A255BB9A20092F567 /* PrescriptionsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D18255BB9A20092F567 /* PrescriptionsCVC.swift */; };
+		79333D1B255BB9A20092F567 /* PrescriptionsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D19255BB9A20092F567 /* PrescriptionsCVC.xib */; };
+		79333D1E255BBA230092F567 /* PrescriptionsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D1C255BBA230092F567 /* PrescriptionsTVC.swift */; };
+		79333D1F255BBA230092F567 /* PrescriptionsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D1D255BBA230092F567 /* PrescriptionsTVC.xib */; };
 		79333D22255BD7CB0092F567 /* ClinicPackageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D20255BD7CB0092F567 /* ClinicPackageTVC.swift */; };
 		79333D23255BD7CB0092F567 /* ClinicPackageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79333D21255BD7CB0092F567 /* ClinicPackageTVC.xib */; };
 		79333D25255BDF0B0092F567 /* ClinicPackageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79333D24255BDF0B0092F567 /* ClinicPackageVC.swift */; };
@@ -45,6 +45,7 @@
 		7938F2BB254968CF0002A276 /* ProductDetailTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7938F2B9254968CF0002A276 /* ProductDetailTVC.xib */; };
 		7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BC25496B640002A276 /* ProductDetailVC.swift */; };
 		7938F2BF254982030002A276 /* MyCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938F2BE254982030002A276 /* MyCartVC.swift */; };
+		79465A642567D6DC0019D803 /* ClinicAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79465A632567D6DC0019D803 /* ClinicAPIManager.swift */; };
 		794EDD1F25669B6600F867EB /* ReferFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD1E25669B6600F867EB /* ReferFriendVC.swift */; };
 		794EDD2125669B7B00F867EB /* LoyalityPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */; };
 		794EDD2525669F0C00F867EB /* LoyalityPointCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD2325669F0C00F867EB /* LoyalityPointCVC.swift */; };
@@ -57,6 +58,7 @@
 		7953C028254C0E1D00DF1BFA /* PurchaseProductCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */; };
 		7953C029254C0E1E00DF1BFA /* PurchaseProductCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */; };
 		7953C02C254C1D0400DF1BFA /* ClinicTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */; };
+		797C39B32567AF1F00E55C2B /* ClinicPrescriptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */; };
 		798249D525483BD60035AB9E /* HotelPackageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249D325483BD60035AB9E /* HotelPackageTVC.swift */; };
 		798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798249D425483BD60035AB9E /* HotelPackageTVC.xib */; };
 		798249D925485B470035AB9E /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798249D825485B470035AB9E /* Restaurant.storyboard */; };
@@ -65,6 +67,8 @@
 		798249E025485C760035AB9E /* RestaurantListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798249DE25485C760035AB9E /* RestaurantListTVC.xib */; };
 		798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E1254860A80035AB9E /* RestaurantVC.swift */; };
 		798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */; };
+		7995C34725678D3500DD6FAC /* DietPlanCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995C34525678D3500DD6FAC /* DietPlanCVC.swift */; };
+		7995C34825678D3500DD6FAC /* DietPlanCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7995C34625678D3500DD6FAC /* DietPlanCVC.xib */; };
 		799AB89B2546C57600033175 /* Hotel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799AB89A2546C57600033175 /* Hotel.storyboard */; };
 		79A6A0892559339500E3CCD6 /* ClinicListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6A0882559339500E3CCD6 /* ClinicListVC.swift */; };
 		79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */; };
@@ -93,8 +97,6 @@
 		79C624D32559672000F9C385 /* FamilyMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C624D22559672000F9C385 /* FamilyMemberVC.swift */; };
 		79C624D62559679F00F9C385 /* FamilyMemberCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C624D42559679F00F9C385 /* FamilyMemberCVC.swift */; };
 		79C624D72559679F00F9C385 /* FamilyMemberCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C624D52559679F00F9C385 /* FamilyMemberCVC.xib */; };
-		79C624DA25596EF300F9C385 /* DietPlanTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C624D825596EF300F9C385 /* DietPlanTVC.swift */; };
-		79C624DB25596EF300F9C385 /* DietPlanTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C624D925596EF300F9C385 /* DietPlanTVC.xib */; };
 		79C8F2AE254A908700481BB8 /* ContactInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2AD254A908700481BB8 /* ContactInformationVC.swift */; };
 		79C8F2B0254A9B7400481BB8 /* OrderSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2AF254A9B7400481BB8 /* OrderSummaryVC.swift */; };
 		79C8F2B3254AA1FB00481BB8 /* OrderSummaryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */; };
@@ -196,10 +198,10 @@
 		79149D1C254FF46500CBD522 /* BlogListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListVC.swift; sourceTree = "<group>"; };
 		791C547225518F0600327EF2 /* Clinic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clinic.storyboard; sourceTree = "<group>"; };
 		791C864125597B060087ABA5 /* DietPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanVC.swift; sourceTree = "<group>"; };
-		79333D18255BB9A20092F567 /* DietPlanMealCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanMealCVC.swift; sourceTree = "<group>"; };
-		79333D19255BB9A20092F567 /* DietPlanMealCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietPlanMealCVC.xib; sourceTree = "<group>"; };
-		79333D1C255BBA230092F567 /* DietPlanMealTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanMealTVC.swift; sourceTree = "<group>"; };
-		79333D1D255BBA230092F567 /* DietPlanMealTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietPlanMealTVC.xib; sourceTree = "<group>"; };
+		79333D18255BB9A20092F567 /* PrescriptionsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionsCVC.swift; sourceTree = "<group>"; };
+		79333D19255BB9A20092F567 /* PrescriptionsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrescriptionsCVC.xib; sourceTree = "<group>"; };
+		79333D1C255BBA230092F567 /* PrescriptionsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionsTVC.swift; sourceTree = "<group>"; };
+		79333D1D255BBA230092F567 /* PrescriptionsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrescriptionsTVC.xib; sourceTree = "<group>"; };
 		79333D20255BD7CB0092F567 /* ClinicPackageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageTVC.swift; sourceTree = "<group>"; };
 		79333D21255BD7CB0092F567 /* ClinicPackageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicPackageTVC.xib; sourceTree = "<group>"; };
 		79333D24255BDF0B0092F567 /* ClinicPackageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPackageVC.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		7938F2B9254968CF0002A276 /* ProductDetailTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailTVC.xib; sourceTree = "<group>"; };
 		7938F2BC25496B640002A276 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		7938F2BE254982030002A276 /* MyCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVC.swift; sourceTree = "<group>"; };
+		79465A632567D6DC0019D803 /* ClinicAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicAPIManager.swift; sourceTree = "<group>"; };
 		794EDD1E25669B6600F867EB /* ReferFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferFriendVC.swift; sourceTree = "<group>"; };
 		794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityPointVC.swift; sourceTree = "<group>"; };
 		794EDD2325669F0C00F867EB /* LoyalityPointCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityPointCVC.swift; sourceTree = "<group>"; };
@@ -234,6 +237,7 @@
 		7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductCVC.swift; sourceTree = "<group>"; };
 		7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseProductCVC.xib; sourceTree = "<group>"; };
 		7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicTabVC.swift; sourceTree = "<group>"; };
+		797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPrescriptionsVC.swift; sourceTree = "<group>"; };
 		798249D325483BD60035AB9E /* HotelPackageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPackageTVC.swift; sourceTree = "<group>"; };
 		798249D425483BD60035AB9E /* HotelPackageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelPackageTVC.xib; sourceTree = "<group>"; };
 		798249D825485B470035AB9E /* Restaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurant.storyboard; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 		798249DE25485C760035AB9E /* RestaurantListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantListTVC.xib; sourceTree = "<group>"; };
 		798249E1254860A80035AB9E /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
 		798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
+		7995C34525678D3500DD6FAC /* DietPlanCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanCVC.swift; sourceTree = "<group>"; };
+		7995C34625678D3500DD6FAC /* DietPlanCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietPlanCVC.xib; sourceTree = "<group>"; };
 		799AB89A2546C57600033175 /* Hotel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotel.storyboard; sourceTree = "<group>"; };
 		79A6A0882559339500E3CCD6 /* ClinicListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListVC.swift; sourceTree = "<group>"; };
 		79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCategoryCVC.swift; sourceTree = "<group>"; };
@@ -270,8 +276,6 @@
 		79C624D22559672000F9C385 /* FamilyMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberVC.swift; sourceTree = "<group>"; };
 		79C624D42559679F00F9C385 /* FamilyMemberCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCVC.swift; sourceTree = "<group>"; };
 		79C624D52559679F00F9C385 /* FamilyMemberCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCVC.xib; sourceTree = "<group>"; };
-		79C624D825596EF300F9C385 /* DietPlanTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanTVC.swift; sourceTree = "<group>"; };
-		79C624D925596EF300F9C385 /* DietPlanTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietPlanTVC.xib; sourceTree = "<group>"; };
 		79C8F2AD254A908700481BB8 /* ContactInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationVC.swift; sourceTree = "<group>"; };
 		79C8F2AF254A9B7400481BB8 /* OrderSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryVC.swift; sourceTree = "<group>"; };
 		79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryTVC.swift; sourceTree = "<group>"; };
@@ -481,6 +485,7 @@
 				791C864125597B060087ABA5 /* DietPlanVC.swift */,
 				79333D24255BDF0B0092F567 /* ClinicPackageVC.swift */,
 				79333D26255BE7070092F567 /* ClinicPackageDetailVC.swift */,
+				797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */,
 				79AD21AD254D6E2C00C97A89 /* API Model */,
 				79AD21B2254D70C200C97A89 /* Tableview Cell */,
 				79AD21A8254D6AD200C97A89 /* Collectionview Cell */,
@@ -531,8 +536,10 @@
 				79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */,
 				79C624D42559679F00F9C385 /* FamilyMemberCVC.swift */,
 				79C624D52559679F00F9C385 /* FamilyMemberCVC.xib */,
-				79333D18255BB9A20092F567 /* DietPlanMealCVC.swift */,
-				79333D19255BB9A20092F567 /* DietPlanMealCVC.xib */,
+				79333D18255BB9A20092F567 /* PrescriptionsCVC.swift */,
+				79333D19255BB9A20092F567 /* PrescriptionsCVC.xib */,
+				7995C34525678D3500DD6FAC /* DietPlanCVC.swift */,
+				7995C34625678D3500DD6FAC /* DietPlanCVC.xib */,
 			);
 			path = "Collectionview Cell";
 			sourceTree = "<group>";
@@ -542,6 +549,7 @@
 			children = (
 				79AD21AE254D6E6500C97A89 /* clinic_category.json */,
 				79AD21B0254D6F6B00C97A89 /* ClinicCategoryModel.swift */,
+				79465A632567D6DC0019D803 /* ClinicAPIManager.swift */,
 			);
 			path = "API Model";
 			sourceTree = "<group>";
@@ -551,10 +559,8 @@
 			children = (
 				79AD21B3254D722700C97A89 /* ClinicAppointmentTVC.swift */,
 				79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */,
-				79C624D825596EF300F9C385 /* DietPlanTVC.swift */,
-				79C624D925596EF300F9C385 /* DietPlanTVC.xib */,
-				79333D1C255BBA230092F567 /* DietPlanMealTVC.swift */,
-				79333D1D255BBA230092F567 /* DietPlanMealTVC.xib */,
+				79333D1C255BBA230092F567 /* PrescriptionsTVC.swift */,
+				79333D1D255BBA230092F567 /* PrescriptionsTVC.xib */,
 				79333D20255BD7CB0092F567 /* ClinicPackageTVC.swift */,
 				79333D21255BD7CB0092F567 /* ClinicPackageTVC.xib */,
 				79333D28255BE7CF0092F567 /* ClinicPackageDetailTVC.swift */,
@@ -937,7 +943,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7938F2BB254968CF0002A276 /* ProductDetailTVC.xib in Resources */,
-				79333D1F255BBA230092F567 /* DietPlanMealTVC.xib in Resources */,
+				79333D1F255BBA230092F567 /* PrescriptionsTVC.xib in Resources */,
 				18B435AE25435C8200757513 /* wakeup.json in Resources */,
 				79EFD5C72542BE10006D06FB /* LaunchScreen.storyboard in Resources */,
 				79C8F2B4254AA1FB00481BB8 /* OrderSummaryTVC.xib in Resources */,
@@ -962,7 +968,6 @@
 				79F2183C2547F09900D981C1 /* menu.json in Resources */,
 				79F218492548164800D981C1 /* HotelFacilityCVC.xib in Resources */,
 				799AB89B2546C57600033175 /* Hotel.storyboard in Resources */,
-				79C624DB25596EF300F9C385 /* DietPlanTVC.xib in Resources */,
 				79BC83632542EF85004A0B49 /* CustomTabBarView.xib in Resources */,
 				79F218372547EE1000D981C1 /* SideMenuTVC.xib in Resources */,
 				79EFD5C42542BE10006D06FB /* Assets.xcassets in Resources */,
@@ -974,6 +979,7 @@
 				79EFD5C22542BE0E006D06FB /* Main.storyboard in Resources */,
 				798249E025485C760035AB9E /* RestaurantListTVC.xib in Resources */,
 				79C624D72559679F00F9C385 /* FamilyMemberCVC.xib in Resources */,
+				7995C34825678D3500DD6FAC /* DietPlanCVC.xib in Resources */,
 				79BC837A25431207004A0B49 /* current_task.json in Resources */,
 				79333D2B255BE7CF0092F567 /* ClinicPackageDetailTVC.xib in Resources */,
 				79149D15254FE64100CBD522 /* BlogListCVC.xib in Resources */,
@@ -984,7 +990,7 @@
 				791C547325518F0600327EF2 /* Clinic.storyboard in Resources */,
 				79EFD6342542CBF5006D06FB /* WorkSans-Bold.ttf in Resources */,
 				7938F2A225493D390002A276 /* FoodListSectionTVC.xib in Resources */,
-				79333D1B255BB9A20092F567 /* DietPlanMealCVC.xib in Resources */,
+				79333D1B255BB9A20092F567 /* PrescriptionsCVC.xib in Resources */,
 				79EFD63E2542CC11006D06FB /* WorkSans-ExtraBold.ttf in Resources */,
 				79EFD63C2542CC11006D06FB /* WorkSans-Regular.ttf in Resources */,
 				79F218452548123F00D981C1 /* HotelBenefitsCVC.xib in Resources */,
@@ -1113,12 +1119,12 @@
 				79EFD6112542C44A006D06FB /* UIDevice+Type.swift in Sources */,
 				79EFD60B2542C44A006D06FB /* MD5.swift in Sources */,
 				79BC83642542EF85004A0B49 /* CustomTabBarView.swift in Sources */,
-				79C624DA25596EF300F9C385 /* DietPlanTVC.swift in Sources */,
 				79BC837025430EBC004A0B49 /* FlowerLifeTabVC.swift in Sources */,
 				79F218402547FB6800D981C1 /* HotelsVC.swift in Sources */,
 				79F218442548123F00D981C1 /* HotelBenefitsCVC.swift in Sources */,
 				7938F2AF254947EC0002A276 /* ProductListTVC.swift in Sources */,
 				79EFD62B2542C44A006D06FB /* GradientLayer.swift in Sources */,
+				797C39B32567AF1F00E55C2B /* ClinicPrescriptionsVC.swift in Sources */,
 				798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */,
 				7953C028254C0E1D00DF1BFA /* PurchaseProductCVC.swift in Sources */,
 				79EFD6132542C44A006D06FB /* NSObject+Copy.swift in Sources */,
@@ -1135,10 +1141,11 @@
 				79EFD6232542C44A006D06FB /* Colors.swift in Sources */,
 				7938F2B6254953340002A276 /* BannerImageCVC.swift in Sources */,
 				79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */,
+				79465A642567D6DC0019D803 /* ClinicAPIManager.swift in Sources */,
 				79EFD6182542C44A006D06FB /* NSError+RUI.swift in Sources */,
-				79333D1E255BBA230092F567 /* DietPlanMealTVC.swift in Sources */,
+				79333D1E255BBA230092F567 /* PrescriptionsTVC.swift in Sources */,
 				79EFD6242542C44A006D06FB /* Label.swift in Sources */,
-				79333D1A255BB9A20092F567 /* DietPlanMealCVC.swift in Sources */,
+				79333D1A255BB9A20092F567 /* PrescriptionsCVC.swift in Sources */,
 				79149D1A254FE86A00CBD522 /* BlogListTVC.swift in Sources */,
 				79EFD6152542C44A006D06FB /* UIColor+RUI.swift in Sources */,
 				79BC83652542EF85004A0B49 /* CustomTabBarController.swift in Sources */,
@@ -1150,6 +1157,7 @@
 				7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */,
 				79F2184B2548179800D981C1 /* HotelDetailVC.swift in Sources */,
 				79333D2A255BE7CF0092F567 /* ClinicPackageDetailTVC.swift in Sources */,
+				7995C34725678D3500DD6FAC /* DietPlanCVC.swift in Sources */,
 				7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */,
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,

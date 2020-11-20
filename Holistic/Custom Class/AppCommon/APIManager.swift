@@ -18,6 +18,16 @@ struct API {
     
 }
 
+struct CLINIC_API {
+    static let BASE_URL = "https://api.clinicea.com/api/v2/"
+    
+    static let KEY              =       "a38a3f404b604d57c7d7aba15b4dd951"
+    static let USERNAME         =       "dr.rifas@gmail.com"
+    static let PASSWORD         =       "Rifas12345"
+    
+    static let GET_TOKEN        =       BASE_URL + "login/getTokenByStaffUsernamePwd?apiKey=" + CLINIC_API.KEY + "&loginUserName=" + CLINIC_API.USERNAME + "&pwd=" + CLINIC_API.PASSWORD
+}
+
 public class APIManager {
     
     static let shared = APIManager()
@@ -92,7 +102,7 @@ public class APIManager {
     }
     
     //MARK:- Get request
-    func callGetRequest(_ api : String, _ isLoaderDisplay : Bool, _ completion: @escaping (_ result : [String:Any]) -> Void) {
+    func callGetRequest(_ api : String, _ isLoaderDisplay : Bool, _ completion: @escaping (_ result : String) -> Void) {
         if !APIManager.isConnectedToNetwork()
         {
             APIManager().networkErrorMsg()
@@ -106,7 +116,7 @@ public class APIManager {
             removeLoader()
             switch response.result {
             case .success:
-                if let result = response.result.value as? [String:Any] {
+                if let result = response.result.value as? String {
                     completion(result)
                     return
                 }

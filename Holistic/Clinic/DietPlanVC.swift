@@ -10,7 +10,8 @@ import UIKit
 
 class DietPlanVC: UIViewController {
 
-    @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var dietCV: UICollectionView!
+    @IBOutlet weak var constraintHeightDietCV: NSLayoutConstraint!
     
     var arrExpand = [Int]()
     
@@ -18,7 +19,7 @@ class DietPlanVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        registerTableViewMethod()
+        registerCollectionView()
     }
     
     //MARK:- Button click event
@@ -26,7 +27,36 @@ class DietPlanVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func clickToPackage(_ sender: Any) {
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ClinicPackageVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @IBAction func clickToAppointment(_ sender: Any) {
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ClinicListVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -38,55 +68,30 @@ class DietPlanVC: UIViewController {
     */
 
 }
-//MARK:- Tableview Method
-extension DietPlanVC : UITableViewDelegate, UITableViewDataSource {
-    
-    func registerTableViewMethod() {
-        tblView.register(UINib.init(nibName: "DietPlanTVC", bundle: nil), forCellReuseIdentifier: "DietPlanTVC")
+
+//MARK:- CollectionView Method
+extension DietPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+{
+    func registerCollectionView() {
+        dietCV.register(UINib.init(nibName: "DietPlanCVC", bundle: nil), forCellWithReuseIdentifier: "DietPlanCVC")
+        constraintHeightDietCV.constant = (9/3) * (SCREEN.WIDTH/3)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 9
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width/3, height: collectionView.frame.size.width/3)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : DietPlanTVC = tblView.dequeueReusableCell(withIdentifier: "DietPlanTVC") as! DietPlanTVC
-        
-        let index = arrExpand.firstIndex { (temp) -> Bool in
-            temp == indexPath.row
-        }
-        if index == nil {
-            cell.detailView.isHidden = true
-            cell.expandBtn.isSelected = false
-            cell.outerView.layer.borderColor = LightBorderColor.cgColor
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : DietPlanCVC = dietCV.dequeueReusableCell(withReuseIdentifier: "DietPlanCVC", for: indexPath) as! DietPlanCVC
+        if (indexPath.row+1) % 3 == 0 {
+            cell.sideIMg.isHidden = true
         }else{
-            cell.detailView.isHidden = false
-            cell.expandBtn.isSelected = true
-            cell.outerView.layer.borderColor = OrangeColor.cgColor
+            cell.sideIMg.isHidden = false
         }
-        cell.expandBtn.tag = indexPath.row
-        cell.expandBtn.addTarget(self, action: #selector(clickToExpand(_:)), for: .touchUpInside)
-        cell.selectionStyle = .none
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    @IBAction func clickToExpand(_ sender: UIButton) {
-        let index = arrExpand.firstIndex { (temp) -> Bool in
-            temp == sender.tag
-        }
-        if index == nil {
-            arrExpand.append(sender.tag)
-        }else{
-            arrExpand.remove(at: index!)
-        }
-        tblView.reloadData()
     }
 }

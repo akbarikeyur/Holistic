@@ -36,6 +36,8 @@ class HomeVC: UIViewController {
             self.flowerView.isHidden = true
             self.selecteTab()
         }
+        
+        serviceCallToGenerateToken()
     }
     
     @objc func redirectToHomeLifestyle() {
@@ -148,5 +150,11 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         restaurantTab.view.removeFromSuperview()
         hotelTab.view.removeFromSuperview()
         productTab.view.removeFromSuperview()
+    }
+}
+
+extension HomeVC {
+    func serviceCallToGenerateToken() {
+        ClinicAPIManager.shared.serviceCallToGenerateToken()
     }
 }

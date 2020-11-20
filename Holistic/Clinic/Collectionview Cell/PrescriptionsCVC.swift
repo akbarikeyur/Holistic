@@ -1,5 +1,5 @@
 //
-//  DietPlanMealCVC.swift
+//  PrescriptionsCVC.swift
 //  Holistic
 //
 //  Created by Keyur Akbari on 11/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DietPlanMealCVC: UICollectionViewCell {
+class PrescriptionsCVC: UICollectionViewCell {
 
     @IBOutlet weak var tblView: UITableView!
     
@@ -25,10 +25,10 @@ class DietPlanMealCVC: UICollectionViewCell {
 }
 
 //MARK:- Tableview Method
-extension DietPlanMealCVC : UITableViewDelegate, UITableViewDataSource {
+extension PrescriptionsCVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
-        tblView.register(UINib.init(nibName: "DietPlanMealTVC", bundle: nil), forCellReuseIdentifier: "DietPlanMealTVC")
+        tblView.register(UINib.init(nibName: "PrescriptionsTVC", bundle: nil), forCellReuseIdentifier: "PrescriptionsTVC")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,7 +40,7 @@ extension DietPlanMealCVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : DietPlanMealTVC = tblView.dequeueReusableCell(withIdentifier: "DietPlanMealTVC") as! DietPlanMealTVC
+        let cell : PrescriptionsTVC = tblView.dequeueReusableCell(withIdentifier: "PrescriptionsTVC") as! PrescriptionsTVC
         
         cell.selectionStyle = .none
         return cell

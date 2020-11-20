@@ -173,7 +173,7 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                     UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Prescription":
-                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+                    let vc : ClinicPrescriptionsVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPrescriptionsVC") as! ClinicPrescriptionsVC
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Package":
