@@ -24,51 +24,8 @@ class ClinicListVC: UIViewController {
         registerTableViewMethod()
     }
     
-    //MARK:- Button click event
-    @IBAction func clickToBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func clickToNotification(_ sender: Any) {
+    func setupDetails() {
         
-    }
-    
-    @IBAction func clickToSelectFromDate(_ sender: Any) {
-        
-    }
-    
-    @IBAction func clickToSelectToDate(_ sender: Any) {
-        
-    }
-    
-    @IBAction func clickToPackage(_ sender: UIButton) {
-        var isRedirect = false
-        for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: ClinicPackageVC.self) {
-                isRedirect = true
-                self.navigationController!.popToViewController(controller, animated: true)
-                break
-            }
-        }
-        if !isRedirect {
-            let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
-    @IBAction func clickToDietPlan(_ sender: UIButton) {
-        var isRedirect = false
-        for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: DietPlanVC.self) {
-                isRedirect = true
-                self.navigationController!.popToViewController(controller, animated: true)
-                break
-            }
-        }
-        if !isRedirect {
-            let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
     }
     
     /*

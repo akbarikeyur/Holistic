@@ -53,6 +53,7 @@ struct NOTIFICATION {
     static var NOTIFICATION_TAB_CLICK       =   "NOTIFICATION_TAB_CLICK"
     static var REDIRECT_HOME_LIFESTYLE      =   "REDIRECT_HOME_LIFESTYLE"
     static var REDIRECT_HOME_CLINIC         =   "REDIRECT_HOME_CLINIC"
+    static var REDIRECT_CLINIC_TAB          =   "REDIRECT_CLINIC_TAB"
 }
 
 struct Platform {

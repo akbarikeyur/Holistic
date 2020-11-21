@@ -10,8 +10,6 @@ import UIKit
 
 class LoyalityPointVC: UIViewController {
 
-    @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var nameLbl: Label!
     @IBOutlet weak var pointLbl: Label!
     @IBOutlet weak var pointCV: UICollectionView!
     @IBOutlet weak var myPageControl: UIPageControl!
@@ -53,6 +51,7 @@ extension LoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource
 {
     func registerCollectionView() {
         pointCV.register(UINib.init(nibName: "LoyalityPointCVC", bundle: nil), forCellWithReuseIdentifier: "LoyalityPointCVC")
+        myPageControl.numberOfPages = 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

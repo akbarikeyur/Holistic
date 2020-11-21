@@ -10,43 +10,45 @@ import UIKit
 
 class ClinicTabVC: UIViewController {
 
-    @IBOutlet weak var fromDateTxt: UITextField!
-    @IBOutlet weak var toDateTxt: UITextField!
-    @IBOutlet weak var tblView: UITableView!
-    @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
+    @IBOutlet weak var tabCV: UICollectionView!
+    @IBOutlet weak var mainContainerView: UIView!
     
-    var arrClinicCategory = [ClinicCategoryModel]()
+    var arrTab = [ClinicCategoryModel]()
+    var selectedTab = 0
+    
+    let clinicTab : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
+    let dietTab : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
+    let prescriptionsTab : ClinicPrescriptionsVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPrescriptionsVC") as! ClinicPrescriptionsVC
+    let packageTab : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
+    let familyTab : FamilyMemberVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "FamilyMemberVC") as! FamilyMemberVC
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        registerTableViewMethod()
+        NotificationCenter.default.addObserver(self, selector: #selector(redirectToTab(_:)), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: nil)
+        registerCollectionView()
+        arrTab = [ClinicCategoryModel]()
+        for temp in getJsonFromFile("clinic_category") {
+            arrTab.append(ClinicCategoryModel.init(temp))
+        }
+        tabCV.reloadData()
+        selecteTab()
+    }
+    
+    @objc func redirectToTab(_ noti : Notification) {
+        if let dict = noti.object as? [String : Any]{
+            if let index = dict["index"] as? Int {
+                selectedTab = index
+                selecteTab()
+            }
+        }
     }
     
     func setupDetails() {
         
     }
-    
-    //MARK:- Button click event
-    @IBAction func clickToSelectFromDate(_ sender: UIButton) {
         
-    }
-    
-    @IBAction func clickToSelectToDate(_ sender: UIButton) {
-        
-    }
-
-    @IBAction func clickToPackage(_ sender: UIButton) {
-        let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
-        UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func clickToDietPlan(_ sender: UIButton) {
-        let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
-        UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
-    }
-    
     /*
     // MARK: - Navigation
 
@@ -59,34 +61,65 @@ class ClinicTabVC: UIViewController {
 
 }
 
-//MARK:- Tableview Method
-extension ClinicTabVC : UITableViewDelegate, UITableViewDataSource {
-    
-    func registerTableViewMethod() {
-        tblView.register(UINib.init(nibName: "ClinicAppointmentTVC", bundle: nil), forCellReuseIdentifier: "ClinicAppointmentTVC")
-        updateTableviewHeight()
+//MARK:- CollectionView Method
+extension ClinicTabVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+{
+    func registerCollectionView() {
+        tabCV.register(UINib.init(nibName: "ClinicTabCVC", bundle: nil), forCellWithReuseIdentifier: "ClinicTabCVC")
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrTab.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 110, height: collectionView.frame.size.height)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : ClinicAppointmentTVC = tblView.dequeueReusableCell(withIdentifier: "ClinicAppointmentTVC") as! ClinicAppointmentTVC
-        
-        cell.selectionStyle = .none
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : ClinicTabCVC = tabCV.dequeueReusableCell(withReuseIdentifier: "ClinicTabCVC", for: indexPath) as! ClinicTabCVC
+        cell.setupDetails(arrTab[indexPath.row])
+        cell.categoryView.isHidden = (indexPath.row != selectedTab)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedTab = indexPath.row
+        selecteTab()
     }
     
-    func updateTableviewHeight() {
-        constraintHeightTblView.constant = 150 * 3
+    func selecteTab() {
+        resetContainerView()
+        tabCV.reloadData()
+        tabCV.scrollToItem(at: IndexPath(item: selectedTab, section: 0), at: .left, animated: true)
+        if selectedTab == 0 {
+            displaySubViewtoParentView(mainContainerView, subview: clinicTab.view)
+            clinicTab.setupDetails()
+        }
+        else if selectedTab == 1 {
+            displaySubViewtoParentView(mainContainerView, subview: dietTab.view)
+            dietTab.setupDetails()
+        }
+        else if selectedTab == 2 {
+            displaySubViewtoParentView(mainContainerView, subview: prescriptionsTab.view)
+            prescriptionsTab.setupDetails()
+        }
+        else if selectedTab == 3 {
+            displaySubViewtoParentView(mainContainerView, subview: packageTab.view)
+            packageTab.setupDetails()
+        }
+        else if selectedTab == 4 {
+            displaySubViewtoParentView(mainContainerView, subview: familyTab.view)
+            familyTab.setupDetails()
+        }
+    }
+    
+    func resetContainerView()
+    {
+        clinicTab.view.removeFromSuperview()
+        dietTab.view.removeFromSuperview()
+        prescriptionsTab.view.removeFromSuperview()
+        packageTab.view.removeFromSuperview()
+        familyTab.view.removeFromSuperview()
     }
 }

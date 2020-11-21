@@ -24,47 +24,17 @@ class ClinicPackageVC: UIViewController {
         registerTableViewMethod()
     }
     
-    //MARK:- Button click event
-    @IBAction func clickToBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    func setupDetails() {
+        
     }
-
+    
+    //MARK:- Button click event
     @IBAction func clickToSelectFromDate(_ sender: Any) {
         
     }
     
     @IBAction func clickToSelectToDate(_ sender: Any) {
         
-    }
-    
-    @IBAction func clickToDiet(_ sender: Any) {
-        var isRedirect = false
-        for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: DietPlanVC.self) {
-                isRedirect = true
-                self.navigationController!.popToViewController(controller, animated: true)
-                break
-            }
-        }
-        if !isRedirect {
-            let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
-    @IBAction func clickToAppointment(_ sender: Any) {
-        var isRedirect = false
-        for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: ClinicListVC.self) {
-                isRedirect = true
-                self.navigationController!.popToViewController(controller, animated: true)
-                break
-            }
-        }
-        if !isRedirect {
-            let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
     }
     
     /*
@@ -104,7 +74,7 @@ extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : ClinicPackageDetailVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageDetailVC") as! ClinicPackageDetailVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
     }
     
     func updateTableviewHeight() {

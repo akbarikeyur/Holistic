@@ -113,12 +113,12 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
             case "My Loyalty Points":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 let vc : LoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityPointVC") as! LoyalityPointVC
-                self.navigationController?.pushViewController(vc, animated: true)
+                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Blogs":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 let vc : BlogListVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "BlogListVC") as! BlogListVC
-                self.navigationController?.pushViewController(vc, animated: true)
+                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Profile":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -127,7 +127,7 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
             case "Refer Friend":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 let vc : ReferFriendVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "ReferFriendVC") as! ReferFriendVC
-                self.navigationController?.pushViewController(vc, animated: true)
+                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Logout":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -163,26 +163,22 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
         self.menuContainerViewController.toggleLeftSideMenuCompletion {}
         let title = arrMenuData[indexPath.section].title
         if title == "Holistic Clinic" {
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
             switch arrMenuData[indexPath.section].data[indexPath.row].title {
                 case "Appointments":
-                    let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 0])
                     break
                 case "Diet Plan":
-                    let vc : DietPlanVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "DietPlanVC") as! DietPlanVC
-                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 1])
                     break
                 case "Prescription":
-                    let vc : ClinicPrescriptionsVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPrescriptionsVC") as! ClinicPrescriptionsVC
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 2])
                     break
                 case "Package":
-                    let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 3])
                     break
                 case "Family Members":
-                    let vc : FamilyMemberVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "FamilyMemberVC") as! FamilyMemberVC
-                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 4])
                     break
                 default:
                     break
@@ -192,11 +188,11 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
             switch arrMenuData[indexPath.section].data[indexPath.row].title {
                 case "All Products":
                     let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "My purchases":
                     let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 default:
                     break

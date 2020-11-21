@@ -1,27 +1,27 @@
 [
     {
-        "name" : "Packages",
-        "image" : "clinic_package",
+        "name" : "Appointment",
+        "image" : "ic_clinic_orange",
         "color" : "AF8EFF"
     },
     {
         "name" : "Diet Plans",
-        "image" : "clinic_diet_plan",
+        "image" : "ic_diet_plan",
         "color" : "8FABFE"
     },
     {
         "name" : "Prescriptions",
-        "image" : "clinic_prescriptions",
+        "image" : "ic_prescription",
         "color" : "1D86FC"
     },
     {
-        "name" : "Family Members",
-        "image" : "clinic_family",
+        "name" : "Package",
+        "image" : "ic_package",
         "color" : "FD9A8F"
     },
     {
-        "name" : "Appointments",
-        "image" : "clinic_appointment",
+        "name" : "Family Members",
+        "image" : "ic_family",
         "color" : "4AD991"
     }
 ]

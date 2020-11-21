@@ -22,39 +22,8 @@ class DietPlanVC: UIViewController {
         registerCollectionView()
     }
     
-    //MARK:- Button click event
-    @IBAction func clickToBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func clickToPackage(_ sender: Any) {
-        var isRedirect = false
-        for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: ClinicPackageVC.self) {
-                isRedirect = true
-                self.navigationController!.popToViewController(controller, animated: true)
-                break
-            }
-        }
-        if !isRedirect {
-            let vc : ClinicPackageVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageVC") as! ClinicPackageVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
-    @IBAction func clickToAppointment(_ sender: Any) {
-        var isRedirect = false
-        for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: ClinicListVC.self) {
-                isRedirect = true
-                self.navigationController!.popToViewController(controller, animated: true)
-                break
-            }
-        }
-        if !isRedirect {
-            let vc : ClinicListVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicListVC") as! ClinicListVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+    func setupDetails() {
+        
     }
     
     /*
