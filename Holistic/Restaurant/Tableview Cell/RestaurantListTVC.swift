@@ -22,6 +22,16 @@ class RestaurantListTVC: UITableViewCell {
         // Initialization code
     }
 
+    func setupDetails(_ dict : RestaurantModel) {
+        if dict.get_restaurant_media.count > 0 {
+            setImageBackgroundImage(imgView, dict.get_restaurant_media[0].url, IMAGE.PLACEHOLDER)
+        }
+        starView.rating = dict.ratings
+        nameLbl.text = dict.title
+        priceLbl.text = displayPriceWithCurrency(dict.main_price)
+        addressLbl.text = dict.address
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

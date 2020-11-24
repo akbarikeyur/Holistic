@@ -52,3 +52,43 @@ func getAuthToken() -> String
     return ""
 }
 
+func setClinicToken(_ token: String)
+{
+    setDataToPreference(data: token as AnyObject, forKey: "clinic_token")
+    setClinicLogin(true)
+}
+
+func getClinicToken() -> String
+{
+    if let token : String = getDataFromPreference(key: "clinic_token") as? String
+    {
+        return token
+    }
+    return ""
+}
+
+func setClinicLogin(_ value : Bool) {
+    setDataToPreference(data: value as AnyObject, forKey: "is_clinic_login")
+}
+
+func isClinicLogin() -> Bool {
+    if let value : Bool = getDataFromPreference(key: "is_clinic_login") as? Bool
+    {
+        return value
+    }
+    return false
+}
+
+func setClinicUserId(_ value: String)
+{
+    setDataToPreference(data: value as AnyObject, forKey: "clinic_user_id")
+}
+
+func getClinicUserId() -> String
+{
+    if let token : String = getDataFromPreference(key: "clinic_user_id") as? String
+    {
+        return token
+    }
+    return ""
+}

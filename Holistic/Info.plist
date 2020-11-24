@@ -47,5 +47,10 @@
 		<string>WorkSans-ExtraBold.ttf</string>
 		<string>WorkSans-Light.ttf</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

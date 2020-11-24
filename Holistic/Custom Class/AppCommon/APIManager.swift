@@ -12,21 +12,15 @@ import Alamofire
 
 
 struct API {
-    static let BASE_URL = ""
+    static let BASE_URL = "http://anglotestserver.website/clinic/api/"
     
-    static let LOGIN                                 =       BASE_URL + "user/login"
+    static let GET_BLOG_LIST             =       BASE_URL + "blog/all"
+    
+    static let GET_RESTAURANT_LIST       =       BASE_URL + "restaurant/all"
+    static let GET_RESTAURANT_DETAIL     =       BASE_URL + "restaurant/detail"
     
 }
 
-struct CLINIC_API {
-    static let BASE_URL = "https://api.clinicea.com/api/v2/"
-    
-    static let KEY              =       "a38a3f404b604d57c7d7aba15b4dd951"
-    static let USERNAME         =       "dr.rifas@gmail.com"
-    static let PASSWORD         =       "Rifas12345"
-    
-    static let GET_TOKEN        =       BASE_URL + "login/getTokenByStaffUsernamePwd?apiKey=" + CLINIC_API.KEY + "&loginUserName=" + CLINIC_API.USERNAME + "&pwd=" + CLINIC_API.PASSWORD
-}
 
 public class APIManager {
     

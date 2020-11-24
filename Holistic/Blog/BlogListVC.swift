@@ -15,6 +15,8 @@ class BlogListVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
+    var arrBlogData = [BlogModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,7 @@ class BlogListVC: UIViewController {
         
         registerCollectionView()
         registerTableViewMethod()
+        serviceCallToGetBlogList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,10 +57,11 @@ extension BlogListVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
 {
     func registerCollectionView() {
         blogCV.register(UINib.init(nibName: "BlogListCVC", bundle: nil), forCellWithReuseIdentifier: "BlogListCVC")
+        constraintHeightBlogCV.constant = 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -81,11 +85,10 @@ extension BlogListVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         tblView.register(UINib.init(nibName: "BlogListTVC", bundle: nil), forCellReuseIdentifier: "BlogListTVC")
-        constraintHeightTblView.constant = 100 * 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return arrBlogData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -94,13 +97,34 @@ extension BlogListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : BlogListTVC = tblView.dequeueReusableCell(withIdentifier: "BlogListTVC") as! BlogListTVC
-        
+        cell.setupDetails(arrBlogData[indexPath.row])
+        cell.shareBtn.tag = indexPath.row
+        cell.shareBtn.addTarget(self, action: #selector(clickToShare(_:)), for: .touchUpInside)
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : BlogDetailVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "BlogDetailVC") as! BlogDetailVC
+        vc.blogData = arrBlogData[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func clickToShare(_ sender: UIButton) {
+        AppDelegate().sharedDelegate().shareBlog(arrBlogData[sender.tag])
+    }
+}
+
+//MARK:- Service call
+extension BlogListVC {
+    func serviceCallToGetBlogList() {
+        BlogAPIManager.shared.serviceCallToGetBlogList { (data, last_page) in
+            self.arrBlogData = [BlogModel]()
+            for temp in data {
+                self.arrBlogData.append(BlogModel.init(temp))
+            }
+            self.tblView.reloadData()
+            self.constraintHeightTblView.constant = CGFloat(100 * self.arrBlogData.count)
+        }
     }
 }

@@ -15,10 +15,23 @@ class BlogDetailVC: UIViewController {
     @IBOutlet weak var dateLbl: Label!
     @IBOutlet weak var descLbl: Label!
     
+    var blogData = BlogModel.init([String : Any]())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupDetails()
+    }
+    
+    func setupDetails() {
+        setImageBackgroundImage(imgView, blogData.get_single_media.url, IMAGE.PLACEHOLDER)
+        titleLbl.text = blogData.title
+        descLbl.attributedText = blogData.desc.html2AttributedString
+        if let strDate = blogData.created_at.components(separatedBy: "T").first {
+            let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd")
+            dateLbl.text = getDateStringFromDate(date: date, format: "MMMM d, yyyy")
+        }
     }
     
     //MARK:- Button click event
@@ -27,7 +40,7 @@ class BlogDetailVC: UIViewController {
     }
     
     @IBAction func clickToShare(_ sender: Any) {
-        
+        AppDelegate().sharedDelegate().shareBlog(blogData)
     }
 
     /*

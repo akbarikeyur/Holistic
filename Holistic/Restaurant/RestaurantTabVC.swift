@@ -13,11 +13,14 @@ class RestaurantTabVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet var exploreView: UIView!
     
+    var arrRestaurant = [RestaurantModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        serviceCallToGetRestaurantList()
         
     }
     
@@ -52,7 +55,7 @@ extension RestaurantTabVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrRestaurant.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -61,13 +64,27 @@ extension RestaurantTabVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : RestaurantListTVC = tblView.dequeueReusableCell(withIdentifier: "RestaurantListTVC") as! RestaurantListTVC
-        
+        cell.setupDetails(arrRestaurant[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : RestaurantDetailVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantDetailVC") as! RestaurantDetailVC
+        vc.restaurantData = arrRestaurant[indexPath.row]
         UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+//MARK:- Service called
+extension RestaurantTabVC {
+    func serviceCallToGetRestaurantList() {
+        RestaurantAPIManager.shared.serviceCallToGetRestaurantList { (data, is_last) in
+            self.arrRestaurant = [RestaurantModel]()
+            for temp in data {
+                self.arrRestaurant.append(RestaurantModel.init(temp))
+            }
+            self.tblView.reloadData()
+        }
     }
 }

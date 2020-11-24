@@ -19,18 +19,31 @@ class RestaurantDetailVC: UIViewController {
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     @IBOutlet var codeView: UIView!
     
+    var restaurantData = RestaurantModel.init([String : Any]())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        serviceCallToGetRestaurantDetail()
         setupDetails()
     }
     
     func setupDetails() {
-        nameLbl.text = "Moshi - Momo & Sushi"
-        addressLbl.text = "Business Central Towers | Dubai Media City, Dubai, United Arab Emirates"
-        descLbl.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        if restaurantData.get_restaurant_media.count > 0 {
+            setImageBackgroundImage(restaurantImgView, restaurantData.get_restaurant_media[0].url, IMAGE.PLACEHOLDER)
+        }
+        starView.rating = restaurantData.ratings
+        nameLbl.text = restaurantData.title
+        addressLbl.text = restaurantData.address
+        descLbl.attributedText = restaurantData.desc.html2AttributedString
+        tblView.reloadData()
+        updateTableviewHeight()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().hideTabBar()
     }
     
     //MARK:- Button click event
@@ -65,11 +78,11 @@ extension RestaurantDetailVC : UITableViewDelegate, UITableViewDataSource {
     func registerTableViewMethod() {
         tblView.register(UINib.init(nibName: "FoodListSectionTVC", bundle: nil), forCellReuseIdentifier: "FoodListSectionTVC")
         tblView.register(UINib.init(nibName: "FoodListTVC", bundle: nil), forCellReuseIdentifier: "FoodListTVC")
-        updateWakeupTableviewHeight()
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return restaurantData.get_restaurant_category.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -78,12 +91,12 @@ extension RestaurantDetailVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell : FoodListSectionTVC = tblView.dequeueReusableCell(withIdentifier: "FoodListSectionTVC") as! FoodListSectionTVC
-        
+        cell.titleLbl.text = restaurantData.get_restaurant_category[section].category_name
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return restaurantData.get_restaurant_category[section].get_restaurant_menu.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -92,7 +105,7 @@ extension RestaurantDetailVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : FoodListTVC = tblView.dequeueReusableCell(withIdentifier: "FoodListTVC") as! FoodListTVC
-        
+        cell.setupDetails(restaurantData.get_restaurant_category[indexPath.section].get_restaurant_menu[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -101,10 +114,20 @@ extension RestaurantDetailVC : UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    func updateWakeupTableviewHeight() {
+    func updateTableviewHeight() {
         constraintHeightTblView.constant = CGFloat.greatestFiniteMagnitude
         tblView.reloadData()
         tblView.layoutIfNeeded()
         constraintHeightTblView.constant = tblView.contentSize.height
+    }
+}
+
+//MARK:- Service called
+extension RestaurantDetailVC {
+    func serviceCallToGetRestaurantDetail() {
+        RestaurantAPIManager.shared.serviceCallToGetRestaurantDetail(["id" : restaurantData.id!]) { (dict) in
+            self.restaurantData = RestaurantModel.init(dict)
+            self.setupDetails()
+        }
     }
 }

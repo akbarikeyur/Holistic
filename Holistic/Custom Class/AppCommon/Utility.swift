@@ -417,8 +417,8 @@ func setupButtonHighlightEffect(_ button : UIButton, _ normalBGColor : UIColor, 
     button.setBackgroundImage(imageFromColor(color: highlightBGColor), for: .highlighted)
 }
 
-func displayPriceWithCurrency(_ price : String) -> String {
-    return CURRENCY + " " + price
+func displayPriceWithCurrency(_ price : Double) -> String {
+    return CURRENCY + " " + String(price)
 }
 
 func displayDiscountPriceWithCurrency(_ price : String, _ discount : Int) -> String {

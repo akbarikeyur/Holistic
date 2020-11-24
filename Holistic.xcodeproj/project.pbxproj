@@ -79,6 +79,10 @@
 		79AD21B1254D6F6B00C97A89 /* ClinicCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21B0254D6F6B00C97A89 /* ClinicCategoryModel.swift */; };
 		79AD21B5254D722700C97A89 /* ClinicAppointmentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21B3254D722700C97A89 /* ClinicAppointmentTVC.swift */; };
 		79AD21B6254D722700C97A89 /* ClinicAppointmentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */; };
+		79AD7BF8256D1D3500DCC33C /* BlogAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD7BF7256D1D3500DCC33C /* BlogAPIManager.swift */; };
+		79AD7BFA256D1D4300DCC33C /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD7BF9256D1D4300DCC33C /* BlogModel.swift */; };
+		79AD7BFD256D2B4C00DCC33C /* RestaurantAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD7BFC256D2B4C00DCC33C /* RestaurantAPIManager.swift */; };
+		79AD7BFF256D2B5F00DCC33C /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD7BFE256D2B5F00DCC33C /* RestaurantModel.swift */; };
 		79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE8215254986D400092603 /* ProductCartTVC.swift */; };
 		79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AE8216254986D400092603 /* ProductCartTVC.xib */; };
 		79BC835B2542E946004A0B49 /* MobileLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC835A2542E946004A0B49 /* MobileLoginVC.swift */; };
@@ -260,6 +264,10 @@
 		79AD21B0254D6F6B00C97A89 /* ClinicCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCategoryModel.swift; sourceTree = "<group>"; };
 		79AD21B3254D722700C97A89 /* ClinicAppointmentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicAppointmentTVC.swift; sourceTree = "<group>"; };
 		79AD21B4254D722700C97A89 /* ClinicAppointmentTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicAppointmentTVC.xib; sourceTree = "<group>"; };
+		79AD7BF7256D1D3500DCC33C /* BlogAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogAPIManager.swift; sourceTree = "<group>"; };
+		79AD7BF9256D1D4300DCC33C /* BlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
+		79AD7BFC256D2B4C00DCC33C /* RestaurantAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAPIManager.swift; sourceTree = "<group>"; };
+		79AD7BFE256D2B5F00DCC33C /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		79AE8215254986D400092603 /* ProductCartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTVC.swift; sourceTree = "<group>"; };
 		79AE8216254986D400092603 /* ProductCartTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTVC.xib; sourceTree = "<group>"; };
 		79BC835A2542E946004A0B49 /* MobileLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileLoginVC.swift; sourceTree = "<group>"; };
@@ -403,6 +411,7 @@
 			children = (
 				79149D1C254FF46500CBD522 /* BlogListVC.swift */,
 				794FAFB0254FFE41005E045A /* BlogDetailVC.swift */,
+				79AD7BF6256D1D2400DCC33C /* API Model */,
 				79149D17254FE84700CBD522 /* Tableview Cell */,
 				79149D16254FE83800CBD522 /* Collectionview Cell */,
 			);
@@ -503,6 +512,7 @@
 				798249DA25485C150035AB9E /* RestaurantTabVC.swift */,
 				798249E1254860A80035AB9E /* RestaurantVC.swift */,
 				798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */,
+				79AD7BFB256D2B2B00DCC33C /* API Model */,
 				798249DC25485C500035AB9E /* Tableview Cell */,
 			);
 			path = Restaurant;
@@ -573,6 +583,24 @@
 				79333D29255BE7CF0092F567 /* ClinicPackageDetailTVC.xib */,
 			);
 			path = "Tableview Cell";
+			sourceTree = "<group>";
+		};
+		79AD7BF6256D1D2400DCC33C /* API Model */ = {
+			isa = PBXGroup;
+			children = (
+				79AD7BF7256D1D3500DCC33C /* BlogAPIManager.swift */,
+				79AD7BF9256D1D4300DCC33C /* BlogModel.swift */,
+			);
+			path = "API Model";
+			sourceTree = "<group>";
+		};
+		79AD7BFB256D2B2B00DCC33C /* API Model */ = {
+			isa = PBXGroup;
+			children = (
+				79AD7BFC256D2B4C00DCC33C /* RestaurantAPIManager.swift */,
+				79AD7BFE256D2B5F00DCC33C /* RestaurantModel.swift */,
+			);
+			path = "API Model";
 			sourceTree = "<group>";
 		};
 		79BC83592542E59A004A0B49 /* Login */ = {
@@ -1063,6 +1091,7 @@
 				798249DF25485C760035AB9E /* RestaurantListTVC.swift in Sources */,
 				79BC835B2542E946004A0B49 /* MobileLoginVC.swift in Sources */,
 				79EFD6102542C44A006D06FB /* Preference.swift in Sources */,
+				79AD7BFF256D2B5F00DCC33C /* RestaurantModel.swift in Sources */,
 				79C624D32559672000F9C385 /* FamilyMemberVC.swift in Sources */,
 				798249DB25485C150035AB9E /* RestaurantTabVC.swift in Sources */,
 				79EFD61B2542C44A006D06FB /* UIView+ParentController.swift in Sources */,
@@ -1090,6 +1119,7 @@
 				793D604F2569479F00A5A500 /* ClinicTabCVC.swift in Sources */,
 				79EC86FF25511D01000C8F5E /* ForgotPasswordVC.swift in Sources */,
 				79EFD6172542C44A006D06FB /* Lable.swift in Sources */,
+				79AD7BFA256D1D4300DCC33C /* BlogModel.swift in Sources */,
 				79EFD6052542C44A006D06FB /* GlobalConstant.swift in Sources */,
 				188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */,
 				79EFD6122542C44A006D06FB /* Array+RUI.swift in Sources */,
@@ -1112,6 +1142,7 @@
 				79F218392547EFF400D981C1 /* SideMenuVC.swift in Sources */,
 				79D6D020254408EA00945D7C /* LargeValueFormatter.swift in Sources */,
 				79BC837C2543141A004A0B49 /* HomeModel.swift in Sources */,
+				79AD7BFD256D2B4C00DCC33C /* RestaurantAPIManager.swift in Sources */,
 				791C864225597B060087ABA5 /* DietPlanVC.swift in Sources */,
 				79EFD6142542C44A006D06FB /* Data+RUI.swift in Sources */,
 				79333D22255BD7CB0092F567 /* ClinicPackageTVC.swift in Sources */,
@@ -1173,6 +1204,7 @@
 				794EDD282566A6C000F867EB /* LoyalityDetailVC.swift in Sources */,
 				79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */,
 				79EFD6192542C44A006D06FB /* Date+RUI.swift in Sources */,
+				79AD7BF8256D1D3500DCC33C /* BlogAPIManager.swift in Sources */,
 				79EFD5BB2542BE0E006D06FB /* AppDelegate.swift in Sources */,
 				794EDD1F25669B6600F867EB /* ReferFriendVC.swift in Sources */,
 				79EFD6302542C44A006D06FB /* Button.swift in Sources */,

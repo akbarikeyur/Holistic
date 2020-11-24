@@ -20,6 +20,12 @@ class FoodListTVC: UITableViewCell {
         // Initialization code
     }
 
+    func setupDetails(_ dict : RestaurantMenuModel) {
+        nameLbl.text = dict.title
+        descLbl.attributedText = dict.desc.html2AttributedString
+        priceLbl.text = displayPriceWithCurrency(dict.price)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

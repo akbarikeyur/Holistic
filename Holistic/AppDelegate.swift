@@ -87,6 +87,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navigationVC
     }
     
+    func shareBlog(_ dict : BlogModel) {
+        var arrShare = [Any]()
+        let text = "Holistic\n" + dict.title
+        arrShare.append(text)
+        
+        if let imgUrl = NSURL(string:dict.get_single_media.url) {
+            arrShare.append(imgUrl)
+        }
+        let activityViewController = UIActivityViewController(activityItems: arrShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = UIApplication.topViewController()?.view
+        UIApplication.topViewController()!.present(activityViewController, animated: true, completion: nil)
+    }
+    
     //MARK:- AppDelegate Method
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
