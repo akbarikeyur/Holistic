@@ -26,7 +26,17 @@ class OTPVerificationVC: UIViewController {
     
     @IBAction func clickToConfirm(_ sender: Any) {
         self.view.endEditing(true)
-        AppDelegate().sharedDelegate().navigateToDashBoard()
+        if otpTxt.text?.trimmed == "" {
+            displayToast("enter_otp")
+        }
+        else{
+            var param = [String : Any]()
+            param["code"] = otpTxt.text
+            
+            LoginAPIManager.shared.serviceCallToVerify(param) { (dict) in
+                AppDelegate().sharedDelegate().navigateToDashBoard()
+            }
+        }
     }
     
     /*

@@ -43,7 +43,23 @@ class EmailLoginVC: UIViewController {
     
     @IBAction func clickToSignIn(_ sender: Any) {
         self.view.endEditing(true)
-        AppDelegate().sharedDelegate().navigateToDashBoard()
+        if emailTxt.text?.trimmed == "" {
+            displayToast("enter_email")
+        }
+        else if !emailTxt.text!.isValidEmail {
+            displayToast("invalid_email")
+        }
+        else if passwordTxt.text?.trimmed == "" {
+            displayToast("enter_password")
+        }
+        else {
+            var param = [String : Any]()
+            param["email"] = emailTxt.text
+            param["password"] = passwordTxt.text
+            LoginAPIManager.shared.serviceCallToEmailLogin(param) {
+                AppDelegate().sharedDelegate().navigateToDashBoard()
+            }
+        }
     }
     
     @IBAction func clickToSignup(_ sender: Any) {

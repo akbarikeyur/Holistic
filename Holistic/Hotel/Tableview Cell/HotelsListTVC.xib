@@ -248,6 +248,13 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLbl" destination="Ocq-ZE-b1j" id="dK5-ho-DHd"/>
+                <outlet property="imgView" destination="W99-Qw-fOJ" id="omN-ta-STZ"/>
+                <outlet property="nameLbl" destination="np6-tp-FUb" id="fbk-cR-8yz"/>
+                <outlet property="priceLbl" destination="g89-cr-i8S" id="8gi-fJ-gra"/>
+                <outlet property="starView" destination="12R-v9-hQA" id="ELu-q2-7N2"/>
+            </connections>
             <point key="canvasLocation" x="133" y="154"/>
         </tableViewCell>
     </objects>

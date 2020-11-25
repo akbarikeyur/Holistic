@@ -26,7 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
         
-        if PLATFORM.isSimulator {
+        serviceCallToGetCountry()
+        
+        if isUserLogin() {
+            AppModel.shared.currentUser = getLoginUserData()
             navigateToDashBoard()
         }
         return true
@@ -165,5 +168,19 @@ extension UIApplication {
             return topViewController(base: presented)
         }
         return base
+    }
+}
+
+extension AppDelegate {
+    func serviceCallToGetCountry() {
+        if getCountryData().count == 0 {
+            LoginAPIManager.shared.serviceCallToGetCountry { (data) in
+                var arrCountry = [CountryModel]()
+                for temp in data {
+                    arrCountry.append(CountryModel.init(temp))
+                }
+                setCountryData(arrCountry)
+            }
+        }
     }
 }

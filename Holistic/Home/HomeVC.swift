@@ -10,6 +10,7 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var nameLbl: Label!
     @IBOutlet weak var flowerView: UIView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var searchTxt: TextField!
@@ -30,17 +31,24 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(redirectToHomeLifestyle), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_LIFESTYLE), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(redirectToHomeClinic), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(setupUserDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         registerCollectionView()
         delay(2.0) {
             self.flowerView.isHidden = true
             self.selecteTab()
         }
-        
+        setupUserDetail()
         let date = getDateFromDateString(date: "2020-11-21 04:00 PM", format: "yyyy-MM-dd hh:mm a")
         print(date)
         
         //serviceCallToGenerateToken()
+    }
+    
+    @objc func setupUserDetail() {
+        if !isUserLogin() {
+            return
+        }
+        nameLbl.text = AppModel.shared.currentUser.name.capitalized
     }
     
     @objc func redirectToHomeLifestyle() {

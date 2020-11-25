@@ -15,18 +15,33 @@ class HotelsVC: UIViewController {
     @IBOutlet weak var nameLbl: Label!
     @IBOutlet var exploreView: UIView!
     
+    var arrHotel = [HotelModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(setupUserDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         registerTableViewMethod()
+        serviceCallToGetHotelList()
+        setupUserDetail()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().showTabBar()
-//        delay(1.0) {
-//            displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
-//        }
+        if !isFirstHotelPopup() {
+            delay(1.0) {
+                displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
+            }
+            setFirstHotelPopup(true)
+        }
+    }
+    
+    @objc func setupUserDetail() {
+        if !isUserLogin() {
+            return
+        }
+        nameLbl.text = AppModel.shared.currentUser.name.capitalized
     }
     
     //MARK:- Button click event
@@ -73,7 +88,7 @@ extension HotelsVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return arrHotel.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -82,13 +97,27 @@ extension HotelsVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : HotelsListTVC = tblView.dequeueReusableCell(withIdentifier: "HotelsListTVC") as! HotelsListTVC
-        
+        cell.setupDetails(arrHotel[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : HotelDetailVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelDetailVC") as! HotelDetailVC
+        vc.hotelData = arrHotel[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+//MARK:- Service called
+extension HotelsVC {
+    func serviceCallToGetHotelList() {
+        HotelAPIManager.shared.serviceCallToGetHotelList { (data, is_last) in
+            self.arrHotel = [HotelModel]()
+            for temp in data {
+                self.arrHotel.append(HotelModel.init(temp))
+            }
+            self.tblView.reloadData()
+        }
     }
 }

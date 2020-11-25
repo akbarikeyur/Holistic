@@ -18,8 +18,8 @@ class HotelFacilityCVC: UICollectionViewCell {
         // Initialization code
     }
 
-    func setupDetails(_ value : String, _ image : String) {
-        nameLbl.text = value
-        imgView.image = UIImage(named: image)
+    func setupDetails(_ dict : FacilityModel) {
+        nameLbl.text = dict.name
+        setImageBackgroundImage(imgView, dict.get_single_media.url, IMAGE.PLACEHOLDER)
     }
 }

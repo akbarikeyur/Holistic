@@ -92,3 +92,62 @@ func getClinicUserId() -> String
     }
     return ""
 }
+
+func setLoginUserData() {
+    setDataToPreference(data: AppModel.shared.currentUser.dictionary() as AnyObject, forKey: "login_user_data")
+    setUserLogin(true)
+}
+
+func getLoginUserData() -> UserModel
+{
+    if let data : [String : Any] = getDataFromPreference(key: "login_user_data") as? [String : Any] {
+        return UserModel.init(data)
+    }
+    return UserModel.init([String : Any]())
+}
+
+func setUserLogin(_ value : Bool) {
+    setDataToPreference(data: value as AnyObject, forKey: "is_user_login")
+}
+
+func isUserLogin() -> Bool {
+    if let value : Bool = getDataFromPreference(key: "is_user_login") as? Bool
+    {
+        return value
+    }
+    return false
+}
+
+
+func setCountryData(_ data: [CountryModel])
+{
+    var arrData = [[String : Any]]()
+    for temp in data {
+        arrData.append(temp.dictionary())
+    }
+    setDataToPreference(data: arrData as AnyObject, forKey: "country_data")
+}
+
+func getCountryData() -> [CountryModel]
+{
+    var arrCountry = [CountryModel]()
+    if let data : [[String : Any]] = getDataFromPreference(key: "country_data") as? [[String : Any]]
+    {
+        for temp in data {
+            arrCountry.append(CountryModel.init(temp))
+        }
+    }
+    return arrCountry
+}
+
+func setFirstHotelPopup(_ value : Bool) {
+    setDataToPreference(data: value as AnyObject, forKey: "is_first_hotel_popup")
+}
+
+func isFirstHotelPopup() -> Bool {
+    if let value : Bool = getDataFromPreference(key: "is_first_hotel_popup") as? Bool
+    {
+        return value
+    }
+    return false
+}

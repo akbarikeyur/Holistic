@@ -245,6 +245,7 @@
                     <connections>
                         <outlet property="flowerView" destination="3B3-mV-1bf" id="X8e-OD-VQt"/>
                         <outlet property="mainContainerView" destination="f1I-Hx-0b0" id="61Q-hF-cgh"/>
+                        <outlet property="nameLbl" destination="vLH-7N-krR" id="ZcA-Vz-PA1"/>
                         <outlet property="searchTxt" destination="kDG-fC-9Vo" id="gMU-eA-ElL"/>
                         <outlet property="tabCV" destination="X8C-dV-Cbd" id="VAc-3k-peb"/>
                     </connections>

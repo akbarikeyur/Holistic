@@ -25,12 +25,16 @@ class SideMenuVC: UIViewController {
         registerTableViewMethod()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setupUserDetail()
+    }
+    
     @objc func setupUserDetail() {
-//        if !isUserLogin() {
-//            return
-//        }
-//        nameLbl.text = AppModel.shared.currentUser.full_name.capitalized
-//        emailLbl.text = AppModel.shared.currentUser.email
+        if !isUserLogin() {
+            return
+        }
+        nameLbl.text = AppModel.shared.currentUser.name.capitalized
+        emailLbl.text = AppModel.shared.currentUser.email
     }
     
     @IBAction func clickToClose(_ sender: Any) {

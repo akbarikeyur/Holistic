@@ -14,7 +14,7 @@ class AppModel: NSObject {
     var currentUser : UserModel!
     
     func resetData() {
-        currentUser = UserModel.init(dict: [String : Any]())
+        currentUser = UserModel.init([String : Any]())
     }
     
     func getIntValue(_ dict : [String : Any], _ key : String) -> Int {
@@ -79,18 +79,5 @@ class AppModel: NSObject {
             return Double(temp)
         }
         return 0
-    }
-}
-
-
-struct UserModel {
-    var id : Int!
-    
-    init(dict : [String : Any]) {
-        id = AppModel.shared.getIntValue(dict, "id")
-    }
-    
-    func dictionary() -> [String : Any] {
-        return ["id" : id!]
     }
 }

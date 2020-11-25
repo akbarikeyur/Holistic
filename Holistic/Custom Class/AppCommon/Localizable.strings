@@ -56,34 +56,26 @@
 "enter_email" = "Please enter email";
 "invalid_email" = "Invalid email";
 "enter_password" = "Please enter password";
+"enter_confirm_password" = "Please enter confirm password";
+"password_confirm_validation" = "Password and confirm password must be same";
+"enter_phone" = "Please enter phone number";
+"enter_otp" = "Please enter otp";
+"enter_name" = "Please enter name";
+"enter_phonecode" = "Please select phone code";
+"enter_phone" = "Please enter phone";
+"enter_address" = "Please enter address";
+"enter_building" = "Please enter building name";
+"enter_floor" = "Please enter floor";
+"enter_room_number" = "Please enter room number";
+"enter_country" = "Please select country";
+"enter_state" = "Please select state";
+"enter_city" = "Please select city";
 
-//Side menu
-"menu_home" = "Home";
-"menu_dashboard" = "Dashboard";
-"menu_categories" = "Categories";
-"menu_properties" = "Properties";
-"menu_businesses" = "Businesses";
-"menu_profile" = "Profile";
-"menu_logout" = "Logout";
-"menu_login" = "Login";
-"menu_signup" = "Sign up";
+"select_country_first" = "Please select country first";
+"select_state_first" = "Please select state first";
 
-
+//Logout
 "logout" = "Logout";
 "logout_msg" = "Are you sure want to logout?";
 "yes" = "Yes";
 "no" = "No";
-
-//Date manager
-"select_date" = "Select Date";
-"select_start_date" = "Select Start Date";
-"select_end_date" = "Select End Date";
-"select_start_date_validation" = "Please select start date first";
-
-//Time manager
-"select_start_time" = "Select Start Time";
-"select_end_time" = "Select End Time";
-"start_time_end_time_validation" = "End time must me grater than start time";
-
-//Stadium
-"ok_button" = "OK";

@@ -10,11 +10,30 @@ import UIKit
 
 class HotelsListTVC: UITableViewCell {
 
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var starView: FloatRatingView!
+    @IBOutlet weak var nameLbl: Label!
+    @IBOutlet weak var priceLbl: Label!
+    @IBOutlet weak var addressLbl: Label!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func setupDetails(_ dict : HotelModel) {
+        if dict.get_hotels_media.count > 0 {
+            setImageBackgroundImage(imgView, dict.get_hotels_media[0].url, IMAGE.PLACEHOLDER)
+        }else{
+            imgView.image = UIImage.init(named: IMAGE.PLACEHOLDER)
+        }
+        starView.rating = dict.ratings
+        nameLbl.text = dict.title
+        priceLbl.text = displayPriceWithCurrency(dict.main_price)
+        addressLbl.text = dict.address
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

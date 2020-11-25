@@ -24,7 +24,21 @@ class ForgotPasswordVC: UIViewController {
     }
     
     @IBAction func clickToResetPassword(_ sender: Any) {
-        
+        self.view.endEditing(true)
+        if emailTxt.text?.trimmed == "" {
+            displayToast("enter_email")
+        }
+        else if !emailTxt.text!.isValidEmail {
+            displayToast("invalid_email")
+        }
+        else{
+            var param = [String : Any]()
+            param["email"] = emailTxt.text
+            
+            LoginAPIManager.shared.serviceCallToForgotPassword(param) { (dict) in
+                
+            }
+        }
     }
 
     /*

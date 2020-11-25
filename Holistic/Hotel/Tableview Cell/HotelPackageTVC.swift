@@ -16,8 +16,7 @@ class HotelPackageTVC: UITableViewCell, TagListViewDelegate {
     @IBOutlet weak var packageTagView: TagListView!
     @IBOutlet weak var constraintHeightPackageTagView: NSLayoutConstraint!
     
-    var arrImg = ["twinbeds", "adults", "nights"]
-    var arrTitle = ["Twin Bed", "Adults", "4 nights"]
+    var arrFacility = [AmunitiesModel]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,13 +25,18 @@ class HotelPackageTVC: UITableViewCell, TagListViewDelegate {
         registerCollectionView()
     }
 
-    func setupDetails() {
-        let arrTags = ["Breakfast", "Gym", "Pool", "Cleaning", "20% discount on food"]
+    func setupDetails(_ dict : PackageModel) {
+        var arrTags = [String]()
+        for temp in dict.get_includes {
+            arrTags.append(temp.name)
+        }
         packageTagView.delegate = self
         packageTagView.removeAllTags()
         packageTagView.addTags(arrTags)
         packageTagView.reloadInputViews()
         constraintHeightPackageTagView.constant = packageTagView.intrinsicContentSize.height
+        arrFacility = dict.get_amunities
+        benifitsCV.reloadData()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,7 +44,6 @@ class HotelPackageTVC: UITableViewCell, TagListViewDelegate {
 
         // Configure the view for the selected state
     }
-    
 }
 
 //MARK:- CollectionView Method
@@ -51,17 +54,21 @@ extension HotelPackageTVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrImg.count
+        return arrFacility.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width/3, height: collectionView.frame.size.height)
+        let label = UILabel(frame: CGRect.zero)
+        label.text = arrFacility[indexPath.row].name
+        label.sizeToFit()
+        return CGSize(width: label.frame.width + 45, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : HotelBenefitsCVC = benifitsCV.dequeueReusableCell(withReuseIdentifier: "HotelBenefitsCVC", for: indexPath) as! HotelBenefitsCVC
-        cell.imgBtn.setImage(UIImage(named: arrImg[indexPath.row]), for: .normal)
-        cell.titleLbl.text = arrTitle[indexPath.row]
+        let dict = arrFacility[indexPath.row]
+        setButtonImage(cell.imgBtn, dict.get_icon.get_single_icon_media.url, IMAGE.PLACEHOLDER)
+        cell.titleLbl.text = dict.name
         return cell
     }
 }

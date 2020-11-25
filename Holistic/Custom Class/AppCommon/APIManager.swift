@@ -14,11 +14,21 @@ import Alamofire
 struct API {
     static let BASE_URL = "http://anglotestserver.website/clinic/api/"
     
+    
+    static let GET_COUNTRY               =       BASE_URL + "country/get_country"
+    static let GET_STATE                 =       BASE_URL + "country/get_states"
+    static let GET_CITY                  =       BASE_URL + "country/get_cities"
+    
+    static let SIGNUP                    =       BASE_URL + "user/signup"
+    static let EMAIL_LOGIN               =       BASE_URL + "user/login"
+    
     static let GET_BLOG_LIST             =       BASE_URL + "blog/all"
     
     static let GET_RESTAURANT_LIST       =       BASE_URL + "restaurant/all"
     static let GET_RESTAURANT_DETAIL     =       BASE_URL + "restaurant/detail"
     
+    static let GET_HOTEL_LIST            =       BASE_URL + "hotels/all"
+    static let GET_HOTEL_DETAIL          =       BASE_URL + "hotels/detail"
 }
 
 

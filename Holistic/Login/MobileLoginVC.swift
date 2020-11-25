@@ -28,14 +28,28 @@ class MobileLoginVC: UIViewController {
     }
     
     //MARK:- Button click event
+    @IBAction func clickToBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func clickToSelectCountryCode(_ sender: UIButton) {
         self.view.endEditing(true)
     }
     
     @IBAction func clickToSignIn(_ sender: Any) {
         self.view.endEditing(true)
-        let vc : OTPVerificationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "OTPVerificationVC") as! OTPVerificationVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        if phoneTxt.text?.trimmed == "" {
+            displayToast("enter_phone")
+        }
+        else{
+            var param = [String : Any]()
+            param["phone"] = phoneTxt.text
+            
+            LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
+                let vc : OTPVerificationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "OTPVerificationVC") as! OTPVerificationVC
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
     
     @IBAction func clickToSignup(_ sender: Any) {

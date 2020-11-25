@@ -12,6 +12,11 @@
 		18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */; };
 		18B435AE25435C8200757513 /* wakeup.json in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AD25435C8200757513 /* wakeup.json */; };
 		4795D670F62A69E97956549D /* Pods_Holistic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059EB8287ED303FB69D1DABE /* Pods_Holistic.framework */; };
+		79055203256E1A4500A4CA08 /* HotelAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79055202256E1A4500A4CA08 /* HotelAPIManager.swift */; };
+		79055205256E1A4F00A4CA08 /* HotelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79055204256E1A4F00A4CA08 /* HotelModel.swift */; };
+		79055208256E2E5E00A4CA08 /* SingleLableTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79055206256E2E5E00A4CA08 /* SingleLableTVC.swift */; };
+		79055209256E2E5E00A4CA08 /* SingleLableTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79055207256E2E5E00A4CA08 /* SingleLableTVC.xib */; };
+		7905520B256E3DDC00A4CA08 /* LoginAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905520A256E3DDB00A4CA08 /* LoginAPIManager.swift */; };
 		79149D14254FE64100CBD522 /* BlogListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79149D12254FE64100CBD522 /* BlogListCVC.swift */; };
 		79149D15254FE64100CBD522 /* BlogListCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79149D13254FE64100CBD522 /* BlogListCVC.xib */; };
 		79149D1A254FE86A00CBD522 /* BlogListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79149D18254FE86A00CBD522 /* BlogListTVC.swift */; };
@@ -197,6 +202,11 @@
 		18B435A92543544A00757513 /* ExpandCollapseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCollapseTVC.swift; sourceTree = "<group>"; };
 		18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandCollapseTVC.xib; sourceTree = "<group>"; };
 		18B435AD25435C8200757513 /* wakeup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wakeup.json; sourceTree = "<group>"; };
+		79055202256E1A4500A4CA08 /* HotelAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelAPIManager.swift; sourceTree = "<group>"; };
+		79055204256E1A4F00A4CA08 /* HotelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelModel.swift; sourceTree = "<group>"; };
+		79055206256E2E5E00A4CA08 /* SingleLableTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLableTVC.swift; sourceTree = "<group>"; };
+		79055207256E2E5E00A4CA08 /* SingleLableTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLableTVC.xib; sourceTree = "<group>"; };
+		7905520A256E3DDB00A4CA08 /* LoginAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIManager.swift; sourceTree = "<group>"; };
 		79149D12254FE64100CBD522 /* BlogListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCVC.swift; sourceTree = "<group>"; };
 		79149D13254FE64100CBD522 /* BlogListCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlogListCVC.xib; sourceTree = "<group>"; };
 		79149D18254FE86A00CBD522 /* BlogListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListTVC.swift; sourceTree = "<group>"; };
@@ -406,6 +416,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		79055201256E1A3200A4CA08 /* API Model */ = {
+			isa = PBXGroup;
+			children = (
+				79055202256E1A4500A4CA08 /* HotelAPIManager.swift */,
+				79055204256E1A4F00A4CA08 /* HotelModel.swift */,
+			);
+			path = "API Model";
+			sourceTree = "<group>";
+		};
 		79149D11254FE61400CBD522 /* Blog */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +556,7 @@
 				79F2182C2547E24B00D981C1 /* HotelsTabVC.swift */,
 				79F2183F2547FB6800D981C1 /* HotelsVC.swift */,
 				79F2184A2548179800D981C1 /* HotelDetailVC.swift */,
+				79055201256E1A3200A4CA08 /* API Model */,
 				79F218412548121C00D981C1 /* Collectionview Cell */,
 				79F2182E2547E25E00D981C1 /* Tableview Cell */,
 			);
@@ -873,6 +893,8 @@
 			children = (
 				79F218342547EE1000D981C1 /* SideMenuTVC.swift */,
 				79F218352547EE1000D981C1 /* SideMenuTVC.xib */,
+				79055206256E2E5E00A4CA08 /* SingleLableTVC.swift */,
+				79055207256E2E5E00A4CA08 /* SingleLableTVC.xib */,
 			);
 			path = "Tableview Cell";
 			sourceTree = "<group>";
@@ -882,6 +904,7 @@
 			children = (
 				79F2183B2547F09900D981C1 /* menu.json */,
 				79F2183D2547F14700D981C1 /* MenuModel.swift */,
+				7905520A256E3DDB00A4CA08 /* LoginAPIManager.swift */,
 			);
 			path = "API Model";
 			sourceTree = "<group>";
@@ -980,6 +1003,7 @@
 				79333D1F255BBA230092F567 /* PrescriptionsTVC.xib in Resources */,
 				18B435AE25435C8200757513 /* wakeup.json in Resources */,
 				79EFD5C72542BE10006D06FB /* LaunchScreen.storyboard in Resources */,
+				79055209256E2E5E00A4CA08 /* SingleLableTVC.xib in Resources */,
 				79C8F2B4254AA1FB00481BB8 /* OrderSummaryTVC.xib in Resources */,
 				79F2184F254824A200D981C1 /* HotelImageCVC.xib in Resources */,
 				7938F2A8254944C80002A276 /* Product.storyboard in Resources */,
@@ -1121,6 +1145,7 @@
 				79EFD6172542C44A006D06FB /* Lable.swift in Sources */,
 				79AD7BFA256D1D4300DCC33C /* BlogModel.swift in Sources */,
 				79EFD6052542C44A006D06FB /* GlobalConstant.swift in Sources */,
+				79055205256E1A4F00A4CA08 /* HotelModel.swift in Sources */,
 				188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */,
 				79EFD6122542C44A006D06FB /* Array+RUI.swift in Sources */,
 				79C624D62559679F00F9C385 /* FamilyMemberCVC.swift in Sources */,
@@ -1158,12 +1183,14 @@
 				79EFD6112542C44A006D06FB /* UIDevice+Type.swift in Sources */,
 				79EFD60B2542C44A006D06FB /* MD5.swift in Sources */,
 				79BC83642542EF85004A0B49 /* CustomTabBarView.swift in Sources */,
+				7905520B256E3DDC00A4CA08 /* LoginAPIManager.swift in Sources */,
 				79BC837025430EBC004A0B49 /* FlowerLifeTabVC.swift in Sources */,
 				79F218402547FB6800D981C1 /* HotelsVC.swift in Sources */,
 				79F218442548123F00D981C1 /* HotelBenefitsCVC.swift in Sources */,
 				7938F2AF254947EC0002A276 /* ProductListTVC.swift in Sources */,
 				79EFD62B2542C44A006D06FB /* GradientLayer.swift in Sources */,
 				797C39B32567AF1F00E55C2B /* ClinicPrescriptionsVC.swift in Sources */,
+				79055203256E1A4500A4CA08 /* HotelAPIManager.swift in Sources */,
 				798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */,
 				7953C028254C0E1D00DF1BFA /* PurchaseProductCVC.swift in Sources */,
 				79EFD6132542C44A006D06FB /* NSObject+Copy.swift in Sources */,
@@ -1188,6 +1215,7 @@
 				79149D1A254FE86A00CBD522 /* BlogListTVC.swift in Sources */,
 				79EFD6152542C44A006D06FB /* UIColor+RUI.swift in Sources */,
 				79BC83652542EF85004A0B49 /* CustomTabBarController.swift in Sources */,
+				79055208256E2E5E00A4CA08 /* SingleLableTVC.swift in Sources */,
 				79EFD62C2542C44A006D06FB /* TableView.swift in Sources */,
 				7938F2BA254968CF0002A276 /* ProductDetailTVC.swift in Sources */,
 				79D6D01D254408EA00945D7C /* IntAxisValueFormatter.swift in Sources */,

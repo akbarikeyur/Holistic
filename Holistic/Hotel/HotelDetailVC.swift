@@ -26,10 +26,8 @@ class HotelDetailVC: UIViewController {
     @IBOutlet weak var constraintHeightFacilityCV: NSLayoutConstraint!
     @IBOutlet var codeView: UIView!
     
-    var selectedImageIndex = 3
-    var arrFacility = ["Swimming Pool", "Free WiFi", "Family Rooms", "Free parking", "Good fitness", "Tea/coffee maker", "Bar", "Beach front", "Restaurants", "Airport Shuttle"]
-    var arrFacilityImg = ["swimming_pool", "free_wifi", "family_room", "free_parking", "good_fitness", "tea_maker", "bar", "beach_front", "restaurant", "airport_shuttle"]
-    var arrImage = ["hotel1", "hotel2", "hotel3", "hotel4", "hotel5", "hotel6", "hotel7"]
+    var hotelData = HotelModel.init([String : Any]())
+    var selectedImageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +35,22 @@ class HotelDetailVC: UIViewController {
         // Do any additional setup after loading the view.
         registerCollectionView()
         registerTableViewMethod()
-        constraintHeightFacilityCV.constant = CGFloat((arrFacility.count/2) * 100)
         
+        serviceCallToGetHotelDetail()
         setupDetails()
     }
     
     func setupDetails() {
-        priceLbl.text = "AED 250"
-        hotelNameLbl.text = "Jumeirah Emirates Towers"
-        hotelAddressLbl.text = "Sheikh Zayed Road, Al Barsha, Dubai UAE."
-        hotelDescLbl.text = "Directly connected to Mall of the Emirates, Kempinski Hotel Mall of the Emirates is centrally situated with close proximity to areas such as Downtown Dubai, Dubai Marina and Palm Jumeirah​, with the Mall of the Emirates metro station a mere 5 minute walk. ​Guests enjoy."
-        
+        starView.rating = hotelData.ratings
+        priceLbl.text = displayPriceWithCurrency(hotelData.main_price)
+        hotelNameLbl.text = hotelData.title
+        hotelAddressLbl.text = hotelData.address
+        hotelDescLbl.attributedText = hotelData.desc.html2AttributedString
+        imageCV.reloadData()
+        packageTbl.reloadData()
+        updatePackageTableviewHeight()
+        facilityCV.reloadData()
+        constraintHeightFacilityCV.constant = CGFloat((hotelData.register_facility.count/2) * 100)
     }
     
     //MARK:- Button click event
@@ -94,10 +97,10 @@ extension HotelDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == imageCV {
-            return arrImage.count
+            return hotelData.get_hotels_media.count
         }
         else{
-            return arrFacility.count
+            return hotelData.register_facility.count
         }
     }
     
@@ -114,12 +117,12 @@ extension HotelDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, 
         if collectionView == imageCV {
             let cell : HotelImageCVC = imageCV.dequeueReusableCell(withReuseIdentifier: "HotelImageCVC", for: indexPath) as! HotelImageCVC
             cell.setupDetails((indexPath.row == selectedImageIndex))
-            cell.imgView.image = UIImage(named: arrImage[indexPath.row])
+            setImageBackgroundImage(cell.imgView, hotelData.get_hotels_media[indexPath.row].url, IMAGE.PLACEHOLDER)
             return cell
         }
         else{
             let cell : HotelFacilityCVC = facilityCV.dequeueReusableCell(withReuseIdentifier: "HotelFacilityCVC", for: indexPath) as! HotelFacilityCVC
-            cell.setupDetails(arrFacility[indexPath.row], arrFacilityImg[indexPath.row])
+            cell.setupDetails(hotelData.register_facility[indexPath.row])
             return cell
         }
     }
@@ -128,7 +131,7 @@ extension HotelDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, 
         if collectionView == imageCV {
             selectedImageIndex = indexPath.row
             imageCV.reloadData()
-            topImgView.image = UIImage(named: arrImage[indexPath.row])
+            setImageBackgroundImage(topImgView, hotelData.get_hotels_media[indexPath.row].url, IMAGE.PLACEHOLDER)
         }
     }
 }
@@ -138,11 +141,13 @@ extension HotelDetailVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         packageTbl.register(UINib.init(nibName: "HotelPackageTVC", bundle: nil), forCellReuseIdentifier: "HotelPackageTVC")
-        updatePackageTableviewHeight()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (packageBtn.isSelected) ? 3 : 1
+        if hotelData.get_packages.count > 0 {
+            return (packageBtn.isSelected) ? hotelData.get_packages.count : 1
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -151,7 +156,7 @@ extension HotelDetailVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : HotelPackageTVC = packageTbl.dequeueReusableCell(withIdentifier: "HotelPackageTVC") as! HotelPackageTVC
-        cell.setupDetails()
+        cell.setupDetails(hotelData.get_packages[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -165,5 +170,15 @@ extension HotelDetailVC : UITableViewDelegate, UITableViewDataSource {
         packageTbl.reloadData()
         packageTbl.layoutIfNeeded()
         constraintHeightPackageTbl.constant = packageTbl.contentSize.height
+    }
+}
+
+//MARK:- Service called
+extension HotelDetailVC {
+    func serviceCallToGetHotelDetail() {
+        HotelAPIManager.shared.serviceCallToGetHotelDetail(["id" : hotelData.id!]) { (dict) in
+            self.hotelData = HotelModel.init(dict)
+            self.setupDetails()
+        }
     }
 }
