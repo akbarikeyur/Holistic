@@ -18,7 +18,7 @@ class RestaurantDetailVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     @IBOutlet var codeView: UIView!
-    
+    @IBOutlet weak var codeLbl: Label!
     var restaurantData = RestaurantModel.init([String : Any]())
     
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class RestaurantDetailVC: UIViewController {
     }
     
     @IBAction func clickToGetCode(_ sender: Any) {
-        displaySubViewtoParentView(self.view, subview: codeView)
+        serviceCallToGenerateCode()
     }
     
     @IBAction func clickToCloseCodeView(_ sender: Any) {
@@ -128,6 +128,16 @@ extension RestaurantDetailVC {
         RestaurantAPIManager.shared.serviceCallToGetRestaurantDetail(["id" : restaurantData.id!]) { (dict) in
             self.restaurantData = RestaurantModel.init(dict)
             self.setupDetails()
+        }
+    }
+    
+    func serviceCallToGenerateCode() {
+        var param = [String : Any]()
+        param["listing_id"] = restaurantData.id
+        param["user_id"] = AppModel.shared.currentUser.id
+        HotelAPIManager.shared.serviceCallToGenerateCode(param) { (code) in
+            self.codeLbl.text = code
+            displaySubViewtoParentView(self.view, subview: self.codeView)
         }
     }
 }

@@ -25,6 +25,7 @@ class HotelDetailVC: UIViewController {
     @IBOutlet weak var facilityCV: UICollectionView!
     @IBOutlet weak var constraintHeightFacilityCV: NSLayoutConstraint!
     @IBOutlet var codeView: UIView!
+    @IBOutlet weak var codeLbl: Label!
     
     var hotelData = HotelModel.init([String : Any]())
     var selectedImageIndex = 0
@@ -69,7 +70,7 @@ class HotelDetailVC: UIViewController {
     }
     
     @IBAction func clickToGetCode(_ sender: Any) {
-        displaySubViewtoParentView(self.view, subview: codeView)
+        serviceCallToGenerateCode()
     }
     
     @IBAction func clickToCloseCodeView(_ sender: Any) {
@@ -179,6 +180,16 @@ extension HotelDetailVC {
         HotelAPIManager.shared.serviceCallToGetHotelDetail(["id" : hotelData.id!]) { (dict) in
             self.hotelData = HotelModel.init(dict)
             self.setupDetails()
+        }
+    }
+    
+    func serviceCallToGenerateCode() {
+        var param = [String : Any]()
+        param["listing_id"] = hotelData.id
+        param["user_id"] = AppModel.shared.currentUser.id
+        HotelAPIManager.shared.serviceCallToGenerateCode(param) { (code) in
+            self.codeLbl.text = code
+            displaySubViewtoParentView(self.view, subview: self.codeView)
         }
     }
 }
