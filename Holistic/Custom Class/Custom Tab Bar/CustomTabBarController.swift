@@ -58,7 +58,7 @@ class CustomTabBarController: UITabBarController, CustomTabBarViewDelegate {
         let navController1 : UINavigationController = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HomeVCNav") as! UINavigationController
         viewControllers.append(navController1)
         
-        let navController2 : UINavigationController = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HomeVCNav") as! UINavigationController
+        let navController2 : UINavigationController = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicVCNav") as! UINavigationController
         viewControllers.append(navController2)
         
         let navController3 : UINavigationController = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsVCNav") as! UINavigationController

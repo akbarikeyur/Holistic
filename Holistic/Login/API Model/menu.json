@@ -32,11 +32,31 @@
     },
     {
         "title" : "Holistic Hotels",
-        "image" : "menu_hotel"
+        "image" : "menu_hotel",
+        "select_image" : "menu_hotel",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "All Hotels"
+                    },
+                    {
+                        "title" : "Codes Redeemed"
+                    }
+                ]
     },
     {
         "title" : "Holistic Restaurants",
-        "image" : "menu_restaurant"
+        "image" : "menu_restaurant",
+        "select_image" : "menu_restaurant",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "All Restaurants"
+                    },
+                    {
+                        "title" : "Codes Redeemed"
+                    }
+                ]
     },
     {
         "title" : "Holistic Products",

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D4E56255071A000DE6715 /* ProfileVC.swift */; };
+		1898D9FA25700168003C1CBE /* ClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898D9F925700168003C1CBE /* ClinicVC.swift */; };
+		1898D9FC257004E0003C1CBE /* MyCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898D9FB257004DF003C1CBE /* MyCodeVC.swift */; };
+		1898D9FF25700544003C1CBE /* MyCodeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898D9FD25700544003C1CBE /* MyCodeTVC.swift */; };
+		1898DA0025700544003C1CBE /* MyCodeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1898D9FE25700544003C1CBE /* MyCodeTVC.xib */; };
 		18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B435A92543544A00757513 /* ExpandCollapseTVC.swift */; };
 		18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */; };
 		18B435AE25435C8200757513 /* wakeup.json in Resources */ = {isa = PBXBuildFile; fileRef = 18B435AD25435C8200757513 /* wakeup.json */; };
@@ -199,6 +203,10 @@
 /* Begin PBXFileReference section */
 		059EB8287ED303FB69D1DABE /* Pods_Holistic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holistic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		188D4E56255071A000DE6715 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		1898D9F925700168003C1CBE /* ClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicVC.swift; sourceTree = "<group>"; };
+		1898D9FB257004DF003C1CBE /* MyCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCodeVC.swift; sourceTree = "<group>"; };
+		1898D9FD25700544003C1CBE /* MyCodeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCodeTVC.swift; sourceTree = "<group>"; };
+		1898D9FE25700544003C1CBE /* MyCodeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCodeTVC.xib; sourceTree = "<group>"; };
 		18B435A92543544A00757513 /* ExpandCollapseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCollapseTVC.swift; sourceTree = "<group>"; };
 		18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandCollapseTVC.xib; sourceTree = "<group>"; };
 		18B435AD25435C8200757513 /* wakeup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wakeup.json; sourceTree = "<group>"; };
@@ -511,6 +519,7 @@
 		7953C02A254C19E800DF1BFA /* Clinic */ = {
 			isa = PBXGroup;
 			children = (
+				1898D9F925700168003C1CBE /* ClinicVC.swift */,
 				7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */,
 				79A6A0882559339500E3CCD6 /* ClinicListVC.swift */,
 				79C624D22559672000F9C385 /* FamilyMemberVC.swift */,
@@ -556,6 +565,7 @@
 				79F2182C2547E24B00D981C1 /* HotelsTabVC.swift */,
 				79F2183F2547FB6800D981C1 /* HotelsVC.swift */,
 				79F2184A2548179800D981C1 /* HotelDetailVC.swift */,
+				1898D9FB257004DF003C1CBE /* MyCodeVC.swift */,
 				79055201256E1A3200A4CA08 /* API Model */,
 				79F218412548121C00D981C1 /* Collectionview Cell */,
 				79F2182E2547E25E00D981C1 /* Tableview Cell */,
@@ -884,6 +894,8 @@
 				79F218302547E28600D981C1 /* HotelsListTVC.xib */,
 				798249D325483BD60035AB9E /* HotelPackageTVC.swift */,
 				798249D425483BD60035AB9E /* HotelPackageTVC.xib */,
+				1898D9FD25700544003C1CBE /* MyCodeTVC.swift */,
+				1898D9FE25700544003C1CBE /* MyCodeTVC.xib */,
 			);
 			path = "Tableview Cell";
 			sourceTree = "<group>";
@@ -1023,6 +1035,7 @@
 				18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */,
 				7938F2B0254947EC0002A276 /* ProductListTVC.xib in Resources */,
 				798249D925485B470035AB9E /* Restaurant.storyboard in Resources */,
+				1898DA0025700544003C1CBE /* MyCodeTVC.xib in Resources */,
 				79F2183C2547F09900D981C1 /* menu.json in Resources */,
 				79F218492548164800D981C1 /* HotelFacilityCVC.xib in Resources */,
 				799AB89B2546C57600033175 /* Hotel.storyboard in Resources */,
@@ -1140,8 +1153,10 @@
 				79EFD60E2542C44A006D06FB /* Utility.swift in Sources */,
 				79BC836E25430784004A0B49 /* HolisticLifestyleTabVC.swift in Sources */,
 				7938F2A525493E0D0002A276 /* FoodListTVC.swift in Sources */,
+				1898D9FC257004E0003C1CBE /* MyCodeVC.swift in Sources */,
 				793D604F2569479F00A5A500 /* ClinicTabCVC.swift in Sources */,
 				79EC86FF25511D01000C8F5E /* ForgotPasswordVC.swift in Sources */,
+				1898D9FF25700544003C1CBE /* MyCodeTVC.swift in Sources */,
 				79EFD6172542C44A006D06FB /* Lable.swift in Sources */,
 				79AD7BFA256D1D4300DCC33C /* BlogModel.swift in Sources */,
 				79EFD6052542C44A006D06FB /* GlobalConstant.swift in Sources */,
@@ -1209,6 +1224,7 @@
 				79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */,
 				79465A642567D6DC0019D803 /* ClinicAPIManager.swift in Sources */,
 				79EFD6182542C44A006D06FB /* NSError+RUI.swift in Sources */,
+				1898D9FA25700168003C1CBE /* ClinicVC.swift in Sources */,
 				79333D1E255BBA230092F567 /* PrescriptionsTVC.swift in Sources */,
 				79EFD6242542C44A006D06FB /* Label.swift in Sources */,
 				79333D1A255BB9A20092F567 /* PrescriptionsCVC.swift in Sources */,

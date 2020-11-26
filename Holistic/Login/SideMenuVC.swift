@@ -77,6 +77,7 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell : SideMenuTVC = tblView.dequeueReusableCell(withIdentifier: "SideMenuTVC") as! SideMenuTVC
         cell.imgBtn.isHidden = false
+        cell.expandBtn.isHidden = false
         let dict = arrMenuData[section]
         cell.setupDetails(dict)
         cell.expandBtn.isSelected = dict.isExpand
@@ -103,12 +104,12 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 tblView.reloadData()
                 break
             case "Holistic Hotels":
-                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
-                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 2])
+                arrMenuData[sender.tag].isExpand = !arrMenuData[sender.tag].isExpand
+                tblView.reloadData()
                 break
             case "Holistic Restaurants":
-                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
-                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 3])
+                arrMenuData[sender.tag].isExpand = !arrMenuData[sender.tag].isExpand
+                tblView.reloadData()
                 break
             case "Holistic Products":
                 arrMenuData[sender.tag].isExpand = !arrMenuData[sender.tag].isExpand
@@ -167,7 +168,7 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
         self.menuContainerViewController.toggleLeftSideMenuCompletion {}
         let title = arrMenuData[indexPath.section].title
         if title == "Holistic Clinic" {
-            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 1])
             switch arrMenuData[indexPath.section].data[indexPath.row].title {
                 case "Appointments":
                     NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 0])
@@ -196,6 +197,34 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                     break
                 case "My purchases":
                     let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    break
+                default:
+                    break
+            }
+        }
+        else if title == "Holistic Hotels" {
+            switch arrMenuData[indexPath.section].data[indexPath.row].title {
+                case "All Hotels":
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 2])
+                    break
+                case "Codes Redeemed":
+                    let vc : MyCodeVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "MyCodeVC") as! MyCodeVC
+                    vc.type = 1
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    break
+                default:
+                    break
+            }
+        }
+        else if title == "Holistic Restaurants" {
+            switch arrMenuData[indexPath.section].data[indexPath.row].title {
+                case "All Restaurants":
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 3])
+                    break
+                case "Codes Redeemed":
+                    let vc : MyCodeVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "MyCodeVC") as! MyCodeVC
+                    vc.type = 2
                     UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 default:
