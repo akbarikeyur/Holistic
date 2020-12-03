@@ -46,4 +46,14 @@ public class HotelAPIManager {
             }
         }
     }
+    
+    func serviceCallToGetMyCode(_ param : [String : Any], _ completion: @escaping (_ code : String) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_MY_CODES, param, true) { (dict) in
+            print(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion(AppModel.shared.getStringValue(dict, "data"))
+                return
+            }
+        }
+    }
 }

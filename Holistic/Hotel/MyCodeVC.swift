@@ -27,6 +27,7 @@ class MyCodeVC: UIViewController {
             noDataView.isHidden = true
         }
         noDataLbl.attributedText = attributedStringWithColor(noDataLbl.text!, ["Click here"], color: OrangeColor)
+        serviceCallToGetMyCode()
     }
     
     //MARK:- Button click event
@@ -91,3 +92,10 @@ extension MyCodeVC : UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension MyCodeVC {
+    func serviceCallToGetMyCode() {
+        HotelAPIManager.shared.serviceCallToGetMyCode(["user_id" : AppModel.shared.currentUser.id]) { (code) in
+            
+        }
+    }
+}

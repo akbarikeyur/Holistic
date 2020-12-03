@@ -26,7 +26,9 @@ struct API {
     
     static let GET_RESTAURANT_LIST       =       BASE_URL + "restaurant/all"
     static let GET_RESTAURANT_DETAIL     =       BASE_URL + "restaurant/detail"
+    
     static let GENERATE_CODE             =       BASE_URL + "codes/getCode"
+    static let GET_MY_CODES              =       BASE_URL + "codes/myCode"
     
     static let GET_HOTEL_LIST            =       BASE_URL + "hotels/all"
     static let GET_HOTEL_DETAIL          =       BASE_URL + "hotels/detail"
