@@ -37,28 +37,27 @@ public class ClinicAPIManager {
     
     //MARK:- Service called
     func serviceCallToGenerateToken() {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_TOKEN, false) { (key) in
+        ClinicAPIManager.shared.callGetRequestString(CLINIC_API.GET_TOKEN, false) { (key) in
             setClinicToken(key)
             self.serviceCallToGetUserIdByToken()
         }
     }
     
     func serviceCallToGetUserIdByToken() {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_USER_ID_BY_TOKEN, false) { (key) in
+        ClinicAPIManager.shared.callGetRequestString(CLINIC_API.GET_USER_ID_BY_TOKEN, false) { (key) in
             setClinicUserId(key)
             self.serviceCallToGetUserDetail()
         }
     }
     
     func serviceCallToGetUserDetail() {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PATIENT_DETAIL, false) { (key) in
-            
+        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PATIENT_DETAIL, false) { (dict) in
             
         }
     }
     
     //MARK:- Get request
-    func callGetRequest(_ api : String, _ isLoaderDisplay : Bool, _ completion: @escaping (_ result : String) -> Void) {
+    func callGetRequestString(_ api : String, _ isLoaderDisplay : Bool, _ completion: @escaping (_ result : String) -> Void) {
         if !APIManager.isConnectedToNetwork()
         {
             APIManager().networkErrorMsg()
@@ -72,8 +71,40 @@ public class ClinicAPIManager {
             removeLoader()
             switch response.result {
             case .success:
-                printData(response.result.value)
+                printData(response.result.value!)
                 if let result = response.result.value as? String {
+                    completion(result)
+                    return
+                }
+                if let error = response.result.error
+                {
+                    displayToast(error.localizedDescription)
+                    return
+                }
+                break
+            case .failure(let error):
+                printData(error)
+                break
+            }
+        }
+    }
+    
+    func callGetRequest(_ api : String, _ isLoaderDisplay : Bool, _ completion: @escaping (_ result : [String : Any]) -> Void) {
+        if !APIManager.isConnectedToNetwork()
+        {
+            APIManager().networkErrorMsg()
+            return
+        }
+        if isLoaderDisplay {
+            showLoader()
+        }
+        
+        Alamofire.request(api, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: getClinicJsonHeader()).responseJSON { (response) in
+            removeLoader()
+            switch response.result {
+            case .success:
+                printData(response.result.value!)
+                if let result = response.result.value as? [String : Any] {
                     completion(result)
                     return
                 }
@@ -104,6 +135,7 @@ public class ClinicAPIManager {
             removeLoader()
             switch response.result {
             case .success:
+                printData(response.result.value!)
                 if let result = response.result.value as? [String:Any] {
                     completion(result)
                     return
