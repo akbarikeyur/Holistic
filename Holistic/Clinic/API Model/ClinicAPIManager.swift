@@ -14,12 +14,13 @@ struct CLINIC_API {
     static let BASE_URL = "https://api.clinicea.com/api/v2/"
     
     static let KEY              =       "a38a3f404b604d57c7d7aba15b4dd951"
-    static let USERNAME         =       "dr.rifas@gmail.com"
-    static let PASSWORD         =       "Rifas12345"
+    static let USERNAME         =       "sa2@email.com" //"dr.rifas@gmail.com"
+    static let PASSWORD         =       "cf16b0" //"Rifas12345"
     
-    static let GET_TOKEN        =       BASE_URL + "login/getTokenByStaffUsernamePwd?apiKey=" + CLINIC_API.KEY + "&loginUserName=" + CLINIC_API.USERNAME + "&pwd=" + CLINIC_API.PASSWORD
+    static let GET_TOKEN        =       BASE_URL + "login/getTokenByPatientUsernamePwd?apiKey=" + CLINIC_API.KEY + "&loginUserName=" + CLINIC_API.USERNAME + "&pwd=" + CLINIC_API.PASSWORD
     static let GET_USER_ID_BY_TOKEN        =       BASE_URL + "login/getUserIDByToken?api_key=" + getClinicToken()
     static let GET_PATIENT_DETAIL          =       BASE_URL + "patients/getPatientByID?patientID=" + getClinicUserId() + "&api_key=" + getClinicToken()
+    static let GET_APPOINTMENT_LIST        =       BASE_URL + "appointments/getAppointmentsByPatient?patientID=" + getClinicUserId() + "&appointmentType=2&pageNo=1&api_key=" + getClinicToken()
 }
 
 
@@ -52,6 +53,13 @@ public class ClinicAPIManager {
     
     func serviceCallToGetUserDetail() {
         ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PATIENT_DETAIL, false) { (dict) in
+            AppModel.shared.clinicUser = ClinicUserModel.init(dict)
+            setClinicUserData()
+        }
+    }
+    
+    func serviceCallToGetAppointmentList() {
+        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_APPOINTMENT_LIST, false) { (dict) in
             
         }
     }

@@ -12,9 +12,11 @@ class AppModel: NSObject {
     
     static let shared = AppModel()
     var currentUser : UserModel!
+    var clinicUser : ClinicUserModel!
     
     func resetData() {
         currentUser = UserModel.init([String : Any]())
+        clinicUser = ClinicUserModel.init([String : Any]())
     }
     
     func getIntValue(_ dict : [String : Any], _ key : String) -> Int {

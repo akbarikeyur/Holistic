@@ -25,7 +25,7 @@ class ClinicListVC: UIViewController {
     }
     
     func setupDetails() {
-        
+        serviceCallToGetAppointmentList()
     }
     
     /*
@@ -69,5 +69,11 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
     
     func updateTableviewHeight() {
         constraintHeightTblView.constant = 150 * 3
+    }
+}
+
+extension ClinicListVC {
+    func serviceCallToGetAppointmentList() {
+        ClinicAPIManager.shared.serviceCallToGetAppointmentList()
     }
 }

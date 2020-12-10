@@ -93,6 +93,18 @@ func getClinicUserId() -> String
     return ""
 }
 
+func setClinicUserData() {
+    setDataToPreference(data: AppModel.shared.clinicUser.dictionary() as AnyObject, forKey: "clinic_user_data")
+}
+
+func getClinicUserData() -> ClinicUserModel
+{
+    if let data : [String : Any] = getDataFromPreference(key: "clinic_user_data") as? [String : Any] {
+        return ClinicUserModel.init(data)
+    }
+    return ClinicUserModel.init([String : Any]())
+}
+
 func setLoginUserData() {
     setDataToPreference(data: AppModel.shared.currentUser.dictionary() as AnyObject, forKey: "login_user_data")
     setUserLogin(true)
