@@ -15,7 +15,7 @@ class ClinicListVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
-    var arrClinicCategory = [ClinicCategoryModel]()
+    var arrAppointment = [AppointmentModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return arrAppointment.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,7 +58,7 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : ClinicAppointmentTVC = tblView.dequeueReusableCell(withIdentifier: "ClinicAppointmentTVC") as! ClinicAppointmentTVC
-        
+        cell.setupDetails(arrAppointment[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -74,6 +74,12 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
 
 extension ClinicListVC {
     func serviceCallToGetAppointmentList() {
-        ClinicAPIManager.shared.serviceCallToGetAppointmentList()
+        ClinicAPIManager.shared.serviceCallToGetAppointmentList { (data) in
+            self.arrAppointment = [AppointmentModel]()
+            for temp in data {
+                self.arrAppointment.append(AppointmentModel.init(temp))
+            }
+            self.tblView.reloadData()
+        }
     }
 }

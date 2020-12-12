@@ -176,26 +176,17 @@
                                     <constraint firstAttribute="height" constant="1" id="Xdy-7h-Cic"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj1-nf-SNB">
-                                <rect key="frame" x="78" y="109.5" width="20" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj1-nf-SNB">
+                                <rect key="frame" x="78" y="109.5" width="212" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="IXl-Yg-rmo"/>
-                                    <constraint firstAttribute="width" constant="20" id="haB-3T-D9Z"/>
                                 </constraints>
-                                <state key="normal" image="green_right"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uii-jv-r8Q" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="103" y="114.5" width="62" height="15"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
-                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
+                                <inset key="titleEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Confirmed" image="green_right">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -211,7 +202,6 @@
                             <constraint firstItem="FbU-pa-gUA" firstAttribute="top" secondItem="AXC-Le-XMM" secondAttribute="bottom" constant="5" id="WDR-yi-YtX"/>
                             <constraint firstItem="FbU-pa-gUA" firstAttribute="leading" secondItem="74T-7F-laW" secondAttribute="trailing" constant="10" id="YYV-q3-8bp"/>
                             <constraint firstItem="JlN-IP-lAQ" firstAttribute="leading" secondItem="74T-7F-laW" secondAttribute="trailing" constant="10" id="akG-xL-OVk"/>
-                            <constraint firstItem="uii-jv-r8Q" firstAttribute="leading" secondItem="aj1-nf-SNB" secondAttribute="trailing" constant="5" id="bSo-7R-xnb"/>
                             <constraint firstItem="UZO-uD-Kyo" firstAttribute="centerY" secondItem="JlN-IP-lAQ" secondAttribute="centerY" id="bvK-lR-toJ"/>
                             <constraint firstItem="k9X-Hv-WSc" firstAttribute="leading" secondItem="74T-7F-laW" secondAttribute="trailing" id="cX6-ii-DX0"/>
                             <constraint firstItem="3hF-FU-BFo" firstAttribute="leading" secondItem="74T-7F-laW" secondAttribute="trailing" constant="10" id="e1L-oH-Cji"/>
@@ -219,10 +209,10 @@
                             <constraint firstAttribute="trailing" secondItem="FbU-pa-gUA" secondAttribute="trailing" constant="5" id="g2a-Jx-drE"/>
                             <constraint firstAttribute="trailing" secondItem="mqf-s7-9yh" secondAttribute="trailing" constant="10" id="gph-Zc-Esb"/>
                             <constraint firstItem="k9X-Hv-WSc" firstAttribute="top" secondItem="3hF-FU-BFo" secondAttribute="bottom" constant="10" id="hRb-h6-I0V"/>
+                            <constraint firstAttribute="trailing" secondItem="aj1-nf-SNB" secondAttribute="trailing" constant="10" id="hec-S6-Ry5"/>
                             <constraint firstAttribute="trailing" secondItem="k9X-Hv-WSc" secondAttribute="trailing" id="ihB-yg-4QS"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UZO-uD-Kyo" secondAttribute="trailing" constant="10" id="j9A-GA-y3X"/>
                             <constraint firstItem="Nqe-7g-BdU" firstAttribute="top" secondItem="BAf-vk-Hpr" secondAttribute="top" id="jGg-eP-NVf"/>
-                            <constraint firstItem="uii-jv-r8Q" firstAttribute="centerY" secondItem="aj1-nf-SNB" secondAttribute="centerY" id="kVM-nM-rGJ"/>
                             <constraint firstItem="AXC-Le-XMM" firstAttribute="leading" secondItem="74T-7F-laW" secondAttribute="trailing" constant="10" id="lGA-Bx-un3"/>
                             <constraint firstItem="mqf-s7-9yh" firstAttribute="centerY" secondItem="3hF-FU-BFo" secondAttribute="centerY" id="mUO-U4-lQj"/>
                             <constraint firstItem="aj1-nf-SNB" firstAttribute="top" secondItem="k9X-Hv-WSc" secondAttribute="bottom" constant="6" id="o1S-w0-b9s"/>
@@ -252,6 +242,16 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLbl" destination="3vD-PF-dVd" id="6Ut-Od-9DQ"/>
+                <outlet property="monthLbl" destination="GPT-fO-JzK" id="NDf-W4-TBY"/>
+                <outlet property="orgNameLbl" destination="mqf-s7-9yh" id="uKd-Ro-8e8"/>
+                <outlet property="serviceNameLbl" destination="FbU-pa-gUA" id="fMM-Wb-Fu7"/>
+                <outlet property="statusBtn" destination="aj1-nf-SNB" id="OYT-pv-bfu"/>
+                <outlet property="statusView" destination="qe3-lm-nT4" id="jzA-UA-A9r"/>
+                <outlet property="userNameLbl" destination="UZO-uD-Kyo" id="gCD-4Q-Od8"/>
+                <outlet property="yearLbl" destination="P4P-Xl-82R" id="CJf-TO-Xsp"/>
+            </connections>
             <point key="canvasLocation" x="133" y="154"/>
         </tableViewCell>
     </objects>

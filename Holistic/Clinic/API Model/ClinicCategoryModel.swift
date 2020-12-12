@@ -43,15 +43,17 @@ struct AppointmentModel {
     var AppointmentStatus, AppointmentStatusInt, BookedByPatientID, CreatedDatetime, PatientName, PatientID, ServiceName, OrganisationName : String!
     
     init(_ dict : [String : Any]) {
-        ID = AppModel.shared.getStringValue(dict, "ID")
-        Email = dict["Email"] as? String ?? ""
-        FirstName = dict["FirstName"] as? String ?? ""
-        LastName = dict["LastName"] as? String ?? ""
-        Age = dict["Age"] as? String ?? ""
-        Gender = dict["Gender"] as? String ?? ""
+        AppointmentStatus = AppModel.shared.getStringValue(dict, "AppointmentStatus")
+        AppointmentStatusInt = AppModel.shared.getStringValue(dict, "AppointmentStatusInt")
+        BookedByPatientID = AppModel.shared.getStringValue(dict, "BookedByPatientID")
+        CreatedDatetime = AppModel.shared.getStringValue(dict, "CreatedDatetime")
+        PatientName = AppModel.shared.getStringValue(dict, "PatientName")
+        PatientID = AppModel.shared.getStringValue(dict, "PatientID")
+        ServiceName = AppModel.shared.getStringValue(dict, "ServiceName")
+        OrganisationName = AppModel.shared.getStringValue(dict, "OrganisationName")
     }
     
     func dictionary() -> [String : Any] {
-        return ["ID" : ID!, "Email" : Email!, "FirstName" : FirstName!, "LastName" : LastName!, "Age" : Age!, "Gender" : Gender!]
+        return ["AppointmentStatus" : AppointmentStatus!, "AppointmentStatusInt" : AppointmentStatusInt!, "BookedByPatientID" : BookedByPatientID!, "CreatedDatetime" : CreatedDatetime!, "PatientName" : PatientName!, "PatientID" : PatientID!, "ServiceName" : ServiceName!, "OrganisationName" : OrganisationName!]
     }
 }
