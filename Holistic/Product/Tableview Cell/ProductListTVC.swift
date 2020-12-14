@@ -23,6 +23,16 @@ class ProductListTVC: UITableViewCell {
         // Initialization code
     }
 
+    func setupDetails(_ dict : ProductModel) {
+        if dict.product_single_image.count > 0 {
+            setImageBackgroundImage(imgView, dict.product_single_image[0].url, IMAGE.PLACEHOLDER)
+        }
+        priceLbl.text = displayPriceWithCurrency(dict.price)
+        qtyLbl.text = "Qty: " + String(dict.product_total_qty.qty)
+        descLbl.attributedText = dict.desc.html2AttributedString
+        deliveryLbl.text = dict.delivery
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

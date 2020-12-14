@@ -16,12 +16,16 @@ class ProductListVC: UIViewController {
     @IBOutlet var headerView: UIView!
     @IBOutlet weak var bannerCV: UICollectionView!
     
+    var page = 1
+    var arrProduct = [ProductModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
         registerCollectionView()
+        serviceCallToGetProductList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,7 +90,7 @@ extension ProductListVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrProduct.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -95,13 +99,38 @@ extension ProductListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : ProductListTVC = tblView.dequeueReusableCell(withIdentifier: "ProductListTVC") as! ProductListTVC
-        
+        cell.setupDetails(arrProduct[indexPath.row])
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (arrProduct.count-1 == indexPath.row) && page != 0 {
+            serviceCallToGetProductList()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : ProductDetailVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductDetailVC") as! ProductDetailVC
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension ProductListVC {
+    func serviceCallToGetProductList() {
+        ProductAPIManager.shared.serviceCallToGetProductList(page) { (data, last_page) in
+            if self.page == 1 {
+                self.arrProduct = [ProductModel]()
+            }
+            for temp in data {
+                self.arrProduct.append(ProductModel.init(temp))
+            }
+            self.tblView.reloadData()
+            if last_page == self.page {
+                self.page = 0
+            }else{
+                self.page += 1
+            }
+        }
     }
 }

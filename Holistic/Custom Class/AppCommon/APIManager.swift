@@ -32,6 +32,9 @@ struct API {
     
     static let GET_HOTEL_LIST            =       BASE_URL + "hotels/all"
     static let GET_HOTEL_DETAIL          =       BASE_URL + "hotels/detail"
+    
+    static let GET_PRODUCT_LIST          =       BASE_URL + "product/get_product"
+    static let GET_PRODUCT_DETAIL        =       BASE_URL + "product/single_product"
 }
 
 

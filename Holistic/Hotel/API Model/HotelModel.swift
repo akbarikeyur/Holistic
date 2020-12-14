@@ -10,8 +10,8 @@ import Foundation
 
 struct HotelModel {
     var id : Int!
-    var title, desc, address, type : String!
-    var main_price, ratings : Double!
+    var title, desc, address, type, main_price : String!
+    var ratings : Double!
     var views : Int!
     var get_hotels_media : [MediaModel]!
     var get_packages : [PackageModel]!
@@ -23,7 +23,7 @@ struct HotelModel {
         desc = dict["description"] as? String ?? ""
         address = dict["address"] as? String ?? ""
         type = dict["type"] as? String ?? ""
-        main_price = AppModel.shared.getDoubleValue(dict, "main_price")
+        main_price = AppModel.shared.getStringValue(dict, "main_price")
         ratings = AppModel.shared.getDoubleValue(dict, "ratings")
         views = AppModel.shared.getIntValue(dict, "views")
         get_hotels_media = [MediaModel]()
@@ -53,14 +53,14 @@ struct HotelModel {
 struct PackageModel {
     var get_amunities : [AmunitiesModel]!
     var get_includes : [IncludeModel]!
-    var name : String!
+    var name, price : String!
     var hotel_id, id : Int!
-    var price : Double!
+    
     
     init(_ dict : [String : Any]) {
         id = AppModel.shared.getIntValue(dict, "id")
         hotel_id = AppModel.shared.getIntValue(dict, "hotel_id")
-        price = AppModel.shared.getDoubleValue(dict, "price")
+        price = AppModel.shared.getStringValue(dict, "price")
         name = dict["name"] as? String ?? ""
         get_amunities = [AmunitiesModel]()
         if let data = dict["get_amunities"] as? [[String :Any]] {

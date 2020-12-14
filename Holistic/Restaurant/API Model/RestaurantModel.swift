@@ -10,8 +10,8 @@ import Foundation
 
 struct RestaurantModel {
     var id : Int!
-    var title, desc, address, type : String!
-    var main_price, ratings : Double!
+    var title, desc, address, type, main_price : String!
+    var ratings : Double!
     var views : Int!
     var get_restaurant_media : [MediaModel]!
     var get_restaurant_category : [CategoryModel]!
@@ -22,7 +22,7 @@ struct RestaurantModel {
         desc = dict["description"] as? String ?? ""
         address = dict["address"] as? String ?? ""
         type = dict["type"] as? String ?? ""
-        main_price = AppModel.shared.getDoubleValue(dict, "main_price")
+        main_price = AppModel.shared.getStringValue(dict, "main_price")
         ratings = AppModel.shared.getDoubleValue(dict, "ratings")
         views = AppModel.shared.getIntValue(dict, "views")
         get_restaurant_media = [MediaModel]()
@@ -63,8 +63,8 @@ struct CategoryModel {
 
 struct RestaurantMenuModel {
     var id, restaurant_id, category_id : Int!
-    var title, desc : String!
-    var price : Double!
+    var title, desc, price : String!
+    
 
     init(_ dict : [String : Any]) {
         id = AppModel.shared.getIntValue(dict, "id")
@@ -72,7 +72,7 @@ struct RestaurantMenuModel {
         category_id = AppModel.shared.getIntValue(dict, "category_id")
         title = dict["title"] as? String ?? ""
         desc = dict["desc"] as? String ?? ""
-        price = AppModel.shared.getDoubleValue(dict, "price")
+        price = AppModel.shared.getStringValue(dict, "price")
     }
     
     func dictionary() -> [String : Any] {
