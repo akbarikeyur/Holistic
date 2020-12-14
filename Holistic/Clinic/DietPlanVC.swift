@@ -23,7 +23,7 @@ class DietPlanVC: UIViewController {
     }
     
     func setupDetails() {
-        
+        serviceCallToGetDietPlan()
     }
     
     /*
@@ -62,5 +62,13 @@ extension DietPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
             cell.sideIMg.isHidden = false
         }
         return cell
+    }
+}
+
+extension DietPlanVC {
+    func serviceCallToGetDietPlan() {
+        ClinicAPIManager.shared.serviceCallToGetDietPlan { (data) in
+            
+        }
     }
 }

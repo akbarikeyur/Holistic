@@ -15,7 +15,7 @@ class ClinicPackageVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
-    var arrClinicCategory = [ClinicCategoryModel]()
+    var arrPackage = [ClinicPackageModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class ClinicPackageVC: UIViewController {
     }
     
     func setupDetails() {
-        
+        serviceCallToGetPackageList()
     }
     
     //MARK:- Button click event
@@ -54,11 +54,10 @@ extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         tblView.register(UINib.init(nibName: "ClinicPackageTVC", bundle: nil), forCellReuseIdentifier: "ClinicPackageTVC")
-        updateTableviewHeight()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return arrPackage.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,14 +66,15 @@ extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : ClinicPackageTVC = tblView.dequeueReusableCell(withIdentifier: "ClinicPackageTVC") as! ClinicPackageTVC
-        
+        cell.setupDetails(arrPackage[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc : ClinicPackageDetailVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicPackageDetailVC") as! ClinicPackageDetailVC
-        UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+        let dict = arrPackage[indexPath.row]
+        let strUrl = "https://holistichealing.curofic.com/patientbill.aspx?id=" + dict.ID + "&gid=" + dict.HeadOrganisationID + "&tp=4"
+        openUrlInSafari(strUrl: strUrl)
     }
     
     func updateTableviewHeight() {
@@ -82,5 +82,18 @@ extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
         tblView.reloadData()
         tblView.layoutIfNeeded()
         constraintHeightTblView.constant = tblView.contentSize.height
+    }
+}
+
+extension ClinicPackageVC {
+    func serviceCallToGetPackageList() {
+        ClinicAPIManager.shared.serviceCallToGetPackageList { (data) in
+            self.arrPackage = [ClinicPackageModel]()
+            for temp in data {
+                self.arrPackage.append(ClinicPackageModel.init(temp))
+            }
+            self.tblView.reloadData()
+            self.updateTableviewHeight()
+        }
     }
 }

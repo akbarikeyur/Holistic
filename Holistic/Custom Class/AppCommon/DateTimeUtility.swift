@@ -110,27 +110,12 @@ func getDifferenceFromCurrentTimeInHourInDays(_ newDate : Date) -> String
 func getDifferentTimeAgo(_ newDate : Date) -> String {
     let interval : Int = getDifferenceFromCurrentTime(newDate)
     
-    let second : Int = interval
-    let minutes : Int = interval/60
-    let hours : Int = interval/(60*60)
     let days : Int = interval/(60*60*24)
     let months : Int = interval/(60*60*24*30)
     let years : Int = interval/(60*60*24*30*12)
     
     var timeAgo : String = ""
-    if  second < 60
-    {
-        timeAgo = getTranslate("just_now")
-    }
-    else if minutes < 60
-    {
-        timeAgo = String(minutes) + " " + ((minutes > 1) ? getTranslate("minutes_ago") : getTranslate("minute_ago"))
-    }
-    else if hours < 24
-    {
-        timeAgo = String(hours) + " " + ((hours > 1) ? getTranslate("hours_ago") : getTranslate("hour_ago"))
-    }
-    else if days < 30
+    if days < 30
     {
         timeAgo = String(days) + " "  + ((days > 1) ? getTranslate("days_ago") : getTranslate("day_ago"))
     }

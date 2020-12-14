@@ -14,6 +14,7 @@ class PrescriptionsTVC: UITableViewCell {
     @IBOutlet weak var sizeLbl: Label!
     @IBOutlet weak var timeLbl: Label!
     @IBOutlet weak var dietBtn: UIButton!
+    @IBOutlet weak var dietLbl: Label!
     
     
     override func awakeFromNib() {
@@ -21,6 +22,16 @@ class PrescriptionsTVC: UITableViewCell {
         // Initialization code
     }
 
+    func setupDetails(_ dict : PrescriptionModel) {
+        titleLbl.text = dict.RxName
+        sizeLbl.text = String(dict.RxDosageStrength) + dict.RxDosageUnit + "  |  " + dict.RxDosageFrequencyInfo
+        timeLbl.text = String(dict.RxDuration) + " " + dict.RxDurationUnit
+        if dict.RxDuration > 1 {
+            timeLbl.text = timeLbl.text! + " (s)"
+        }
+        dietLbl.text = dict.RxDosageInstruction
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

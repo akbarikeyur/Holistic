@@ -10,17 +10,19 @@ import UIKit
 
 class ClinicPrescriptionsVC: UIViewController {
 
-    @IBOutlet weak var prescriptionCV: UICollectionView!
+    @IBOutlet weak var tblView: UITableView!
+    
+    var arrPrescription = [PrescriptionModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        registerCollectionView()
+        registerTableViewMethod()
     }
     
     func setupDetails() {
-        
+        serviceCallToGetPrescriptions()
     }
     
     /*
@@ -34,24 +36,41 @@ class ClinicPrescriptionsVC: UIViewController {
     */
 }
 
-//MARK:- CollectionView Method
-extension ClinicPrescriptionsVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-{
-    func registerCollectionView() {
-        prescriptionCV.register(UINib.init(nibName: "PrescriptionsCVC", bundle: nil), forCellWithReuseIdentifier: "PrescriptionsCVC")
+//MARK:- Tableview Method
+extension ClinicPrescriptionsVC : UITableViewDelegate, UITableViewDataSource {
+    
+    func registerTableViewMethod() {
+        tblView.register(UINib.init(nibName: "PrescriptionsTVC", bundle: nil), forCellReuseIdentifier: "PrescriptionsTVC")
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrPrescription.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: (135*3))
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : PrescriptionsCVC = prescriptionCV.dequeueReusableCell(withReuseIdentifier: "PrescriptionsCVC", for: indexPath) as! PrescriptionsCVC
-        cell.setupDetails()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : PrescriptionsTVC = tblView.dequeueReusableCell(withIdentifier: "PrescriptionsTVC") as! PrescriptionsTVC
+        cell.setupDetails(arrPrescription[indexPath.row])
+        cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension ClinicPrescriptionsVC {
+    func serviceCallToGetPrescriptions() {
+        ClinicAPIManager.shared.serviceCallToGetPrescriptions { (data) in
+            self.arrPrescription = [PrescriptionModel]()
+            for temp in data {
+                self.arrPrescription.append(PrescriptionModel.init(temp))
+            }
+            self.tblView.reloadData()
+        }
     }
 }

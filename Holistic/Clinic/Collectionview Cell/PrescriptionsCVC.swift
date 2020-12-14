@@ -12,13 +12,17 @@ class PrescriptionsCVC: UICollectionViewCell {
 
     @IBOutlet weak var tblView: UITableView!
     
+    var arrData = [PrescriptionModel]()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         registerTableViewMethod()
     }
     
-    func setupDetails() {
+    func setupDetails(_ dict : PrescriptionModel) {
+        arrData = [PrescriptionModel]()
+        arrData.append(dict)
         tblView.reloadData()
     }
     
@@ -32,11 +36,11 @@ extension PrescriptionsCVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return arrData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

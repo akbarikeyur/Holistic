@@ -12,6 +12,8 @@ class FamilyMemberVC: UIViewController {
 
     @IBOutlet weak var clinicCV: UICollectionView!
     
+    var arrMember = [ClinicUserModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,7 @@ class FamilyMemberVC: UIViewController {
     }
     
     func setupDetails() {
-        
+        serviceCallToGetFamilyData()
     }
     
     /*
@@ -43,7 +45,7 @@ extension FamilyMemberVC : UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return arrMember.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -52,7 +54,19 @@ extension FamilyMemberVC : UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : FamilyMemberCVC = clinicCV.dequeueReusableCell(withReuseIdentifier: "FamilyMemberCVC", for: indexPath) as! FamilyMemberCVC
-        
+        cell.setupDetails(arrMember[indexPath.row])
         return cell
+    }
+}
+
+extension FamilyMemberVC {
+    func serviceCallToGetFamilyData() {
+        ClinicAPIManager.shared.serviceCallToGetFamilyData { (data) in
+            self.arrMember = [ClinicUserModel]()
+            for temp in data {
+                self.arrMember.append(ClinicUserModel.init(temp))
+            }
+            self.clinicCV.reloadData()
+        }
     }
 }

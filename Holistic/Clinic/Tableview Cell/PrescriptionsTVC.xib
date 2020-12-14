@@ -19,81 +19,139 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrescriptionsTVC" id="KGk-i7-Jjw" customClass="PrescriptionsTVC" customModule="Holistic" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chandanasavam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yay-Le-LzV" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="300" height="16.5"/>
-                        <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-qg-DQl" customClass="View" customModule="Holistic" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="300" height="117"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chandanasavam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yay-Le-LzV" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="280" height="16.5"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-t7-KlU">
+                                <rect key="frame" x="9" y="31.5" width="15" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="V4z-71-TrH"/>
+                                    <constraint firstAttribute="width" constant="15" id="dw7-GD-5YK"/>
+                                </constraints>
+                                <state key="normal" image="ic_size"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30ml  |  Once or twice a day" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03m-Mm-edr" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="30" y="35.5" width="260" height="14"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eed-mp-qBa">
+                                <rect key="frame" x="10" y="54" width="15" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="Jsk-m0-GBA"/>
+                                    <constraint firstAttribute="height" constant="22" id="OVG-Xu-9CU"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="clock_orange"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Day (s)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-GT-LN0" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="30" y="58" width="260" height="14"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-tS-LZN">
+                                <rect key="frame" x="0.0" y="82" width="300" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Zdo-28-JHq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After lunch and dinner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txt-zz-P3y" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="35" y="93" width="265" height="14"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Fa-qsn">
+                                <rect key="frame" x="10" y="93" width="14.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14.5" id="L2w-jz-Dod"/>
+                                    <constraint firstAttribute="height" constant="16" id="n78-fh-5Tp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="diet">
+                                    <color key="titleColor" red="0.92156862745098034" green="0.62352941176470589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="03m-Mm-edr" firstAttribute="top" secondItem="yay-Le-LzV" secondAttribute="bottom" constant="9" id="38E-PM-Omr"/>
+                            <constraint firstAttribute="trailing" secondItem="03m-Mm-edr" secondAttribute="trailing" constant="10" id="B2P-pW-cZj"/>
+                            <constraint firstItem="2G5-Fa-qsn" firstAttribute="top" secondItem="NjW-tS-LZN" secondAttribute="bottom" constant="10" id="Ciu-Al-Fmo"/>
+                            <constraint firstItem="Txt-zz-P3y" firstAttribute="leading" secondItem="2G5-Fa-qsn" secondAttribute="trailing" constant="10.5" id="EJi-Hz-tcN"/>
+                            <constraint firstItem="eed-mp-qBa" firstAttribute="leading" secondItem="VDT-qg-DQl" secondAttribute="leading" constant="10" id="Icb-Lg-zfJ"/>
+                            <constraint firstItem="bqR-GT-LN0" firstAttribute="top" secondItem="03m-Mm-edr" secondAttribute="bottom" constant="8.5" id="J4J-mr-Vu1"/>
+                            <constraint firstItem="bqR-GT-LN0" firstAttribute="top" secondItem="eed-mp-qBa" secondAttribute="top" constant="4" id="LdA-Bv-dBM"/>
+                            <constraint firstItem="bqR-GT-LN0" firstAttribute="leading" secondItem="eed-mp-qBa" secondAttribute="trailing" constant="5" id="Sd1-dt-J14"/>
+                            <constraint firstItem="bqR-GT-LN0" firstAttribute="leading" secondItem="03m-Mm-edr" secondAttribute="leading" id="Tbd-1q-06M"/>
+                            <constraint firstItem="yay-Le-LzV" firstAttribute="leading" secondItem="VDT-qg-DQl" secondAttribute="leading" constant="10" id="als-Ga-LzG"/>
+                            <constraint firstAttribute="trailing" secondItem="yay-Le-LzV" secondAttribute="trailing" constant="10" id="dGl-Ks-Gcv"/>
+                            <constraint firstItem="03m-Mm-edr" firstAttribute="leading" secondItem="lbS-t7-KlU" secondAttribute="trailing" constant="6" id="das-iM-AeH"/>
+                            <constraint firstItem="2G5-Fa-qsn" firstAttribute="leading" secondItem="VDT-qg-DQl" secondAttribute="leading" constant="10" id="f3a-Rn-cZr"/>
+                            <constraint firstItem="lbS-t7-KlU" firstAttribute="top" secondItem="yay-Le-LzV" secondAttribute="bottom" constant="5" id="hFg-rD-fHr"/>
+                            <constraint firstAttribute="bottom" secondItem="Txt-zz-P3y" secondAttribute="bottom" constant="10" id="iFP-qw-TR7"/>
+                            <constraint firstItem="NjW-tS-LZN" firstAttribute="top" secondItem="bqR-GT-LN0" secondAttribute="bottom" constant="10" id="pkz-Lw-mP2"/>
+                            <constraint firstItem="Txt-zz-P3y" firstAttribute="top" secondItem="NjW-tS-LZN" secondAttribute="bottom" constant="10" id="qzN-eD-HFj"/>
+                            <constraint firstItem="yay-Le-LzV" firstAttribute="top" secondItem="VDT-qg-DQl" secondAttribute="top" constant="10" id="tVm-B9-rhv"/>
+                            <constraint firstAttribute="trailing" secondItem="NjW-tS-LZN" secondAttribute="trailing" id="uB4-NI-iF0"/>
+                            <constraint firstItem="bqR-GT-LN0" firstAttribute="trailing" secondItem="03m-Mm-edr" secondAttribute="trailing" id="vot-ut-39Q"/>
+                            <constraint firstItem="NjW-tS-LZN" firstAttribute="leading" secondItem="VDT-qg-DQl" secondAttribute="leading" id="z9v-O4-Ox2"/>
+                            <constraint firstItem="lbS-t7-KlU" firstAttribute="leading" secondItem="VDT-qg-DQl" secondAttribute="leading" constant="9" id="zaB-mR-ZKI"/>
+                            <constraint firstAttribute="trailing" secondItem="Txt-zz-P3y" secondAttribute="trailing" id="zpB-hy-pWV"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                <real key="value" value="14"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-t7-KlU">
-                        <rect key="frame" x="10" y="31.5" width="15" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="22" id="V4z-71-TrH"/>
-                            <constraint firstAttribute="width" constant="15" id="dw7-GD-5YK"/>
-                        </constraints>
-                        <state key="normal" image="ic_size"/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30ml  |  Once or twice a day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03m-Mm-edr" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                        <rect key="frame" x="30" y="35.5" width="280" height="14.5"/>
-                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                <real key="value" value="12"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eed-mp-qBa">
-                        <rect key="frame" x="10" y="55" width="15" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="15" id="Jsk-m0-GBA"/>
-                            <constraint firstAttribute="height" constant="22" id="OVG-Xu-9CU"/>
-                        </constraints>
-                        <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" image="clock_orange"/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Day (s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-GT-LN0" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                        <rect key="frame" x="30" y="58.5" width="280" height="15"/>
-                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                <real key="value" value="12"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-tS-LZN">
-                        <rect key="frame" x="0.0" y="87" width="320" height="1"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="Zdo-28-JHq"/>
-                        </constraints>
-                    </imageView>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Fa-qsn">
-                        <rect key="frame" x="12" y="98" width="298" height="16"/>
-                        <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
-                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <state key="normal" title="After lunch and dinner" image="diet">
-                            <color key="titleColor" red="0.92156862745098034" green="0.62352941176470589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                    </button>
+                    </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65v-I8-Omw">
-                        <rect key="frame" x="10" y="124" width="300" height="1"/>
+                        <rect key="frame" x="10" y="126" width="300" height="1"/>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="dJJ-v7-e1G"/>
@@ -101,34 +159,20 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="2G5-Fa-qsn" secondAttribute="trailing" constant="10" id="0EC-25-kT8"/>
-                    <constraint firstItem="lbS-t7-KlU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0gj-or-f75"/>
-                    <constraint firstItem="NjW-tS-LZN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="133-tJ-vQ9"/>
-                    <constraint firstItem="03m-Mm-edr" firstAttribute="leading" secondItem="lbS-t7-KlU" secondAttribute="trailing" constant="5" id="1uT-TA-ue6"/>
-                    <constraint firstItem="bqR-GT-LN0" firstAttribute="leading" secondItem="03m-Mm-edr" secondAttribute="leading" id="3nS-NH-enb"/>
+                    <constraint firstAttribute="trailing" secondItem="VDT-qg-DQl" secondAttribute="trailing" constant="10" id="5lE-Z0-G8k"/>
+                    <constraint firstItem="VDT-qg-DQl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ANH-hC-KNS"/>
                     <constraint firstItem="65v-I8-Omw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="D3P-c2-5HH"/>
-                    <constraint firstItem="bqR-GT-LN0" firstAttribute="centerY" secondItem="eed-mp-qBa" secondAttribute="centerY" id="Hrd-I6-hQL"/>
-                    <constraint firstItem="NjW-tS-LZN" firstAttribute="top" secondItem="eed-mp-qBa" secondAttribute="bottom" constant="10" id="JVh-Vp-1Si"/>
-                    <constraint firstItem="65v-I8-Omw" firstAttribute="top" secondItem="2G5-Fa-qsn" secondAttribute="bottom" constant="10" id="NqH-wQ-l5x"/>
-                    <constraint firstItem="lbS-t7-KlU" firstAttribute="top" secondItem="yay-Le-LzV" secondAttribute="bottom" constant="5" id="Sgd-jm-vcd"/>
-                    <constraint firstItem="2G5-Fa-qsn" firstAttribute="top" secondItem="NjW-tS-LZN" secondAttribute="bottom" constant="10" id="Xha-pP-xcA"/>
-                    <constraint firstItem="03m-Mm-edr" firstAttribute="centerY" secondItem="lbS-t7-KlU" secondAttribute="centerY" id="fmB-Ya-qNf"/>
-                    <constraint firstAttribute="trailing" secondItem="NjW-tS-LZN" secondAttribute="trailing" id="l9N-ic-1m4"/>
-                    <constraint firstItem="yay-Le-LzV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="opr-q3-Knh"/>
-                    <constraint firstItem="eed-mp-qBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rBu-Sl-uzI"/>
+                    <constraint firstItem="VDT-qg-DQl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="W2K-rR-OJB"/>
+                    <constraint firstAttribute="bottom" secondItem="VDT-qg-DQl" secondAttribute="bottom" constant="5" id="gRh-Ka-JCi"/>
                     <constraint firstAttribute="bottom" secondItem="65v-I8-Omw" secondAttribute="bottom" id="sBE-tM-QQy"/>
                     <constraint firstAttribute="trailing" secondItem="65v-I8-Omw" secondAttribute="trailing" constant="10" id="tFh-6H-MQB"/>
-                    <constraint firstItem="eed-mp-qBa" firstAttribute="top" secondItem="03m-Mm-edr" secondAttribute="bottom" constant="5" id="uS0-1E-oz7"/>
-                    <constraint firstAttribute="trailing" secondItem="yay-Le-LzV" secondAttribute="trailing" constant="10" id="vot-P7-FLM"/>
-                    <constraint firstItem="bqR-GT-LN0" firstAttribute="trailing" secondItem="03m-Mm-edr" secondAttribute="trailing" id="vq6-32-164"/>
-                    <constraint firstItem="yay-Le-LzV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="w6g-ra-ccb"/>
-                    <constraint firstItem="2G5-Fa-qsn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="wPc-9s-fkp"/>
-                    <constraint firstAttribute="trailing" secondItem="03m-Mm-edr" secondAttribute="trailing" constant="10" id="y1n-Ui-C30"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dietBtn" destination="2G5-Fa-qsn" id="W8p-Ih-ujb"/>
+                <outlet property="dietLbl" destination="Txt-zz-P3y" id="wyG-9D-Pnt"/>
                 <outlet property="sizeLbl" destination="03m-Mm-edr" id="zll-jR-bjX"/>
                 <outlet property="timeLbl" destination="bqR-GT-LN0" id="3DB-db-OzX"/>
                 <outlet property="titleLbl" destination="yay-Le-LzV" id="hm6-Vb-SVH"/>

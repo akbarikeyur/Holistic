@@ -82,4 +82,17 @@ class AppModel: NSObject {
         }
         return 0
     }
+    
+    func getBoolenValue(_ dict : [String : Any], _ key : String) -> Bool {
+        if let temp = dict[key] as? Bool {
+            return temp
+        }
+        else if let temp = dict[key] as? Int {
+            if temp == 1 {
+                return true
+            }
+            return false
+        }
+        return false
+    }
 }

@@ -15,6 +15,7 @@ class ClinicPackageTVC: UITableViewCell {
     @IBOutlet weak var descLbl: Label!
     @IBOutlet weak var appointmentTxt: TextField!
     @IBOutlet weak var onGoingBtn: Button!
+    @IBOutlet weak var orgNameLbl: Label!
     @IBOutlet weak var progressLbl: Label!
     @IBOutlet weak var progressBar: UIProgressView!
     
@@ -23,6 +24,31 @@ class ClinicPackageTVC: UITableViewCell {
         // Initialization code
     }
 
+    func setupDetails(_ dict : ClinicPackageModel) {
+        titleLbl.text = dict.PatientName
+        let strDate = dict.PackageSoldOnDate.components(separatedBy: "T").first!
+        let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd")
+        dateLbl.text = "Sold on " + getDateStringFromDate(date: date, format: "EEE") + ", " + getDateStringFromDate(date: date, format: "dd-MMM-yyyy")
+        if getDifferentTimeAgo(date) != "" {
+            dateLbl.text = dateLbl.text! + " (" + getDifferentTimeAgo(date) + ")"
+        }
+        descLbl.text = dict.PackageName
+        if dict.PackageIsCompleted == 1 {
+            onGoingBtn.setTitle("Completed", for: .normal)
+            onGoingBtn.backgroundColor = GreenColor
+        }
+        else if dict.PackageIsClosed == 1 {
+            onGoingBtn.setTitle("Closed", for: .normal)
+            onGoingBtn.backgroundColor = GRAY_COLOR
+        } else {
+            onGoingBtn.setTitle("Ongoing", for: .normal)
+            onGoingBtn.backgroundColor = OrangeColor
+        }
+        orgNameLbl.text = dict.OrganisationName
+        progressLbl.text = String(Int((dict.PackageServiceTotalCount / dict.PackageServiceCompletedCount) * 100)) + "%"
+        progressBar.progress = Float((dict.PackageServiceTotalCount / dict.PackageServiceCompletedCount) * 100)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

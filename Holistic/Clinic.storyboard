@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -820,33 +820,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BGx-g4-hYu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1z-e1-vh2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Fha-ey-Fe8">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="MNz-1T-uBt" id="Kk9-2j-6wk"/>
-                                    <outlet property="delegate" destination="MNz-1T-uBt" id="tsd-9P-dz9"/>
+                                    <outlet property="dataSource" destination="MNz-1T-uBt" id="MNg-UD-78J"/>
+                                    <outlet property="delegate" destination="MNz-1T-uBt" id="VOH-wW-b2t"/>
                                 </connections>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="BGx-g4-hYu" firstAttribute="top" secondItem="z2w-Jf-jaa" secondAttribute="top" id="BHp-KF-pt4"/>
-                            <constraint firstItem="BGx-g4-hYu" firstAttribute="leading" secondItem="z2w-Jf-jaa" secondAttribute="leading" id="Jvi-my-aTp"/>
-                            <constraint firstItem="z2w-Jf-jaa" firstAttribute="bottom" secondItem="BGx-g4-hYu" secondAttribute="bottom" id="Z3e-5E-Gb3"/>
-                            <constraint firstItem="BGx-g4-hYu" firstAttribute="trailing" secondItem="z2w-Jf-jaa" secondAttribute="trailing" id="cq7-Ag-vbM"/>
+                            <constraint firstItem="z2w-Jf-jaa" firstAttribute="bottom" secondItem="h1z-e1-vh2" secondAttribute="bottom" id="C5u-0x-uUk"/>
+                            <constraint firstItem="h1z-e1-vh2" firstAttribute="leading" secondItem="z2w-Jf-jaa" secondAttribute="leading" id="ZGN-Gt-zoY"/>
+                            <constraint firstItem="h1z-e1-vh2" firstAttribute="top" secondItem="z2w-Jf-jaa" secondAttribute="top" id="gBJ-v8-fD0"/>
+                            <constraint firstItem="h1z-e1-vh2" firstAttribute="trailing" secondItem="z2w-Jf-jaa" secondAttribute="trailing" id="xAK-8F-PGb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z2w-Jf-jaa"/>
                     </view>
                     <connections>
-                        <outlet property="prescriptionCV" destination="BGx-g4-hYu" id="Clh-ns-jDs"/>
+                        <outlet property="tblView" destination="h1z-e1-vh2" id="jUV-a2-rJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKP-t2-jU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

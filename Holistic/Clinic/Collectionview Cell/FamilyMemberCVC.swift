@@ -17,5 +17,9 @@ class FamilyMemberCVC: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    func setupDetails(_ dict : ClinicUserModel) {
+        nameLbl.text = dict.FullName
+        relationLbl.text = dict.EmergencyContactPersonRelationWithPatient
+    }
 }
