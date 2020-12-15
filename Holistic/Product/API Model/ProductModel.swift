@@ -29,6 +29,11 @@ struct ProductModel {
                 product_single_image.append(MediaModel.init(temp))
             }
         }
+        else if let tempData = dict["get_product_images"] as? [[String : Any]] {
+            for temp in tempData {
+                product_single_image.append(MediaModel.init(temp))
+            }
+        }
         product_total_qty = QuantityModel.init(dict["product_total_qty"] as? [String : Any] ?? [String : Any]())
     }
 }

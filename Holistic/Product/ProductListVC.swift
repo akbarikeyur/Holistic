@@ -112,6 +112,7 @@ extension ProductListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : ProductDetailVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductDetailVC") as! ProductDetailVC
+        vc.productData = arrProduct[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

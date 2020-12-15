@@ -30,4 +30,19 @@ public class ProductAPIManager {
             }
         }
     }
+    
+    func serviceCallToGetProductDetail(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any], _ otherData : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_PRODUCT_DETAIL, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let tempDict = dict["data"] as? [String : Any] {
+                    if let otherData = dict["other_product"] as? [[String : Any]] {
+                        completion(tempDict, otherData)
+                    }else{
+                        completion(tempDict, [[String : Any]]())
+                    }
+                }
+            }
+        }
+    }
 }

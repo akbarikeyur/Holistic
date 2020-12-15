@@ -21,7 +21,8 @@ class HotelImageCVC: UICollectionViewCell {
         outerView.layer.borderColor = WHITE_COLOR.cgColor
     }
 
-    func setupDetails(_ isSelect : Bool) {
+    func setupDetails(_ dict : MediaModel, _ isSelect : Bool) {
+        setImageBackgroundImage(imgView, dict.url, IMAGE.PLACEHOLDER)
         if isSelect {
             constraintWidth.constant = 70
             constraintHeight.constant = 70

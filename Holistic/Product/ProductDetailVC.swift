@@ -27,6 +27,9 @@ class ProductDetailVC: UIViewController {
     @IBOutlet weak var productTbl: UITableView!
     @IBOutlet weak var constraintHeightProductTbl: NSLayoutConstraint!
     
+    var productData = ProductModel.init([String : Any]())
+    var arrOtherData = [ProductModel]()
+    
     var selectedImageIndex = 0
     var arrDetails = ["Enterogermina helps in restoring the intestinal bacteria (flora) that constitutes a real defensive barrier against harmful bacteria.", "The balance of this flora can be upset by: Intestinal infections, Poisoning, Food disorders, Changes in diet, Or, use of antibiotics.", "Enterogermina helps in restoring the intestinal bacteria (flora) that constitutes."]
     
@@ -36,6 +39,17 @@ class ProductDetailVC: UIViewController {
         // Do any additional setup after loading the view.
         registerCollectionView()
         registerTableViewMethod()
+        serviceCallToGetProductDetail()
+    }
+    
+    func setupDetails() {
+        productNameLbl.text = productData.name
+        referenceLbl.text = String(productData.id)
+        stockLbl.text = "Only " + String(productData.product_total_qty.qty) + " left in stock"
+        priceLbl.text = "Price: " + displayPriceWithCurrency(productData.price)
+        totalQtyLbl.text = String(productData.product_total_qty.total_qty)
+        deliveryLbl.text = productData.delivery
+        descLbl.text = productData.desc
     }
     
     //MARK:- Button click event
@@ -77,7 +91,7 @@ extension ProductDetailVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return productData.product_single_image.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -86,13 +100,14 @@ extension ProductDetailVC : UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : HotelImageCVC = imageCV.dequeueReusableCell(withReuseIdentifier: "HotelImageCVC", for: indexPath) as! HotelImageCVC
-        cell.setupDetails((indexPath.row == selectedImageIndex))
+        cell.setupDetails(productData.product_single_image[indexPath.row], (indexPath.row == selectedImageIndex))
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedImageIndex = indexPath.row
         imageCV.reloadData()
+        setImageBackgroundImage(productImgView, productData.product_single_image[indexPath.row].url, IMAGE.PLACEHOLDER)
     }
 }
 
@@ -110,7 +125,7 @@ extension ProductDetailVC : UITableViewDelegate, UITableViewDataSource {
         if tableView == detailTbl {
             return arrDetails.count
         }
-        return 3
+        return arrOtherData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -136,7 +151,7 @@ extension ProductDetailVC : UITableViewDelegate, UITableViewDataSource {
         }
         else{
             let cell : ProductListTVC = productTbl.dequeueReusableCell(withIdentifier: "ProductListTVC") as! ProductListTVC
-            
+            cell.setupDetails(arrOtherData[indexPath.row])
             cell.selectionStyle = .none
             return cell
         }
@@ -158,5 +173,18 @@ extension ProductDetailVC : UITableViewDelegate, UITableViewDataSource {
         detailTbl.reloadData()
         detailTbl.layoutIfNeeded()
         constraintHeightDetailTbl.constant = detailTbl.contentSize.height
+    }
+}
+
+extension ProductDetailVC {
+    func serviceCallToGetProductDetail() {
+        ProductAPIManager.shared.serviceCallToGetProductDetail(["id" : productData.id!]) { (dict, otherData) in
+            self.productData = ProductModel.init(dict)
+            self.arrOtherData = [ProductModel]()
+            for temp in otherData {
+                self.arrOtherData.append(ProductModel.init(temp))
+            }
+            self.setupDetails()
+        }
     }
 }
