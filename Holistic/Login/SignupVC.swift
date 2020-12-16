@@ -176,7 +176,7 @@ class SignupVC: UIViewController {
             param["building_address"] = buildingNameTxt.text
             param["street_address"] = addressTxt.text
             param["phone_number"] = phoneTxt.text
-            
+            printData(param)
             LoginAPIManager.shared.serviceCallToSignup(param) { (dict) in
                 AppDelegate().sharedDelegate().navigateToDashBoard()
             }

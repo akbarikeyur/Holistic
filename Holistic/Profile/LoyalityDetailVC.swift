@@ -60,7 +60,7 @@ extension LoyalityDetailVC : UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : HotelImageCVC = imageCV.dequeueReusableCell(withReuseIdentifier: "HotelImageCVC", for: indexPath) as! HotelImageCVC
-        cell.setupDetails((indexPath.row == selectedImageIndex))
+        //cell.setupDetails((indexPath.row == selectedImageIndex))
         cell.imgView.image = UIImage(named: arrImage[indexPath.row])
         return cell
     }

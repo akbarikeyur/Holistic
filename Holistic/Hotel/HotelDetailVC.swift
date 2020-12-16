@@ -117,7 +117,7 @@ extension HotelDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == imageCV {
             let cell : HotelImageCVC = imageCV.dequeueReusableCell(withReuseIdentifier: "HotelImageCVC", for: indexPath) as! HotelImageCVC
-            cell.setupDetails((indexPath.row == selectedImageIndex))
+            cell.setupDetails(hotelData.get_hotels_media[indexPath.row], (indexPath.row == selectedImageIndex))
             setImageBackgroundImage(cell.imgView, hotelData.get_hotels_media[indexPath.row].url, IMAGE.PLACEHOLDER)
             return cell
         }
