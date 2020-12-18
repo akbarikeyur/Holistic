@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 class ProductDetailVC: UIViewController {
 
@@ -22,8 +23,8 @@ class ProductDetailVC: UIViewController {
     @IBOutlet weak var descLbl: Label!
     @IBOutlet weak var benifitBtn: Button!
     @IBOutlet weak var howUseBtn: Button!
-    @IBOutlet weak var detailTbl: UITableView!
-    @IBOutlet weak var constraintHeightDetailTbl: NSLayoutConstraint!
+    @IBOutlet weak var benifitUseTitleLbl: Label!
+    @IBOutlet weak var benifitUseValueLbl: Label!
     @IBOutlet weak var productTbl: UITableView!
     @IBOutlet weak var constraintHeightProductTbl: NSLayoutConstraint!
     
@@ -40,6 +41,7 @@ class ProductDetailVC: UIViewController {
         registerCollectionView()
         registerTableViewMethod()
         serviceCallToGetProductDetail()
+        
     }
     
     func setupDetails() {
@@ -50,6 +52,15 @@ class ProductDetailVC: UIViewController {
         totalQtyLbl.text = String(productData.product_total_qty.total_qty)
         deliveryLbl.text = productData.delivery
         descLbl.text = productData.desc
+        clickToBenifitHowUse(benifitBtn)
+        
+        if productData.product_single_image.count > 0 {
+            setImageBackgroundImage(productImgView, productData.product_single_image[0].url, IMAGE.PLACEHOLDER)
+        }else{
+            productImgView.image = UIImage(named: IMAGE.PLACEHOLDER)
+        }
+        imageCV.reloadData()
+        updateProductTableviewHeight()
     }
     
     //MARK:- Button click event
@@ -58,17 +69,37 @@ class ProductDetailVC: UIViewController {
     }
 
     @IBAction func clickToSelectQuantity(_ sender: UIButton) {
-        
+        var arrData = [String]()
+        for i in 1...5 {
+            arrData.append(String(i))
+        }
+        let dropDown = DropDown()
+        dropDown.anchorView = sender
+        dropDown.dataSource = arrData
+        dropDown.selectionAction = { [unowned self] (dropindex: Int, item: String) in
+            self.quantityLbl.text = item
+        }
+        dropDown.show()
     }
     
     @IBAction func clickToAddToCart(_ sender: Any) {
-        
+        serviceCallToAddToCart()
     }
     
     @IBAction func clickToBenifitHowUse(_ sender: UIButton) {
         benifitBtn.layer.borderColor = ClearColor.cgColor
         howUseBtn.layer.borderColor = ClearColor.cgColor
         sender.layer.borderColor = BLACK_COLOR.cgColor
+        benifitBtn.isSelected = false
+        howUseBtn.isSelected = false
+        sender.isSelected = true
+        if sender == benifitBtn {
+            benifitUseTitleLbl.text = "Product Benifits"
+            benifitUseValueLbl.attributedText = productData.benifits.html2AttributedString
+        }else{
+            benifitUseTitleLbl.text = "How to Use"
+            benifitUseValueLbl.attributedText = productData.how_to_use.html2AttributedString
+        }
     }
     
     /*
@@ -116,45 +147,21 @@ extension ProductDetailVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         productTbl.register(UINib.init(nibName: "ProductListTVC", bundle: nil), forCellReuseIdentifier: "ProductListTVC")
-        detailTbl.register(UINib.init(nibName: "ProductDetailTVC", bundle: nil), forCellReuseIdentifier: "ProductDetailTVC")
-        updateProductTableviewHeight()
-        updateDetailTableviewHeight()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == detailTbl {
-            return arrDetails.count
-        }
         return arrOtherData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if tableView == detailTbl {
-            return UITableView.automaticDimension
-        }
         return 110
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == detailTbl {
-            let cell : ProductDetailTVC = detailTbl.dequeueReusableCell(withIdentifier: "ProductDetailTVC") as! ProductDetailTVC
-            cell.topView.isHidden = false
-            cell.bottomView.isHidden = false
-            if indexPath.row == 0 {
-                cell.topView.isHidden = true
-            }
-            else if indexPath.row == (arrDetails.count-1) {
-                cell.bottomView.isHidden = true
-            }
-            cell.selectionStyle = .none
-            return cell
-        }
-        else{
-            let cell : ProductListTVC = productTbl.dequeueReusableCell(withIdentifier: "ProductListTVC") as! ProductListTVC
-            cell.setupDetails(arrOtherData[indexPath.row])
-            cell.selectionStyle = .none
-            return cell
-        }
+        let cell : ProductListTVC = productTbl.dequeueReusableCell(withIdentifier: "ProductListTVC") as! ProductListTVC
+        cell.setupDetails(arrOtherData[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -167,13 +174,6 @@ extension ProductDetailVC : UITableViewDelegate, UITableViewDataSource {
         productTbl.layoutIfNeeded()
         constraintHeightProductTbl.constant = productTbl.contentSize.height
     }
-    
-    func updateDetailTableviewHeight() {
-        constraintHeightDetailTbl.constant = CGFloat.greatestFiniteMagnitude
-        detailTbl.reloadData()
-        detailTbl.layoutIfNeeded()
-        constraintHeightDetailTbl.constant = detailTbl.contentSize.height
-    }
 }
 
 extension ProductDetailVC {
@@ -185,6 +185,15 @@ extension ProductDetailVC {
                 self.arrOtherData.append(ProductModel.init(temp))
             }
             self.setupDetails()
+        }
+    }
+    
+    func serviceCallToAddToCart() {
+        var param = [String : Any]()
+        param["product_id"] = productData.id
+        param["user_id"] = AppModel.shared.currentUser.id
+        ProductAPIManager.shared.serviceCallToAddToCart(param) { (dict) in
+            
         }
     }
 }

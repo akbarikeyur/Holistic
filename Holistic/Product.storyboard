@@ -658,7 +658,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3e-OW-8Yd" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="602.5" width="300" height="199"/>
+                                                <rect key="frame" x="10" y="602.5" width="300" height="127"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-lC-a33" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="70" width="280" height="19"/>
@@ -671,26 +671,27 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gim-Vo-6ek">
-                                                        <rect key="frame" x="0.0" y="99" width="300" height="100"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="ATI-V7-sp8"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="7H4-b6-yCh" id="Xab-46-hDQ"/>
-                                                            <outlet property="delegate" destination="7H4-b6-yCh" id="Wzn-Nx-fMf"/>
-                                                        </connections>
-                                                    </tableView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enterogermina® 2 Billion is a probiotic for infants, babies, and children" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rt4-0W-Ued" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="99" width="280" height="28"/>
+                                                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Dxe-lC-a33" firstAttribute="top" secondItem="k3e-OW-8Yd" secondAttribute="top" constant="70" id="G9A-pc-hwz"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Gim-Vo-6ek" secondAttribute="trailing" id="K68-zD-I5k"/>
-                                                    <constraint firstItem="Gim-Vo-6ek" firstAttribute="top" secondItem="Dxe-lC-a33" secondAttribute="bottom" constant="10" id="MMn-cg-55K"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rt4-0W-Ued" secondAttribute="trailing" constant="10" id="Ic9-5J-YAP"/>
                                                     <constraint firstAttribute="trailing" secondItem="Dxe-lC-a33" secondAttribute="trailing" constant="10" id="RtL-PC-whw"/>
-                                                    <constraint firstItem="Gim-Vo-6ek" firstAttribute="leading" secondItem="k3e-OW-8Yd" secondAttribute="leading" id="sGo-GH-9hw"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Gim-Vo-6ek" secondAttribute="bottom" id="sad-9y-AgQ"/>
+                                                    <constraint firstItem="rt4-0W-Ued" firstAttribute="leading" secondItem="k3e-OW-8Yd" secondAttribute="leading" constant="10" id="TYE-NA-e8m"/>
+                                                    <constraint firstItem="rt4-0W-Ued" firstAttribute="top" secondItem="Dxe-lC-a33" secondAttribute="bottom" constant="10" id="qbk-IP-5rq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rt4-0W-Ued" secondAttribute="bottom" id="rHe-t1-6rg"/>
                                                     <constraint firstItem="Dxe-lC-a33" firstAttribute="leading" secondItem="k3e-OW-8Yd" secondAttribute="leading" constant="10" id="tdR-KR-vSz"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -778,7 +779,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PL-AB-9ZU" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="821.5" width="300" height="19"/>
+                                                <rect key="frame" x="10" y="749.5" width="300" height="19"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -789,10 +790,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OW9-eE-gi3">
-                                                <rect key="frame" x="0.0" y="850.5" width="320" height="148.5"/>
+                                                <rect key="frame" x="0.0" y="778.5" width="320" height="220.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="148.5" id="jMG-97-eee"/>
+                                                    <constraint firstAttribute="height" constant="220.5" id="jMG-97-eee"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="7H4-b6-yCh" id="yi3-57-IbE"/>
@@ -904,11 +905,11 @@
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="benifitBtn" destination="QUP-pU-9C5" id="Kok-Lv-NKC"/>
-                        <outlet property="constraintHeightDetailTbl" destination="ATI-V7-sp8" id="ID2-0Y-JLv"/>
+                        <outlet property="benifitUseTitleLbl" destination="Dxe-lC-a33" id="OyT-p2-nmm"/>
+                        <outlet property="benifitUseValueLbl" destination="rt4-0W-Ued" id="Rk3-jT-fLT"/>
                         <outlet property="constraintHeightProductTbl" destination="jMG-97-eee" id="KnZ-LF-j3N"/>
                         <outlet property="deliveryLbl" destination="Ue8-Pw-Q2j" id="x8D-fQ-QUg"/>
                         <outlet property="descLbl" destination="bO1-DF-YQc" id="U9Y-F7-KD7"/>
-                        <outlet property="detailTbl" destination="Gim-Vo-6ek" id="IbC-qo-7at"/>
                         <outlet property="howUseBtn" destination="QhT-gc-fLh" id="SdS-xA-p1L"/>
                         <outlet property="imageCV" destination="kZU-5U-8PS" id="v6f-5m-Ty8"/>
                         <outlet property="priceLbl" destination="BOc-6Z-OCx" id="gOL-ay-vU4"/>
@@ -2922,7 +2923,7 @@
         <image name="address" width="23" height="15.5"/>
         <image name="back" width="8" height="14"/>
         <image name="calendar" width="17" height="17"/>
-        <image name="call" width="15.5" height="19.5"/>
+        <image name="call" width="38" height="37"/>
         <image name="cart_white" width="25" height="22.5"/>
         <image name="checkbox_off" width="21" height="21"/>
         <image name="checkbox_on" width="20" height="20"/>

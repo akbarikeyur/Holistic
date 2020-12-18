@@ -54,3 +54,21 @@ struct QuantityModel {
         return ["id" : id!, "product_id" : product_id!, "qty" : qty!, "total_qty" : total_qty!, "stock_type" : stock_type!]
     }
 }
+
+struct CartModel {
+    var id, product_id, qty, user_id : Int!
+    var get_product : [ProductModel]!
+    
+    init(_ dict : [String : Any]) {
+        id = AppModel.shared.getIntValue(dict, "id")
+        product_id = AppModel.shared.getIntValue(dict, "product_id")
+        qty = AppModel.shared.getIntValue(dict, "qty")
+        user_id = AppModel.shared.getIntValue(dict, "user_id")
+        get_product = [ProductModel]()
+        if let tempData = dict["get_product"] as? [[String : Any]] {
+            for temp in tempData {
+                get_product.append(ProductModel.init(temp))
+            }
+        }
+    }
+}

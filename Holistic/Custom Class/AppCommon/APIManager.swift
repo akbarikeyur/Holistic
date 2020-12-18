@@ -35,6 +35,9 @@ struct API {
     
     static let GET_PRODUCT_LIST          =       BASE_URL + "product/get_product"
     static let GET_PRODUCT_DETAIL        =       BASE_URL + "product/single_product"
+    static let CHECK_PRODUCT_QTY         =       BASE_URL + "product/checkproductqty"
+    static let ADD_TO_CART               =       BASE_URL + "cart/addtocart"
+    static let GET_MY_CART               =       BASE_URL + "cart/getCart"
 }
 
 

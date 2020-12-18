@@ -45,4 +45,37 @@ public class ProductAPIManager {
             }
         }
     }
+    
+    func serviceCallToCheckProductQty(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any]) -> Void) {
+        APIManager.shared.callPostRequest(API.CHECK_PRODUCT_QTY, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let tempDict = dict["data"] as? [String : Any] {
+                    completion(tempDict)
+                }
+            }
+        }
+    }
+    
+    func serviceCallToAddToCart(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any]) -> Void) {
+        APIManager.shared.callPostRequest(API.ADD_TO_CART, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let tempDict = dict["data"] as? [String : Any] {
+                    completion(tempDict)
+                }
+            }
+        }
+    }
+    
+    func serviceCallToGetMyCart(_ completion: @escaping (_ dict : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_MY_CART, ["user_id" : AppModel.shared.currentUser.id!], true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let data = dict["data"] as? [[String : Any]] {
+                    completion(data)
+                }
+            }
+        }
+    }
 }

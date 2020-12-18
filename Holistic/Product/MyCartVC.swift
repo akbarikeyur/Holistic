@@ -19,11 +19,14 @@ class MyCartVC: UIViewController {
     @IBOutlet weak var taxLbl: Label!
     @IBOutlet weak var totalPriceLbl: Label!
     
+    var arrCartData = [CartModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        serviceCallToGetMyCart()
     }
     
     //MARK:- Button click event
@@ -62,7 +65,7 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource, MGSwipeTableCel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return arrCartData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -71,9 +74,8 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource, MGSwipeTableCel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : ProductCartTVC = tblView.dequeueReusableCell(withIdentifier: "ProductCartTVC") as! ProductCartTVC
-        
+        cell.setupDetails(arrCartData[indexPath.row])
         cell.delegate = self
-        
         let deleteBtn = MGSwipeButton(title: "", icon: UIImage(named: "delete"), backgroundColor: OrangeColor) { (sender: MGSwipeTableCell!) -> Bool in
             print("Convenience callback for swipe buttons!")
             return true
@@ -98,5 +100,32 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource, MGSwipeTableCel
         tblView.reloadData()
         tblView.layoutIfNeeded()
         constraintHeightTblView.constant = tblView.contentSize.height
+    }
+}
+
+extension MyCartVC {
+    func serviceCallToGetMyCart() {
+        ProductAPIManager.shared.serviceCallToGetMyCart { (data) in
+            self.arrCartData = [CartModel]()
+            for temp in data {
+                self.arrCartData.append(CartModel.init(temp))
+            }
+            self.tblView.reloadData()
+            self.updateDetailTableviewHeight()
+            
+            
+            var price = 0.0
+            for tempData in self.arrCartData {
+                for temp in tempData.get_product {
+                    price += Double(temp.price!)!
+                }
+            }
+            self.subTotalLbl.text = displayPriceWithCurrency(String(price))
+            self.shippingLbl.text = displayPriceWithCurrency("10")
+            self.taxLbl.text = "5% VAT"
+            price += 10
+            price = price + (price * 0.05)
+            self.totalPriceLbl.text = displayPriceWithCurrency(String(price))
+        }
     }
 }

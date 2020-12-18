@@ -78,7 +78,7 @@ func setImageBackgroundImage(_ imgView : UIImageView, _ strUrl : String, _ place
         imgView.image = UIImage.init(named: placeHolderImg)
         return
     }
-    imgView.sd_setImage(with: URL(string: strUrl), placeholderImage: UIImage.init(named: placeHolderImg)) { (image, error, SDImageCacheType, url) in
+    imgView.sd_setImage(with: URL(string: getUrlForImage(strUrl)), placeholderImage: UIImage.init(named: placeHolderImg)) { (image, error, SDImageCacheType, url) in
         if image != nil {
             imgView.image = image
         }else{
