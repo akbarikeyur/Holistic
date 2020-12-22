@@ -13,7 +13,7 @@ class DietPlanVC: UIViewController {
     @IBOutlet weak var dietCV: UICollectionView!
     @IBOutlet weak var constraintHeightDietCV: NSLayoutConstraint!
     
-    var arrExpand = [Int]()
+    var arrDietPlan = [DietPlanModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,9 @@ class DietPlanVC: UIViewController {
     }
     
     func setupDetails() {
-        serviceCallToGetDietPlan()
+        if arrDietPlan.count == 0 {
+            serviceCallToGetDietPlan()
+        }
     }
     
     /*
@@ -43,11 +45,11 @@ extension DietPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
 {
     func registerCollectionView() {
         dietCV.register(UINib.init(nibName: "DietPlanCVC", bundle: nil), forCellWithReuseIdentifier: "DietPlanCVC")
-        constraintHeightDietCV.constant = (9/3) * (SCREEN.WIDTH/3)
+        updateDietCVHeight()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return arrDietPlan.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -61,14 +63,31 @@ extension DietPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
         }else{
             cell.sideIMg.isHidden = false
         }
+        cell.setupDetails(arrDietPlan[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        openUrlInSafari(strUrl: arrDietPlan[indexPath.row].DocumentOnlineURL)
+    }
+    func updateDietCVHeight() {
+        if arrDietPlan.count % 3 == 0 {
+            constraintHeightDietCV.constant = (CGFloat(arrDietPlan.count)/3) * (SCREEN.WIDTH/3)
+        }else{
+            constraintHeightDietCV.constant = ((CGFloat(arrDietPlan.count)/3) + 1) * (SCREEN.WIDTH/3)
+        }
     }
 }
 
 extension DietPlanVC {
     func serviceCallToGetDietPlan() {
         ClinicAPIManager.shared.serviceCallToGetDietPlan { (data) in
-            
+            self.arrDietPlan = [DietPlanModel]()
+            for temp in data {
+                self.arrDietPlan.append(DietPlanModel.init(temp))
+            }
+            self.dietCV.reloadData()
+            self.updateDietCVHeight()
         }
     }
 }

@@ -114,3 +114,15 @@ struct ClinicPackageModel {
         PackageServiceCompletedCount = AppModel.shared.getIntValue(dict, "PackageServiceCompletedCount")
     }
 }
+
+
+struct DietPlanModel {
+    var DocumentDisplayName, DocumentOnlineName, DocumentOnlineURL, ID : String!
+    
+    init(_ dict : [String : Any]) {
+        DocumentDisplayName = dict["DocumentDisplayName"] as? String ?? ""
+        DocumentOnlineName = dict["DocumentOnlineName"] as? String ?? ""
+        DocumentOnlineURL = dict["DocumentOnlineURL"] as? String ?? ""
+        ID = dict["ID"] as? String ?? ""
+    }
+}

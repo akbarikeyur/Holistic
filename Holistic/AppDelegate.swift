@@ -183,4 +183,13 @@ extension AppDelegate {
             }
         }
     }
+    
+    func serviceCallToGetMyCart() {
+        ProductAPIManager.shared.serviceCallToGetMyCart(false) { (data) in
+            AppModel.shared.MY_CART = [CartModel]()
+            for temp in data {
+                AppModel.shared.MY_CART.append(CartModel.init(temp))
+            }
+        }
+    }
 }

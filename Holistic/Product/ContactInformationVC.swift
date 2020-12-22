@@ -24,6 +24,8 @@ class ContactInformationVC: UIViewController {
     @IBOutlet weak var countryTxt: TextField!
     @IBOutlet weak var saveInfoBtn: Button!
     
+    var arrCartData = [CartModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

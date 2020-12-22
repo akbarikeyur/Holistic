@@ -12,6 +12,7 @@ class SignupVC: UIViewController {
 
     @IBOutlet weak var nameTxt: TextField!
     @IBOutlet weak var emailTxt: TextField!
+    @IBOutlet weak var flagImg: UIImageView!
     @IBOutlet weak var phonecodeTxt: Label!
     @IBOutlet weak var phoneTxt: TextField!
     @IBOutlet weak var addressTxt: TextField!
@@ -269,6 +270,7 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
         if selectedType == 0 || selectedType == 3 {
             selectedCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
             countryTxt.text = selectedCountry.name
+            flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
             serviceCallToGetState()
         }

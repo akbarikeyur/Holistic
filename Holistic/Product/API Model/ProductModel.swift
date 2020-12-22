@@ -13,6 +13,7 @@ struct ProductModel {
     var name, desc, price, benifits, how_to_use, delivery, created_at : String!
     var product_single_image : [MediaModel]!
     var product_total_qty : QuantityModel!
+    var product_total_qty_in_count : Int!
     
     init(_ dict : [String : Any]) {
         id = AppModel.shared.getIntValue(dict, "id")
@@ -24,7 +25,10 @@ struct ProductModel {
         delivery = dict["delivery"] as? String ?? ""
         created_at = dict["created_at"] as? String ?? ""
         product_single_image = [MediaModel]()
-        if let tempData = dict["product_single_image"] as? [[String : Any]] {
+        if let temp = dict["product_single_image"] as? [String : Any] {
+            product_single_image.append(MediaModel.init(temp))
+        }
+        else if let tempData = dict["product_single_image"] as? [[String : Any]] {
             for temp in tempData {
                 product_single_image.append(MediaModel.init(temp))
             }
@@ -35,6 +39,7 @@ struct ProductModel {
             }
         }
         product_total_qty = QuantityModel.init(dict["product_total_qty"] as? [String : Any] ?? [String : Any]())
+        product_total_qty_in_count = AppModel.shared.getIntValue(dict, "product_total_qty_in_count")
     }
 }
 

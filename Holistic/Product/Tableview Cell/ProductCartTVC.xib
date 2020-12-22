@@ -155,9 +155,6 @@ Suspension 2 Billion/5ml Vials 10's</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="27"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                                 <state key="normal" image="dropdown"/>
-                                                <connections>
-                                                    <action selector="clickToSelectQuantity:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XCV-I6-hXw"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -245,6 +242,7 @@ Suspension 2 Billion/5ml Vials 10's</string>
                 <outlet property="imgView" destination="UHo-tH-RTs" id="UZh-Ez-N7X"/>
                 <outlet property="nameLbl" destination="Vtd-n3-UvL" id="56A-cm-YLN"/>
                 <outlet property="priceLbl" destination="f8h-MW-dqg" id="NzJ-e7-zaf"/>
+                <outlet property="qtyBtn" destination="rVu-D1-sW7" id="b9Y-y1-H2J"/>
                 <outlet property="qtyLbl" destination="ZHb-o0-7fN" id="Rqd-Nc-XtO"/>
                 <outlet property="refLbl" destination="Kkp-ls-pnb" id="JSC-xD-5Fd"/>
                 <outlet property="stockLbl" destination="CM6-ku-1dU" id="UXB-My-XfM"/>

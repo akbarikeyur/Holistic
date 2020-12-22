@@ -25,6 +25,14 @@ class ProductListVC: UIViewController {
         // Do any additional setup after loading the view.
         registerTableViewMethod()
         registerCollectionView()
+        
+        if AppModel.shared.MY_CART.count > 0 {
+            cartLbl.text = String(AppModel.shared.MY_CART.count)
+            cartLbl.isHidden = false
+        }else{
+            cartLbl.text = ""
+            cartLbl.isHidden = true
+        }
         serviceCallToGetProductList()
     }
     

@@ -494,7 +494,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGe-nB-W4B" customClass="View" customModule="Holistic" customModuleProvider="target">
                                                         <rect key="frame" x="42.5" y="4" width="40" height="32"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-S2-zOj" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-S2-zOj" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="0.0" width="20" height="32"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="8RN-dq-LMN"/>

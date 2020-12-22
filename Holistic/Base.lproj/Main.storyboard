@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7MT-dO-R0B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7MT-dO-R0B">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1866,6 +1866,7 @@
                         <outlet property="confirmPasswordTxt" destination="yhU-7S-WCS" id="Nb5-FN-Sbx"/>
                         <outlet property="countryTxt" destination="Bmi-5r-ckf" id="LYT-hP-sUg"/>
                         <outlet property="emailTxt" destination="ByR-RA-bnO" id="Ha2-mZ-ioJ"/>
+                        <outlet property="flagImg" destination="QJ7-2E-ZmA" id="vq7-Hc-DBS"/>
                         <outlet property="floorTxt" destination="xB7-UY-ngk" id="oVT-cY-pwc"/>
                         <outlet property="howFindTxt" destination="7tL-HB-8ZP" id="xuq-aY-y5q"/>
                         <outlet property="nameTxt" destination="S6c-Tv-xDl" id="YeZ-ux-uUm"/>

@@ -19,7 +19,7 @@ class ProductCartTVC: MGSwipeTableCell {
     @IBOutlet weak var refLbl: Label!
     @IBOutlet weak var stockLbl: Label!
     @IBOutlet weak var currentQtyLbl: Label!
-    
+    @IBOutlet weak var qtyBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,24 +36,11 @@ class ProductCartTVC: MGSwipeTableCell {
             }
             priceLbl.text = displayPriceWithCurrency(product.price)
             qtyLbl.text = "x" + String(dict.qty)
+            currentQtyLbl.text = String(dict.qty)
             nameLbl.text = product.name
             refLbl.text = "Ref: " + String(product.id)
             stockLbl.text = ""            
         }
-    }
-    
-    @IBAction func clickToSelectQuantity(_ sender: UIButton) {
-        var arrData = [String]()
-        for i in 1...5 {
-            arrData.append(String(i))
-        }
-        let dropDown = DropDown()
-        dropDown.anchorView = sender
-        dropDown.dataSource = arrData
-        dropDown.selectionAction = { [unowned self] (dropindex: Int, item: String) in
-            self.currentQtyLbl.text = item
-        }
-        dropDown.show()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

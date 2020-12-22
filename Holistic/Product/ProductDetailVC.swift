@@ -47,9 +47,13 @@ class ProductDetailVC: UIViewController {
     func setupDetails() {
         productNameLbl.text = productData.name
         referenceLbl.text = String(productData.id)
-        stockLbl.text = "Only " + String(productData.product_total_qty.qty) + " left in stock"
+        if productData.product_total_qty_in_count > 10 {
+            stockLbl.text = String(productData.product_total_qty_in_count) + " left in stock"
+        }else{
+            stockLbl.text = "Only " + String(productData.product_total_qty_in_count) + " left in stock"
+        }
         priceLbl.text = "Price: " + displayPriceWithCurrency(productData.price)
-        totalQtyLbl.text = String(productData.product_total_qty.total_qty)
+        totalQtyLbl.text = String(productData.product_total_qty_in_count)
         deliveryLbl.text = productData.delivery
         descLbl.text = productData.desc
         clickToBenifitHowUse(benifitBtn)
@@ -70,8 +74,14 @@ class ProductDetailVC: UIViewController {
 
     @IBAction func clickToSelectQuantity(_ sender: UIButton) {
         var arrData = [String]()
-        for i in 1...5 {
-            arrData.append(String(i))
+        var total = 5
+        if productData.product_total_qty_in_count < 5 {
+            total = productData.product_total_qty_in_count
+        }
+        if total > 0 {
+            for i in 1...total {
+                arrData.append(String(i))
+            }
         }
         let dropDown = DropDown()
         dropDown.anchorView = sender
@@ -192,6 +202,7 @@ extension ProductDetailVC {
         var param = [String : Any]()
         param["product_id"] = productData.id
         param["user_id"] = AppModel.shared.currentUser.id
+        param["qty"] = quantityLbl.text
         ProductAPIManager.shared.serviceCallToAddToCart(param) { (dict) in
             
         }

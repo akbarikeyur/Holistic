@@ -68,8 +68,8 @@ public class ProductAPIManager {
         }
     }
     
-    func serviceCallToGetMyCart(_ completion: @escaping (_ dict : [[String : Any]]) -> Void) {
-        APIManager.shared.callPostRequest(API.GET_MY_CART, ["user_id" : AppModel.shared.currentUser.id!], true) { (dict) in
+    func serviceCallToGetMyCart(_ isLoaderDisplay : Bool, _ completion: @escaping (_ dict : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_MY_CART, ["user_id" : AppModel.shared.currentUser.id!], isLoaderDisplay) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
                 if let data = dict["data"] as? [[String : Any]] {

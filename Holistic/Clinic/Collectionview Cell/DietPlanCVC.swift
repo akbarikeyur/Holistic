@@ -19,5 +19,9 @@ class DietPlanCVC: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func setupDetails(_ dict : DietPlanModel) {
+        nameLbl.text = dict.DocumentDisplayName
+    }
 
 }

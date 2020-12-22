@@ -8,6 +8,7 @@
 
 import UIKit
 import MGSwipeTableCell
+import DropDown
 
 class MyCartVC: UIViewController {
 
@@ -29,6 +30,26 @@ class MyCartVC: UIViewController {
         serviceCallToGetMyCart()
     }
     
+    func setupDetails() {
+        var price = 0.0
+        for tempData in arrCartData {
+            for temp in tempData.get_product {
+                price += Double(temp.price!)!
+            }
+        }
+        if arrCartData.count > 1 {
+            totalItemLbl.text = String(arrCartData.count) + " item"
+        }else{
+            totalItemLbl.text = String(arrCartData.count) + " items"
+        }
+        subTotalLbl.text = displayPriceWithCurrency(String(price))
+        shippingLbl.text = displayPriceWithCurrency("10")
+        taxLbl.text = "5% VAT"
+        price += 10
+        price = price + (price * 0.05)
+        totalPriceLbl.text = displayPriceWithCurrency(String(price))
+    }
+    
     //MARK:- Button click event
     @IBAction func clickToBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -40,6 +61,7 @@ class MyCartVC: UIViewController {
     
     @IBAction func clickToProcessToCheckout(_ sender: Any) {
         let vc : ContactInformationVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ContactInformationVC") as! ContactInformationVC
+        vc.arrCartData = arrCartData
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -78,17 +100,35 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource, MGSwipeTableCel
         cell.delegate = self
         let deleteBtn = MGSwipeButton(title: "", icon: UIImage(named: "delete"), backgroundColor: OrangeColor) { (sender: MGSwipeTableCell!) -> Bool in
             print("Convenience callback for swipe buttons!")
+            self.arrCartData.remove(at: indexPath.row)
+            self.updateDetailTableviewHeight()
             return true
         }
         cell.rightButtons = [deleteBtn]
         cell.rightSwipeSettings.transition = .drag
-
+        cell.qtyBtn.tag = indexPath.row
+        cell.qtyBtn.addTarget(self, action: #selector(clickToSelectQuantity(_:)), for: .touchUpInside)
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+    
+    @IBAction func clickToSelectQuantity(_ sender: UIButton) {
+        var arrData = [String]()
+        for i in 1...5 {
+            arrData.append(String(i))
+        }
+        let dropDown = DropDown()
+        dropDown.anchorView = sender
+        dropDown.dataSource = arrData
+        dropDown.selectionAction = { [unowned self] (dropindex: Int, item: String) in
+            self.arrCartData[sender.tag].qty = Int(item)
+            self.tblView.reloadRows(at: [IndexPath(item: sender.tag, section: 0)], with: .automatic)
+        }
+        dropDown.show()
     }
     
     func swipeTableCell(_ cell: MGSwipeTableCell, canSwipe direction: MGSwipeDirection) -> Bool {
@@ -105,27 +145,14 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource, MGSwipeTableCel
 
 extension MyCartVC {
     func serviceCallToGetMyCart() {
-        ProductAPIManager.shared.serviceCallToGetMyCart { (data) in
+        ProductAPIManager.shared.serviceCallToGetMyCart(true) { (data) in
             self.arrCartData = [CartModel]()
             for temp in data {
                 self.arrCartData.append(CartModel.init(temp))
             }
             self.tblView.reloadData()
             self.updateDetailTableviewHeight()
-            
-            
-            var price = 0.0
-            for tempData in self.arrCartData {
-                for temp in tempData.get_product {
-                    price += Double(temp.price!)!
-                }
-            }
-            self.subTotalLbl.text = displayPriceWithCurrency(String(price))
-            self.shippingLbl.text = displayPriceWithCurrency("10")
-            self.taxLbl.text = "5% VAT"
-            price += 10
-            price = price + (price * 0.05)
-            self.totalPriceLbl.text = displayPriceWithCurrency(String(price))
+            self.setupDetails()
         }
     }
 }

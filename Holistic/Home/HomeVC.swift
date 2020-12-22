@@ -42,6 +42,7 @@ class HomeVC: UIViewController {
         print(date)
         
         serviceCallToGenerateToken()
+        AppDelegate().sharedDelegate().serviceCallToGetMyCart()
     }
     
     @objc func setupUserDetail() {
