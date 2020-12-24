@@ -69,12 +69,24 @@ public class ProductAPIManager {
     }
     
     func serviceCallToGetMyCart(_ isLoaderDisplay : Bool, _ completion: @escaping (_ dict : [[String : Any]]) -> Void) {
+        if !isUserLogin() || AppModel.shared.currentUser == nil {
+            return
+        }
         APIManager.shared.callPostRequest(API.GET_MY_CART, ["user_id" : AppModel.shared.currentUser.id!], isLoaderDisplay) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
                 if let data = dict["data"] as? [[String : Any]] {
                     completion(data)
                 }
+            }
+        }
+    }
+    
+    func serviceCallToProductPurchase(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any]) -> Void) {
+        APIManager.shared.callPostRequest(API.PRODUCT_PURCHASE, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion(dict)
             }
         }
     }

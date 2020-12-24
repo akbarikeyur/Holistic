@@ -23,11 +23,29 @@ class OrderSummaryVC: UIViewController {
     @IBOutlet weak var taxLbl: Label!
     @IBOutlet weak var totalPriceLbl: Label!
     
+    var arrCartData = [CartModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        
+        contactLbl.text = AppModel.shared.currentUser.phone_number
+        shipToLbl.text = AppModel.shared.currentUser.room_no + ", " + AppModel.shared.currentUser.floor + ", " + AppModel.shared.currentUser.building_address + ", " + AppModel.shared.currentUser.street_address
+        
+        var price = 0.0
+        for tempData in arrCartData {
+            for temp in tempData.get_product {
+                price += Double(temp.price!)!
+            }
+        }
+        subTotalLbl.text = displayPriceWithCurrency(String(price))
+        shippingPriceLbl.text = displayPriceWithCurrency("10")
+        taxLbl.text = "5% VAT"
+        price += 10
+        price = price + (price * 0.05)
+        totalPriceLbl.text = displayPriceWithCurrency(String(price))
     }
     
     //MARK:- Button click event
@@ -42,7 +60,24 @@ class OrderSummaryVC: UIViewController {
     }
     
     @IBAction func clickToOrderNow(_ sender: Any) {
-        
+        self.view.endEditing(true)
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        var arrData = [[String : Any]]()
+        for temp in arrCartData {
+            var dict = [String : Any]()
+            dict["qty"] = temp.qty
+            dict["product_id"] = temp.product_id
+            if temp.get_product.count > 0 {
+                dict["price"] = temp.get_product[0].price
+            }
+            arrData.append(dict)
+        }
+        param["products"] = arrData
+        printData(param)
+        ProductAPIManager.shared.serviceCallToProductPurchase(param) { (dict) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     /*
@@ -66,7 +101,7 @@ extension OrderSummaryVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return arrCartData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -75,7 +110,7 @@ extension OrderSummaryVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : OrderSummaryTVC = addressTbl.dequeueReusableCell(withIdentifier: "OrderSummaryTVC") as! OrderSummaryTVC
-        
+        cell.setupDetails(arrCartData[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }

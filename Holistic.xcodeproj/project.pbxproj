@@ -80,9 +80,11 @@
 		798249E025485C760035AB9E /* RestaurantListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798249DE25485C760035AB9E /* RestaurantListTVC.xib */; };
 		798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E1254860A80035AB9E /* RestaurantVC.swift */; };
 		798249E425486B8B0035AB9E /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */; };
+		7982E8BB259366D500DFAC42 /* HomeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982E8BA259366D500DFAC42 /* HomeAPIManager.swift */; };
 		7995C34725678D3500DD6FAC /* DietPlanCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995C34525678D3500DD6FAC /* DietPlanCVC.swift */; };
 		7995C34825678D3500DD6FAC /* DietPlanCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7995C34625678D3500DD6FAC /* DietPlanCVC.xib */; };
 		799AB89B2546C57600033175 /* Hotel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799AB89A2546C57600033175 /* Hotel.storyboard */; };
+		79A4BCD12594677B00F04062 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A4BCD02594677B00F04062 /* EditProfileVC.swift */; };
 		79A6A0892559339500E3CCD6 /* ClinicListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6A0882559339500E3CCD6 /* ClinicListVC.swift */; };
 		79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */; };
 		79AD21AC254D6AFD00C97A89 /* ClinicCategoryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */; };
@@ -276,9 +278,11 @@
 		798249DE25485C760035AB9E /* RestaurantListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantListTVC.xib; sourceTree = "<group>"; };
 		798249E1254860A80035AB9E /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
 		798249E325486B8B0035AB9E /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
+		7982E8BA259366D500DFAC42 /* HomeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIManager.swift; sourceTree = "<group>"; };
 		7995C34525678D3500DD6FAC /* DietPlanCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanCVC.swift; sourceTree = "<group>"; };
 		7995C34625678D3500DD6FAC /* DietPlanCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietPlanCVC.xib; sourceTree = "<group>"; };
 		799AB89A2546C57600033175 /* Hotel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotel.storyboard; sourceTree = "<group>"; };
+		79A4BCD02594677B00F04062 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		79A6A0882559339500E3CCD6 /* ClinicListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListVC.swift; sourceTree = "<group>"; };
 		79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCategoryCVC.swift; sourceTree = "<group>"; };
 		79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicCategoryCVC.xib; sourceTree = "<group>"; };
@@ -420,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				188D4E56255071A000DE6715 /* ProfileVC.swift */,
+				79A4BCD02594677B00F04062 /* EditProfileVC.swift */,
 				794EDD1E25669B6600F867EB /* ReferFriendVC.swift */,
 				794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */,
 				794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */,
@@ -718,6 +723,7 @@
 				79D6D0092543ECE700945D7C /* missed_task.json */,
 				18B435AD25435C8200757513 /* wakeup.json */,
 				79BC837B2543141A004A0B49 /* HomeModel.swift */,
+				7982E8BA259366D500DFAC42 /* HomeAPIManager.swift */,
 			);
 			path = "API Model Json";
 			sourceTree = "<group>";
@@ -1156,11 +1162,13 @@
 				18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */,
 				79EFD6402542D040006D06FB /* SwipeButtonView.swift in Sources */,
 				79EC8701255125AE000C8F5E /* SignupVC.swift in Sources */,
+				79A4BCD12594677B00F04062 /* EditProfileVC.swift in Sources */,
 				79EFD60F2542C44A006D06FB /* UploadImageVC.swift in Sources */,
 				79D6D00C2543F2B300945D7C /* CompletedTaskTabVC.swift in Sources */,
 				79333D27255BE7070092F567 /* ClinicPackageDetailVC.swift in Sources */,
 				79EFD6282542C44A006D06FB /* PlaceholderTextView.swift in Sources */,
 				798249E2254860A80035AB9E /* RestaurantVC.swift in Sources */,
+				7982E8BB259366D500DFAC42 /* HomeAPIManager.swift in Sources */,
 				79A6A0892559339500E3CCD6 /* ClinicListVC.swift in Sources */,
 				79EFD6272542C44A006D06FB /* CollectionView.swift in Sources */,
 				79EFD6222542C44A006D06FB /* Fonts.swift in Sources */,

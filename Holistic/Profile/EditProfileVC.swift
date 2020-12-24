@@ -1,17 +1,17 @@
 //
-//  SignupVC.swift
+//  EditProfileVC.swift
 //  Holistic
 //
-//  Created by Keyur Akbari on 03/11/20.
+//  Created by Keyur Akbari on 24/12/20.
 //  Copyright © 2020 Keyur Akbari. All rights reserved.
 //
 
 import UIKit
 
-class SignupVC: UIViewController {
+class EditProfileVC: UIViewController {
 
+    @IBOutlet weak var profileImg: ImageView!
     @IBOutlet weak var nameTxt: TextField!
-    @IBOutlet weak var emailTxt: TextField!
     @IBOutlet weak var flagImg: UIImageView!
     @IBOutlet weak var phonecodeTxt: Label!
     @IBOutlet weak var phoneTxt: TextField!
@@ -22,11 +22,7 @@ class SignupVC: UIViewController {
     @IBOutlet weak var countryTxt: TextField!
     @IBOutlet weak var stateTxt: TextField!
     @IBOutlet weak var cityTxt: TextField!
-    @IBOutlet weak var howFindTxt: TextField!
-    @IBOutlet weak var passwordTxt: TextField!
-    @IBOutlet weak var confirmPasswordTxt: TextField!
     
-    @IBOutlet weak var signinBtn: Button!
     @IBOutlet var searchView: UIView!
     @IBOutlet weak var searchTxt: TextField!
     @IBOutlet weak var searchTbl: UITableView!
@@ -47,19 +43,49 @@ class SignupVC: UIViewController {
 
         // Do any additional setup after loading the view.
         searchTxt.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
-        configUI()
-    }
-    
-    func configUI() {
-        signinBtn.setAttributedTitle(attributedStringWithColor("Already member? Sign in", ["Sign in"], color: OrangeColor), for: .normal)
+        
         registerTableViewMethod()
         
         if getCountryData().count == 0 {
             AppDelegate().sharedDelegate().serviceCallToGetCountry()
+        }else{
+            arrCountry = getCountryData()
         }
+        setupDetails()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().hideTabBar()
+    }
+    
+    func setupDetails() {
+        if AppModel.shared.currentUser == nil {
+            return
+        }
+        nameTxt.text = AppModel.shared.currentUser.name
+        let index = arrCountry.firstIndex { (temp) -> Bool in
+            temp.id == AppModel.shared.currentUser.country_id
+        }
+        if index != nil {
+            selectedCountry = arrCountry[index!]
+            countryTxt.text = selectedCountry.name
+            flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
+            phonecodeTxt.text = "+" + selectedCountry.phonecode
+            serviceCallToGetState(1)
+        }
+        phoneTxt.text = AppModel.shared.currentUser.phone_number
+        addressTxt.text = AppModel.shared.currentUser.street_address
+        buildingNameTxt.text = AppModel.shared.currentUser.building_address
+        floorTxt.text = AppModel.shared.currentUser.floor
+        roomTxt.text = AppModel.shared.currentUser.room_no
+        
     }
     
     //MARK:- Button click event
+    @IBAction func clickToSelectImage(_ sender: Any) {
+        
+    }
+    
     @IBAction func clickToSelectPhoneCode(_ sender: UIButton) {
         searchTxt.text = ""
         arrCountry = getCountryData()
@@ -97,96 +123,14 @@ class SignupVC: UIViewController {
         displaySubViewtoParentView(self.view, subview: searchView)
         searchTbl.reloadData()
     }
-    
-    @IBAction func clickToShowPassword(_ sender: UIButton) {
-        if sender.tag == 1 {
-            sender.isSelected = !sender.isSelected
-            passwordTxt.isSecureTextEntry = !sender.isSelected
-        }else{
-            sender.isSelected = !sender.isSelected
-            confirmPasswordTxt.isSecureTextEntry = !sender.isSelected
-        }
-    }
-    
+
     @IBAction func clickToCloseSearchView(_ sender: Any) {
         searchView.removeFromSuperview()
         searchTxt.text = ""
     }
     
-    @IBAction func clickToLogin(_ sender: Any) {
-        self.view.endEditing(true)
-        self.navigationController?.popViewController(animated: true)
-    }
-
-    @IBAction func clickToSignup(_ sender: Any) {
-        self.view.endEditing(true)
-        if nameTxt.text?.trimmed == "" {
-            displayToast("enter_name")
-        }
-        else if emailTxt.text?.trimmed == "" {
-            displayToast("enter_email")
-        }
-        else if !emailTxt.text!.isValidEmail {
-            displayToast("invalid_email")
-        }
-        else if phonecodeTxt.text?.trimmed == "" {
-            displayToast("enter_phonecode")
-        }
-        else if phoneTxt.text?.trimmed == "" {
-            displayToast("enter_phone")
-        }
-        else if addressTxt.text?.trimmed == "" {
-            displayToast("enter_address")
-        }
-        else if buildingNameTxt.text?.trimmed == "" {
-            displayToast("enter_building")
-        }
-        else if floorTxt.text?.trimmed == "" {
-            displayToast("enter_floor")
-        }
-        else if roomTxt.text?.trimmed == "" {
-            displayToast("enter_room_number")
-        }
-        else if countryTxt.text?.trimmed == "" {
-            displayToast("enter_country")
-        }
-        else if stateTxt.text?.trimmed == "" {
-            displayToast("enter_state")
-        }
-        else if cityTxt.text?.trimmed == "" {
-            displayToast("enter_city")
-        }
-        else if passwordTxt.text?.trimmed == "" {
-            displayToast("enter_password")
-        }
-        else if confirmPasswordTxt.text?.trimmed == "" {
-            displayToast("enter_confirm_password")
-        }
-        else if passwordTxt.text != confirmPasswordTxt.text {
-            displayToast("password_confirm_validation")
-        }
-        else {
-            var param = [String : Any]()
-            param["name"] = nameTxt.text
-            param["email"] = emailTxt.text
-            param["password"] = passwordTxt.text
-            param["country_id"] = selectedCountry.id
-            param["city_id"] = selectedCity.id
-            param["room_no"] = roomTxt.text
-            param["floor"] = floorTxt.text
-            param["building_address"] = buildingNameTxt.text
-            param["street_address"] = addressTxt.text
-            param["phone_number"] = phoneTxt.text
-            printData(param)
-            LoginAPIManager.shared.serviceCallToSignup(param) { (dict) in
-                var newParam = [String : Any]()
-                newParam["email"] = self.emailTxt.text
-                newParam["password"] = self.passwordTxt.text
-                LoginAPIManager.shared.serviceCallToEmailLogin(param) {
-                    AppDelegate().sharedDelegate().navigateToDashBoard()
-                }
-            }
-        }
+    @IBAction func clickToSave(_ sender: Any) {
+        
     }
     
     @objc func textFieldDidChange(_ textField: UITextField)
@@ -230,7 +174,7 @@ class SignupVC: UIViewController {
 }
 
 //MARK:- Tableview Method
-extension SignupVC : UITableViewDelegate, UITableViewDataSource {
+extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         searchTbl.register(UINib.init(nibName: "SingleLableTVC", bundle: nil), forCellReuseIdentifier: "SingleLableTVC")
@@ -277,12 +221,12 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
             countryTxt.text = selectedCountry.name
             flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
-            serviceCallToGetState()
+            serviceCallToGetState(2)
         }
         else if selectedType == 1 {
             selectedState = (searchTxt.text?.trimmed == "" ? arrState : arrSearchState)[indexPath.row]
             stateTxt.text = selectedState.name
-            serviceCallToGetCity()
+            serviceCallToGetCity(2)
         }
         else if selectedType == 2 {
             selectedCity = (searchTxt.text?.trimmed == "" ? arrCity : arrSearchCity)[indexPath.row]
@@ -293,8 +237,8 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension SignupVC {
-    func serviceCallToGetState() {
+extension EditProfileVC {
+    func serviceCallToGetState(_ type : Int) {
         LoginAPIManager.shared.serviceCallToGetState(["country_id" : selectedCountry.id!]) { (data) in
             self.arrState = [StateModel]()
             for temp in data {
@@ -303,7 +247,7 @@ extension SignupVC {
         }
     }
     
-    func serviceCallToGetCity() {
+    func serviceCallToGetCity(_ type : Int) {
         LoginAPIManager.shared.serviceCallToGetCity(["state_id" : selectedState.id!]) { (data) in
             self.arrCity = [CityModel]()
             for temp in data {

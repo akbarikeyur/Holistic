@@ -26,7 +26,7 @@ class ProductListVC: UIViewController {
         registerTableViewMethod()
         registerCollectionView()
         
-        if AppModel.shared.MY_CART.count > 0 {
+        if AppModel.shared.MY_CART != nil && AppModel.shared.MY_CART.count > 0 {
             cartLbl.text = String(AppModel.shared.MY_CART.count)
             cartLbl.isHidden = false
         }else{

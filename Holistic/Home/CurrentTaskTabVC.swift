@@ -27,6 +27,7 @@ class CurrentTaskTabVC: UIViewController {
     
     func setupDetails() {
         updateHeight()
+        serviceCallToGetTask()
     }
 
     //MARK:- Button click event
@@ -128,5 +129,13 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
         wakeTblView.reloadData()
         wakeTblView.layoutIfNeeded()
         constraintHeightWakeTbl.constant = wakeTblView.contentSize.height
+    }
+}
+
+extension CurrentTaskTabVC {
+    func serviceCallToGetTask() {
+        HomeAPIManager.shared.serviceCallToGetTask { (data, last_page) in
+            
+        }
     }
 }

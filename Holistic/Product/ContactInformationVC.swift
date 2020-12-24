@@ -10,6 +10,7 @@ import UIKit
 
 class ContactInformationVC: UIViewController {
 
+    @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var loginLbl: Label!
     @IBOutlet weak var emailPhoneTxt: TextField!
     @IBOutlet weak var updateNewsBtn: Button!
@@ -30,6 +31,25 @@ class ContactInformationVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loginView.isHidden = isUserLogin()
+        setupDetails()
+    }
+    
+    func setupDetails() {
+        fnameTxt.text = AppModel.shared.currentUser.name
+        let arrCountry = getCountryData()
+        let index = arrCountry.firstIndex { (temp) -> Bool in
+            temp.id == AppModel.shared.currentUser.country_id
+        }
+        if index != nil {
+            flagImg.image = UIImage(named: arrCountry[index!].sortname)
+        }
+        phoneTxt.text = AppModel.shared.currentUser.phone_number
+        emailTxt.text = AppModel.shared.currentUser.email
+        addressTxt.text = AppModel.shared.currentUser.street_address
+        apartmentTxt.text = AppModel.shared.currentUser.building_address
+        
+        
     }
     
     //MARK:- Button click event
@@ -63,6 +83,7 @@ class ContactInformationVC: UIViewController {
     
     @IBAction func clickToContinue(_ sender: Any) {
         let vc : OrderSummaryVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "OrderSummaryVC") as! OrderSummaryVC
+        vc.arrCartData = arrCartData
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
