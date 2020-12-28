@@ -21,12 +21,13 @@ struct CLINIC_API {
     static let GET_USER_ID_BY_TOKEN        =       BASE_URL + "login/getUserIDByToken?api_key=" + getClinicToken()
     static let GET_PATIENT_DETAIL          =       BASE_URL + "patients/getPatientByID?patientID=" + getClinicUserId() + "&api_key=" + getClinicToken()
     
-    static let GET_APPOINTMENT_LIST        =       BASE_URL + "appointments/getAppointmentsByPatient?patientID=" + getClinicUserId() + "&appointmentType=2&pageNo=1&api_key=" + getClinicToken()
+    static let GET_APPOINTMENT_LIST        =       BASE_URL + "appointments/getAppointmentsByPatient?patientID=" + getClinicUserId() + "&appointmentType=2&pageSize=10&api_key=" + getClinicToken()
+    
     static let GET_DIET_PLAN               =       BASE_URL + "documents/getDocumentsByPatient?patientID=" + getClinicUserId() + "&pageNo=1&api_key=" + getClinicToken()
     static let GET_PRESCRIPTIONS           =       BASE_URL + "patientRx/getRxByPatient?patientID=" + getClinicUserId() + "&rxStatus=0&pageNo=1&api_key=" + getClinicToken()
     static let GET_PACKAGE_LIST            =       BASE_URL + "patientPackages/getPackagesByPatient?patientID=" + getClinicUserId() + "&packageStatus=0&pageNo=1&api_key=" + getClinicToken()
     
-    static let GET_PATIENT_FAMILY          =       BASE_URL + "patients/getPatientFamily?patientID=" + getClinicUserId() + "&pageNo=1&api_key=" + getClinicToken()
+    static let GET_PATIENT_FAMILY          =       BASE_URL + "patients/getPatientFamily?patientID=" + getClinicUserId() + "&pageSize=10&api_key=" + getClinicToken()
     
     
     
@@ -67,8 +68,9 @@ public class ClinicAPIManager {
         }
     }
     
-    func serviceCallToGetAppointmentList(_ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_APPOINTMENT_LIST, false) { (dict) in
+    func serviceCallToGetAppointmentList(_ page : Int, _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        let strUrl = CLINIC_API.GET_APPOINTMENT_LIST + "&pageNo=" + String(page)
+        ClinicAPIManager.shared.callGetRequest(strUrl, false) { (dict) in
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{
@@ -77,8 +79,9 @@ public class ClinicAPIManager {
         }
     }
     
-    func serviceCallToGetFamilyData(_ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PATIENT_FAMILY, false) { (dict) in
+    func serviceCallToGetFamilyData(_ page : Int, _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        let strUrl = CLINIC_API.GET_PATIENT_FAMILY + "&pageNo=" + String(page)
+        ClinicAPIManager.shared.callGetRequest(strUrl, false) { (dict) in
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{

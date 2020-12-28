@@ -16,6 +16,7 @@ class ClinicListVC: UIViewController {
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
     var arrAppointment = [AppointmentModel]()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,12 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if page != 0 && (arrAppointment.count-1 == indexPath.row) {
+            serviceCallToGetAppointmentList()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
@@ -74,10 +81,15 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
 
 extension ClinicListVC {
     func serviceCallToGetAppointmentList() {
-        ClinicAPIManager.shared.serviceCallToGetAppointmentList { (data) in
+        ClinicAPIManager.shared.serviceCallToGetAppointmentList(page) { (data) in
             self.arrAppointment = [AppointmentModel]()
             for temp in data {
                 self.arrAppointment.append(AppointmentModel.init(temp))
+            }
+            if data.count < 10 {
+                self.page = 0
+            }else{
+                self.page += 1
             }
             self.tblView.reloadData()
         }

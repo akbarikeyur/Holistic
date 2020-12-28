@@ -13,6 +13,7 @@ class FamilyMemberVC: UIViewController {
     @IBOutlet weak var clinicCV: UICollectionView!
     
     var arrMember = [ClinicUserModel]()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,14 +58,25 @@ extension FamilyMemberVC : UICollectionViewDelegate, UICollectionViewDataSource,
         cell.setupDetails(arrMember[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if page != 0 && ((arrMember.count-1) == indexPath.row) {
+            serviceCallToGetFamilyData()
+        }
+    }
 }
 
 extension FamilyMemberVC {
     func serviceCallToGetFamilyData() {
-        ClinicAPIManager.shared.serviceCallToGetFamilyData { (data) in
+        ClinicAPIManager.shared.serviceCallToGetFamilyData(page) { (data) in
             self.arrMember = [ClinicUserModel]()
             for temp in data {
                 self.arrMember.append(ClinicUserModel.init(temp))
+            }
+            if data.count < 10 {
+                self.page = 0
+            }else{
+                self.page += 1
             }
             self.clinicCV.reloadData()
         }
