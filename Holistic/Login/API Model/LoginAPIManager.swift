@@ -22,7 +22,7 @@ public class LoginAPIManager {
     }
     
     func serviceCallToGetState(_ param : [String : Any], _ completion: @escaping (_ dict : [[String : Any]]) -> Void) {
-        APIManager.shared.callPostRequest(API.GET_STATE, param, false) { (dict) in
+        APIManager.shared.callPostRequest(API.GET_STATE, param, true) { (dict) in
             if let data = dict["data"] as? [[String : Any]] {
                 completion(data)
                 return
@@ -31,7 +31,7 @@ public class LoginAPIManager {
     }
     
     func serviceCallToGetCity(_ param : [String : Any], _ completion: @escaping (_ dict : [[String : Any]]) -> Void) {
-        APIManager.shared.callPostRequest(API.GET_CITY, param, false) { (dict) in
+        APIManager.shared.callPostRequest(API.GET_CITY, param, true) { (dict) in
             if let data = dict["data"] as? [[String : Any]] {
                 completion(data)
                 return

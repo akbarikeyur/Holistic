@@ -129,3 +129,11 @@ extension MissedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
         constraintHeightWakeTbl.constant = wakeTblView.contentSize.height
     }
 }
+
+extension MissedTaskTabVC {
+    func serviceCallToGetMissedTask() {
+        HomeAPIManager.shared.serviceCallToGetMissedTask([String : Any]()) { (data, last_page) in
+            
+        }
+    }
+}

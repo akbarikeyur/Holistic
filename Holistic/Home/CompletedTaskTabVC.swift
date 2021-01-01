@@ -130,3 +130,11 @@ extension CompletedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
         constraintHeightWakeTbl.constant = wakeTblView.contentSize.height
     }
 }
+
+extension CompletedTaskTabVC {
+    func serviceCallToCompleteTask() {
+        HomeAPIManager.shared.serviceCallToCompleteTask([String : Any]()) { (dict) in
+            
+        }
+    }
+}

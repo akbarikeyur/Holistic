@@ -130,9 +130,57 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func clickToSave(_ sender: Any) {
-        
+        self.view.endEditing(true)
+        if nameTxt.text?.trimmed == "" {
+            displayToast("Please enter name")
+        }
+        else if phonecodeTxt.text?.trimmed == "" {
+            displayToast("Please select phone code")
+        }
+        else if phoneTxt.text?.trimmed == "" {
+            displayToast("Please enter phone number")
+        }
+        else if addressTxt.text?.trimmed == "" {
+            displayToast("Please enter address")
+        }
+        else if buildingNameTxt.text?.trimmed == "" {
+            displayToast("Please enter building name")
+        }
+        else if floorTxt.text?.trimmed == "" {
+            displayToast("Please enter floor number")
+        }
+        else if roomTxt.text?.trimmed == "" {
+            displayToast("Please enter room number")
+        }
+        else if countryTxt.text?.trimmed == "" {
+            displayToast("Please select country")
+        }
+        else if stateTxt.text?.trimmed == "" {
+            displayToast("Please select state")
+        }
+        else if cityTxt.text?.trimmed == "" {
+            displayToast("Please select city")
+        }
+        else {
+            var param = [String : Any]()
+            param["name"] = nameTxt.text
+            param["email"] = AppModel.shared.currentUser.email
+            param["city_id"] = selectedState.id
+            param["country_id"] = selectedCountry.id
+            param["room_no"] = roomTxt.text
+            param["floor"] = floorTxt.text
+            param["building_address"] = buildingNameTxt.text
+            param["street_address"] = addressTxt.text
+            param["phone_number"] = phoneTxt.text
+            param["user_id"] = AppModel.shared.currentUser.id
+            printData(param)
+            ProfileAPIManager.shared.serviceCallToUpdateProfile(param) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
+    //MARK:- Textfield method
     @objc func textFieldDidChange(_ textField: UITextField)
     {
         if textField == searchTxt {

@@ -17,11 +17,15 @@ class MyPurchaseVC: UIViewController {
     @IBOutlet weak var toTxt: TextField!
     @IBOutlet weak var totalOrderLbl: Label!
     
+    var page = 1
+    var arrPurchase = [CartModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerCollectionView()
+        serviceCallToGetPurchaseProductHistory()
     }
     
     //MARK:- Button click event
@@ -72,5 +76,24 @@ extension MyPurchaseVC : UICollectionViewDelegate, UICollectionViewDataSource, U
         let cell : PurchaseProductCVC = purchaseCV.dequeueReusableCell(withReuseIdentifier: "PurchaseProductCVC", for: indexPath) as! PurchaseProductCVC
         cell.setupDetail()
         return cell
+    }
+}
+
+extension MyPurchaseVC {
+    func serviceCallToGetPurchaseProductHistory() {
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        ProductAPIManager.shared.serviceCallToGetPurchaseProductHistory(page, param) { (data, is_last) in
+            self.arrPurchase = [CartModel]()
+            for temp in data {
+                self.arrPurchase.append(CartModel.init(temp))
+            }
+            if data.count < 10 {
+                self.page = 0
+            }else{
+                self.page += 1
+            }
+            self.purchaseCV.reloadData()
+        }
     }
 }

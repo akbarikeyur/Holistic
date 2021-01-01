@@ -16,8 +16,40 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "serviceCallToGetFamilyData(_:)"
+            landmarkName = "serviceCallToGetFamilyData(_:_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2F40B997-76D4-4FD6-B512-1E21BCDA8AC2 - a62d28f6cdfdab30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Holistic.ClinicAPIManager.serviceCallToGetFamilyData(Swift.Int, (Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Holistic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keyurakbari/Upwork/Waqas/Holistic%20Healing/Progress/Holistic/Holistic/Clinic/API%20Model/ClinicAPIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "2F40B997-76D4-4FD6-B512-1E21BCDA8AC2 - eb7e571c4fdef760"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; () in Holistic.ClinicAPIManager.serviceCallToGetFamilyData(Swift.Int, (Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Holistic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keyurakbari/Upwork/Waqas/Holistic%20Healing/Progress/Holistic/Holistic/Clinic/API%20Model/ClinicAPIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "125">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,6 +66,38 @@
             endingLineNumber = "71"
             landmarkName = "serviceCallToGetFamilyData()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "837AC09E-2F39-49DC-900A-6795651DFF3E - 7521f9f332415f84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Holistic.FamilyMemberVC.serviceCallToGetFamilyData() -&gt; ()"
+                  moduleName = "Holistic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keyurakbari/Upwork/Waqas/Holistic%20Healing/Progress/Holistic/Holistic/Clinic/FamilyMemberVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "837AC09E-2F39-49DC-900A-6795651DFF3E - 636578e97073aec7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; () in Holistic.FamilyMemberVC.serviceCallToGetFamilyData() -&gt; ()"
+                  moduleName = "Holistic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keyurakbari/Upwork/Waqas/Holistic%20Healing/Progress/Holistic/Holistic/Clinic/FamilyMemberVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "195">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

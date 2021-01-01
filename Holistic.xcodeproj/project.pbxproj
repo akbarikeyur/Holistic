@@ -116,6 +116,7 @@
 		79C624D32559672000F9C385 /* FamilyMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C624D22559672000F9C385 /* FamilyMemberVC.swift */; };
 		79C624D62559679F00F9C385 /* FamilyMemberCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C624D42559679F00F9C385 /* FamilyMemberCVC.swift */; };
 		79C624D72559679F00F9C385 /* FamilyMemberCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C624D52559679F00F9C385 /* FamilyMemberCVC.xib */; };
+		79C78686259DCF830099F838 /* ProfileAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C78685259DCF830099F838 /* ProfileAPIManager.swift */; };
 		79C8F2AE254A908700481BB8 /* ContactInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2AD254A908700481BB8 /* ContactInformationVC.swift */; };
 		79C8F2B0254A9B7400481BB8 /* OrderSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2AF254A9B7400481BB8 /* OrderSummaryVC.swift */; };
 		79C8F2B3254AA1FB00481BB8 /* OrderSummaryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */; };
@@ -314,6 +315,7 @@
 		79C624D22559672000F9C385 /* FamilyMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberVC.swift; sourceTree = "<group>"; };
 		79C624D42559679F00F9C385 /* FamilyMemberCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberCVC.swift; sourceTree = "<group>"; };
 		79C624D52559679F00F9C385 /* FamilyMemberCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberCVC.xib; sourceTree = "<group>"; };
+		79C78685259DCF830099F838 /* ProfileAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPIManager.swift; sourceTree = "<group>"; };
 		79C8F2AD254A908700481BB8 /* ContactInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationVC.swift; sourceTree = "<group>"; };
 		79C8F2AF254A9B7400481BB8 /* OrderSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryVC.swift; sourceTree = "<group>"; };
 		79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryTVC.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				794EDD1E25669B6600F867EB /* ReferFriendVC.swift */,
 				794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */,
 				794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */,
+				79C78684259DCF700099F838 /* API Model */,
 				794EDD2225669EEC00F867EB /* Tableview Cell */,
 			);
 			path = Profile;
@@ -726,6 +729,14 @@
 				7982E8BA259366D500DFAC42 /* HomeAPIManager.swift */,
 			);
 			path = "API Model Json";
+			sourceTree = "<group>";
+		};
+		79C78684259DCF700099F838 /* API Model */ = {
+			isa = PBXGroup;
+			children = (
+				79C78685259DCF830099F838 /* ProfileAPIManager.swift */,
+			);
+			path = "API Model";
 			sourceTree = "<group>";
 		};
 		79D6D013254408E900945D7C /* Components */ = {
@@ -1222,6 +1233,7 @@
 				79BC83642542EF85004A0B49 /* CustomTabBarView.swift in Sources */,
 				7905520B256E3DDC00A4CA08 /* LoginAPIManager.swift in Sources */,
 				79BC837025430EBC004A0B49 /* FlowerLifeTabVC.swift in Sources */,
+				79C78686259DCF830099F838 /* ProfileAPIManager.swift in Sources */,
 				79F218402547FB6800D981C1 /* HotelsVC.swift in Sources */,
 				79F218442548123F00D981C1 /* HotelBenefitsCVC.swift in Sources */,
 				79678B5425877FCF00808F08 /* ProductModel.swift in Sources */,
