@@ -134,7 +134,7 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
 
 extension CurrentTaskTabVC {
     func serviceCallToGetTask() {
-        HomeAPIManager.shared.serviceCallToGetTask { (data, last_page) in
+        HomeAPIManager.shared.serviceCallToGetTask { (data) in
             
         }
     }

@@ -9,19 +9,22 @@
 import Foundation
 
 struct TaskModel {
-    var title, time, action, action_img, image, color : String!
+    var country_id, id, life_style_id, user_id : Int!
+    var status, task_sent_on : String!
+    var get_life_style : LifeStyleModel!
     
     init(_ dict : [String : Any]) {
-        title = dict["title"] as? String ?? ""
-        time = dict["time"] as? String ?? ""
-        action = dict["action"] as? String ?? ""
-        action_img = dict["action_img"] as? String ?? ""
-        image = dict["image"] as? String ?? ""
-        color = dict["color"] as? String ?? ""
+        country_id = AppModel.shared.getIntValue(dict, "country_id")
+        id = AppModel.shared.getIntValue(dict, "id")
+        life_style_id = AppModel.shared.getIntValue(dict, "life_style_id")
+        user_id = AppModel.shared.getIntValue(dict, "user_id")
+        status = dict["status"] as? String ?? ""
+        task_sent_on = dict["task_sent_on"] as? String ?? ""
+        get_life_style = LifeStyleModel.init(dict["get_life_style"] as? [String : Any] ?? [String : Any]())
     }
     
     func dictionary() -> [String : Any] {
-        return ["title" : title!, "time" : time!, "action" : action!, "action_img" : action_img!, "image" : image!, "color" : color!]
+        return ["country_id" : country_id!, "id" : id!, "life_style_id" : life_style_id!, "user_id" : user_id!, "status" : status!, "task_sent_on" : task_sent_on!, "get_life_style" : get_life_style.dictionary()]
     }
 }
 
@@ -38,5 +41,22 @@ struct WakeupModel {
     
     func dictionary() -> [String : Any] {
         return ["imgBtn" : imgBtn!, "title" : title!, "desc" : desc!, "isExpand" : isExpand!]
+    }
+}
+
+struct LifeStyleModel {
+    var id : Int!
+    var color_select, title, task_start_date_time, task_end_date_time :String!
+    
+    init(_ dict : [String : Any]) {
+        id = AppModel.shared.getIntValue(dict, "id")
+        title = dict["title"] as? String ?? ""
+        color_select = dict["color_select"] as? String ?? ""
+        task_start_date_time = dict["task_start_date_time"] as? String ?? ""
+        task_end_date_time = dict["task_end_date_time"] as? String ?? ""
+    }
+    
+    func dictionary() -> [String : Any] {
+        return ["id" : id!, "title" : title!, "color_select" : color_select!, "task_start_date_time" : task_start_date_time!, "task_end_date_time" : task_end_date_time!]
     }
 }
