@@ -105,10 +105,10 @@ class ProductDetailVC: UIViewController {
         sender.isSelected = true
         if sender == benifitBtn {
             benifitUseTitleLbl.text = "Product Benifits"
-            benifitUseValueLbl.attributedText = productData.benifits.html2AttributedString
+            benifitUseValueLbl.text = productData.benifits.html2String
         }else{
             benifitUseTitleLbl.text = "How to Use"
-            benifitUseValueLbl.attributedText = productData.how_to_use.html2AttributedString
+            benifitUseValueLbl.text = productData.how_to_use.html2String
         }
     }
     

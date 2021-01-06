@@ -19,10 +19,11 @@ class ExpandCollapseTVC: UITableViewCell {
         // Initialization code
     }
 
-    func setupDetails(_ dict : WakeupModel) {
-        imgBtn.setImage(UIImage(named: dict.imgBtn), for: .normal)
+    func setupDetails(_ dict : TaskDescModel) {
+        setButtonImage(imgBtn, dict.get_media.url, IMAGE.PLACEHOLDER)
         if dict.isExpand {
-            titleLbl.text = dict.desc
+            let strValue = "<p>" + dict.title + "</p><br>" + dict.desc
+            titleLbl.text = strValue.html2String
             expandBtn.isSelected = true
             imgBtn.alpha = 1.0
         }
@@ -38,5 +39,4 @@ class ExpandCollapseTVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

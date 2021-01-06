@@ -14,19 +14,29 @@ class CompletedTaskTabVC: UIViewController {
     @IBOutlet var wakeUpView: UIView!
     @IBOutlet weak var wakeTblView: UITableView!
     @IBOutlet weak var constraintHeightWakeTbl: NSLayoutConstraint!
+    @IBOutlet weak var noDataFoundLbl: Label!
     
     var arrTaskData = [TaskModel]()
-    var arrWakeupData = [WakeupModel]()
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshCompletedTask), name: NSNotification.Name.init(NOTIFICATION.REFRESH_COMPLETE_TASK), object: nil)
         registerTableViewMethod()
     }
     
     func setupDetails() {
-        updateHeight()
+        if arrTaskData.count == 0 {
+            serviceCallToGetCompletedTask()
+        }else{
+            updateHeight()
+        }
+    }
+    
+    @objc func refreshCompletedTask() {
+        serviceCallToGetCompletedTask()
     }
     
     //MARK:- Button click event
@@ -59,24 +69,12 @@ extension CompletedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         tblView.register(UINib.init(nibName: "CurrentTaskTVC", bundle: nil), forCellReuseIdentifier: "CurrentTaskTVC")
-        
-        arrTaskData = [TaskModel]()
-        for temp in getJsonFromFile("completed_task") {
-            arrTaskData.append(TaskModel.init(temp))
-        }
-        tblView.reloadData()
-        
         wakeTblView.register(UINib.init(nibName: "ExpandCollapseTVC", bundle: nil), forCellReuseIdentifier: "ExpandCollapseTVC")
-        arrWakeupData = [WakeupModel]()
-        for temp in getJsonFromFile("wakeup") {
-            arrWakeupData.append(WakeupModel.init(temp))
-        }
-        wakeTblView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == wakeTblView {
-            return arrWakeupData.count
+            return arrTaskData[selectedIndex].get_description.count
         }
         return arrTaskData.count
     }
@@ -91,7 +89,7 @@ extension CompletedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == wakeTblView {
             let cell : ExpandCollapseTVC = wakeTblView.dequeueReusableCell(withIdentifier: "ExpandCollapseTVC") as! ExpandCollapseTVC
-            cell.setupDetails(arrWakeupData[indexPath.row])
+            cell.setupDetails(arrTaskData[selectedIndex].get_description[indexPath.row])
             cell.selectionStyle = .none
             return cell
         }
@@ -105,13 +103,13 @@ extension CompletedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tblView {
-            if indexPath.row == 0 {
-                displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: wakeUpView)
-                updateWakeupTableviewHeight()
-            }
+//            if indexPath.row == 0 {
+//                displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: wakeUpView)
+//                updateWakeupTableviewHeight()
+//            }
         }
         else if tableView == wakeTblView {
-            arrWakeupData[indexPath.row].isExpand = !arrWakeupData[indexPath.row].isExpand
+            arrTaskData[selectedIndex].get_description[indexPath.row].isExpand = !arrTaskData[selectedIndex].get_description[indexPath.row].isExpand
             wakeTblView.reloadData()
             updateWakeupTableviewHeight()
         }
@@ -121,6 +119,7 @@ extension CompletedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
         tblView.reloadData()
         let height = arrTaskData.count * 120
         NotificationCenter.default.post(name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: height)
+        noDataFoundLbl.isHidden = (arrTaskData.count > 0)
     }
     
     func updateWakeupTableviewHeight() {
@@ -132,9 +131,16 @@ extension CompletedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
 }
 
 extension CompletedTaskTabVC {
-    func serviceCallToCompleteTask() {
-        HomeAPIManager.shared.serviceCallToCompleteTask([String : Any]()) { (dict) in
-            
+    func serviceCallToGetCompletedTask() {
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        param["status"] = "completed"
+        HomeAPIManager.shared.serviceCallToGetMissedTask(param) { (data) in
+            self.arrTaskData = [TaskModel]()
+            for temp in data {
+                self.arrTaskData.append(TaskModel.init(temp))
+            }
+            self.updateHeight()
         }
     }
 }

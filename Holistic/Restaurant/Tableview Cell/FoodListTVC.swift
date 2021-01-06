@@ -22,7 +22,7 @@ class FoodListTVC: UITableViewCell {
 
     func setupDetails(_ dict : RestaurantMenuModel) {
         nameLbl.text = dict.title
-        descLbl.attributedText = dict.desc.html2AttributedString
+        descLbl.text = dict.desc.html2String
         priceLbl.text = displayPriceWithCurrency(dict.price)
     }
     

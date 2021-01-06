@@ -97,4 +97,13 @@ class AppModel: NSObject {
         }
         return false
     }
+    
+    func getTaskDescArrOfDictionary(arr:[TaskDescModel]) -> [[String:Any]] {
+        let len:Int = arr.count
+        var retArr:[[String:Any]] =  [[String:Any]] ()
+        for i in 0..<len{
+            retArr.append(arr[i].dictionary())
+        }
+        return retArr
+    }
 }

@@ -24,16 +24,25 @@ class CurrentTaskTVC: UITableViewCell {
     }
 
     func setupDetails(_ dict : TaskModel) {
-        outerView.backgroundColor = colorFromHex(hex: dict.color)
-        titleLbl.text = dict.title
-        timeLbl.text = dict.time
-        actionLbl.text = dict.action
-        imgView.image = UIImage(named: dict.image)
-        if dict.action_img == "" {
-            actionImgView.isHidden = true
+        
+        outerView.backgroundColor = colorFromHex(hex: dict.get_life_style.color_select)
+        titleLbl.text = dict.get_life_style.title
+        if dict.get_life_style.task_start_date_time != "" && dict.get_life_style.task_end_date_time != "" {
+            let startDate = getDateFromDateString(date: dict.get_life_style.task_start_date_time, format: "yyyy-MM-dd hh:mm:ss")
+            let endDate = getDateFromDateString(date: dict.get_life_style.task_end_date_time, format: "yyyy-MM-dd hh:mm:ss")
+            timeLbl.text = getDateStringFromDate(date: startDate, format: "hh:mm a") + " - " + getDateStringFromDate(date: endDate, format: "hh:mm a")
         }else{
+            timeLbl.text = ""
+        }
+        actionLbl.text = dict.status
+        setImageBackgroundImage(imgView, dict.get_life_style.get_single_media.url, IMAGE.PLACEHOLDER)
+        
+        if dict.status == "pending" {
+            actionImgView.isHidden = true
+        }
+        else if dict.status == "completed" {
             actionImgView.isHidden = false
-            actionImg.image = UIImage(named: dict.action_img)
+            actionImg.image = UIImage(named: "ic_complete")
         }
     }
     

@@ -14,9 +14,10 @@ class CurrentTaskTabVC: UIViewController {
     @IBOutlet var wakeUpView: UIView!
     @IBOutlet weak var wakeTblView: UITableView!
     @IBOutlet weak var constraintHeightWakeTbl: NSLayoutConstraint!
+    @IBOutlet weak var noDataFoundLbl: Label!
     
     var arrTaskData = [TaskModel]()
-    var arrWakeupData = [WakeupModel]()
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,11 @@ class CurrentTaskTabVC: UIViewController {
     }
     
     func setupDetails() {
-        updateHeight()
-        serviceCallToGetTask()
+        if arrTaskData.count == 0 {
+            serviceCallToGetTask()
+        }else{
+            updateHeight()
+        }
     }
 
     //MARK:- Button click event
@@ -36,7 +40,11 @@ class CurrentTaskTabVC: UIViewController {
     }
     
     @IBAction func clickToDoneWakeupView(_ sender: Any) {
-        wakeUpView.removeFromSuperview()
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        param["task_id"] = arrTaskData[selectedIndex].id
+        printData(param)
+        serviceCallToCompleteTask(param)
     }
     
     @IBAction func clickToLaterWakeupView(_ sender: Any) {
@@ -62,22 +70,11 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
         tblView.register(UINib.init(nibName: "CurrentTaskTVC", bundle: nil), forCellReuseIdentifier: "CurrentTaskTVC")
         wakeTblView.register(UINib.init(nibName: "ExpandCollapseTVC", bundle: nil), forCellReuseIdentifier: "ExpandCollapseTVC")
         
-        arrTaskData = [TaskModel]()
-        for temp in getJsonFromFile("current_task") {
-            arrTaskData.append(TaskModel.init(temp))
-        }
-        tblView.reloadData()
-        
-        arrWakeupData = [WakeupModel]()
-        for temp in getJsonFromFile("wakeup") {
-            arrWakeupData.append(WakeupModel.init(temp))
-        }
-        wakeTblView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == wakeTblView {
-            return arrWakeupData.count
+            return arrTaskData[selectedIndex].get_description.count
         }
         return arrTaskData.count
     }
@@ -92,7 +89,7 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == wakeTblView {
             let cell : ExpandCollapseTVC = wakeTblView.dequeueReusableCell(withIdentifier: "ExpandCollapseTVC") as! ExpandCollapseTVC
-            cell.setupDetails(arrWakeupData[indexPath.row])
+            cell.setupDetails(arrTaskData[selectedIndex].get_description[indexPath.row])
             cell.selectionStyle = .none
             return cell
         }
@@ -106,13 +103,12 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tblView {
-            if indexPath.row == 0 {
-                displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: wakeUpView)
-                updateWakeupTableviewHeight()
-            }
+            selectedIndex = indexPath.row
+            displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: wakeUpView)
+            updateWakeupTableviewHeight()
         }
         else if tableView == wakeTblView {
-            arrWakeupData[indexPath.row].isExpand = !arrWakeupData[indexPath.row].isExpand
+            arrTaskData[selectedIndex].get_description[indexPath.row].isExpand = !arrTaskData[selectedIndex].get_description[indexPath.row].isExpand
             wakeTblView.reloadData()
             updateWakeupTableviewHeight()
         }
@@ -122,6 +118,7 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
         tblView.reloadData()
         let height = arrTaskData.count * 120
         NotificationCenter.default.post(name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: height)
+        noDataFoundLbl.isHidden = (arrTaskData.count > 0)
     }
     
     func updateWakeupTableviewHeight() {
@@ -135,7 +132,20 @@ extension CurrentTaskTabVC : UITableViewDelegate, UITableViewDataSource {
 extension CurrentTaskTabVC {
     func serviceCallToGetTask() {
         HomeAPIManager.shared.serviceCallToGetTask { (data) in
-            
+            self.arrTaskData = [TaskModel]()
+            for temp in data {
+                self.arrTaskData.append(TaskModel.init(temp))
+            }
+            self.updateHeight()
+        }
+    }
+    
+    func serviceCallToCompleteTask(_ param : [String : Any]) {
+        HomeAPIManager.shared.serviceCallToCompleteTask(param) {
+            self.wakeUpView.removeFromSuperview()
+            self.arrTaskData.remove(at: self.selectedIndex)
+            self.updateHeight()
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REFRESH_COMPLETE_TASK), object: nil)
         }
     }
 }

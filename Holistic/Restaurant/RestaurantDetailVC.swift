@@ -37,7 +37,7 @@ class RestaurantDetailVC: UIViewController {
         starView.rating = restaurantData.ratings
         nameLbl.text = restaurantData.title
         addressLbl.text = restaurantData.address
-        descLbl.attributedText = restaurantData.desc.html2AttributedString
+        descLbl.text = restaurantData.desc.html2String
         tblView.reloadData()
         updateTableviewHeight()
     }

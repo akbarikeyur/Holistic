@@ -857,18 +857,34 @@ Which Is Right for You? </string>
                                     <outlet property="delegate" destination="NDx-vF-FkG" id="4vi-Ta-A55"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any current task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-VX-2db" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="50" width="300" height="19"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="wVZ-Em-pIB" firstAttribute="top" secondItem="cm9-qB-Cqn" secondAttribute="top" id="46g-Jh-79l"/>
+                            <constraint firstItem="cm9-qB-Cqn" firstAttribute="trailing" secondItem="gVg-VX-2db" secondAttribute="trailing" constant="10" id="4D7-i4-niX"/>
                             <constraint firstItem="wVZ-Em-pIB" firstAttribute="leading" secondItem="cm9-qB-Cqn" secondAttribute="leading" id="Lh8-Wg-UvA"/>
                             <constraint firstItem="cm9-qB-Cqn" firstAttribute="bottom" secondItem="wVZ-Em-pIB" secondAttribute="bottom" id="TkL-NJ-X7Q"/>
+                            <constraint firstItem="gVg-VX-2db" firstAttribute="top" secondItem="cm9-qB-Cqn" secondAttribute="top" constant="50" id="Yvs-8N-jg3"/>
                             <constraint firstItem="wVZ-Em-pIB" firstAttribute="trailing" secondItem="cm9-qB-Cqn" secondAttribute="trailing" id="eod-sf-Kz5"/>
+                            <constraint firstItem="gVg-VX-2db" firstAttribute="leading" secondItem="cm9-qB-Cqn" secondAttribute="leading" constant="10" id="ft3-ee-cyJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cm9-qB-Cqn"/>
                     </view>
                     <connections>
                         <outlet property="constraintHeightWakeTbl" destination="fvU-AV-A6K" id="cW4-Xj-Dqq"/>
+                        <outlet property="noDataFoundLbl" destination="gVg-VX-2db" id="X36-pA-lOD"/>
                         <outlet property="tblView" destination="wVZ-Em-pIB" id="Adh-UP-oyb"/>
                         <outlet property="wakeTblView" destination="Yo7-N5-AYO" id="MPJ-iE-Lnj"/>
                         <outlet property="wakeUpView" destination="emd-Pg-whU" id="vem-2F-HAT"/>
@@ -1209,18 +1225,34 @@ Which Is Right for You? </string>
                                     <outlet property="delegate" destination="Pae-XU-cLs" id="1Gv-Pv-TRl"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any completed task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0g-ew-frY" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="50" width="300" height="19"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="80Z-uH-M0c" firstAttribute="trailing" secondItem="g0g-ew-frY" secondAttribute="trailing" constant="10" id="3JV-gg-aE4"/>
                             <constraint firstItem="8V6-jW-5L5" firstAttribute="leading" secondItem="80Z-uH-M0c" secondAttribute="leading" id="BaO-vf-RI0"/>
+                            <constraint firstItem="g0g-ew-frY" firstAttribute="leading" secondItem="80Z-uH-M0c" secondAttribute="leading" constant="10" id="JzF-hs-Oga"/>
                             <constraint firstItem="8V6-jW-5L5" firstAttribute="trailing" secondItem="80Z-uH-M0c" secondAttribute="trailing" id="QuT-QB-L3S"/>
                             <constraint firstItem="8V6-jW-5L5" firstAttribute="bottom" secondItem="80Z-uH-M0c" secondAttribute="bottom" id="xe8-LR-LwZ"/>
+                            <constraint firstItem="g0g-ew-frY" firstAttribute="top" secondItem="80Z-uH-M0c" secondAttribute="top" constant="50" id="zSj-SW-ce2"/>
                             <constraint firstItem="8V6-jW-5L5" firstAttribute="top" secondItem="80Z-uH-M0c" secondAttribute="top" id="zVr-6J-N8c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="80Z-uH-M0c"/>
                     </view>
                     <connections>
                         <outlet property="constraintHeightWakeTbl" destination="COY-bf-Zho" id="8us-fD-D0Z"/>
+                        <outlet property="noDataFoundLbl" destination="g0g-ew-frY" id="zbf-Dc-3sZ"/>
                         <outlet property="tblView" destination="8V6-jW-5L5" id="UQc-df-c8V"/>
                         <outlet property="wakeTblView" destination="Suf-CV-4B3" id="mPb-fN-65J"/>
                         <outlet property="wakeUpView" destination="KEB-U2-S08" id="aPU-3f-rZC"/>
@@ -1579,18 +1611,34 @@ Which Is Right for You? </string>
                                     <outlet property="delegate" destination="wbI-id-RP0" id="djs-ao-wrP"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any missed task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZP-aL-Bql" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="50" width="300" height="19"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="r02-AK-qZY" firstAttribute="leading" secondItem="DrQ-Ox-WzP" secondAttribute="leading" id="3Sy-0j-eHD"/>
+                            <constraint firstItem="DrQ-Ox-WzP" firstAttribute="trailing" secondItem="IZP-aL-Bql" secondAttribute="trailing" constant="10" id="86X-hh-o4x"/>
                             <constraint firstItem="r02-AK-qZY" firstAttribute="bottom" secondItem="DrQ-Ox-WzP" secondAttribute="bottom" id="DHr-EV-zUZ"/>
                             <constraint firstItem="r02-AK-qZY" firstAttribute="trailing" secondItem="DrQ-Ox-WzP" secondAttribute="trailing" id="Mw3-1o-gJr"/>
+                            <constraint firstItem="IZP-aL-Bql" firstAttribute="leading" secondItem="DrQ-Ox-WzP" secondAttribute="leading" constant="10" id="gp6-fQ-GYQ"/>
                             <constraint firstItem="r02-AK-qZY" firstAttribute="top" secondItem="DrQ-Ox-WzP" secondAttribute="top" id="qvb-KO-PEt"/>
+                            <constraint firstItem="IZP-aL-Bql" firstAttribute="top" secondItem="DrQ-Ox-WzP" secondAttribute="top" constant="50" id="wka-pY-e8P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DrQ-Ox-WzP"/>
                     </view>
                     <connections>
                         <outlet property="constraintHeightWakeTbl" destination="dJF-aK-N4E" id="VEP-My-QPx"/>
+                        <outlet property="noDataFoundLbl" destination="IZP-aL-Bql" id="0Lc-HJ-Fyz"/>
                         <outlet property="tblView" destination="r02-AK-qZY" id="89C-Dl-htb"/>
                         <outlet property="wakeTblView" destination="nna-C4-vwR" id="Dmn-Jg-kcS"/>
                         <outlet property="wakeUpView" destination="27a-sc-LLM" id="ewN-eU-X2C"/>

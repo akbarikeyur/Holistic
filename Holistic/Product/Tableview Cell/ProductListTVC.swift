@@ -29,7 +29,7 @@ class ProductListTVC: UITableViewCell {
         }
         priceLbl.text = displayPriceWithCurrency(dict.price)
         qtyLbl.text = "Qty: " + String(dict.product_total_qty_in_count)
-        descLbl.attributedText = dict.desc.html2AttributedString
+        descLbl.text = dict.desc.html2String
         deliveryLbl.text = dict.delivery
     }
     

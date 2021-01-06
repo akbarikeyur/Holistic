@@ -46,12 +46,16 @@ class HotelDetailVC: UIViewController {
         priceLbl.text = displayPriceWithCurrency(hotelData.main_price)
         hotelNameLbl.text = hotelData.title
         hotelAddressLbl.text = hotelData.address
-        hotelDescLbl.attributedText = hotelData.desc.html2AttributedString
+        hotelDescLbl.text = hotelData.desc.html2String
         imageCV.reloadData()
         packageTbl.reloadData()
         updatePackageTableviewHeight()
         facilityCV.reloadData()
         constraintHeightFacilityCV.constant = CGFloat((hotelData.register_facility.count/2) * 100)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().hideTabBar()
     }
     
     //MARK:- Button click event
