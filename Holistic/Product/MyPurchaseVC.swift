@@ -65,7 +65,7 @@ extension MyPurchaseVC : UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -94,6 +94,7 @@ extension MyPurchaseVC {
                 self.page += 1
             }
             self.purchaseCV.reloadData()
+            self.totalOrderLbl.text = String(self.arrPurchase.count) + " Displaying all orders"
         }
     }
 }

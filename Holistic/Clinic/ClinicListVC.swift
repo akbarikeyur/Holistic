@@ -25,6 +25,10 @@ class ClinicListVC: UIViewController {
         registerTableViewMethod()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().showTabBar()
+    }
+    
     func setupDetails() {
         serviceCallToGetAppointmentList()
     }

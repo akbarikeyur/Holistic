@@ -1702,7 +1702,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVo-1q-vkB" customClass="View" customModule="Holistic" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="306.5" width="145" height="40"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jai-dH-sx3" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jai-dH-sx3" customClass="TextField" customModule="Holistic" customModuleProvider="target">
                                                                 <rect key="frame" x="10" y="0.0" width="99" height="40"/>
                                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1729,7 +1729,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                                 <state key="normal" image="dropdown"/>
                                                                 <connections>
-                                                                    <action selector="clickToSelectCity:" destination="U2J-ec-6XN" eventType="touchUpInside" id="Xbg-rA-9lR"/>
+                                                                    <action selector="clickToSelectState:" destination="U2J-ec-6XN" eventType="touchUpInside" id="gaA-gc-zt0"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1763,7 +1763,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFv-yU-ZxO" customClass="View" customModule="Holistic" customModuleProvider="target">
                                                         <rect key="frame" x="165" y="306.5" width="145" height="40"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country/Region" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGT-ZW-xRD" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGT-ZW-xRD" customClass="TextField" customModule="Holistic" customModuleProvider="target">
                                                                 <rect key="frame" x="10" y="0.0" width="99" height="40"/>
                                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1790,7 +1790,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                                 <state key="normal" image="dropdown"/>
                                                                 <connections>
-                                                                    <action selector="clickToSelectCountry:" destination="U2J-ec-6XN" eventType="touchUpInside" id="y5e-rx-Re5"/>
+                                                                    <action selector="clickToSelectCity:" destination="U2J-ec-6XN" eventType="touchUpInside" id="t8T-FE-0qJ"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1951,9 +1951,8 @@
                     <connections>
                         <outlet property="addressTxt" destination="A3w-y4-szx" id="r4Q-OW-Fcs"/>
                         <outlet property="apartmentTxt" destination="RFu-WO-HfR" id="lkz-N9-XHx"/>
-                        <outlet property="cityTxt" destination="jai-dH-sx3" id="ExT-mF-TWB"/>
+                        <outlet property="cityTxt" destination="oGT-ZW-xRD" id="Fp1-JK-mcT"/>
                         <outlet property="countryLbl" destination="qFk-Xk-HLv" id="Nls-wr-vyw"/>
-                        <outlet property="countryTxt" destination="oGT-ZW-xRD" id="Obc-Lk-xTQ"/>
                         <outlet property="emailPhoneTxt" destination="tUJ-qg-dMf" id="PCS-xF-h3Y"/>
                         <outlet property="emailTxt" destination="trR-f6-20K" id="hMg-XG-dXS"/>
                         <outlet property="flagImg" destination="I3e-F7-GrS" id="QSB-Fm-7ga"/>
@@ -1962,6 +1961,7 @@
                         <outlet property="loginView" destination="6kx-KX-Zzf" id="NO4-S6-cBU"/>
                         <outlet property="phoneTxt" destination="OUI-bJ-RA6" id="qea-VX-dSe"/>
                         <outlet property="saveInfoBtn" destination="coe-7S-VIF" id="YVz-jx-veC"/>
+                        <outlet property="stateTxt" destination="jai-dH-sx3" id="axp-XS-pBG"/>
                         <outlet property="updateNewsBtn" destination="dlK-h5-pb6" id="LMd-ma-ajU"/>
                     </connections>
                 </viewController>

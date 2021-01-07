@@ -45,6 +45,10 @@ class HomeVC: UIViewController {
         AppDelegate().sharedDelegate().serviceCallToGetMyCart()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().showTabBar()
+    }
+    
     @objc func setupUserDetail() {
         if !isUserLogin() {
             return

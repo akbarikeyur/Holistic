@@ -76,7 +76,7 @@ class OrderSummaryVC: UIViewController {
         param["products"] = arrData
         printData(param)
         ProductAPIManager.shared.serviceCallToProductPurchase(param) { (dict) in
-            self.navigationController?.popToRootViewController(animated: true)
+            AppDelegate().sharedDelegate().navigateToDashBoard()
         }
     }
     

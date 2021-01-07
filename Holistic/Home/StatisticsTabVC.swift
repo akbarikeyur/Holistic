@@ -21,6 +21,8 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var loyalPointLbl: Label!
     
     var fromDate, toDate : Date?
+    var arrCompleted = [TaskModel]()
+    var arrMissed = [TaskModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +30,14 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         // Do any additional setup after loading the view.
         
         chartView.delegate = self
-        setupChartData()
+        
     }
     
     func setupDetails() {
         NotificationCenter.default.post(name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: 668)
-        setupChartData()
+        if arrMissed.count == 0 && arrCompleted.count == 0 {
+            serviceCallToGetCompletedTask()
+        }
     }
 
     func setupChartData() {
@@ -42,34 +46,31 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         
         chartView.maxVisibleCount = 60
         
+        let arrTaskTitle = ["Missed", "Completed"]
+        var arrTaskValue = [Int]()
+        arrTaskValue.append(arrMissed.count)
+        arrTaskValue.append(arrCompleted.count)
+        
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.labelFont = .systemFont(ofSize: 10)
         xAxis.granularity = 1
-        xAxis.labelCount = 7
+        xAxis.labelCount = arrTaskTitle.count
         xAxis.valueFormatter = DayAxisValueFormatter(chart: chartView)
         
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.minimumFractionDigits = 0
         leftAxisFormatter.maximumFractionDigits = 1
-        leftAxisFormatter.negativeSuffix = " $"
-        leftAxisFormatter.positiveSuffix = " $"
+        leftAxisFormatter.negativeSuffix = ""
+        leftAxisFormatter.positiveSuffix = ""
         
         let leftAxis = chartView.leftAxis
         leftAxis.labelFont = .systemFont(ofSize: 10)
-        leftAxis.labelCount = 8
+        leftAxis.labelCount = arrTaskValue.count
         leftAxis.valueFormatter = DefaultAxisValueFormatter(formatter: leftAxisFormatter)
         leftAxis.labelPosition = .outsideChart
         leftAxis.spaceTop = 0.15
         leftAxis.axisMinimum = 0 // FIXME: HUH?? this replaces startAtZero = YES
-        
-        let rightAxis = chartView.rightAxis
-        rightAxis.enabled = true
-        rightAxis.labelFont = .systemFont(ofSize: 10)
-        rightAxis.labelCount = 8
-        rightAxis.valueFormatter = leftAxis.valueFormatter
-        rightAxis.spaceTop = 0.15
-        rightAxis.axisMinimum = 0
         
         let l = chartView.legend
         l.horizontalAlignment = .left
@@ -91,7 +92,7 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         marker.minimumSize = CGSize(width: 80, height: 40)
         chartView.marker = marker
         
-        self.setDataCount(5, range: UInt32(7))
+        self.setDataCount(arrTaskTitle.count, range: UInt32(arrTaskValue.count))
     }
     
     func setDataCount(_ count: Int, range: UInt32) {
@@ -165,4 +166,32 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     }
     */
 
+}
+
+extension StatisticsTabVC {
+    func serviceCallToGetCompletedTask() {
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        param["status"] = "completed"
+        HomeAPIManager.shared.serviceCallToGetMissedTask(param) { (data) in
+            self.arrCompleted = [TaskModel]()
+            for temp in data {
+                self.arrCompleted.append(TaskModel.init(temp))
+            }
+            self.serviceCallToGetMissedTask()
+        }
+    }
+    
+    func serviceCallToGetMissedTask() {
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        param["status"] = "missed"
+        HomeAPIManager.shared.serviceCallToGetMissedTask(param) { (data) in
+            self.arrMissed = [TaskModel]()
+            for temp in data {
+                self.arrMissed.append(TaskModel.init(temp))
+            }
+            self.setupChartData()
+        }
+    }
 }
