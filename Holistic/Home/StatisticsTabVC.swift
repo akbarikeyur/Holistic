@@ -51,6 +51,11 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         arrTaskValue.append(arrMissed.count)
         arrTaskValue.append(arrCompleted.count)
         
+        totalLbl.text = String(arrCompleted.count + arrMissed.count)
+        completedLbl.text = String(arrCompleted.count)
+        missedLbl.text = String(arrMissed.count)
+        percentageLbl.text = String(Int(arrCompleted.count * 100 / (arrCompleted.count + arrMissed.count))) + "%"
+        
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.labelFont = .systemFont(ofSize: 10)

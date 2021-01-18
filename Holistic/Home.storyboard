@@ -241,6 +241,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EnG-Dd-wp5"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="ubf-sH-wUC"/>
                     <connections>
                         <outlet property="flowerView" destination="3B3-mV-1bf" id="X8e-OD-VQt"/>

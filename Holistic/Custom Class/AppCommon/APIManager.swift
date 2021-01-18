@@ -10,10 +10,8 @@ import Foundation
 import SystemConfiguration
 import Alamofire
 
-
 struct API {
     static let BASE_URL = "http://anglotestserver.website/clinic/api/"
-    
     
     static let GET_COUNTRY               =       BASE_URL + "country/get_country"
     static let GET_STATE                 =       BASE_URL + "country/get_states"
