@@ -30,6 +30,13 @@ class EmailLoginVC: UIViewController {
         rememberSwitch.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if PLATFORM.isSimulator {
+            emailTxt.text = "arm@anglotestserver.website"
+            passwordTxt.text = "abc"
+        }
+    }
+    
     @IBAction func clickToShowHidePassword(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         passwordTxt.isSecureTextEntry = !sender.isSelected
