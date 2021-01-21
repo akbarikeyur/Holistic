@@ -65,6 +65,9 @@ extension ClinicPrescriptionsVC : UITableViewDelegate, UITableViewDataSource {
 
 extension ClinicPrescriptionsVC {
     func serviceCallToGetPrescriptions() {
+        if getClinicUserId() == "" {
+            return
+        }
         ClinicAPIManager.shared.serviceCallToGetPrescriptions { (data) in
             self.arrPrescription = [PrescriptionModel]()
             for temp in data {

@@ -87,7 +87,8 @@ struct CityModel {
 
 struct UserModel {
     var id, city_id, country_id : Int!
-    var building_address, email, floor, name, phone_number, roles, room_no, street_address : String!
+    var building_address, email, floor, name, phone_number, roles, room_no, street_address, clinicea_user_id : String!
+    var is_clincia, is_anglo : Bool!
     
     init(_ dict : [String : Any]) {
         id = AppModel.shared.getIntValue(dict, "id")
@@ -101,9 +102,12 @@ struct UserModel {
         roles = dict["roles"] as? String ?? ""
         room_no = dict["room_no"] as? String ?? ""
         street_address = dict["street_address"] as? String ?? ""
+        clinicea_user_id = dict["clinicea_user_id"] as? String ?? ""
+        is_clincia = dict["is_clincia"] as? Bool ?? false
+        is_anglo = dict["is_anglo"] as? Bool ?? false
     }
     
     func dictionary() -> [String : Any] {
-        return ["id" : id!, "city_id" : city_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!]
+        return ["id" : id!, "city_id" : city_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!, "clinicea_user_id" : clinicea_user_id!, "is_clincia" : is_clincia!, "is_anglo" : is_anglo!]
     }
 }

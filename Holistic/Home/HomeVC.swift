@@ -41,7 +41,6 @@ class HomeVC: UIViewController {
         let date = getDateFromDateString(date: "2020-11-21 04:00 PM", format: "yyyy-MM-dd hh:mm a")
         print(date)
         
-        serviceCallToGenerateToken()
         AppDelegate().sharedDelegate().serviceCallToGetMyCart()
     }
     

@@ -23,6 +23,7 @@ class SignupVC: UIViewController {
     @IBOutlet weak var stateTxt: TextField!
     @IBOutlet weak var cityTxt: TextField!
     @IBOutlet weak var howFindTxt: TextField!
+    @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passwordTxt: TextField!
     @IBOutlet weak var confirmPasswordTxt: TextField!
     
@@ -53,7 +54,8 @@ class SignupVC: UIViewController {
     func configUI() {
         signinBtn.setAttributedTitle(attributedStringWithColor("Already member? Sign in", ["Sign in"], color: OrangeColor), for: .normal)
         registerTableViewMethod()
-        
+        passwordView.isHidden = true
+        passwordTxt.text = "abc"
         if getCountryData().count == 0 {
             AppDelegate().sharedDelegate().serviceCallToGetCountry()
         }
@@ -156,15 +158,15 @@ class SignupVC: UIViewController {
         else if cityTxt.text?.trimmed == "" {
             displayToast("enter_city")
         }
-        else if passwordTxt.text?.trimmed == "" {
-            displayToast("enter_password")
-        }
-        else if confirmPasswordTxt.text?.trimmed == "" {
-            displayToast("enter_confirm_password")
-        }
-        else if passwordTxt.text != confirmPasswordTxt.text {
-            displayToast("password_confirm_validation")
-        }
+//        else if passwordTxt.text?.trimmed == "" {
+//            displayToast("enter_password")
+//        }
+//        else if confirmPasswordTxt.text?.trimmed == "" {
+//            displayToast("enter_confirm_password")
+//        }
+//        else if passwordTxt.text != confirmPasswordTxt.text {
+//            displayToast("password_confirm_validation")
+//        }
         else {
             var param = [String : Any]()
             param["name"] = nameTxt.text
@@ -179,11 +181,23 @@ class SignupVC: UIViewController {
             param["phone_number"] = phoneTxt.text
             printData(param)
             LoginAPIManager.shared.serviceCallToSignup(param) { (dict) in
-                var newParam = [String : Any]()
-                newParam["email"] = self.emailTxt.text
-                newParam["password"] = self.passwordTxt.text
-                LoginAPIManager.shared.serviceCallToEmailLogin(param) {
-                    AppDelegate().sharedDelegate().navigateToDashBoard()
+                var param = [String : Any]()
+                param["countrycode"] = self.selectedCountry.phonecode
+                param["phonenumber"] = self.phoneTxt.text
+                LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
+                    if let is_clincia = dict["is_clincia"] as? Bool {
+                        if let is_anglo = dict["is_anglo"] as? Bool {
+                            if let data = dict["data"] as? [String : Any] {
+                                AppModel.shared.currentUser = UserModel.init(data)
+                                AppModel.shared.currentUser.is_clincia = is_clincia
+                                AppModel.shared.currentUser.is_anglo = is_anglo
+                                setLoginUserData()
+                                setCliniciaUser(is_clincia)
+                                setAngloUser(is_anglo)
+                                AppDelegate().sharedDelegate().navigateToDashBoard()
+                            }
+                        }
+                    }
                 }
             }
         }

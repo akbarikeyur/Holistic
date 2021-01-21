@@ -19,7 +19,7 @@ class WelcomeVC: UIViewController {
         swipeView.handleAction { (isFinish) in
             if isFinish {
                 //redirect
-                let vc : EmailLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVC") as! EmailLoginVC
+                let vc : MobileLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "MobileLoginVC") as! MobileLoginVC
                 self.navigationController?.pushViewController(vc, animated: false)
             }
         }

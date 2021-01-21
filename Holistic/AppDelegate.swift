@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func logoutFromApp() {
         removeUserDefaultValues()
-        let navigationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVCNav") as! UINavigationController
+        let navigationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "MobileLoginVCNav") as! UINavigationController
         self.window?.rootViewController = navigationVC
     }
     

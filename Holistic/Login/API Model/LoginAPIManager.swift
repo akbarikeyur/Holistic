@@ -67,6 +67,13 @@ public class LoginAPIManager {
     
     func serviceCallToMobileLogin(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any]) -> Void) {
         printData(param)
+        APIManager.shared.callPostRequest(API.EMAIL_LOGIN, param, true) { (dict) in
+            print(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion(dict)
+                return
+            }
+        }
     }
     
     func serviceCallToVerify(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any]) -> Void) {

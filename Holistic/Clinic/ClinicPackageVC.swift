@@ -87,6 +87,9 @@ extension ClinicPackageVC : UITableViewDelegate, UITableViewDataSource {
 
 extension ClinicPackageVC {
     func serviceCallToGetPackageList() {
+        if getClinicUserId() == "" {
+            return
+        }
         ClinicAPIManager.shared.serviceCallToGetPackageList { (data) in
             self.arrPackage = [ClinicPackageModel]()
             for temp in data {

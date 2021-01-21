@@ -68,6 +68,9 @@ extension FamilyMemberVC : UICollectionViewDelegate, UICollectionViewDataSource,
 
 extension FamilyMemberVC {
     func serviceCallToGetFamilyData() {
+        if getClinicUserId() == "" {
+            return
+        }
         ClinicAPIManager.shared.serviceCallToGetFamilyData(page) { (data) in
             self.arrMember = [ClinicUserModel]()
             for temp in data {

@@ -81,6 +81,9 @@ extension DietPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
 
 extension DietPlanVC {
     func serviceCallToGetDietPlan() {
+        if getClinicUserId() == "" {
+            return
+        }
         ClinicAPIManager.shared.serviceCallToGetDietPlan { (data) in
             self.arrDietPlan = [DietPlanModel]()
             for temp in data {

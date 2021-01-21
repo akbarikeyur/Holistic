@@ -29,8 +29,6 @@ struct CLINIC_API {
     
     static let GET_PATIENT_FAMILY          =       BASE_URL + "patients/getPatientFamily?patientID=" + getClinicUserId() + "&pageSize=10&api_key=" + getClinicToken()
     
-    
-    
 }
 
 

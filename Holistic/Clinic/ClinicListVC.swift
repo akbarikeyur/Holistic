@@ -85,6 +85,9 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
 
 extension ClinicListVC {
     func serviceCallToGetAppointmentList() {
+        if getClinicUserId() == "" {
+            return
+        }
         ClinicAPIManager.shared.serviceCallToGetAppointmentList(page) { (data) in
             self.arrAppointment = [AppointmentModel]()
             for temp in data {

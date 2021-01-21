@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 class MobileLoginVC: UIViewController {
 
@@ -15,12 +16,31 @@ class MobileLoginVC: UIViewController {
     @IBOutlet weak var phoneTxt: TextField!
     @IBOutlet weak var signupBtn: Button!
     
+    var arrCountry = [CountryModel]()
+    var selectedCountry = CountryModel.init([String : Any]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         configUI()
+        
+        if getCountryData().count == 0 {
+            AppDelegate().sharedDelegate().serviceCallToGetCountry()
+        }
+        else{
+            arrCountry = getCountryData()
+            if let countryCode = (Locale.current as NSLocale).object(forKey: .countryCode) as? String {
+                let index = arrCountry.firstIndex { (temp) -> Bool in
+                    temp.sortname.lowercased() == countryCode.lowercased()
+                }
+                if index != nil {
+                    self.selectedCountry = self.arrCountry[index!]
+                    self.phoneCodeLbl.text = "+" + self.selectedCountry.phonecode
+                    self.flagImg.image = UIImage(named: self.selectedCountry.sortname.lowercased())
+                }
+            }
+        }
     }
     
     func configUI() {
@@ -34,6 +54,22 @@ class MobileLoginVC: UIViewController {
     
     @IBAction func clickToSelectCountryCode(_ sender: UIButton) {
         self.view.endEditing(true)
+        if arrCountry.count == 0 {
+            arrCountry = getCountryData()
+        }
+        var arrData = [String]()
+        for temp in arrCountry {
+            arrData.append("(+" + temp.phonecode + ") " + temp.name)
+        }
+        let dropDown = DropDown()
+        dropDown.anchorView = sender
+        dropDown.dataSource = arrData
+        dropDown.selectionAction = { [unowned self] (dropindex: Int, item: String) in
+            self.selectedCountry = self.arrCountry[dropindex]
+            self.phoneCodeLbl.text = "+" + self.selectedCountry.phonecode
+            self.flagImg.image = UIImage(named: self.selectedCountry.sortname.lowercased())
+        }
+        dropDown.show()
     }
     
     @IBAction func clickToSignIn(_ sender: Any) {
@@ -43,11 +79,28 @@ class MobileLoginVC: UIViewController {
         }
         else{
             var param = [String : Any]()
-            param["phone"] = phoneTxt.text
-            
+            param["countrycode"] = self.selectedCountry.phonecode
+            param["phonenumber"] = phoneTxt.text
             LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
-                let vc : OTPVerificationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "OTPVerificationVC") as! OTPVerificationVC
-                self.navigationController?.pushViewController(vc, animated: true)
+                
+                if let is_clincia = dict["is_clincia"] as? Bool {
+                    if let is_anglo = dict["is_anglo"] as? Bool {
+                        if !is_anglo && !is_clincia {
+                            self.clickToSignup(self)
+                        }
+                        else if let data = dict["data"] as? [String : Any] {
+                            AppModel.shared.currentUser = UserModel.init(data)
+                            AppModel.shared.currentUser.is_clincia = is_clincia
+                            AppModel.shared.currentUser.is_anglo = is_anglo
+                            setLoginUserData()
+                            setCliniciaUser(is_clincia)
+                            setAngloUser(is_anglo)
+                            AppDelegate().sharedDelegate().navigateToDashBoard()
+                        }
+                    }
+                }
+//                let vc : OTPVerificationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "OTPVerificationVC") as! OTPVerificationVC
+//                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

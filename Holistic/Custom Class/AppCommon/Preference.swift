@@ -106,6 +106,9 @@ func getClinicUserData() -> ClinicUserModel
 }
 
 func setLoginUserData() {
+    if AppModel.shared.currentUser.clinicea_user_id != "" {
+        setClinicUserId(AppModel.shared.currentUser.clinicea_user_id)
+    }
     setDataToPreference(data: AppModel.shared.currentUser.dictionary() as AnyObject, forKey: "login_user_data")
     setUserLogin(true)
 }
@@ -124,6 +127,30 @@ func setUserLogin(_ value : Bool) {
 
 func isUserLogin() -> Bool {
     if let value : Bool = getDataFromPreference(key: "is_user_login") as? Bool
+    {
+        return value
+    }
+    return false
+}
+
+func setCliniciaUser(_ value : Bool) {
+    setDataToPreference(data: value as AnyObject, forKey: "is_clinicia_user")
+}
+
+func isCliniciaUser() -> Bool {
+    if let value : Bool = getDataFromPreference(key: "is_clinicia_user") as? Bool
+    {
+        return value
+    }
+    return false
+}
+
+func setAngloUser(_ value : Bool) {
+    setDataToPreference(data: value as AnyObject, forKey: "is_anglo_user")
+}
+
+func isAngloUser() -> Bool {
+    if let value : Bool = getDataFromPreference(key: "is_anglo_user") as? Bool
     {
         return value
     }

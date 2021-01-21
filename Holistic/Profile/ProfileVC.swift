@@ -20,6 +20,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var addressLbl: Label!
     @IBOutlet weak var countryLbl: Label!
     
+    @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var currentPasswordTxt: TextField!
     @IBOutlet weak var newPasswordTxt: TextField!
     @IBOutlet weak var confirmPasswordTxt: TextField!
@@ -28,6 +29,7 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        passwordView.isHidden = true
         setupDetails()
     }
     
