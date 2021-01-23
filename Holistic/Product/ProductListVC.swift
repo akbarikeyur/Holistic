@@ -14,6 +14,7 @@ class ProductListVC: UIViewController {
     @IBOutlet weak var notiLbl: Label!
     @IBOutlet weak var cartLbl: Label!
     @IBOutlet var headerView: UIView!
+    @IBOutlet weak var totalProductLbl: Label!
     @IBOutlet weak var bannerCV: UICollectionView!
     
     var page = 1
@@ -135,6 +136,11 @@ extension ProductListVC {
                 self.arrProduct.append(ProductModel.init(temp))
             }
             self.tblView.reloadData()
+            if self.arrProduct.count > 1 {
+                self.totalProductLbl.text = "Products " + String(self.arrProduct.count)
+            }else{
+                self.totalProductLbl.text = "Product " + String(self.arrProduct.count)
+            }
             if last_page == self.page {
                 self.page = 0
             }else{

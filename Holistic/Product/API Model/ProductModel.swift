@@ -77,3 +77,20 @@ struct CartModel {
         }
     }
 }
+
+struct OrderModel {
+    var id, product_id, qty, user_id : Int!
+    var price, status, created_at : String!
+    var get_product : ProductModel!
+    
+    init(_ dict : [String : Any]) {
+        id = AppModel.shared.getIntValue(dict, "id")
+        product_id = AppModel.shared.getIntValue(dict, "product_id")
+        qty = AppModel.shared.getIntValue(dict, "qty")
+        user_id = AppModel.shared.getIntValue(dict, "user_id")
+        price = AppModel.shared.getStringValue(dict, "price")
+        status = dict["status"] as? String ?? ""
+        created_at = dict["created_at"] as? String ?? ""
+        get_product = ProductModel.init(dict["get_product"] as? [String : Any] ?? [String : Any]())
+    }
+}

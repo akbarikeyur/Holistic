@@ -84,6 +84,11 @@ extension ProductTabVC {
             for temp in data {
                 self.arrProduct.append(ProductModel.init(temp))
             }
+            if self.arrProduct.count > 1 {
+                self.totalProductLbl.text = "Products " + String(self.arrProduct.count)
+            }else{
+                self.totalProductLbl.text = "Product " + String(self.arrProduct.count)
+            }
             self.tblView.reloadData()
             if last_page == self.page {
                 self.page = 0

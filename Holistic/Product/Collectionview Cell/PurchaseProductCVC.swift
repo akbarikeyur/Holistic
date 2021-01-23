@@ -18,15 +18,31 @@ class PurchaseProductCVC: UICollectionViewCell {
     @IBOutlet weak var totalLbl: Label!
     @IBOutlet weak var downBtn: UIButton!
     
+    var arrProduct = [ProductModel]()
+    var order = OrderModel.init([String : Any]())
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         registerTableViewMethod()
     }
     
-    func setupDetail() {
-        constraintHeightTblView.constant = 125
-        //updateWakeupTableviewHeight()
+    func setupDetail(_ dict : OrderModel) {
+        order = dict
+        arrProduct = [ProductModel]()
+        arrProduct.append(dict.get_product)
+        tblView.reloadData()
+        constraintHeightTblView.constant = CGFloat(arrProduct.count * 125)
+        
+        if arrProduct.count > 1 {
+            productLbl.text = String(arrProduct.count) + " Products"
+        }else {
+            productLbl.text = String(arrProduct.count) + " Product"
+        }
+        invoiceLbl.text = "Invoice#: " + String(dict.id)
+        let date = getDateFromDateString(date: dict.created_at, format: "yyyy-MM-dd'T'hh:mm:ss.SSSSZ")
+        dateTimeLbl.text = "Order Date: " + getDateStringFromDate(date: date, format: "MMMM d yyyy h:mm a")
+        totalLbl.text = "Invoice total: " + displayPriceWithCurrency(dict.price)
     }
 
 }
@@ -39,7 +55,7 @@ extension PurchaseProductCVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return arrProduct.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -48,19 +64,21 @@ extension PurchaseProductCVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : PurchaseProductTVC = tblView.dequeueReusableCell(withIdentifier: "PurchaseProductTVC") as! PurchaseProductTVC
-        
+        let dictOrder = order.get_product
+        if (dictOrder?.product_single_image.count)! > 0 {
+            setImageBackgroundImage(cell.imgView, (dictOrder?.product_single_image[0].url)!, IMAGE.PLACEHOLDER)
+        }
+        cell.priceLbl.text = displayPriceWithCurrency((dictOrder?.price)!)
+        cell.qtyLbl.text = "Qty: " + String(order.qty)
+        cell.descLbl.text = dictOrder?.name
+        cell.quantityLbl.text = "x" + String(order.qty)
+        cell.orderLbl.text = "Order No " + String(order.id)
+        cell.statusLbl.text = "Status: " + order.status.capitalized
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-    }
-    
-    func updateWakeupTableviewHeight() {
-        constraintHeightTblView.constant = CGFloat.greatestFiniteMagnitude
-        tblView.reloadData()
-        tblView.layoutIfNeeded()
-        constraintHeightTblView.constant = tblView.contentSize.height
     }
 }

@@ -18,7 +18,7 @@ class MyPurchaseVC: UIViewController {
     @IBOutlet weak var totalOrderLbl: Label!
     
     var page = 1
-    var arrPurchase = [CartModel]()
+    var arrPurchase = [OrderModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,11 +61,11 @@ extension MyPurchaseVC : UICollectionViewDelegate, UICollectionViewDataSource, U
 {
     func registerCollectionView() {
         purchaseCV.register(UINib.init(nibName: "PurchaseProductCVC", bundle: nil), forCellWithReuseIdentifier: "PurchaseProductCVC")
-        constraintHeightPurchaseCV.constant = 245 * 3
+        updateProductHeight()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return arrPurchase.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -74,7 +74,7 @@ extension MyPurchaseVC : UICollectionViewDelegate, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : PurchaseProductCVC = purchaseCV.dequeueReusableCell(withReuseIdentifier: "PurchaseProductCVC", for: indexPath) as! PurchaseProductCVC
-        cell.setupDetail()
+        cell.setupDetail(arrPurchase[indexPath.row])
         return cell
     }
 }
@@ -84,9 +84,9 @@ extension MyPurchaseVC {
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
         ProductAPIManager.shared.serviceCallToGetPurchaseProductHistory(page, param) { (data, is_last) in
-            self.arrPurchase = [CartModel]()
+            self.arrPurchase = [OrderModel]()
             for temp in data {
-                self.arrPurchase.append(CartModel.init(temp))
+                self.arrPurchase.append(OrderModel.init(temp))
             }
             if data.count < 10 {
                 self.page = 0
@@ -94,7 +94,12 @@ extension MyPurchaseVC {
                 self.page += 1
             }
             self.purchaseCV.reloadData()
+            self.updateProductHeight()
             self.totalOrderLbl.text = String(self.arrPurchase.count) + " Displaying all orders"
         }
+    }
+    
+    func updateProductHeight() {
+        constraintHeightPurchaseCV.constant = CGFloat(245 * arrPurchase.count)
     }
 }
