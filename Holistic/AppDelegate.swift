@@ -10,6 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 import IQKeyboardManagerSwift
 import MFSideMenu
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //IQKeyboard
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
+        
+        FirebaseApp.configure()
         
         serviceCallToGetCountry()
         

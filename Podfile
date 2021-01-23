@@ -18,4 +18,6 @@ target 'Holistic' do
   pod 'MFSideMenu'
   pod 'TagListView'
   pod 'MGSwipeTableCell'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end
