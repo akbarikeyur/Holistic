@@ -69,6 +69,7 @@
 		7953C028254C0E1D00DF1BFA /* PurchaseProductCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */; };
 		7953C029254C0E1E00DF1BFA /* PurchaseProductCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */; };
 		7953C02C254C1D0400DF1BFA /* ClinicTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */; };
+		7959184F25C1893300F3AAAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7959184E25C1893300F3AAAC /* GoogleService-Info.plist */; };
 		79678B5225877FC100808F08 /* ProductAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5125877FC100808F08 /* ProductAPIManager.swift */; };
 		79678B5425877FCF00808F08 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5325877FCF00808F08 /* ProductModel.swift */; };
 		797C39B32567AF1F00E55C2B /* ClinicPrescriptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */; };
@@ -268,6 +269,7 @@
 		7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductCVC.swift; sourceTree = "<group>"; };
 		7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseProductCVC.xib; sourceTree = "<group>"; };
 		7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicTabVC.swift; sourceTree = "<group>"; };
+		7959184E25C1893300F3AAAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79678B5125877FC100808F08 /* ProductAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPIManager.swift; sourceTree = "<group>"; };
 		79678B5325877FCF00808F08 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPrescriptionsVC.swift; sourceTree = "<group>"; };
@@ -803,6 +805,7 @@
 				79EFD5C32542BE10006D06FB /* Assets.xcassets */,
 				79EFD5C52542BE10006D06FB /* LaunchScreen.storyboard */,
 				79EFD5C82542BE10006D06FB /* Info.plist */,
+				7959184E25C1893300F3AAAC /* GoogleService-Info.plist */,
 			);
 			path = Holistic;
 			sourceTree = "<group>";
@@ -1085,6 +1088,7 @@
 				79C624D72559679F00F9C385 /* FamilyMemberCVC.xib in Resources */,
 				7995C34825678D3500DD6FAC /* DietPlanCVC.xib in Resources */,
 				79BC837A25431207004A0B49 /* current_task.json in Resources */,
+				7959184F25C1893300F3AAAC /* GoogleService-Info.plist in Resources */,
 				79333D2B255BE7CF0092F567 /* ClinicPackageDetailTVC.xib in Resources */,
 				79149D15254FE64100CBD522 /* BlogListCVC.xib in Resources */,
 				79AD21AC254D6AFD00C97A89 /* ClinicCategoryCVC.xib in Resources */,
@@ -1437,13 +1441,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JRJ7A3W5NN;
+				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Holistic;
+				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1458,13 +1462,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JRJ7A3W5NN;
+				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Holistic;
+				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
