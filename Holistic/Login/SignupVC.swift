@@ -54,8 +54,8 @@ class SignupVC: UIViewController {
     func configUI() {
         signinBtn.setAttributedTitle(attributedStringWithColor("Already member? Sign in", ["Sign in"], color: OrangeColor), for: .normal)
         registerTableViewMethod()
-        passwordView.isHidden = true
-        passwordTxt.text = "abc"
+        passwordView.isHidden = false
+        
         if getCountryData().count == 0 {
             AppDelegate().sharedDelegate().serviceCallToGetCountry()
         }
@@ -158,27 +158,29 @@ class SignupVC: UIViewController {
         else if cityTxt.text?.trimmed == "" {
             displayToast("enter_city")
         }
-//        else if passwordTxt.text?.trimmed == "" {
-//            displayToast("enter_password")
-//        }
-//        else if confirmPasswordTxt.text?.trimmed == "" {
-//            displayToast("enter_confirm_password")
-//        }
-//        else if passwordTxt.text != confirmPasswordTxt.text {
-//            displayToast("password_confirm_validation")
-//        }
+        else if passwordTxt.text?.trimmed == "" {
+            displayToast("enter_password")
+        }
+        else if confirmPasswordTxt.text?.trimmed == "" {
+            displayToast("enter_confirm_password")
+        }
+        else if passwordTxt.text != confirmPasswordTxt.text {
+            displayToast("password_confirm_validation")
+        }
         else {
             var param = [String : Any]()
             param["name"] = nameTxt.text
             param["email"] = emailTxt.text
             param["password"] = passwordTxt.text
             param["country_id"] = selectedCountry.id
+            param["state_id"] = selectedState.id
             param["city_id"] = selectedCity.id
             param["room_no"] = roomTxt.text
             param["floor"] = floorTxt.text
             param["building_address"] = buildingNameTxt.text
             param["street_address"] = addressTxt.text
             param["phone_number"] = phoneTxt.text
+            param["countrycode"] = self.selectedCountry.phonecode
             printData(param)
             LoginAPIManager.shared.serviceCallToSignup(param) { (dict) in
                 var param = [String : Any]()

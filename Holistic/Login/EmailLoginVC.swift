@@ -81,7 +81,6 @@ class EmailLoginVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
     /*
     // MARK: - Navigation
 
