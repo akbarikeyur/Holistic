@@ -86,7 +86,7 @@ struct CityModel {
 }
 
 struct UserModel {
-    var id, city_id, country_id : Int!
+    var id, city_id, country_id, points : Int!
     var building_address, email, floor, name, phone_number, roles, room_no, street_address, clinicea_user_id : String!
     var is_clincia, is_anglo : Bool!
     
@@ -105,9 +105,10 @@ struct UserModel {
         clinicea_user_id = dict["clinicea_user_id"] as? String ?? ""
         is_clincia = dict["is_clincia"] as? Bool ?? false
         is_anglo = dict["is_anglo"] as? Bool ?? false
+        points = AppModel.shared.getIntValue(dict, "points")
     }
     
     func dictionary() -> [String : Any] {
-        return ["id" : id!, "city_id" : city_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!, "clinicea_user_id" : clinicea_user_id!, "is_clincia" : is_clincia!, "is_anglo" : is_anglo!]
+        return ["id" : id!, "city_id" : city_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!, "clinicea_user_id" : clinicea_user_id!, "is_clincia" : is_clincia!, "is_anglo" : is_anglo!, "points" : points!]
     }
 }

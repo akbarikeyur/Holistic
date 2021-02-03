@@ -20,13 +20,24 @@ class LoyalityPointVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(setupDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         registerCollectionView()
         myPageControl.numberOfPages = 0
+        setupDetail()
         serviceCallToGetOffer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().hideTabBar()
+    }
+    
+    @objc func setupDetail() {
+        pointLbl.text = "My Loyalty Points : " + String(AppModel.shared.currentUser.points)
+        if AppModel.shared.currentUser.points > 1 {
+            pointLbl.text = pointLbl.text! + "pts"
+        }else{
+            pointLbl.text = pointLbl.text! + "pt"
+        }
     }
     
     //MARK:- Button click event

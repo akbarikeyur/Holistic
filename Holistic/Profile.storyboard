@@ -803,7 +803,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-Yy-efo" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="116" y="12.5" width="88" height="19"/>
+                                        <rect key="frame" x="121.5" y="12.5" width="77.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1584,7 +1584,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AX-gN-iIq" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="106" y="12.5" width="108" height="19"/>
+                                        <rect key="frame" x="112" y="12.5" width="96.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1623,7 +1623,7 @@ United Arab Emirates</string>
                                 <rect key="frame" x="0.0" y="64" width="320" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-M2-wYk">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="536"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="534.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refer_friend_bg" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-tF-pAR">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
@@ -1632,7 +1632,7 @@ United Arab Emirates</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Value Friendship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nt-sL-FL7" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="211" width="300" height="28.5"/>
+                                                <rect key="frame" x="10" y="211" width="300" height="28"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1644,7 +1644,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's make you earn from your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-iA-JqG" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="249.5" width="280" height="42.5"/>
+                                                <rect key="frame" x="20" y="249" width="280" height="42"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1656,7 +1656,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-u0-BW9" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="322" width="280" height="82.5"/>
+                                                <rect key="frame" x="20" y="321" width="280" height="82"/>
                                                 <string key="text">Send you unique link to your friend and once they download the app from your link, you will be given 5 loyalty points which you can redeem for various offers and coupons globally. </string>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -1669,7 +1669,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Wr-mbE" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="444.5" width="280" height="50"/>
+                                                <rect key="frame" x="20" y="443" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-8g-ymc" customClass="Button" customModule="Holistic" customModuleProvider="target">
                                                         <rect key="frame" x="180" y="0.0" width="100" height="50"/>
@@ -1806,7 +1806,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-rh-zoG" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="105" y="12.5" width="110" height="19"/>
+                                        <rect key="frame" x="109.5" y="12.5" width="101" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2128,7 +2128,7 @@ Emax store to avail discount.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-hQ-62y" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="105" y="12.5" width="110" height="19"/>
+                                        <rect key="frame" x="109.5" y="12.5" width="101" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2271,7 +2271,7 @@ Emax store to avail discount.</string>
     <resources>
         <image name="address_pin" width="38" height="37"/>
         <image name="back" width="8" height="14"/>
-        <image name="call" width="38" height="37"/>
+        <image name="call" width="15.5" height="19.5"/>
         <image name="camera" width="23" height="23"/>
         <image name="code_black" width="45.5" height="19"/>
         <image name="country" width="38" height="37"/>

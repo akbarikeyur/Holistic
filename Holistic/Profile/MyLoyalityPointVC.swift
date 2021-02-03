@@ -20,8 +20,9 @@ class MyLoyalityPointVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        pointLbl.text = "My Loyalty Points : 0pt"
+        NotificationCenter.default.addObserver(self, selector: #selector(setupDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         registerCollectionView()
+        setupDetail()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +30,15 @@ class MyLoyalityPointVC: UIViewController {
         noDataView.isHidden = true
         if arrOffer.count == 0 {
             serviceCallToGetBookmarkOffer()
+        }
+    }
+    
+    @objc func setupDetail() {
+        pointLbl.text = "My Loyalty Points : " + String(AppModel.shared.currentUser.points)
+        if AppModel.shared.currentUser.points > 1 {
+            pointLbl.text = pointLbl.text! + "pts"
+        }else{
+            pointLbl.text = pointLbl.text! + "pt"
         }
     }
     
@@ -87,6 +97,15 @@ extension MyLoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     @IBAction func clickToGetCode(_ sender: UIButton) {
+        let dict = arrOffer[sender.tag]
+        if dict.points_required > AppModel.shared.currentUser.points {
+            let required = dict.points_required - AppModel.shared.currentUser.points
+            let message = "You need " + String(required) + " points to generate code."
+            showAlert("", message: message) {
+                
+            }
+            return
+        }
         let vc : LoyalityDetailVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityDetailVC") as! LoyalityDetailVC
         vc.offerData = arrOffer[sender.tag]
         self.navigationController?.pushViewController(vc, animated: true)
@@ -102,7 +121,9 @@ extension MyLoyalityPointVC {
         ProfileAPIManager.shared.serviceCallToGetBookmarkOffer(["user_id" : AppModel.shared.currentUser.id!]) { (data) in
             self.arrOffer = [OfferModel]()
             for temp in data {
-                self.arrOffer.append(OfferModel.init(temp))
+                if let get_offer = temp["get_offer"] as? [String : Any] {
+                    self.arrOffer.append(OfferModel.init(get_offer))
+                }
             }
             self.pointCV.reloadData()
             self.noDataView.isHidden = (self.arrOffer.count > 0)

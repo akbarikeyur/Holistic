@@ -132,6 +132,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func serviceCallToGetUserDetail() {
+        ProfileAPIManager.shared.serviceCallToGetUserDetail {
+            
+        }
+    }
+}
+
 //MARK:- Loader
 extension AppDelegate {
     func showLoader()

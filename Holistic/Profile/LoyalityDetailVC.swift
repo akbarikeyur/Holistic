@@ -49,3 +49,9 @@ class LoyalityDetailVC: UIViewController {
     */
 
 }
+
+extension LoyalityDetailVC {
+    func serviceCallToGetOfferCode() {
+        
+    }
+}
