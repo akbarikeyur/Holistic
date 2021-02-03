@@ -11,18 +11,25 @@ import UIKit
 class LoyalityDetailVC: UIViewController {
 
     @IBOutlet weak var topImgView: UIImageView!
-    @IBOutlet weak var imageCV: UICollectionView!
-    @IBOutlet weak var discountLbl: Label!
+    @IBOutlet weak var titleLbl: Label!
+    @IBOutlet weak var descLbl: Label!
+    @IBOutlet weak var codeLbl: Label!
     
-    var arrImage = ["hotel1", "hotel2", "hotel3", "hotel4", "hotel5", "hotel6", "hotel7"]
-    var selectedImageIndex = 3
+    var offerData = OfferModel.init([String : Any]())
+    var selectedImageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        registerCollectionView()
-        discountLbl.attributedText = attributedStringWithColor(discountLbl.text!, ["10% Discount"], color: OrangeColor)
+        setupDetails()
+    }
+    
+    func setupDetails() {
+        setImageBackgroundImage(topImgView, offerData.get_single_offer_image.url, IMAGE.PLACEHOLDER)
+        titleLbl.text = offerData.title
+        descLbl.text = offerData.desc.html2String
+        codeLbl.text = "******"
     }
     
     //MARK:- Button click event
@@ -41,33 +48,4 @@ class LoyalityDetailVC: UIViewController {
     }
     */
 
-}
-
-//MARK:- CollectionView Method
-extension LoyalityDetailVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-{
-    func registerCollectionView() {
-        imageCV.register(UINib.init(nibName: "HotelImageCVC", bundle: nil), forCellWithReuseIdentifier: "HotelImageCVC")
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrImage.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.height, height: collectionView.frame.size.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : HotelImageCVC = imageCV.dequeueReusableCell(withReuseIdentifier: "HotelImageCVC", for: indexPath) as! HotelImageCVC
-        //cell.setupDetails((indexPath.row == selectedImageIndex))
-        cell.imgView.image = UIImage(named: arrImage[indexPath.row])
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedImageIndex = indexPath.row
-        imageCV.reloadData()
-        topImgView.image = UIImage(named: arrImage[indexPath.row])
-    }
 }

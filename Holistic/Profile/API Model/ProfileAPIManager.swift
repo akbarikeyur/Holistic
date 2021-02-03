@@ -21,4 +21,52 @@ public class ProfileAPIManager {
             }
         }
     }
+    
+    func serviceCallToGetOffer( _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_OFFER, [String : Any](), true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let dictData = dict["data"] as? [String : Any] {
+                    if let data = dictData["data"] as? [[String : Any]] {
+                        completion(data)
+                        return
+                    }
+                }
+            }
+        }
+    }
+    
+    func serviceCallToBookmarkOffer(_ param : [String : Any], _ completion: @escaping () -> Void) {
+        APIManager.shared.callPostRequest(API.ADD_BOOKMARK_OFFER, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion()
+                return
+            }
+        }
+    }
+    
+    func serviceCallToGetBookmarkOffer(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_OFFER, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let dictData = dict["data"] as? [String : Any] {
+                    if let data = dictData["data"] as? [[String : Any]] {
+                        completion(data)
+                        return
+                    }
+                }
+            }
+        }
+    }
+    
+    func serviceCallToRemoveBookmarkOffer(_ param : [String : Any], _ completion: @escaping () -> Void) {
+        APIManager.shared.callPostRequest(API.REMOVE_BOOKMARK_OFFER, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion()
+                return
+            }
+        }
+    }
 }

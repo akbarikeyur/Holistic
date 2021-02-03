@@ -117,6 +117,11 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 break
             case "My Loyalty Points":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+                let vc : MyLoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "MyLoyalityPointVC") as! MyLoyalityPointVC
+                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                break
+            case "My Offer":
+                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
                 let vc : LoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityPointVC") as! LoyalityPointVC
                 UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                 break

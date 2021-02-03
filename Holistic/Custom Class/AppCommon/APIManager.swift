@@ -43,6 +43,11 @@ struct API {
     
     static let PRODUCT_PURCHASE          =       BASE_URL + "product/purchase"
     static let GET_PURCHASE_HISTORY      =       BASE_URL + "product/productPurchaseHistory"
+    
+    static let GET_OFFER                 =       BASE_URL + "offers/getOffers"
+    static let ADD_BOOKMARK_OFFER        =       BASE_URL + "offers/createBookmark"
+    static let REMOVE_BOOKMARK_OFFER     =       BASE_URL + "offers/removeOfferbookmark"
+    static let GET_BOOKMARK_OFFER        =       BASE_URL + "offers/getOfferBookmark"
 }
 
 

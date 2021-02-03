@@ -1,18 +1,18 @@
 //
-//  LoyalityPointVC.swift
+//  MyLoyalityPointVC.swift
 //  Holistic
 //
-//  Created by Keyur Akbari on 19/11/20.
-//  Copyright © 2020 Keyur Akbari. All rights reserved.
+//  Created by Keyur Akbari on 03/02/21.
+//  Copyright © 2021 Keyur Akbari. All rights reserved.
 //
 
 import UIKit
 
-class LoyalityPointVC: UIViewController {
+class MyLoyalityPointVC: UIViewController {
 
     @IBOutlet weak var pointLbl: Label!
     @IBOutlet weak var pointCV: UICollectionView!
-    @IBOutlet weak var myPageControl: UIPageControl!
+    @IBOutlet weak var noDataView: UIView!
     
     var arrOffer = [OfferModel]()
     
@@ -20,22 +20,26 @@ class LoyalityPointVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        pointLbl.text = "My Loyalty Points : 0pt"
         registerCollectionView()
-        myPageControl.numberOfPages = 0
-        serviceCallToGetOffer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().hideTabBar()
+        noDataView.isHidden = true
+        if arrOffer.count == 0 {
+            serviceCallToGetBookmarkOffer()
+        }
     }
     
     //MARK:- Button click event
     @IBAction func clickToBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-
-    @IBAction func clickToNotification(_ sender: Any) {
-        
+    
+    @IBAction func clickToMyOffer(_ sender: Any) {
+        let vc : LoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityPointVC") as! LoyalityPointVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     /*
@@ -51,7 +55,7 @@ class LoyalityPointVC: UIViewController {
 }
 
 //MARK:- CollectionView Method
-extension LoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension MyLoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func registerCollectionView() {
         pointCV.register(UINib.init(nibName: "LoyalityPointCVC", bundle: nil), forCellWithReuseIdentifier: "LoyalityPointCVC")
@@ -62,16 +66,19 @@ extension LoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height/2)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : LoyalityPointCVC = pointCV.dequeueReusableCell(withReuseIdentifier: "LoyalityPointCVC", for: indexPath) as! LoyalityPointCVC
         cell.setupDetails(arrOffer[indexPath.row])
-        cell.redeemBtn.isHidden = false
-        cell.getCodeBtn.isHidden = true
+        cell.redeemBtn.isHidden = true
+        cell.getCodeBtn.isHidden = false
         cell.getCodeBtn.tag = indexPath.row
-        cell.redeemBtn.addTarget(self, action: #selector(clickToRedeem(_:)), for: .touchUpInside)
+        cell.getCodeBtn.addTarget(self, action: #selector(clickToGetCode(_:)), for: .touchUpInside)
+        cell.removeBtn.isHidden = false
+        cell.removeBtn.tag = indexPath.row
+        cell.removeBtn.addTarget(self, action: #selector(clickToRemove(_:)), for: .touchUpInside)
         return cell
     }
     
@@ -79,38 +86,42 @@ extension LoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource
         
     }
     
-    @IBAction func clickToRedeem(_ sender: UIButton) {
-        serviceCallToBookmarkOffer(arrOffer[sender.tag].id)
+    @IBAction func clickToGetCode(_ sender: UIButton) {
+        let vc : LoyalityDetailVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityDetailVC") as! LoyalityDetailVC
+        vc.offerData = arrOffer[sender.tag]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let visibleRect = CGRect(origin: self.pointCV.contentOffset, size: self.pointCV.bounds.size)
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        if let visibleIndexPath = self.pointCV.indexPathForItem(at: visiblePoint) {
-            self.myPageControl.currentPage = visibleIndexPath.row
-        }
+    @IBAction func clickToRemove(_ sender: UIButton) {
+        serviceCallToRemoveBookmarkOffer(arrOffer[sender.tag].id)
     }
 }
 
-extension LoyalityPointVC {
-    func serviceCallToGetOffer() {
-        ProfileAPIManager.shared.serviceCallToGetOffer { (data) in
+extension MyLoyalityPointVC {
+    func serviceCallToGetBookmarkOffer() {
+        ProfileAPIManager.shared.serviceCallToGetBookmarkOffer(["user_id" : AppModel.shared.currentUser.id!]) { (data) in
             self.arrOffer = [OfferModel]()
             for temp in data {
                 self.arrOffer.append(OfferModel.init(temp))
             }
             self.pointCV.reloadData()
-            self.myPageControl.numberOfPages = self.arrOffer.count
+            self.noDataView.isHidden = (self.arrOffer.count > 0)
         }
     }
     
-    func serviceCallToBookmarkOffer(_ id : Int) {
+    func serviceCallToRemoveBookmarkOffer(_ id : Int) {
         var param = [String : Any]()
         param["offer_id"] = id
         param["user_id"] = AppModel.shared.currentUser.id
-        ProfileAPIManager.shared.serviceCallToBookmarkOffer(param) {
-            displayToast("Offer bookmarked successfully")
+        ProfileAPIManager.shared.serviceCallToRemoveBookmarkOffer(param) {
+            let index = self.arrOffer.firstIndex { (temp) -> Bool in
+                temp.id == id
+            }
+            if index != nil {
+                self.arrOffer.remove(at: index!)
+                self.pointCV.reloadData()
+                self.noDataView.isHidden = (self.arrOffer.count > 0)
+            }
         }
     }
 }

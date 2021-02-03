@@ -77,6 +77,10 @@
         "image" : "menu_point"
     },
     {
+        "title" : "My Offer",
+        "image" : "menu_point"
+    },
+    {
         "title" : "Blogs",
         "image" : "menu_product"
     },
