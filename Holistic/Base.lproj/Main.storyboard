@@ -499,6 +499,28 @@
                                     <action selector="clickToClose:" destination="dqQ-LJ-PzZ" eventType="touchUpInside" id="0AM-y4-raz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-NA-9k9" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="225" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MiI-bw-3nc"/>
+                                    <constraint firstAttribute="width" constant="40" id="hnX-D2-cXb"/>
+                                </constraints>
+                                <state key="normal" image="settings"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToSetting:" destination="dqQ-LJ-PzZ" eventType="touchUpInside" id="sui-iV-sIl"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Helen Herry," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEY-IK-USy" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                 <rect key="frame" x="10" y="60" width="300" height="29.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="25"/>
@@ -546,6 +568,8 @@
                             <constraint firstItem="b5v-GP-2Pv" firstAttribute="leading" secondItem="OKf-Mt-fzw" secondAttribute="leading" constant="10" id="lNT-fw-i2c"/>
                             <constraint firstItem="OKf-Mt-fzw" firstAttribute="trailing" secondItem="oEY-IK-USy" secondAttribute="trailing" constant="10" id="ucG-DT-XHr"/>
                             <constraint firstItem="SJe-zi-nQ1" firstAttribute="top" secondItem="OKf-Mt-fzw" secondAttribute="top" constant="20" id="wfO-mo-JQJ"/>
+                            <constraint firstItem="SJe-zi-nQ1" firstAttribute="leading" secondItem="LVR-NA-9k9" secondAttribute="trailing" constant="5" id="xQF-Ug-xyz"/>
+                            <constraint firstItem="SJe-zi-nQ1" firstAttribute="centerY" secondItem="LVR-NA-9k9" secondAttribute="centerY" id="zeF-ni-5Jc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OKf-Mt-fzw"/>
                     </view>
@@ -2040,6 +2064,7 @@
         <image name="info_orange" width="38" height="38"/>
         <image name="logo_orange" width="136" height="138"/>
         <image name="password" width="38" height="37"/>
+        <image name="settings" width="20" height="20"/>
         <image name="temp_flag" width="25" height="18"/>
         <image name="username" width="38" height="37"/>
     </resources>

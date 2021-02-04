@@ -23,3 +23,15 @@ struct OfferModel {
     }
 }
 
+struct NotificationSettingModel {
+    var title, desc, type, status : String!
+    var id : Int!
+    
+    init(_ dict : [String : Any]) {
+        id = AppModel.shared.getIntValue(dict, "id")
+        title = dict["title"] as? String ?? ""
+        desc = dict["desc"] as? String ?? ""
+        type = dict["type"] as? String ?? ""
+        status = dict["status"] as? String ?? ""
+    }
+}

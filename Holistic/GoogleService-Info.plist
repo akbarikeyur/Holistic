@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>448403945916-c12mo20fiug0ojt1ks4av0vkroqfluq3.apps.googleusercontent.com</string>
+	<string>285986607267-d7d3njc93q1iqpp1t9t0f6au329qo7es.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.448403945916-c12mo20fiug0ojt1ks4av0vkroqfluq3</string>
+	<string>com.googleusercontent.apps.285986607267-d7d3njc93q1iqpp1t9t0f6au329qo7es</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB_H1f7mr1Rwv0wGOxFTErpK52cTaSeguM</string>
+	<string>AIzaSyBirHu41iRHYHeQhwZGel1jKbadR9dLOH8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>448403945916</string>
+	<string>285986607267</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>org.holisticlifestyle.com.HolisticLifestyle</string>
 	<key>PROJECT_ID</key>
-	<string>holistic-91af8</string>
+	<string>holistic-global</string>
 	<key>STORAGE_BUCKET</key>
-	<string>holistic-91af8.appspot.com</string>
+	<string>holistic-global.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:448403945916:ios:2c08bfd0dd482a123a13b9</string>
+	<string>1:285986607267:ios:d392818e7501531c552f16</string>
 </dict>
 </plist>

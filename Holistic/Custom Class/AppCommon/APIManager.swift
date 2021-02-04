@@ -18,7 +18,8 @@ struct API {
     static let GET_CITY                  =       BASE_URL + "country/get_cities"
     
     static let SIGNUP                    =       BASE_URL + "user/signup"
-    static let EMAIL_LOGIN               =       BASE_URL + "user/login"
+    static let EMAIL_LOGIN               =       BASE_URL + "user/loginwithemail"
+    static let MOBILE_LOGIN              =       BASE_URL + "user/login"
     static let GET_USER_DETAIL           =       BASE_URL + "user/getUserDetails"
     
     static let GET_TASK_LIST             =       BASE_URL + "lifestyle/getTasks"
@@ -51,7 +52,9 @@ struct API {
     static let GET_BOOKMARK_OFFER        =       BASE_URL + "offers/getOfferBookmark"
     static let GET_OFFER_CODE            =       BASE_URL + "offers/generateCode"
     
-
+    static let GET_NOTI_SETTING          =       BASE_URL + "notification/getNotificationSettings"
+    static let SET_NOTI_SETTING          =       BASE_URL + "notification/changeNotificationSetting"
+    
 }
 
 

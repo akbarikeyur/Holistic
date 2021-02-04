@@ -10,7 +10,8 @@
 "take_photo" = "Take Photo";
 "gallry_photo" = "Choose Existing Photo";
 "cancel_button" = "Cancel";
-"ok_button" = "OK"
+"ok_button" = "OK";
+
 //Common
 "currency_aed" = "AED ";
 "just_now" = "Just Now";

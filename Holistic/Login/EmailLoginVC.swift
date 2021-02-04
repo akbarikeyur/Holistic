@@ -63,6 +63,8 @@ class EmailLoginVC: UIViewController {
             var param = [String : Any]()
             param["email"] = emailTxt.text
             param["password"] = passwordTxt.text
+            param["remember_token"] = getPushToken()
+            printData(param)
             LoginAPIManager.shared.serviceCallToEmailLogin(param) {
                 AppDelegate().sharedDelegate().navigateToDashBoard()
             }

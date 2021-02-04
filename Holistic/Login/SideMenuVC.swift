@@ -41,6 +41,12 @@ class SideMenuVC: UIViewController {
         self.menuContainerViewController.toggleLeftSideMenuCompletion {}
     }
     
+    @IBAction func clickToSetting(_ sender: Any) {
+        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+        let vc : NotificationSettingVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "NotificationSettingVC") as! NotificationSettingVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

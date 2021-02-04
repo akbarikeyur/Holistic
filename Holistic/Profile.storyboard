@@ -803,7 +803,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-Yy-efo" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="121.5" y="12.5" width="77.5" height="19"/>
+                                        <rect key="frame" x="116.5" y="12.5" width="87.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1584,7 +1584,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AX-gN-iIq" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="112" y="12.5" width="96.5" height="19"/>
+                                        <rect key="frame" x="106.5" y="12.5" width="107.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1623,7 +1623,7 @@ United Arab Emirates</string>
                                 <rect key="frame" x="0.0" y="64" width="320" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-M2-wYk">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="534.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="536"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refer_friend_bg" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-tF-pAR">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
@@ -1632,7 +1632,7 @@ United Arab Emirates</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Value Friendship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nt-sL-FL7" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="211" width="300" height="28"/>
+                                                <rect key="frame" x="10" y="211" width="300" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1644,7 +1644,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's make you earn from your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-iA-JqG" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="249" width="280" height="42"/>
+                                                <rect key="frame" x="20" y="249.5" width="280" height="42.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1656,7 +1656,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-u0-BW9" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="321" width="280" height="82"/>
+                                                <rect key="frame" x="20" y="322" width="280" height="82.5"/>
                                                 <string key="text">Send you unique link to your friend and once they download the app from your link, you will be given 5 loyalty points which you can redeem for various offers and coupons globally. </string>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -1669,7 +1669,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Wr-mbE" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="443" width="280" height="50"/>
+                                                <rect key="frame" x="20" y="444.5" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-8g-ymc" customClass="Button" customModule="Holistic" customModuleProvider="target">
                                                         <rect key="frame" x="180" y="0.0" width="100" height="50"/>
@@ -1806,7 +1806,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-rh-zoG" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="109.5" y="12.5" width="101" height="19"/>
+                                        <rect key="frame" x="105" y="12.5" width="110" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2084,6 +2084,80 @@ Emax store to avail discount.</string>
             </objects>
             <point key="canvasLocation" x="1301" y="742"/>
         </scene>
+        <!--Notification SettingVC-->
+        <scene sceneID="ZiB-BW-P6D">
+            <objects>
+                <viewController storyboardIdentifier="NotificationSettingVC" id="hx6-dB-J6v" customClass="NotificationSettingVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2IO-5n-yRL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-8U-aUh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-13-ikT">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="2L6-lT-PeC"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="clickToBack:" destination="hx6-dB-J6v" eventType="touchUpInside" id="Caj-Tk-axy"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-nG-72C" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                        <rect key="frame" x="79.5" y="12.5" width="161" height="19"/>
+                                        <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wzA-nG-72C" firstAttribute="centerY" secondItem="1nH-8U-aUh" secondAttribute="centerY" id="UTk-bA-M3R"/>
+                                    <constraint firstAttribute="bottom" secondItem="FTt-13-ikT" secondAttribute="bottom" id="aBa-pX-4g5"/>
+                                    <constraint firstAttribute="height" constant="44" id="fi4-Nx-Yc6"/>
+                                    <constraint firstItem="wzA-nG-72C" firstAttribute="centerX" secondItem="1nH-8U-aUh" secondAttribute="centerX" id="tSm-uy-jGI"/>
+                                    <constraint firstItem="FTt-13-ikT" firstAttribute="leading" secondItem="1nH-8U-aUh" secondAttribute="leading" id="w1H-gm-B6O"/>
+                                    <constraint firstItem="FTt-13-ikT" firstAttribute="top" secondItem="1nH-8U-aUh" secondAttribute="top" id="zLS-0e-LvI"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FyF-E4-Cxw">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hx6-dB-J6v" id="KXP-GX-4HU"/>
+                                    <outlet property="delegate" destination="hx6-dB-J6v" id="2as-er-6K7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FyF-E4-Cxw" firstAttribute="trailing" secondItem="eqw-dP-Yrd" secondAttribute="trailing" id="3Mo-6g-cx4"/>
+                            <constraint firstItem="FyF-E4-Cxw" firstAttribute="top" secondItem="1nH-8U-aUh" secondAttribute="bottom" id="5nS-Ag-PXP"/>
+                            <constraint firstItem="eqw-dP-Yrd" firstAttribute="trailing" secondItem="1nH-8U-aUh" secondAttribute="trailing" id="Fon-0O-Koh"/>
+                            <constraint firstItem="FyF-E4-Cxw" firstAttribute="leading" secondItem="eqw-dP-Yrd" secondAttribute="leading" id="OTK-Ar-UJr"/>
+                            <constraint firstItem="1nH-8U-aUh" firstAttribute="top" secondItem="eqw-dP-Yrd" secondAttribute="top" constant="20" id="Whk-AD-Kcw"/>
+                            <constraint firstItem="1nH-8U-aUh" firstAttribute="leading" secondItem="2IO-5n-yRL" secondAttribute="leading" id="gG6-QV-nCf"/>
+                            <constraint firstAttribute="bottom" secondItem="FyF-E4-Cxw" secondAttribute="bottom" id="tjl-xM-Ps3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eqw-dP-Yrd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblView" destination="FyF-E4-Cxw" id="q6P-Rh-ODp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcv-Cv-3ST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2001" y="769"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bDX-fN-wrb">
             <objects>
@@ -2128,7 +2202,7 @@ Emax store to avail discount.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-hQ-62y" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="109.5" y="12.5" width="101" height="19"/>
+                                        <rect key="frame" x="105" y="12.5" width="110" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2271,7 +2345,7 @@ Emax store to avail discount.</string>
     <resources>
         <image name="address_pin" width="38" height="37"/>
         <image name="back" width="8" height="14"/>
-        <image name="call" width="15.5" height="19.5"/>
+        <image name="call" width="38" height="37"/>
         <image name="camera" width="23" height="23"/>
         <image name="code_black" width="45.5" height="19"/>
         <image name="country" width="38" height="37"/>

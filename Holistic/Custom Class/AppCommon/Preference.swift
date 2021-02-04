@@ -52,6 +52,21 @@ func getAuthToken() -> String
     return ""
 }
 
+//MARK: - Push notification device token
+func setPushToken(_ token: String)
+{
+    setDataToPreference(data: token as AnyObject, forKey: "PUSH_DEVICE_TOKEN")
+}
+
+func getPushToken() -> String
+{
+    if let token : String = getDataFromPreference(key: "PUSH_DEVICE_TOKEN") as? String
+    {
+        return token
+    }
+    return AppDelegate().sharedDelegate().getFCMToken()
+}
+
 func setClinicToken(_ token: String)
 {
     setDataToPreference(data: token as AnyObject, forKey: "clinic_token")

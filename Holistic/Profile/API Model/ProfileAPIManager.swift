@@ -98,4 +98,26 @@ public class ProfileAPIManager {
             }
         }
     }
+    
+    func serviceCallToGetNotificationSetting(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_NOTI_SETTING, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let data = dict["data"] as? [[String : Any]] {
+                    completion(data)
+                    return
+                }
+            }
+        }
+    }
+    
+    func serviceCallToSetNotificationSetting(_ param : [String : Any], _ completion: @escaping () -> Void) {
+        APIManager.shared.callPostRequest(API.SET_NOTI_SETTING, param, false) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion()
+                return
+            }
+        }
+    }
 }
