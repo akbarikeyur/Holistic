@@ -10,6 +10,7 @@ import UIKit
 
 class MyPurchaseVC: UIViewController {
 
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchTxt: TextField!
     @IBOutlet weak var purchaseCV: UICollectionView!
     @IBOutlet weak var constraintHeightPurchaseCV: NSLayoutConstraint!
@@ -24,6 +25,7 @@ class MyPurchaseVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        topView.isHidden = true
         registerCollectionView()
         serviceCallToGetPurchaseProductHistory()
     }

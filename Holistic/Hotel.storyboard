@@ -585,6 +585,13 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDY-wI-J60">
+                                                    <rect key="frame" x="10" y="15" width="300" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <connections>
+                                                        <action selector="clickToCopyCode:" destination="LVn-sI-kSR" eventType="touchUpInside" id="GJp-f2-4Zv"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Onetime code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeI-Zv-Boy" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="55" width="300" height="18"/>
                                                     <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="15"/>
@@ -610,13 +617,17 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="QeI-Zv-Boy" firstAttribute="leading" secondItem="6Ff-ad-xfh" secondAttribute="leading" constant="10" id="2AJ-WW-UaW"/>
+                                                <constraint firstItem="bDY-wI-J60" firstAttribute="bottom" secondItem="6wi-Y1-NBg" secondAttribute="bottom" id="6IS-eG-bUa"/>
                                                 <constraint firstItem="6wi-Y1-NBg" firstAttribute="leading" secondItem="6Ff-ad-xfh" secondAttribute="leading" constant="10" id="920-vr-7fF"/>
                                                 <constraint firstAttribute="trailing" secondItem="QeI-Zv-Boy" secondAttribute="trailing" constant="10" id="Akp-Ib-FRC"/>
                                                 <constraint firstAttribute="trailing" secondItem="g3Y-qV-AYi" secondAttribute="trailing" constant="10" id="BPd-Iz-sMF"/>
+                                                <constraint firstItem="bDY-wI-J60" firstAttribute="trailing" secondItem="6wi-Y1-NBg" secondAttribute="trailing" id="DcR-Jg-Fte"/>
+                                                <constraint firstItem="bDY-wI-J60" firstAttribute="top" secondItem="6wi-Y1-NBg" secondAttribute="top" id="P9m-lr-WsA"/>
                                                 <constraint firstItem="g3Y-qV-AYi" firstAttribute="top" secondItem="9tF-kq-eR0" secondAttribute="bottom" constant="13" id="RTL-R2-piz"/>
                                                 <constraint firstItem="g3Y-qV-AYi" firstAttribute="leading" secondItem="6Ff-ad-xfh" secondAttribute="leading" constant="10" id="SWy-vQ-EpZ"/>
                                                 <constraint firstItem="6wi-Y1-NBg" firstAttribute="top" secondItem="6Ff-ad-xfh" secondAttribute="top" constant="15" id="WII-ck-p2x"/>
                                                 <constraint firstItem="QeI-Zv-Boy" firstAttribute="top" secondItem="6wi-Y1-NBg" secondAttribute="bottom" constant="5" id="fr5-gj-Yw3"/>
+                                                <constraint firstItem="bDY-wI-J60" firstAttribute="leading" secondItem="6wi-Y1-NBg" secondAttribute="leading" id="n0w-WU-Hw7"/>
                                                 <constraint firstAttribute="trailing" secondItem="6wi-Y1-NBg" secondAttribute="trailing" constant="10" id="nZL-Al-Qm3"/>
                                                 <constraint firstItem="9tF-kq-eR0" firstAttribute="centerX" secondItem="6Ff-ad-xfh" secondAttribute="centerX" id="rXt-cM-WxB"/>
                                                 <constraint firstItem="9tF-kq-eR0" firstAttribute="top" secondItem="QeI-Zv-Boy" secondAttribute="bottom" constant="8" id="xQN-hl-YjW"/>

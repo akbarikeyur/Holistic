@@ -23,6 +23,7 @@ class MyLoyalityPointVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(setupDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         registerCollectionView()
         setupDetail()
+        serviceCallToGetRedeemCodeList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -143,6 +144,14 @@ extension MyLoyalityPointVC {
                 self.pointCV.reloadData()
                 self.noDataView.isHidden = (self.arrOffer.count > 0)
             }
+        }
+    }
+    
+    func serviceCallToGetRedeemCodeList() {
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        ProfileAPIManager.shared.serviceCallToGetRedeemCodeList(param) { (data) in
+            
         }
     }
 }

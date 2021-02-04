@@ -89,12 +89,26 @@ public class ProfileAPIManager {
         }
     }
     
-    func serviceCallToGetOfferCode(_ param : [String : Any], _ completion: @escaping () -> Void) {
+    func serviceCallToGetOfferCode(_ param : [String : Any], _ completion: @escaping (_ data : [String : Any]) -> Void) {
         APIManager.shared.callPostRequest(API.GET_OFFER_CODE, param, true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
-                completion()
-                return
+                if let data = dict["data"] as? [String : Any] {
+                    completion(data)
+                    return
+                }
+            }
+        }
+    }
+    
+    func serviceCallToGetRedeemCodeList(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_REDEEM_CODE_LIST, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let data = dict["data"] as? [[String : Any]] {
+                    completion(data)
+                    return
+                }
             }
         }
     }

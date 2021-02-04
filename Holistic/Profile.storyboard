@@ -1966,6 +1966,13 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-fH-jsU">
+                                                <rect key="frame" x="10" y="298" width="300" height="47"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <connections>
+                                                    <action selector="clickToCopyCode:" destination="OTy-EY-Sap" eventType="touchUpInside" id="ANN-7f-wN3"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onetime Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-iG-Klc" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="345" width="300" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
@@ -2027,16 +2034,20 @@ Emax store to avail discount.</string>
                                             <constraint firstAttribute="trailing" secondItem="6he-2D-iZm" secondAttribute="trailing" constant="10" id="9fJ-jf-31K"/>
                                             <constraint firstAttribute="trailing" secondItem="Zfm-iG-Klc" secondAttribute="trailing" constant="10" id="ATQ-2Z-ReV"/>
                                             <constraint firstItem="dRq-6d-3jg" firstAttribute="top" secondItem="nwi-Zs-uba" secondAttribute="bottom" constant="20" id="DdL-TI-k9T"/>
+                                            <constraint firstItem="k7s-VR-cen" firstAttribute="top" secondItem="zNa-fH-jsU" secondAttribute="top" id="ECp-mj-4Rl"/>
                                             <constraint firstItem="b76-OC-vK3" firstAttribute="top" secondItem="XoF-9Y-tiy" secondAttribute="top" constant="20" id="Ey8-cK-Ol3"/>
                                             <constraint firstItem="svu-9J-oyU" firstAttribute="leading" secondItem="XoF-9Y-tiy" secondAttribute="leading" constant="10" id="INM-Yt-WYO"/>
                                             <constraint firstItem="Zfm-iG-Klc" firstAttribute="leading" secondItem="XoF-9Y-tiy" secondAttribute="leading" constant="10" id="L9E-z3-4sD"/>
                                             <constraint firstItem="nwi-Zs-uba" firstAttribute="top" secondItem="Zfm-iG-Klc" secondAttribute="bottom" constant="10" id="MEj-AJ-bGX"/>
                                             <constraint firstItem="INH-gO-r7r" firstAttribute="leading" secondItem="XoF-9Y-tiy" secondAttribute="leading" constant="10" id="MY1-mf-MZ9"/>
+                                            <constraint firstItem="k7s-VR-cen" firstAttribute="bottom" secondItem="zNa-fH-jsU" secondAttribute="bottom" id="P4e-nb-kCP"/>
                                             <constraint firstAttribute="trailing" secondItem="4Mh-W8-pXD" secondAttribute="trailing" id="Tgp-b1-8pn"/>
                                             <constraint firstAttribute="trailing" secondItem="k7s-VR-cen" secondAttribute="trailing" constant="10" id="Tt7-Fg-tRo"/>
                                             <constraint firstItem="svu-9J-oyU" firstAttribute="top" secondItem="dRq-6d-3jg" secondAttribute="bottom" constant="20" id="X7A-yH-ap0"/>
                                             <constraint firstItem="nwi-Zs-uba" firstAttribute="centerX" secondItem="XoF-9Y-tiy" secondAttribute="centerX" id="YIN-pO-oGU"/>
+                                            <constraint firstItem="k7s-VR-cen" firstAttribute="leading" secondItem="zNa-fH-jsU" secondAttribute="leading" id="d60-jy-byC"/>
                                             <constraint firstItem="6he-2D-iZm" firstAttribute="top" secondItem="svu-9J-oyU" secondAttribute="bottom" constant="10" id="flf-n0-f9E"/>
+                                            <constraint firstItem="k7s-VR-cen" firstAttribute="trailing" secondItem="zNa-fH-jsU" secondAttribute="trailing" id="gwB-8W-fmB"/>
                                             <constraint firstItem="dRq-6d-3jg" firstAttribute="leading" secondItem="XoF-9Y-tiy" secondAttribute="leading" constant="10" id="hMh-0c-Xsx"/>
                                             <constraint firstItem="k7s-VR-cen" firstAttribute="top" secondItem="INH-gO-r7r" secondAttribute="bottom" constant="10" id="izd-5Y-gcq"/>
                                             <constraint firstAttribute="trailing" secondItem="svu-9J-oyU" secondAttribute="trailing" constant="10" id="kee-MU-qLw"/>
@@ -2345,7 +2356,7 @@ Emax store to avail discount.</string>
     <resources>
         <image name="address_pin" width="38" height="37"/>
         <image name="back" width="8" height="14"/>
-        <image name="call" width="38" height="37"/>
+        <image name="call" width="15.5" height="19.5"/>
         <image name="camera" width="23" height="23"/>
         <image name="code_black" width="45.5" height="19"/>
         <image name="country" width="38" height="37"/>

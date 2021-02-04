@@ -76,7 +76,11 @@ class OrderSummaryVC: UIViewController {
         param["products"] = arrData
         printData(param)
         ProductAPIManager.shared.serviceCallToProductPurchase(param) { (dict) in
-            AppDelegate().sharedDelegate().navigateToDashBoard()
+            if let message = dict["message"] as? String, message == "product out of stock" {
+                displayToast(message.capitalized)
+            }else{
+                AppDelegate().sharedDelegate().navigateToDashBoard()
+            }
         }
     }
     

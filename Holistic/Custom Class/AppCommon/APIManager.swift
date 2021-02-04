@@ -51,10 +51,11 @@ struct API {
     static let REMOVE_BOOKMARK_OFFER     =       BASE_URL + "offers/removeOfferbookmark"
     static let GET_BOOKMARK_OFFER        =       BASE_URL + "offers/getOfferBookmark"
     static let GET_OFFER_CODE            =       BASE_URL + "offers/generateCode"
+    static let GET_REDEEM_CODE_LIST      =       BASE_URL + "offers/offersRedeemed"
+    
     
     static let GET_NOTI_SETTING          =       BASE_URL + "notification/getNotificationSettings"
     static let SET_NOTI_SETTING          =       BASE_URL + "notification/changeNotificationSetting"
-    
 }
 
 

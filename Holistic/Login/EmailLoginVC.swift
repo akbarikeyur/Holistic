@@ -32,8 +32,10 @@ class EmailLoginVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if PLATFORM.isSimulator {
-            emailTxt.text = "arm@anglotestserver.website"
-            passwordTxt.text = "abc"
+//            emailTxt.text = "arm@anglotestserver.website"
+//            passwordTxt.text = "abc"
+            emailTxt.text = "keyur2@gmail.com"
+            passwordTxt.text = "qqqqqq"
         }
     }
     

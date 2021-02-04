@@ -430,3 +430,8 @@ func getDiscountPrice(_ price : Float, _ discount : Int) -> Float {
     let newPrice = price - (price * Float(discount) / 100)
     return newPrice
 }
+
+func copyClipboard(_ code : String) {
+//    UIPasteboard.general.string = code
+//    displayToast("Code copy to clipboard")
+}

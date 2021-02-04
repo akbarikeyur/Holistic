@@ -128,6 +128,7 @@
 		79C8F2B3254AA1FB00481BB8 /* OrderSummaryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */; };
 		79C8F2B4254AA1FB00481BB8 /* OrderSummaryTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C8F2B2254AA1FB00481BB8 /* OrderSummaryTVC.xib */; };
 		79C980F825CBF9AD005107EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79C980F725CBF9AD005107EC /* GoogleService-Info.plist */; };
+		79C980FA25CC39DF005107EC /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C980F925CC39DF005107EC /* NotificationVC.swift */; };
 		79D6D0082543ECD000945D7C /* completed_task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D6D0072543ECD000945D7C /* completed_task.json */; };
 		79D6D00A2543ECE700945D7C /* missed_task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D6D0092543ECE700945D7C /* missed_task.json */; };
 		79D6D00C2543F2B300945D7C /* CompletedTaskTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6D00B2543F2B300945D7C /* CompletedTaskTabVC.swift */; };
@@ -334,6 +335,7 @@
 		79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryTVC.swift; sourceTree = "<group>"; };
 		79C8F2B2254AA1FB00481BB8 /* OrderSummaryTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSummaryTVC.xib; sourceTree = "<group>"; };
 		79C980F725CBF9AD005107EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79C980F925CC39DF005107EC /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		79D6D0072543ECD000945D7C /* completed_task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = completed_task.json; sourceTree = "<group>"; };
 		79D6D0092543ECE700945D7C /* missed_task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missed_task.json; sourceTree = "<group>"; };
 		79D6D00B2543F2B300945D7C /* CompletedTaskTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskTabVC.swift; sourceTree = "<group>"; };
@@ -708,6 +710,7 @@
 				79D6D00B2543F2B300945D7C /* CompletedTaskTabVC.swift */,
 				79D6D00D2543F40A00945D7C /* MissedTaskTabVC.swift */,
 				79D6D0112543FFB100945D7C /* StatisticsTabVC.swift */,
+				79C980F925CC39DF005107EC /* NotificationVC.swift */,
 				79BC8378254311E0004A0B49 /* API Model Json */,
 				79BC837325430FF1004A0B49 /* Tableview Cell */,
 				79BC83682542FF1F004A0B49 /* Collectionview Cell */,
@@ -1254,6 +1257,7 @@
 				79AD7BFD256D2B4C00DCC33C /* RestaurantAPIManager.swift in Sources */,
 				791C864225597B060087ABA5 /* DietPlanVC.swift in Sources */,
 				79EFD6142542C44A006D06FB /* Data+RUI.swift in Sources */,
+				79C980FA25CC39DF005107EC /* NotificationVC.swift in Sources */,
 				79921E9C25CBB4E700937C72 /* NotificationSettingVC.swift in Sources */,
 				79333D22255BD7CB0092F567 /* ClinicPackageTVC.swift in Sources */,
 				79EFD6292542C44A006D06FB /* TableViewCell.swift in Sources */,

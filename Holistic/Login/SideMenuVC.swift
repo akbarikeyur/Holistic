@@ -147,7 +147,12 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 break
             case "Logout":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
-                AppDelegate().sharedDelegate().logoutFromApp()
+                showAlertWithOption("Logout", message: "Are you want to logout?", btns: ["No", "Yes"], completionConfirm: {
+                    AppDelegate().sharedDelegate().logoutFromApp()
+                }) {
+                    
+                }
+                
                 break
             default:
                 break

@@ -37,6 +37,7 @@ class HomeVC: UIViewController {
             self.flowerView.isHidden = true
             self.selecteTab()
         }
+        AppDelegate().sharedDelegate().serviceCallToGetCountry()
         AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
         setupUserDetail()
         let date = getDateFromDateString(date: "2020-11-21 04:00 PM", format: "yyyy-MM-dd hh:mm a")

@@ -81,6 +81,10 @@ class HotelDetailVC: UIViewController {
         codeView.removeFromSuperview()
     }
     
+    @IBAction func clickToCopyCode(_ sender: Any) {
+        copyClipboard(codeLbl.text!)
+    }
+    
     /*
     // MARK: - Navigation
 

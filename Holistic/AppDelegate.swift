@@ -311,5 +311,14 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
             return
         }
         printData(dict)
+        /*["google.c.sender.id": 285986607267, "gcm.notification.action_destination": , "gcm.notification.action": , "fcm_options": {
+            image = "";
+        }, "google.c.a.e": 1, "gcm.message_id": 1612447455975304, "aps": {
+            alert =     {
+                body = "You have successfully made your purchase and achieved loyalty points against it. Check your loyalty points section to see options of redemption.";
+                title = "Product Purchase";
+            };
+            "mutable-content" = 1;
+        }]*/
     }
 }

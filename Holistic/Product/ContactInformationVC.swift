@@ -174,6 +174,18 @@ extension ContactInformationVC {
             for temp in data {
                 self.arrState.append(StateModel.init(temp))
             }
+            if self.selectedState.id == 0 && AppModel.shared.currentUser.state_id != 0 {
+                let index = self.arrState.firstIndex { (temp) -> Bool in
+                    temp.id == AppModel.shared.currentUser.state_id
+                }
+                if index != nil {
+                    self.selectedState = self.arrState[index!]
+                    self.stateTxt.text = self.selectedState.name
+                    self.cityTxt.text = ""
+                    self.selectedCity = CityModel.init([String : Any]())
+                    self.serviceCallToGetCity()
+                }
+            }
         }
     }
     
@@ -182,6 +194,15 @@ extension ContactInformationVC {
             self.arrCity = [CityModel]()
             for temp in data {
                 self.arrCity.append(CityModel.init(temp))
+            }
+            if self.selectedCity.id == 0 && AppModel.shared.currentUser.city_id != 0 {
+                let index = self.arrCity.firstIndex { (temp) -> Bool in
+                    temp.id == AppModel.shared.currentUser.city_id
+                }
+                if index != nil {
+                    self.selectedCity = self.arrCity[index!]
+                    self.cityTxt.text = self.selectedCity.name                    
+                }
             }
         }
     }

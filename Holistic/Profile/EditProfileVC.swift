@@ -71,7 +71,7 @@ class EditProfileVC: UIViewController {
             countryTxt.text = selectedCountry.name
             flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + selectedCountry.phonecode
-            serviceCallToGetState(1)
+            serviceCallToGetState()
         }
         phoneTxt.text = AppModel.shared.currentUser.phone_number
         addressTxt.text = AppModel.shared.currentUser.street_address
@@ -165,13 +165,15 @@ class EditProfileVC: UIViewController {
             var param = [String : Any]()
             param["name"] = nameTxt.text
             param["email"] = AppModel.shared.currentUser.email
-            param["city_id"] = selectedState.id
+            param["city_id"] = selectedCity.id
+            param["state_id"] = selectedState.id
             param["country_id"] = selectedCountry.id
             param["room_no"] = roomTxt.text
             param["floor"] = floorTxt.text
             param["building_address"] = buildingNameTxt.text
             param["street_address"] = addressTxt.text
             param["phone_number"] = phoneTxt.text
+            param["countrycode"] = selectedCountry.id
             param["user_id"] = AppModel.shared.currentUser.id
             printData(param)
             ProfileAPIManager.shared.serviceCallToUpdateProfile(param) {
@@ -269,12 +271,12 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
             countryTxt.text = selectedCountry.name
             flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
-            serviceCallToGetState(2)
+            serviceCallToGetState()
         }
         else if selectedType == 1 {
             selectedState = (searchTxt.text?.trimmed == "" ? arrState : arrSearchState)[indexPath.row]
             stateTxt.text = selectedState.name
-            serviceCallToGetCity(2)
+            serviceCallToGetCity()
         }
         else if selectedType == 2 {
             selectedCity = (searchTxt.text?.trimmed == "" ? arrCity : arrSearchCity)[indexPath.row]
@@ -286,20 +288,41 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
 }
 
 extension EditProfileVC {
-    func serviceCallToGetState(_ type : Int) {
+    func serviceCallToGetState() {
         LoginAPIManager.shared.serviceCallToGetState(["country_id" : selectedCountry.id!]) { (data) in
             self.arrState = [StateModel]()
             for temp in data {
                 self.arrState.append(StateModel.init(temp))
             }
+            if self.selectedState.id == 0 && AppModel.shared.currentUser.state_id != 0 {
+                let index = self.arrState.firstIndex { (temp) -> Bool in
+                    temp.id == AppModel.shared.currentUser.state_id
+                }
+                if index != nil {
+                    self.selectedState = self.arrState[index!]
+                    self.stateTxt.text = self.selectedState.name
+                    self.cityTxt.text = ""
+                    self.selectedCity = CityModel.init([String : Any]())
+                    self.serviceCallToGetCity()
+                }
+            }
         }
     }
     
-    func serviceCallToGetCity(_ type : Int) {
+    func serviceCallToGetCity() {
         LoginAPIManager.shared.serviceCallToGetCity(["state_id" : selectedState.id!]) { (data) in
             self.arrCity = [CityModel]()
             for temp in data {
                 self.arrCity.append(CityModel.init(temp))
+            }
+            if self.selectedCity.id == 0 && AppModel.shared.currentUser.city_id != 0 {
+                let index = self.arrCity.firstIndex { (temp) -> Bool in
+                    temp.id == AppModel.shared.currentUser.city_id
+                }
+                if index != nil {
+                    self.selectedCity = self.arrCity[index!]
+                    self.cityTxt.text = self.selectedCity.name
+                }
             }
         }
     }

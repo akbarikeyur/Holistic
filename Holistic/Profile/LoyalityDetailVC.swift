@@ -17,12 +17,13 @@ class LoyalityDetailVC: UIViewController {
     
     var offerData = OfferModel.init([String : Any]())
     var selectedImageIndex = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupDetails()
+        serviceCallToGetOfferCode()
     }
     
     func setupDetails() {
@@ -37,7 +38,10 @@ class LoyalityDetailVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func clickToCopyCode(_ sender: Any) {
+        copyClipboard(codeLbl.text!)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -52,6 +56,13 @@ class LoyalityDetailVC: UIViewController {
 
 extension LoyalityDetailVC {
     func serviceCallToGetOfferCode() {
-        
+        var param = [String : Any]()
+        param["offer_id"] = offerData.id
+        param["user_id"] = AppModel.shared.currentUser.id
+        param["points_spent"] = offerData.points_required
+        printData(param)
+        ProfileAPIManager.shared.serviceCallToGetOfferCode(param) { (dict) in
+            self.codeLbl.text = AppModel.shared.getStringValue(dict, "code")
+        }
     }
 }
