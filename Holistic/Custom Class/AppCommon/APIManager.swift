@@ -53,7 +53,7 @@ struct API {
     static let GET_OFFER_CODE            =       BASE_URL + "offers/generateCode"
     static let GET_REDEEM_CODE_LIST      =       BASE_URL + "offers/offersRedeemed"
     
-    
+    static let GET_NOTIFICATION          =       BASE_URL + "notification/getNotificationList"
     static let GET_NOTI_SETTING          =       BASE_URL + "notification/getNotificationSettings"
     static let SET_NOTI_SETTING          =       BASE_URL + "notification/changeNotificationSetting"
 }

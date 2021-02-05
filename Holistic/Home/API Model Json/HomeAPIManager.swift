@@ -45,4 +45,19 @@ static let shared = HomeAPIManager()
             }
         }
     }
+    
+    func serviceCallToGetNotification(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_NOTIFICATION, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let dataDict = dict["data"] as? [String : Any] {
+                    if let data = dataDict["data"] as? [[String : Any]] {
+                        completion(data)
+                        return
+                    }
+                }
+                
+            }
+        }
+    }
 }

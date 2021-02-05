@@ -311,6 +311,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
             return
         }
         printData(dict)
+        NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_NOTIFICATION_SCREEN), object: nil)
         /*["google.c.sender.id": 285986607267, "gcm.notification.action_destination": , "gcm.notification.action": , "fcm_options": {
             image = "";
         }, "google.c.a.e": 1, "gcm.message_id": 1612447455975304, "aps": {

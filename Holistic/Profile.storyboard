@@ -1595,28 +1595,15 @@ United Arab Emirates</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3W-aD-Mdx">
-                                        <rect key="frame" x="270" y="0.0" width="50" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="1Dw-ea-HgT"/>
-                                        </constraints>
-                                        <state key="normal" image="notification"/>
-                                        <connections>
-                                            <action selector="clickToNotification:" destination="GXg-Cf-Wi0" eventType="touchUpInside" id="Trr-Em-EXM"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="1AX-gN-iIq" firstAttribute="centerY" secondItem="Qmk-Zl-r5u" secondAttribute="centerY" id="9Nc-3s-1U2"/>
                                     <constraint firstAttribute="bottom" secondItem="LsX-gR-Mwz" secondAttribute="bottom" id="GE4-vr-vh7"/>
                                     <constraint firstItem="LsX-gR-Mwz" firstAttribute="leading" secondItem="Qmk-Zl-r5u" secondAttribute="leading" id="MkM-3M-dCL"/>
-                                    <constraint firstAttribute="trailing" secondItem="W3W-aD-Mdx" secondAttribute="trailing" id="fp0-ck-jH6"/>
-                                    <constraint firstAttribute="bottom" secondItem="W3W-aD-Mdx" secondAttribute="bottom" id="i5y-U1-GAI"/>
                                     <constraint firstItem="1AX-gN-iIq" firstAttribute="centerX" secondItem="Qmk-Zl-r5u" secondAttribute="centerX" id="ibW-zU-f3F"/>
                                     <constraint firstItem="LsX-gR-Mwz" firstAttribute="top" secondItem="Qmk-Zl-r5u" secondAttribute="top" id="jbW-Sm-5n0"/>
                                     <constraint firstAttribute="height" constant="44" id="khf-pc-6zQ"/>
-                                    <constraint firstItem="W3W-aD-Mdx" firstAttribute="top" secondItem="Qmk-Zl-r5u" secondAttribute="top" id="ypW-uk-u28"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkE-2l-1uB">

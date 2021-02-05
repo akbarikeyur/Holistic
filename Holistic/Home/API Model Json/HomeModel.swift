@@ -89,3 +89,18 @@ struct TaskDescModel {
         return ["title" : title!, "description" : desc!, "get_media" : get_media.dictionary(), "id" : id!, "life_style_id" : life_style_id!]
     }
 }
+
+struct NotificationModel {
+    var id, user_id : Int!
+    var title, desc, type, status, created_at :String!
+    
+    init(_ dict : [String : Any]) {
+        id = AppModel.shared.getIntValue(dict, "id")
+        user_id = AppModel.shared.getIntValue(dict, "user_id")
+        title = dict["title"] as? String ?? ""
+        desc = dict["desc"] as? String ?? ""
+        status = dict["status"] as? String ?? ""
+        type = dict["type"] as? String ?? ""
+        created_at = dict["created_at"] as? String ?? ""
+    }
+}

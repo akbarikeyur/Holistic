@@ -37,7 +37,8 @@ class RestaurantVC: UIViewController {
     }
     
     @IBAction func clickToNotification(_ sender: Any) {
-        
+        let vc : NotificationVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func clickToFilter(_ sender: Any) {

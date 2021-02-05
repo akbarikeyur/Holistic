@@ -55,6 +55,7 @@ struct NOTIFICATION {
     static var REDIRECT_HOME_CLINIC         =   "REDIRECT_HOME_CLINIC"
     static var REDIRECT_CLINIC_TAB          =   "REDIRECT_CLINIC_TAB"
     static var REFRESH_COMPLETE_TASK        =   "REFRESH_COMPLETE_TASK"
+    static var REDIRECT_NOTIFICATION_SCREEN =   "REDIRECT_NOTIFICATION_SCREEN"
 }
 
 struct Platform {

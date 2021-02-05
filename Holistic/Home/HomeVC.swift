@@ -32,6 +32,8 @@ class HomeVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(redirectToHomeLifestyle), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_LIFESTYLE), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(redirectToHomeClinic), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(setupUserDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(clickToNotification(_:)), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_NOTIFICATION_SCREEN), object: nil)
+        
         registerCollectionView()
         delay(2.0) {
             self.flowerView.isHidden = true
@@ -73,7 +75,8 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func clickToNotification(_ sender: Any) {
-        
+        let vc : NotificationVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func clickToFilter(_ sender: Any) {
