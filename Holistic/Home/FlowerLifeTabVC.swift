@@ -10,6 +10,7 @@ import UIKit
 
 class FlowerLifeTabVC: UIViewController {
 
+    @IBOutlet weak var flowerImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,25 @@ class FlowerLifeTabVC: UIViewController {
     func setupDetails() {
         let height = SCREEN.HEIGHT - 388
         NotificationCenter.default.post(name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: height)
+    }
+    
+    
+    func setFlower(_ value : Int) {
+        if value > 100 {
+            flowerImg.image = UIImage(named: "flower_100")
+        }
+        else if value > 75 {
+            flowerImg.image = UIImage(named: "flower_75")
+        }
+        else if value > 50 {
+            flowerImg.image = UIImage(named: "flower_50")
+        }
+        else if value > 25 {
+            flowerImg.image = UIImage(named: "flower_25")
+        }
+        else {
+            flowerImg.image = UIImage(named: "flower_off")
+        }
     }
     
     /*

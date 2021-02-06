@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -105,6 +105,12 @@
                                 <rect key="frame" x="0.0" y="173" width="320" height="395"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have to login to Clinicia app to see your clincia data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDT-2N-a7o">
+                                <rect key="frame" x="20" y="265" width="280" height="38"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -112,14 +118,17 @@
                             <constraint firstItem="MMj-u4-9TO" firstAttribute="top" secondItem="HsV-0h-apC" secondAttribute="bottom" id="6Qk-vw-Gcn"/>
                             <constraint firstItem="cnf-VX-Eq4" firstAttribute="top" secondItem="MMj-u4-9TO" secondAttribute="bottom" id="Bg7-ZG-pWD"/>
                             <constraint firstItem="hXD-hj-fZw" firstAttribute="top" secondItem="pPY-Kw-iRs" secondAttribute="bottom" constant="10" id="FVj-1Q-167"/>
+                            <constraint firstItem="lDT-2N-a7o" firstAttribute="centerY" secondItem="TIP-bC-Y8L" secondAttribute="centerY" id="HOj-OW-1mL"/>
                             <constraint firstItem="6zT-qc-Pvc" firstAttribute="trailing" secondItem="HsV-0h-apC" secondAttribute="trailing" constant="10" id="ImS-f3-AiI"/>
                             <constraint firstAttribute="bottom" secondItem="cnf-VX-Eq4" secondAttribute="bottom" id="PlF-oU-cDX"/>
                             <constraint firstItem="cnf-VX-Eq4" firstAttribute="leading" secondItem="6zT-qc-Pvc" secondAttribute="leading" id="SqP-LD-JvT"/>
                             <constraint firstItem="hXD-hj-fZw" firstAttribute="leading" secondItem="6zT-qc-Pvc" secondAttribute="leading" constant="10" id="XNB-sz-BLW"/>
                             <constraint firstItem="pPY-Kw-iRs" firstAttribute="leading" secondItem="6zT-qc-Pvc" secondAttribute="leading" id="Zie-CX-mHI"/>
                             <constraint firstItem="6zT-qc-Pvc" firstAttribute="trailing" secondItem="hXD-hj-fZw" secondAttribute="trailing" constant="10" id="Zl2-AQ-nfH"/>
+                            <constraint firstItem="6zT-qc-Pvc" firstAttribute="trailing" secondItem="lDT-2N-a7o" secondAttribute="trailing" constant="20" id="b8q-BV-e4B"/>
                             <constraint firstItem="pPY-Kw-iRs" firstAttribute="trailing" secondItem="6zT-qc-Pvc" secondAttribute="trailing" id="bFh-0G-5br"/>
                             <constraint firstItem="MMj-u4-9TO" firstAttribute="trailing" secondItem="6zT-qc-Pvc" secondAttribute="trailing" id="fWg-CQ-l1O"/>
+                            <constraint firstItem="lDT-2N-a7o" firstAttribute="leading" secondItem="6zT-qc-Pvc" secondAttribute="leading" constant="20" id="gwi-g9-Jhd"/>
                             <constraint firstItem="cnf-VX-Eq4" firstAttribute="trailing" secondItem="6zT-qc-Pvc" secondAttribute="trailing" id="lVS-0w-WW8"/>
                             <constraint firstItem="HsV-0h-apC" firstAttribute="top" secondItem="hXD-hj-fZw" secondAttribute="bottom" id="rCc-n4-bhW"/>
                             <constraint firstItem="pPY-Kw-iRs" firstAttribute="top" secondItem="6zT-qc-Pvc" secondAttribute="top" constant="20" id="s4c-js-Qrf"/>
@@ -131,6 +140,7 @@
                     <navigationItem key="navigationItem" id="vJC-58-ocE"/>
                     <connections>
                         <outlet property="mainContainerView" destination="cnf-VX-Eq4" id="URU-3B-htC"/>
+                        <outlet property="noDataLbl" destination="lDT-2N-a7o" id="mwL-Zu-1an"/>
                         <outlet property="tabCV" destination="MMj-u4-9TO" id="Ga9-ua-iBs"/>
                     </connections>
                 </viewController>
@@ -168,11 +178,20 @@
                                 <rect key="frame" x="0.0" y="60" width="320" height="508"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have to login to Clinicia app to see your clincia data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ9-Td-TyX">
+                                <rect key="frame" x="20" y="265" width="280" height="38"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="SJ9-Td-TyX" firstAttribute="leading" secondItem="FtS-Ib-LXG" secondAttribute="leading" constant="20" id="2iO-LS-ghJ"/>
                             <constraint firstItem="P0x-7f-1x9" firstAttribute="leading" secondItem="FtS-Ib-LXG" secondAttribute="leading" id="9LQ-pD-w4q"/>
+                            <constraint firstItem="FtS-Ib-LXG" firstAttribute="trailing" secondItem="SJ9-Td-TyX" secondAttribute="trailing" constant="20" id="9TN-tg-q9m"/>
                             <constraint firstItem="FtS-Ib-LXG" firstAttribute="trailing" secondItem="P0x-7f-1x9" secondAttribute="trailing" id="BvJ-F4-kaP"/>
+                            <constraint firstItem="SJ9-Td-TyX" firstAttribute="centerY" secondItem="Sxp-HD-he0" secondAttribute="centerY" id="HI1-KT-CGm"/>
                             <constraint firstItem="dIf-Cb-Rve" firstAttribute="leading" secondItem="FtS-Ib-LXG" secondAttribute="leading" id="Slh-hL-1pE"/>
                             <constraint firstItem="P0x-7f-1x9" firstAttribute="top" secondItem="dIf-Cb-Rve" secondAttribute="bottom" id="edy-ue-NUb"/>
                             <constraint firstItem="FtS-Ib-LXG" firstAttribute="bottom" secondItem="P0x-7f-1x9" secondAttribute="bottom" id="jJb-rE-ac3"/>
@@ -183,6 +202,7 @@
                     </view>
                     <connections>
                         <outlet property="mainContainerView" destination="P0x-7f-1x9" id="wRn-oN-FWb"/>
+                        <outlet property="noDataLbl" destination="SJ9-Td-TyX" id="fO1-J0-uGV"/>
                         <outlet property="tabCV" destination="dIf-Cb-Rve" id="CYO-hY-FAg"/>
                     </connections>
                 </viewController>

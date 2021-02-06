@@ -12,6 +12,7 @@ class ClinicVC: UIViewController {
 
     @IBOutlet weak var tabCV: UICollectionView!
     @IBOutlet weak var mainContainerView: UIView!
+    @IBOutlet weak var noDataLbl: UILabel!
     
     var arrTab = [ClinicCategoryModel]()
     var selectedTab = 0
@@ -28,12 +29,21 @@ class ClinicVC: UIViewController {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(redirectToTab(_:)), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: nil)
         registerCollectionView()
-        arrTab = [ClinicCategoryModel]()
-        for temp in getJsonFromFile("clinic_category") {
-            arrTab.append(ClinicCategoryModel.init(temp))
+        if AppModel.shared.currentUser.clinicea_user_id != "" {
+            tabCV.isHidden = false
+            mainContainerView.isHidden = false
+            noDataLbl.isHidden = true
+            arrTab = [ClinicCategoryModel]()
+            for temp in getJsonFromFile("clinic_category") {
+                arrTab.append(ClinicCategoryModel.init(temp))
+            }
+            tabCV.reloadData()
+            selecteTab()
+        }else{
+            tabCV.isHidden = true
+            mainContainerView.isHidden = true
+            noDataLbl.isHidden = false
         }
-        tabCV.reloadData()
-        selecteTab()
     }
     
     @objc func redirectToTab(_ noti : Notification) {

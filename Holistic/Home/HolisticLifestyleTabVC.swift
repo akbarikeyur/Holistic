@@ -13,6 +13,8 @@ class HolisticLifestyleTabVC: UIViewController {
     @IBOutlet weak var tabCV: UICollectionView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var constraintHeightView: NSLayoutConstraint!
+    @IBOutlet weak var percentageAchiveLbl: Label!
+    @IBOutlet weak var goalLbl: Label!
     
     var arrTabData = ["Flower of Life", "Current Tasks", "Completed Tasks", "Missed Tasks", "Statistics"]
     var selectedTab = 0
@@ -30,6 +32,7 @@ class HolisticLifestyleTabVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateHeight(_:)), name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: nil)
         registerCollectionView()
         selecteTab()
+        serviceCallToGetStatistics()
     }
     
     func setupDetails() {
@@ -121,6 +124,34 @@ extension HolisticLifestyleTabVC : UICollectionViewDelegate, UICollectionViewDat
     @objc func updateHeight(_ noti : Notification) {
         if let height = noti.object as? CGFloat {
             constraintHeightView.constant = height
+        }
+    }
+}
+
+extension HolisticLifestyleTabVC {
+    func serviceCallToGetStatistics() {
+        var param = [String : Any]()
+        param["user_id"] = AppModel.shared.currentUser.id
+        
+        let components = Calendar.current.dateComponents([.year, .month], from: Date())
+        let startOfMonth = Calendar.current.date(from: components)
+        param["start_date"] = getLocalDateStringFromDate(date: startOfMonth!, format: "yyyy-MM-dd")
+        
+        var comps2 = DateComponents()
+        comps2.month = 1
+        comps2.day = -1
+        let endOfMonth = Calendar.current.date(byAdding: comps2, to: startOfMonth!)
+        param["end_date"] = getLocalDateStringFromDate(date: endOfMonth!, format: "yyyy-MM-dd")
+        printData(param)
+        
+        HomeAPIManager.shared.serviceCallToGetStatistics(param) { (dict) in
+            let completedTask = AppModel.shared.getIntValue(dict, "vCompletedTask")
+            let totalTask = AppModel.shared.getIntValue(dict, "vTotalTask")
+            
+            let percentage = Int(completedTask * 100 / totalTask)
+            self.flowerTab.setFlower(percentage)
+            self.percentageAchiveLbl.text = String(percentage) + "% achieved"
+            self.goalLbl.text = "Based on your overall health test, your score is " + String(completedTask) + " and consider good..."
         }
     }
 }
