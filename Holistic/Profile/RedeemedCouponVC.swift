@@ -1,5 +1,5 @@
 //
-//  MyLoyalityPointVC.swift
+//  RedeemedCouponVC.swift
 //  Holistic
 //
 //  Created by Keyur Akbari on 03/02/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyLoyalityPointVC: UIViewController {
+class RedeemedCouponVC: UIViewController {
 
     @IBOutlet weak var pointLbl: Label!
     @IBOutlet weak var pointCV: UICollectionView!
@@ -24,7 +24,6 @@ class MyLoyalityPointVC: UIViewController {
         registerCollectionView()
         AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
         setupDetail()
-        serviceCallToGetRedeemCodeList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +49,7 @@ class MyLoyalityPointVC: UIViewController {
     }
     
     @IBAction func clickToMyOffer(_ sender: Any) {
-        let vc : LoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityPointVC") as! LoyalityPointVC
+        let vc : AvailableCouponVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "AvailableCouponVC") as! AvailableCouponVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -67,7 +66,7 @@ class MyLoyalityPointVC: UIViewController {
 }
 
 //MARK:- CollectionView Method
-extension MyLoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension RedeemedCouponVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func registerCollectionView() {
         pointCV.register(UINib.init(nibName: "LoyalityPointCVC", bundle: nil), forCellWithReuseIdentifier: "LoyalityPointCVC")
@@ -108,9 +107,7 @@ extension MyLoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSour
             }
             return
         }
-        let vc : LoyalityDetailVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityDetailVC") as! LoyalityDetailVC
-        vc.offerData = arrOffer[sender.tag]
-        self.navigationController?.pushViewController(vc, animated: true)
+        serviceCallToGetOfferCode(arrOffer[sender.tag])
     }
     
     @IBAction func clickToRemove(_ sender: UIButton) {
@@ -118,7 +115,7 @@ extension MyLoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
-extension MyLoyalityPointVC {
+extension RedeemedCouponVC {
     func serviceCallToGetBookmarkOffer() {
         ProfileAPIManager.shared.serviceCallToGetBookmarkOffer(["user_id" : AppModel.shared.currentUser.id!]) { (data) in
             self.arrOffer = [OfferModel]()
@@ -148,11 +145,19 @@ extension MyLoyalityPointVC {
         }
     }
     
-    func serviceCallToGetRedeemCodeList() {
+    func serviceCallToGetOfferCode(_ offerData : OfferModel) {
         var param = [String : Any]()
+        param["offer_id"] = offerData.id
         param["user_id"] = AppModel.shared.currentUser.id
-        ProfileAPIManager.shared.serviceCallToGetRedeemCodeList(param) { (data) in
-            
+        param["points_spent"] = offerData.points_required
+        printData(param)
+        ProfileAPIManager.shared.serviceCallToGetOfferCode(param) { (dict) in
+            if AppModel.shared.getStringValue(dict, "code") != "" {
+                let vc : LoyalityDetailVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityDetailVC") as! LoyalityDetailVC
+                vc.offerData = offerData
+                vc.code = AppModel.shared.getStringValue(dict, "code")
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,7 +32,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bx5-r7-kOt" customClass="View" customModule="Holistic" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="70" height="70"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_product" translatesAutoresizingMaskIntoConstraints="NO" id="UHo-tH-RTs">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="UHo-tH-RTs">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     </imageView>
                                 </subviews>
@@ -54,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED 250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8h-MW-dqg" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="90" y="13" width="75" height="21.5"/>
+                                <rect key="frame" x="90" y="13" width="70.5" height="21"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +64,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHb-o0-7fN" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="170" y="14" width="19" height="19"/>
+                                <rect key="frame" x="165.5" y="14" width="17.5" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,7 +76,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtd-n3-UvL" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="90" y="39.5" width="200" height="28.5"/>
+                                <rect key="frame" x="90" y="39" width="200" height="28"/>
                                 <string key="text">Enterogermina Probiotic Oral
 Suspension 2 Billion/5ml Vials 10's</string>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
@@ -97,8 +95,8 @@ Suspension 2 Billion/5ml Vials 10's</string>
                                     <constraint firstAttribute="height" constant="1" id="Vci-qf-Ccc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ref: 184655023" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkp-ls-pnb" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="10" y="101" width="89" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ref: 184655023" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkp-ls-pnb" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="101" width="85" height="14.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -108,8 +106,8 @@ Suspension 2 Billion/5ml Vials 10's</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only 3 left in stock" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-ku-1dU" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="10" y="115.5" width="112" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Only 3 left in stock" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-ku-1dU" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="115.5" width="100" height="14.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -121,10 +119,10 @@ Suspension 2 Billion/5ml Vials 10's</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5U1-aK-c3V" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="201" y="96" width="89" height="35"/>
+                                <rect key="frame" x="202.5" y="96" width="87.5" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usg-n0-SC2" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="5" width="24" height="25"/>
+                                        <rect key="frame" x="10" y="5" width="22.5" height="25"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -135,7 +133,7 @@ Suspension 2 Billion/5ml Vials 10's</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ylb-kn-ZOI" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="44" y="4" width="40" height="27"/>
+                                        <rect key="frame" x="42.5" y="4" width="40" height="27"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3u9-BB-S6d" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                                 <rect key="frame" x="5" y="0.0" width="20" height="27"/>
@@ -253,6 +251,6 @@ Suspension 2 Billion/5ml Vials 10's</string>
     <resources>
         <image name="dash_line" width="344" height="1"/>
         <image name="dropdown" width="9" height="9"/>
-        <image name="temp_product" width="71" height="71"/>
+        <image name="ic_placeholder" width="128" height="128"/>
     </resources>
 </document>

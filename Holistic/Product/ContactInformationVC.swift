@@ -29,11 +29,7 @@ class ContactInformationVC: UIViewController {
     var arrCartData = [CartModel]()
     
     let arrCountry = getCountryData()
-    var arrState = [StateModel]()
-    var arrCity = [CityModel]()
     var selectedCountry = CountryModel.init([String : Any]())
-    var selectedState = StateModel.init([String : Any]())
-    var selectedCity = CityModel.init([String : Any]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +51,9 @@ class ContactInformationVC: UIViewController {
         if index != nil {
             flagImg.image = UIImage(named: arrCountry[index!].sortname.lowercased())
             selectedCountry = arrCountry[index!]
-            serviceCallToGetState()
         }
+        stateTxt.text = AppModel.shared.currentUser.state_id
+        cityTxt.text = AppModel.shared.currentUser.city_id
         phoneTxt.text = AppModel.shared.currentUser.phone_number
         emailTxt.text = AppModel.shared.currentUser.email
         addressTxt.text = AppModel.shared.currentUser.street_address
@@ -90,57 +87,7 @@ class ContactInformationVC: UIViewController {
                 self.countryLbl.text = item
                 self.selectedCountry = self.arrCountry[dropindex]
                 self.flagImg.image = UIImage(named: self.arrCountry[dropindex].sortname.lowercased())
-                self.stateTxt.text = ""
-                self.selectedState = StateModel.init([String : Any]())
-                self.cityTxt.text = ""
-                self.selectedCity = CityModel.init([String : Any]())
-                self.serviceCallToGetState()
             }
-        }
-        dropDown.show()
-    }
-    
-    @IBAction func clickToSelectState(_ sender: UIButton) {
-        self.view.endEditing(true)
-        if selectedCountry.id == 0 {
-            displayToast("Please select country")
-            return
-        }
-        var arrData = [String]()
-        for temp in arrState {
-            arrData.append(temp.name)
-        }
-        let dropDown = DropDown()
-        dropDown.anchorView = sender
-        dropDown.dataSource = arrData
-        dropDown.selectionAction = { [unowned self] (dropindex: Int, item: String) in
-            if self.selectedState.id != self.arrState[dropindex].id {
-                self.stateTxt.text = item
-                self.selectedState = self.arrState[dropindex]
-                self.cityTxt.text = ""
-                self.selectedCity = CityModel.init([String : Any]())
-                self.serviceCallToGetCity()
-            }
-        }
-        dropDown.show()
-    }
-    
-    @IBAction func clickToSelectCity(_ sender: UIButton) {
-        self.view.endEditing(true)
-        if selectedState.id == 0 {
-            displayToast("Please select state")
-            return
-        }
-        var arrData = [String]()
-        for temp in arrCity {
-            arrData.append(temp.name)
-        }
-        let dropDown = DropDown()
-        dropDown.anchorView = sender
-        dropDown.dataSource = arrData
-        dropDown.selectionAction = { [unowned self] (dropindex: Int, item: String) in
-            self.cityTxt.text = item
-            self.selectedCity = self.arrCity[dropindex]
         }
         dropDown.show()
     }
@@ -165,45 +112,4 @@ class ContactInformationVC: UIViewController {
     }
     */
 
-}
-
-extension ContactInformationVC {
-    func serviceCallToGetState() {
-        LoginAPIManager.shared.serviceCallToGetState(["country_id" : selectedCountry.id!]) { (data) in
-            self.arrState = [StateModel]()
-            for temp in data {
-                self.arrState.append(StateModel.init(temp))
-            }
-            if self.selectedState.id == 0 && AppModel.shared.currentUser.state_id != 0 {
-                let index = self.arrState.firstIndex { (temp) -> Bool in
-                    temp.id == AppModel.shared.currentUser.state_id
-                }
-                if index != nil {
-                    self.selectedState = self.arrState[index!]
-                    self.stateTxt.text = self.selectedState.name
-                    self.cityTxt.text = ""
-                    self.selectedCity = CityModel.init([String : Any]())
-                    self.serviceCallToGetCity()
-                }
-            }
-        }
-    }
-    
-    func serviceCallToGetCity() {
-        LoginAPIManager.shared.serviceCallToGetCity(["state_id" : selectedState.id!]) { (data) in
-            self.arrCity = [CityModel]()
-            for temp in data {
-                self.arrCity.append(CityModel.init(temp))
-            }
-            if self.selectedCity.id == 0 && AppModel.shared.currentUser.city_id != 0 {
-                let index = self.arrCity.firstIndex { (temp) -> Bool in
-                    temp.id == AppModel.shared.currentUser.city_id
-                }
-                if index != nil {
-                    self.selectedCity = self.arrCity[index!]
-                    self.cityTxt.text = self.selectedCity.name                    
-                }
-            }
-        }
-    }
 }

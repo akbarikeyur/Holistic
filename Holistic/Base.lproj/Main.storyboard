@@ -1502,38 +1502,12 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-ae-ZaN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="50"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                                        <state key="normal" image="dropdown"/>
-                                                        <connections>
-                                                            <action selector="clickToSelectState:" destination="pLk-ms-qY0" eventType="touchUpInside" id="IQA-Vk-SK2"/>
-                                                        </connections>
-                                                    </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fM6-D3-OAe" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
-                                                        <rect key="frame" x="104" y="5" width="1" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="1" id="WhZ-Nd-4A7"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="backgroundColorTypeAdapter">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="xXd-sa-BiP" secondAttribute="trailing" constant="10" id="GHq-Ep-kIY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="XIo-ae-ZaN" secondAttribute="trailing" id="KC8-GF-nAi"/>
                                                     <constraint firstAttribute="bottom" secondItem="xXd-sa-BiP" secondAttribute="bottom" id="PC1-xO-8f5"/>
-                                                    <constraint firstAttribute="bottom" secondItem="XIo-ae-ZaN" secondAttribute="bottom" id="Rdk-AV-pOe"/>
-                                                    <constraint firstItem="XIo-ae-ZaN" firstAttribute="leading" secondItem="Vda-NH-4bQ" secondAttribute="leading" id="Xaz-cV-x7l"/>
-                                                    <constraint firstAttribute="trailing" secondItem="fM6-D3-OAe" secondAttribute="trailing" constant="30" id="bYE-n7-EvS"/>
                                                     <constraint firstItem="xXd-sa-BiP" firstAttribute="top" secondItem="Vda-NH-4bQ" secondAttribute="top" id="cbT-AI-9Ay"/>
-                                                    <constraint firstItem="XIo-ae-ZaN" firstAttribute="top" secondItem="Vda-NH-4bQ" secondAttribute="top" id="fUv-n4-dc4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="fM6-D3-OAe" secondAttribute="bottom" constant="5" id="mly-DK-423"/>
-                                                    <constraint firstItem="fM6-D3-OAe" firstAttribute="top" secondItem="Vda-NH-4bQ" secondAttribute="top" constant="5" id="nhH-Gs-KuS"/>
                                                     <constraint firstAttribute="height" constant="50" id="qhB-NV-8Tu"/>
                                                     <constraint firstItem="xXd-sa-BiP" firstAttribute="leading" secondItem="Vda-NH-4bQ" secondAttribute="leading" constant="10" id="vhp-rE-o0v"/>
                                                 </constraints>
@@ -1563,39 +1537,13 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rzo-Kc-D5p" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
-                                                        <rect key="frame" x="104" y="5" width="1" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="1" id="I7j-2Y-I3t"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="backgroundColorTypeAdapter">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrd-8B-jqi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="50"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                                        <state key="normal" image="dropdown"/>
-                                                        <connections>
-                                                            <action selector="clickToSelectCity:" destination="pLk-ms-qY0" eventType="touchUpInside" id="5el-n1-oDE"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="LLd-g6-V8q" secondAttribute="bottom" id="8Ev-qw-2kh"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Rzo-Kc-D5p" secondAttribute="bottom" constant="5" id="JM2-zM-Xij"/>
                                                     <constraint firstAttribute="height" constant="50" id="K4f-az-EG4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="wrd-8B-jqi" secondAttribute="bottom" id="KUe-Va-Y8z"/>
-                                                    <constraint firstItem="Rzo-Kc-D5p" firstAttribute="top" secondItem="Ksh-7U-tzF" secondAttribute="top" constant="5" id="MXv-Z2-gKh"/>
-                                                    <constraint firstAttribute="trailing" secondItem="wrd-8B-jqi" secondAttribute="trailing" id="W5B-4e-yUc"/>
-                                                    <constraint firstItem="wrd-8B-jqi" firstAttribute="leading" secondItem="Ksh-7U-tzF" secondAttribute="leading" id="Yxt-4I-Vcn"/>
                                                     <constraint firstItem="LLd-g6-V8q" firstAttribute="leading" secondItem="Ksh-7U-tzF" secondAttribute="leading" constant="10" id="c3c-IW-l91"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Rzo-Kc-D5p" secondAttribute="trailing" constant="30" id="fCO-mq-l9s"/>
                                                     <constraint firstAttribute="trailing" secondItem="LLd-g6-V8q" secondAttribute="trailing" constant="10" id="ftr-BY-54c"/>
-                                                    <constraint firstItem="wrd-8B-jqi" firstAttribute="top" secondItem="Ksh-7U-tzF" secondAttribute="top" id="wcX-Lk-zY7"/>
                                                     <constraint firstItem="LLd-g6-V8q" firstAttribute="top" secondItem="Ksh-7U-tzF" secondAttribute="top" id="xcM-Rx-BbR"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>

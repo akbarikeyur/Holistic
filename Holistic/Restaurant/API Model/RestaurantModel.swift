@@ -64,7 +64,7 @@ struct CategoryModel {
 struct RestaurantMenuModel {
     var id, restaurant_id, category_id : Int!
     var title, desc, price : String!
-    
+    var get_single_media : MediaModel!
 
     init(_ dict : [String : Any]) {
         id = AppModel.shared.getIntValue(dict, "id")
@@ -73,9 +73,10 @@ struct RestaurantMenuModel {
         title = dict["title"] as? String ?? ""
         desc = dict["desc"] as? String ?? ""
         price = AppModel.shared.getStringValue(dict, "price")
+        get_single_media = MediaModel.init(dict["get_single_media"] as? [String : Any] ?? [String : Any]())
     }
     
     func dictionary() -> [String : Any] {
-        return ["id" : id!, "restaurant_id" : restaurant_id!, "category_id" : category_id!, "title" : title!, "desc" : desc!, "price" : price!]
+        return ["id" : id!, "restaurant_id" : restaurant_id!, "category_id" : category_id!, "title" : title!, "desc" : desc!, "price" : price!, "get_single_media" : get_single_media.dictionary()]
     }
 }

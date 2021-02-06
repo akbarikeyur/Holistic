@@ -20,7 +20,8 @@ struct API {
     static let SIGNUP                    =       BASE_URL + "user/signup"
     static let EMAIL_LOGIN               =       BASE_URL + "user/loginwithemail"
     static let MOBILE_LOGIN              =       BASE_URL + "user/login"
-    static let UPDATE_PROFILE            =       BASE_URL + "user/signup"
+    static let FORGOT_PASSWORD              =       BASE_URL + "user/forgetPassword"
+    static let UPDATE_PROFILE            =       BASE_URL + "user/updateProfile"
     static let GET_USER_DETAIL           =       BASE_URL + "user/getUserDetails"
     
     static let GET_TASK_LIST             =       BASE_URL + "lifestyle/getTasks"
@@ -44,6 +45,8 @@ struct API {
     static let CHECK_PRODUCT_QTY         =       BASE_URL + "product/checkproductqty"
     static let ADD_TO_CART               =       BASE_URL + "cart/addtocart"
     static let GET_MY_CART               =       BASE_URL + "cart/getCart"
+    static let REMOVE_FROM_CART          =       BASE_URL + "cart/removeIndividualProduct"
+    static let EMPTY_FULL_CART           =       BASE_URL + "cart/emptyCart"
     
     static let PRODUCT_PURCHASE          =       BASE_URL + "product/purchase"
     static let GET_PURCHASE_HISTORY      =       BASE_URL + "product/productPurchaseHistory"

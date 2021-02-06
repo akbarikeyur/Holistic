@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +26,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8J-hl-yiZ" customClass="View" customModule="Holistic" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="300" height="130"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_food" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-aq-aIx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-aq-aIx">
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="Fga-Df-GoI"/>
@@ -69,7 +67,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED 250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="791-aR-d2i" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="120" y="48.5" width="66.5" height="19"/>
+                                <rect key="frame" x="120" y="48.5" width="63" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,7 +79,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-8T-GAv" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="191.5" y="54" width="35.5" height="12"/>
+                                <rect key="frame" x="188" y="54" width="31.5" height="12"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,7 +100,7 @@
                                 <state key="normal" image="location_pin"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="AgP-C3-3vA" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="140" y="73" width="47.5" height="14.5"/>
+                                <rect key="frame" x="140" y="73.5" width="44.5" height="14"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,9 +208,9 @@
     </objects>
     <resources>
         <image name="code_orange" width="20.5" height="8.5"/>
+        <image name="ic_placeholder" width="128" height="128"/>
         <image name="location_pin" width="10" height="14"/>
         <image name="star_empty" width="14.5" height="14"/>
         <image name="star_fill" width="12.5" height="11.5"/>
-        <image name="temp_food" width="278" height="181"/>
     </resources>
 </document>

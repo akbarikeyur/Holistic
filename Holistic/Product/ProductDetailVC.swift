@@ -25,6 +25,7 @@ class ProductDetailVC: UIViewController {
     @IBOutlet weak var howUseBtn: Button!
     @IBOutlet weak var benifitUseTitleLbl: Label!
     @IBOutlet weak var benifitUseValueLbl: Label!
+    @IBOutlet weak var otherProductView: UIView!
     @IBOutlet weak var productTbl: UITableView!
     @IBOutlet weak var constraintHeightProductTbl: NSLayoutConstraint!
     
@@ -46,14 +47,14 @@ class ProductDetailVC: UIViewController {
     
     func setupDetails() {
         productNameLbl.text = productData.name
-        referenceLbl.text = String(productData.id)
+        referenceLbl.text = "Ref: " + String(productData.id)
         if productData.product_total_qty_in_count > 10 {
             stockLbl.text = String(productData.product_total_qty_in_count) + " left in stock"
         }else{
             stockLbl.text = "Only " + String(productData.product_total_qty_in_count) + " left in stock"
         }
         priceLbl.text = "Price: " + displayPriceWithCurrency(productData.price)
-        totalQtyLbl.text = String(productData.product_total_qty_in_count)
+        totalQtyLbl.text = "Qty: " + String(productData.product_total_qty_in_count)
         deliveryLbl.text = productData.delivery
         descLbl.text = productData.desc.html2String
         clickToBenifitHowUse(benifitBtn)
@@ -65,6 +66,8 @@ class ProductDetailVC: UIViewController {
         }
         imageCV.reloadData()
         updateProductTableviewHeight()
+        quantityLbl.text = "1"
+        otherProductView.isHidden = (arrOtherData.count == 0)
     }
     
     //MARK:- Button click event
@@ -93,7 +96,11 @@ class ProductDetailVC: UIViewController {
     }
     
     @IBAction func clickToAddToCart(_ sender: Any) {
-        serviceCallToAddToCart()
+        if productData.product_total_qty_in_count < Int(quantityLbl.text!)! {
+            displayToast("Out of stock")
+        }else{
+            serviceCallToAddToCart()
+        }
     }
     
     @IBAction func clickToBenifitHowUse(_ sender: UIButton) {

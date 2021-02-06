@@ -18,12 +18,15 @@ class MissedTaskTabVC: UIViewController {
     
     var arrTaskData = [TaskModel]()
     var selectedIndex = 0
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tblView.refreshControl = refreshControl
     }
     
     func setupDetails() {
@@ -32,6 +35,11 @@ class MissedTaskTabVC: UIViewController {
         }else{
             updateHeight()
         }
+    }
+    
+    @objc func refreshData() {
+        refreshControl.endRefreshing()
+        serviceCallToGetMissedTask()
     }
     
     //MARK:- Button click event
@@ -133,7 +141,7 @@ extension MissedTaskTabVC {
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
         param["status"] = "missed"
-        HomeAPIManager.shared.serviceCallToGetMissedTask(param) { (data) in
+        HomeAPIManager.shared.serviceCallToGetCompletedMissedTask(param) { (data) in
             self.arrTaskData = [TaskModel]()
             for temp in data {
                 self.arrTaskData.append(TaskModel.init(temp))

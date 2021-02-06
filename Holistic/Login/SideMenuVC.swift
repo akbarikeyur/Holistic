@@ -121,15 +121,9 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 arrMenuData[sender.tag].isExpand = !arrMenuData[sender.tag].isExpand
                 tblView.reloadData()
                 break
-            case "My Loyalty Points":
-                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
-                let vc : MyLoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "MyLoyalityPointVC") as! MyLoyalityPointVC
-                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
-                break
-            case "My Offer":
-                self.menuContainerViewController.toggleLeftSideMenuCompletion {}
-                let vc : LoyalityPointVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "LoyalityPointVC") as! LoyalityPointVC
-                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+            case "Loyalty points":
+                arrMenuData[sender.tag].isExpand = !arrMenuData[sender.tag].isExpand
+                tblView.reloadData()
                 break
             case "Blogs":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -242,6 +236,23 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                     let vc : MyCodeVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "MyCodeVC") as! MyCodeVC
                     vc.type = 2
                     UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    break
+                default:
+                    break
+            }
+        }
+        else if title == "Loyalty points" {
+            switch arrMenuData[indexPath.section].data[indexPath.row].title {
+                case "Available Coupons":
+                    let vc : AvailableCouponVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "AvailableCouponVC") as! AvailableCouponVC
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case "Redeemed Coupons":
+                    let vc : RedeemedCouponVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "RedeemedCouponVC") as! RedeemedCouponVC
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case "Activated Coupons":
+                    
                     break
                 default:
                     break

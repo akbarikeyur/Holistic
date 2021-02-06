@@ -17,13 +17,14 @@ class LoyalityDetailVC: UIViewController {
     
     var offerData = OfferModel.init([String : Any]())
     var selectedImageIndex = 0
-
+    var code = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupDetails()
-        serviceCallToGetOfferCode()
+        codeLbl.text = code
     }
     
     func setupDetails() {
@@ -62,7 +63,7 @@ extension LoyalityDetailVC {
         param["points_spent"] = offerData.points_required
         printData(param)
         ProfileAPIManager.shared.serviceCallToGetOfferCode(param) { (dict) in
-            self.codeLbl.text = AppModel.shared.getStringValue(dict, "code")
+            
         }
     }
 }

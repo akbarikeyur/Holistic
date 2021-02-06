@@ -19,6 +19,8 @@ class MyCartVC: UIViewController {
     @IBOutlet weak var shippingLbl: Label!
     @IBOutlet weak var taxLbl: Label!
     @IBOutlet weak var totalPriceLbl: Label!
+    @IBOutlet weak var myScroll: UIScrollView!
+    @IBOutlet weak var noDataView: UIView!
     
     var arrCartData = [CartModel]()
     
@@ -26,6 +28,8 @@ class MyCartVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        noDataView.isHidden = true
+        myScroll.isHidden = true
         registerTableViewMethod()
         serviceCallToGetMyCart()
     }
@@ -48,6 +52,9 @@ class MyCartVC: UIViewController {
         price += 10
         price = price + (price * 0.05)
         totalPriceLbl.text = displayPriceWithCurrency(String(price))
+        
+        noDataView.isHidden = (arrCartData.count > 0)
+        myScroll.isHidden = (arrCartData.count == 0)
     }
     
     //MARK:- Button click event
@@ -56,7 +63,19 @@ class MyCartVC: UIViewController {
     }
     
     @IBAction func clickToContinueShopping(_ sender: Any) {
-        
+        self.view.endEditing(true)
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ProductListVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
+            UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func clickToProcessToCheckout(_ sender: Any) {
@@ -100,8 +119,10 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource, MGSwipeTableCel
         cell.delegate = self
         let deleteBtn = MGSwipeButton(title: "", icon: UIImage(named: "delete"), backgroundColor: OrangeColor) { (sender: MGSwipeTableCell!) -> Bool in
             print("Convenience callback for swipe buttons!")
+            self.serviceCallToRemoveProductFromCart(self.arrCartData[indexPath.row].id)
             self.arrCartData.remove(at: indexPath.row)
             self.updateDetailTableviewHeight()
+            self.setupDetails()
             return true
         }
         cell.rightButtons = [deleteBtn]
@@ -153,6 +174,12 @@ extension MyCartVC {
             self.tblView.reloadData()
             self.updateDetailTableviewHeight()
             self.setupDetails()
+        }
+    }
+    
+    func serviceCallToRemoveProductFromCart(_ id : Int) {
+        ProductAPIManager.shared.serviceCallToRemoveProductFromCart(["id" : id]) {
+            
         }
     }
 }

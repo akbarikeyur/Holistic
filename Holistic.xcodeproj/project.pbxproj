@@ -59,7 +59,7 @@
 		793EA15E25CAA40400815A42 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793EA15D25CAA40400815A42 /* ProfileModel.swift */; };
 		79465A642567D6DC0019D803 /* ClinicAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79465A632567D6DC0019D803 /* ClinicAPIManager.swift */; };
 		794EDD1F25669B6600F867EB /* ReferFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD1E25669B6600F867EB /* ReferFriendVC.swift */; };
-		794EDD2125669B7B00F867EB /* LoyalityPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */; };
+		794EDD2125669B7B00F867EB /* AvailableCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD2025669B7B00F867EB /* AvailableCouponVC.swift */; };
 		794EDD2525669F0C00F867EB /* LoyalityPointCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD2325669F0C00F867EB /* LoyalityPointCVC.swift */; };
 		794EDD2625669F0C00F867EB /* LoyalityPointCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794EDD2425669F0C00F867EB /* LoyalityPointCVC.xib */; };
 		794EDD282566A6C000F867EB /* LoyalityDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */; };
@@ -72,7 +72,7 @@
 		7953C028254C0E1D00DF1BFA /* PurchaseProductCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */; };
 		7953C029254C0E1E00DF1BFA /* PurchaseProductCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */; };
 		7953C02C254C1D0400DF1BFA /* ClinicTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */; };
-		7960904025CAB2C7009D233C /* MyLoyalityPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960903F25CAB2C7009D233C /* MyLoyalityPointVC.swift */; };
+		7960904025CAB2C7009D233C /* RedeemedCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960903F25CAB2C7009D233C /* RedeemedCouponVC.swift */; };
 		79678B5225877FC100808F08 /* ProductAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5125877FC100808F08 /* ProductAPIManager.swift */; };
 		79678B5425877FCF00808F08 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5325877FCF00808F08 /* ProductModel.swift */; };
 		797C39B32567AF1F00E55C2B /* ClinicPrescriptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */; };
@@ -94,6 +94,7 @@
 		799AB89B2546C57600033175 /* Hotel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799AB89A2546C57600033175 /* Hotel.storyboard */; };
 		79A4BCD12594677B00F04062 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A4BCD02594677B00F04062 /* EditProfileVC.swift */; };
 		79A6A0892559339500E3CCD6 /* ClinicListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6A0882559339500E3CCD6 /* ClinicListVC.swift */; };
+		79A84E2425CED3E100CD1AA9 /* ActivatedCouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A84E2325CED3E100CD1AA9 /* ActivatedCouponsVC.swift */; };
 		79AD21AB254D6AFD00C97A89 /* ClinicCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */; };
 		79AD21AC254D6AFD00C97A89 /* ClinicCategoryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */; };
 		79AD21AF254D6E6500C97A89 /* clinic_category.json in Resources */ = {isa = PBXBuildFile; fileRef = 79AD21AE254D6E6500C97A89 /* clinic_category.json */; };
@@ -268,7 +269,7 @@
 		793EA15D25CAA40400815A42 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		79465A632567D6DC0019D803 /* ClinicAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicAPIManager.swift; sourceTree = "<group>"; };
 		794EDD1E25669B6600F867EB /* ReferFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferFriendVC.swift; sourceTree = "<group>"; };
-		794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityPointVC.swift; sourceTree = "<group>"; };
+		794EDD2025669B7B00F867EB /* AvailableCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCouponVC.swift; sourceTree = "<group>"; };
 		794EDD2325669F0C00F867EB /* LoyalityPointCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityPointCVC.swift; sourceTree = "<group>"; };
 		794EDD2425669F0C00F867EB /* LoyalityPointCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoyalityPointCVC.xib; sourceTree = "<group>"; };
 		794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyalityDetailVC.swift; sourceTree = "<group>"; };
@@ -281,7 +282,7 @@
 		7953C026254C0E1D00DF1BFA /* PurchaseProductCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductCVC.swift; sourceTree = "<group>"; };
 		7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseProductCVC.xib; sourceTree = "<group>"; };
 		7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicTabVC.swift; sourceTree = "<group>"; };
-		7960903F25CAB2C7009D233C /* MyLoyalityPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoyalityPointVC.swift; sourceTree = "<group>"; };
+		7960903F25CAB2C7009D233C /* RedeemedCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemedCouponVC.swift; sourceTree = "<group>"; };
 		79678B5125877FC100808F08 /* ProductAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPIManager.swift; sourceTree = "<group>"; };
 		79678B5325877FCF00808F08 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPrescriptionsVC.swift; sourceTree = "<group>"; };
@@ -303,6 +304,7 @@
 		799AB89A2546C57600033175 /* Hotel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hotel.storyboard; sourceTree = "<group>"; };
 		79A4BCD02594677B00F04062 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		79A6A0882559339500E3CCD6 /* ClinicListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListVC.swift; sourceTree = "<group>"; };
+		79A84E2325CED3E100CD1AA9 /* ActivatedCouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatedCouponsVC.swift; sourceTree = "<group>"; };
 		79AD21A9254D6AFD00C97A89 /* ClinicCategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCategoryCVC.swift; sourceTree = "<group>"; };
 		79AD21AA254D6AFD00C97A89 /* ClinicCategoryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicCategoryCVC.xib; sourceTree = "<group>"; };
 		79AD21AE254D6E6500C97A89 /* clinic_category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clinic_category.json; sourceTree = "<group>"; };
@@ -449,8 +451,9 @@
 				188D4E56255071A000DE6715 /* ProfileVC.swift */,
 				79A4BCD02594677B00F04062 /* EditProfileVC.swift */,
 				794EDD1E25669B6600F867EB /* ReferFriendVC.swift */,
-				794EDD2025669B7B00F867EB /* LoyalityPointVC.swift */,
-				7960903F25CAB2C7009D233C /* MyLoyalityPointVC.swift */,
+				794EDD2025669B7B00F867EB /* AvailableCouponVC.swift */,
+				7960903F25CAB2C7009D233C /* RedeemedCouponVC.swift */,
+				79A84E2325CED3E100CD1AA9 /* ActivatedCouponsVC.swift */,
 				794EDD272566A6C000F867EB /* LoyalityDetailVC.swift */,
 				79921E9B25CBB4E700937C72 /* NotificationSettingVC.swift */,
 				79C78684259DCF700099F838 /* API Model */,
@@ -1212,7 +1215,7 @@
 				79EFD6092542C44A006D06FB /* AppModel.swift in Sources */,
 				7938F2A125493D390002A276 /* FoodListSectionTVC.swift in Sources */,
 				79EFD62E2542C44A006D06FB /* TextView.swift in Sources */,
-				794EDD2125669B7B00F867EB /* LoyalityPointVC.swift in Sources */,
+				794EDD2125669B7B00F867EB /* AvailableCouponVC.swift in Sources */,
 				79EC86FD25511CE2000C8F5E /* OTPVerificationVC.swift in Sources */,
 				18B435AB2543544A00757513 /* ExpandCollapseTVC.swift in Sources */,
 				79EFD6402542D040006D06FB /* SwipeButtonView.swift in Sources */,
@@ -1315,13 +1318,14 @@
 				79333D1A255BB9A20092F567 /* PrescriptionsCVC.swift in Sources */,
 				79149D1A254FE86A00CBD522 /* BlogListTVC.swift in Sources */,
 				79EFD6152542C44A006D06FB /* UIColor+RUI.swift in Sources */,
+				79A84E2425CED3E100CD1AA9 /* ActivatedCouponsVC.swift in Sources */,
 				79BC83652542EF85004A0B49 /* CustomTabBarController.swift in Sources */,
 				79055208256E2E5E00A4CA08 /* SingleLableTVC.swift in Sources */,
 				79EFD62C2542C44A006D06FB /* TableView.swift in Sources */,
 				7938F2BA254968CF0002A276 /* ProductDetailTVC.swift in Sources */,
 				79D6D01D254408EA00945D7C /* IntAxisValueFormatter.swift in Sources */,
 				79149D14254FE64100CBD522 /* BlogListCVC.swift in Sources */,
-				7960904025CAB2C7009D233C /* MyLoyalityPointVC.swift in Sources */,
+				7960904025CAB2C7009D233C /* RedeemedCouponVC.swift in Sources */,
 				79AD21B1254D6F6B00C97A89 /* ClinicCategoryModel.swift in Sources */,
 				7938F2BD25496B640002A276 /* ProductDetailVC.swift in Sources */,
 				79F2184B2548179800D981C1 /* HotelDetailVC.swift in Sources */,

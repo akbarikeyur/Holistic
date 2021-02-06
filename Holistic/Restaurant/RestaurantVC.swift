@@ -15,12 +15,15 @@ class RestaurantVC: UIViewController {
     @IBOutlet var exploreView: UIView!
     
     var arrRestaurant = [RestaurantModel]()
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        refreshControl.addTarget(self, action: #selector(serviceCallToGetRestaurantList), for: .valueChanged)
+        tblView.refreshControl = refreshControl
         serviceCallToGetRestaurantList()
     }
     
@@ -98,7 +101,8 @@ extension RestaurantVC : UITableViewDelegate, UITableViewDataSource {
 
 //MARK:- Service called
 extension RestaurantVC {
-    func serviceCallToGetRestaurantList() {
+    @objc func serviceCallToGetRestaurantList() {
+        refreshControl.endRefreshing()
         RestaurantAPIManager.shared.serviceCallToGetRestaurantList { (data, is_last) in
             self.arrRestaurant = [RestaurantModel]()
             for temp in data {

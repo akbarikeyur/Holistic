@@ -79,7 +79,11 @@ class OrderSummaryVC: UIViewController {
             if let message = dict["message"] as? String, message == "product out of stock" {
                 displayToast(message.capitalized)
             }else{
-                AppDelegate().sharedDelegate().navigateToDashBoard()
+                ProductAPIManager.shared.serviceCallToClearFullCart(["user_id" : AppModel.shared.currentUser.id!]) {
+                    
+                }
+                let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
+                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

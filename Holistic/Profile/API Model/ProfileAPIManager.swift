@@ -107,6 +107,11 @@ public class ProfileAPIManager {
                     return
                 }
             }
+            else if let status = dict["status"] as? String, status == "error" {
+                if let message = dict["message"] as? String, message != "" {
+                    displayToast(message.capitalized)
+                }
+            }
         }
     }
     

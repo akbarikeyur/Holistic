@@ -1,5 +1,5 @@
 //
-//  LoyalityPointVC.swift
+//  AvailableCouponVC.swift
 //  Holistic
 //
 //  Created by Keyur Akbari on 19/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoyalityPointVC: UIViewController {
+class AvailableCouponVC: UIViewController {
 
     @IBOutlet weak var pointLbl: Label!
     @IBOutlet weak var pointCV: UICollectionView!
@@ -63,7 +63,7 @@ class LoyalityPointVC: UIViewController {
 }
 
 //MARK:- CollectionView Method
-extension LoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension AvailableCouponVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func registerCollectionView() {
         pointCV.register(UINib.init(nibName: "LoyalityPointCVC", bundle: nil), forCellWithReuseIdentifier: "LoyalityPointCVC")
@@ -105,7 +105,7 @@ extension LoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
 }
 
-extension LoyalityPointVC {
+extension AvailableCouponVC {
     func serviceCallToGetOffer() {
         ProfileAPIManager.shared.serviceCallToGetOffer { (data) in
             self.arrOffer = [OfferModel]()
@@ -122,7 +122,7 @@ extension LoyalityPointVC {
         param["offer_id"] = id
         param["user_id"] = AppModel.shared.currentUser.id
         ProfileAPIManager.shared.serviceCallToBookmarkOffer(param) {
-            displayToast("Offer bookmarked successfully")
+            displayToast("Coupon has been added to Redeemed section, you can activate from there.")
         }
     }
 }

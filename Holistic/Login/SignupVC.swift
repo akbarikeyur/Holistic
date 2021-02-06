@@ -33,14 +33,8 @@ class SignupVC: UIViewController {
     @IBOutlet weak var searchTbl: UITableView!
     
     var arrCountry = [CountryModel]()
-    var arrState = [StateModel]()
-    var arrCity = [CityModel]()
     var arrSearchCountry = [CountryModel]()
-    var arrSearchState = [StateModel]()
-    var arrSearchCity = [CityModel]()
     var selectedCountry = CountryModel.init([String : Any]())
-    var selectedState = StateModel.init([String : Any]())
-    var selectedCity = CityModel.init([String : Any]())
     var selectedType = 0
     
     override func viewDidLoad() {
@@ -69,7 +63,6 @@ class SignupVC: UIViewController {
                 countryTxt.text = selectedCountry.name
                 flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
                 phonecodeTxt.text = "+" + selectedCountry.phonecode
-                serviceCallToGetState()
             }
         }
     }
@@ -87,32 +80,6 @@ class SignupVC: UIViewController {
         searchTxt.text = ""
         arrCountry = getCountryData()
         selectedType = 0
-        displaySubViewtoParentView(self.view, subview: searchView)
-        searchTbl.reloadData()
-    }
-    
-    @IBAction func clickToSelectState(_ sender: UIButton) {
-        searchTxt.text = ""
-        if selectedCountry.id == 0 {
-            displayToast("select_country_first")
-            return
-        }
-        selectedType = 1
-        displaySubViewtoParentView(self.view, subview: searchView)
-        searchTbl.reloadData()
-    }
-    
-    @IBAction func clickToSelectCity(_ sender: UIButton) {
-        searchTxt.text = ""
-        if selectedState.id == 0 {
-            displayToast("select_state_first")
-            return
-        }
-        if arrCity.count == 0 {
-            displayToast("City data not found.")
-            return
-        }
-        selectedType = 2
         displaySubViewtoParentView(self.view, subview: searchView)
         searchTbl.reloadData()
     }
@@ -190,8 +157,8 @@ class SignupVC: UIViewController {
             param["email"] = emailTxt.text
             param["password"] = passwordTxt.text
             param["country_id"] = selectedCountry.id
-            param["state_id"] = selectedState.id
-            param["city_id"] = selectedCity.id
+            param["state_id"] = stateTxt.text
+            param["city_id"] = cityTxt.text
             param["room_no"] = roomTxt.text
             param["floor"] = floorTxt.text
             param["building_address"] = buildingNameTxt.text
@@ -232,20 +199,6 @@ class SignupVC: UIViewController {
                     return (nameTxt.range(of: textField.text!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
                 })
             }
-            else if selectedType == 1 {
-                arrSearchState = [StateModel]()
-                arrSearchState = arrState.filter({ (result) -> Bool in
-                    let nameTxt: NSString = result.name! as NSString
-                    return (nameTxt.range(of: textField.text!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-                })
-            }
-            else if selectedType == 2 {
-                arrSearchCity = [CityModel]()
-                arrSearchCity = arrCity.filter({ (result) -> Bool in
-                    let nameTxt: NSString = result.name! as NSString
-                    return (nameTxt.range(of: textField.text!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-                })
-            }
             searchTbl.reloadData()
         }
     }
@@ -273,12 +226,6 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
         if selectedType == 0 || selectedType == 3 {
             return searchTxt.text?.trimmed == "" ? arrCountry.count : arrSearchCountry.count
         }
-        else if selectedType == 1 {
-            return searchTxt.text?.trimmed == "" ? arrState.count : arrSearchState.count
-        }
-        else if selectedType == 2 {
-            return searchTxt.text?.trimmed == "" ? arrCity.count : arrSearchCity.count
-        }
         return 0
     }
     
@@ -290,12 +237,6 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
         let cell : SingleLableTVC = searchTbl.dequeueReusableCell(withIdentifier: "SingleLableTVC") as! SingleLableTVC
         if selectedType == 0 {
             cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
-        }
-        else if selectedType == 1 {
-            cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrState : arrSearchState)[indexPath.row].name
-        }
-        else if selectedType == 2 {
-            cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrCity : arrSearchCity)[indexPath.row].name
         }
         else if selectedType == 3 {
             cell.titleLbl.text = "(+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode + ") " + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
@@ -310,42 +251,8 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
             countryTxt.text = selectedCountry.name
             flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
-            selectedState = StateModel.init([String : Any]())
-            stateTxt.text = ""
-            serviceCallToGetState()
-        }
-        else if selectedType == 1 {
-            selectedState = (searchTxt.text?.trimmed == "" ? arrState : arrSearchState)[indexPath.row]
-            stateTxt.text = selectedState.name
-            selectedCity = CityModel.init([String : Any]())
-            cityTxt.text = ""
-            serviceCallToGetCity()
-        }
-        else if selectedType == 2 {
-            selectedCity = (searchTxt.text?.trimmed == "" ? arrCity : arrSearchCity)[indexPath.row]
-            cityTxt.text = selectedCity.name
         }
         searchView.removeFromSuperview()
         searchTxt.text = ""
-    }
-}
-
-extension SignupVC {
-    func serviceCallToGetState() {
-        LoginAPIManager.shared.serviceCallToGetState(["country_id" : selectedCountry.id!]) { (data) in
-            self.arrState = [StateModel]()
-            for temp in data {
-                self.arrState.append(StateModel.init(temp))
-            }
-        }
-    }
-    
-    func serviceCallToGetCity() {
-        LoginAPIManager.shared.serviceCallToGetCity(["state_id" : selectedState.id!]) { (data) in
-            self.arrCity = [CityModel]()
-            for temp in data {
-                self.arrCity.append(CityModel.init(temp))
-            }
-        }
     }
 }

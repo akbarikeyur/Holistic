@@ -260,6 +260,7 @@ extension AppDelegate {
             for temp in data {
                 AppModel.shared.MY_CART.append(CartModel.init(temp))
             }
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.UPDATE_CART_COUNT), object: nil)
         }
     }
 }

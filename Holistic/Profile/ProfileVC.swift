@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet weak var userImg: ImageView!
     @IBOutlet weak var displayNameLbl: Label!
     @IBOutlet weak var usernameLbl: Label!
     @IBOutlet weak var nameLbl: Label!
@@ -29,7 +30,7 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(setupDetails), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         setupDetails()
         registerTableViewMethod()
         serviceCallToGetNotificationSetting()
@@ -39,10 +40,11 @@ class ProfileVC: UIViewController {
         AppDelegate().sharedDelegate().showTabBar()
     }
     
-    func setupDetails() {
+    @objc func setupDetails() {
         if AppModel.shared.currentUser == nil {
             return
         }
+        setImageBackgroundImage(userImg, AppModel.shared.currentUser.get_profile.url, IMAGE.PLACEHOLDER)
         displayNameLbl.text = AppModel.shared.currentUser.name
         usernameLbl.text = ""
         nameLbl.text = AppModel.shared.currentUser.name
@@ -108,8 +110,6 @@ class ProfileVC: UIViewController {
             
         }
     }
-    
-    
     /*
     // MARK: - Navigation
 

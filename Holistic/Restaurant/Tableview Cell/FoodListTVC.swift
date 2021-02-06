@@ -21,6 +21,7 @@ class FoodListTVC: UITableViewCell {
     }
 
     func setupDetails(_ dict : RestaurantMenuModel) {
+        setImageBackgroundImage(imgView, dict.get_single_media.url, IMAGE.PLACEHOLDER)
         nameLbl.text = dict.title
         descLbl.text = dict.desc.html2String
         priceLbl.text = displayPriceWithCurrency(dict.price)

@@ -28,13 +28,14 @@ static let shared = HomeAPIManager()
         APIManager.shared.callPostRequest(API.MAKE_TASK_COMPLETE, param, true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
+                AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
                 completion()
                 return
             }
         }
     }
     
-    func serviceCallToGetMissedTask(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+    func serviceCallToGetCompletedMissedTask(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
         APIManager.shared.callPostRequest(API.GET_MISSED_TASK_LIST, param, true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {

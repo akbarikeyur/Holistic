@@ -14,6 +14,7 @@ public class RestaurantAPIManager {
 
     func serviceCallToGetRestaurantList( _ completion: @escaping (_ data : [[String : Any]], _ last_page : Int) -> Void) {
         APIManager.shared.callPostRequest(API.GET_RESTAURANT_LIST, [String : Any](), true) { (dict) in
+            printData(dict)
             if let status = dict["status"] as? String, status == "success" {
                 if let tempDict = dict["data"] as? [String : Any] {
                     if let data = tempDict["data"] as? [[String : Any]] {

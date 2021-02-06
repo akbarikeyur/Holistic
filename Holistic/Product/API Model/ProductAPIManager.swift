@@ -109,4 +109,24 @@ public class ProductAPIManager {
             }
         }
     }
+    
+    func serviceCallToRemoveProductFromCart(_ param : [String : Any], _ completion: @escaping () -> Void) {
+        APIManager.shared.callPostRequest(API.REMOVE_FROM_CART, param, false) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion()
+                return
+            }
+        }
+    }
+    
+    func serviceCallToClearFullCart(_ param : [String : Any], _ completion: @escaping () -> Void) {
+        APIManager.shared.callPostRequest(API.EMPTY_FULL_CART, param, false) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                completion()
+                return
+            }
+        }
+    }
 }

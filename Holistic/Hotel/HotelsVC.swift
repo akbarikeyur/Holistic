@@ -16,6 +16,7 @@ class HotelsVC: UIViewController {
     @IBOutlet var exploreView: UIView!
     
     var arrHotel = [HotelModel]()
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class HotelsVC: UIViewController {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(setupUserDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         registerTableViewMethod()
+        refreshControl.addTarget(self, action: #selector(serviceCallToGetHotelList), for: .valueChanged)
+        tblView.refreshControl = refreshControl
         serviceCallToGetHotelList()
         setupUserDetail()
     }
@@ -112,7 +115,8 @@ extension HotelsVC : UITableViewDelegate, UITableViewDataSource {
 
 //MARK:- Service called
 extension HotelsVC {
-    func serviceCallToGetHotelList() {
+    @objc func serviceCallToGetHotelList() {
+        refreshControl.endRefreshing()
         HotelAPIManager.shared.serviceCallToGetHotelList { (data, is_last) in
             self.arrHotel = [HotelModel]()
             for temp in data {

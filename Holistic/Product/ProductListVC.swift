@@ -19,6 +19,7 @@ class ProductListVC: UIViewController {
     
     var page = 1
     var arrProduct = [ProductModel]()
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class ProductListVC: UIViewController {
         // Do any additional setup after loading the view.
         registerTableViewMethod()
         registerCollectionView()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tblView.refreshControl = refreshControl
         
         if AppModel.shared.MY_CART != nil && AppModel.shared.MY_CART.count > 0 {
             cartLbl.text = String(AppModel.shared.MY_CART.count)
@@ -39,6 +42,12 @@ class ProductListVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().hideTabBar()
+    }
+    
+    @objc func refreshData() {
+        refreshControl.endRefreshing()
+        page = 1
+        serviceCallToGetProductList()
     }
     
     //MARK:- Button click event

@@ -32,7 +32,17 @@ class MyPurchaseVC: UIViewController {
     
     //MARK:- Button click event
     @IBAction func clickToBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ProductListVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     @IBAction func clickToFilter(_ sender: Any) {

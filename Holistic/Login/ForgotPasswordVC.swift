@@ -34,9 +34,8 @@ class ForgotPasswordVC: UIViewController {
         else{
             var param = [String : Any]()
             param["email"] = emailTxt.text
-            
             LoginAPIManager.shared.serviceCallToForgotPassword(param) { (dict) in
-                
+                displayToast("Password reset link sent to your email address.")
             }
         }
     }

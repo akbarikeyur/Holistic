@@ -690,7 +690,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-PI-eFX">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_banner1" translatesAutoresizingMaskIntoConstraints="NO" id="gX6-gu-Xnp">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gX6-gu-Xnp">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="350" id="1L4-rI-e3M"/>
@@ -2605,12 +2605,12 @@ Which Is Right for You? </string>
         <image name="flower_off" width="359" height="359"/>
         <image name="flower_on" width="338" height="338"/>
         <image name="ic_clock" width="14.5" height="14.5"/>
+        <image name="ic_placeholder" width="348" height="179"/>
         <image name="ic_sun" width="76" height="76"/>
         <image name="menu" width="28.5" height="22"/>
         <image name="next_orange" width="14.5" height="9"/>
         <image name="notification" width="21" height="22"/>
         <image name="share" width="16.5" height="12"/>
-        <image name="temp_banner1" width="167" height="154"/>
         <image name="top_cut_bg" width="376" height="321"/>
         <image name="white_shadow" width="375" height="139"/>
     </resources>

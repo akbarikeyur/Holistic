@@ -18,6 +18,7 @@ class CompletedTaskTabVC: UIViewController {
     
     var arrTaskData = [TaskModel]()
     var selectedIndex = 0
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class CompletedTaskTabVC: UIViewController {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(refreshCompletedTask), name: NSNotification.Name.init(NOTIFICATION.REFRESH_COMPLETE_TASK), object: nil)
         registerTableViewMethod()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tblView.refreshControl = refreshControl
     }
     
     func setupDetails() {
@@ -33,6 +36,11 @@ class CompletedTaskTabVC: UIViewController {
         }else{
             updateHeight()
         }
+    }
+    
+    @objc func refreshData() {
+        refreshControl.endRefreshing()
+        serviceCallToGetCompletedTask()
     }
     
     @objc func refreshCompletedTask() {
@@ -135,7 +143,7 @@ extension CompletedTaskTabVC {
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
         param["status"] = "completed"
-        HomeAPIManager.shared.serviceCallToGetMissedTask(param) { (data) in
+        HomeAPIManager.shared.serviceCallToGetCompletedMissedTask(param) { (data) in
             self.arrTaskData = [TaskModel]()
             for temp in data {
                 self.arrTaskData.append(TaskModel.init(temp))

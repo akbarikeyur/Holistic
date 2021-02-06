@@ -18,12 +18,20 @@ class CurrentTaskTabVC: UIViewController {
     
     var arrTaskData = [TaskModel]()
     var selectedIndex = 0
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tblView.refreshControl = refreshControl
+    }
+    
+    @objc func refreshData() {
+        refreshControl.endRefreshing()
+        serviceCallToGetTask()
     }
     
     func setupDetails() {

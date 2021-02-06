@@ -37,7 +37,7 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     }
     
     func setupDetails() {
-        NotificationCenter.default.post(name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: 668)
+        NotificationCenter.default.post(name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: 680)
         serviceCallToGetStatistics()
     }
 

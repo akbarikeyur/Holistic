@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +26,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2Q-Rb-Yvr" customClass="View" customModule="Holistic" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="300" height="130"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_hotel" translatesAutoresizingMaskIntoConstraints="NO" id="W99-Qw-fOJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="W99-Qw-fOJ">
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="BEX-pX-e6x"/>
@@ -90,7 +88,7 @@
                                 <state key="normal" image="location_pin"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocq-ZE-b1j" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="140" y="72" width="55.5" height="16.5"/>
+                                <rect key="frame" x="140" y="72" width="52" height="16.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -260,10 +258,10 @@
     </objects>
     <resources>
         <image name="code_orange" width="20.5" height="8.5"/>
+        <image name="ic_placeholder" width="128" height="128"/>
         <image name="location_pin" width="10" height="14"/>
         <image name="payment_card" width="10" height="8.5"/>
         <image name="star_empty" width="14.5" height="14"/>
         <image name="star_fill" width="12.5" height="11.5"/>
-        <image name="temp_hotel" width="200" height="133"/>
     </resources>
 </document>

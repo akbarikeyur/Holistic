@@ -73,12 +73,21 @@
                 ]
     },
     {
-        "title" : "My Loyalty Points",
-        "image" : "menu_point"
-    },
-    {
-        "title" : "My Offer",
-        "image" : "menu_point"
+        "title" : "Loyalty points",
+        "image" : "menu_point",
+        "select_image" : "menu_point",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "Available Coupons"
+                    },
+                    {
+                        "title" : "Redeemed Coupons"
+                    },
+                    {
+                        "title" : "Activated Coupons"
+                    }
+                ]
     },
     {
         "title" : "Blogs",

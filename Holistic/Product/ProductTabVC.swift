@@ -15,19 +15,28 @@ class ProductTabVC: UIViewController {
     
     var page = 1
     var arrProduct = [ProductModel]()
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
-        
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tblView.refreshControl = refreshControl
     }
     
     func setupDetails() {
         if arrProduct.count == 0 {
+            page = 1
             serviceCallToGetProductList()
         }
+    }
+    
+    @objc func refreshData() {
+        refreshControl.endRefreshing()
+        page = 1
+        serviceCallToGetProductList()
     }
     
     @IBAction func clickToFilter(_ sender: Any) {

@@ -14,12 +14,15 @@ class HotelsTabVC: UIViewController {
     @IBOutlet var exploreView: UIView!
     
     var arrHotel = [HotelModel]()
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        refreshControl.addTarget(self, action: #selector(serviceCallToGetHotelList), for: .valueChanged)
+        tblView.refreshControl = refreshControl
         serviceCallToGetHotelList()
     }
     
@@ -84,7 +87,8 @@ extension HotelsTabVC : UITableViewDelegate, UITableViewDataSource {
 
 //MARK:- Service called
 extension HotelsTabVC {
-    func serviceCallToGetHotelList() {
+    @objc func serviceCallToGetHotelList() {
+        refreshControl.endRefreshing()
         HotelAPIManager.shared.serviceCallToGetHotelList { (data, is_last) in
             self.arrHotel = [HotelModel]()
             for temp in data {

@@ -28,14 +28,8 @@ class EditProfileVC: UploadImageVC {
     @IBOutlet weak var searchTbl: UITableView!
     
     var arrCountry = [CountryModel]()
-    var arrState = [StateModel]()
-    var arrCity = [CityModel]()
     var arrSearchCountry = [CountryModel]()
-    var arrSearchState = [StateModel]()
-    var arrSearchCity = [CityModel]()
     var selectedCountry = CountryModel.init([String : Any]())
-    var selectedState = StateModel.init([String : Any]())
-    var selectedCity = CityModel.init([String : Any]())
     var selectedType = 0
     
     var profileImage : UIImage?
@@ -64,6 +58,7 @@ class EditProfileVC: UploadImageVC {
         if AppModel.shared.currentUser == nil {
             return
         }
+        setImageBackgroundImage(profileImg, AppModel.shared.currentUser.get_profile.url, IMAGE.PLACEHOLDER)
         nameTxt.text = AppModel.shared.currentUser.name
         let index = arrCountry.firstIndex { (temp) -> Bool in
             temp.id == AppModel.shared.currentUser.country_id
@@ -73,8 +68,9 @@ class EditProfileVC: UploadImageVC {
             countryTxt.text = selectedCountry.name
             flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + selectedCountry.phonecode
-            serviceCallToGetState()
         }
+        stateTxt.text = AppModel.shared.currentUser.state_id
+        cityTxt.text = AppModel.shared.currentUser.city_id
         phoneTxt.text = AppModel.shared.currentUser.phone_number
         addressTxt.text = AppModel.shared.currentUser.street_address
         buildingNameTxt.text = AppModel.shared.currentUser.building_address
@@ -110,28 +106,6 @@ class EditProfileVC: UploadImageVC {
         searchTxt.text = ""
         arrCountry = getCountryData()
         selectedType = 0
-        displaySubViewtoParentView(self.view, subview: searchView)
-        searchTbl.reloadData()
-    }
-    
-    @IBAction func clickToSelectState(_ sender: UIButton) {
-        searchTxt.text = ""
-        if selectedCountry.id == 0 {
-            displayToast("select_country_first")
-            return
-        }
-        selectedType = 1
-        displaySubViewtoParentView(self.view, subview: searchView)
-        searchTbl.reloadData()
-    }
-    
-    @IBAction func clickToSelectCity(_ sender: UIButton) {
-        searchTxt.text = ""
-        if selectedState.id == 0 {
-            displayToast("select_state_first")
-            return
-        }
-        selectedType = 2
         displaySubViewtoParentView(self.view, subview: searchView)
         searchTbl.reloadData()
     }
@@ -177,8 +151,8 @@ class EditProfileVC: UploadImageVC {
             var param = [String : Any]()
             param["name"] = nameTxt.text
             param["email"] = AppModel.shared.currentUser.email
-            param["city_id"] = selectedCity.id
-            param["state_id"] = selectedState.id
+            param["city_id"] = cityTxt.text
+            param["state_id"] = stateTxt.text
             param["country_id"] = selectedCountry.id
             param["room_no"] = roomTxt.text
             param["floor"] = floorTxt.text
@@ -189,6 +163,7 @@ class EditProfileVC: UploadImageVC {
             param["user_id"] = AppModel.shared.currentUser.id
             printData(param)
             ProfileAPIManager.shared.serviceCallToUpdateProfile(param, profileImage) {
+                AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
                 self.navigationController?.popViewController(animated: true)
             }
         }
@@ -201,20 +176,6 @@ class EditProfileVC: UploadImageVC {
             if selectedType == 0 || selectedType == 3 {
                 arrSearchCountry = [CountryModel]()
                 arrSearchCountry = arrCountry.filter({ (result) -> Bool in
-                    let nameTxt: NSString = result.name! as NSString
-                    return (nameTxt.range(of: textField.text!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-                })
-            }
-            else if selectedType == 1 {
-                arrSearchState = [StateModel]()
-                arrSearchState = arrState.filter({ (result) -> Bool in
-                    let nameTxt: NSString = result.name! as NSString
-                    return (nameTxt.range(of: textField.text!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-                })
-            }
-            else if selectedType == 2 {
-                arrSearchCity = [CityModel]()
-                arrSearchCity = arrCity.filter({ (result) -> Bool in
                     let nameTxt: NSString = result.name! as NSString
                     return (nameTxt.range(of: textField.text!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
                 })
@@ -246,12 +207,6 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
         if selectedType == 0 || selectedType == 3 {
             return searchTxt.text?.trimmed == "" ? arrCountry.count : arrSearchCountry.count
         }
-        else if selectedType == 1 {
-            return searchTxt.text?.trimmed == "" ? arrState.count : arrSearchState.count
-        }
-        else if selectedType == 2 {
-            return searchTxt.text?.trimmed == "" ? arrCity.count : arrSearchCity.count
-        }
         return 0
     }
     
@@ -263,12 +218,6 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
         let cell : SingleLableTVC = searchTbl.dequeueReusableCell(withIdentifier: "SingleLableTVC") as! SingleLableTVC
         if selectedType == 0 {
             cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
-        }
-        else if selectedType == 1 {
-            cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrState : arrSearchState)[indexPath.row].name
-        }
-        else if selectedType == 2 {
-            cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrCity : arrSearchCity)[indexPath.row].name
         }
         else if selectedType == 3 {
             cell.titleLbl.text = "(+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode + ") " + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
@@ -283,59 +232,8 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
             countryTxt.text = selectedCountry.name
             flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
-            serviceCallToGetState()
-        }
-        else if selectedType == 1 {
-            selectedState = (searchTxt.text?.trimmed == "" ? arrState : arrSearchState)[indexPath.row]
-            stateTxt.text = selectedState.name
-            serviceCallToGetCity()
-        }
-        else if selectedType == 2 {
-            selectedCity = (searchTxt.text?.trimmed == "" ? arrCity : arrSearchCity)[indexPath.row]
-            cityTxt.text = selectedCity.name
         }
         searchView.removeFromSuperview()
         searchTxt.text = ""
-    }
-}
-
-extension EditProfileVC {
-    func serviceCallToGetState() {
-        LoginAPIManager.shared.serviceCallToGetState(["country_id" : selectedCountry.id!]) { (data) in
-            self.arrState = [StateModel]()
-            for temp in data {
-                self.arrState.append(StateModel.init(temp))
-            }
-            if self.selectedState.id == 0 && AppModel.shared.currentUser.state_id != 0 {
-                let index = self.arrState.firstIndex { (temp) -> Bool in
-                    temp.id == AppModel.shared.currentUser.state_id
-                }
-                if index != nil {
-                    self.selectedState = self.arrState[index!]
-                    self.stateTxt.text = self.selectedState.name
-                    self.cityTxt.text = ""
-                    self.selectedCity = CityModel.init([String : Any]())
-                    self.serviceCallToGetCity()
-                }
-            }
-        }
-    }
-    
-    func serviceCallToGetCity() {
-        LoginAPIManager.shared.serviceCallToGetCity(["state_id" : selectedState.id!]) { (data) in
-            self.arrCity = [CityModel]()
-            for temp in data {
-                self.arrCity.append(CityModel.init(temp))
-            }
-            if self.selectedCity.id == 0 && AppModel.shared.currentUser.city_id != 0 {
-                let index = self.arrCity.firstIndex { (temp) -> Bool in
-                    temp.id == AppModel.shared.currentUser.city_id
-                }
-                if index != nil {
-                    self.selectedCity = self.arrCity[index!]
-                    self.cityTxt.text = self.selectedCity.name
-                }
-            }
-        }
     }
 }
