@@ -55,7 +55,7 @@ class ProductDetailVC: UIViewController {
         priceLbl.text = "Price: " + displayPriceWithCurrency(productData.price)
         totalQtyLbl.text = String(productData.product_total_qty_in_count)
         deliveryLbl.text = productData.delivery
-        descLbl.text = productData.desc
+        descLbl.text = productData.desc.html2String
         clickToBenifitHowUse(benifitBtn)
         
         if productData.product_single_image.count > 0 {

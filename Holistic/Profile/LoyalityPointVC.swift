@@ -82,7 +82,7 @@ extension LoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSource
         cell.setupDetails(arrOffer[indexPath.row])
         cell.redeemBtn.isHidden = false
         cell.getCodeBtn.isHidden = true
-        cell.getCodeBtn.tag = indexPath.row
+        cell.redeemBtn.tag = indexPath.row
         cell.redeemBtn.addTarget(self, action: #selector(clickToRedeem(_:)), for: .touchUpInside)
         return cell
     }

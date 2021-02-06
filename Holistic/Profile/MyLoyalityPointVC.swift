@@ -22,6 +22,7 @@ class MyLoyalityPointVC: UIViewController {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(setupDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         registerCollectionView()
+        AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
         setupDetail()
         serviceCallToGetRedeemCodeList()
     }
@@ -101,7 +102,7 @@ extension MyLoyalityPointVC : UICollectionViewDelegate, UICollectionViewDataSour
         let dict = arrOffer[sender.tag]
         if dict.points_required > AppModel.shared.currentUser.points {
             let required = dict.points_required - AppModel.shared.currentUser.points
-            let message = "You need " + String(required) + " points to generate code."
+            let message = "You need " + String(required) + " more points to generate code."
             showAlert("", message: message) {
                 
             }

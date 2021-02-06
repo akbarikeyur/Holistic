@@ -141,6 +141,7 @@ extension CompletedTaskTabVC {
                 self.arrTaskData.append(TaskModel.init(temp))
             }
             self.updateHeight()
+            AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
         }
     }
 }

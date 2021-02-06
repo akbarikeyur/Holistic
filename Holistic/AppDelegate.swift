@@ -192,7 +192,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func serviceCallToGetUserDetail() {
         ProfileAPIManager.shared.serviceCallToGetUserDetail {
-            
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         }
     }
 }

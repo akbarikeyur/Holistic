@@ -82,6 +82,11 @@ class EditProfileVC: UIViewController {
     }
     
     //MARK:- Button click event
+    
+    @IBAction func clickToBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func clickToSelectImage(_ sender: Any) {
         
     }

@@ -30,7 +30,7 @@ class CurrentTaskTVC: UITableViewCell {
         if dict.get_life_style.task_start_date_time != "" && dict.get_life_style.task_end_date_time != "" {
             let startDate = getDateFromDateString(date: dict.get_life_style.task_start_date_time, format: "yyyy-MM-dd hh:mm:ss")
             let endDate = getDateFromDateString(date: dict.get_life_style.task_end_date_time, format: "yyyy-MM-dd hh:mm:ss")
-            timeLbl.text = getDateStringFromDate(date: startDate, format: "hh:mm a") + " - " + getDateStringFromDate(date: endDate, format: "hh:mm a")
+            timeLbl.text = getLocalDateStringFromDate(date: startDate, format: "hh:mm a") + " - " + getLocalDateStringFromDate(date: endDate, format: "hh:mm a")
         }else{
             timeLbl.text = ""
         }
