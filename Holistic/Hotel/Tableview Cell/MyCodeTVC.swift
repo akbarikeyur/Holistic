@@ -28,6 +28,15 @@ class MyCodeTVC: UITableViewCell {
         
     }
     
+    func setupCouponCode(_ dict : ActivedOfferModel) {
+        setImageBackgroundImage(imgView, dict.get_offer.get_single_offer_image.url, IMAGE.PLACEHOLDER)
+        let tempDate = dict.created_at.components(separatedBy: ".").first!
+        let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss")
+        dateLbl.text = getLocalDateStringFromDate(date: date, format: "d MMM, yyyy")
+        nameLbl.text = dict.get_offer.title.html2String
+        codeLbl.text = "Code " + dict.code
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

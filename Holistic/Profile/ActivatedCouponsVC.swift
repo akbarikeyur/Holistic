@@ -14,12 +14,16 @@ class ActivatedCouponsVC: UIViewController {
     @IBOutlet weak var noDataLbl: Label!
     
     var arrOffer = [ActivedOfferModel]()
+    var refreshControl = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
+        refreshControl.addTarget(self, action: #selector(serviceCallToGetRedeemCodeList), for: .valueChanged)
+        tblView.refreshControl = refreshControl
+        noDataLbl.isHidden = true
         serviceCallToGetRedeemCodeList()
     }
     
@@ -57,7 +61,7 @@ extension ActivatedCouponsVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : MyCodeTVC = tblView.dequeueReusableCell(withIdentifier: "MyCodeTVC") as! MyCodeTVC
-        
+        cell.setupCouponCode(arrOffer[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -70,11 +74,17 @@ extension ActivatedCouponsVC : UITableViewDelegate, UITableViewDataSource {
 
 extension ActivatedCouponsVC {
     
-    func serviceCallToGetRedeemCodeList() {
+    @objc func serviceCallToGetRedeemCodeList() {
+        refreshControl.endRefreshing()
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
         ProfileAPIManager.shared.serviceCallToGetRedeemCodeList(param) { (data) in
-            
+            self.arrOffer = [ActivedOfferModel]()
+            for temp in data {
+                self.arrOffer.append(ActivedOfferModel.init(temp))
+            }
+            self.tblView.reloadData()
+            self.noDataLbl.isHidden = (self.arrOffer.count > 0)
         }
     }
 }

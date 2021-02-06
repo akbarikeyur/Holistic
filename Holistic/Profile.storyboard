@@ -1951,7 +1951,7 @@ Emax store to avail discount.</string>
                                     <constraint firstAttribute="bottom" secondItem="lot-cf-McK" secondAttribute="bottom" id="tGc-Ce-hBk"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Loyalty Points : 0pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-qI-QL1" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-qI-QL1" customClass="Label" customModule="Holistic" customModuleProvider="target">
                                 <rect key="frame" x="10" y="74" width="300" height="31"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -2068,10 +2068,10 @@ Emax store to avail discount.</string>
             </objects>
             <point key="canvasLocation" x="630" y="1439"/>
         </scene>
-        <!--View Controller-->
+        <!--Activated CouponsVC-->
         <scene sceneID="nRN-fN-vqV">
             <objects>
-                <viewController id="Kdz-v3-vAe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivatedCouponsVC" id="Kdz-v3-vAe" customClass="ActivatedCouponsVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nnp-Yc-Zcx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2090,7 +2090,7 @@ Emax store to avail discount.</string>
                                         <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <action selector="clickToBack:" destination="Kdz-v3-vAe" eventType="touchUpInside" id="NFk-6b-OI5"/>
+                                            <action selector="clickToBack:" destination="Kdz-v3-vAe" eventType="touchUpInside" id="9Uz-P0-WVc"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activated Coupons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhn-qX-uLy" customClass="Label" customModule="Holistic" customModuleProvider="target">
@@ -2116,39 +2116,48 @@ Emax store to avail discount.</string>
                                     <constraint firstAttribute="bottom" secondItem="x3R-h3-6sH" secondAttribute="bottom" id="gqg-ck-wbZ"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Iwf-fM-fD9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-sm-6Yx">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="MUR-94-cTE">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Kdz-v3-vAe" id="g91-G3-W7w"/>
-                                    <outlet property="delegate" destination="Kdz-v3-vAe" id="Ljs-9C-UVx"/>
+                                    <outlet property="dataSource" destination="Kdz-v3-vAe" id="9om-qg-AgF"/>
+                                    <outlet property="delegate" destination="Kdz-v3-vAe" id="G7X-au-sdD"/>
                                 </connections>
-                            </collectionView>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not activate any code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-XB-La4" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="20" y="274.5" width="280" height="19"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="YRM-XB-La4" firstAttribute="centerY" secondItem="nnp-Yc-Zcx" secondAttribute="centerY" id="0gM-Cw-bjH"/>
+                            <constraint firstItem="sZY-Kh-1uV" firstAttribute="trailing" secondItem="YRM-XB-La4" secondAttribute="trailing" constant="20" id="16r-Dw-Fb7"/>
                             <constraint firstItem="jlF-Hi-PXT" firstAttribute="trailing" secondItem="sZY-Kh-1uV" secondAttribute="trailing" id="4JB-sq-QHz"/>
                             <constraint firstItem="jlF-Hi-PXT" firstAttribute="leading" secondItem="sZY-Kh-1uV" secondAttribute="leading" id="6Jw-xX-Ykd"/>
-                            <constraint firstItem="sZY-Kh-1uV" firstAttribute="trailing" secondItem="Iwf-fM-fD9" secondAttribute="trailing" id="7GC-M2-ZIs"/>
                             <constraint firstItem="jlF-Hi-PXT" firstAttribute="top" secondItem="sZY-Kh-1uV" secondAttribute="top" constant="20" id="A3y-nk-zEB"/>
                             <constraint firstItem="MEk-ti-TiO" firstAttribute="top" secondItem="sZY-Kh-1uV" secondAttribute="top" constant="-190" id="HRk-Zk-eLn"/>
+                            <constraint firstItem="dhE-sm-6Yx" firstAttribute="leading" secondItem="sZY-Kh-1uV" secondAttribute="leading" id="HsS-nv-XHd"/>
+                            <constraint firstItem="YRM-XB-La4" firstAttribute="leading" secondItem="sZY-Kh-1uV" secondAttribute="leading" constant="20" id="KiV-Ne-PZc"/>
+                            <constraint firstItem="dhE-sm-6Yx" firstAttribute="trailing" secondItem="sZY-Kh-1uV" secondAttribute="trailing" id="SL8-15-jHS"/>
                             <constraint firstItem="MEk-ti-TiO" firstAttribute="leading" secondItem="sZY-Kh-1uV" secondAttribute="leading" constant="-50" id="Sve-cN-2qi"/>
+                            <constraint firstItem="dhE-sm-6Yx" firstAttribute="bottom" secondItem="sZY-Kh-1uV" secondAttribute="bottom" id="UZH-L3-cYO"/>
+                            <constraint firstItem="dhE-sm-6Yx" firstAttribute="top" secondItem="jlF-Hi-PXT" secondAttribute="bottom" id="aKa-b5-SqH"/>
                             <constraint firstItem="MEk-ti-TiO" firstAttribute="trailing" secondItem="sZY-Kh-1uV" secondAttribute="trailing" constant="50" id="lYE-mk-SS4"/>
-                            <constraint firstItem="Iwf-fM-fD9" firstAttribute="top" secondItem="jlF-Hi-PXT" secondAttribute="bottom" id="tde-Dm-M4m"/>
-                            <constraint firstItem="sZY-Kh-1uV" firstAttribute="bottom" secondItem="Iwf-fM-fD9" secondAttribute="bottom" id="vSZ-rM-8Hi"/>
-                            <constraint firstItem="Iwf-fM-fD9" firstAttribute="leading" secondItem="sZY-Kh-1uV" secondAttribute="leading" id="xsT-YY-6wt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sZY-Kh-1uV"/>
                     </view>
                     <connections>
-                        <outlet property="pointCV" destination="Iwf-fM-fD9" id="6jw-ru-bjj"/>
+                        <outlet property="noDataLbl" destination="YRM-XB-La4" id="cyX-A7-YZZ"/>
+                        <outlet property="tblView" destination="dhE-sm-6Yx" id="3lP-WO-KyE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGC-cc-nIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

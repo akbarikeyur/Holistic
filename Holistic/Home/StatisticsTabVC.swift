@@ -26,6 +26,10 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     var totalTask = 0
     var arrStatistic = [StatisticModel]()
     
+    var arrDates = [String]()
+    var arrCompleted = [Int]()
+    var arrMissed = [Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +38,8 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         chartView.delegate = self
         toDate = Date()
         fromDate = toDate?.addDays(daysToAdd: -7)
+        fromTxt.text = getLocalDateStringFromDate(date: fromDate!, format: "dd-MM-yyyy")
+        toTxt.text = getLocalDateStringFromDate(date: toDate!, format: "dd-MM-yyyy")
     }
     
     func setupDetails() {
@@ -42,94 +48,100 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     }
 
     func setupChartData() {
-        chartView.drawBarShadowEnabled = false
-        chartView.drawValueAboveBarEnabled = false
-        
-        chartView.maxVisibleCount = 60
-        
-        let arrTaskTitle = ["Missed", "Completed"]
-        var arrTaskValue = [Int]()
-        arrTaskValue.append(missedTask)
-        arrTaskValue.append(completedTask)
-        
         totalLbl.text = String(totalTask)
         completedLbl.text = String(completedTask)
         missedLbl.text = String(missedTask)
-        percentageLbl.text = String(Int(completedTask * 100 / (completedTask + missedTask))) + "%"
+        if(completedTask == 0 && missedTask == 0){
+            percentageLbl.text = "0%"
+        }else{
+            percentageLbl.text = String(Int(completedTask * 100 / (completedTask + missedTask))) + "%"
+        }
         
-        let xAxis = chartView.xAxis
-        xAxis.labelPosition = .bottom
-        xAxis.labelFont = .systemFont(ofSize: 10)
-        xAxis.granularity = 1
-        xAxis.labelCount = arrTaskTitle.count
-        xAxis.valueFormatter = DayAxisValueFormatter(chart: chartView)
+        chartView.noDataText = "Task not found."
         
-        let leftAxisFormatter = NumberFormatter()
-        leftAxisFormatter.minimumFractionDigits = 0
-        leftAxisFormatter.maximumFractionDigits = 1
-        leftAxisFormatter.negativeSuffix = ""
-        leftAxisFormatter.positiveSuffix = ""
+        arrDates = [String]()
+        arrCompleted = [Int]()
+        arrMissed = [Int]()
+        for temp in  arrStatistic{
+            arrDates.append(getLocalDateStringFromDate(date: getDateFromDateString(date: temp.date, format: "yyyy-MM-dd"), format: "d MMM"))
+            arrCompleted.append(temp.completed)
+            arrMissed.append(temp.missed)
+        }
         
-        let leftAxis = chartView.leftAxis
-        leftAxis.labelFont = .systemFont(ofSize: 10)
-        leftAxis.labelCount = arrTaskValue.count
-        leftAxis.valueFormatter = DefaultAxisValueFormatter(formatter: leftAxisFormatter)
-        leftAxis.labelPosition = .outsideChart
-        leftAxis.spaceTop = 0.15
-        leftAxis.axisMinimum = 0 // FIXME: HUH?? this replaces startAtZero = YES
-        
-        let l = chartView.legend
-        l.horizontalAlignment = .left
-        l.verticalAlignment = .bottom
-        l.orientation = .horizontal
-        l.drawInside = false
-        l.form = .circle
-        l.formSize = 9
-        l.font = UIFont(name: "HelveticaNeue-Light", size: 11)!
-        l.xEntrySpace = 4
-//        chartView.legend = l
+        chartView.legend.enabled = false;
+         let xaxis = chartView.xAxis
+         //xaxis.valueFormatter = axisFormatDelegate
+         xaxis.drawGridLinesEnabled = true
+         xaxis.labelPosition = .bottom
+         xaxis.centerAxisLabelsEnabled = true
+         xaxis.valueFormatter = IndexAxisValueFormatter(values:self.arrDates)
+         xaxis.granularity = 1
 
-        let marker = XYMarkerView(color: UIColor(white: 180/250, alpha: 1),
-                                  font: .systemFont(ofSize: 12),
-                                  textColor: .white,
-                                  insets: UIEdgeInsets(top: 8, left: 8, bottom: 20, right: 8),
-                                  xAxisValueFormatter: chartView.xAxis.valueFormatter!)
-        marker.chartView = chartView
-        marker.minimumSize = CGSize(width: 80, height: 40)
-        chartView.marker = marker
-        
-        self.setDataCount(arrTaskTitle.count, range: UInt32(arrTaskValue.count))
+
+         let leftAxisFormatter = NumberFormatter()
+         leftAxisFormatter.maximumFractionDigits = 1
+
+         let yaxis = chartView.leftAxis
+         yaxis.spaceTop = 0.35
+         yaxis.axisMinimum = 0
+         yaxis.drawGridLinesEnabled = false
+
+         chartView.rightAxis.enabled = false
+        //axisFormatDelegate = self
+
+         setChart()
     }
     
-    func setDataCount(_ count: Int, range: UInt32) {
-        let start = 1
-        
-        let yVals = (start..<start+count+1).map { (i) -> BarChartDataEntry in
-            let mult = range + 1
-            let val = Double(arc4random_uniform(mult))
-            if arc4random_uniform(100) < 25 {
-                return BarChartDataEntry(x: Double(i), y: val, icon: UIImage(named: "icon"))
-            } else {
-                return BarChartDataEntry(x: Double(i), y: val)
-            }
+    func setChart() {
+        var dataEntries: [BarChartDataEntry] = []
+        var dataEntries1: [BarChartDataEntry] = []
+
+        for i in 0..<self.arrDates.count {
+            let dataEntry = BarChartDataEntry(x: Double(i) , y: Double(self.arrCompleted[i]))
+            dataEntries.append(dataEntry)
+
+            let dataEntry1 = BarChartDataEntry(x: Double(i) , y: Double(self.arrMissed[i]))
+            dataEntries1.append(dataEntry1)
         }
+
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Completed")
+        chartDataSet.colors = [UIColor(red: 20/255, green: 122/255, blue: 214/255, alpha: 1)]
+        chartDataSet.highlightEnabled = false
+        let chartDataSet1 = BarChartDataSet(entries: dataEntries1, label: "Missed")
+        chartDataSet1.colors = [UIColor(red: 236/255, green: 102/255, blue: 102/255, alpha: 1)]
+        chartDataSet1.highlightEnabled = false
+        let dataSets: [BarChartDataSet] = [chartDataSet,chartDataSet1]
+        //chartDataSet.colors = ChartColorTemplates.colorful()
+        //let chartData = BarChartData(dataSet: chartDataSet)
+
+        let chartData = BarChartData(dataSets: dataSets)
+
+        let groupSpace = 0.3
+        let barSpace = 0.05
+        let barWidth = 0.3
+        // (0.3 + 0.05) * 2 + 0.3 = 1.00 -> interval per "group"
+
+        let groupCount = self.arrDates.count
+        let startYear = 0
+
+
+        chartData.barWidth = barWidth;
+        chartView.xAxis.axisMinimum = Double(startYear)
+        let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
+        print("Groupspace: \(gg)")
+        chartView.xAxis.axisMaximum = Double(startYear) + gg * Double(groupCount)
+
+        chartData.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
+        //chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
+        chartView.notifyDataSetChanged()
+
+        chartView.data = chartData
         
-        var set1: BarChartDataSet! = nil
-        if let set = chartView.data?.dataSets.first as? BarChartDataSet {
-            set1 = set
-            set1.replaceEntries(yVals)
-            chartView.data?.notifyDataChanged()
-            chartView.notifyDataSetChanged()
-        } else {
-            set1 = BarChartDataSet(entries: yVals, label: "The year 2017")
-            set1.colors = ChartColorTemplates.material()
-            set1.drawValuesEnabled = false
-            
-            let data = BarChartData(dataSet: set1)
-            data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
-            data.barWidth = 0.9
-            chartView.data = data
-        }
+        //background color
+        // chartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+
+        //chart animation
+        chartView.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
     }
     
     @IBAction func clickToSelectFromDate(_ sender: Any) {
@@ -139,7 +151,7 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         DatePickerManager.shared.showPicker(title: "Select from date", selected: fromDate, min: nil, max: Date()) { (date, isCancel) in
             if !isCancel {
                 self.fromDate = date
-                self.fromTxt.text = getDateStringFromDate(date: self.fromDate!, format: "dd-MM-yyyy")
+                self.fromTxt.text = getLocalDateStringFromDate(date: self.fromDate!, format: "dd-MM-yyyy")
                 self.toDate = nil
                 self.toTxt.text = ""
             }
@@ -157,7 +169,7 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         DatePickerManager.shared.showPicker(title: "Select from date", selected: toDate, min: fromDate, max: Date()) { (date, isCancel) in
             if !isCancel {
                 self.toDate = date
-                self.toTxt.text = getDateStringFromDate(date: self.toDate!, format: "dd-MM-yyyy")
+                self.toTxt.text = getLocalDateStringFromDate(date: self.toDate!, format: "dd-MM-yyyy")
                 self.serviceCallToGetStatistics()
             }
         }

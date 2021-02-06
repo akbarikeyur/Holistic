@@ -103,6 +103,11 @@ func setButtonBackgroundImage(_ button : UIButton, _ strUrl : String, _ placeHol
     })
 }
 
+func setButtonBackgroundImage(_ button : UIButton, _ image : UIImage)
+{
+    button.setBackgroundImage(image.imageCropped(toFit: CGSize(width: button.frame.size.width, height: button.frame.size.height)), for: .normal)
+}
+
 func setButtonImage(_ button : UIButton, _ strUrl : String, _ placeholder : String)
 {
     if strUrl == "" {

@@ -119,9 +119,11 @@ public class ProfileAPIManager {
         APIManager.shared.callPostRequest(API.GET_REDEEM_CODE_LIST, param, true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
-                if let data = dict["data"] as? [[String : Any]] {
-                    completion(data)
-                    return
+                if let dataDict = dict["data"] as? [String : Any] {
+                    if let data = dataDict["data"] as? [[String : Any]] {
+                        completion(data)
+                        return
+                    }
                 }
             }
         }

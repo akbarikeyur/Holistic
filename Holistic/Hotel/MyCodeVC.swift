@@ -73,7 +73,7 @@ extension MyCodeVC : UITableViewDelegate, UITableViewDataSource {
         if type == 1 {
             return 0
         }else{
-            return 5
+            return 0
         }
     }
     
@@ -95,7 +95,7 @@ extension MyCodeVC : UITableViewDelegate, UITableViewDataSource {
 
 extension MyCodeVC {
     func serviceCallToGetMyCode() {
-        HotelAPIManager.shared.serviceCallToGetMyCode(["user_id" : AppModel.shared.currentUser.id]) { (code) in
+        HotelAPIManager.shared.serviceCallToGetMyCode(["user_id" : AppModel.shared.currentUser.id!]) { (code) in
             
         }
     }

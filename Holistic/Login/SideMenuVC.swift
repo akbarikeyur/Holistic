@@ -252,7 +252,8 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                     UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 case "Activated Coupons":
-                    
+                    let vc : ActivatedCouponsVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "ActivatedCouponsVC") as! ActivatedCouponsVC
+                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                     break
                 default:
                     break

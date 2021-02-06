@@ -32,7 +32,7 @@ class AvailableCouponVC: UIViewController {
     }
     
     @objc func setupDetail() {
-        pointLbl.text = "My Loyalty Points : " + String(AppModel.shared.currentUser.points)
+        pointLbl.text = String(AppModel.shared.currentUser.points)
         if AppModel.shared.currentUser.points > 1 {
             pointLbl.text = pointLbl.text! + "pts"
         }else{
