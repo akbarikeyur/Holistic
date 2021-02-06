@@ -59,6 +59,19 @@ class SignupVC: UIViewController {
         if getCountryData().count == 0 {
             AppDelegate().sharedDelegate().serviceCallToGetCountry()
         }
+        else{
+            arrCountry = getCountryData()
+            let index = arrCountry.firstIndex { (temp) -> Bool in
+                temp.sortname.lowercased() == CURRENT_COUNTRY_CODE.lowercased()
+            }
+            if index != nil {
+                selectedCountry = arrCountry[index!]
+                countryTxt.text = selectedCountry.name
+                flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
+                phonecodeTxt.text = "+" + selectedCountry.phonecode
+                serviceCallToGetState()
+            }
+        }
     }
     
     //MARK:- Button click event
@@ -93,6 +106,10 @@ class SignupVC: UIViewController {
         searchTxt.text = ""
         if selectedState.id == 0 {
             displayToast("select_state_first")
+            return
+        }
+        if arrCity.count == 0 {
+            displayToast("City data not found.")
             return
         }
         selectedType = 2
@@ -293,11 +310,15 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
             countryTxt.text = selectedCountry.name
             flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
             phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
+            selectedState = StateModel.init([String : Any]())
+            stateTxt.text = ""
             serviceCallToGetState()
         }
         else if selectedType == 1 {
             selectedState = (searchTxt.text?.trimmed == "" ? arrState : arrSearchState)[indexPath.row]
             stateTxt.text = selectedState.name
+            selectedCity = CityModel.init([String : Any]())
+            cityTxt.text = ""
             serviceCallToGetCity()
         }
         else if selectedType == 2 {

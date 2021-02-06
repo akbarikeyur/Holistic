@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditProfileVC: UIViewController {
+class EditProfileVC: UploadImageVC {
 
     @IBOutlet weak var profileImg: ImageView!
     @IBOutlet weak var nameTxt: TextField!
@@ -37,6 +37,8 @@ class EditProfileVC: UIViewController {
     var selectedState = StateModel.init([String : Any]())
     var selectedCity = CityModel.init([String : Any]())
     var selectedType = 0
+    
+    var profileImage : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +90,12 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func clickToSelectImage(_ sender: Any) {
-        
+        uploadImage()
+    }
+    
+    override func selectedImage(choosenImage: UIImage) {
+        profileImage = choosenImage
+        profileImg.image = choosenImage
     }
     
     @IBAction func clickToSelectPhoneCode(_ sender: UIButton) {
@@ -181,7 +188,7 @@ class EditProfileVC: UIViewController {
             param["countrycode"] = selectedCountry.id
             param["user_id"] = AppModel.shared.currentUser.id
             printData(param)
-            ProfileAPIManager.shared.serviceCallToUpdateProfile(param) {
+            ProfileAPIManager.shared.serviceCallToUpdateProfile(param, profileImage) {
                 self.navigationController?.popViewController(animated: true)
             }
         }

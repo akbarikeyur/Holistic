@@ -30,15 +30,13 @@ class MobileLoginVC: UIViewController {
         }
         else{
             arrCountry = getCountryData()
-            if let countryCode = (Locale.current as NSLocale).object(forKey: .countryCode) as? String {
-                let index = arrCountry.firstIndex { (temp) -> Bool in
-                    temp.sortname.lowercased() == countryCode.lowercased()
-                }
-                if index != nil {
-                    self.selectedCountry = self.arrCountry[index!]
-                    self.phoneCodeLbl.text = "+" + self.selectedCountry.phonecode
-                    self.flagImg.image = UIImage(named: self.selectedCountry.sortname.lowercased())
-                }
+            let index = arrCountry.firstIndex { (temp) -> Bool in
+                temp.sortname.lowercased() == CURRENT_COUNTRY_CODE.lowercased()
+            }
+            if index != nil {
+                self.selectedCountry = self.arrCountry[index!]
+                self.phoneCodeLbl.text = "+" + self.selectedCountry.phonecode
+                self.flagImg.image = UIImage(named: self.selectedCountry.sortname.lowercased())
             }
         }
     }

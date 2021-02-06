@@ -21,8 +21,10 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var loyalPointLbl: Label!
     
     var fromDate, toDate : Date?
-    var arrCompleted = [TaskModel]()
-    var arrMissed = [TaskModel]()
+    var missedTask = 0
+    var completedTask = 0
+    var totalTask = 0
+    var arrStatistic = [StatisticModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +32,13 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         // Do any additional setup after loading the view.
         
         chartView.delegate = self
-        
+        toDate = Date()
+        fromDate = toDate?.addDays(daysToAdd: -7)
     }
     
     func setupDetails() {
         NotificationCenter.default.post(name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: 668)
-        if arrMissed.count == 0 && arrCompleted.count == 0 {
-            serviceCallToGetCompletedTask()
-        }
+        serviceCallToGetStatistics()
     }
 
     func setupChartData() {
@@ -48,13 +49,13 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         
         let arrTaskTitle = ["Missed", "Completed"]
         var arrTaskValue = [Int]()
-        arrTaskValue.append(arrMissed.count)
-        arrTaskValue.append(arrCompleted.count)
+        arrTaskValue.append(missedTask)
+        arrTaskValue.append(completedTask)
         
-        totalLbl.text = String(arrCompleted.count + arrMissed.count)
-        completedLbl.text = String(arrCompleted.count)
-        missedLbl.text = String(arrMissed.count)
-        percentageLbl.text = String(Int(arrCompleted.count * 100 / (arrCompleted.count + arrMissed.count))) + "%"
+        totalLbl.text = String(totalTask)
+        completedLbl.text = String(completedTask)
+        missedLbl.text = String(missedTask)
+        percentageLbl.text = String(Int(completedTask * 100 / (completedTask + missedTask))) + "%"
         
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
@@ -135,7 +136,7 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         if fromDate == nil {
             fromDate = Date()
         }
-        DatePickerManager.shared.showPicker(title: "Select from date", selected: fromDate, min: Date(), max: nil) { (date, isCancel) in
+        DatePickerManager.shared.showPicker(title: "Select from date", selected: fromDate, min: nil, max: Date()) { (date, isCancel) in
             if !isCancel {
                 self.fromDate = date
                 self.fromTxt.text = getDateStringFromDate(date: self.fromDate!, format: "dd-MM-yyyy")
@@ -153,10 +154,11 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         if toDate == nil {
             toDate = Date()
         }
-        DatePickerManager.shared.showPicker(title: "Select from date", selected: toDate, min: fromDate, max: nil) { (date, isCancel) in
+        DatePickerManager.shared.showPicker(title: "Select from date", selected: toDate, min: fromDate, max: Date()) { (date, isCancel) in
             if !isCancel {
                 self.toDate = date
                 self.toTxt.text = getDateStringFromDate(date: self.toDate!, format: "dd-MM-yyyy")
+                self.serviceCallToGetStatistics()
             }
         }
     }
@@ -174,27 +176,23 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
 }
 
 extension StatisticsTabVC {
-    func serviceCallToGetCompletedTask() {
-        var param = [String : Any]()
-        param["user_id"] = AppModel.shared.currentUser.id
-        param["status"] = "completed"
-        HomeAPIManager.shared.serviceCallToGetMissedTask(param) { (data) in
-            self.arrCompleted = [TaskModel]()
-            for temp in data {
-                self.arrCompleted.append(TaskModel.init(temp))
-            }
-            self.serviceCallToGetMissedTask()
-        }
-    }
     
-    func serviceCallToGetMissedTask() {
+    func serviceCallToGetStatistics() {
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
-        param["status"] = "missed"
-        HomeAPIManager.shared.serviceCallToGetMissedTask(param) { (data) in
-            self.arrMissed = [TaskModel]()
-            for temp in data {
-                self.arrMissed.append(TaskModel.init(temp))
+        param["start_date"] = getDateStringFromDate(date: fromDate!, format: "yyyy-MM-dd")
+        param["end_date"] = getDateStringFromDate(date: toDate!, format: "yyyy-MM-dd")
+        printData(param)
+        HomeAPIManager.shared.serviceCallToGetStatistics(param) { (dict) in
+            self.missedTask = AppModel.shared.getIntValue(dict, "vMissedTask")
+            self.completedTask = AppModel.shared.getIntValue(dict, "vCompletedTask")
+            self.totalTask = AppModel.shared.getIntValue(dict, "vTotalTask")
+            
+            self.arrStatistic = [StatisticModel]()
+            if let data = dict["data"] as? [[String : Any]] {
+                for temp in data {
+                    self.arrStatistic.append(StatisticModel.init(temp))
+                }
             }
             self.setupChartData()
         }

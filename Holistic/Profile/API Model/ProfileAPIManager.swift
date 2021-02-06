@@ -31,14 +31,23 @@ public class ProfileAPIManager {
         }
     }
     
-    func serviceCallToUpdateProfile(_ param : [String : Any], _ completion: @escaping () -> Void) {
-        APIManager.shared.callPostRequest(API.SIGNUP, param, true) { (dict) in
+    func serviceCallToUpdateProfile(_ param : [String : Any], _ image : UIImage?, _ completion: @escaping () -> Void) {
+        
+        APIManager.shared.callMultipartRequestWithImage(API.UPDATE_PROFILE, param, [image], "profile_pic", true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
                 completion()
                 return
             }
         }
+        
+//        APIManager.shared.callPostRequest(API.SIGNUP, param, true) { (dict) in
+//            printData(dict)
+//            if let status = dict["status"] as? String, status == "success" {
+//                completion()
+//                return
+//            }
+//        }
     }
     
     func serviceCallToGetOffer( _ completion: @escaping (_ data : [[String : Any]]) -> Void) {

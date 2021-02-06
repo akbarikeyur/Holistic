@@ -104,3 +104,15 @@ struct NotificationModel {
         created_at = dict["created_at"] as? String ?? ""
     }
 }
+
+struct StatisticModel {
+    var completed, missed, total : Int!
+    var date : String!
+    
+    init(_ dict : [String : Any]) {
+        completed = AppModel.shared.getIntValue(dict, "completed")
+        missed = AppModel.shared.getIntValue(dict, "missed")
+        total = AppModel.shared.getIntValue(dict, "total")
+        date = dict["date"] as? String ?? ""
+    }
+}

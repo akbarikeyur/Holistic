@@ -269,13 +269,13 @@
                                     <action selector="clickToSignup:" destination="qV7-K8-9Wt" eventType="touchUpInside" id="xxU-HL-LjX"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFW-Uf-hOT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFW-Uf-hOT">
                                 <rect key="frame" x="0.0" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EQe-G1-zht"/>
                                     <constraint firstAttribute="width" constant="40" id="rFd-dz-XCF"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="clickToBack:" destination="qV7-K8-9Wt" eventType="touchUpInside" id="OYk-ZC-iPv"/>
@@ -499,7 +499,7 @@
                                     <action selector="clickToClose:" destination="dqQ-LJ-PzZ" eventType="touchUpInside" id="0AM-y4-raz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-NA-9k9" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-NA-9k9" customClass="Button" customModule="Holistic" customModuleProvider="target">
                                 <rect key="frame" x="225" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MiI-bw-3nc"/>

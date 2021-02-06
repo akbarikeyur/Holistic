@@ -15,6 +15,7 @@ let DEVICE_ID = UIDevice.current.identifierForVendor?.uuidString
 
 let ITUNES_URL = ""
 let CURRENCY = "AED"
+let CURRENT_COUNTRY_CODE = (Locale.current as NSLocale).object(forKey: .countryCode) as? String ?? ""
 
 let GOOGLE_KEY = ""
 var isDarkMode = false

@@ -28,6 +28,7 @@ class EmailLoginVC: UIViewController {
         mobileLoginBtn.setAttributedTitle(attributedStringWithColor("If already a member in Clincia App, Click Here", ["Click Here"], color: OrangeColor), for: .normal)
         
         rememberSwitch.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
