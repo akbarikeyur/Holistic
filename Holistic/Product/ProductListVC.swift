@@ -20,6 +20,7 @@ class ProductListVC: UIViewController {
     var page = 1
     var arrProduct = [ProductModel]()
     var refreshControl = UIRefreshControl.init()
+    var arrBanner = ["product_banner1", "product_banner2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +86,7 @@ extension ProductListVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return arrBanner.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -94,7 +95,7 @@ extension ProductListVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : BannerImageCVC = bannerCV.dequeueReusableCell(withReuseIdentifier: "BannerImageCVC", for: indexPath) as! BannerImageCVC
-        
+        cell.imgView.image = UIImage(named: arrBanner[indexPath.row])
         return cell
     }
 }

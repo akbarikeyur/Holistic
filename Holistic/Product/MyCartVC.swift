@@ -35,16 +35,22 @@ class MyCartVC: UIViewController {
     }
     
     func setupDetails() {
-        var price = 0.0
-        for tempData in arrCartData {
-            for temp in tempData.get_product {
-                price += Double(temp.price!)!
-            }
-        }
         if arrCartData.count > 1 {
             totalItemLbl.text = String(arrCartData.count) + " item"
         }else{
             totalItemLbl.text = String(arrCartData.count) + " items"
+        }        
+        updatePrice()
+        noDataView.isHidden = (arrCartData.count > 0)
+        myScroll.isHidden = (arrCartData.count == 0)
+    }
+    
+    func updatePrice() {
+        var price = 0.0
+        for tempData in arrCartData {
+            for temp in tempData.get_product {
+                price += (Double(temp.price!)! * Double(tempData.qty))
+            }
         }
         subTotalLbl.text = displayPriceWithCurrency(String(price))
         shippingLbl.text = displayPriceWithCurrency("10")
@@ -52,9 +58,6 @@ class MyCartVC: UIViewController {
         price += 10
         price = price + (price * 0.05)
         totalPriceLbl.text = displayPriceWithCurrency(String(price))
-        
-        noDataView.isHidden = (arrCartData.count > 0)
-        myScroll.isHidden = (arrCartData.count == 0)
     }
     
     //MARK:- Button click event
@@ -148,6 +151,7 @@ extension MyCartVC : UITableViewDelegate, UITableViewDataSource, MGSwipeTableCel
         dropDown.selectionAction = { [unowned self] (dropindex: Int, item: String) in
             self.arrCartData[sender.tag].qty = Int(item)
             self.tblView.reloadRows(at: [IndexPath(item: sender.tag, section: 0)], with: .automatic)
+            self.updatePrice()
         }
         dropDown.show()
     }

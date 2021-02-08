@@ -2932,7 +2932,7 @@
         <image name="address" width="23" height="15.5"/>
         <image name="back" width="8" height="14"/>
         <image name="calendar" width="17" height="17"/>
-        <image name="call" width="38" height="37"/>
+        <image name="call" width="15.5" height="19.5"/>
         <image name="cart_white" width="25" height="22.5"/>
         <image name="checkbox_off" width="21" height="21"/>
         <image name="checkbox_on" width="20" height="20"/>

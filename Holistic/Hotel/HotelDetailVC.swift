@@ -47,7 +47,10 @@ class HotelDetailVC: UIViewController {
         hotelNameLbl.text = hotelData.title
         hotelAddressLbl.text = hotelData.address
         hotelDescLbl.text = hotelData.desc.html2String
-        imageCV.reloadData()
+        if hotelData.get_hotels_media.count > 0 {
+            setImageBackgroundImage(topImgView, hotelData.get_hotels_media[0].url, IMAGE.PLACEHOLDER)
+        }
+        imageCV.reloadData()        
         packageTbl.reloadData()
         updatePackageTableviewHeight()
         facilityCV.reloadData()
