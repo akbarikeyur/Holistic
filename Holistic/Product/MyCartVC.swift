@@ -39,7 +39,7 @@ class MyCartVC: UIViewController {
             totalItemLbl.text = String(arrCartData.count) + " item"
         }else{
             totalItemLbl.text = String(arrCartData.count) + " items"
-        }        
+        }
         updatePrice()
         noDataView.isHidden = (arrCartData.count > 0)
         myScroll.isHidden = (arrCartData.count == 0)
