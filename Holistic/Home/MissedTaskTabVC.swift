@@ -110,8 +110,8 @@ extension MissedTaskTabVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tblView {
             if indexPath.row == 0 {
-                displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: wakeUpView)
-                updateWakeupTableviewHeight()
+//                displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: wakeUpView)
+//                updateWakeupTableviewHeight()
             }
         }
         else if tableView == wakeTblView {

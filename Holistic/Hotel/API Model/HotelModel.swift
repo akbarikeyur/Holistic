@@ -146,3 +146,17 @@ struct FacilityModel {
         }
     }
 }
+
+struct CodeModel {
+    var title, code, created_at : String!
+    
+    init(_ dict : [String : Any]) {
+        code = AppModel.shared.getStringValue(dict, "code")
+        created_at = AppModel.shared.getStringValue(dict, "created_at")
+        if let tempData = dict["get_listing"] as? [[String : Any]], tempData.count > 0 {
+            if let temp = tempData[0]["title"] as? String {
+                title = temp
+            }
+        }
+    }
+}

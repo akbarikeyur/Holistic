@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FSPagerView
 
-class LoyalityPointCVC: UICollectionViewCell {
+class LoyalityPointCVC: FSPagerViewCell {
 
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var logoImg: UIImageView!

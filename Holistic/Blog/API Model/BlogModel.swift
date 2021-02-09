@@ -11,7 +11,7 @@ import Foundation
 
 struct BlogModel {
     var id : Int!
-    var title, desc, created_at : String!
+    var title, desc, created_at, featured : String!
     var get_single_media : MediaModel!
     
     init(_ dict : [String : Any]) {
@@ -19,11 +19,12 @@ struct BlogModel {
         title = dict["title"] as? String ?? ""
         desc = dict["description"] as? String ?? ""
         created_at = dict["created_at"] as? String ?? ""
+        featured = dict["featured"] as? String ?? ""
         get_single_media = MediaModel.init(dict["get_single_media"] as? [String : Any] ?? [String : Any]())
     }
     
     func dictionary() -> [String : Any] {
-        return ["id" : id!, "title" : title!, "description" : desc!, "created_at" : created_at!, "get_single_media" : get_single_media.dictionary()]
+        return ["id" : id!, "title" : title!, "description" : desc!, "created_at" : created_at!, "get_single_media" : get_single_media.dictionary(), "featured" : featured!]
     }
 }
 

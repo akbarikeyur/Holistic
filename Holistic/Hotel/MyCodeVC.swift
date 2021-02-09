@@ -15,6 +15,7 @@ class MyCodeVC: UIViewController {
     @IBOutlet weak var noDataLbl: Label!
     
     var type = 1
+    var arrCode = [CodeModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,11 +71,7 @@ extension MyCodeVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if type == 1 {
-            return 0
-        }else{
-            return 0
-        }
+        return arrCode.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -83,7 +80,7 @@ extension MyCodeVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : MyCodeTVC = tblView.dequeueReusableCell(withIdentifier: "MyCodeTVC") as! MyCodeTVC
-        
+        cell.setupDetails(arrCode[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -95,8 +92,12 @@ extension MyCodeVC : UITableViewDelegate, UITableViewDataSource {
 
 extension MyCodeVC {
     func serviceCallToGetMyCode() {
-        HotelAPIManager.shared.serviceCallToGetMyCode(["user_id" : AppModel.shared.currentUser.id!]) { (code) in
-            
+        HotelAPIManager.shared.serviceCallToGetMyCode(["user_id" : AppModel.shared.currentUser.id!]) { (data) in
+            self.arrCode = [CodeModel]()
+            for temp in data {
+                self.arrCode.append(CodeModel.init(temp))
+            }
+            self.tblView.reloadData()
         }
     }
 }

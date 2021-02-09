@@ -32,6 +32,8 @@ class SignupVC: UIViewController {
     @IBOutlet weak var searchTxt: TextField!
     @IBOutlet weak var searchTbl: UITableView!
     
+    @IBOutlet weak var mobileLoginBtn: Button!
+    
     var arrCountry = [CountryModel]()
     var arrSearchCountry = [CountryModel]()
     var selectedCountry = CountryModel.init([String : Any]())
@@ -47,6 +49,7 @@ class SignupVC: UIViewController {
     
     func configUI() {
         signinBtn.setAttributedTitle(attributedStringWithColor("Already member? Sign in", ["Sign in"], color: OrangeColor), for: .normal)
+        mobileLoginBtn.setAttributedTitle(attributedStringWithColor("If already a member in Clincia App, Click Here", ["Click Here"], color: OrangeColor), for: .normal)
         registerTableViewMethod()
         passwordView.isHidden = false
         
@@ -101,9 +104,35 @@ class SignupVC: UIViewController {
     
     @IBAction func clickToLogin(_ sender: Any) {
         self.view.endEditing(true)
-        self.navigationController?.popViewController(animated: true)
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: EmailLoginVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
+    @IBAction func clickToMobileLogin(_ sender: Any) {
+        self.view.endEditing(true)
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: MobileLoginVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            let vc : MobileLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "MobileLoginVC") as! MobileLoginVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     @IBAction func clickToSignup(_ sender: Any) {
         self.view.endEditing(true)
         if nameTxt.text?.trimmed == "" {
@@ -167,24 +196,32 @@ class SignupVC: UIViewController {
             param["countrycode"] = self.selectedCountry.phonecode
             printData(param)
             LoginAPIManager.shared.serviceCallToSignup(param) { (dict) in
-                var param = [String : Any]()
-                param["countrycode"] = self.selectedCountry.phonecode
-                param["phonenumber"] = self.phoneTxt.text
-                LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
-                    if let is_clincia = dict["is_clincia"] as? Bool {
-                        if let is_anglo = dict["is_anglo"] as? Bool {
-                            if let data = dict["data"] as? [String : Any] {
-                                AppModel.shared.currentUser = UserModel.init(data)
-                                AppModel.shared.currentUser.is_clincia = is_clincia
-                                AppModel.shared.currentUser.is_anglo = is_anglo
-                                setLoginUserData()
-                                setCliniciaUser(is_clincia)
-                                setAngloUser(is_anglo)
-                                AppDelegate().sharedDelegate().navigateToDashBoard()
-                            }
-                        }
-                    }
+                var newParam = [String : Any]()
+                newParam["email"] = self.emailTxt.text
+                newParam["password"] = self.passwordTxt.text
+                newParam["remember_token"] = getPushToken()
+                printData(newParam)
+                LoginAPIManager.shared.serviceCallToEmailLogin(newParam) {
+                    AppDelegate().sharedDelegate().navigateToDashBoard()
                 }
+//                var param = [String : Any]()
+//                param["countrycode"] = self.selectedCountry.phonecode
+//                param["phonenumber"] = self.phoneTxt.text
+//                LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
+//                    if let is_clincia = dict["is_clincia"] as? Bool {
+//                        if let is_anglo = dict["is_anglo"] as? Bool {
+//                            if let data = dict["data"] as? [String : Any] {
+//                                AppModel.shared.currentUser = UserModel.init(data)
+//                                AppModel.shared.currentUser.is_clincia = is_clincia
+//                                AppModel.shared.currentUser.is_anglo = is_anglo
+//                                setLoginUserData()
+//                                setCliniciaUser(is_clincia)
+//                                setAngloUser(is_anglo)
+//                                AppDelegate().sharedDelegate().navigateToDashBoard()
+//                            }
+//                        }
+//                    }
+//                }
             }
         }
     }

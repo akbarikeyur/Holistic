@@ -15,6 +15,7 @@ class BlogListVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
+    var arrFeatureBlogData = [BlogModel]()
     var arrBlogData = [BlogModel]()
     
     override func viewDidLoad() {
@@ -58,11 +59,10 @@ extension BlogListVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
 {
     func registerCollectionView() {
         blogCV.register(UINib.init(nibName: "BlogListCVC", bundle: nil), forCellWithReuseIdentifier: "BlogListCVC")
-        constraintHeightBlogCV.constant = 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return arrFeatureBlogData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -71,7 +71,7 @@ extension BlogListVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : BlogListCVC = blogCV.dequeueReusableCell(withReuseIdentifier: "BlogListCVC", for: indexPath) as! BlogListCVC
-        
+        cell.setupDetails(arrFeatureBlogData[indexPath.row])
         return cell
     }
     
@@ -121,11 +121,23 @@ extension BlogListVC {
     func serviceCallToGetBlogList() {
         BlogAPIManager.shared.serviceCallToGetBlogList { (data, last_page) in
             self.arrBlogData = [BlogModel]()
+            self.arrFeatureBlogData = [BlogModel]()
             for temp in data {
-                self.arrBlogData.append(BlogModel.init(temp))
+                let blog = BlogModel.init(temp)
+                self.arrBlogData.append(blog)
+                if blog.featured == "yes" {
+                    self.arrFeatureBlogData.append(blog)
+                }
             }
             self.tblView.reloadData()
             self.constraintHeightTblView.constant = CGFloat(100 * self.arrBlogData.count)
+            self.blogCV.reloadData()
+            if self.arrFeatureBlogData.count > 0 {
+                self.constraintHeightBlogCV.constant = 250
+            }else{
+                self.constraintHeightBlogCV.constant = 0
+            }
+            
         }
     }
 }

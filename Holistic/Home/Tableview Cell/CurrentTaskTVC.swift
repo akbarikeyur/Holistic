@@ -34,13 +34,11 @@ class CurrentTaskTVC: UITableViewCell {
         }else{
             timeLbl.text = ""
         }
-        actionLbl.text = dict.status
+        actionLbl.text = dict.status.capitalized
         setImageBackgroundImage(imgView, dict.get_life_style.get_single_media.url, IMAGE.PLACEHOLDER)
         
-        if dict.status == "pending" {
-            actionImgView.isHidden = true
-        }
-        else if dict.status == "completed" {
+        actionImgView.isHidden = true
+        if dict.status == "completed" {
             actionImgView.isHidden = false
             actionImg.image = UIImage(named: "ic_complete")
         }

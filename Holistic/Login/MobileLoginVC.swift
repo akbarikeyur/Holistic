@@ -105,8 +105,18 @@ class MobileLoginVC: UIViewController {
     
     @IBAction func clickToSignup(_ sender: Any) {
         self.view.endEditing(true)
-        let vc : SignupVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        var isRedirect = false
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: SignupVC.self) {
+                isRedirect = true
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+        if !isRedirect {
+            let vc : SignupVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     

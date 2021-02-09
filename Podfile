@@ -20,4 +20,5 @@ target 'Holistic' do
   pod 'MGSwipeTableCell'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'FSPagerView'
 end

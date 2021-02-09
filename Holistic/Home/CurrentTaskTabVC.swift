@@ -55,6 +55,12 @@ class CurrentTaskTabVC: UIViewController {
         serviceCallToCompleteTask(param)
     }
     
+    @IBAction func clickToLoyaltyReedemption(_ sender: Any) {
+        wakeUpView.removeFromSuperview()
+        let vc : AvailableCouponVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "AvailableCouponVC") as! AvailableCouponVC
+        UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func clickToLaterWakeupView(_ sender: Any) {
         wakeUpView.removeFromSuperview()
     }

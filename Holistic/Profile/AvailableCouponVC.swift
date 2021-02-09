@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import FSPagerView
 
 class AvailableCouponVC: UIViewController {
 
     @IBOutlet weak var pointLbl: Label!
-    @IBOutlet weak var pointCV: UICollectionView!
     @IBOutlet weak var myPageControl: UIPageControl!
+    @IBOutlet weak var myPageView: FSPagerView!
     
     var arrOffer = [OfferModel]()
     
@@ -21,7 +22,7 @@ class AvailableCouponVC: UIViewController {
 
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(setupDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
-        registerCollectionView()
+        registerPagerView()
         myPageControl.numberOfPages = 0
         setupDetail()
         serviceCallToGetOffer()
@@ -62,46 +63,36 @@ class AvailableCouponVC: UIViewController {
 
 }
 
-//MARK:- CollectionView Method
-extension AvailableCouponVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-{
-    func registerCollectionView() {
-        pointCV.register(UINib.init(nibName: "LoyalityPointCVC", bundle: nil), forCellWithReuseIdentifier: "LoyalityPointCVC")
+extension AvailableCouponVC : FSPagerViewDelegate, FSPagerViewDataSource {
+    
+    func registerPagerView() {
+        myPageView.transformer = FSPagerViewTransformer(type: .overlap)
+        myPageView.register(UINib.init(nibName: "LoyalityPointCVC", bundle: nil), forCellWithReuseIdentifier: "LoyalityPointCVC")
+        myPageView.itemSize = CGSize(width: myPageView.frame.size.width, height: myPageView.frame.size.height)
+        myPageView.decelerationDistance = FSPagerView.automaticDistance
+        myPageView.reloadData()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
         return arrOffer.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : LoyalityPointCVC = pointCV.dequeueReusableCell(withReuseIdentifier: "LoyalityPointCVC", for: indexPath) as! LoyalityPointCVC
-        cell.setupDetails(arrOffer[indexPath.row])
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell : LoyalityPointCVC = pagerView.dequeueReusableCell(withReuseIdentifier: "LoyalityPointCVC", at: index) as! LoyalityPointCVC
+        cell.setupDetails(arrOffer[index])
         cell.redeemBtn.isHidden = false
         cell.getCodeBtn.isHidden = true
-        cell.redeemBtn.tag = indexPath.row
+        cell.redeemBtn.tag = index
         cell.redeemBtn.addTarget(self, action: #selector(clickToRedeem(_:)), for: .touchUpInside)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+    func pagerViewDidScroll(_ pagerView: FSPagerView) {
+        myPageControl.currentPage = pagerView.currentIndex
     }
     
     @IBAction func clickToRedeem(_ sender: UIButton) {
         serviceCallToBookmarkOffer(arrOffer[sender.tag].id)
-    }
-    
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let visibleRect = CGRect(origin: self.pointCV.contentOffset, size: self.pointCV.bounds.size)
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        if let visibleIndexPath = self.pointCV.indexPathForItem(at: visiblePoint) {
-            self.myPageControl.currentPage = visibleIndexPath.row
-        }
     }
 }
 
@@ -112,7 +103,7 @@ extension AvailableCouponVC {
             for temp in data {
                 self.arrOffer.append(OfferModel.init(temp))
             }
-            self.pointCV.reloadData()
+            self.myPageView.reloadData()
             self.myPageControl.numberOfPages = self.arrOffer.count
         }
     }

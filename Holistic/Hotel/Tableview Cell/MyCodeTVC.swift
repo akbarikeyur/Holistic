@@ -11,6 +11,7 @@ import UIKit
 class MyCodeTVC: UITableViewCell {
 
     @IBOutlet weak var imgView: ImageView!
+    @IBOutlet weak var constraintWidthImg: NSLayoutConstraint!
     @IBOutlet weak var dateLbl: Label!
     @IBOutlet weak var nameLbl: Label!
     @IBOutlet weak var codeLbl: Label!
@@ -20,12 +21,15 @@ class MyCodeTVC: UITableViewCell {
         // Initialization code
     }
 
-    func setupHotelDetails(_ dict : HotelModel) {
+    func setupDetails(_ dict : CodeModel) {
+        constraintWidthImg.constant = 0
+        imgView.isHidden = true
         
-    }
-    
-    func setupRestaurantDetails(_ dict : RestaurantModel) {
-        
+        let tempDate = dict.created_at.components(separatedBy: ".").first!
+        let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss")
+        dateLbl.text = getLocalDateStringFromDate(date: date, format: "d MMM, yyyy")
+        nameLbl.text = dict.title.html2String
+        codeLbl.text = "Code " + dict.code
     }
     
     func setupCouponCode(_ dict : ActivedOfferModel) {
