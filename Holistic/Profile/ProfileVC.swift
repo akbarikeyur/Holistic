@@ -57,9 +57,15 @@ class ProfileVC: UIViewController {
         if index != nil {
             let selectedCountry = arrCountry[index!]
             countryLbl.text = selectedCountry.name
-            flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
-            countryCodeLbl.text = "+" + selectedCountry.phonecode
             countryLbl.text = selectedCountry.name
+        }
+        let index1 = arrCountry.firstIndex { (temp) -> Bool in
+            ("+" + temp.phonecode) == AppModel.shared.currentUser.phone_code
+        }
+        if index1 != nil {
+            let tempCountry = arrCountry[index1!]
+            flagImg.image = UIImage(named: tempCountry.sortname.lowercased())
+            countryCodeLbl.text = "+" + tempCountry.phonecode
         }
         phoneLbl.text = AppModel.shared.currentUser.phone_number
         
@@ -99,7 +105,7 @@ class ProfileVC: UIViewController {
 
     @IBAction func clickToChangePassword(_ sender: Any) {
         self.view.endEditing(true)
-        showAlertWithOption("Change Password", message: "We will send you email to your registerd email address to change password. Are you sure want to Change passwprd?", btns: ["Change Password", "Cancel"], completionConfirm: {
+        showAlertWithOption("Change Password", message: "We will send you email to your registerd email address to change password. Are you sure want to Change passwprd?", btns: ["cancel_button", "change_password"], completionConfirm: {
             
             var param = [String : Any]()
             param["email"] = AppModel.shared.currentUser.email

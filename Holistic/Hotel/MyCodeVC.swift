@@ -22,11 +22,8 @@ class MyCodeVC: UIViewController {
 
         // Do any additional setup after loading the view.
         registerTableViewMethod()
-        if type == 1 {
-            noDataView.isHidden = false
-        }else{
-            noDataView.isHidden = true
-        }
+        noDataView.isHidden = true
+        
         noDataLbl.attributedText = attributedStringWithColor(noDataLbl.text!, ["Click here"], color: OrangeColor)
         serviceCallToGetMyCode()
     }
@@ -98,6 +95,7 @@ extension MyCodeVC {
                 self.arrCode.append(CodeModel.init(temp))
             }
             self.tblView.reloadData()
+            self.noDataView.isHidden = (self.arrCode.count > 0)
         }
     }
 }

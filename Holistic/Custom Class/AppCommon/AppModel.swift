@@ -13,12 +13,12 @@ class AppModel: NSObject {
     static let shared = AppModel()
     var currentUser : UserModel!
     var clinicUser : ClinicUserModel!
-    var MY_CART : [CartModel]!
+    var MY_CART_COUNT : Int!
     
     func resetData() {
         currentUser = UserModel.init([String : Any]())
         clinicUser = ClinicUserModel.init([String : Any]())
-        MY_CART = [CartModel]()
+        MY_CART_COUNT = 0
     }
     
     func getIntValue(_ dict : [String : Any], _ key : String) -> Int {

@@ -66,8 +66,14 @@ class EditProfileVC: UploadImageVC {
         if index != nil {
             selectedCountry = arrCountry[index!]
             countryTxt.text = selectedCountry.name
-            flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
-            phonecodeTxt.text = "+" + selectedCountry.phonecode
+        }
+        let index1 = arrCountry.firstIndex { (temp) -> Bool in
+            ("+" + temp.phonecode) == AppModel.shared.currentUser.phone_code
+        }
+        if index1 != nil {
+            let tempCountry = arrCountry[index1!]
+            flagImg.image = UIImage(named: tempCountry.sortname.lowercased())
+            phonecodeTxt.text = "+" + tempCountry.phonecode
         }
         stateTxt.text = AppModel.shared.currentUser.state_id
         cityTxt.text = AppModel.shared.currentUser.city_id
@@ -159,6 +165,7 @@ class EditProfileVC: UploadImageVC {
             param["building_address"] = buildingNameTxt.text
             param["street_address"] = addressTxt.text
             param["phone_number"] = phoneTxt.text
+            param["phone_code"] = phonecodeTxt.text
             param["countrycode"] = selectedCountry.id
             param["user_id"] = AppModel.shared.currentUser.id
             printData(param)
@@ -227,11 +234,14 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if selectedType == 0 || selectedType == 3 {
+        if selectedType == 0 {
             selectedCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
             countryTxt.text = selectedCountry.name
-            flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
-            phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
+        }
+        else if selectedType == 0 || selectedType == 3 {
+            let tempCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
+            flagImg.image = UIImage(named: tempCountry.sortname.lowercased())
+            phonecodeTxt.text = "+" + tempCountry.phonecode
         }
         searchView.removeFromSuperview()
         searchTxt.text = ""

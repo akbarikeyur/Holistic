@@ -34,14 +34,14 @@ class MyPurchaseVC: UIViewController {
     @IBAction func clickToBack(_ sender: Any) {
         var isRedirect = false
         for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: ProductListVC.self) {
+            if controller.isKind(of: ProductListVC.self) || controller.isKind(of: HomeVC.self) {
                 isRedirect = true
                 self.navigationController!.popToViewController(controller, animated: true)
                 break
             }
         }
         if !isRedirect {
-            self.navigationController?.popViewController(animated: true)
+            AppDelegate().sharedDelegate().navigateToDashBoard()
         }
     }
 

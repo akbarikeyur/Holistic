@@ -48,13 +48,14 @@ class ProductDetailVC: UIViewController {
     func setupDetails() {
         productNameLbl.text = productData.name
         referenceLbl.text = "Ref: " + String(productData.id)
-        if productData.product_total_qty_in_count > 10 {
-            stockLbl.text = String(productData.product_total_qty_in_count) + " left in stock"
+        let qty = productData.product_total_qty_in_count - productData.product_total_qty_out_count
+        if qty > 10 {
+            stockLbl.text = String(qty) + " left in stock"
         }else{
-            stockLbl.text = "Only " + String(productData.product_total_qty_in_count) + " left in stock"
+            stockLbl.text = "Only " + String(qty) + " left in stock"
         }
         priceLbl.text = "Price: " + displayPriceWithCurrency(productData.price)
-        totalQtyLbl.text = "Qty: " + String(productData.product_total_qty_in_count)
+        totalQtyLbl.text = "Qty: " + String(qty)
         deliveryLbl.text = productData.delivery
         descLbl.text = productData.desc.html2String
         clickToBenifitHowUse(benifitBtn)
@@ -78,8 +79,9 @@ class ProductDetailVC: UIViewController {
     @IBAction func clickToSelectQuantity(_ sender: UIButton) {
         var arrData = [String]()
         var total = 5
-        if productData.product_total_qty_in_count < 5 {
-            total = productData.product_total_qty_in_count
+        let qty = productData.product_total_qty_in_count - productData.product_total_qty_out_count
+        if qty < 5 {
+            total = qty
         }
         if total > 0 {
             for i in 1...total {
@@ -96,7 +98,8 @@ class ProductDetailVC: UIViewController {
     }
     
     @IBAction func clickToAddToCart(_ sender: Any) {
-        if productData.product_total_qty_in_count < Int(quantityLbl.text!)! {
+        let qty = productData.product_total_qty_in_count - productData.product_total_qty_out_count
+        if qty < Int(quantityLbl.text!)! {
             displayToast("Out of stock")
         }else{
             serviceCallToAddToCart()
@@ -210,8 +213,16 @@ extension ProductDetailVC {
         param["product_id"] = productData.id
         param["user_id"] = AppModel.shared.currentUser.id
         param["qty"] = quantityLbl.text
-        ProductAPIManager.shared.serviceCallToAddToCart(param) { (dict) in
-            
+        printData(param)
+        ProductAPIManager.shared.serviceCallToAddToCart(param) {
+            self.productData.product_total_qty_out_count += Int(self.quantityLbl.text!)!
+            self.setupDetails()
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.UPDATE_PODUCT_QUANTITY), object: ["product" : self.productData])
+            if AppModel.shared.MY_CART_COUNT == nil {
+                AppModel.shared.MY_CART_COUNT = 0
+            }
+            AppModel.shared.MY_CART_COUNT += 1
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.UPDATE_CART_COUNT), object: nil)
         }
     }
 }

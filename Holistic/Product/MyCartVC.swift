@@ -33,6 +33,9 @@ class MyCartVC: UIViewController {
         registerTableViewMethod()
         serviceCallToGetMyCart()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().hideTabBar()
+    }
     
     func setupDetails() {
         if arrCartData.count > 1 {
@@ -43,6 +46,8 @@ class MyCartVC: UIViewController {
         updatePrice()
         noDataView.isHidden = (arrCartData.count > 0)
         myScroll.isHidden = (arrCartData.count == 0)
+        AppModel.shared.MY_CART_COUNT = self.arrCartData.count
+        NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.UPDATE_CART_COUNT), object: nil)
     }
     
     func updatePrice() {

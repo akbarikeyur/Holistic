@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var searchTxt: TextField!
     @IBOutlet weak var tabCV: UICollectionView!
+    @IBOutlet weak var cartLbl: Label!
     
     var arrTabData = ["Holistic Lifestyle", "Holistic Clinic", "Holistic Restaurants", "Holistic Hotels", "Holistic Products"]
     var selectedTab = 0
@@ -33,8 +34,10 @@ class HomeVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(redirectToHomeClinic), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_HOME_CLINIC), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(setupUserDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(clickToNotification(_:)), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_NOTIFICATION_SCREEN), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCartCount), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CART_COUNT), object: nil)
         
         registerCollectionView()
+        cartLbl.isHidden = true
         delay(2.0) {
             self.flowerView.isHidden = true
             self.selecteTab()
@@ -69,6 +72,15 @@ class HomeVC: UIViewController {
         selecteTab()
     }
     
+    @objc func updateCartCount() {
+        if AppModel.shared.MY_CART_COUNT != nil && AppModel.shared.MY_CART_COUNT > 0 {
+            cartLbl.text = String(AppModel.shared.MY_CART_COUNT)
+            cartLbl.isHidden = false
+        }else{
+            cartLbl.isHidden = true
+        }
+    }
+    
     //MARK:- Button click event
     @IBAction func clickToSideMenu(_ sender: Any) {
         self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -83,6 +95,10 @@ class HomeVC: UIViewController {
         
     }
     
+    @IBAction func clickToCart(_ sender: Any) {
+        let vc : MyCartVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyCartVC") as! MyCartVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     /*
      @IBAction func clickToNotification(_ sender: Any) {

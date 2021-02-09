@@ -11,6 +11,7 @@
 "gallry_photo" = "Choose Existing Photo";
 "cancel_button" = "Cancel";
 "ok_button" = "OK";
+"change_password" = "Change Password";
 
 //Common
 "currency_aed" = "AED ";

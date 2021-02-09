@@ -28,7 +28,7 @@ class ProductListTVC: UITableViewCell {
             setImageBackgroundImage(imgView, dict.product_single_image[0].url, IMAGE.PLACEHOLDER)
         }
         priceLbl.text = displayPriceWithCurrency(dict.price)
-        qtyLbl.text = "Qty: " + String(dict.product_total_qty_in_count)
+        qtyLbl.text = "Qty: " + String(dict.product_total_qty_in_count - dict.product_total_qty_out_count)
         descLbl.text = dict.desc.html2String
         deliveryLbl.text = dict.delivery
     }

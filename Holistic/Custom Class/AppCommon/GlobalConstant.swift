@@ -58,6 +58,7 @@ struct NOTIFICATION {
     static var REFRESH_COMPLETE_TASK        =   "REFRESH_COMPLETE_TASK"
     static var REDIRECT_NOTIFICATION_SCREEN =   "REDIRECT_NOTIFICATION_SCREEN"
     static var UPDATE_CART_COUNT            =   "UPDATE_CART_COUNT"
+    static var UPDATE_PODUCT_QUANTITY       =   "UPDATE_PODUCT_QUANTITY"
 }
 
 struct Platform {

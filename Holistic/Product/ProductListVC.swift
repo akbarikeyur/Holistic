@@ -26,29 +26,45 @@ class ProductListVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(updateProductQuantity(_:)), name: NSNotification.Name.init(NOTIFICATION.UPDATE_PODUCT_QUANTITY), object: nil)
         registerTableViewMethod()
         registerCollectionView()
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tblView.refreshControl = refreshControl
         
-        if AppModel.shared.MY_CART != nil && AppModel.shared.MY_CART.count > 0 {
-            cartLbl.text = String(AppModel.shared.MY_CART.count)
-            cartLbl.isHidden = false
-        }else{
-            cartLbl.text = ""
-            cartLbl.isHidden = true
-        }
+        
         serviceCallToGetProductList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().hideTabBar()
+        if AppModel.shared.MY_CART_COUNT != nil && AppModel.shared.MY_CART_COUNT > 0 {
+            cartLbl.text = String(AppModel.shared.MY_CART_COUNT)
+            cartLbl.isHidden = false
+        }else{
+            cartLbl.text = ""
+            cartLbl.isHidden = true
+        }
     }
     
     @objc func refreshData() {
         refreshControl.endRefreshing()
         page = 1
         serviceCallToGetProductList()
+    }
+    
+    @objc func updateProductQuantity(_ noti : Notification) {
+        if let dict = noti.object as? [String : Any] {
+            if let product = dict["product"] as? ProductModel {
+                let index = arrProduct.firstIndex { (temp) -> Bool in
+                    temp.id == product.id
+                }
+                if index != nil {
+                    arrProduct[index!] = product
+                    tblView.reloadData()
+                }
+            }
+        }
     }
     
     //MARK:- Button click event

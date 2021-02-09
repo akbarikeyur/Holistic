@@ -82,6 +82,8 @@ class OrderSummaryVC: UIViewController {
                 ProductAPIManager.shared.serviceCallToClearFullCart(["user_id" : AppModel.shared.currentUser.id!]) {
                     
                 }
+                AppModel.shared.MY_CART_COUNT = 0
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.UPDATE_CART_COUNT), object: nil)
                 let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC
                 UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
             }

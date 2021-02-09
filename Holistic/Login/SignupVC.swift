@@ -192,6 +192,7 @@ class SignupVC: UIViewController {
             param["floor"] = floorTxt.text
             param["building_address"] = buildingNameTxt.text
             param["street_address"] = addressTxt.text
+            param["phone_code"] = phonecodeTxt.text
             param["phone_number"] = phoneTxt.text
             param["countrycode"] = self.selectedCountry.phonecode
             printData(param)
@@ -283,11 +284,14 @@ extension SignupVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if selectedType == 0 || selectedType == 3 {
+        if selectedType == 0 {
             selectedCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
             countryTxt.text = selectedCountry.name
-            flagImg.image = UIImage(named: selectedCountry.sortname.lowercased())
-            phonecodeTxt.text = "+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode
+        }
+        else if selectedType == 0 || selectedType == 3 {
+            let tempCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
+            flagImg.image = UIImage(named: tempCountry.sortname.lowercased())
+            phonecodeTxt.text = "+" + tempCountry.phonecode
         }
         searchView.removeFromSuperview()
         searchTxt.text = ""

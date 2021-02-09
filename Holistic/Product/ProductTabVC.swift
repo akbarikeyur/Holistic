@@ -21,6 +21,7 @@ class ProductTabVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(updateProductQuantity(_:)), name: NSNotification.Name.init(NOTIFICATION.UPDATE_PODUCT_QUANTITY), object: nil)
         registerTableViewMethod()
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tblView.refreshControl = refreshControl
@@ -37,6 +38,20 @@ class ProductTabVC: UIViewController {
         refreshControl.endRefreshing()
         page = 1
         serviceCallToGetProductList()
+    }
+    
+    @objc func updateProductQuantity(_ noti : Notification) {
+        if let dict = noti.object as? [String : Any] {
+            if let product = dict["product"] as? ProductModel {
+                let index = arrProduct.firstIndex { (temp) -> Bool in
+                    temp.id == product.id
+                }
+                if index != nil {
+                    arrProduct[index!] = product
+                    tblView.reloadData()
+                }
+            }
+        }
     }
     
     @IBAction func clickToFilter(_ sender: Any) {

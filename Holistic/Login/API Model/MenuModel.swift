@@ -87,7 +87,7 @@ struct CityModel {
 
 struct UserModel {
     var id, country_id, points : Int!
-    var building_address, email, floor, name, phone_number, roles, room_no, street_address, clinicea_user_id, state_id, city_id : String!
+    var building_address, email, floor, name, phone_number, roles, room_no, street_address, clinicea_user_id, state_id, city_id, phone_code : String!
     var is_clincia, is_anglo : Bool!
     var get_profile : MediaModel!
     init(_ dict : [String : Any]) {
@@ -108,9 +108,10 @@ struct UserModel {
         is_anglo = dict["is_anglo"] as? Bool ?? false
         points = AppModel.shared.getIntValue(dict, "points")
         get_profile = MediaModel.init(dict["get_profile"] as? [String : Any] ?? [String : Any]())
+        phone_code = AppModel.shared.getStringValue(dict, "phone_code")
     }
     
     func dictionary() -> [String : Any] {
-        return ["id" : id!, "city_id" : city_id!, "state_id" : state_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!, "clinicea_user_id" : clinicea_user_id!, "is_clincia" : is_clincia!, "is_anglo" : is_anglo!, "points" : points!, "get_profile" : get_profile.dictionary()]
+        return ["id" : id!, "city_id" : city_id!, "state_id" : state_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!, "clinicea_user_id" : clinicea_user_id!, "is_clincia" : is_clincia!, "is_anglo" : is_anglo!, "points" : points!, "get_profile" : get_profile.dictionary(), "phone_code" : phone_code!]
     }
 }

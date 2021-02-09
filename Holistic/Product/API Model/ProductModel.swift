@@ -13,7 +13,7 @@ struct ProductModel {
     var name, desc, price, benifits, how_to_use, delivery, created_at : String!
     var product_single_image : [MediaModel]!
     var product_total_qty : QuantityModel!
-    var product_total_qty_in_count : Int!
+    var product_total_qty_in_count, product_total_qty_out_count : Int!
     
     init(_ dict : [String : Any]) {
         id = AppModel.shared.getIntValue(dict, "id")
@@ -40,6 +40,7 @@ struct ProductModel {
         }
         product_total_qty = QuantityModel.init(dict["product_total_qty"] as? [String : Any] ?? [String : Any]())
         product_total_qty_in_count = AppModel.shared.getIntValue(dict, "product_total_qty_in_count")
+        product_total_qty_out_count = AppModel.shared.getIntValue(dict, "product_total_qty_out_count")
     }
 }
 
