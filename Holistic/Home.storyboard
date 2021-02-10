@@ -2619,6 +2619,7 @@ Which Is Right for You? </string>
                     </view>
                     <size key="freeformSize" width="320" height="668"/>
                     <connections>
+                        <outlet property="botomLbl" destination="0Ow-tm-SJf" id="7dV-eP-Kye"/>
                         <outlet property="chartView" destination="v51-Ae-fGL" id="8b4-VY-W5C"/>
                         <outlet property="completedLbl" destination="FQ0-m7-fcM" id="59Z-FC-Ulj"/>
                         <outlet property="fromTxt" destination="H3I-RL-Efq" id="HHj-0t-1iW"/>

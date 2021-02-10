@@ -19,6 +19,7 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var missedLbl: Label!
     @IBOutlet weak var percentageLbl: Label!
     @IBOutlet weak var loyalPointLbl: Label!
+    @IBOutlet weak var botomLbl: Label!
     
     var fromDate, toDate : Date?
     var missedTask = 0
@@ -51,12 +52,22 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         totalLbl.text = String(totalTask)
         completedLbl.text = String(completedTask)
         missedLbl.text = String(missedTask)
+        var botomPercentage = ""
         if(completedTask == 0 && missedTask == 0){
             percentageLbl.text = "0%"
+            botomPercentage = "more"
+            
         }else{
-            percentageLbl.text = String(Int(completedTask * 100 / (completedTask + missedTask))) + "%"
+            let percentage = Int(completedTask * 100 / (completedTask + missedTask))
+            percentageLbl.text = String(percentage) + "%"
+            
+            if percentage > 80 {
+                botomPercentage = "100%"
+            }else{
+                botomPercentage = String(percentage + 20) + "%+"
+            }
         }
-        
+        botomLbl.text = "You are almost towards a healthier lifestyle, next month try to achieve " + botomPercentage + " and earn points to redeem against vouchers"
         chartView.noDataText = "Task not found."
         
         arrDates = [String]()
