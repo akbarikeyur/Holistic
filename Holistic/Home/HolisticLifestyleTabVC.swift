@@ -147,8 +147,10 @@ extension HolisticLifestyleTabVC {
         HomeAPIManager.shared.serviceCallToGetStatistics(param) { (dict) in
             let completedTask = AppModel.shared.getIntValue(dict, "vCompletedTask")
             let totalTask = AppModel.shared.getIntValue(dict, "vTotalTask")
-            
-            let percentage = Int(completedTask * 100 / totalTask)
+            var percentage = 0
+            if totalTask > 0 {
+                percentage = Int(completedTask * 100 / totalTask)
+            }
             self.flowerTab.setFlower(percentage)
             self.percentageAchiveLbl.text = String(percentage) + "% achieved"
             self.goalLbl.text = "Based on your overall health test, your score is " + String(completedTask) + " and consider good..."

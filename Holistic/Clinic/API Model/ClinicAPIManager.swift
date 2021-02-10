@@ -16,18 +16,19 @@ struct CLINIC_API {
     static let KEY              =       "a38a3f404b604d57c7d7aba15b4dd951"
     static let USERNAME         =       "sa2@email.com" //"dr.rifas@gmail.com"
     static let PASSWORD         =       "cf16b0" //"Rifas12345"
+    static let API_KEY          =       "fb05b217-ac0b-4ff6-a6fa-c71bd68aba75"
     
     static let GET_TOKEN        =       BASE_URL + "login/getTokenByPatientUsernamePwd?apiKey=" + CLINIC_API.KEY + "&loginUserName=" + CLINIC_API.USERNAME + "&pwd=" + CLINIC_API.PASSWORD
     static let GET_USER_ID_BY_TOKEN        =       BASE_URL + "login/getUserIDByToken?api_key=" + getClinicToken()
     static let GET_PATIENT_DETAIL          =       BASE_URL + "patients/getPatientByID?patientID=" + getClinicUserId() + "&api_key=" + getClinicToken()
     
-    static let GET_APPOINTMENT_LIST        =       BASE_URL + "appointments/getAppointmentsByPatient?patientID=" + getClinicUserId() + "&appointmentType=2&pageSize=10&api_key=" + getClinicToken()
+    static let GET_APPOINTMENT_LIST        =       BASE_URL + "appointments/getAppointmentsByPatient?patientID=" + getClinicUserId() + "&appointmentType=2&pageSize=10&api_key=" + API_KEY
     
-    static let GET_DIET_PLAN               =       BASE_URL + "documents/getDocumentsByPatient?patientID=" + getClinicUserId() + "&pageNo=1&api_key=" + getClinicToken()
-    static let GET_PRESCRIPTIONS           =       BASE_URL + "patientRx/getRxByPatient?patientID=" + getClinicUserId() + "&rxStatus=0&pageNo=1&api_key=" + getClinicToken()
-    static let GET_PACKAGE_LIST            =       BASE_URL + "patientPackages/getPackagesByPatient?patientID=" + getClinicUserId() + "&packageStatus=0&pageNo=1&api_key=" + getClinicToken()
+    static let GET_DIET_PLAN               =       BASE_URL + "documents/getDocumentsByPatient?patientID=" + getClinicUserId() + "&pageNo=1&api_key=" + API_KEY
+    static let GET_PRESCRIPTIONS           =       BASE_URL + "patientRx/getRxByPatient?patientID=" + getClinicUserId() + "&rxStatus=0&pageNo=1&api_key=" + API_KEY
+    static let GET_PACKAGE_LIST            =       BASE_URL + "patientPackages/getPackagesByPatient?patientID=" + getClinicUserId() + "&packageStatus=0&pageNo=1&api_key=" + API_KEY
     
-    static let GET_PATIENT_FAMILY          =       BASE_URL + "patients/getPatientFamily?patientID=" + getClinicUserId() + "&pageSize=10&api_key=" + getClinicToken()
+    static let GET_PATIENT_FAMILY          =       BASE_URL + "patients/getPatientFamily?patientID=" + getClinicUserId() + "&pageSize=10&api_key=" + API_KEY
     
 }
 
@@ -69,6 +70,7 @@ public class ClinicAPIManager {
     func serviceCallToGetAppointmentList(_ page : Int, _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
         let strUrl = CLINIC_API.GET_APPOINTMENT_LIST + "&pageNo=" + String(page)
         ClinicAPIManager.shared.callGetRequest(strUrl, false) { (dict) in
+            printData(dict)
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{
