@@ -98,8 +98,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func logoutFromApp() {
         let arrCountry = getCountryData()
+        let info = isInfoScreenDisplayed()
+        let tool = isToolTipDisplayed()
         removeUserDefaultValues()
         setCountryData(arrCountry)
+        setInfoScreenDisplayed(info)
+        setToolTipDisplayed(tool)
         let navigationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVCNav") as! UINavigationController
         self.window?.rootViewController = navigationVC
     }

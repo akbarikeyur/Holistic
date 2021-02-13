@@ -33,7 +33,12 @@ class WelcomeVC: UIViewController {
         
         constraintHeightTopView.constant = SCREEN.WIDTH/6
         registerCollectionView()
-        clickToSelectTopButton(btn1)
+        
+        if isInfoScreenDisplayed() {
+            clickToSkip(self)
+        }else{
+            clickToSelectTopButton(btn1)
+        }
     }
     
     @IBAction func clickToSelectTopButton(_ sender: UIButton) {
@@ -77,6 +82,7 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func clickToSkip(_ sender: Any) {
+        setInfoScreenDisplayed(true)
         let vc : EmailLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVC") as! EmailLoginVC
         self.navigationController?.pushViewController(vc, animated: false)
     }
