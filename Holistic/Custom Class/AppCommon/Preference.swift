@@ -205,3 +205,27 @@ func isFirstHotelPopup() -> Bool {
     }
     return false
 }
+
+func setInfoScreenDisplayed(_ value : Bool) {
+    setDataToPreference(data: value as AnyObject, forKey: "info_screen_displayed")
+}
+
+func isInfoScreenDisplayed() -> Bool {
+    if let value : Bool = getDataFromPreference(key: "info_screen_displayed") as? Bool
+    {
+        return value
+    }
+    return false
+}
+
+func setToolTipDisplayed(_ value : Bool) {
+    setDataToPreference(data: value as AnyObject, forKey: "tool_tip_displayed")
+}
+
+func isToolTipDisplayed() -> Bool {
+    if let value : Bool = getDataFromPreference(key: "tool_tip_displayed") as? Bool
+    {
+        return value
+    }
+    return false
+}

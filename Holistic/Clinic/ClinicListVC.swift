@@ -50,7 +50,6 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         tblView.register(UINib.init(nibName: "ClinicAppointmentTVC", bundle: nil), forCellReuseIdentifier: "ClinicAppointmentTVC")
-        updateTableviewHeight()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,7 +78,7 @@ extension ClinicListVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func updateTableviewHeight() {
-        constraintHeightTblView.constant = 150 * 3
+        constraintHeightTblView.constant = CGFloat(150 * arrAppointment.count)
     }
 }
 
@@ -93,12 +92,24 @@ extension ClinicListVC {
             for temp in data {
                 self.arrAppointment.append(AppointmentModel.init(temp))
             }
+            
+            if self.arrAppointment.count > 1
+            {
+                //2020-10-15T06:15:00Z
+                self.arrAppointment.sort {
+                    let elapsed0 = getDateFromDateString(date: $0.StartDateTime, format: "yyyy-MM-dd'T'HH:mm:ssZ")
+                    let elapsed1 = getDateFromDateString(date: $1.StartDateTime, format: "yyyy-MM-dd'T'HH:mm:ssZ")
+                    return elapsed0 > elapsed1
+                }
+            }
+            
             if data.count < 10 {
                 self.page = 0
             }else{
                 self.page += 1
             }
             self.tblView.reloadData()
+            self.updateTableviewHeight()
         }
     }
 }

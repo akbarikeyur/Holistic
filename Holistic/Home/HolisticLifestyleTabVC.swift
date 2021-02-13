@@ -32,7 +32,7 @@ class HolisticLifestyleTabVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateHeight(_:)), name: NSNotification.Name.init("UPDATE_LIFESTYLE_HEIGHT"), object: nil)
         registerCollectionView()
         selecteTab()
-        serviceCallToGetStatistics()
+        serviceCallToGetFlowerOfLife()
     }
     
     func setupDetails() {
@@ -129,24 +129,16 @@ extension HolisticLifestyleTabVC : UICollectionViewDelegate, UICollectionViewDat
 }
 
 extension HolisticLifestyleTabVC {
-    func serviceCallToGetStatistics() {
+    func serviceCallToGetFlowerOfLife() {
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
-        
-        let components = Calendar.current.dateComponents([.year, .month], from: Date())
-        let startOfMonth = Calendar.current.date(from: components)
-        param["start_date"] = getLocalDateStringFromDate(date: startOfMonth!, format: "yyyy-MM-dd")
-        
-        var comps2 = DateComponents()
-        comps2.month = 1
-        comps2.day = -1
-        let endOfMonth = Calendar.current.date(byAdding: comps2, to: startOfMonth!)
-        param["end_date"] = getLocalDateStringFromDate(date: endOfMonth!, format: "yyyy-MM-dd")
-        printData(param)
-        
-        HomeAPIManager.shared.serviceCallToGetStatistics(param) { (dict) in
-            let completedTask = AppModel.shared.getIntValue(dict, "vCompletedTask")
-            let totalTask = AppModel.shared.getIntValue(dict, "vTotalTask")
+        HomeAPIManager.shared.serviceCallToGetFlowerOfLife(param) { (data) in
+            var completedTask = 0
+            var totalTask = 0
+            for temp in data {
+                completedTask += AppModel.shared.getIntValue(temp, "completed")
+                totalTask += AppModel.shared.getIntValue(temp, "total")
+            }
             var percentage = 0
             if totalTask > 0 {
                 percentage = Int(completedTask * 100 / totalTask)

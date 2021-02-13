@@ -21,4 +21,5 @@ target 'Holistic' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'FSPagerView'
+  pod 'SexyTooltip'
 end

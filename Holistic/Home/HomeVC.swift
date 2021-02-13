@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SexyTooltip
 
 class HomeVC: UIViewController {
 
@@ -17,14 +18,25 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tabCV: UICollectionView!
     @IBOutlet weak var cartLbl: Label!
     
+    @IBOutlet var infoView: UIView!
+    @IBOutlet weak var tool1Btn: UIButton!
+    @IBOutlet weak var tool2Btn: UIButton!
+    @IBOutlet weak var tool3Btn: UIButton!
+    @IBOutlet weak var tool4Btn: UIButton!
+    @IBOutlet weak var tool5Btn: UIButton!
+    @IBOutlet weak var menuToolBtn: UIButton!
+    
     var arrTabData = ["Holistic Lifestyle", "Holistic Clinic", "Holistic Restaurants", "Holistic Hotels", "Holistic Products"]
     var selectedTab = 0
+    var toolIndex = 0
     
     let holisticTab : HolisticLifestyleTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HolisticLifestyleTabVC") as! HolisticLifestyleTabVC
     let clinicTab : ClinicTabVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicTabVC") as! ClinicTabVC
     let restaurantTab : RestaurantTabVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantTabVC") as! RestaurantTabVC
     let hotelTab : HotelsTabVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsTabVC") as! HotelsTabVC
     let productTab : ProductTabVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductTabVC") as! ProductTabVC
+    
+    var infoTip = SexyTooltip.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +61,9 @@ class HomeVC: UIViewController {
         print(date)
         
         AppDelegate().sharedDelegate().serviceCallToGetMyCart()
+        if !isToolTipDisplayed() {
+            displayToolTipView()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,6 +115,11 @@ class HomeVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func clickToHideToolTip(_ sender: Any) {
+        if infoTip != nil {
+            infoTip.dismiss()
+        }
+    }
     /*
      @IBAction func clickToNotification(_ sender: Any) {
      }
@@ -192,5 +212,83 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
 extension HomeVC {
     func serviceCallToGenerateToken() {
         ClinicAPIManager.shared.serviceCallToGenerateToken()
+    }
+}
+
+extension HomeVC : SexyTooltipDelegate {
+    func displayToolTipView() {
+        displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: infoView)
+        infoView.addSubview(infoTip)
+        toolIndex = 1
+        presentToolTip()
+    }
+    
+    func presentToolTip() {
+        var tip = ""
+        switch toolIndex {
+            case 1:
+                tip = "Home"
+                break
+            case 2:
+                tip = "Hospital"
+                break
+            case 3:
+                tip = "Hotel"
+                break
+            case 4:
+                tip = "Restaurants"
+                break
+            case 5:
+                tip = "Profile"
+                break
+            case 6:
+                tip = "Menu"
+                break
+            default:
+                break
+        }
+        infoTip = SexyTooltip.init(attributedString: tip.html2AttributedString)
+        infoTip.delegate = self
+        switch toolIndex {
+            case 1:
+                infoTip.present(from: tool1Btn, in: infoView, animated: true)
+                break
+            case 2:
+                infoTip.present(from: tool2Btn, in: infoView, animated: true)
+                break
+            case 3:
+                infoTip.present(from: tool3Btn, in: infoView, animated: true)
+                break
+            case 4:
+                infoTip.present(from: tool4Btn, in: infoView, animated: true)
+                break
+            case 5:
+                infoTip.present(from: tool5Btn, in: infoView, animated: true)
+                break
+            case 6:
+                infoTip.present(from: menuToolBtn, in: infoView, animated: true)
+                break
+            default:
+                break
+        }
+        
+    }
+    
+    func tooltipDidPresent(_ tooltip: SexyTooltip!) {
+        
+    }
+    
+    func tooltipWasTapped(_ tooltip: SexyTooltip!) {
+        
+    }
+    
+    func tooltipDidDismiss(_ tooltip: SexyTooltip!) {
+        if toolIndex == 6 {
+            infoView.removeFromSuperview()
+            setToolTipDisplayed(true)
+            return
+        }
+        toolIndex += 1
+        presentToolTip()
     }
 }

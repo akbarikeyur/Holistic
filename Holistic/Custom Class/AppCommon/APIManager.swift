@@ -24,6 +24,7 @@ struct API {
     static let UPDATE_PROFILE            =       BASE_URL + "user/updateProfile"
     static let GET_USER_DETAIL           =       BASE_URL + "user/getUserDetails"
     
+    static let GET_FLOWER_LIFE           =       BASE_URL + "lifestyle/floweroflife"
     static let GET_TASK_LIST             =       BASE_URL + "lifestyle/getTasks"
     static let MAKE_TASK_COMPLETE        =       BASE_URL + "lifestyle/complete_task"
     static let GET_MISSED_TASK_LIST      =       BASE_URL + "lifestyle/missed_n_completed_task"

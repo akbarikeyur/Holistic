@@ -26,11 +26,11 @@ class ClinicAppointmentTVC: UITableViewCell {
 
     func setupDetails(_ dict : AppointmentModel) {
         //2018-05-24T13:05:00Z
-        let strDate = dict.CreatedDatetime.components(separatedBy: "T").first!
+        let strDate = dict.StartDateTime.components(separatedBy: "T").first!
         let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd")
-        monthLbl.text = getDateStringFromDate(date: date, format: "MMM")
-        dateLbl.text = getDateStringFromDate(date: date, format: "dd")
-        yearLbl.text = getDateStringFromDate(date: date, format: "yyyy")
+        monthLbl.text = getLocalDateStringFromDate(date: date, format: "MMM")
+        dateLbl.text = getLocalDateStringFromDate(date: date, format: "dd")
+        yearLbl.text = getLocalDateStringFromDate(date: date, format: "yyyy")
         serviceNameLbl.text = dict.ServiceName
         userNameLbl.text = dict.PatientName
         orgNameLbl.text = dict.OrganisationName

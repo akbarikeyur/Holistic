@@ -48,6 +48,14 @@ func getDateFromDateString(date : String, format : String) -> Date
     return dateFormatter.date(from: date)!
 }
 
+func getLocalDateFromDateString(date : String, format : String) -> Date
+{
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = NSLocale.current
+    dateFormatter.dateFormat = format
+    return dateFormatter.date(from: date)!
+}
+
 //MARK: Date difference
 func getDifferenceFromCurrentTime(_ newDate : Date) -> Int
 {

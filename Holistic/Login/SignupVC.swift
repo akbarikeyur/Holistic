@@ -59,7 +59,7 @@ class SignupVC: UIViewController {
         else{
             arrCountry = getCountryData()
             let index = arrCountry.firstIndex { (temp) -> Bool in
-                temp.sortname.lowercased() == CURRENT_COUNTRY_CODE.lowercased()
+                temp.sortname.lowercased() == "ae"
             }
             if index != nil {
                 selectedCountry = arrCountry[index!]

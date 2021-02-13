@@ -47,6 +47,18 @@ static let shared = HomeAPIManager()
         }
     }
     
+    func serviceCallToGetFlowerOfLife(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.GET_FLOWER_LIFE, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let data = dict["data"] as? [[String : Any]] {
+                    completion(data)
+                    return
+                }
+            }
+        }
+    }
+    
     func serviceCallToGetStatistics(_ param : [String : Any], _ completion: @escaping (_ data : [String : Any]) -> Void) {
         APIManager.shared.callPostRequest(API.GET_STATISTIC, param, true) { (dict) in
             printData(dict)

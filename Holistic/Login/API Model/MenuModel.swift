@@ -8,6 +8,16 @@
 
 import Foundation
 
+struct WelcomeModel {
+    var title, image, desc : String!
+    
+    init(_ dict : [String : Any]) {
+        title = dict["title"] as? String ?? ""
+        image = dict["image"] as? String ?? ""
+        desc = dict["desc"] as? String ?? ""
+    }
+}
+
 struct MenuModel {
     var title, image, select_image : String!
     var data : [SubMenuModel]!

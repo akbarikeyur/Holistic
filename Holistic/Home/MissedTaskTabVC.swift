@@ -30,10 +30,15 @@ class MissedTaskTabVC: UIViewController {
     }
     
     func setupDetails() {
-        if arrTaskData.count == 0 {
+        if PLATFORM.isSimulator {
             serviceCallToGetMissedTask()
-        }else{
-            updateHeight()
+        }
+        else{
+            if arrTaskData.count == 0 {
+                serviceCallToGetMissedTask()
+            }else{
+                updateHeight()
+            }
         }
     }
     

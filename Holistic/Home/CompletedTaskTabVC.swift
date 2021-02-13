@@ -31,10 +31,15 @@ class CompletedTaskTabVC: UIViewController {
     }
     
     func setupDetails() {
-        if arrTaskData.count == 0 {
+        if PLATFORM.isSimulator {
             serviceCallToGetCompletedTask()
-        }else{
-            updateHeight()
+        }
+        else{
+            if arrTaskData.count == 0 {
+                serviceCallToGetCompletedTask()
+            }else{
+                updateHeight()
+            }
         }
     }
     

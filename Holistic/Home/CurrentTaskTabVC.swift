@@ -35,10 +35,15 @@ class CurrentTaskTabVC: UIViewController {
     }
     
     func setupDetails() {
-        if arrTaskData.count == 0 {
+        if PLATFORM.isSimulator {
             serviceCallToGetTask()
-        }else{
-            updateHeight()
+        }
+        else{
+            if arrTaskData.count == 0 {
+                serviceCallToGetTask()
+            }else{
+                updateHeight()
+            }
         }
     }
 
