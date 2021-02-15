@@ -1,0 +1,1060 @@
+{
+	"id": "713e743f-98a3-cab1-2766-833a5b099553",
+	"name": "Clinic",
+	"description": "",
+	"order": [
+		"a89d9782-2e9c-c7db-9bc5-3b971c5caaa6",
+		"43e65849-6267-1f5c-5fe1-d90139ce436b",
+		"eab783e4-c53c-84c8-f0c4-9e01d9a2b9b5",
+		"1d0b52ff-14b0-15f0-a8e8-631535e30741",
+		"acf56662-e8ed-4e1f-c978-f11fe48cd5a5",
+		"310e8dd5-7567-f0ed-0318-5767fbe2494d",
+		"a604a26a-cb03-602b-d8a1-d058eb999e94",
+		"62ce6602-47ef-fec8-4c69-ce741e031e7e",
+		"2a5053ce-d311-67f4-bb9a-a8b147047b61",
+		"42027a8b-b03c-457b-1018-eea917d04761",
+		"1dc7b189-cfb2-a894-030f-5738513b983f",
+		"6cdecc53-3966-4a2f-394d-656e7647bfb7",
+		"02c530d6-4baa-477a-28c3-ed328d6cd042",
+		"910abb85-494b-ddd9-1621-07b983479e6a",
+		"418b36c0-f6f4-6ed4-3de8-756ecef9bbd0",
+		"dfe8d373-6b5d-5c84-efd4-9ff8de932021",
+		"ca797356-c0a5-9d6e-62d5-80278a3de6e6",
+		"18a535f7-1227-dd66-5f63-f4d679677ba5",
+		"332eada9-634d-0c53-6e11-1f1ffed980cf",
+		"f572d864-07a9-16c1-52d9-483cbfc03f56",
+		"51f24dc3-5532-c1a6-69c0-d4879f271b35",
+		"a9b15f32-bf22-474a-c7fa-7cef394d9ec4",
+		"f9a3ddc2-cedf-9232-ca2d-0894ce106862",
+		"d8fe84c9-727c-03ed-0521-c02ea385727c",
+		"6f9fee14-d8f1-6d8d-deb1-87224179fc0c",
+		"5f0c581e-1948-6404-af2f-93c439a54719",
+		"933f9634-2798-62d2-b9f7-b3d4d42a5266",
+		"b8727da0-6202-a9c0-8482-441f2cdf35a9",
+		"9f58ca5e-0002-b946-20c6-cf478dc566e8"
+	],
+	"folders_order": [],
+	"folders": [],
+	"owner": "1369513",
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "02c530d6-4baa-477a-28c3-ed328d6cd042",
+			"name": "all hotels",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{base_url}}hotels/all",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "18a535f7-1227-dd66-5f63-f4d679677ba5",
+			"name": "single product",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}product/single_product",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "1d0b52ff-14b0-15f0-a8e8-631535e30741",
+			"name": "get Priscription",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "GET",
+			"headers": "Content-Type: application/json\ntoken: c1215daf-7049-4c36-b538-3d7a5907c941",
+			"dataMode": "params",
+			"data": [],
+			"rawModeData": "",
+			"url": "https://api.clinicea.com/api/v2/patientRx/getRxByPatient?patientID=255702a1-34b8-41b4-eed9-5c9306682269&pageNo=1&rxStatus=0",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "appointmentType",
+					"value": "2",
+					"enabled": false
+				},
+				{
+					"key": "patientID",
+					"value": "255702a1-34b8-41b4-eed9-5c9306682269"
+				},
+				{
+					"key": "pageNo",
+					"value": "1"
+				},
+				{
+					"key": "rxStatus",
+					"value": "0"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "c1215daf-7049-4c36-b538-3d7a5907c941",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "1dc7b189-cfb2-a894-030f-5738513b983f",
+			"name": "user registeration",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "name",
+					"value": "ali",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "arm@anglotestserver.website",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "abc",
+					"type": "text"
+				},
+				{
+					"key": "city_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "country_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "room_no",
+					"value": "12",
+					"type": "text"
+				},
+				{
+					"key": "floor",
+					"value": "32",
+					"type": "text"
+				},
+				{
+					"key": "building_address",
+					"value": "bad",
+					"type": "text"
+				},
+				{
+					"key": "street_address",
+					"value": "stadd",
+					"type": "text"
+				},
+				{
+					"key": "phone_number",
+					"value": "123123",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}user/signup",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "2a5053ce-d311-67f4-bb9a-a8b147047b61",
+			"name": "get state",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "country_id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}country/get_states",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "310e8dd5-7567-f0ed-0318-5767fbe2494d",
+			"name": "all restaurant",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{base_url}}restaurant/all",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "332eada9-634d-0c53-6e11-1f1ffed980cf",
+			"name": "check product qty",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}product/checkproductqty",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "418b36c0-f6f4-6ed4-3de8-756ecef9bbd0",
+			"name": "get codes",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "listing_id",
+					"value": "2",
+					"type": "text"
+				},
+				{
+					"key": "user_id",
+					"value": "2",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}codes/getCode",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "42027a8b-b03c-457b-1018-eea917d04761",
+			"name": "get cities",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "state_id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}country/get_cities",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "43e65849-6267-1f5c-5fe1-d90139ce436b",
+			"name": "getPatient",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "GET",
+			"headers": "Content-Type: application/json\ntoken: c1215daf-7049-4c36-b538-3d7a5907c941",
+			"dataMode": "params",
+			"data": [],
+			"rawModeData": "",
+			"url": "https://api.clinicea.com/api/v2/patients/getPatient?searchBy=2&searchText=567012524&searchOption=971",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "searchBy",
+					"value": "2"
+				},
+				{
+					"key": "searchText",
+					"value": "567012524"
+				},
+				{
+					"key": "searchOption",
+					"value": "971"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "c1215daf-7049-4c36-b538-3d7a5907c941",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "51f24dc3-5532-c1a6-69c0-d4879f271b35",
+			"name": "add to cart",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "product_id",
+					"value": "5",
+					"type": "text"
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}cart/addtocart",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "5f0c581e-1948-6404-af2f-93c439a54719",
+			"name": "get tasks",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}lifestyle/getTasks",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "62ce6602-47ef-fec8-4c69-ce741e031e7e",
+			"name": "get country",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}country/get_country",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "6cdecc53-3966-4a2f-394d-656e7647bfb7",
+			"name": "user login",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "countrycode",
+					"value": "971",
+					"type": "text"
+				},
+				{
+					"key": "phonenumber",
+					"value": "567674146",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}user/login",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "6f9fee14-d8f1-6d8d-deb1-87224179fc0c",
+			"name": "product purchase history",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "2",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}product/productPurchaseHistory",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "910abb85-494b-ddd9-1621-07b983479e6a",
+			"name": "details hotels",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "id",
+					"value": "2",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}hotels/detail",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "933f9634-2798-62d2-b9f7-b3d4d42a5266",
+			"name": "make task complete",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "task_id",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}lifestyle/complete_task",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "9f58ca5e-0002-b946-20c6-cf478dc566e8",
+			"name": "user update profile",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "name",
+					"value": "ali",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "arm@anglotestserver.website",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "abc",
+					"type": "text"
+				},
+				{
+					"key": "city_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "country_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "room_no",
+					"value": "12",
+					"type": "text"
+				},
+				{
+					"key": "floor",
+					"value": "32",
+					"type": "text"
+				},
+				{
+					"key": "building_address",
+					"value": "bad",
+					"type": "text"
+				},
+				{
+					"key": "street_address",
+					"value": "stadd",
+					"type": "text"
+				},
+				{
+					"key": "phone_number",
+					"value": "123123",
+					"type": "text"
+				},
+				{
+					"key": "user_id",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}user/signup",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "a604a26a-cb03-602b-d8a1-d058eb999e94",
+			"name": "detail restaurant",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}restaurant/detail",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "a89d9782-2e9c-c7db-9bc5-3b971c5caaa6",
+			"name": "Get Token",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "GET",
+			"headers": "Content-Type: application/json",
+			"data": [],
+			"rawModeData": "",
+			"url": "https://api.clinicea.com/api/v2/login/getTokenByStaffUsernamePwd?apiKey=a38a3f404b604d57c7d7aba15b4dd951&loginUserName=dr.rifas@gmail.com&pwd=Health12345",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "apiKey",
+					"value": "a38a3f404b604d57c7d7aba15b4dd951"
+				},
+				{
+					"key": "loginUserName",
+					"value": "dr.rifas@gmail.com"
+				},
+				{
+					"key": "pwd",
+					"value": "Health12345"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "a9b15f32-bf22-474a-c7fa-7cef394d9ec4",
+			"name": "search hotels",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "rating",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "min_price",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "max_price",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "title",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "area",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}hotels/filterHotels",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "acf56662-e8ed-4e1f-c978-f11fe48cd5a5",
+			"name": "all blog",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{base_url}}blog/all",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "b8727da0-6202-a9c0-8482-441f2cdf35a9",
+			"name": "get missed completed tasks",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "status",
+					"value": "pending/missed",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}lifestyle/missed_n_completed_task",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"type": "text",
+					"value": "application/json"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "ca797356-c0a5-9d6e-62d5-80278a3de6e6",
+			"name": "get product",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{base_url}}product/get_product",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "d8fe84c9-727c-03ed-0521-c02ea385727c",
+			"name": "product purchase",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\r\n    \"user_id\" : 2,\r\n    \"products\" : [\r\n        {\r\n            \"qty\" : 2,\r\n            \"product_id\" : 5,\r\n            \"price\" : 250\r\n        }\r\n    ]\r\n}",
+			"url": "{{base_url}}product/purchase",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "dfe8d373-6b5d-5c84-efd4-9ff8de932021",
+			"name": "my codes",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "2",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}codes/myCode",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "eab783e4-c53c-84c8-f0c4-9e01d9a2b9b5",
+			"name": "get Apointment",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "GET",
+			"headers": "Content-Type: application/json\ntoken: c1215daf-7049-4c36-b538-3d7a5907c941",
+			"dataMode": "params",
+			"data": [],
+			"rawModeData": "",
+			"url": "https://api.clinicea.com/api/v2/appointments/getAppointmentsByPatient?appointmentType=2&patientID=255702a1-34b8-41b4-eed9-5c9306682269&pageNo=1",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "appointmentType",
+					"value": "2"
+				},
+				{
+					"key": "patientID",
+					"value": "255702a1-34b8-41b4-eed9-5c9306682269"
+				},
+				{
+					"key": "pageNo",
+					"value": "1"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "c1215daf-7049-4c36-b538-3d7a5907c941",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "f572d864-07a9-16c1-52d9-483cbfc03f56",
+			"name": "get cart",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}cart/getCart",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		},
+		{
+			"id": "f9a3ddc2-cedf-9232-ca2d-0894ce106862",
+			"name": "search restaurant",
+			"description": "",
+			"collectionId": "713e743f-98a3-cab1-2766-833a5b099553",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "rating",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "min_price",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "max_price",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "title",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "area",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{base_url}}restaurant/filterRestaurant",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"collection_id": "713e743f-98a3-cab1-2766-833a5b099553"
+		}
+	]
+}
