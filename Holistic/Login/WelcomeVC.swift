@@ -33,18 +33,15 @@ class WelcomeVC: UIViewController {
         
         constraintHeightTopView.constant = SCREEN.WIDTH/6
         registerCollectionView()
-        
-        if isInfoScreenDisplayed() {
-            clickToSkip(self)
-        }else{
-            clickToSelectTopButton(btn1)
-        }
+        clickToSelectTopButton(btn1)
     }
     
     @IBAction func clickToSelectTopButton(_ sender: UIButton) {
         resetButton()
-        sender.transform = CGAffineTransform(scaleX: selectValue, y: selectValue)
-        
+        sender.isSelected = true
+        UIView.animate(withDuration: 0.0) {
+            sender.transform = CGAffineTransform(scaleX: self.selectValue, y: self.selectValue)
+        }
         if sender == btn1 {
             infoCV.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: true)
         }
@@ -134,7 +131,7 @@ extension WelcomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
         if timer != nil {
             timer?.invalidate()
         }
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(selectTopButton), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(selectTopButton), userInfo: nil, repeats: false)
         
     }
     
@@ -144,22 +141,22 @@ extension WelcomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func redirectToPage() {
-        if selectedPage == 0 {
+        if selectedPage == 0 && !btn1.isSelected {
             clickToSelectTopButton(btn1)
         }
-        else if selectedPage == 1 {
+        else if selectedPage == 1 && !btn2.isSelected {
             clickToSelectTopButton(btn2)
         }
-        else if selectedPage == 2 {
+        else if selectedPage == 2 && !btn3.isSelected {
             clickToSelectTopButton(btn3)
         }
-        else if selectedPage == 3 {
+        else if selectedPage == 3 && !btn4.isSelected {
             clickToSelectTopButton(btn4)
         }
-        else if selectedPage == 4 {
+        else if selectedPage == 4 && !btn5.isSelected {
             clickToSelectTopButton(btn5)
         }
-        else if selectedPage == 5 {
+        else if selectedPage == 5 && !btn6.isSelected {
             clickToSelectTopButton(btn6)
         }
     }

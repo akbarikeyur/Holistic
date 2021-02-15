@@ -81,3 +81,10 @@
 "logout_msg" = "Are you sure want to logout?";
 "yes" = "Yes";
 "no" = "No";
+
+"lifestyle_msg" = "Making you more healthier, complete tasks to gain points";
+"clinic_msg" = "Check all appointments, diet plan and more";
+"hotel_msg" = "Double your enjoyment, get discount and rewards at every hotel";
+"restaurant_msg" = "Now get rewards and discounts for eating healthy";
+"product_msg" = "Purchase any product from Holistic Medical Center, every product is now one step away";
+"loyalty_point_msg" = "Earn loyalty points for every positive action. You can redeem your points for treatment, restaurants, hotels and much more";

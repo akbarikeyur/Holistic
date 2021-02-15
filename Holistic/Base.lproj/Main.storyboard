@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7MT-dO-R0B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atb-Kb-hCe">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,6 +16,68 @@
         </array>
     </customFonts>
     <scenes>
+        <!--LaunchVC-->
+        <scene sceneID="EVQ-YI-8gU">
+            <objects>
+                <viewController storyboardIdentifier="LaunchVC" id="yZh-Wp-85p" customClass="LaunchVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVy-b8-5VX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAKING UAE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-lg-RM6">
+                                <rect key="frame" x="10" y="96" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORE HEALTHIRER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkz-MP-bsn">
+                                <rect key="frame" x="10" y="131" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_orange" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-16-ggE">
+                                <rect key="frame" x="92" y="195" width="136" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="ZMr-kx-rkz"/>
+                                    <constraint firstAttribute="width" constant="136" id="t7L-IP-DNq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOLISTIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edj-4Y-0EZ">
+                                <rect key="frame" x="10" y="353" width="300" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wde-16-ggE" firstAttribute="centerX" secondItem="RVy-b8-5VX" secondAttribute="centerX" id="37r-BV-BpK"/>
+                            <constraint firstItem="j1B-lg-RM6" firstAttribute="leading" secondItem="ybM-AT-zP4" secondAttribute="leading" constant="10" id="AXz-PE-b2N"/>
+                            <constraint firstItem="Wde-16-ggE" firstAttribute="centerY" secondItem="RVy-b8-5VX" secondAttribute="centerY" constant="-20" id="HzB-Rg-cM3"/>
+                            <constraint firstItem="ybM-AT-zP4" firstAttribute="trailing" secondItem="jkz-MP-bsn" secondAttribute="trailing" constant="10" id="NgQ-Ax-hhV"/>
+                            <constraint firstItem="Wde-16-ggE" firstAttribute="top" secondItem="jkz-MP-bsn" secondAttribute="bottom" constant="30" id="V8a-11-d4I"/>
+                            <constraint firstItem="Edj-4Y-0EZ" firstAttribute="leading" secondItem="ybM-AT-zP4" secondAttribute="leading" constant="10" id="fX9-ju-cZa"/>
+                            <constraint firstItem="jkz-MP-bsn" firstAttribute="leading" secondItem="ybM-AT-zP4" secondAttribute="leading" constant="10" id="iXz-l8-hcR"/>
+                            <constraint firstItem="jkz-MP-bsn" firstAttribute="top" secondItem="j1B-lg-RM6" secondAttribute="bottom" constant="1" id="jfT-Yo-6Am"/>
+                            <constraint firstItem="ybM-AT-zP4" firstAttribute="trailing" secondItem="Edj-4Y-0EZ" secondAttribute="trailing" constant="10" id="lSb-G6-z61"/>
+                            <constraint firstItem="Edj-4Y-0EZ" firstAttribute="top" secondItem="Wde-16-ggE" secondAttribute="bottom" constant="20" id="mr1-Yz-UYz"/>
+                            <constraint firstItem="ybM-AT-zP4" firstAttribute="trailing" secondItem="j1B-lg-RM6" secondAttribute="trailing" constant="10" id="pTu-si-xoz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ybM-AT-zP4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Qh-jx-Qji"/>
+                    <connections>
+                        <outlet property="logoImg" destination="Wde-16-ggE" id="2cV-dl-I4t"/>
+                        <outlet property="logo_titleLbl" destination="Edj-4Y-0EZ" id="OCr-cr-yH5"/>
+                        <outlet property="subTitleLbl" destination="jkz-MP-bsn" id="SzQ-Ma-goZ"/>
+                        <outlet property="titleLbl" destination="j1B-lg-RM6" id="56y-Di-kMX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyf-c7-u8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="137"/>
+        </scene>
         <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -32,7 +94,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-qe-eMw">
                                                 <rect key="frame" x="5" y="5" width="41.5" height="41"/>
-                                                <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="intro_logo1_off"/>
+                                                <state key="selected" image="intro_logo1_on"/>
                                                 <connections>
                                                     <action selector="clickToSelectTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OhL-QD-8Go"/>
                                                 </connections>
@@ -51,7 +115,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT5-ZE-sVr">
                                                 <rect key="frame" x="5" y="5" width="42" height="41"/>
-                                                <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="intro_logo2_off"/>
+                                                <state key="selected" image="intro_logo2_on"/>
                                                 <connections>
                                                     <action selector="clickToSelectTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjP-Jn-fVy"/>
                                                 </connections>
@@ -70,7 +136,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8c-OL-9tx">
                                                 <rect key="frame" x="5" y="5" width="41.5" height="41"/>
-                                                <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="intro_logo3_off"/>
+                                                <state key="selected" image="intro_logo3_on"/>
                                                 <connections>
                                                     <action selector="clickToSelectTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0b-lg-Ucy"/>
                                                 </connections>
@@ -89,7 +157,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCb-dQ-Bok">
                                                 <rect key="frame" x="5" y="5" width="41.5" height="41"/>
-                                                <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="intro_logo4_off"/>
+                                                <state key="selected" image="intro_logo4_on"/>
                                                 <connections>
                                                     <action selector="clickToSelectTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3O0-b0-23X"/>
                                                 </connections>
@@ -108,7 +178,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xU-ws-zkm">
                                                 <rect key="frame" x="5" y="5" width="42" height="41"/>
-                                                <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="intro_logo5_off"/>
+                                                <state key="selected" image="intro_logo5_on"/>
                                                 <connections>
                                                     <action selector="clickToSelectTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8b5-Db-q6W"/>
                                                 </connections>
@@ -127,7 +199,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1r-Ih-UEe">
                                                 <rect key="frame" x="5" y="5" width="41.5" height="41"/>
-                                                <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="intro_logo6_off"/>
+                                                <state key="selected" image="intro_logo6_on"/>
                                                 <connections>
                                                     <action selector="clickToSelectTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOk-7i-I5h"/>
                                                 </connections>
@@ -761,24 +835,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTR-Vb-T3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="878" y="1538"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bFl-K6-sK3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7MT-dO-R0B" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zwA-VT-h8U">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VWg-RD-x8O"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Gr-wU-lmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="131.25" y="138.38028169014083"/>
         </scene>
         <!--Email LoginVC-->
         <scene sceneID="v0Q-S9-qKx">
@@ -2198,6 +2254,24 @@
             </objects>
             <point key="canvasLocation" x="1622" y="831"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IuB-Gg-hAi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="atb-Kb-hCe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dq9-4e-8nB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yZh-Wp-85p" kind="relationship" relationship="rootViewController" id="oG7-Wq-6Yx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Kn-rO-qya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="137"/>
+        </scene>
     </scenes>
     <resources>
         <image name="aboutus" width="38" height="37"/>
@@ -2210,6 +2284,19 @@
         <image name="eye_hide" width="20" height="20"/>
         <image name="eye_show" width="20" height="20"/>
         <image name="fingerprint" width="38" height="37"/>
+        <image name="intro_logo1_off" width="50" height="50"/>
+        <image name="intro_logo1_on" width="66" height="66"/>
+        <image name="intro_logo2_off" width="50" height="49"/>
+        <image name="intro_logo2_on" width="66" height="66"/>
+        <image name="intro_logo3_off" width="50" height="50"/>
+        <image name="intro_logo3_on" width="66" height="66"/>
+        <image name="intro_logo4_off" width="50" height="50"/>
+        <image name="intro_logo4_on" width="66" height="66"/>
+        <image name="intro_logo5_off" width="50" height="50"/>
+        <image name="intro_logo5_on" width="66" height="66"/>
+        <image name="intro_logo6_off" width="50" height="50"/>
+        <image name="intro_logo6_on" width="66" height="66"/>
+        <image name="logo_orange" width="136" height="138"/>
         <image name="password" width="38" height="37"/>
         <image name="settings" width="20" height="20"/>
         <image name="temp_flag" width="25" height="18"/>

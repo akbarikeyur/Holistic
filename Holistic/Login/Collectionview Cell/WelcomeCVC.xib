@@ -48,14 +48,28 @@
                         </constraints>
                         <state key="normal" image="arrow_down"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L6-0n-PpL" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvP-77-4uB">
+                        <rect key="frame" x="0.0" y="92" width="320" height="138"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome1" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-3U-fLG">
+                                <rect key="frame" x="86.5" y="0.0" width="147" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="fQh-vl-B4T"/>
+                                    <constraint firstAttribute="width" constant="147" id="gzR-jc-yi6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0D3-3U-fLG" firstAttribute="centerX" secondItem="OvP-77-4uB" secondAttribute="centerX" id="QRk-OH-zhB"/>
+                            <constraint firstItem="0D3-3U-fLG" firstAttribute="centerY" secondItem="OvP-77-4uB" secondAttribute="centerY" id="fet-rn-pkq"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchase any product from Holistic Medical Center, every product is now one step away " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L6-0n-PpL" customClass="Label" customModule="Holistic" customModuleProvider="target">
                         <rect key="frame" x="10" y="240" width="300" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="flW-Nn-Itv"/>
                         </constraints>
-                        <string key="text">Holistic Lifestyle
-Holistic Lifestyle
-Holistic Lifestyle</string>
                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -66,24 +80,21 @@ Holistic Lifestyle</string>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_orange" translatesAutoresizingMaskIntoConstraints="NO" id="0D3-3U-fLG">
-                        <rect key="frame" x="0.0" y="92" width="320" height="138"/>
-                    </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="8L6-0n-PpL" firstAttribute="top" secondItem="0D3-3U-fLG" secondAttribute="bottom" constant="10" id="1Jc-5Q-Ywf"/>
                 <constraint firstItem="iNo-Y7-F2q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="5ES-NI-bf9"/>
                 <constraint firstItem="cfv-9g-fMB" firstAttribute="top" secondItem="iNo-Y7-F2q" secondAttribute="bottom" constant="20" id="7Gg-FE-6ZU"/>
                 <constraint firstItem="iNo-Y7-F2q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="BP2-P4-gAd"/>
-                <constraint firstItem="0D3-3U-fLG" firstAttribute="top" secondItem="cfv-9g-fMB" secondAttribute="bottom" constant="10" id="EbK-J6-adV"/>
+                <constraint firstItem="OvP-77-4uB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EBO-zL-Ido"/>
+                <constraint firstItem="OvP-77-4uB" firstAttribute="top" secondItem="cfv-9g-fMB" secondAttribute="bottom" constant="10" id="Nfr-zD-nhf"/>
                 <constraint firstAttribute="bottom" secondItem="8L6-0n-PpL" secondAttribute="bottom" constant="30" id="PDw-Zk-DL7"/>
                 <constraint firstAttribute="trailing" secondItem="iNo-Y7-F2q" secondAttribute="trailing" constant="10" id="QDA-A2-Ekp"/>
-                <constraint firstAttribute="trailing" secondItem="0D3-3U-fLG" secondAttribute="trailing" id="RFY-Mg-Vbc"/>
+                <constraint firstItem="8L6-0n-PpL" firstAttribute="top" secondItem="OvP-77-4uB" secondAttribute="bottom" constant="10" id="UMF-6f-oh3"/>
                 <constraint firstItem="cfv-9g-fMB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Wdd-NY-AE1"/>
-                <constraint firstItem="0D3-3U-fLG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kyu-8O-eDf"/>
                 <constraint firstItem="8L6-0n-PpL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="lmw-JN-wsZ"/>
                 <constraint firstAttribute="trailing" secondItem="8L6-0n-PpL" secondAttribute="trailing" constant="10" id="yGz-Sf-d5S"/>
+                <constraint firstAttribute="trailing" secondItem="OvP-77-4uB" secondAttribute="trailing" id="yro-OK-k2K"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
@@ -96,6 +107,6 @@ Holistic Lifestyle</string>
     </objects>
     <resources>
         <image name="arrow_down" width="15" height="15"/>
-        <image name="logo_orange" width="136" height="138"/>
+        <image name="welcome1" width="147" height="138"/>
     </resources>
 </document>

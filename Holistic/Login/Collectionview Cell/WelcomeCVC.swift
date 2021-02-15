@@ -21,7 +21,7 @@ class WelcomeCVC: UICollectionViewCell {
 
     func setupDetails(_ dict : WelcomeModel) {
         titleLbl.text = dict.title
-        descLbl.text = dict.desc
+        descLbl.text = getTranslate(dict.desc)
         imgView.image = UIImage(named: dict.image)
     }
 }

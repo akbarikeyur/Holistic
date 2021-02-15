@@ -227,16 +227,16 @@ extension HomeVC : SexyTooltipDelegate {
         var tip = ""
         switch toolIndex {
             case 1:
-                tip = "Home"
+                tip = getTranslate("lifestyle_msg")
                 break
             case 2:
-                tip = "Hospital"
+                tip = getTranslate("clinic_msg")
                 break
             case 3:
-                tip = "Hotel"
+                tip = getTranslate("hotel_msg")
                 break
             case 4:
-                tip = "Restaurants"
+                tip = getTranslate("restaurant_msg")
                 break
             case 5:
                 tip = "Profile"
@@ -247,7 +247,7 @@ extension HomeVC : SexyTooltipDelegate {
             default:
                 break
         }
-        infoTip = SexyTooltip.init(attributedString: tip.html2AttributedString)
+        infoTip = SexyTooltip.init(attributedString: attributedStringWithColor(tip, [tip], color: BLACK_COLOR, font: UIFont(name: APP_MEDIUM, size: 16.0)))
         infoTip.delegate = self
         switch toolIndex {
             case 1:
@@ -283,7 +283,7 @@ extension HomeVC : SexyTooltipDelegate {
     }
     
     func tooltipDidDismiss(_ tooltip: SexyTooltip!) {
-        if toolIndex == 6 {
+        if toolIndex == 4 {
             infoView.removeFromSuperview()
             setToolTipDisplayed(true)
             return

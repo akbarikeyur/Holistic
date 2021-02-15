@@ -73,6 +73,7 @@
 		7953C029254C0E1E00DF1BFA /* PurchaseProductCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */; };
 		7953C02C254C1D0400DF1BFA /* ClinicTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */; };
 		7960904025CAB2C7009D233C /* RedeemedCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960903F25CAB2C7009D233C /* RedeemedCouponVC.swift */; };
+		796692CC25DA422B00B79A30 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796692CB25DA422B00B79A30 /* LaunchVC.swift */; };
 		79678B5225877FC100808F08 /* ProductAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5125877FC100808F08 /* ProductAPIManager.swift */; };
 		79678B5425877FCF00808F08 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5325877FCF00808F08 /* ProductModel.swift */; };
 		797C39B32567AF1F00E55C2B /* ClinicPrescriptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */; };
@@ -286,6 +287,7 @@
 		7953C027254C0E1D00DF1BFA /* PurchaseProductCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseProductCVC.xib; sourceTree = "<group>"; };
 		7953C02B254C1D0400DF1BFA /* ClinicTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicTabVC.swift; sourceTree = "<group>"; };
 		7960903F25CAB2C7009D233C /* RedeemedCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemedCouponVC.swift; sourceTree = "<group>"; };
+		796692CB25DA422B00B79A30 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		79678B5125877FC100808F08 /* ProductAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPIManager.swift; sourceTree = "<group>"; };
 		79678B5325877FCF00808F08 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPrescriptionsVC.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 		79BC83592542E59A004A0B49 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				796692CB25DA422B00B79A30 /* LaunchVC.swift */,
 				79EFD5BE2542BE0E006D06FB /* WelcomeVC.swift */,
 				79EC86FA25511904000C8F5E /* EmailLoginVC.swift */,
 				79BC835A2542E946004A0B49 /* MobileLoginVC.swift */,
@@ -1354,6 +1357,7 @@
 				7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */,
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,
+				796692CC25DA422B00B79A30 /* LaunchVC.swift in Sources */,
 				79EC86FB25511904000C8F5E /* EmailLoginVC.swift in Sources */,
 				794EDD282566A6C000F867EB /* LoyalityDetailVC.swift in Sources */,
 				79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */,
