@@ -29,12 +29,18 @@ class LaunchVC: UIViewController {
                 self.logo_titleLbl.alpha = 1.0
             }) { (isDone) in
                 delay(0.5) {
-                    if isInfoScreenDisplayed() {
-                        let vc : EmailLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVC") as! EmailLoginVC
-                        self.navigationController?.pushViewController(vc, animated: false)
-                    }else{
-                        let vc : WelcomeVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
-                        self.navigationController?.pushViewController(vc, animated: false)
+                    if isUserLogin() {
+                        AppModel.shared.currentUser = getLoginUserData()
+                        AppDelegate().sharedDelegate().navigateToDashBoard()
+                    }
+                    else{
+                        if isInfoScreenDisplayed() {
+                            let vc : EmailLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVC") as! EmailLoginVC
+                            self.navigationController?.pushViewController(vc, animated: false)
+                        }else{
+                            let vc : WelcomeVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+                            self.navigationController?.pushViewController(vc, animated: false)
+                        }
                     }
                 }
             }

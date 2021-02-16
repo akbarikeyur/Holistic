@@ -76,6 +76,8 @@
 		796692CC25DA422B00B79A30 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796692CB25DA422B00B79A30 /* LaunchVC.swift */; };
 		79678B5225877FC100808F08 /* ProductAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5125877FC100808F08 /* ProductAPIManager.swift */; };
 		79678B5425877FCF00808F08 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B5325877FCF00808F08 /* ProductModel.swift */; };
+		7975721425DBCDDB00E6B6E5 /* QuestionAnswerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975721225DBCDDB00E6B6E5 /* QuestionAnswerTVC.swift */; };
+		7975721525DBCDDB00E6B6E5 /* QuestionAnswerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7975721325DBCDDB00E6B6E5 /* QuestionAnswerTVC.xib */; };
 		797C39B32567AF1F00E55C2B /* ClinicPrescriptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */; };
 		798249D525483BD60035AB9E /* HotelPackageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798249D325483BD60035AB9E /* HotelPackageTVC.swift */; };
 		798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798249D425483BD60035AB9E /* HotelPackageTVC.xib */; };
@@ -290,6 +292,8 @@
 		796692CB25DA422B00B79A30 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		79678B5125877FC100808F08 /* ProductAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPIManager.swift; sourceTree = "<group>"; };
 		79678B5325877FCF00808F08 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		7975721225DBCDDB00E6B6E5 /* QuestionAnswerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerTVC.swift; sourceTree = "<group>"; };
+		7975721325DBCDDB00E6B6E5 /* QuestionAnswerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionAnswerTVC.xib; sourceTree = "<group>"; };
 		797C39B22567AF1F00E55C2B /* ClinicPrescriptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPrescriptionsVC.swift; sourceTree = "<group>"; };
 		798249D325483BD60035AB9E /* HotelPackageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPackageTVC.swift; sourceTree = "<group>"; };
 		798249D425483BD60035AB9E /* HotelPackageTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelPackageTVC.xib; sourceTree = "<group>"; };
@@ -621,6 +625,8 @@
 			children = (
 				79921E9E25CBB57900937C72 /* NotificationSettingTVC.swift */,
 				79921E9F25CBB57900937C72 /* NotificationSettingTVC.xib */,
+				7975721225DBCDDB00E6B6E5 /* QuestionAnswerTVC.swift */,
+				7975721325DBCDDB00E6B6E5 /* QuestionAnswerTVC.xib */,
 			);
 			path = "Tableview Cell";
 			sourceTree = "<group>";
@@ -1122,6 +1128,7 @@
 				79BC836C2542FFA5004A0B49 /* TabCVC.xib in Resources */,
 				79AD21B6254D722700C97A89 /* ClinicAppointmentTVC.xib in Resources */,
 				7953C025254C090600DF1BFA /* PurchaseProductTVC.xib in Resources */,
+				7975721525DBCDDB00E6B6E5 /* QuestionAnswerTVC.xib in Resources */,
 				79EFD63A2542CC11006D06FB /* WorkSans-Light.ttf in Resources */,
 				7938F2A625493E0D0002A276 /* FoodListTVC.xib in Resources */,
 				79F218322547E28600D981C1 /* HotelsListTVC.xib in Resources */,
@@ -1361,6 +1368,7 @@
 				79EC86FB25511904000C8F5E /* EmailLoginVC.swift in Sources */,
 				794EDD282566A6C000F867EB /* LoyalityDetailVC.swift in Sources */,
 				79D6D0222544096400945D7C /* BalloonMarker.swift in Sources */,
+				7975721425DBCDDB00E6B6E5 /* QuestionAnswerTVC.swift in Sources */,
 				79EFD6192542C44A006D06FB /* Date+RUI.swift in Sources */,
 				79AD7BF8256D1D3500DCC33C /* BlogAPIManager.swift in Sources */,
 				79EFD5BB2542BE0E006D06FB /* AppDelegate.swift in Sources */,

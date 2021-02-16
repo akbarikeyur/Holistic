@@ -41,10 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         serviceCallToGetCountry()
         
-        if isUserLogin() {
-            AppModel.shared.currentUser = getLoginUserData()
-            navigateToDashBoard()
-        }
         return true
     }
 

@@ -137,9 +137,9 @@
                                             <constraint firstAttribute="width" constant="50" id="NtQ-41-OoA"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <state key="normal" image="back"/>
+                                        <state key="normal" image="menu"/>
                                         <connections>
-                                            <action selector="clickToSideMenu:" destination="A4G-XD-idw" eventType="touchUpInside" id="qyS-iW-EOD"/>
+                                            <action selector="clickToSideMenu:" destination="A4G-XD-idw" eventType="touchUpInside" id="lz1-03-H42"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-NK-tcy">
@@ -2940,7 +2940,8 @@
         <image name="dropdown" width="9" height="9"/>
         <image name="filter" width="19" height="18.5"/>
         <image name="ic_cart" width="22" height="20"/>
-        <image name="ic_placeholder" width="348" height="179"/>
+        <image name="ic_placeholder" width="179" height="179"/>
+        <image name="menu" width="28.5" height="22"/>
         <image name="notification" width="21" height="22"/>
         <image name="payment" width="29.5" height="16.5"/>
         <image name="radio_off" width="17" height="17"/>

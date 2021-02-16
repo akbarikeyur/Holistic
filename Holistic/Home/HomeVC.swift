@@ -108,6 +108,11 @@ class HomeVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func clickToProfile(_ sender: Any) {
+        let vc : ProfileVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func clickToFilter(_ sender: Any) {
         
     }

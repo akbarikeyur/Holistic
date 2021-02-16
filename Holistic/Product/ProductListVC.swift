@@ -37,7 +37,7 @@ class ProductListVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        AppDelegate().sharedDelegate().hideTabBar()
+        AppDelegate().sharedDelegate().showTabBar()
         if AppModel.shared.MY_CART_COUNT != nil && AppModel.shared.MY_CART_COUNT > 0 {
             cartLbl.text = String(AppModel.shared.MY_CART_COUNT)
             cartLbl.isHidden = false
@@ -69,7 +69,7 @@ class ProductListVC: UIViewController {
     
     //MARK:- Button click event
     @IBAction func clickToSideMenu(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
     }
     
     @IBAction func clickToNotification(_ sender: Any) {

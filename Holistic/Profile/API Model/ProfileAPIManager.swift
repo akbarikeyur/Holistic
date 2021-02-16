@@ -40,14 +40,6 @@ public class ProfileAPIManager {
                 return
             }
         }
-        
-//        APIManager.shared.callPostRequest(API.SIGNUP, param, true) { (dict) in
-//            printData(dict)
-//            if let status = dict["status"] as? String, status == "success" {
-//                completion()
-//                return
-//            }
-//        }
     }
     
     func serviceCallToGetOffer(_ page : Int, _ completion: @escaping (_ data : [[String : Any]], _ last : Int) -> Void) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Helen," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-7N-krR" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="55" y="7.5" width="210" height="29.5"/>
+                                        <rect key="frame" x="55" y="7.5" width="120" height="29.5"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwh-zc-sYi">
-                                        <rect key="frame" x="230" y="0.0" width="40" height="44"/>
+                                        <rect key="frame" x="180" y="0.0" width="40" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="QFa-JX-ceU"/>
                                         </constraints>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRf-Ym-w77" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="252" y="3" width="16" height="16"/>
+                                        <rect key="frame" x="202" y="3" width="16" height="16"/>
                                         <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="7KX-IF-AQ0"/>
@@ -80,7 +80,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUt-Si-yoY">
-                                        <rect key="frame" x="270" y="0.0" width="50" height="44"/>
+                                        <rect key="frame" x="220" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="1eR-Zl-FSC"/>
                                         </constraints>
@@ -89,23 +89,37 @@
                                             <action selector="clickToNotification:" destination="FZQ-FJ-NHr" eventType="touchUpInside" id="kqG-bO-IdB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikn-oQ-8rk">
+                                        <rect key="frame" x="270" y="0.0" width="50" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="XQj-4Z-f7L"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.15745285149999999" green="0.2123328149" blue="0.41655671599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="profile"/>
+                                        <connections>
+                                            <action selector="clickToProfile:" destination="FZQ-FJ-NHr" eventType="touchUpInside" id="b8t-mv-mia"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="rUt-Si-yoY" firstAttribute="leading" secondItem="vLH-7N-krR" secondAttribute="trailing" constant="5" id="1ha-ls-CHf"/>
                                     <constraint firstAttribute="bottom" secondItem="Uwh-zc-sYi" secondAttribute="bottom" id="4Ts-lD-d1a"/>
                                     <constraint firstItem="vLH-7N-krR" firstAttribute="leading" secondItem="RFO-vQ-mma" secondAttribute="trailing" constant="5" id="Dlu-8V-FgW"/>
+                                    <constraint firstItem="Uwh-zc-sYi" firstAttribute="leading" secondItem="vLH-7N-krR" secondAttribute="trailing" constant="5" id="F9g-Gy-pDo"/>
                                     <constraint firstItem="Uwh-zc-sYi" firstAttribute="centerX" secondItem="wRf-Ym-w77" secondAttribute="centerX" constant="-10" id="G7f-n1-lSW"/>
                                     <constraint firstItem="Uwh-zc-sYi" firstAttribute="top" secondItem="ph4-Ev-9aE" secondAttribute="top" id="I4s-sB-ftd"/>
                                     <constraint firstItem="Uwh-zc-sYi" firstAttribute="centerY" secondItem="wRf-Ym-w77" secondAttribute="centerY" constant="11" id="IA4-av-88d"/>
                                     <constraint firstAttribute="bottom" secondItem="RFO-vQ-mma" secondAttribute="bottom" id="IDf-eR-lAD"/>
+                                    <constraint firstItem="Ikn-oQ-8rk" firstAttribute="top" secondItem="ph4-Ev-9aE" secondAttribute="top" id="Jqe-cl-uyP"/>
                                     <constraint firstItem="RFO-vQ-mma" firstAttribute="top" secondItem="ph4-Ev-9aE" secondAttribute="top" id="PYi-Ii-F5x"/>
+                                    <constraint firstItem="Ikn-oQ-8rk" firstAttribute="leading" secondItem="rUt-Si-yoY" secondAttribute="trailing" id="QJc-NS-AzJ"/>
                                     <constraint firstAttribute="height" constant="44" id="amd-27-vXx"/>
                                     <constraint firstItem="rUt-Si-yoY" firstAttribute="top" secondItem="ph4-Ev-9aE" secondAttribute="top" id="bf7-ba-Sv1"/>
-                                    <constraint firstAttribute="trailing" secondItem="rUt-Si-yoY" secondAttribute="trailing" id="gGP-Mq-YzL"/>
                                     <constraint firstAttribute="bottom" secondItem="rUt-Si-yoY" secondAttribute="bottom" id="kAO-MA-4gN"/>
                                     <constraint firstItem="rUt-Si-yoY" firstAttribute="leading" secondItem="Uwh-zc-sYi" secondAttribute="trailing" id="nuT-YF-G9j"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ikn-oQ-8rk" secondAttribute="bottom" id="q49-1P-kbG"/>
                                     <constraint firstItem="vLH-7N-krR" firstAttribute="centerY" secondItem="ph4-Ev-9aE" secondAttribute="centerY" id="uJX-E7-fDJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ikn-oQ-8rk" secondAttribute="trailing" id="wqV-FT-Z7e"/>
                                     <constraint firstItem="RFO-vQ-mma" firstAttribute="leading" secondItem="ph4-Ev-9aE" secondAttribute="leading" id="zSA-Ju-G9t"/>
                                 </constraints>
                             </view>
@@ -2744,11 +2758,12 @@ Which Is Right for You? </string>
         <image name="flower_off" width="359" height="359"/>
         <image name="ic_cart" width="22" height="20"/>
         <image name="ic_clock" width="14.5" height="14.5"/>
-        <image name="ic_placeholder" width="348" height="179"/>
+        <image name="ic_placeholder" width="179" height="179"/>
         <image name="ic_sun" width="76" height="76"/>
         <image name="menu" width="28.5" height="22"/>
         <image name="next_orange" width="14.5" height="9"/>
         <image name="notification" width="21" height="22"/>
+        <image name="profile" width="21" height="23.5"/>
         <image name="share" width="16.5" height="12"/>
         <image name="top_cut_bg" width="376" height="321"/>
         <image name="white_shadow" width="375" height="139"/>

@@ -100,6 +100,8 @@ struct UserModel {
     var building_address, email, floor, name, phone_number, roles, room_no, street_address, clinicea_user_id, state_id, city_id, phone_code : String!
     var is_clincia, is_anglo : Bool!
     var get_profile : MediaModel!
+    var answers : [AnswerModel]!
+    
     init(_ dict : [String : Any]) {
         id = AppModel.shared.getIntValue(dict, "id")
         city_id = AppModel.shared.getStringValue(dict, "city_id")
@@ -119,9 +121,48 @@ struct UserModel {
         points = AppModel.shared.getIntValue(dict, "points")
         get_profile = MediaModel.init(dict["get_profile"] as? [String : Any] ?? [String : Any]())
         phone_code = AppModel.shared.getStringValue(dict, "phone_code")
+        
+        answers = [AnswerModel]()
+        if let data = dict["answers"] as? [[String : Any]] {
+            for temp in data {
+                answers.append(AnswerModel.init(temp))
+            }
+        }
     }
     
     func dictionary() -> [String : Any] {
-        return ["id" : id!, "city_id" : city_id!, "state_id" : state_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!, "clinicea_user_id" : clinicea_user_id!, "is_clincia" : is_clincia!, "is_anglo" : is_anglo!, "points" : points!, "get_profile" : get_profile.dictionary(), "phone_code" : phone_code!]
+        return ["id" : id!, "city_id" : city_id!, "state_id" : state_id!, "country_id" : country_id!, "building_address" : building_address!, "email" : email!, "floor" : floor!, "name" : name!, "phone_number" : phone_number!, "roles" : roles!, "room_no" : room_no!, "street_address" : street_address!, "clinicea_user_id" : clinicea_user_id!, "is_clincia" : is_clincia!, "is_anglo" : is_anglo!, "points" : points!, "get_profile" : get_profile.dictionary(), "phone_code" : phone_code!, "answers" : AppModel.shared.getAnswerArrOfDictionary(arr: answers)]
+    }
+}
+
+struct QuestionModel {
+    var id : Int!
+    var question, type, answer : String!
+    
+    init(_ dict : [String : Any]) {
+        id = AppModel.shared.getIntValue(dict, "id")
+        question = dict["question"] as? String ?? ""
+        type = dict["type"] as? String ?? ""
+        answer = dict["answer"] as? String ?? ""
+    }
+    
+    func dictionary() -> [String : Any] {
+        return ["id" : id!, "question" : question!, "type" : type!, "answer" : answer!]
+    }
+}
+
+struct AnswerModel {
+    var id : Int!
+    var answer : String!
+    var get_question : QuestionModel!
+    
+    init(_ dict : [String : Any]) {
+        id = AppModel.shared.getIntValue(dict, "id")
+        get_question = QuestionModel.init(dict["get_question"] as? [String : Any] ?? [String : Any]())
+        answer = dict["answer"] as? String ?? ""
+    }
+    
+    func dictionary() -> [String : Any] {
+        return ["id" : id!, "get_question" : get_question.dictionary(), "answer" : answer!]
     }
 }

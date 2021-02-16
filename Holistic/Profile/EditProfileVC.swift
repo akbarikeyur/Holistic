@@ -22,6 +22,8 @@ class EditProfileVC: UploadImageVC {
     @IBOutlet weak var countryTxt: TextField!
     @IBOutlet weak var stateTxt: TextField!
     @IBOutlet weak var cityTxt: TextField!
+    @IBOutlet weak var questionTbl: UITableView!
+    @IBOutlet weak var constraintHeightQuestionTbl: NSLayoutConstraint!
     
     @IBOutlet var searchView: UIView!
     @IBOutlet weak var searchTxt: TextField!
@@ -31,7 +33,7 @@ class EditProfileVC: UploadImageVC {
     var arrSearchCountry = [CountryModel]()
     var selectedCountry = CountryModel.init([String : Any]())
     var selectedType = 0
-    
+    var arrQuestion = [QuestionModel]()
     var profileImage : UIImage?
     
     override func viewDidLoad() {
@@ -66,6 +68,7 @@ class EditProfileVC: UploadImageVC {
         if index != nil {
             selectedCountry = arrCountry[index!]
             countryTxt.text = selectedCountry.name
+            serviceCallToGetUserQuestion()
         }
         let index1 = arrCountry.firstIndex { (temp) -> Bool in
             ("+" + temp.phonecode) == AppModel.shared.currentUser.phone_code
@@ -154,24 +157,45 @@ class EditProfileVC: UploadImageVC {
             displayToast("Please select city")
         }
         else {
-            var param = [String : Any]()
-            param["name"] = nameTxt.text
-            param["email"] = AppModel.shared.currentUser.email
-            param["city_id"] = cityTxt.text
-            param["state_id"] = stateTxt.text
-            param["country_id"] = selectedCountry.id
-            param["room_no"] = roomTxt.text
-            param["floor"] = floorTxt.text
-            param["building_address"] = buildingNameTxt.text
-            param["street_address"] = addressTxt.text
-            param["phone_number"] = phoneTxt.text
-            param["phone_code"] = phonecodeTxt.text
-            param["countrycode"] = selectedCountry.id
-            param["user_id"] = AppModel.shared.currentUser.id
-            printData(param)
-            ProfileAPIManager.shared.serviceCallToUpdateProfile(param, profileImage) {
-                AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
-                self.navigationController?.popViewController(animated: true)
+            
+            var isRemaining = false
+            for temp in arrQuestion {
+                if temp.answer == "" {
+                    isRemaining = true
+                }
+            }
+            
+            if isRemaining {
+                displayToast("Please select all answer")
+            }
+            else{
+                var param = [String : Any]()
+                param["name"] = nameTxt.text
+                param["email"] = AppModel.shared.currentUser.email
+                param["city_id"] = cityTxt.text
+                param["state_id"] = stateTxt.text
+                param["country_id"] = selectedCountry.id
+                param["room_no"] = roomTxt.text
+                param["floor"] = floorTxt.text
+                param["building_address"] = buildingNameTxt.text
+                param["street_address"] = addressTxt.text
+                param["phone_number"] = phoneTxt.text
+                param["phone_code"] = phonecodeTxt.text
+                param["countrycode"] = selectedCountry.id
+                param["user_id"] = AppModel.shared.currentUser.id
+                var arrData = [[String : Any]]()
+                for temp in arrQuestion {
+                    var dict = [String : Any]()
+                    dict["question_id"] = temp.id
+                    dict["answer"] = temp.answer
+                    arrData.append(dict)
+                }
+                param["answers"] = arrData
+                printData(param)
+                ProfileAPIManager.shared.serviceCallToUpdateProfile(param, profileImage) {
+                    AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }
@@ -208,10 +232,14 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
     
     func registerTableViewMethod() {
         searchTbl.register(UINib.init(nibName: "SingleLableTVC", bundle: nil), forCellReuseIdentifier: "SingleLableTVC")
+        questionTbl.register(UINib.init(nibName: "QuestionAnswerTVC", bundle: nil), forCellReuseIdentifier: "QuestionAnswerTVC")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if selectedType == 0 || selectedType == 3 {
+        if tableView == questionTbl {
+            return arrQuestion.count
+        }
+        else if selectedType == 0 || selectedType == 3 {
             return searchTxt.text?.trimmed == "" ? arrCountry.count : arrSearchCountry.count
         }
         return 0
@@ -222,21 +250,34 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : SingleLableTVC = searchTbl.dequeueReusableCell(withIdentifier: "SingleLableTVC") as! SingleLableTVC
-        if selectedType == 0 {
-            cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
+        if tableView == questionTbl {
+            let cell : QuestionAnswerTVC = questionTbl.dequeueReusableCell(withIdentifier: "QuestionAnswerTVC") as! QuestionAnswerTVC
+            cell.setupDetails(arrQuestion[indexPath.row], indexPath.row)
+            cell.answer1Btn.tag = indexPath.row
+            cell.answer1Btn.addTarget(self, action: #selector(clickToAnswe1(_:)), for: .touchUpInside)
+            cell.answer2Btn.tag = indexPath.row
+            cell.answer2Btn.addTarget(self, action: #selector(clickToAnswe2(_:)), for: .touchUpInside)
+            cell.selectionStyle = .none
+            return cell
         }
-        else if selectedType == 3 {
-            cell.titleLbl.text = "(+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode + ") " + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
+        else{
+            let cell : SingleLableTVC = searchTbl.dequeueReusableCell(withIdentifier: "SingleLableTVC") as! SingleLableTVC
+            if selectedType == 0 {
+                cell.titleLbl.text = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
+            }
+            else if selectedType == 3 {
+                cell.titleLbl.text = "(+" + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].phonecode + ") " + (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row].name
+            }
+            cell.selectionStyle = .none
+            return cell
         }
-        cell.selectionStyle = .none
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if selectedType == 0 {
             selectedCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
             countryTxt.text = selectedCountry.name
+            serviceCallToGetUserQuestion()
         }
         else if selectedType == 0 || selectedType == 3 {
             let tempCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
@@ -245,5 +286,46 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
         }
         searchView.removeFromSuperview()
         searchTxt.text = ""
+    }
+    
+    @objc @IBAction func clickToAnswe1(_ sender: UIButton) {
+        arrQuestion[sender.tag].answer = "yes"
+        questionTbl.reloadData()
+    }
+    
+    @objc @IBAction func clickToAnswe2(_ sender: UIButton) {
+        arrQuestion[sender.tag].answer = "no"
+        questionTbl.reloadData()
+    }
+    
+    func updateQuestionTableviewHeight() {
+        constraintHeightQuestionTbl.constant = CGFloat.greatestFiniteMagnitude
+        questionTbl.reloadData()
+        questionTbl.layoutIfNeeded()
+        constraintHeightQuestionTbl.constant = questionTbl.contentSize.height
+    }
+}
+
+extension EditProfileVC {
+    
+    func serviceCallToGetUserQuestion() {
+        LoginAPIManager.shared.serviceCallToGetUserQuestion(["country_id" : selectedCountry.id!]) { (data) in
+            self.arrQuestion = [QuestionModel]()
+            for temp in data {
+                self.arrQuestion.append(QuestionModel.init(temp))
+            }
+            if AppModel.shared.currentUser.answers.count > 0 {
+                for i in 0..<self.arrQuestion.count {
+                    let index = AppModel.shared.currentUser.answers.firstIndex { (tempAns) -> Bool in
+                        tempAns.get_question.id == self.arrQuestion[i].id
+                    }
+                    if index != nil {
+                        self.arrQuestion[i].answer = AppModel.shared.currentUser.answers[index!].answer
+                    }
+                }
+            }
+            
+            self.updateQuestionTableviewHeight()
+        }
     }
 }

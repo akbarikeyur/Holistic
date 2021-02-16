@@ -106,4 +106,13 @@ class AppModel: NSObject {
         }
         return retArr
     }
+    
+    func getAnswerArrOfDictionary(arr:[AnswerModel]) -> [[String:Any]] {
+        let len:Int = arr.count
+        var retArr:[[String:Any]] =  [[String:Any]] ()
+        for i in 0..<len{
+            retArr.append(arr[i].dictionary())
+        }
+        return retArr
+    }
 }

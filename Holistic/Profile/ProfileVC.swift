@@ -37,7 +37,7 @@ class ProfileVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        AppDelegate().sharedDelegate().showTabBar()
+        AppDelegate().sharedDelegate().hideTabBar()
     }
     
     @objc func setupDetails() {
@@ -94,8 +94,8 @@ class ProfileVC: UIViewController {
     }
     
     //MARK:- Button click event
-    @IBAction func clickToSideMenu(_ sender: Any) {
-        self.menuContainerViewController.toggleLeftSideMenuCompletion {}
+    @IBAction func clickToBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func clickToEdit(_ sender: Any) {

@@ -132,7 +132,8 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
                 break
             case "Profile":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
-                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 4])
+                let vc : ProfileVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+                UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
                 break
             case "Refer Friend":
                 self.menuContainerViewController.toggleLeftSideMenuCompletion {}
@@ -202,8 +203,7 @@ extension SideMenuVC : UITableViewDelegate, UITableViewDataSource {
         else if title == "Holistic Products" {
             switch arrMenuData[indexPath.section].data[indexPath.row].title {
                 case "All Products":
-                    let vc : ProductListVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductListVC") as! ProductListVC
-                    UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+                    NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDICT_TAB_BAR), object: ["tabIndex" : 4])
                     break
                 case "My purchases":
                     let vc : MyPurchaseVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "MyPurchaseVC") as! MyPurchaseVC

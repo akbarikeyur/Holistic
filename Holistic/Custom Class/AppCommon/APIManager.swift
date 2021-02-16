@@ -18,6 +18,8 @@ struct API {
     static let GET_CITY                  =       BASE_URL + "country/get_cities"
     
     static let SIGNUP                    =       BASE_URL + "user/signup"
+    static let QUESTION_USER             =       BASE_URL + "user/getQuestion"
+
     static let EMAIL_LOGIN               =       BASE_URL + "user/loginwithemail"
     static let MOBILE_LOGIN              =       BASE_URL + "user/login"
     static let FORGOT_PASSWORD              =       BASE_URL + "user/forgetPassword"

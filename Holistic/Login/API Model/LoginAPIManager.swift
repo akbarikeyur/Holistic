@@ -54,6 +54,16 @@ public class LoginAPIManager {
         }
     }
     
+    func serviceCallToGetUserQuestion(_ param : [String : Any], _ completion: @escaping (_ dict : [[String : Any]]) -> Void) {
+        APIManager.shared.callPostRequest(API.QUESTION_USER, param, true) { (dict) in
+            printData(dict)
+            if let data = dict["data"] as? [[String : Any]] {
+                completion(data)
+                return
+            }
+        }
+    }
+    
     func serviceCallToSignup(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any]) -> Void) {
         printData(param)
         APIManager.shared.callPostRequest(API.SIGNUP, param, true) { (dict) in
