@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        window?.backgroundColor = UIColor.white
         //IQKeyboard
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
@@ -100,10 +101,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let arrCountry = getCountryData()
         let info = isInfoScreenDisplayed()
         let tool = isToolTipDisplayed()
+        let hotel = isFirstHotelPopup()
+        let restaurant = isFirstRestaurantPopup()
         removeUserDefaultValues()
         setCountryData(arrCountry)
         setInfoScreenDisplayed(info)
         setToolTipDisplayed(tool)
+        setFirstHotelPopup(hotel)
+        setFirstRestaurantPopup(restaurant)
+        
         let navigationVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "EmailLoginVCNav") as! UINavigationController
         self.window?.rootViewController = navigationVC
     }

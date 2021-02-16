@@ -15,6 +15,7 @@ class HotelsTabVC: UIViewController {
     
     var arrHotel = [HotelModel]()
     var refreshControl = UIRefreshControl.init()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,12 @@ extension HotelsTabVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if page != 0 && (arrHotel.count-1 == indexPath.row) {
+            serviceCallToGetHotelList()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : HotelDetailVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelDetailVC") as! HotelDetailVC
         vc.hotelData = arrHotel[indexPath.row]
@@ -88,11 +95,21 @@ extension HotelsTabVC : UITableViewDelegate, UITableViewDataSource {
 //MARK:- Service called
 extension HotelsTabVC {
     @objc func serviceCallToGetHotelList() {
-        refreshControl.endRefreshing()
-        HotelAPIManager.shared.serviceCallToGetHotelList { (data, is_last) in
-            self.arrHotel = [HotelModel]()
+        if refreshControl.isRefreshing {
+            page = 1
+            refreshControl.endRefreshing()
+        }
+        HotelAPIManager.shared.serviceCallToGetHotelList(page) { (data, last) in
+            if self.page == 1 {
+                self.arrHotel = [HotelModel]()
+            }
             for temp in data {
                 self.arrHotel.append(HotelModel.init(temp))
+            }
+            if last > self.page {
+                self.page += 1
+            }else {
+                self.page = 0
             }
             self.tblView.reloadData()
         }

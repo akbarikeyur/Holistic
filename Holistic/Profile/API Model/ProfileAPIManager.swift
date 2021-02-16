@@ -50,14 +50,19 @@ public class ProfileAPIManager {
 //        }
     }
     
-    func serviceCallToGetOffer( _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        APIManager.shared.callPostRequest(API.GET_OFFER, [String : Any](), true) { (dict) in
+    func serviceCallToGetOffer(_ page : Int, _ completion: @escaping (_ data : [[String : Any]], _ last : Int) -> Void) {
+        APIManager.shared.callPostRequest((API.GET_OFFER + "?page=" + String(page)), [String : Any](), true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
                 if let dictData = dict["data"] as? [String : Any] {
                     if let data = dictData["data"] as? [[String : Any]] {
-                        completion(data)
-                        return
+                        if let last = dictData["last_page"] as? Int {
+                            completion(data, last)
+                            return
+                        }else{
+                            completion(data, page)
+                            return
+                        }
                     }
                 }
             }
@@ -71,17 +76,25 @@ public class ProfileAPIManager {
                 completion()
                 return
             }
+            else if let message = dict["message"] as? String, message != "" {
+                displayToast(message)
+            }
         }
     }
     
-    func serviceCallToGetBookmarkOffer(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        APIManager.shared.callPostRequest(API.GET_BOOKMARK_OFFER, param, true) { (dict) in
+    func serviceCallToGetBookmarkOffer(_ page : Int, _ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]], _ last : Int) -> Void) {
+        APIManager.shared.callPostRequest((API.GET_BOOKMARK_OFFER + "?page=" + String(page)), param, true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
                 if let dictData = dict["data"] as? [String : Any] {
                     if let data = dictData["data"] as? [[String : Any]] {
-                        completion(data)
-                        return
+                        if let last = dictData["last_page"] as? Int {
+                            completion(data, last)
+                            return
+                        }else{
+                            completion(data, page)
+                            return
+                        }
                     }
                 }
             }
@@ -115,14 +128,19 @@ public class ProfileAPIManager {
         }
     }
     
-    func serviceCallToGetRedeemCodeList(_ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        APIManager.shared.callPostRequest(API.GET_REDEEM_CODE_LIST, param, true) { (dict) in
+    func serviceCallToGetRedeemCodeList(_ page : Int, _ param : [String : Any], _ completion: @escaping (_ data : [[String : Any]], _ last : Int) -> Void) {
+        APIManager.shared.callPostRequest((API.GET_REDEEM_CODE_LIST + "?page=" + String(page)), param, true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? String, status == "success" {
                 if let dataDict = dict["data"] as? [String : Any] {
                     if let data = dataDict["data"] as? [[String : Any]] {
-                        completion(data)
-                        return
+                        if let last = dataDict["last_page"] as? Int {
+                            completion(data, last)
+                            return
+                        }else{
+                            completion(data, page)
+                            return
+                        }
                     }
                 }
             }

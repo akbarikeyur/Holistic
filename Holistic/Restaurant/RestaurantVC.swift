@@ -16,6 +16,7 @@ class RestaurantVC: UIViewController {
     
     var arrRestaurant = [RestaurantModel]()
     var refreshControl = UIRefreshControl.init()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +30,12 @@ class RestaurantVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().showTabBar()
-//        delay(1.0) {
-//            displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
-//        }
+        if !isFirstRestaurantPopup() {
+            delay(1.0) {
+                displaySubViewtoParentView(AppDelegate().sharedDelegate().window, subview: self.exploreView)
+            }
+            setFirstRestaurantPopup(true)
+        }
     }
     
     //MARK:- Button click event
@@ -92,6 +96,12 @@ extension RestaurantVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if page != 0 && (arrRestaurant.count-1 == indexPath.row) {
+            serviceCallToGetRestaurantList()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : RestaurantDetailVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantDetailVC") as! RestaurantDetailVC
         vc.restaurantData = arrRestaurant[indexPath.row]
@@ -102,11 +112,22 @@ extension RestaurantVC : UITableViewDelegate, UITableViewDataSource {
 //MARK:- Service called
 extension RestaurantVC {
     @objc func serviceCallToGetRestaurantList() {
-        refreshControl.endRefreshing()
-        RestaurantAPIManager.shared.serviceCallToGetRestaurantList { (data, is_last) in
-            self.arrRestaurant = [RestaurantModel]()
+        if refreshControl.isRefreshing {
+            page = 1
+            refreshControl.endRefreshing()
+        }
+        RestaurantAPIManager.shared.serviceCallToGetRestaurantList(page) { (data, last) in
+            if self.page == 1 {
+                self.arrRestaurant = [RestaurantModel]()
+            }
             for temp in data {
                 self.arrRestaurant.append(RestaurantModel.init(temp))
+            }
+            
+            if last > self.page {
+                self.page += 1
+            }else {
+                self.page = 0
             }
             self.tblView.reloadData()
         }

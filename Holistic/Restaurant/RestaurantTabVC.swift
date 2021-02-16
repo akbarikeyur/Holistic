@@ -15,6 +15,7 @@ class RestaurantTabVC: UIViewController {
     
     var arrRestaurant = [RestaurantModel]()
     var refreshControl = UIRefreshControl.init()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +72,12 @@ extension RestaurantTabVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if page != 0 && (arrRestaurant.count-1 == indexPath.row) {
+            serviceCallToGetRestaurantList()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : RestaurantDetailVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantDetailVC") as! RestaurantDetailVC
         vc.restaurantData = arrRestaurant[indexPath.row]
@@ -81,11 +88,22 @@ extension RestaurantTabVC : UITableViewDelegate, UITableViewDataSource {
 //MARK:- Service called
 extension RestaurantTabVC {
     @objc func serviceCallToGetRestaurantList() {
-        refreshControl.endRefreshing()
-        RestaurantAPIManager.shared.serviceCallToGetRestaurantList { (data, is_last) in
-            self.arrRestaurant = [RestaurantModel]()
+        if refreshControl.isRefreshing {
+            page = 1
+            refreshControl.endRefreshing()
+        }
+        RestaurantAPIManager.shared.serviceCallToGetRestaurantList(page) { (data, last) in
+            if self.page == 1 {
+                self.arrRestaurant = [RestaurantModel]()
+            }
             for temp in data {
                 self.arrRestaurant.append(RestaurantModel.init(temp))
+            }
+            
+            if last > self.page {
+                self.page += 1
+            }else {
+                self.page = 0
             }
             self.tblView.reloadData()
         }

@@ -16,6 +16,7 @@ class AvailableCouponVC: UIViewController {
     @IBOutlet weak var myPageView: FSPagerView!
     
     var arrOffer = [OfferModel]()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +88,11 @@ extension AvailableCouponVC : FSPagerViewDelegate, FSPagerViewDataSource {
         return cell
     }
     
+    func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
+        if page != 0 && (arrOffer.count-1 == index) {
+            serviceCallToGetOffer()
+        }
+    }
     func pagerViewDidScroll(_ pagerView: FSPagerView) {
         myPageControl.currentPage = pagerView.currentIndex
     }
@@ -98,10 +104,17 @@ extension AvailableCouponVC : FSPagerViewDelegate, FSPagerViewDataSource {
 
 extension AvailableCouponVC {
     func serviceCallToGetOffer() {
-        ProfileAPIManager.shared.serviceCallToGetOffer { (data) in
-            self.arrOffer = [OfferModel]()
+        ProfileAPIManager.shared.serviceCallToGetOffer(page) { (data, last) in
+            if self.page == 1 {
+                self.arrOffer = [OfferModel]()
+            }
             for temp in data {
                 self.arrOffer.append(OfferModel.init(temp))
+            }
+            if last > self.page {
+                self.page += 1
+            }else{
+                self.page = 0
             }
             self.myPageView.reloadData()
             self.myPageControl.numberOfPages = self.arrOffer.count

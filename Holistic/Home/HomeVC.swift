@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var flowerView: UIView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var searchTxt: TextField!
+    @IBOutlet var tabView: UIView!
     @IBOutlet weak var tabCV: UICollectionView!
     @IBOutlet weak var cartLbl: Label!
     
@@ -31,11 +32,12 @@ class HomeVC: UIViewController {
     var toolIndex = 0
     
     let holisticTab : HolisticLifestyleTabVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "HolisticLifestyleTabVC") as! HolisticLifestyleTabVC
+    /*
     let clinicTab : ClinicTabVC = STORYBOARD.CLINIC.instantiateViewController(withIdentifier: "ClinicTabVC") as! ClinicTabVC
     let restaurantTab : RestaurantTabVC = STORYBOARD.RESTAURANT.instantiateViewController(withIdentifier: "RestaurantTabVC") as! RestaurantTabVC
     let hotelTab : HotelsTabVC = STORYBOARD.HOTEL.instantiateViewController(withIdentifier: "HotelsTabVC") as! HotelsTabVC
     let productTab : ProductTabVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductTabVC") as! ProductTabVC
-    
+    */
     var infoTip = SexyTooltip.init()
     
     override func viewDidLoad() {
@@ -47,7 +49,7 @@ class HomeVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(setupUserDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(clickToNotification(_:)), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_NOTIFICATION_SCREEN), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCartCount), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CART_COUNT), object: nil)
-        
+        tabView.isHidden = true
         registerCollectionView()
         cartLbl.isHidden = true
         delay(2.0) {
@@ -177,7 +179,7 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         if selectedTab == 0 {
             displaySubViewtoParentView(mainContainerView, subview: holisticTab.view)
             holisticTab.setupDetails()
-        }
+        }/*
         else if selectedTab == 1 {
             displaySubViewtoParentView(mainContainerView, subview: clinicTab.view)
             clinicTab.setupDetails()
@@ -194,14 +196,17 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             displaySubViewtoParentView(mainContainerView, subview: productTab.view)
             productTab.setupDetails()
         }
+        */
     }
     
     func resetContainerView()
     {
         holisticTab.view.removeFromSuperview()
+        /*
         restaurantTab.view.removeFromSuperview()
         hotelTab.view.removeFromSuperview()
         productTab.view.removeFromSuperview()
+        */
     }
 }
 

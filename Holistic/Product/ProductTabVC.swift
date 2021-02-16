@@ -92,6 +92,11 @@ extension ProductTabVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if page != 0 && (arrProduct.count-1 == indexPath.row) {
+            serviceCallToGetProductList()
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc : ProductDetailVC = STORYBOARD.PRODUCT.instantiateViewController(withIdentifier: "ProductDetailVC") as! ProductDetailVC
         vc.productData = arrProduct[indexPath.row]
@@ -113,12 +118,12 @@ extension ProductTabVC {
             }else{
                 self.totalProductLbl.text = "Product " + String(self.arrProduct.count)
             }
-            self.tblView.reloadData()
             if last_page == self.page {
                 self.page = 0
             }else{
                 self.page += 1
             }
+            self.tblView.reloadData()
         }
     }
 }

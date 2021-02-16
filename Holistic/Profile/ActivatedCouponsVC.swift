@@ -15,6 +15,7 @@ class ActivatedCouponsVC: UIViewController {
     
     var arrOffer = [ActivedOfferModel]()
     var refreshControl = UIRefreshControl.init()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,11 @@ extension ActivatedCouponsVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if page != 0 && (arrOffer.count-1 == indexPath.row) {
+            serviceCallToGetRedeemCodeList()
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
@@ -75,13 +81,24 @@ extension ActivatedCouponsVC : UITableViewDelegate, UITableViewDataSource {
 extension ActivatedCouponsVC {
     
     @objc func serviceCallToGetRedeemCodeList() {
-        refreshControl.endRefreshing()
+        if refreshControl.isRefreshing {
+            page = 1
+            refreshControl.endRefreshing()
+        }
+        
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
-        ProfileAPIManager.shared.serviceCallToGetRedeemCodeList(param) { (data) in
-            self.arrOffer = [ActivedOfferModel]()
+        ProfileAPIManager.shared.serviceCallToGetRedeemCodeList(page, param) { (data, last) in
+            if self.page == 1 {
+                self.arrOffer = [ActivedOfferModel]()
+            }
             for temp in data {
                 self.arrOffer.append(ActivedOfferModel.init(temp))
+            }
+            if last > self.page {
+                self.page += 1
+            }else {
+                self.page = 0
             }
             self.tblView.reloadData()
             self.noDataLbl.isHidden = (self.arrOffer.count > 0)

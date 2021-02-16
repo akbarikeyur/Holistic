@@ -162,7 +162,7 @@ extension ProductListVC {
             for temp in data {
                 self.arrProduct.append(ProductModel.init(temp))
             }
-            self.tblView.reloadData()
+            
             if self.arrProduct.count > 1 {
                 self.totalProductLbl.text = "Products " + String(self.arrProduct.count)
             }else{
@@ -173,6 +173,7 @@ extension ProductListVC {
             }else{
                 self.page += 1
             }
+            self.tblView.reloadData()
         }
     }
 }

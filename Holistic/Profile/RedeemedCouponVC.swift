@@ -15,6 +15,7 @@ class RedeemedCouponVC: UIViewController {
     @IBOutlet weak var noDataView: UIView!
     
     var arrOffer = [OfferModel]()
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +93,11 @@ extension RedeemedCouponVC : UICollectionViewDelegate, UICollectionViewDataSourc
         cell.removeBtn.addTarget(self, action: #selector(clickToRemove(_:)), for: .touchUpInside)
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if page != 0 && (arrOffer.count-1 == indexPath.row) {
+            serviceCallToGetBookmarkOffer()
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
@@ -117,12 +122,19 @@ extension RedeemedCouponVC : UICollectionViewDelegate, UICollectionViewDataSourc
 
 extension RedeemedCouponVC {
     func serviceCallToGetBookmarkOffer() {
-        ProfileAPIManager.shared.serviceCallToGetBookmarkOffer(["user_id" : AppModel.shared.currentUser.id!]) { (data) in
-            self.arrOffer = [OfferModel]()
+        ProfileAPIManager.shared.serviceCallToGetBookmarkOffer(page, ["user_id" : AppModel.shared.currentUser.id!]) { (data, last) in
+            if self.page == 1 {
+                self.arrOffer = [OfferModel]()
+            }
             for temp in data {
                 if let get_offer = temp["get_offer"] as? [String : Any] {
                     self.arrOffer.append(OfferModel.init(get_offer))
                 }
+            }
+            if last > self.page {
+                self.page += 1
+            }else{
+                self.page = 0
             }
             self.pointCV.reloadData()
             self.noDataView.isHidden = (self.arrOffer.count > 0)
