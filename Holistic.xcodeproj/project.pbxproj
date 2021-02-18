@@ -113,6 +113,7 @@
 		79AD7BFF256D2B5F00DCC33C /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD7BFE256D2B5F00DCC33C /* RestaurantModel.swift */; };
 		79AE8217254986D400092603 /* ProductCartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE8215254986D400092603 /* ProductCartTVC.swift */; };
 		79AE8218254986D400092603 /* ProductCartTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AE8216254986D400092603 /* ProductCartTVC.xib */; };
+		79B85A2325DE960000A25511 /* SelectUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B85A2225DE960000A25511 /* SelectUserVC.swift */; };
 		79BC835B2542E946004A0B49 /* MobileLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC835A2542E946004A0B49 /* MobileLoginVC.swift */; };
 		79BC835D2542EEDC004A0B49 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BC835C2542EEDC004A0B49 /* Home.storyboard */; };
 		79BC83632542EF85004A0B49 /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79BC83602542EF85004A0B49 /* CustomTabBarView.xib */; };
@@ -329,6 +330,7 @@
 		79AD7BFE256D2B5F00DCC33C /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		79AE8215254986D400092603 /* ProductCartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTVC.swift; sourceTree = "<group>"; };
 		79AE8216254986D400092603 /* ProductCartTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTVC.xib; sourceTree = "<group>"; };
+		79B85A2225DE960000A25511 /* SelectUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserVC.swift; sourceTree = "<group>"; };
 		79BC835A2542E946004A0B49 /* MobileLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileLoginVC.swift; sourceTree = "<group>"; };
 		79BC835C2542EEDC004A0B49 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		79BC83602542EF85004A0B49 /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 				79EC86FC25511CE2000C8F5E /* OTPVerificationVC.swift */,
 				79EC8700255125AE000C8F5E /* SignupVC.swift */,
 				79EC86FE25511D01000C8F5E /* ForgotPasswordVC.swift */,
+				79B85A2225DE960000A25511 /* SelectUserVC.swift */,
 				79F218382547EFF400D981C1 /* SideMenuVC.swift */,
 				79F2183A2547F08600D981C1 /* API Model */,
 				79F218332547EDF000D981C1 /* Tableview Cell */,
@@ -1364,6 +1367,7 @@
 				7953C024254C090600DF1BFA /* PurchaseProductTVC.swift in Sources */,
 				79F2184E254824A200D981C1 /* HotelImageCVC.swift in Sources */,
 				79F2183E2547F14700D981C1 /* MenuModel.swift in Sources */,
+				79B85A2325DE960000A25511 /* SelectUserVC.swift in Sources */,
 				796692CC25DA422B00B79A30 /* LaunchVC.swift in Sources */,
 				79EC86FB25511904000C8F5E /* EmailLoginVC.swift in Sources */,
 				794EDD282566A6C000F867EB /* LoyalityDetailVC.swift in Sources */,

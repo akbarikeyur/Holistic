@@ -22,7 +22,7 @@ struct API {
 
     static let EMAIL_LOGIN               =       BASE_URL + "user/loginwithemail"
     static let MOBILE_LOGIN              =       BASE_URL + "user/login"
-    static let FORGOT_PASSWORD              =       BASE_URL + "user/forgetPassword"
+    static let FORGOT_PASSWORD           =       BASE_URL + "user/forgetPassword"
     static let UPDATE_PROFILE            =       BASE_URL + "user/updateProfile"
     static let GET_USER_DETAIL           =       BASE_URL + "user/getUserDetails"
     

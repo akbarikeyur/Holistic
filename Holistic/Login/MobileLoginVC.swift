@@ -84,7 +84,7 @@ class MobileLoginVC: UIViewController {
                 
                 if let is_clincia = dict["is_clincia"] as? Bool {
                     if let is_anglo = dict["is_anglo"] as? Bool {
-                        if !is_anglo && !is_clincia {
+                        if !is_anglo {
                             self.clickToSignup(self)
                         }
                         else if let data = dict["data"] as? [String : Any] {
@@ -95,6 +95,9 @@ class MobileLoginVC: UIViewController {
                             setCliniciaUser(is_clincia)
                             setAngloUser(is_anglo)
                             AppDelegate().sharedDelegate().navigateToDashBoard()
+                        }
+                        else if let data = dict["data"] as? [[String : Any]], data.count > 0 {
+                            
                         }
                     }
                 }

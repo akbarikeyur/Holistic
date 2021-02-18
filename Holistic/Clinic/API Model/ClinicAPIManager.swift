@@ -69,7 +69,7 @@ public class ClinicAPIManager {
     
     func serviceCallToGetAppointmentList(_ page : Int, _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
         let strUrl = CLINIC_API.GET_APPOINTMENT_LIST + "&pageNo=" + String(page)
-        ClinicAPIManager.shared.callGetRequest(strUrl, false) { (dict) in
+        ClinicAPIManager.shared.callGetRequest(strUrl, true) { (dict) in
             printData(dict)
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
@@ -81,7 +81,7 @@ public class ClinicAPIManager {
     
     func serviceCallToGetFamilyData(_ page : Int, _ completion: @escaping (_ data : [[String : Any]]) -> Void) {
         let strUrl = CLINIC_API.GET_PATIENT_FAMILY + "&pageNo=" + String(page)
-        ClinicAPIManager.shared.callGetRequest(strUrl, false) { (dict) in
+        ClinicAPIManager.shared.callGetRequest(strUrl, true) { (dict) in
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{
@@ -91,7 +91,7 @@ public class ClinicAPIManager {
     }
     
     func serviceCallToGetDietPlan(_ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_DIET_PLAN, false) { (dict) in
+        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_DIET_PLAN, true) { (dict) in
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{
@@ -101,7 +101,7 @@ public class ClinicAPIManager {
     }
     
     func serviceCallToGetPrescriptions(_ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PRESCRIPTIONS, false) { (dict) in
+        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PRESCRIPTIONS, true) { (dict) in
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{
@@ -111,7 +111,7 @@ public class ClinicAPIManager {
     }
     
     func serviceCallToGetPackageList(_ completion: @escaping (_ data : [[String : Any]]) -> Void) {
-        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PACKAGE_LIST, false) { (dict) in
+        ClinicAPIManager.shared.callGetRequest(CLINIC_API.GET_PACKAGE_LIST, true) { (dict) in
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{
