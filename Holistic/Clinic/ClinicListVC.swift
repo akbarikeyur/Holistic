@@ -22,11 +22,17 @@ class ClinicListVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshData), name: NSNotification.Name.init(NOTIFICATION.REFRESH_CLINIC_DATA), object: nil)
         registerTableViewMethod()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().showTabBar()
+    }
+    
+    @objc func refreshData() {
+        page = 1
+        serviceCallToGetAppointmentList()
     }
     
     func setupDetails() {
@@ -88,7 +94,10 @@ extension ClinicListVC {
             return
         }
         ClinicAPIManager.shared.serviceCallToGetAppointmentList(page) { (data) in
-            self.arrAppointment = [AppointmentModel]()
+            if self.page == 1 {
+                self.arrAppointment = [AppointmentModel]()
+            }
+            
             for temp in data {
                 self.arrAppointment.append(AppointmentModel.init(temp))
             }

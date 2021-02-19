@@ -31,7 +31,7 @@ class MobileLoginVC: UIViewController {
         else{
             arrCountry = getCountryData()
             let index = arrCountry.firstIndex { (temp) -> Bool in
-                temp.sortname.lowercased() == CURRENT_COUNTRY_CODE.lowercased()
+                temp.sortname.lowercased() == "ae"
             }
             if index != nil {
                 self.selectedCountry = self.arrCountry[index!]
@@ -94,7 +94,26 @@ class MobileLoginVC: UIViewController {
                             setLoginUserData()
                             setCliniciaUser(is_clincia)
                             setAngloUser(is_anglo)
-                            AppDelegate().sharedDelegate().navigateToDashBoard()
+                            
+                            if let cliniciaData = dict["checkClincia"] as? [[String : Any]] {
+                                var arrUser = [CliniciaUserModel]()
+                                for temp in cliniciaData {
+                                    arrUser.append(CliniciaUserModel.init(temp))
+                                }
+                                setCliniciaMemberData(arrUser)
+                            }
+                            
+                            if getCliniciaMemberData().count > 0 {
+                                setClinicUserId(getCliniciaMemberData()[0].ID)
+                            }
+                            
+                            if getCliniciaMemberData().count > 1 {
+                                let vc : SelectUserVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "SelectUserVC") as! SelectUserVC
+                                self.navigationController?.pushViewController(vc, animated: true)
+                            }else{
+                                AppDelegate().sharedDelegate().navigateToDashBoard()
+                            }
+                            
                         }
                         else if let data = dict["data"] as? [[String : Any]], data.count > 0 {
                             

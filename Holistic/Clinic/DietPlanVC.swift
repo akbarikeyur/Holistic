@@ -19,7 +19,12 @@ class DietPlanVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshData), name: NSNotification.Name.init(NOTIFICATION.REFRESH_CLINIC_DATA), object: nil)
         registerCollectionView()
+    }
+    
+    @objc func refreshData() {
+        serviceCallToGetDietPlan()
     }
     
     func setupDetails() {

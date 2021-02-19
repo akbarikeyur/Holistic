@@ -602,23 +602,48 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S7f-eB-pdP">
-                                <rect key="frame" x="0.0" y="70" width="320" height="498"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="408"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hLO-Pp-k0s" id="A6v-M6-q2h"/>
                                     <outlet property="delegate" destination="hLO-Pp-k0s" id="aUV-we-0gB"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elb-oT-mWM" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="20" y="498" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1TF-gF-6YZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
+                                <state key="normal" title="CONTINUE"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyShadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToContinue:" destination="hLO-Pp-k0s" eventType="touchUpInside" id="C03-oL-5c2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="S7f-eB-pdP" firstAttribute="leading" secondItem="2Gf-dn-Fee" secondAttribute="leading" id="5TT-BP-Gkc"/>
+                            <constraint firstItem="2Gf-dn-Fee" firstAttribute="trailing" secondItem="elb-oT-mWM" secondAttribute="trailing" constant="20" id="AsF-Gy-qay"/>
                             <constraint firstItem="S7f-eB-pdP" firstAttribute="top" secondItem="bqG-WT-IFh" secondAttribute="bottom" constant="10" id="EKr-eR-ElN"/>
+                            <constraint firstItem="elb-oT-mWM" firstAttribute="leading" secondItem="2Gf-dn-Fee" secondAttribute="leading" constant="20" id="Ziw-yr-qzI"/>
                             <constraint firstItem="bqG-WT-IFh" firstAttribute="leading" secondItem="2Gf-dn-Fee" secondAttribute="leading" id="aEs-4h-NJs"/>
-                            <constraint firstItem="2Gf-dn-Fee" firstAttribute="bottom" secondItem="S7f-eB-pdP" secondAttribute="bottom" id="aWB-Uw-toE"/>
+                            <constraint firstItem="elb-oT-mWM" firstAttribute="top" secondItem="S7f-eB-pdP" secondAttribute="bottom" constant="20" id="h2f-no-WGo"/>
                             <constraint firstItem="bqG-WT-IFh" firstAttribute="top" secondItem="2Gf-dn-Fee" secondAttribute="top" constant="20" id="hC3-3g-B79"/>
                             <constraint firstItem="pNt-In-eNC" firstAttribute="centerX" secondItem="GKw-C3-Iaf" secondAttribute="centerX" id="hcl-Vx-Ufc"/>
                             <constraint firstItem="S7f-eB-pdP" firstAttribute="trailing" secondItem="2Gf-dn-Fee" secondAttribute="trailing" id="jMB-7a-quV"/>
+                            <constraint firstItem="2Gf-dn-Fee" firstAttribute="bottom" secondItem="elb-oT-mWM" secondAttribute="bottom" constant="20" id="lMl-gR-O6h"/>
                             <constraint firstItem="pNt-In-eNC" firstAttribute="centerY" secondItem="bqG-WT-IFh" secondAttribute="centerY" id="tqJ-fD-B7P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Gf-dn-Fee"/>

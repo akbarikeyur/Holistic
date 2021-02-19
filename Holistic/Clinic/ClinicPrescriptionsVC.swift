@@ -18,7 +18,12 @@ class ClinicPrescriptionsVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshData), name: NSNotification.Name.init(NOTIFICATION.REFRESH_CLINIC_DATA), object: nil)
         registerTableViewMethod()
+    }
+    
+    @objc func refreshData() {
+        serviceCallToGetPrescriptions()
     }
     
     func setupDetails() {

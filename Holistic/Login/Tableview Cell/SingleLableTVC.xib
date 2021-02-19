@@ -33,20 +33,45 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-05-XIT">
+                        <rect key="frame" x="270" y="0.0" width="50" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="uba-3H-6LS"/>
+                        </constraints>
+                        <state key="normal" image="green_right"/>
+                    </button>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rzu-cg-eOh">
+                        <rect key="frame" x="10" y="43" width="300" height="1"/>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.77647058820000003" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="c9y-ii-yze"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="rzu-cg-eOh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4hP-vl-YCQ"/>
                     <constraint firstAttribute="trailing" secondItem="edq-g7-mey" secondAttribute="trailing" constant="10" id="5ln-S9-Q0w"/>
+                    <constraint firstAttribute="trailing" secondItem="rzu-cg-eOh" secondAttribute="trailing" constant="10" id="CVQ-8O-N3K"/>
                     <constraint firstAttribute="bottom" secondItem="edq-g7-mey" secondAttribute="bottom" constant="10" id="NYt-bL-uY6"/>
+                    <constraint firstItem="Wn4-05-XIT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TST-FM-37h"/>
+                    <constraint firstAttribute="trailing" secondItem="Wn4-05-XIT" secondAttribute="trailing" id="fLX-5p-flV"/>
                     <constraint firstItem="edq-g7-mey" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mEZ-0H-VgH"/>
+                    <constraint firstAttribute="bottom" secondItem="Wn4-05-XIT" secondAttribute="bottom" id="rLK-8Y-K4l"/>
+                    <constraint firstAttribute="bottom" secondItem="rzu-cg-eOh" secondAttribute="bottom" id="v6Y-qa-mo7"/>
                     <constraint firstItem="edq-g7-mey" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xsi-B9-FC1"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="selectBtn" destination="Wn4-05-XIT" id="CYe-ua-PPh"/>
+                <outlet property="seperateImgView" destination="rzu-cg-eOh" id="BrB-vh-qqb"/>
                 <outlet property="titleLbl" destination="edq-g7-mey" id="fc3-fc-rZn"/>
             </connections>
             <point key="canvasLocation" x="133" y="154"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="green_right" width="13" height="10"/>
+    </resources>
 </document>

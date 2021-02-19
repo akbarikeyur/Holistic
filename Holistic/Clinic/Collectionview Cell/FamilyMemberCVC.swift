@@ -12,6 +12,7 @@ class FamilyMemberCVC: UICollectionViewCell {
 
     @IBOutlet weak var nameLbl: Label!
     @IBOutlet weak var relationLbl: Label!
+    @IBOutlet weak var selectBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,5 +22,11 @@ class FamilyMemberCVC: UICollectionViewCell {
     func setupDetails(_ dict : ClinicUserModel) {
         nameLbl.text = dict.FullName
         relationLbl.text = dict.EmergencyContactPersonRelationWithPatient
+        
+        if dict.ID == getClinicUserId() {
+            selectBtn.isHidden = false
+        }else{
+            selectBtn.isHidden = true
+        }
     }
 }

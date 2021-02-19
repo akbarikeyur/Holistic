@@ -29,7 +29,7 @@ class ClinicVC: UIViewController {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(redirectToTab(_:)), name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: nil)
         registerCollectionView()
-        if AppModel.shared.currentUser.clinicea_user_id != "" {
+        if getClinicUserId() != "" {
             tabCV.isHidden = false
             mainContainerView.isHidden = false
             noDataLbl.isHidden = true

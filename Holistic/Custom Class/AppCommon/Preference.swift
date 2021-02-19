@@ -121,9 +121,6 @@ func getClinicUserData() -> ClinicUserModel
 }
 
 func setLoginUserData() {
-    if AppModel.shared.currentUser.clinicea_user_id != "" {
-        setClinicUserId(AppModel.shared.currentUser.clinicea_user_id)
-    }
     setDataToPreference(data: AppModel.shared.currentUser.dictionary() as AnyObject, forKey: "login_user_data")
     setUserLogin(true)
 }
@@ -172,6 +169,26 @@ func isAngloUser() -> Bool {
     return false
 }
 
+func setCliniciaMemberData(_ data: [CliniciaUserModel])
+{
+    var arrData = [[String : Any]]()
+    for temp in data {
+        arrData.append(temp.dictionary())
+    }
+    setDataToPreference(data: arrData as AnyObject, forKey: "clincia_user_data")
+}
+
+func getCliniciaMemberData() -> [CliniciaUserModel]
+{
+    var arrData = [CliniciaUserModel]()
+    if let data : [[String : Any]] = getDataFromPreference(key: "clincia_user_data") as? [[String : Any]]
+    {
+        for temp in data {
+            arrData.append(CliniciaUserModel.init(temp))
+        }
+    }
+    return arrData
+}
 
 func setCountryData(_ data: [CountryModel])
 {

@@ -11,6 +11,8 @@ import UIKit
 class SingleLableTVC: UITableViewCell {
 
     @IBOutlet weak var titleLbl: Label!
+    @IBOutlet weak var seperateImgView: UIImageView!
+    @IBOutlet weak var selectBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

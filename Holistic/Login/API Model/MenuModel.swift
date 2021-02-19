@@ -136,18 +136,17 @@ struct UserModel {
 }
 
 struct CliniciaUserModel {
-    var id : Int!
-    var question, type, answer : String!
+    var ID, Title, FirstName, LastName : String!
     
     init(_ dict : [String : Any]) {
-        id = AppModel.shared.getIntValue(dict, "id")
-        question = dict["question"] as? String ?? ""
-        type = dict["type"] as? String ?? ""
-        answer = dict["answer"] as? String ?? ""
+        ID = dict["ID"] as? String ?? ""
+        Title = dict["Title"] as? String ?? ""
+        FirstName = dict["FirstName"] as? String ?? ""
+        LastName = dict["LastName"] as? String ?? ""
     }
     
     func dictionary() -> [String : Any] {
-        return ["id" : id!, "question" : question!, "type" : type!, "answer" : answer!]
+        return ["ID" : ID!, "Title" : Title!, "FirstName" : FirstName!, "LastName" : LastName!]
     }
 }
 

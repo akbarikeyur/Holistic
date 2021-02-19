@@ -78,6 +78,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih7-2Z-6kY">
+                                <rect key="frame" x="159" y="11" width="13" height="22"/>
+                                <state key="normal" image="green_right"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -85,6 +89,7 @@
                             <constraint firstAttribute="trailing" secondItem="71T-sl-ViF" secondAttribute="trailing" constant="15" id="EaM-eV-hHp"/>
                             <constraint firstAttribute="trailing" secondItem="kmy-0y-CeL" secondAttribute="trailing" id="Hb4-Yo-sDo"/>
                             <constraint firstItem="kmy-0y-CeL" firstAttribute="top" secondItem="h6k-OZ-Ogb" secondAttribute="top" id="HoD-pm-NcC"/>
+                            <constraint firstItem="Ih7-2Z-6kY" firstAttribute="top" secondItem="h6k-OZ-Ogb" secondAttribute="top" constant="11" id="IHx-gu-mc4"/>
                             <constraint firstItem="ndg-Ue-Sag" firstAttribute="top" secondItem="71T-sl-ViF" secondAttribute="bottom" id="IQa-r8-4hH"/>
                             <constraint firstItem="kLC-9B-haa" firstAttribute="top" secondItem="ndg-Ue-Sag" secondAttribute="bottom" constant="5" id="IiW-Xy-zz4"/>
                             <constraint firstItem="kLC-9B-haa" firstAttribute="leading" secondItem="71T-sl-ViF" secondAttribute="leading" id="OgA-US-ch9"/>
@@ -96,6 +101,7 @@
                             <constraint firstItem="EBO-e6-NH3" firstAttribute="top" secondItem="kLC-9B-haa" secondAttribute="bottom" id="o8H-Ii-tMG"/>
                             <constraint firstItem="71T-sl-ViF" firstAttribute="leading" secondItem="h6k-OZ-Ogb" secondAttribute="leading" constant="20" id="oTs-H2-fES"/>
                             <constraint firstItem="kmy-0y-CeL" firstAttribute="leading" secondItem="h6k-OZ-Ogb" secondAttribute="leading" id="oca-mw-etx"/>
+                            <constraint firstAttribute="trailing" secondItem="Ih7-2Z-6kY" secondAttribute="trailing" constant="14" id="tfg-Ad-JMo"/>
                             <constraint firstAttribute="trailing" secondItem="kLC-9B-haa" secondAttribute="trailing" constant="60" id="yzg-FJ-Jhw"/>
                         </constraints>
                     </view>
@@ -111,11 +117,13 @@
             <connections>
                 <outlet property="nameLbl" destination="ndg-Ue-Sag" id="aAo-0H-jUi"/>
                 <outlet property="relationLbl" destination="EBO-e6-NH3" id="v3g-Kc-ZHT"/>
+                <outlet property="selectBtn" destination="Ih7-2Z-6kY" id="VD2-Rq-WKE"/>
             </connections>
             <point key="canvasLocation" x="133" y="154"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="family_bg" width="186" height="133"/>
+        <image name="green_right" width="13" height="10"/>
     </resources>
 </document>

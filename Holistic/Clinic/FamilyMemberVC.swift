@@ -19,11 +19,22 @@ class FamilyMemberVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshData), name: NSNotification.Name.init(NOTIFICATION.REFRESH_CLINIC_DATA), object: nil)
         registerCollectionView()
     }
     
-    func setupDetails() {
+    @objc func refreshData() {
+        page = 1
         serviceCallToGetFamilyData()
+    }
+    
+    func setupDetails() {
+        if arrMember.count == 0 {
+            page = 1
+            serviceCallToGetFamilyData()
+        }else{
+            clinicCV.reloadData()
+        }
     }
     
     /*
@@ -64,6 +75,13 @@ extension FamilyMemberVC : UICollectionViewDelegate, UICollectionViewDataSource,
             serviceCallToGetFamilyData()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        setClinicUserId(arrMember[indexPath.row].ID)
+        clinicCV.reloadData()
+        NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 0])
+        NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REFRESH_CLINIC_DATA), object: nil)
+    }
 }
 
 extension FamilyMemberVC {
@@ -72,7 +90,9 @@ extension FamilyMemberVC {
             return
         }
         ClinicAPIManager.shared.serviceCallToGetFamilyData(page) { (data) in
-            self.arrMember = [ClinicUserModel]()
+            if self.page == 1 {
+                self.arrMember = [ClinicUserModel]()
+            }
             for temp in data {
                 self.arrMember.append(ClinicUserModel.init(temp))
             }
