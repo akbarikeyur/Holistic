@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -22,7 +22,7 @@
         <!--HomeVC-->
         <scene sceneID="Ova-gi-gtb">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="FZQ-FJ-NHr" customClass="HomeVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="FZQ-FJ-NHr" customClass="HomeVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eDL-4p-qXx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                                             <action selector="clickToSideMenu:" destination="FZQ-FJ-NHr" eventType="touchUpInside" id="Jor-P2-Vza"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Helen," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-7N-krR" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Helen," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-7N-krR" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="55" y="7.5" width="120" height="29.5"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="25"/>
                                         <nil key="textColor"/>
@@ -63,7 +63,7 @@
                                             <action selector="clickToCart:" destination="FZQ-FJ-NHr" eventType="touchUpInside" id="2mw-ds-zv9"/>
                                         </connections>
                                     </button>
-                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRf-Ym-w77" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRf-Ym-w77" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="202" y="3" width="16" height="16"/>
                                         <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -123,10 +123,10 @@
                                     <constraint firstItem="RFO-vQ-mma" firstAttribute="leading" secondItem="ph4-Ev-9aE" secondAttribute="leading" id="zSA-Ju-G9t"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-w2-dxI" customClass="View" customModule="Holistic" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-w2-dxI" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="69" width="300" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search what would you like..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDG-fC-9Vo" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search what would you like..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDG-fC-9Vo" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="0.0" width="245" height="40"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -215,14 +215,14 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1I-Hx-0b0">
-                                <rect key="frame" x="0.0" y="159" width="320" height="409"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="449"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B3-mV-1bf">
-                                <rect key="frame" x="0.0" y="159" width="320" height="409"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="449"/>
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-EZ-8KB" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="321" width="300" height="18"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-EZ-8KB" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="361" width="300" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="1dj-qP-cig"/>
                                         </constraints>
@@ -236,8 +236,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flower to your healthier lifestyle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-XL-Zna" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="349" width="300" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flower to your healthier lifestyle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-XL-Zna" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="389" width="300" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="fXQ-pl-Fj4"/>
                                         </constraints>
@@ -252,7 +252,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower_off" translatesAutoresizingMaskIntoConstraints="NO" id="Gcg-5v-kTP">
-                                        <rect key="frame" x="10" y="10" width="300" height="301"/>
+                                        <rect key="frame" x="10" y="10" width="300" height="341"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -276,7 +276,7 @@
                             <constraint firstItem="ph4-Ev-9aE" firstAttribute="leading" secondItem="EnG-Dd-wp5" secondAttribute="leading" id="0qw-3N-GSB"/>
                             <constraint firstItem="ph4-Ev-9aE" firstAttribute="top" secondItem="EnG-Dd-wp5" secondAttribute="top" constant="20" id="20G-Yi-Xth"/>
                             <constraint firstItem="EnG-Dd-wp5" firstAttribute="trailing" secondItem="hlX-w2-dxI" secondAttribute="trailing" constant="10" id="8jN-Ks-7nZ"/>
-                            <constraint firstItem="f1I-Hx-0b0" firstAttribute="top" secondItem="Bcf-DE-eQC" secondAttribute="bottom" id="IsF-jF-700"/>
+                            <constraint firstItem="f1I-Hx-0b0" firstAttribute="top" secondItem="hlX-w2-dxI" secondAttribute="bottom" constant="10" id="HTH-Yb-Agk"/>
                             <constraint firstItem="Bcf-DE-eQC" firstAttribute="trailing" secondItem="EnG-Dd-wp5" secondAttribute="trailing" id="JmJ-6N-Wxh"/>
                             <constraint firstItem="f1I-Hx-0b0" firstAttribute="bottom" secondItem="3B3-mV-1bf" secondAttribute="bottom" id="MhZ-Ay-wcD"/>
                             <constraint firstItem="Bcf-DE-eQC" firstAttribute="leading" secondItem="EnG-Dd-wp5" secondAttribute="leading" id="Mld-Sb-req"/>
@@ -402,7 +402,7 @@
         <!--NotificationVC-->
         <scene sceneID="rIF-ZL-m7L">
             <objects>
-                <viewController storyboardIdentifier="NotificationVC" id="hjY-Iw-NXR" customClass="NotificationVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationVC" id="hjY-Iw-NXR" customClass="NotificationVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCu-OG-4Df">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,7 +421,7 @@
                                             <action selector="clickToBack:" destination="hjY-Iw-NXR" eventType="touchUpInside" id="YXd-RZ-ZSN"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfw-r7-zn5" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfw-r7-zn5" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="108.5" y="11.5" width="103" height="21.5"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -452,7 +452,7 @@
                                     <outlet property="delegate" destination="hjY-Iw-NXR" id="Hcv-ns-bA7"/>
                                 </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any notification" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIT-SO-QfF" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any notification" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIT-SO-QfF" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="274.5" width="300" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -492,7 +492,7 @@
         <!--Holistic Lifestyle TabVC-->
         <scene sceneID="tKN-Xs-JMo">
             <objects>
-                <viewController storyboardIdentifier="HolisticLifestyleTabVC" id="6v3-6I-shi" customClass="HolisticLifestyleTabVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HolisticLifestyleTabVC" id="6v3-6I-shi" customClass="HolisticLifestyleTabVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Znf-7e-FnV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -503,7 +503,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi0-m5-wsq">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7E9-MB-2Ok" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7E9-MB-2Ok" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="0.0" width="300" height="109"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjc-Fa-QCK">
@@ -516,7 +516,7 @@
                                                                     <constraint firstAttribute="height" constant="80" id="O5D-Xy-4C7"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0% achieved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HbX-Sn-xMo" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0% achieved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HbX-Sn-xMo" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                 <rect key="frame" x="10" y="85" width="80" height="14"/>
                                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
                                                                 <nil key="textColor"/>
@@ -540,7 +540,7 @@
                                                             <constraint firstItem="F2X-Vk-bCp" firstAttribute="top" secondItem="yjc-Fa-QCK" secondAttribute="top" constant="5" id="pla-gt-pGK"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QWa-ze-1X7" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QWa-ze-1X7" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="15" width="190" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
                                                         <nil key="textColor"/>
@@ -552,7 +552,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Based on your overall health test, your score is 0 and consider good..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt4-Ja-lcd" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Based on your overall health test, your score is 0 and consider good..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt4-Ja-lcd" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="43.5" width="190" height="42.5"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
                                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -669,7 +669,7 @@
         <!--Blog ListVC-->
         <scene sceneID="any-Wm-rfR">
             <objects>
-                <viewController storyboardIdentifier="BlogListVC" id="huo-OQ-mnE" customClass="BlogListVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlogListVC" id="huo-OQ-mnE" customClass="BlogListVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="836-zy-w4w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -717,7 +717,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hma-Hi-1Du">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="503.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holistics Reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McL-vf-mhM" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holistics Reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McL-vf-mhM" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="300" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="25"/>
                                                 <nil key="textColor"/>
@@ -729,7 +729,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knowledge makes you better." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-kK-oBm" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knowledge makes you better." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-kK-oBm" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="39.5" width="300" height="21"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="18"/>
                                                 <nil key="textColor"/>
@@ -825,7 +825,7 @@
         <!--Blog DetailVC-->
         <scene sceneID="mlH-h1-bxj">
             <objects>
-                <viewController storyboardIdentifier="BlogDetailVC" id="ty3-VG-spM" customClass="BlogDetailVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlogDetailVC" id="ty3-VG-spM" customClass="BlogDetailVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XZr-BR-8Ys">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -868,7 +868,7 @@
                                                     <constraint firstItem="SUv-Gg-Ad2" firstAttribute="top" secondItem="S2y-zu-FgG" secondAttribute="top" id="iAD-Gp-hc6"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbb-94-dOc" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbb-94-dOc" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="360" width="300" height="42.5"/>
                                                 <string key="text">Fertility Specialist or Ob/Gyn:
 Which Is Right for You? </string>
@@ -891,7 +891,7 @@ Which Is Right for You? </string>
                                                 <color key="tintColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="calendar"/>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 12, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-aU-IUC" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 12, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-aU-IUC" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="414.5" width="99" height="14"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
@@ -916,7 +916,7 @@ Which Is Right for You? </string>
                                                     <action selector="clickToShare:" destination="ty3-VG-spM" eventType="touchUpInside" id="IfQ-c5-KgA"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-dq-GqX" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-dq-GqX" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="450.5" width="300" height="99"/>
                                                 <string key="text">The transplant journey can present challenging circumstances such as being a patient on the transplant waiting list and navigating post-transplant medications and follow-up clinic visits. Sharing your experiences with people who are going through, or who have already gone through those experiences, can be an effective way to</string>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
@@ -989,7 +989,7 @@ Which Is Right for You? </string>
         <!--Flower Life TabVC-->
         <scene sceneID="wXZ-UR-2nS">
             <objects>
-                <viewController storyboardIdentifier="FlowerLifeTabVC" id="wVA-Fw-WAG" customClass="FlowerLifeTabVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlowerLifeTabVC" id="wVA-Fw-WAG" customClass="FlowerLifeTabVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ex-Qm-07P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -997,7 +997,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYT-qA-9kP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start growing your flower of life." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bt-cm-jgl" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start growing your flower of life." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bt-cm-jgl" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="428" width="300" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="GI3-Iv-xRx"/>
@@ -1012,7 +1012,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete  given tasks towards a healthier lifestyle and get loyalty points. Now earn to live healthy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-sD-0xW" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete  given tasks towards a healthier lifestyle and get loyalty points. Now earn to live healthy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-sD-0xW" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="457" width="300" height="49.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49.5" id="Lt6-D1-bkx"/>
@@ -1027,7 +1027,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Making Dubai Healthier&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bo-2h-mC4" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Making Dubai Healthier&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bo-2h-mC4" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="521.5" width="300" height="16.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16.5" id="KHR-uc-mLG"/>
@@ -1084,7 +1084,7 @@ Which Is Right for You? </string>
         <!--Current Task TabVC-->
         <scene sceneID="Lav-IT-3Jz">
             <objects>
-                <viewController storyboardIdentifier="CurrentTaskTabVC" id="NDx-vF-FkG" customClass="CurrentTaskTabVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentTaskTabVC" id="NDx-vF-FkG" customClass="CurrentTaskTabVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zW2-8h-AxI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1097,7 +1097,7 @@ Which Is Right for You? </string>
                                     <outlet property="delegate" destination="NDx-vF-FkG" id="4vi-Ta-A55"/>
                                 </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any current task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-VX-2db" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any current task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-VX-2db" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="50" width="300" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1162,7 +1162,7 @@ Which Is Right for You? </string>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wls-BH-HGV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgt-6T-jvS" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgt-6T-jvS" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="80" height="80"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sun" translatesAutoresizingMaskIntoConstraints="NO" id="EL3-gG-tl9">
@@ -1198,7 +1198,7 @@ Which Is Right for You? </string>
                                             <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wake up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WU-os-Ys0" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wake up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WU-os-Ys0" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="110" y="39" width="200" height="23.5"/>
                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -1252,10 +1252,10 @@ Which Is Right for You? </string>
                                                         <outlet property="delegate" destination="NDx-vF-FkG" id="dX2-F6-FWa"/>
                                                     </connections>
                                                 </tableView>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVA-6B-Jko" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVA-6B-Jko" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="147.5" width="280" height="154.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Benefits " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-OU-gTk" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Benefits " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-OU-gTk" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="15" width="240" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -1267,7 +1267,7 @@ Which Is Right for You? </string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pud-bz-BKV" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pud-bz-BKV" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="41.5" width="240" height="66"/>
                                                             <string key="text">Completing daily tasks will get you loyalty benefits. Click below to see your current loyalty points and benefits you can redeem</string>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
@@ -1280,7 +1280,7 @@ Which Is Right for You? </string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5a-xq-zTT" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5a-xq-zTT" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="117.5" width="136.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                             <color key="textColor" red="1" green="0.47450980392156861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1344,10 +1344,10 @@ Which Is Right for You? </string>
                                         <constraint firstAttribute="trailing" secondItem="2OH-C2-RNl" secondAttribute="trailing" id="ddb-vV-Cwm"/>
                                     </constraints>
                                 </scrollView>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USO-fI-IRW" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USO-fI-IRW" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="413" width="320" height="75"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNZ-aa-AvM" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNZ-aa-AvM" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="20" y="20" width="130" height="35"/>
                                             <color key="backgroundColor" red="1" green="0.47450980392156861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -1372,7 +1372,7 @@ Which Is Right for You? </string>
                                                 <action selector="clickToDoneWakeupView:" destination="NDx-vF-FkG" eventType="touchUpInside" id="EvY-u3-ofQ"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-La-fZZ" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-La-fZZ" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="170" y="20" width="130" height="35"/>
                                             <color key="backgroundColor" red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -1455,7 +1455,7 @@ Which Is Right for You? </string>
         <!--Completed Task TabVC-->
         <scene sceneID="BtM-sX-Ehn">
             <objects>
-                <viewController storyboardIdentifier="CompletedTaskTabVC" id="Pae-XU-cLs" customClass="CompletedTaskTabVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompletedTaskTabVC" id="Pae-XU-cLs" customClass="CompletedTaskTabVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eHO-o7-yRJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1468,7 +1468,7 @@ Which Is Right for You? </string>
                                     <outlet property="delegate" destination="Pae-XU-cLs" id="1Gv-Pv-TRl"/>
                                 </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any completed task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0g-ew-frY" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any completed task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0g-ew-frY" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="50" width="300" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1533,7 +1533,7 @@ Which Is Right for You? </string>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-RW-ch0">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-3d-NZ4" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-3d-NZ4" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="80" height="80"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sun" translatesAutoresizingMaskIntoConstraints="NO" id="NWB-Zs-5Ue">
@@ -1569,7 +1569,7 @@ Which Is Right for You? </string>
                                             <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wake up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKt-wX-Gk2" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wake up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKt-wX-Gk2" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="110" y="39" width="200" height="23.5"/>
                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -1623,10 +1623,10 @@ Which Is Right for You? </string>
                                                         <outlet property="delegate" destination="Pae-XU-cLs" id="KPG-og-yjA"/>
                                                     </connections>
                                                 </tableView>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wni-ST-ATm" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wni-ST-ATm" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="147.5" width="280" height="154.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Benefits " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFN-lv-xaa" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Benefits " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFN-lv-xaa" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="15" width="240" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -1638,7 +1638,7 @@ Which Is Right for You? </string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpv-vx-5bb" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpv-vx-5bb" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="41.5" width="240" height="66"/>
                                                             <string key="text">Completing daily tasks will get you loyalty benefits. Click below to see your current loyalty points and benefits you can redeem</string>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
@@ -1651,7 +1651,7 @@ Which Is Right for You? </string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-vV-fy4" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-vV-fy4" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="117.5" width="136.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                             <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1712,10 +1712,10 @@ Which Is Right for You? </string>
                                         <constraint firstItem="FYy-5f-Lma" firstAttribute="top" secondItem="M04-kY-Ggo" secondAttribute="top" id="mBH-02-q1o"/>
                                     </constraints>
                                 </scrollView>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-Y3-Jvw" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-Y3-Jvw" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="413" width="320" height="75"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9S-Eh-nMW" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9S-Eh-nMW" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="20" y="20" width="130" height="35"/>
                                             <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -1740,7 +1740,7 @@ Which Is Right for You? </string>
                                                 <action selector="clickToDoneWakeupView:" destination="Pae-XU-cLs" eventType="touchUpInside" id="zl5-K3-vcG"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-HH-R4J" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-HH-R4J" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="170" y="20" width="130" height="35"/>
                                             <color key="backgroundColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -1841,7 +1841,7 @@ Which Is Right for You? </string>
         <!--Missed Task TabVC-->
         <scene sceneID="ok8-UR-Aby">
             <objects>
-                <viewController storyboardIdentifier="MissedTaskTabVC" id="wbI-id-RP0" customClass="MissedTaskTabVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MissedTaskTabVC" id="wbI-id-RP0" customClass="MissedTaskTabVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXR-RL-OxM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1854,7 +1854,7 @@ Which Is Right for You? </string>
                                     <outlet property="delegate" destination="wbI-id-RP0" id="djs-ao-wrP"/>
                                 </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any missed task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZP-aL-Bql" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any missed task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZP-aL-Bql" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="50" width="300" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1919,7 +1919,7 @@ Which Is Right for You? </string>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-E0-uzr">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CC-o5-vQc" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CC-o5-vQc" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="80" height="80"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sun" translatesAutoresizingMaskIntoConstraints="NO" id="Oji-Kj-3uO">
@@ -1955,7 +1955,7 @@ Which Is Right for You? </string>
                                             <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wake up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inD-D8-DeR" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wake up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inD-D8-DeR" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="110" y="39" width="200" height="23.5"/>
                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -2009,10 +2009,10 @@ Which Is Right for You? </string>
                                                         <outlet property="delegate" destination="wbI-id-RP0" id="yXY-pa-zoq"/>
                                                     </connections>
                                                 </tableView>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMv-3V-dMr" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMv-3V-dMr" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="147.5" width="280" height="154.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Benefits " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJF-jh-m5i" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Benefits " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJF-jh-m5i" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="15" width="240" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -2024,7 +2024,7 @@ Which Is Right for You? </string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xo-P9-Mxh" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xo-P9-Mxh" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="41.5" width="240" height="66"/>
                                                             <string key="text">Completing daily tasks will get you loyalty benefits. Click below to see your current loyalty points and benefits you can redeem</string>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
@@ -2037,7 +2037,7 @@ Which Is Right for You? </string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-O2-Qtq" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Redemption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-O2-Qtq" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="117.5" width="136.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                             <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2098,10 +2098,10 @@ Which Is Right for You? </string>
                                         <constraint firstItem="pox-7U-oe4" firstAttribute="width" secondItem="8sl-oC-skw" secondAttribute="width" id="jAp-Vm-Xgv"/>
                                     </constraints>
                                 </scrollView>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xk-42-v7a" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xk-42-v7a" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="413" width="320" height="75"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSm-CN-QRt" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSm-CN-QRt" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="20" y="20" width="130" height="35"/>
                                             <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -2126,7 +2126,7 @@ Which Is Right for You? </string>
                                                 <action selector="clickToDoneWakeupView:" destination="wbI-id-RP0" eventType="touchUpInside" id="LHX-uL-126"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L00-3N-PNl" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L00-3N-PNl" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                             <rect key="frame" x="170" y="20" width="130" height="35"/>
                                             <color key="backgroundColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -2209,7 +2209,7 @@ Which Is Right for You? </string>
         <!--Statistics TabVC-->
         <scene sceneID="cNi-cS-FRT">
             <objects>
-                <viewController storyboardIdentifier="StatisticsTabVC" id="lTU-FB-egM" customClass="StatisticsTabVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsTabVC" id="lTU-FB-egM" customClass="StatisticsTabVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="69N-S6-3sx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="668"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2217,7 +2217,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OY8-hK-m9H">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhp-xh-Szz" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhp-xh-Szz" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="64.5" y="15" width="10" height="10"/>
                                         <color key="backgroundColor" red="0.078431372549019607" green="0.47843137254901957" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -2230,7 +2230,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKt-IF-WuB" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKt-IF-WuB" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="84.5" y="10.5" width="79.5" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2242,7 +2242,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGF-Bl-9qF" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGF-Bl-9qF" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="184" y="15" width="10" height="10"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -2255,7 +2255,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK8-Td-GmG" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK8-Td-GmG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="204" y="10.5" width="52" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2284,7 +2284,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0L-z6-SPc">
                                 <rect key="frame" x="0.0" y="40" width="320" height="50"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCg-Oc-6tl" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCg-Oc-6tl" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="5" width="145" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="From" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3I-RL-Efq">
@@ -2333,7 +2333,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPZ-2f-Vzl" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPZ-2f-Vzl" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="165" y="5" width="145" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="II2-mX-FCs">
@@ -2406,7 +2406,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hne-nZ-y1q">
                                 <rect key="frame" x="0.0" y="350" width="320" height="39"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOw-rk-v0a" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOw-rk-v0a" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="79" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2418,7 +2418,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eae-pq-JLH" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eae-pq-JLH" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="301" y="10" width="9" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2430,7 +2430,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eJ-bF-GXG" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eJ-bF-GXG" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="38" width="300" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="5aS-Fh-1Ye"/>
@@ -2458,7 +2458,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndY-AM-h5D">
                                 <rect key="frame" x="0.0" y="389" width="320" height="39"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APU-KN-85C" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APU-KN-85C" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="124" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2470,7 +2470,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQ0-m7-fcM" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQ0-m7-fcM" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="301" y="10" width="9" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2482,7 +2482,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9G-Qs-azT" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9G-Qs-azT" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="38" width="300" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="UXS-Iy-7gB"/>
@@ -2510,7 +2510,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-7y-Nsu">
                                 <rect key="frame" x="0.0" y="428" width="320" height="39"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-ko-dWR" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-ko-dWR" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="96.5" height="19"/>
                                         <string key="text">Missed Tasks
 </string>
@@ -2524,7 +2524,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YZ-lJ-k4m" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YZ-lJ-k4m" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="301" y="10" width="9" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2536,7 +2536,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ns-8U-f2i" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ns-8U-f2i" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="38" width="300" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="UvC-MT-KQA"/>
@@ -2564,7 +2564,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTq-9f-wMw">
                                 <rect key="frame" x="0.0" y="467" width="320" height="39"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPF-Tz-lUC" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPF-Tz-lUC" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="152.5" height="19"/>
                                         <string key="text">Percentage Achieved
 </string>
@@ -2578,7 +2578,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dr5-w1-hN9" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dr5-w1-hN9" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="285" y="10" width="25" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2590,7 +2590,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1II-ll-0Gy" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1II-ll-0Gy" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="10" y="38" width="300" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="uFi-Ws-sdQ"/>
@@ -2618,7 +2618,7 @@ Which Is Right for You? </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baB-4F-KVC">
                                 <rect key="frame" x="0.0" y="506" width="320" height="39"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyal Points Earned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpy-eT-K1d" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyal Points Earned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpy-eT-K1d" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="143.5" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2630,7 +2630,7 @@ Which Is Right for You? </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-Ff-oav" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-Ff-oav" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="301" y="10" width="9" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2653,7 +2653,7 @@ Which Is Right for You? </string>
                                     <constraint firstAttribute="bottom" secondItem="rpy-eT-K1d" secondAttribute="bottom" constant="10" id="pvM-U1-CI6"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="8Sz-we-gtn" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="8Sz-we-gtn" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="555" width="320" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="RBY-fX-PP8"/>
@@ -2664,7 +2664,7 @@ Which Is Right for You? </string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You are almost towards a healthier lifestyle, next month try to achieve 60%+ and earn points to redeem against vouchers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ow-tm-SJf" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You are almost towards a healthier lifestyle, next month try to achieve 60%+ and earn points to redeem against vouchers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ow-tm-SJf" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="571" width="280" height="49"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -2676,7 +2676,7 @@ Which Is Right for You? </string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join the new healthier UAE." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3U-Vd-QwF" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join the new healthier UAE." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3U-Vd-QwF" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="630" width="280" height="16.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.47450980392156861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

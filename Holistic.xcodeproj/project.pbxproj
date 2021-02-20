@@ -373,7 +373,7 @@
 		79EC86FC25511CE2000C8F5E /* OTPVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationVC.swift; sourceTree = "<group>"; };
 		79EC86FE25511D01000C8F5E /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		79EC8700255125AE000C8F5E /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
-		79EFD5B72542BE0E006D06FB /* Holistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79EFD5B72542BE0E006D06FB /* Holistic Lifestyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holistic Lifestyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EFD5BA2542BE0E006D06FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EFD5BE2542BE0E006D06FB /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		79EFD5C12542BE0E006D06FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -842,7 +842,7 @@
 		79EFD5B82542BE0E006D06FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79EFD5B72542BE0E006D06FB /* Holistic.app */,
+				79EFD5B72542BE0E006D06FB /* Holistic Lifestyle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1073,7 +1073,7 @@
 			);
 			name = Holistic;
 			productName = Holistic;
-			productReference = 79EFD5B72542BE0E006D06FB /* Holistic.app */;
+			productReference = 79EFD5B72542BE0E006D06FB /* Holistic Lifestyle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1525,6 +1525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1532,7 +1533,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1546,6 +1547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1553,7 +1555,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
