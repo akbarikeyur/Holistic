@@ -20,6 +20,9 @@ target 'Holistic' do
   pod 'MGSwipeTableCell'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Crashlytics'
+  # Recommended: Add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
   pod 'FSPagerView'
   pod 'SexyTooltip'
 end
