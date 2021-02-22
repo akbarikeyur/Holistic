@@ -16,6 +16,7 @@ class ReferFriendVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        urlLbl.text = "https://apple.co/3kc4m5U"
     }
     
     override func viewWillAppear(_ animated: Bool) {
