@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185DBD5D25E3FB3E007AEC96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185DBD5C25E3FB3E007AEC96 /* GoogleService-Info.plist */; };
 		188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D4E56255071A000DE6715 /* ProfileVC.swift */; };
 		1898D9FA25700168003C1CBE /* ClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898D9F925700168003C1CBE /* ClinicVC.swift */; };
 		1898D9FC257004E0003C1CBE /* MyCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898D9FB257004DF003C1CBE /* MyCodeVC.swift */; };
@@ -137,7 +138,6 @@
 		79C8F2B0254A9B7400481BB8 /* OrderSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2AF254A9B7400481BB8 /* OrderSummaryVC.swift */; };
 		79C8F2B3254AA1FB00481BB8 /* OrderSummaryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */; };
 		79C8F2B4254AA1FB00481BB8 /* OrderSummaryTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C8F2B2254AA1FB00481BB8 /* OrderSummaryTVC.xib */; };
-		79C980F825CBF9AD005107EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79C980F725CBF9AD005107EC /* GoogleService-Info.plist */; };
 		79C980FA25CC39DF005107EC /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C980F925CC39DF005107EC /* NotificationVC.swift */; };
 		79D6D0082543ECD000945D7C /* completed_task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D6D0072543ECD000945D7C /* completed_task.json */; };
 		79D6D00A2543ECE700945D7C /* missed_task.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D6D0092543ECE700945D7C /* missed_task.json */; };
@@ -225,6 +225,7 @@
 
 /* Begin PBXFileReference section */
 		059EB8287ED303FB69D1DABE /* Pods_Holistic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holistic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		185DBD5C25E3FB3E007AEC96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		188D4E56255071A000DE6715 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		1898D9F925700168003C1CBE /* ClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicVC.swift; sourceTree = "<group>"; };
 		1898D9FB257004DF003C1CBE /* MyCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCodeVC.swift; sourceTree = "<group>"; };
@@ -354,7 +355,6 @@
 		79C8F2AF254A9B7400481BB8 /* OrderSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryVC.swift; sourceTree = "<group>"; };
 		79C8F2B1254AA1FB00481BB8 /* OrderSummaryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryTVC.swift; sourceTree = "<group>"; };
 		79C8F2B2254AA1FB00481BB8 /* OrderSummaryTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSummaryTVC.xib; sourceTree = "<group>"; };
-		79C980F725CBF9AD005107EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79C980F925CC39DF005107EC /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		79D6D0072543ECD000945D7C /* completed_task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = completed_task.json; sourceTree = "<group>"; };
 		79D6D0092543ECE700945D7C /* missed_task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missed_task.json; sourceTree = "<group>"; };
@@ -871,7 +871,7 @@
 				79EFD5C32542BE10006D06FB /* Assets.xcassets */,
 				79EFD5C52542BE10006D06FB /* LaunchScreen.storyboard */,
 				79EFD5C82542BE10006D06FB /* Info.plist */,
-				79C980F725CBF9AD005107EC /* GoogleService-Info.plist */,
+				185DBD5C25E3FB3E007AEC96 /* GoogleService-Info.plist */,
 			);
 			path = Holistic;
 			sourceTree = "<group>";
@@ -1066,6 +1066,7 @@
 				79EFD5B42542BE0E006D06FB /* Frameworks */,
 				79EFD5B52542BE0E006D06FB /* Resources */,
 				E3A0B3AB88A90EAEB27E2E17 /* [CP] Embed Pods Frameworks */,
+				185DBD5B25E3F986007AEC96 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1129,6 +1130,7 @@
 				794EDD2625669F0C00F867EB /* LoyalityPointCVC.xib in Resources */,
 				7952829425CD043A000876B2 /* NotificationTVC.xib in Resources */,
 				79BC836C2542FFA5004A0B49 /* TabCVC.xib in Resources */,
+				185DBD5D25E3FB3E007AEC96 /* GoogleService-Info.plist in Resources */,
 				79AD21B6254D722700C97A89 /* ClinicAppointmentTVC.xib in Resources */,
 				7953C025254C090600DF1BFA /* PurchaseProductTVC.xib in Resources */,
 				7975721525DBCDDB00E6B6E5 /* QuestionAnswerTVC.xib in Resources */,
@@ -1151,7 +1153,6 @@
 				79F218372547EE1000D981C1 /* SideMenuTVC.xib in Resources */,
 				79EFD5C42542BE10006D06FB /* Assets.xcassets in Resources */,
 				79333D23255BD7CB0092F567 /* ClinicPackageTVC.xib in Resources */,
-				79C980F825CBF9AD005107EC /* GoogleService-Info.plist in Resources */,
 				79357FE8256675F90053C851 /* Profile.storyboard in Resources */,
 				79149D1B254FE86A00CBD522 /* BlogListTVC.xib in Resources */,
 				798249D625483BD60035AB9E /* HotelPackageTVC.xib in Resources */,
@@ -1203,6 +1204,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		185DBD5B25E3F986007AEC96 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		E3A0B3AB88A90EAEB27E2E17 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

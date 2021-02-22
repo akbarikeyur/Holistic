@@ -1,0 +1,108 @@
+[
+    {
+        "title" : "Home",
+        "image" : "menu_home"
+    },
+    {
+        "title" : "Holistic Lifestyle",
+        "image" : "menu_lifestyle"
+    },
+    {
+        "title" : "Holistic Clinic",
+        "image" : "menu_clinic",
+        "select_image" : "menu_clinic_orange",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "Appointments"
+                    },
+                    {
+                        "title" : "Diet Plan"
+                    },
+                    {
+                        "title" : "Prescription"
+                    },
+                    {
+                        "title" : "Package"
+                    },
+                    {
+                        "title" : "Family Members"
+                    }
+                ]
+    },
+    {
+        "title" : "Holistic Hotels",
+        "image" : "menu_hotel",
+        "select_image" : "menu_hotel",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "All Hotels"
+                    },
+                    {
+                        "title" : "Codes Redeemed"
+                    }
+                ]
+    },
+    {
+        "title" : "Holistic Restaurants",
+        "image" : "menu_restaurant",
+        "select_image" : "menu_restaurant",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "All Restaurants"
+                    },
+                    {
+                        "title" : "Codes Redeemed"
+                    }
+                ]
+    },
+    {
+        "title" : "Holistic Products",
+        "image" : "menu_product",
+        "select_image" : "menu_product_orange",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "All Products"
+                    },
+                    {
+                        "title" : "My purchases"
+                    }
+                ]
+    },
+    {
+        "title" : "Loyalty points",
+        "image" : "menu_point",
+        "select_image" : "menu_point",
+        "isExpand" : false,
+        "data" : [
+                    {
+                        "title" : "Available Coupons"
+                    },
+                    {
+                        "title" : "Redeemed Coupons"
+                    },
+                    {
+                        "title" : "Activated Coupons"
+                    }
+                ]
+    },
+    {
+        "title" : "Blogs",
+        "image" : "menu_product"
+    },
+    {
+        "title" : "Profile",
+        "image" : "menu_profile"
+    },
+    {
+        "title" : "Refer Friend",
+        "image" : "menu_product"
+    },
+    {
+        "title" : "Logout",
+        "image" : "menu_logout"
+    }
+]

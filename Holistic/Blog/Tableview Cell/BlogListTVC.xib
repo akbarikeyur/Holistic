@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Medium.ttf">
+            <string>WorkSans-Medium</string>
+        </array>
+        <array key="WorkSans-Regular.ttf">
+            <string>WorkSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlogListTVC" id="KGk-i7-Jjw" customClass="BlogListTVC" customModule="Holistic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeX-fJ-LZO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRb-zZ-kT5" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_banner2" translatesAutoresizingMaskIntoConstraints="NO" id="TaX-Hj-2VF">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TaX-Hj-2VF" secondAttribute="trailing" id="04L-rr-gWT"/>
+                                    <constraint firstItem="TaX-Hj-2VF" firstAttribute="top" secondItem="GRb-zZ-kT5" secondAttribute="top" id="ANS-Ts-boj"/>
+                                    <constraint firstAttribute="width" constant="80" id="MPT-3n-cgk"/>
+                                    <constraint firstItem="TaX-Hj-2VF" firstAttribute="leading" secondItem="GRb-zZ-kT5" secondAttribute="leading" id="Ww3-hY-z4n"/>
+                                    <constraint firstAttribute="height" constant="80" id="lT4-aa-3yi"/>
+                                    <constraint firstAttribute="bottom" secondItem="TaX-Hj-2VF" secondAttribute="bottom" id="ouw-Yv-8u8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="286-D2-1rG" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="100" y="15" width="210" height="38"/>
+                                <string key="text">Pregnant in a Pandemic:
+Coronavirus and Pregnancy </string>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np5-TO-fHw">
+                                <rect key="frame" x="100" y="62" width="17" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="Yp0-OF-GOK"/>
+                                    <constraint firstAttribute="height" constant="18" id="uEp-CG-j9U"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.47450980392156861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="calendar"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 12, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcy-Pd-GTB">
+                                <rect key="frame" x="122" y="63.5" width="99" height="15"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NS0-ju-ylb">
+                                <rect key="frame" x="231" y="63.5" width="60" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="fBE-bA-nvm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Share" image="share">
+                                    <color key="titleColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GRb-zZ-kT5" firstAttribute="leading" secondItem="BeX-fJ-LZO" secondAttribute="leading" constant="10" id="53b-HF-OY5"/>
+                            <constraint firstAttribute="bottom" secondItem="GRb-zZ-kT5" secondAttribute="bottom" constant="10" id="IRe-ji-KKx"/>
+                            <constraint firstItem="286-D2-1rG" firstAttribute="top" secondItem="BeX-fJ-LZO" secondAttribute="top" constant="15" id="Ixd-ae-Ask"/>
+                            <constraint firstItem="NS0-ju-ylb" firstAttribute="leading" secondItem="hcy-Pd-GTB" secondAttribute="trailing" constant="10" id="JKb-fu-C9I"/>
+                            <constraint firstItem="np5-TO-fHw" firstAttribute="leading" secondItem="GRb-zZ-kT5" secondAttribute="trailing" constant="10" id="V0J-ds-exf"/>
+                            <constraint firstItem="286-D2-1rG" firstAttribute="leading" secondItem="GRb-zZ-kT5" secondAttribute="trailing" constant="10" id="VNQ-7W-PmK"/>
+                            <constraint firstItem="NS0-ju-ylb" firstAttribute="centerY" secondItem="hcy-Pd-GTB" secondAttribute="centerY" id="VmY-hC-een"/>
+                            <constraint firstItem="hcy-Pd-GTB" firstAttribute="leading" secondItem="np5-TO-fHw" secondAttribute="trailing" constant="5" id="XOK-06-My2"/>
+                            <constraint firstItem="np5-TO-fHw" firstAttribute="top" secondItem="286-D2-1rG" secondAttribute="bottom" constant="9" id="buY-Ts-Kor"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="np5-TO-fHw" secondAttribute="bottom" constant="10" id="ena-Cy-HKH"/>
+                            <constraint firstAttribute="trailing" secondItem="286-D2-1rG" secondAttribute="trailing" constant="10" id="hIY-DO-YK6"/>
+                            <constraint firstItem="GRb-zZ-kT5" firstAttribute="top" secondItem="BeX-fJ-LZO" secondAttribute="top" constant="10" id="iSS-11-vcG"/>
+                            <constraint firstItem="hcy-Pd-GTB" firstAttribute="centerY" secondItem="np5-TO-fHw" secondAttribute="centerY" id="z5e-EZ-nEB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BeX-fJ-LZO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="27E-h5-fPO"/>
+                    <constraint firstAttribute="trailing" secondItem="BeX-fJ-LZO" secondAttribute="trailing" id="IUn-aE-oTN"/>
+                    <constraint firstItem="BeX-fJ-LZO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bOJ-8r-GaE"/>
+                    <constraint firstAttribute="bottom" secondItem="BeX-fJ-LZO" secondAttribute="bottom" id="zmc-pj-CAr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLbl" destination="hcy-Pd-GTB" id="2CW-iW-N3H"/>
+                <outlet property="imgVIew" destination="TaX-Hj-2VF" id="Pw4-A9-8FZ"/>
+                <outlet property="shareBtn" destination="NS0-ju-ylb" id="cWL-Hm-Ocm"/>
+                <outlet property="titleLbl" destination="286-D2-1rG" id="NI9-7D-suI"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="154"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar" width="17" height="17"/>
+        <image name="share" width="16.5" height="12"/>
+        <image name="temp_banner2" width="167" height="154"/>
+    </resources>
+</document>

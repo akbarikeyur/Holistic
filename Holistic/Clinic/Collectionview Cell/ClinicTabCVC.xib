@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Regular.ttf">
+            <string>WorkSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClinicTabCVC" id="gTV-IL-0wX" customClass="ClinicTabCVC" customModule="Holistic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vrl-Za-Ghu">
+                        <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Members" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgi-50-BLt" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="13"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDX-7W-boc">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-Vl-IzW">
+                                        <rect key="frame" x="35" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="KXQ-60-WR0"/>
+                                            <constraint firstAttribute="height" constant="40" id="QZs-JH-6KI"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_clinic_orange"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ni-9R-s00">
+                                        <rect key="frame" x="85" y="9" width="19" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="19" id="W99-a6-yQb"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_next"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZx-vn-DVR">
+                                        <rect key="frame" x="6" y="9" width="19" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="19" id="QsW-qg-soV"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_previous"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="cbd-Vl-IzW" firstAttribute="centerX" secondItem="vDX-7W-boc" secondAttribute="centerX" id="DhK-V3-Tzw"/>
+                                    <constraint firstItem="cbd-Vl-IzW" firstAttribute="centerY" secondItem="TZx-vn-DVR" secondAttribute="centerY" id="RAg-Gb-C8c"/>
+                                    <constraint firstItem="5ni-9R-s00" firstAttribute="leading" secondItem="cbd-Vl-IzW" secondAttribute="trailing" constant="10" id="SJ6-Mk-2lB"/>
+                                    <constraint firstItem="5ni-9R-s00" firstAttribute="centerY" secondItem="TZx-vn-DVR" secondAttribute="centerY" id="mgF-Jv-J9f"/>
+                                    <constraint firstItem="cbd-Vl-IzW" firstAttribute="leading" secondItem="TZx-vn-DVR" secondAttribute="trailing" constant="10" id="nqe-9g-1NU"/>
+                                    <constraint firstItem="cbd-Vl-IzW" firstAttribute="centerY" secondItem="vDX-7W-boc" secondAttribute="centerY" id="rb0-hw-xIz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vDX-7W-boc" firstAttribute="leading" secondItem="Vrl-Za-Ghu" secondAttribute="leading" id="0Dz-xo-eHp"/>
+                            <constraint firstItem="vDX-7W-boc" firstAttribute="top" secondItem="Vrl-Za-Ghu" secondAttribute="top" id="AWy-NH-uSF"/>
+                            <constraint firstAttribute="trailing" secondItem="Hgi-50-BLt" secondAttribute="trailing" id="K5l-JF-IXs"/>
+                            <constraint firstAttribute="bottom" secondItem="vDX-7W-boc" secondAttribute="bottom" id="LlO-9R-j7p"/>
+                            <constraint firstItem="Hgi-50-BLt" firstAttribute="top" secondItem="Vrl-Za-Ghu" secondAttribute="top" id="anz-Wa-PdW"/>
+                            <constraint firstItem="Hgi-50-BLt" firstAttribute="leading" secondItem="Vrl-Za-Ghu" secondAttribute="leading" id="nH1-d9-eW7"/>
+                            <constraint firstAttribute="bottom" secondItem="Hgi-50-BLt" secondAttribute="bottom" id="rRx-ug-jKq"/>
+                            <constraint firstAttribute="trailing" secondItem="vDX-7W-boc" secondAttribute="trailing" id="sqF-w7-its"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Vrl-Za-Ghu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AMw-xO-9GO"/>
+                <constraint firstAttribute="bottom" secondItem="Vrl-Za-Ghu" secondAttribute="bottom" id="ObX-sa-4sW"/>
+                <constraint firstItem="Vrl-Za-Ghu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pv2-bg-1qV"/>
+                <constraint firstAttribute="trailing" secondItem="Vrl-Za-Ghu" secondAttribute="trailing" id="lhz-Hf-j2R"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="catBtn" destination="cbd-Vl-IzW" id="0nm-NI-9Cy"/>
+                <outlet property="categoryView" destination="vDX-7W-boc" id="Onp-6b-9e6"/>
+                <outlet property="titleLbl" destination="Hgi-50-BLt" id="9TO-qt-hJJ"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_clinic_orange" width="35.5" height="35.5"/>
+        <image name="ic_next" width="19" height="11.5"/>
+        <image name="ic_previous" width="19" height="11.5"/>
+    </resources>
+</document>
