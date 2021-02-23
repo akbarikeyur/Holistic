@@ -1545,13 +1545,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";
@@ -1567,13 +1568,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";

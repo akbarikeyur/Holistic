@@ -39,17 +39,13 @@ public class LoginAPIManager {
         }
     }
     
-    func serviceCallToEmailLogin(_ param : [String : Any], _ completion: @escaping () -> Void) {
+    func serviceCallToEmailLogin(_ param : [String : Any], _ completion: @escaping (_ dict : [String : Any]) -> Void) {
         printData(param)
         APIManager.shared.callPostRequest(API.EMAIL_LOGIN, param, true) { (dict) in
             print(dict)
             if let status = dict["status"] as? String, status == "success" {
-                if let data = dict["data"] as? [String : Any] {
-                    AppModel.shared.currentUser = UserModel.init(data)
-                    setLoginUserData()
-                    completion()
-                    return
-                }
+                completion(dict)
+                return
             }
         }
     }

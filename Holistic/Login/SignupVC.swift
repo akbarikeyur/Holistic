@@ -202,27 +202,35 @@ class SignupVC: UIViewController {
                 newParam["password"] = self.passwordTxt.text
                 newParam["remember_token"] = getPushToken()
                 printData(newParam)
-                LoginAPIManager.shared.serviceCallToEmailLogin(newParam) {
-                    AppDelegate().sharedDelegate().navigateToDashBoard()
+                LoginAPIManager.shared.serviceCallToEmailLogin(newParam) { (dict) in
+                    if let data = dict["data"] as? [String : Any] {
+                        AppModel.shared.currentUser = UserModel.init(data)
+                        setLoginUserData()
+                        if AppModel.shared.currentUser.clinicea_user_id != "" {
+                            setCliniciaUser(true)
+                        }
+                        setAngloUser(true)
+                        
+                        if let cliniciaData = dict["checkClincia"] as? [[String : Any]] {
+                            var arrUser = [CliniciaUserModel]()
+                            for temp in cliniciaData {
+                                arrUser.append(CliniciaUserModel.init(temp))
+                            }
+                            setCliniciaMemberData(arrUser)
+                        }
+                        
+                        if getCliniciaMemberData().count > 0 {
+                            setClinicUserId(getCliniciaMemberData()[0].ID)
+                        }
+                        
+                        if getCliniciaMemberData().count > 1 {
+                            let vc : SelectUserVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "SelectUserVC") as! SelectUserVC
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }else{
+                            AppDelegate().sharedDelegate().navigateToDashBoard()
+                        }
+                    }
                 }
-//                var param = [String : Any]()
-//                param["countrycode"] = self.selectedCountry.phonecode
-//                param["phonenumber"] = self.phoneTxt.text
-//                LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
-//                    if let is_clincia = dict["is_clincia"] as? Bool {
-//                        if let is_anglo = dict["is_anglo"] as? Bool {
-//                            if let data = dict["data"] as? [String : Any] {
-//                                AppModel.shared.currentUser = UserModel.init(data)
-//                                AppModel.shared.currentUser.is_clincia = is_clincia
-//                                AppModel.shared.currentUser.is_anglo = is_anglo
-//                                setLoginUserData()
-//                                setCliniciaUser(is_clincia)
-//                                setAngloUser(is_anglo)
-//                                AppDelegate().sharedDelegate().navigateToDashBoard()
-//                            }
-//                        }
-//                    }
-//                }
             }
         }
     }

@@ -68,8 +68,34 @@ class EmailLoginVC: UIViewController {
             param["password"] = passwordTxt.text
             param["remember_token"] = getPushToken()
             printData(param)
-            LoginAPIManager.shared.serviceCallToEmailLogin(param) {
-                AppDelegate().sharedDelegate().navigateToDashBoard()
+            LoginAPIManager.shared.serviceCallToEmailLogin(param) { (dict) in
+                if let data = dict["data"] as? [String : Any] {
+                    AppModel.shared.currentUser = UserModel.init(data)
+                    setLoginUserData()
+                    if AppModel.shared.currentUser.clinicea_user_id != "" {
+                        setCliniciaUser(true)
+                    }
+                    setAngloUser(true)
+                    
+                    if let cliniciaData = dict["checkClincia"] as? [[String : Any]] {
+                        var arrUser = [CliniciaUserModel]()
+                        for temp in cliniciaData {
+                            arrUser.append(CliniciaUserModel.init(temp))
+                        }
+                        setCliniciaMemberData(arrUser)
+                    }
+                    
+                    if getCliniciaMemberData().count > 0 {
+                        setClinicUserId(getCliniciaMemberData()[0].ID)
+                    }
+                    
+                    if getCliniciaMemberData().count > 1 {
+                        let vc : SelectUserVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "SelectUserVC") as! SelectUserVC
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }else{
+                        AppDelegate().sharedDelegate().navigateToDashBoard()
+                    }
+                }
             }
         }
     }
