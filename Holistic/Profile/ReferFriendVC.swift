@@ -29,8 +29,14 @@ class ReferFriendVC: UIViewController {
     }
     
     @IBAction func clickToCopy(_ sender: Any) {
-        UIPasteboard.general.string = urlLbl.text
-        displayToast("Url copy to clipboard")
+        let message = "Holistic Lifestyle\nMaking UAE more healthier.\n\nApp Store : https://apple.co/3kc4m5U \nPlay Store : https://cutt.ly/glRjJ3M"
+        let textShare = [ message ]
+        let activityViewController = UIActivityViewController(activityItems: textShare , applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+        
+//        UIPasteboard.general.string = urlLbl.text
+//        displayToast("Url copy to clipboard")
     }
     
     /*

@@ -1553,7 +1553,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";
@@ -1576,7 +1576,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";

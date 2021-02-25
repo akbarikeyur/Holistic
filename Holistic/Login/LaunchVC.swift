@@ -30,6 +30,7 @@ class LaunchVC: UIViewController {
             }) { (isDone) in
                 delay(0.5) {
                     if isUserLogin() {
+                        AppModel.shared.currentUser = UserModel.init([String : Any]())
                         AppModel.shared.currentUser = getLoginUserData()
                         AppDelegate().sharedDelegate().navigateToDashBoard()
                     }

@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-69-7g0" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="134.5" y="12.5" width="51" height="19"/>
+                                        <rect key="frame" x="137.5" y="12.5" width="45.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="856"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huh-BT-rtE">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="857.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="840.5"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4M-lV-FNZ" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="100" y="10" width="120" height="120"/>
@@ -126,7 +126,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@patrickosb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Dm-NT1" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="166" width="300" height="14.5"/>
+                                                <rect key="frame" x="10" y="166" width="300" height="14"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1v2-xM-HCF">
-                                                <rect key="frame" x="10" y="210.5" width="300" height="50"/>
+                                                <rect key="frame" x="10" y="210" width="300" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4b-lo-Q2h">
                                                         <rect key="frame" x="0.0" y="7.5" width="35" height="35"/>
@@ -181,7 +181,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZc-6j-zIb">
-                                                <rect key="frame" x="10" y="260.5" width="300" height="50"/>
+                                                <rect key="frame" x="10" y="260" width="300" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWD-uR-ah9">
                                                         <rect key="frame" x="0.0" y="7.5" width="35" height="35"/>
@@ -224,7 +224,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-QP-43h">
-                                                <rect key="frame" x="10" y="310.5" width="300" height="50"/>
+                                                <rect key="frame" x="10" y="310" width="300" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2M-PI-RDH">
                                                         <rect key="frame" x="0.0" y="7.5" width="35" height="35"/>
@@ -302,7 +302,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgi-TK-Sa1">
-                                                <rect key="frame" x="10" y="360.5" width="300" height="82.5"/>
+                                                <rect key="frame" x="10" y="360" width="300" height="66"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-m2-30m">
                                                         <rect key="frame" x="0.0" y="7.5" width="35" height="35"/>
@@ -313,7 +313,7 @@
                                                         <state key="normal" image="address_pin"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmB-lF-oTp" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                        <rect key="frame" x="45" y="16.5" width="255" height="49.5"/>
+                                                        <rect key="frame" x="45" y="16.5" width="255" height="33"/>
                                                         <string key="text">66 Al Marsa St - Dubai Marina - Dubai
 United Arab Emirates</string>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
@@ -327,7 +327,7 @@ United Arab Emirates</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="zgu-wr-vq8">
-                                                        <rect key="frame" x="0.0" y="81.5" width="300" height="1"/>
+                                                        <rect key="frame" x="0.0" y="65" width="300" height="1"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="MyN-dc-sBm"/>
                                                         </constraints>
@@ -347,7 +347,7 @@ United Arab Emirates</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-gp-phx">
-                                                <rect key="frame" x="10" y="443" width="300" height="49.5"/>
+                                                <rect key="frame" x="10" y="426" width="300" height="49.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rle-Z8-b6z">
                                                         <rect key="frame" x="0.0" y="7.5" width="35" height="35"/>
@@ -390,7 +390,7 @@ United Arab Emirates</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-FQ-QF0">
-                                                <rect key="frame" x="0.0" y="502.5" width="320" height="39"/>
+                                                <rect key="frame" x="0.0" y="485.5" width="320" height="39"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4tv-bV-KCF" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="300" height="19"/>
@@ -445,7 +445,7 @@ United Arab Emirates</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Io7-ti-KJ6">
-                                                <rect key="frame" x="0.0" y="541.5" width="320" height="316"/>
+                                                <rect key="frame" x="0.0" y="524.5" width="320" height="316"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HLY-CB-Wng" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="300" height="19"/>
@@ -584,7 +584,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-Yy-efo" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="116.5" y="12.5" width="87.5" height="19"/>
+                                        <rect key="frame" x="121.5" y="12.5" width="77.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1382,45 +1382,64 @@ United Arab Emirates</string>
                                     <constraint firstAttribute="height" constant="44" id="khf-pc-6zQ"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkE-2l-1uB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-M2-wYk">
                                 <rect key="frame" x="0.0" y="64" width="320" height="536"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-M2-wYk">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="536"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refer_friend_bg" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-tF-pAR">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="191" id="QVt-X2-ofd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Value Friendship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nt-sL-FL7" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="211" width="300" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's share with your friends to make the UAE more healthier." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-iA-JqG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="249.5" width="280" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Wr-mbE" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="322" width="280" height="50"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refer_friend_bg" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-tF-pAR">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-8g-ymc" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="100" height="50"/>
+                                                <color key="backgroundColor" red="0.92156862745098034" green="0.62352941176470589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="191" id="QVt-X2-ofd"/>
+                                                    <constraint firstAttribute="width" constant="100" id="y53-e4-RIW"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Value Friendship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nt-sL-FL7" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="211" width="300" height="28.5"/>
-                                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                        <real key="value" value="24"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's make you earn from your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-iA-JqG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="249.5" width="280" height="42.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
+                                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                                <state key="normal" title="SHARE"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                         <real key="value" value="18"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-u0-BW9" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="322" width="280" height="82.5"/>
-                                                <string key="text">Send you unique link to your friend and once they download the app from your link, you will be given 5 loyalty points which you can redeem for various offers and coupons globally. </string>
+                                                <connections>
+                                                    <action selector="clickToCopy:" destination="I2q-3d-hNc" eventType="touchUpInside" id="f5W-Is-dHU"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.dummyline.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-A1-EFD" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="0.0" width="160" height="50"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1431,105 +1450,56 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Wr-mbE" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="444.5" width="280" height="50"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-8g-ymc" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                        <rect key="frame" x="180" y="0.0" width="100" height="50"/>
-                                                        <color key="backgroundColor" red="0.92156862745098034" green="0.62352941176470589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="y53-e4-RIW"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
-                                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
-                                                        <state key="normal" title="COPY" image="ic_copy"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="18"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="clickToCopy:" destination="I2q-3d-hNc" eventType="touchUpInside" id="f5W-Is-dHU"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.dummyline.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-A1-EFD" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="0.0" width="160" height="50"/>
-                                                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="14"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="vQg-A1-EFD" firstAttribute="top" secondItem="TGw-Wr-mbE" secondAttribute="top" id="539-2x-42w"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Kcv-8g-ymc" secondAttribute="bottom" id="5mW-Fe-BDF"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Kcv-8g-ymc" secondAttribute="trailing" id="FW9-Yz-tZW"/>
-                                                    <constraint firstItem="Kcv-8g-ymc" firstAttribute="leading" secondItem="vQg-A1-EFD" secondAttribute="trailing" constant="10" id="IPo-Pb-Yww"/>
-                                                    <constraint firstItem="Kcv-8g-ymc" firstAttribute="top" secondItem="TGw-Wr-mbE" secondAttribute="top" id="TXG-GP-wdY"/>
-                                                    <constraint firstAttribute="height" constant="50" id="Yny-rh-DOh"/>
-                                                    <constraint firstItem="vQg-A1-EFD" firstAttribute="leading" secondItem="TGw-Wr-mbE" secondAttribute="leading" constant="10" id="ndo-XT-dVk"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vQg-A1-EFD" secondAttribute="bottom" id="xQo-2K-V4g"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
-                                                        <integer key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Ycs-u0-BW9" secondAttribute="trailing" constant="20" id="5c6-66-JxK"/>
-                                            <constraint firstAttribute="trailing" secondItem="Lfr-iA-JqG" secondAttribute="trailing" constant="20" id="7nj-Mn-d2u"/>
-                                            <constraint firstItem="6nt-sL-FL7" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="10" id="CYF-Ia-TeR"/>
-                                            <constraint firstAttribute="trailing" secondItem="TGw-Wr-mbE" secondAttribute="trailing" constant="20" id="Ezx-AC-rhr"/>
-                                            <constraint firstItem="JHg-tF-pAR" firstAttribute="top" secondItem="4tf-M2-wYk" secondAttribute="top" id="Gk6-fQ-Fy4"/>
-                                            <constraint firstItem="Lfr-iA-JqG" firstAttribute="top" secondItem="6nt-sL-FL7" secondAttribute="bottom" constant="10" id="HBr-ia-Xot"/>
-                                            <constraint firstItem="Lfr-iA-JqG" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="20" id="IXX-4t-dFB"/>
-                                            <constraint firstItem="TGw-Wr-mbE" firstAttribute="top" secondItem="Ycs-u0-BW9" secondAttribute="bottom" constant="40" id="Ld9-ZQ-UEW"/>
-                                            <constraint firstItem="Ycs-u0-BW9" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="20" id="MIx-YP-BJ5"/>
-                                            <constraint firstAttribute="bottom" secondItem="TGw-Wr-mbE" secondAttribute="bottom" constant="41.5" id="Mgl-OR-YlX"/>
-                                            <constraint firstItem="JHg-tF-pAR" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" id="Rcw-QE-Jbp"/>
-                                            <constraint firstAttribute="trailing" secondItem="6nt-sL-FL7" secondAttribute="trailing" constant="10" id="X48-YV-ZN3"/>
-                                            <constraint firstItem="Ycs-u0-BW9" firstAttribute="top" secondItem="Lfr-iA-JqG" secondAttribute="bottom" constant="30" id="XlG-oK-Hxf"/>
-                                            <constraint firstItem="6nt-sL-FL7" firstAttribute="top" secondItem="JHg-tF-pAR" secondAttribute="bottom" constant="20" id="YWD-7f-wAg"/>
-                                            <constraint firstAttribute="trailing" secondItem="JHg-tF-pAR" secondAttribute="trailing" id="mJj-8B-QcE"/>
-                                            <constraint firstItem="TGw-Wr-mbE" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="20" id="nzf-z1-Iaf"/>
+                                            <constraint firstItem="vQg-A1-EFD" firstAttribute="top" secondItem="TGw-Wr-mbE" secondAttribute="top" id="539-2x-42w"/>
+                                            <constraint firstAttribute="bottom" secondItem="Kcv-8g-ymc" secondAttribute="bottom" id="5mW-Fe-BDF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kcv-8g-ymc" secondAttribute="trailing" id="FW9-Yz-tZW"/>
+                                            <constraint firstItem="Kcv-8g-ymc" firstAttribute="leading" secondItem="vQg-A1-EFD" secondAttribute="trailing" constant="10" id="IPo-Pb-Yww"/>
+                                            <constraint firstItem="Kcv-8g-ymc" firstAttribute="top" secondItem="TGw-Wr-mbE" secondAttribute="top" id="TXG-GP-wdY"/>
+                                            <constraint firstAttribute="height" constant="50" id="Yny-rh-DOh"/>
+                                            <constraint firstItem="vQg-A1-EFD" firstAttribute="leading" secondItem="TGw-Wr-mbE" secondAttribute="leading" constant="10" id="ndo-XT-dVk"/>
+                                            <constraint firstAttribute="bottom" secondItem="vQg-A1-EFD" secondAttribute="bottom" id="xQo-2K-V4g"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="4tf-M2-wYk" firstAttribute="width" secondItem="BkE-2l-1uB" secondAttribute="width" id="9pN-VN-FmF"/>
-                                    <constraint firstAttribute="trailing" secondItem="4tf-M2-wYk" secondAttribute="trailing" id="HMc-26-bHy"/>
-                                    <constraint firstItem="4tf-M2-wYk" firstAttribute="leading" secondItem="BkE-2l-1uB" secondAttribute="leading" id="JNk-qt-g1u"/>
-                                    <constraint firstItem="4tf-M2-wYk" firstAttribute="top" secondItem="BkE-2l-1uB" secondAttribute="top" id="UzY-f2-1GN"/>
-                                    <constraint firstAttribute="bottom" secondItem="4tf-M2-wYk" secondAttribute="bottom" id="ni0-dZ-yyI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lfr-iA-JqG" secondAttribute="trailing" constant="20" id="7nj-Mn-d2u"/>
+                                    <constraint firstItem="6nt-sL-FL7" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="10" id="CYF-Ia-TeR"/>
+                                    <constraint firstAttribute="trailing" secondItem="TGw-Wr-mbE" secondAttribute="trailing" constant="20" id="Ezx-AC-rhr"/>
+                                    <constraint firstItem="JHg-tF-pAR" firstAttribute="top" secondItem="4tf-M2-wYk" secondAttribute="top" id="Gk6-fQ-Fy4"/>
+                                    <constraint firstItem="Lfr-iA-JqG" firstAttribute="top" secondItem="6nt-sL-FL7" secondAttribute="bottom" constant="10" id="HBr-ia-Xot"/>
+                                    <constraint firstItem="Lfr-iA-JqG" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="20" id="IXX-4t-dFB"/>
+                                    <constraint firstItem="JHg-tF-pAR" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" id="Rcw-QE-Jbp"/>
+                                    <constraint firstAttribute="trailing" secondItem="6nt-sL-FL7" secondAttribute="trailing" constant="10" id="X48-YV-ZN3"/>
+                                    <constraint firstItem="6nt-sL-FL7" firstAttribute="top" secondItem="JHg-tF-pAR" secondAttribute="bottom" constant="20" id="YWD-7f-wAg"/>
+                                    <constraint firstItem="TGw-Wr-mbE" firstAttribute="top" secondItem="Lfr-iA-JqG" secondAttribute="bottom" constant="30" id="YkI-OS-Hgu"/>
+                                    <constraint firstAttribute="trailing" secondItem="JHg-tF-pAR" secondAttribute="trailing" id="mJj-8B-QcE"/>
+                                    <constraint firstItem="TGw-Wr-mbE" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="20" id="nzf-z1-Iaf"/>
                                 </constraints>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="4tf-M2-wYk" firstAttribute="leading" secondItem="uzB-7Z-lBz" secondAttribute="leading" id="0Iu-pK-r03"/>
+                            <constraint firstItem="4tf-M2-wYk" firstAttribute="top" secondItem="Qmk-Zl-r5u" secondAttribute="bottom" id="8qO-FB-1CH"/>
+                            <constraint firstItem="uzB-7Z-lBz" firstAttribute="bottom" secondItem="4tf-M2-wYk" secondAttribute="bottom" id="KdT-e9-wEg"/>
                             <constraint firstItem="Qmk-Zl-r5u" firstAttribute="trailing" secondItem="uzB-7Z-lBz" secondAttribute="trailing" id="WKu-tz-jWW"/>
-                            <constraint firstItem="BkE-2l-1uB" firstAttribute="top" secondItem="Qmk-Zl-r5u" secondAttribute="bottom" id="XnP-w8-Ejy"/>
-                            <constraint firstItem="BkE-2l-1uB" firstAttribute="bottom" secondItem="uzB-7Z-lBz" secondAttribute="bottom" id="dnZ-Rp-mhA"/>
-                            <constraint firstItem="BkE-2l-1uB" firstAttribute="trailing" secondItem="uzB-7Z-lBz" secondAttribute="trailing" id="dun-ha-KMA"/>
+                            <constraint firstItem="4tf-M2-wYk" firstAttribute="trailing" secondItem="uzB-7Z-lBz" secondAttribute="trailing" id="hwV-HI-Q8N"/>
                             <constraint firstItem="Qmk-Zl-r5u" firstAttribute="top" secondItem="uzB-7Z-lBz" secondAttribute="top" constant="20" id="wnq-mM-TPN"/>
-                            <constraint firstItem="BkE-2l-1uB" firstAttribute="leading" secondItem="uzB-7Z-lBz" secondAttribute="leading" id="yRs-Fk-z9S"/>
                             <constraint firstItem="Qmk-Zl-r5u" firstAttribute="leading" secondItem="uzB-7Z-lBz" secondAttribute="leading" id="yoU-PY-SD9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uzB-7Z-lBz"/>
@@ -1569,7 +1539,7 @@ United Arab Emirates</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-rh-zoG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="105" y="12.5" width="110" height="19"/>
+                                        <rect key="frame" x="109.5" y="12.5" width="101" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1874,7 +1844,7 @@ Emax store to avail discount.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-nG-72C" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="79.5" y="12.5" width="161" height="19"/>
+                                        <rect key="frame" x="87.5" y="12.5" width="145" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1969,7 +1939,7 @@ Emax store to avail discount.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-hQ-62y" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="105" y="12.5" width="110" height="19"/>
+                                        <rect key="frame" x="109.5" y="12.5" width="101" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2134,7 +2104,7 @@ Emax store to avail discount.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activated Coupons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhn-qX-uLy" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="86.5" y="12.5" width="147.5" height="19"/>
+                                        <rect key="frame" x="91.5" y="12.5" width="137" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2216,7 +2186,6 @@ Emax store to avail discount.</string>
         <image name="dropdown" width="9" height="9"/>
         <image name="edit" width="22" height="22"/>
         <image name="email" width="38" height="37"/>
-        <image name="ic_copy" width="19" height="19"/>
         <image name="ic_placeholder" width="179" height="179"/>
         <image name="loyality_circle" width="554" height="594"/>
         <image name="notification" width="21" height="22"/>

@@ -10,8 +10,6 @@ import UIKit
 
 class ClinicPackageVC: UIViewController {
 
-    @IBOutlet weak var fromDateTxt: UITextField!
-    @IBOutlet weak var toDateTxt: UITextField!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
@@ -31,15 +29,6 @@ class ClinicPackageVC: UIViewController {
     
     func setupDetails() {
         serviceCallToGetPackageList()
-    }
-    
-    //MARK:- Button click event
-    @IBAction func clickToSelectFromDate(_ sender: Any) {
-        
-    }
-    
-    @IBAction func clickToSelectToDate(_ sender: Any) {
-        
     }
     
     /*

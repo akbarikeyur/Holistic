@@ -10,8 +10,6 @@ import UIKit
 
 class ClinicListVC: UIViewController {
 
-    @IBOutlet weak var fromTxt: UITextField!
-    @IBOutlet weak var toTxt: UITextField!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var constraintHeightTblView: NSLayoutConstraint!
     
