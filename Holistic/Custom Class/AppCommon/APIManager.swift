@@ -135,7 +135,7 @@ public class APIManager {
     {
         if let status = dict["status"] as? String, status == "error" {
             if let message = dict["message"] as? String {
-                showAlert("Error", message: message) {}
+                showAlert("Error", message: message.capitalized) {}
             }
         }
     }

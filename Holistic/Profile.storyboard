@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,7 +19,7 @@
         <!--ProfileVC-->
         <scene sceneID="rD6-oI-sV5">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="GXg-Cf-Wi0" customClass="ProfileVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="GXg-Cf-Wi0" customClass="ProfileVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SPL-Fo-kcm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="920"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                             <action selector="clickToBack:" destination="GXg-Cf-Wi0" eventType="touchUpInside" id="bqh-zz-dm3"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-69-7g0" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-69-7g0" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="134.5" y="12.5" width="51" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -80,10 +80,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huh-BT-rtE">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="857.5"/>
                                         <subviews>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4M-lV-FNZ" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4M-lV-FNZ" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="100" y="10" width="120" height="120"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="UVH-6Q-I1c" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="UVH-6Q-I1c" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="100" height="100"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -113,7 +113,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patrick Osborne" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="35y-Jm-Ceq" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patrick Osborne" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="35y-Jm-Ceq" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="145" width="300" height="19"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -125,7 +125,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@patrickosb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Dm-NT1" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@patrickosb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Dm-NT1" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="166" width="300" height="14.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,7 +148,7 @@
                                                         </constraints>
                                                         <state key="normal" image="username"/>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patrick Osborne" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dze-ED-H2K" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patrick Osborne" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dze-ED-H2K" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="45" y="17" width="255" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -191,7 +191,7 @@
                                                         </constraints>
                                                         <state key="normal" image="email"/>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patrickosb@abc.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K46-40-vU1" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patrickosb@abc.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K46-40-vU1" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="45" y="17" width="255" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                         <color key="textColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -244,7 +244,7 @@
                                                                     <constraint firstAttribute="height" constant="20" id="LAt-qS-c2I"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBr-EF-tpn" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBr-EF-tpn" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                 <rect key="frame" x="35" y="15.5" width="40" height="19"/>
                                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -267,7 +267,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="PBr-EF-tpn" secondAttribute="trailing" constant="5" id="zq4-cI-s9f"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000 0000 000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vLQ-kh-kqj" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000 0000 000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vLQ-kh-kqj" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="120" y="17" width="180" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                         <nil key="highlightedColor"/>
@@ -312,7 +312,7 @@
                                                         </constraints>
                                                         <state key="normal" image="address_pin"/>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmB-lF-oTp" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmB-lF-oTp" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="45" y="16.5" width="255" height="49.5"/>
                                                         <string key="text">66 Al Marsa St - Dubai Marina - Dubai
 United Arab Emirates</string>
@@ -357,7 +357,7 @@ United Arab Emirates</string>
                                                         </constraints>
                                                         <state key="normal" image="country"/>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abu Dhabi - United Arab Emirates" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5c-eW-9Vv" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abu Dhabi - United Arab Emirates" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5c-eW-9Vv" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="45" y="16.5" width="255" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -392,7 +392,7 @@ United Arab Emirates</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-FQ-QF0">
                                                 <rect key="frame" x="0.0" y="502.5" width="320" height="39"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4tv-bV-KCF" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4tv-bV-KCF" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="300" height="19"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                                         <nil key="textColor"/>
@@ -404,7 +404,7 @@ United Arab Emirates</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIk-cl-ENe" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIk-cl-ENe" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="230" y="2" width="80" height="35"/>
                                                         <color key="backgroundColor" red="0.92156862745098034" green="0.62352941176470589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -447,7 +447,7 @@ United Arab Emirates</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Io7-ti-KJ6">
                                                 <rect key="frame" x="0.0" y="541.5" width="320" height="316"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HLY-CB-Wng" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HLY-CB-Wng" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="300" height="19"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                                         <nil key="textColor"/>
@@ -564,7 +564,7 @@ United Arab Emirates</string>
         <!--Edit ProfileVC-->
         <scene sceneID="RYf-k4-G2r">
             <objects>
-                <viewController storyboardIdentifier="EditProfileVC" id="xvC-Of-wnK" customClass="EditProfileVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileVC" id="xvC-Of-wnK" customClass="EditProfileVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="62Q-1H-JBr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="779"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,7 +583,7 @@ United Arab Emirates</string>
                                             <action selector="clickToBack:" destination="xvC-Of-wnK" eventType="touchUpInside" id="gFm-AQ-K12"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-Yy-efo" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-Yy-efo" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="116.5" y="12.5" width="87.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -610,12 +610,12 @@ United Arab Emirates</string>
                                 <rect key="frame" x="0.0" y="64" width="320" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDh-iD-4KJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="715"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="705"/>
                                         <subviews>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hi8-Li-KWJ" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hi8-Li-KWJ" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="100" y="10" width="120" height="120"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rsa-qc-QoB" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rsa-qc-QoB" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="100" height="100"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -655,7 +655,7 @@ United Arab Emirates</string>
                                                     <action selector="clickToSelectImage:" destination="xvC-Of-wnK" eventType="touchUpInside" id="5ua-WI-NnY"/>
                                                 </connections>
                                             </button>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzU-ee-aOv" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzU-ee-aOv" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="150" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tK4-bH-ANc">
@@ -666,7 +666,7 @@ United Arab Emirates</string>
                                                         </constraints>
                                                         <state key="normal" image="username"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBO-ur-Ejq" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBO-ur-Ejq" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -700,103 +700,108 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-NK-TKr" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="osm-Sw-ubX">
                                                 <rect key="frame" x="20" y="210" width="280" height="50"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3Q-sZ-0s9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="50"/>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-NK-TKr" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_flag" translatesAutoresizingMaskIntoConstraints="NO" id="WHP-aO-0Yq">
-                                                                <rect key="frame" x="15" y="15" width="25" height="20"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3Q-sZ-0s9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="95" height="50"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_flag" translatesAutoresizingMaskIntoConstraints="NO" id="WHP-aO-0Yq">
+                                                                        <rect key="frame" x="15" y="15" width="25" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="Mg5-6k-Q3B"/>
+                                                                            <constraint firstAttribute="width" constant="25" id="ccV-yk-enD"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTI-og-j65" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                                        <rect key="frame" x="45" y="15.5" width="49" height="19"/>
+                                                                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
+                                                                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                                <real key="value" value="16"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI5-LR-Dry">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
+                                                                        <connections>
+                                                                            <action selector="clickToSelectPhoneCode:" destination="xvC-Of-wnK" eventType="touchUpInside" id="aV5-gE-jBL"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iMH-2d-QzU" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                                        <rect key="frame" x="94" y="5" width="1" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="1" id="4cR-S8-St5"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="backgroundColorTypeAdapter">
+                                                                                <integer key="value" value="2"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="Mg5-6k-Q3B"/>
-                                                                    <constraint firstAttribute="width" constant="25" id="ccV-yk-enD"/>
+                                                                    <constraint firstItem="iMH-2d-QzU" firstAttribute="leading" secondItem="jTI-og-j65" secondAttribute="trailing" id="3FU-bS-Bes"/>
+                                                                    <constraint firstItem="zI5-LR-Dry" firstAttribute="leading" secondItem="N3Q-sZ-0s9" secondAttribute="leading" id="M3o-zA-0iU"/>
+                                                                    <constraint firstItem="zI5-LR-Dry" firstAttribute="top" secondItem="N3Q-sZ-0s9" secondAttribute="top" id="RMf-i1-oJo"/>
+                                                                    <constraint firstAttribute="width" constant="95" id="X8G-Fh-v1Y"/>
+                                                                    <constraint firstItem="iMH-2d-QzU" firstAttribute="leading" secondItem="zI5-LR-Dry" secondAttribute="trailing" id="dZW-Mf-eed"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="iMH-2d-QzU" secondAttribute="trailing" id="ekM-RZ-xhk"/>
+                                                                    <constraint firstItem="jTI-og-j65" firstAttribute="centerY" secondItem="N3Q-sZ-0s9" secondAttribute="centerY" id="jW7-hr-sGI"/>
+                                                                    <constraint firstItem="WHP-aO-0Yq" firstAttribute="centerY" secondItem="N3Q-sZ-0s9" secondAttribute="centerY" id="m4n-26-m4E"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="iMH-2d-QzU" secondAttribute="bottom" constant="5" id="pce-Jv-gP6"/>
+                                                                    <constraint firstItem="iMH-2d-QzU" firstAttribute="top" secondItem="N3Q-sZ-0s9" secondAttribute="top" constant="5" id="q3t-6R-ymc"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="zI5-LR-Dry" secondAttribute="bottom" id="qIa-Mh-0n8"/>
+                                                                    <constraint firstItem="jTI-og-j65" firstAttribute="leading" secondItem="WHP-aO-0Yq" secondAttribute="trailing" constant="5" id="tGB-vQ-pbP"/>
+                                                                    <constraint firstItem="WHP-aO-0Yq" firstAttribute="leading" secondItem="N3Q-sZ-0s9" secondAttribute="leading" constant="15" id="xjj-Ir-2sL"/>
                                                                 </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTI-og-j65" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                                <rect key="frame" x="45" y="15.5" width="49" height="19"/>
+                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000 0000 000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9B-Z9-wTl" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                                <rect key="frame" x="105" y="0.0" width="165" height="50"/>
                                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
-                                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                                         <real key="value" value="16"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI5-LR-Dry">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                                                <connections>
-                                                                    <action selector="clickToSelectPhoneCode:" destination="xvC-Of-wnK" eventType="touchUpInside" id="aV5-gE-jBL"/>
-                                                                </connections>
-                                                            </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iMH-2d-QzU" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
-                                                                <rect key="frame" x="94" y="5" width="1" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="1" id="4cR-S8-St5"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundColorTypeAdapter">
-                                                                        <integer key="value" value="2"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </imageView>
+                                                            </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="iMH-2d-QzU" firstAttribute="leading" secondItem="jTI-og-j65" secondAttribute="trailing" id="3FU-bS-Bes"/>
-                                                            <constraint firstItem="zI5-LR-Dry" firstAttribute="leading" secondItem="N3Q-sZ-0s9" secondAttribute="leading" id="M3o-zA-0iU"/>
-                                                            <constraint firstItem="zI5-LR-Dry" firstAttribute="top" secondItem="N3Q-sZ-0s9" secondAttribute="top" id="RMf-i1-oJo"/>
-                                                            <constraint firstAttribute="width" constant="95" id="X8G-Fh-v1Y"/>
-                                                            <constraint firstItem="iMH-2d-QzU" firstAttribute="leading" secondItem="zI5-LR-Dry" secondAttribute="trailing" id="dZW-Mf-eed"/>
-                                                            <constraint firstAttribute="trailing" secondItem="iMH-2d-QzU" secondAttribute="trailing" id="ekM-RZ-xhk"/>
-                                                            <constraint firstItem="jTI-og-j65" firstAttribute="centerY" secondItem="N3Q-sZ-0s9" secondAttribute="centerY" id="jW7-hr-sGI"/>
-                                                            <constraint firstItem="WHP-aO-0Yq" firstAttribute="centerY" secondItem="N3Q-sZ-0s9" secondAttribute="centerY" id="m4n-26-m4E"/>
-                                                            <constraint firstAttribute="bottom" secondItem="iMH-2d-QzU" secondAttribute="bottom" constant="5" id="pce-Jv-gP6"/>
-                                                            <constraint firstItem="iMH-2d-QzU" firstAttribute="top" secondItem="N3Q-sZ-0s9" secondAttribute="top" constant="5" id="q3t-6R-ymc"/>
-                                                            <constraint firstAttribute="bottom" secondItem="zI5-LR-Dry" secondAttribute="bottom" id="qIa-Mh-0n8"/>
-                                                            <constraint firstItem="jTI-og-j65" firstAttribute="leading" secondItem="WHP-aO-0Yq" secondAttribute="trailing" constant="5" id="tGB-vQ-pbP"/>
-                                                            <constraint firstItem="WHP-aO-0Yq" firstAttribute="leading" secondItem="N3Q-sZ-0s9" secondAttribute="leading" constant="15" id="xjj-Ir-2sL"/>
+                                                            <constraint firstAttribute="height" constant="50" id="1Uj-X9-w2r"/>
+                                                            <constraint firstAttribute="bottom" secondItem="O9B-Z9-wTl" secondAttribute="bottom" id="5HQ-4d-4oE"/>
+                                                            <constraint firstItem="O9B-Z9-wTl" firstAttribute="top" secondItem="YDM-NK-TKr" secondAttribute="top" id="7fV-FW-wTs"/>
+                                                            <constraint firstItem="N3Q-sZ-0s9" firstAttribute="top" secondItem="YDM-NK-TKr" secondAttribute="top" id="LlX-3X-rgR"/>
+                                                            <constraint firstItem="N3Q-sZ-0s9" firstAttribute="leading" secondItem="YDM-NK-TKr" secondAttribute="leading" id="NyU-hM-27Q"/>
+                                                            <constraint firstAttribute="trailing" secondItem="O9B-Z9-wTl" secondAttribute="trailing" constant="10" id="PiF-dq-AwB"/>
+                                                            <constraint firstAttribute="bottom" secondItem="N3Q-sZ-0s9" secondAttribute="bottom" id="TVP-nP-4YZ"/>
+                                                            <constraint firstItem="O9B-Z9-wTl" firstAttribute="leading" secondItem="N3Q-sZ-0s9" secondAttribute="trailing" constant="10" id="eu7-Oj-jbF"/>
                                                         </constraints>
-                                                    </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000 0000 000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9B-Z9-wTl" customClass="TextField" customModule="Holistic" customModuleProvider="target">
-                                                        <rect key="frame" x="105" y="0.0" width="165" height="50"/>
-                                                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="16"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                    </textField>
+                                                    </view>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="1Uj-X9-w2r"/>
-                                                    <constraint firstAttribute="bottom" secondItem="O9B-Z9-wTl" secondAttribute="bottom" id="5HQ-4d-4oE"/>
-                                                    <constraint firstItem="O9B-Z9-wTl" firstAttribute="top" secondItem="YDM-NK-TKr" secondAttribute="top" id="7fV-FW-wTs"/>
-                                                    <constraint firstItem="N3Q-sZ-0s9" firstAttribute="top" secondItem="YDM-NK-TKr" secondAttribute="top" id="LlX-3X-rgR"/>
-                                                    <constraint firstItem="N3Q-sZ-0s9" firstAttribute="leading" secondItem="YDM-NK-TKr" secondAttribute="leading" id="NyU-hM-27Q"/>
-                                                    <constraint firstAttribute="trailing" secondItem="O9B-Z9-wTl" secondAttribute="trailing" constant="10" id="PiF-dq-AwB"/>
-                                                    <constraint firstAttribute="bottom" secondItem="N3Q-sZ-0s9" secondAttribute="bottom" id="TVP-nP-4YZ"/>
-                                                    <constraint firstItem="O9B-Z9-wTl" firstAttribute="leading" secondItem="N3Q-sZ-0s9" secondAttribute="trailing" constant="10" id="eu7-Oj-jbF"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
-                                                        <integer key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-ku-SlH" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="270" width="280" height="50"/>
+                                            </stackView>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-ku-SlH" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="260" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-5A-3Wb">
                                                         <rect key="frame" x="10" y="6.5" width="38" height="37"/>
@@ -806,7 +811,7 @@ United Arab Emirates</string>
                                                         </constraints>
                                                         <state key="normal" image="address_pin"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygT-mD-Q2N" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygT-mD-Q2N" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -840,10 +845,10 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKW-fn-sTK" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="330" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKW-fn-sTK" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="320" width="280" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Building Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6a4-09-MzV" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Building Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6a4-09-MzV" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="260" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -875,10 +880,10 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUR-ju-MGM" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="390" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUR-ju-MGM" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="380" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Floor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAx-jf-cT7" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Floor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAx-jf-cT7" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -910,10 +915,10 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v27-8r-EvO" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="165" y="390" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v27-8r-EvO" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="165" y="380" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Room No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBZ-Db-vZN" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Room No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBZ-Db-vZN" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -945,8 +950,8 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNg-5r-WFU" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="450" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNg-5r-WFU" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="440" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekK-43-zan">
                                                         <rect key="frame" x="10" y="6.5" width="38" height="37"/>
@@ -956,7 +961,7 @@ United Arab Emirates</string>
                                                         </constraints>
                                                         <state key="normal" image="country"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GhI-af-UkL" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GhI-af-UkL" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="190" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -975,7 +980,7 @@ United Arab Emirates</string>
                                                             <action selector="clickToSelectCountry:" destination="xvC-Of-wnK" eventType="touchUpInside" id="TX9-RJ-NOL"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZ6-SK-VIX" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZ6-SK-VIX" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="249" y="5" width="1" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="lvL-UG-gCT"/>
@@ -1016,10 +1021,10 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-cz-Wc5" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="510" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-cz-Wc5" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="500" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEt-n8-97O" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEt-n8-97O" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1051,10 +1056,10 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6P-AO-li4" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="165" y="510" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6P-AO-li4" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="165" y="500" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73C-Kz-rSY" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73C-Kz-rSY" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1087,13 +1092,13 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="50r-AN-Aa8">
-                                                <rect key="frame" x="10" y="580" width="300" height="1"/>
+                                                <rect key="frame" x="10" y="570" width="300" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ryS-0m-Sce"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-uv-bmW" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="590" width="280" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMO-uv-bmW" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="580" width="280" height="19"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1105,7 +1110,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yxg-41-FRG">
-                                                <rect key="frame" x="0.0" y="610" width="320" height="20"/>
+                                                <rect key="frame" x="0.0" y="600" width="320" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="JZi-TU-wVD"/>
@@ -1115,8 +1120,8 @@ United Arab Emirates</string>
                                                     <outlet property="delegate" destination="xvC-Of-wnK" id="42z-0y-fxG"/>
                                                 </connections>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l94-Xx-mhN" customClass="Button" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="650" width="280" height="45"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l94-Xx-mhN" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="640" width="280" height="45"/>
                                                 <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Wfz-Vv-njC"/>
@@ -1146,12 +1151,13 @@ United Arab Emirates</string>
                                             <constraint firstItem="v27-8r-EvO" firstAttribute="top" secondItem="PUR-ju-MGM" secondAttribute="top" id="2Bj-SU-Zj3"/>
                                             <constraint firstItem="RNg-5r-WFU" firstAttribute="top" secondItem="PUR-ju-MGM" secondAttribute="bottom" constant="10" id="2cY-Dy-MNs"/>
                                             <constraint firstItem="50r-AN-Aa8" firstAttribute="top" secondItem="6qd-cz-Wc5" secondAttribute="bottom" constant="20" id="2go-dh-Kar"/>
+                                            <constraint firstAttribute="trailing" secondItem="osm-Sw-ubX" secondAttribute="trailing" constant="20" id="2j2-r7-pBB"/>
                                             <constraint firstAttribute="trailing" secondItem="l94-Xx-mhN" secondAttribute="trailing" constant="20" id="3ph-qZ-ruV"/>
+                                            <constraint firstItem="osm-Sw-ubX" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="62d-lT-xYm"/>
                                             <constraint firstAttribute="trailing" secondItem="RNg-5r-WFU" secondAttribute="trailing" constant="20" id="7tK-Mf-id0"/>
                                             <constraint firstItem="RNg-5r-WFU" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="9le-11-i8y"/>
                                             <constraint firstAttribute="trailing" secondItem="qMO-uv-bmW" secondAttribute="trailing" constant="20" id="BJ7-8T-eAN"/>
                                             <constraint firstAttribute="trailing" secondItem="kKW-fn-sTK" secondAttribute="trailing" constant="20" id="BLs-ys-PKI"/>
-                                            <constraint firstAttribute="trailing" secondItem="YDM-NK-TKr" secondAttribute="trailing" constant="20" id="Bkc-qT-CmK"/>
                                             <constraint firstAttribute="trailing" secondItem="50r-AN-Aa8" secondAttribute="trailing" constant="10" id="GI5-5u-AiI"/>
                                             <constraint firstItem="kKW-fn-sTK" firstAttribute="top" secondItem="hS2-ku-SlH" secondAttribute="bottom" constant="10" id="Hdp-xF-Fbi"/>
                                             <constraint firstItem="f6P-AO-li4" firstAttribute="leading" secondItem="6qd-cz-Wc5" secondAttribute="trailing" constant="10" id="IDN-Eh-l3s"/>
@@ -1163,10 +1169,10 @@ United Arab Emirates</string>
                                             <constraint firstItem="qMO-uv-bmW" firstAttribute="top" secondItem="6qd-cz-Wc5" secondAttribute="bottom" constant="30" id="R9E-q9-YyT"/>
                                             <constraint firstItem="hi8-Li-KWJ" firstAttribute="centerX" secondItem="sDh-iD-4KJ" secondAttribute="centerX" id="RiV-Uj-V7O"/>
                                             <constraint firstItem="50r-AN-Aa8" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="10" id="RlJ-oj-wwd"/>
-                                            <constraint firstItem="YDM-NK-TKr" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="Tr6-fd-EQI"/>
                                             <constraint firstItem="qMO-uv-bmW" firstAttribute="top" secondItem="50r-AN-Aa8" secondAttribute="bottom" constant="9" id="UUv-Ho-mZ5"/>
                                             <constraint firstItem="6qd-cz-Wc5" firstAttribute="top" secondItem="f6P-AO-li4" secondAttribute="top" id="Utw-eG-E4d"/>
                                             <constraint firstItem="fVV-5g-BVy" firstAttribute="top" secondItem="hi8-Li-KWJ" secondAttribute="top" constant="5" id="VKw-NH-osv"/>
+                                            <constraint firstItem="osm-Sw-ubX" firstAttribute="top" secondItem="lzU-ee-aOv" secondAttribute="bottom" constant="10" id="WXi-Tt-40U"/>
                                             <constraint firstItem="hi8-Li-KWJ" firstAttribute="top" secondItem="sDh-iD-4KJ" secondAttribute="top" constant="10" id="Y9k-Ni-ntV"/>
                                             <constraint firstItem="6qd-cz-Wc5" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="bUn-LJ-m0t"/>
                                             <constraint firstItem="hS2-ku-SlH" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="bVV-B1-fs1"/>
@@ -1179,7 +1185,6 @@ United Arab Emirates</string>
                                             <constraint firstItem="l94-Xx-mhN" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="gwC-qz-BLs"/>
                                             <constraint firstItem="v27-8r-EvO" firstAttribute="width" secondItem="PUR-ju-MGM" secondAttribute="width" id="hfv-c1-EnX"/>
                                             <constraint firstItem="kKW-fn-sTK" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="iEf-Ab-oFi"/>
-                                            <constraint firstItem="YDM-NK-TKr" firstAttribute="top" secondItem="lzU-ee-aOv" secondAttribute="bottom" constant="10" id="ilO-ZS-ETV"/>
                                             <constraint firstItem="6qd-cz-Wc5" firstAttribute="bottom" secondItem="f6P-AO-li4" secondAttribute="bottom" id="jZA-Ua-qJW"/>
                                             <constraint firstItem="lzU-ee-aOv" firstAttribute="top" secondItem="hi8-Li-KWJ" secondAttribute="bottom" constant="20" id="jq3-Ua-aCp"/>
                                             <constraint firstAttribute="trailing" secondItem="hS2-ku-SlH" secondAttribute="trailing" constant="20" id="lOm-Wr-hMw"/>
@@ -1187,9 +1192,9 @@ United Arab Emirates</string>
                                             <constraint firstItem="fVV-5g-BVy" firstAttribute="trailing" secondItem="hi8-Li-KWJ" secondAttribute="trailing" constant="-10" id="mXl-1j-yW5"/>
                                             <constraint firstItem="lzU-ee-aOv" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="o8X-4q-N60"/>
                                             <constraint firstItem="PUR-ju-MGM" firstAttribute="top" secondItem="kKW-fn-sTK" secondAttribute="bottom" constant="10" id="pG3-Kr-tEC"/>
-                                            <constraint firstItem="hS2-ku-SlH" firstAttribute="top" secondItem="YDM-NK-TKr" secondAttribute="bottom" constant="10" id="rUl-1V-l6E"/>
                                             <constraint firstItem="qMO-uv-bmW" firstAttribute="leading" secondItem="sDh-iD-4KJ" secondAttribute="leading" constant="20" id="rdZ-ef-zaZ"/>
                                             <constraint firstAttribute="trailing" secondItem="v27-8r-EvO" secondAttribute="trailing" constant="20" id="thJ-VP-ezq"/>
+                                            <constraint firstItem="hS2-ku-SlH" firstAttribute="top" secondItem="osm-Sw-ubX" secondAttribute="bottom" id="ufH-Ll-Whc"/>
                                             <constraint firstItem="v27-8r-EvO" firstAttribute="leading" secondItem="PUR-ju-MGM" secondAttribute="trailing" constant="10" id="vsj-nb-QDS"/>
                                             <constraint firstItem="v27-8r-EvO" firstAttribute="bottom" secondItem="PUR-ju-MGM" secondAttribute="bottom" id="wdd-uL-QXf"/>
                                             <constraint firstAttribute="bottom" secondItem="l94-Xx-mhN" secondAttribute="bottom" constant="20" id="wuV-Xc-VKw"/>
@@ -1230,6 +1235,7 @@ United Arab Emirates</string>
                         <outlet property="floorTxt" destination="DAx-jf-cT7" id="gcc-nX-gFk"/>
                         <outlet property="nameTxt" destination="JBO-ur-Ejq" id="yyC-t2-OGP"/>
                         <outlet property="phoneTxt" destination="O9B-Z9-wTl" id="mCc-og-cN7"/>
+                        <outlet property="phoneView" destination="YDM-NK-TKr" id="ig9-3W-0cR"/>
                         <outlet property="phonecodeTxt" destination="jTI-og-j65" id="YJC-W0-qmf"/>
                         <outlet property="profileImg" destination="rsa-qc-QoB" id="ujc-2g-eQB"/>
                         <outlet property="questionTbl" destination="Yxg-41-FRG" id="683-dQ-LA1"/>
@@ -1248,7 +1254,7 @@ United Arab Emirates</string>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWb-Bw-7gn">
                             <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giT-5D-JgD" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giT-5D-JgD" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                     <rect key="frame" x="255" y="9.5" width="60" height="31"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="FQs-BG-Qda"/>
@@ -1267,7 +1273,7 @@ United Arab Emirates</string>
                                         <action selector="clickToCloseSearchView:" destination="xvC-Of-wnK" eventType="touchUpInside" id="qks-Yd-zwc"/>
                                     </connections>
                                 </button>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYh-ZT-PP3" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYh-ZT-PP3" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                     <rect key="frame" x="10" y="7" width="235" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="zPW-M5-5gA"/>
@@ -1334,7 +1340,7 @@ United Arab Emirates</string>
         <!--Refer FriendVC-->
         <scene sceneID="ykr-C8-DdQ">
             <objects>
-                <viewController storyboardIdentifier="ReferFriendVC" id="I2q-3d-hNc" customClass="ReferFriendVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReferFriendVC" id="I2q-3d-hNc" customClass="ReferFriendVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c32-dY-5Hh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1353,7 +1359,7 @@ United Arab Emirates</string>
                                             <action selector="clickToBack:" destination="I2q-3d-hNc" eventType="touchUpInside" id="HFG-Xy-UXJ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AX-gN-iIq" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AX-gN-iIq" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="106.5" y="12.5" width="107.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -1388,7 +1394,7 @@ United Arab Emirates</string>
                                                     <constraint firstAttribute="height" constant="191" id="QVt-X2-ofd"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Value Friendship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nt-sL-FL7" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Value Friendship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nt-sL-FL7" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="211" width="300" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="24"/>
                                                 <nil key="textColor"/>
@@ -1400,7 +1406,7 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's make you earn from your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-iA-JqG" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's make you earn from your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-iA-JqG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="249.5" width="280" height="42.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                                 <nil key="textColor"/>
@@ -1412,7 +1418,7 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-u0-BW9" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-u0-BW9" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="322" width="280" height="82.5"/>
                                                 <string key="text">Send you unique link to your friend and once they download the app from your link, you will be given 5 loyalty points which you can redeem for various offers and coupons globally. </string>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
@@ -1425,10 +1431,10 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Wr-mbE" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Wr-mbE" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="444.5" width="280" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-8g-ymc" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-8g-ymc" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="180" y="0.0" width="100" height="50"/>
                                                         <color key="backgroundColor" red="0.92156862745098034" green="0.62352941176470589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -1448,7 +1454,7 @@ United Arab Emirates</string>
                                                             <action selector="clickToCopy:" destination="I2q-3d-hNc" eventType="touchUpInside" id="f5W-Is-dHU"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.dummyline.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-A1-EFD" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.dummyline.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-A1-EFD" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="160" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -1540,7 +1546,7 @@ United Arab Emirates</string>
         <!--Available CouponVC-->
         <scene sceneID="nQf-2L-0aJ">
             <objects>
-                <viewController storyboardIdentifier="AvailableCouponVC" id="QTZ-YI-pjs" customClass="AvailableCouponVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AvailableCouponVC" id="QTZ-YI-pjs" customClass="AvailableCouponVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YuP-VS-ddB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1562,7 +1568,7 @@ United Arab Emirates</string>
                                             <action selector="clickToBack:" destination="QTZ-YI-pjs" eventType="touchUpInside" id="3QP-HU-hxl"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-rh-zoG" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-rh-zoG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="105" y="12.5" width="110" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -1598,7 +1604,7 @@ United Arab Emirates</string>
                                     <constraint firstItem="efe-JW-Mkx" firstAttribute="top" secondItem="Vr9-9G-Q9w" secondAttribute="top" id="qYl-EI-M2N"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4z-R3-KsB" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4z-R3-KsB" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="74" width="300" height="31"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -1658,7 +1664,7 @@ United Arab Emirates</string>
         <!--Loyality DetailVC-->
         <scene sceneID="rHx-j7-JN1">
             <objects>
-                <viewController storyboardIdentifier="LoyalityDetailVC" id="OTy-EY-Sap" customClass="LoyalityDetailVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoyalityDetailVC" id="OTy-EY-Sap" customClass="LoyalityDetailVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mlm-TF-we2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1689,7 +1695,7 @@ United Arab Emirates</string>
                                                     <action selector="clickToBack:" destination="OTy-EY-Sap" eventType="touchUpInside" id="LWt-vL-Vyu"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This coupon will get you 20% discount on all restaurant and hotel booking of Burj Al Arab" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INH-gO-r7r" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This coupon will get you 20% discount on all restaurant and hotel booking of Burj Al Arab" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INH-gO-r7r" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="260" width="300" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -1701,7 +1707,7 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAA0067" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7s-VR-cen" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAA0067" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7s-VR-cen" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="298.5" width="300" height="47"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="Sic-Qm-Y5i"/>
@@ -1723,7 +1729,7 @@ United Arab Emirates</string>
                                                     <action selector="clickToCopyCode:" destination="OTy-EY-Sap" eventType="touchUpInside" id="ANN-7f-wN3"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onetime Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-iG-Klc" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onetime Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-iG-Klc" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="345.5" width="300" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -1748,7 +1754,7 @@ United Arab Emirates</string>
                                                     <constraint firstAttribute="height" constant="1" id="BZ4-b6-qrC"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10% Discount Burj Al Arab" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svu-9J-oyU" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10% Discount Burj Al Arab" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svu-9J-oyU" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="432" width="300" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                                 <nil key="textColor"/>
@@ -1760,7 +1766,7 @@ United Arab Emirates</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6he-2D-iZm" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6he-2D-iZm" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="463.5" width="300" height="28.5"/>
                                                 <string key="text">Please show this code on app when visiting
 Emax store to avail discount.</string>
@@ -1848,7 +1854,7 @@ Emax store to avail discount.</string>
         <!--Notification SettingVC-->
         <scene sceneID="ZiB-BW-P6D">
             <objects>
-                <viewController storyboardIdentifier="NotificationSettingVC" id="hx6-dB-J6v" customClass="NotificationSettingVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationSettingVC" id="hx6-dB-J6v" customClass="NotificationSettingVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2IO-5n-yRL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1867,7 +1873,7 @@ Emax store to avail discount.</string>
                                             <action selector="clickToBack:" destination="hx6-dB-J6v" eventType="touchUpInside" id="Caj-Tk-axy"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-nG-72C" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-nG-72C" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="79.5" y="12.5" width="161" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -1940,7 +1946,7 @@ Emax store to avail discount.</string>
         <!--Redeemed CouponVC-->
         <scene sceneID="HZW-05-NKm">
             <objects>
-                <viewController storyboardIdentifier="RedeemedCouponVC" id="HOD-Ji-m8X" customClass="RedeemedCouponVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedeemedCouponVC" id="HOD-Ji-m8X" customClass="RedeemedCouponVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fwM-Kp-GYN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1962,7 +1968,7 @@ Emax store to avail discount.</string>
                                             <action selector="clickToBack:" destination="HOD-Ji-m8X" eventType="touchUpInside" id="JYF-gS-jQ0"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-hQ-62y" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loyalty Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-hQ-62y" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="105" y="12.5" width="110" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -1985,7 +1991,7 @@ Emax store to avail discount.</string>
                                     <constraint firstAttribute="bottom" secondItem="lot-cf-McK" secondAttribute="bottom" id="tGc-Ce-hBk"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-qI-QL1" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-qI-QL1" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="74" width="300" height="31"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -2015,7 +2021,7 @@ Emax store to avail discount.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEM-gM-6Rf">
                                 <rect key="frame" x="0.0" y="227" width="320" height="114"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not redeemed any offer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFv-Td-r87" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not redeemed any offer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFv-Td-r87" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="280" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2027,7 +2033,7 @@ Emax store to avail discount.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mej-aL-ezv" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mej-aL-ezv" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="70" y="59" width="180" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="JPe-1M-A1Y"/>
@@ -2105,7 +2111,7 @@ Emax store to avail discount.</string>
         <!--Activated CouponsVC-->
         <scene sceneID="nRN-fN-vqV">
             <objects>
-                <viewController storyboardIdentifier="ActivatedCouponsVC" id="Kdz-v3-vAe" customClass="ActivatedCouponsVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivatedCouponsVC" id="Kdz-v3-vAe" customClass="ActivatedCouponsVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nnp-Yc-Zcx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2127,7 +2133,7 @@ Emax store to avail discount.</string>
                                             <action selector="clickToBack:" destination="Kdz-v3-vAe" eventType="touchUpInside" id="9Uz-P0-WVc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activated Coupons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhn-qX-uLy" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activated Coupons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhn-qX-uLy" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="86.5" y="12.5" width="147.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -2158,7 +2164,7 @@ Emax store to avail discount.</string>
                                     <outlet property="delegate" destination="Kdz-v3-vAe" id="G7X-au-sdD"/>
                                 </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not activate any code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-XB-La4" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not activate any code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-XB-La4" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="274.5" width="280" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -2202,7 +2208,7 @@ Emax store to avail discount.</string>
     <resources>
         <image name="address_pin" width="38" height="37"/>
         <image name="back" width="8" height="14"/>
-        <image name="call" width="15.5" height="19.5"/>
+        <image name="call" width="38" height="37"/>
         <image name="camera" width="23" height="23"/>
         <image name="code_black" width="45.5" height="19"/>
         <image name="country" width="38" height="37"/>

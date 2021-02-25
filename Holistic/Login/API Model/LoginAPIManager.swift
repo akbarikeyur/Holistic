@@ -47,6 +47,9 @@ public class LoginAPIManager {
                 completion(dict)
                 return
             }
+            else {
+                APIManager.shared.handleError(dict)
+            }
         }
     }
     
@@ -78,6 +81,8 @@ public class LoginAPIManager {
             if let status = dict["status"] as? String, status == "success" {
                 completion(dict)
                 return
+            }else {
+                APIManager.shared.handleError(dict)
             }
         }
     }
@@ -93,6 +98,8 @@ public class LoginAPIManager {
             if let status = dict["status"] as? String, status == "success" {
                 completion(dict)
                 return
+            }else {
+                APIManager.shared.handleError(dict)
             }
         }
     }

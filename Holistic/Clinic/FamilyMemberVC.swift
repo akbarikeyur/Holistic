@@ -79,6 +79,7 @@ extension FamilyMemberVC : UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         setClinicUserId(arrMember[indexPath.row].ID)
         clinicCV.reloadData()
+        serviceCallToGetFamilyData()
         NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REDIRECT_CLINIC_TAB), object: ["index" : 0])
         NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REFRESH_CLINIC_DATA), object: nil)
     }

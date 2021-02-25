@@ -46,6 +46,10 @@ class ClinicVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate().sharedDelegate().showTabBar()
+    }
+    
     @objc func redirectToTab(_ noti : Notification) {
         if let dict = noti.object as? [String : Any]{
             if let index = dict["index"] as? Int {

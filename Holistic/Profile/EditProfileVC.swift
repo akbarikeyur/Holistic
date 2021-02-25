@@ -24,6 +24,7 @@ class EditProfileVC: UploadImageVC {
     @IBOutlet weak var cityTxt: TextField!
     @IBOutlet weak var questionTbl: UITableView!
     @IBOutlet weak var constraintHeightQuestionTbl: NSLayoutConstraint!
+    @IBOutlet weak var phoneView: View!
     
     @IBOutlet var searchView: UIView!
     @IBOutlet weak var searchTxt: TextField!
@@ -41,7 +42,7 @@ class EditProfileVC: UploadImageVC {
 
         // Do any additional setup after loading the view.
         searchTxt.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
-        
+        phoneView.isHidden = true
         registerTableViewMethod()
         
         if getCountryData().count == 0 {
@@ -274,18 +275,21 @@ extension EditProfileVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if selectedType == 0 {
-            selectedCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
-            countryTxt.text = selectedCountry.name
-            serviceCallToGetUserQuestion()
+        if tableView == searchTbl {
+            if selectedType == 0 {
+                selectedCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
+                countryTxt.text = selectedCountry.name
+                serviceCallToGetUserQuestion()
+            }
+            else if selectedType == 0 || selectedType == 3 {
+                let tempCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
+                flagImg.image = UIImage(named: tempCountry.sortname.lowercased())
+                phonecodeTxt.text = "+" + tempCountry.phonecode
+            }
+            searchView.removeFromSuperview()
+            searchTxt.text = ""
         }
-        else if selectedType == 0 || selectedType == 3 {
-            let tempCountry = (searchTxt.text?.trimmed == "" ? arrCountry : arrSearchCountry)[indexPath.row]
-            flagImg.image = UIImage(named: tempCountry.sortname.lowercased())
-            phonecodeTxt.text = "+" + tempCountry.phonecode
-        }
-        searchView.removeFromSuperview()
-        searchTxt.text = ""
+        
     }
     
     @objc @IBAction func clickToAnswe1(_ sender: UIButton) {

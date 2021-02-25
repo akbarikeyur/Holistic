@@ -78,7 +78,7 @@ class MobileLoginVC: UIViewController {
         else{
             var param = [String : Any]()
             param["countrycode"] = self.selectedCountry.phonecode
-            param["phonenumber"] = phoneTxt.text
+            param["phonenumber"] = phoneTxt.text?.replacingOccurrences(of: " ", with: "")
             param["remember_token"] = getPushToken()
             LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
                 
