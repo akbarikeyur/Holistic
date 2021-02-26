@@ -27,10 +27,14 @@ class ClinicPackageTVC: UITableViewCell {
     func setupDetails(_ dict : ClinicPackageModel) {
         titleLbl.text = dict.PatientName
         let strDate = dict.PackageSoldOnDate.components(separatedBy: "T").first!
-        let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd")
-        dateLbl.text = "Sold on " + getDateStringFromDate(date: date, format: "EEE") + ", " + getDateStringFromDate(date: date, format: "dd-MMM-yyyy")
-        if getDifferentTimeAgo(date) != "" {
-            dateLbl.text = dateLbl.text! + " (" + getDifferentTimeAgo(date) + ")"
+        dateLbl.text = ""
+        if let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd") {
+            dateLbl.text = "Sold on " + getDateStringFromDate(date: date, format: "EEE") + ", " + getDateStringFromDate(date: date, format: "dd-MMM-yyyy")
+            if getDifferentTimeAgo(date) != "" {
+                dateLbl.text = dateLbl.text! + " (" + getDifferentTimeAgo(date) + ")"
+            }
+        }else{
+            dateLbl.text = "Sold on " + strDate
         }
         descLbl.text = dict.PackageName
         if dict.PackageIsCompleted == 1 {

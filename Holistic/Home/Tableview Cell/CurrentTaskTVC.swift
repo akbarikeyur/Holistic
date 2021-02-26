@@ -27,12 +27,16 @@ class CurrentTaskTVC: UITableViewCell {
         
         outerView.backgroundColor = colorFromHex(hex: dict.get_life_style.color_select)
         titleLbl.text = dict.get_life_style.title
+        timeLbl.text = ""
         if dict.get_life_style.task_start_date_time != "" && dict.get_life_style.task_end_date_time != "" {
-            let startDate = getDateFromDateString(date: dict.get_life_style.task_start_date_time, format: "yyyy-MM-dd hh:mm:ss")
-            let endDate = getDateFromDateString(date: dict.get_life_style.task_end_date_time, format: "yyyy-MM-dd hh:mm:ss")
-            timeLbl.text = getLocalDateStringFromDate(date: startDate, format: "hh:mm a") + " - " + getLocalDateStringFromDate(date: endDate, format: "hh:mm a")
-        }else{
-            timeLbl.text = ""
+            if let startDate = getDateFromDateString(date: dict.get_life_style.task_start_date_time, format: "yyyy-MM-dd hh:mm:ss") {
+                if let endDate = getDateFromDateString(date: dict.get_life_style.task_end_date_time, format: "yyyy-MM-dd hh:mm:ss") {
+                    timeLbl.text = getLocalDateStringFromDate(date: startDate, format: "hh:mm a") + " - " + getLocalDateStringFromDate(date: endDate, format: "hh:mm a")
+                }
+            }
+            if timeLbl.text == "" {
+                timeLbl.text = dict.get_life_style.task_start_date_time.components(separatedBy: " ").last! + " - " + dict.get_life_style.task_end_date_time.components(separatedBy: " ").last!
+            }
         }
         actionLbl.text = dict.status.capitalized
         setImageBackgroundImage(imgView, dict.get_life_style.get_single_media.url, IMAGE.PLACEHOLDER)

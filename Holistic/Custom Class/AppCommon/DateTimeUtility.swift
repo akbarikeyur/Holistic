@@ -41,11 +41,11 @@ func getLocalDateStringFromDate(date : Date, format : String) -> String
 }
 
 //String to date
-func getDateFromDateString(date : String, format : String) -> Date
+func getDateFromDateString(date : String, format : String) -> Date?
 {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
-    return dateFormatter.date(from: date)!
+    return dateFormatter.date(from: date)
 }
 
 func getLocalDateFromDateString(date : String, format : String) -> Date

@@ -42,8 +42,11 @@ class PurchaseProductCVC: UICollectionViewCell {
         invoiceLbl.text = "Invoice#: " + String(dict.id)
         //2020-12-14T12:11:43.000000Z
         let tempDate = dict.created_at.components(separatedBy: ".").first!
-        let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss")
-        dateTimeLbl.text = "Order Date: " + getDateStringFromDate(date: date, format: "MMMM d yyyy, h:mm a")
+        if let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss") {
+            dateTimeLbl.text = "Order Date: " + getDateStringFromDate(date: date, format: "MMMM d yyyy, h:mm a")
+        }else {
+            dateTimeLbl.text = "Order Date: " + tempDate
+        }
         totalLbl.text = "Invoice total: " + displayPriceWithCurrency(dict.price)
     }
 

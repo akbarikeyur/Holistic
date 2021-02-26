@@ -26,8 +26,11 @@ class MyCodeTVC: UITableViewCell {
         imgView.isHidden = true
         
         let tempDate = dict.created_at.components(separatedBy: ".").first!
-        let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss")
-        dateLbl.text = getLocalDateStringFromDate(date: date, format: "d MMM, yyyy")
+        if let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss") {
+            dateLbl.text = getLocalDateStringFromDate(date: date, format: "d MMM, yyyy")
+        }else{
+            dateLbl.text = tempDate
+        }
         nameLbl.text = dict.title.html2String
         codeLbl.text = "Code " + dict.code
     }
@@ -35,8 +38,11 @@ class MyCodeTVC: UITableViewCell {
     func setupCouponCode(_ dict : ActivedOfferModel) {
         setImageBackgroundImage(imgView, dict.get_offer.get_single_offer_image.url, IMAGE.PLACEHOLDER)
         let tempDate = dict.created_at.components(separatedBy: ".").first!
-        let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss")
-        dateLbl.text = getLocalDateStringFromDate(date: date, format: "d MMM, yyyy")
+        if let date = getDateFromDateString(date: tempDate, format: "yyyy-MM-dd'T'HH:mm:ss") {
+            dateLbl.text = getLocalDateStringFromDate(date: date, format: "d MMM, yyyy")
+        }else{
+            dateLbl.text = tempDate
+        }
         nameLbl.text = dict.get_offer.title.html2String
         codeLbl.text = "Code " + dict.code
     }

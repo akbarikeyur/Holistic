@@ -74,7 +74,12 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         arrCompleted = [Int]()
         arrMissed = [Int]()
         for temp in  arrStatistic{
-            arrDates.append(getLocalDateStringFromDate(date: getDateFromDateString(date: temp.date, format: "yyyy-MM-dd"), format: "d MMM"))
+            if let date = getDateFromDateString(date: temp.date, format: "yyyy-MM-dd") {
+                arrDates.append(getLocalDateStringFromDate(date: date, format: "d MMM"))
+            }else{
+                arrDates.append(temp.date)
+            }
+            
             arrCompleted.append(temp.completed)
             arrMissed.append(temp.missed)
         }

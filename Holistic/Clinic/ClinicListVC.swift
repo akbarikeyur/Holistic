@@ -104,8 +104,8 @@ extension ClinicListVC {
             {
                 //2020-10-15T06:15:00Z
                 self.arrAppointment.sort {
-                    let elapsed0 = getDateFromDateString(date: $0.StartDateTime, format: "yyyy-MM-dd'T'HH:mm:ssZ")
-                    let elapsed1 = getDateFromDateString(date: $1.StartDateTime, format: "yyyy-MM-dd'T'HH:mm:ssZ")
+                    let elapsed0 = getDateFromDateString(date: $0.StartDateTime, format: "yyyy-MM-dd'T'HH:mm:ssZ")!
+                    let elapsed1 = getDateFromDateString(date: $1.StartDateTime, format: "yyyy-MM-dd'T'HH:mm:ssZ")!
                     return elapsed0 > elapsed1
                 }
             }

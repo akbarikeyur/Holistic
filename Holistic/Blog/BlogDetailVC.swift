@@ -28,9 +28,13 @@ class BlogDetailVC: UIViewController {
         setImageBackgroundImage(imgView, blogData.get_single_media.url, IMAGE.PLACEHOLDER)
         titleLbl.text = blogData.title
         descLbl.text = blogData.desc.html2String
+        dateLbl.text = ""
         if let strDate = blogData.created_at.components(separatedBy: "T").first {
-            let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd")
-            dateLbl.text = getDateStringFromDate(date: date, format: "MMMM d, yyyy")
+            if let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd") {
+                dateLbl.text = getDateStringFromDate(date: date, format: "MMMM d, yyyy")
+            }else{
+                dateLbl.text = strDate
+            }
         }
     }
     

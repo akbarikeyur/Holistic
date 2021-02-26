@@ -23,8 +23,12 @@ class NotificationTVC: UITableViewCell {
         titleLbl.text = dict.title
         descLbl.text = dict.desc
         let strDate = dict.created_at.components(separatedBy: ".").first!
-        let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd'T'HH:mm:ss")
-        dateLbl.text = getDateStringFromDate(date: date, format: "d MMM, yyyy h:mm a")
+        if let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd'T'HH:mm:ss") {
+            dateLbl.text = getDateStringFromDate(date: date, format: "d MMM, yyyy h:mm a")
+        }
+        else{
+            dateLbl.text = strDate
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

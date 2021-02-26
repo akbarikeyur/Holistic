@@ -24,8 +24,12 @@ class BlogListCVC: UICollectionViewCell {
         titleLbl.text = dict.title
         
         if let strDate = dict.created_at.components(separatedBy: "T").first {
-            let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd")
-            dateLbl.text = getDateStringFromDate(date: date, format: "MMMM d, yyyy")
+            if let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd") {
+                dateLbl.text = getDateStringFromDate(date: date, format: "MMMM d, yyyy")
+            }else {
+                dateLbl.text = strDate
+            }
+            
         }
     }
 }
