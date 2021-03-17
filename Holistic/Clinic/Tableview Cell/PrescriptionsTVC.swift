@@ -25,7 +25,14 @@ class PrescriptionsTVC: UITableViewCell {
     func setupDetails(_ dict : PrescriptionModel) {
         titleLbl.text = dict.RxName
         sizeLbl.text = String(dict.RxDosageStrength) + dict.RxDosageUnit + "  |  " + dict.RxDosageFrequencyInfo
-        timeLbl.text = String(dict.RxDuration) + " " + dict.RxDurationUnit
+        let date = getDateFromDateString(date: dict.StartDate, format: "yyyy-MM-dd'T'HH:mm:ssZ")
+        timeLbl.text = "Start from " + getDateStringFromDate(date: date!, format: "d MMMM") + " for "
+        timeLbl.text = timeLbl.text! + displayFlotingPrice(dict.RxDuration) + " "
+        if dict.RxDurationUnit == "" {
+            timeLbl.text = timeLbl.text! + "day"
+        }else{
+            timeLbl.text = timeLbl.text! + dict.RxDurationUnit
+        }
         if dict.RxDuration > 1 {
             timeLbl.text = timeLbl.text! + " (s)"
         }

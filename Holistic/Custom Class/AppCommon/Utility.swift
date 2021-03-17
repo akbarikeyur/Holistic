@@ -422,6 +422,18 @@ func setupButtonHighlightEffect(_ button : UIButton, _ normalBGColor : UIColor, 
     button.setBackgroundImage(imageFromColor(color: highlightBGColor), for: .highlighted)
 }
 
+func displayFlotingPrice(_ price : Double) -> String
+{
+    var finalPrice = String(format: "%.2f", Float(price))
+    if finalPrice.contains(".00") {
+        finalPrice = finalPrice.replacingOccurrences(of: ".00", with: "")
+    }
+    if finalPrice.contains(".0") {
+        finalPrice = finalPrice.replacingOccurrences(of: ".0", with: "")
+    }
+    return finalPrice
+}
+
 func displayPriceWithCurrency(_ price : String) -> String {
     return CURRENCY + " " + String(price)
 }
@@ -439,4 +451,64 @@ func getDiscountPrice(_ price : Float, _ discount : Int) -> Float {
 func copyClipboard(_ code : String) {
 //    UIPasteboard.general.string = code
 //    displayToast("Code copy to clipboard")
+}
+
+func getUserAddress(_ user : UserModel) -> String {
+    var address = ""
+    if user.room_no != "" {
+        address = user.room_no
+    }
+    if user.floor != "" {
+        if address != "" {
+            address = address + ", " + user.floor
+        }else{
+            address = user.floor
+        }
+    }
+    if user.building_address != "" {
+        if address != "" {
+            address = address + ", " + user.building_address
+        }else{
+            address = user.building_address
+        }
+    }
+    if user.street_address != "" {
+        if address != "" {
+            address = address + ", " + user.street_address
+        }else{
+            address = user.street_address
+        }
+    }
+    return address
+}
+
+func getStatusColor(_ status : Int) -> UIColor{
+    if status == 1 {
+        return BlueColor
+    }
+    else if status == 5 {
+        return RedColor
+    }
+    else if status == 4 {
+        return OrangeColor
+    }
+    else {
+        //confirmed
+        return GreenColor
+    }
+}
+
+func getStatusImage(_ status : Int) -> String {
+    if status == 1 {
+        return "status_schedule"
+    }
+    else if status == 5 {
+        return "status_cancel"
+    }
+    else if status == 4 {
+        return "status_checkout"
+    }
+    else {
+        return "green_right"
+    }
 }

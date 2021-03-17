@@ -150,18 +150,18 @@ class SignupVC: UIViewController {
         else if phoneTxt.text?.trimmed == "" {
             displayToast("enter_phone")
         }
-        else if addressTxt.text?.trimmed == "" {
-            displayToast("enter_address")
-        }
-        else if buildingNameTxt.text?.trimmed == "" {
-            displayToast("enter_building")
-        }
-        else if floorTxt.text?.trimmed == "" {
-            displayToast("enter_floor")
-        }
-        else if roomTxt.text?.trimmed == "" {
-            displayToast("enter_room_number")
-        }
+//        else if addressTxt.text?.trimmed == "" {
+//            displayToast("enter_address")
+//        }
+//        else if buildingNameTxt.text?.trimmed == "" {
+//            displayToast("enter_building")
+//        }
+//        else if floorTxt.text?.trimmed == "" {
+//            displayToast("enter_floor")
+//        }
+//        else if roomTxt.text?.trimmed == "" {
+//            displayToast("enter_room_number")
+//        }
         else if countryTxt.text?.trimmed == "" {
             displayToast("enter_country")
         }

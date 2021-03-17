@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,12 +28,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZ0-xR-gtO">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKQ-xO-JKI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKQ-xO-JKI">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Z6o-Uc-I8V"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="clickToBack:" destination="GXg-Cf-Wi0" eventType="touchUpInside" id="bqh-zz-dm3"/>
@@ -92,7 +93,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="4aV-xX-LH8"/>
                                                     <constraint firstAttribute="bottom" secondItem="UVH-6Q-I1c" secondAttribute="bottom" constant="10" id="7t6-Eu-uBo"/>
@@ -128,7 +129,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@patrickosb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-Dm-NT1" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="166" width="300" height="14"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
-                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -167,7 +168,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="f4b-lo-Q2h" firstAttribute="leading" secondItem="1v2-xM-HCF" secondAttribute="leading" id="0vw-9H-HJW"/>
                                                     <constraint firstAttribute="trailing" secondItem="hjy-lW-ibP" secondAttribute="trailing" id="1n0-gj-Pzs"/>
@@ -210,7 +211,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="K46-40-vU1" secondAttribute="trailing" id="AyV-5O-Mhm"/>
                                                     <constraint firstAttribute="height" constant="50" id="BZ7-pZ-qoe"/>
@@ -247,7 +248,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBr-EF-tpn" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                 <rect key="frame" x="35" y="15.5" width="40" height="19"/>
                                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
-                                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -257,7 +258,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="ZDc-Ar-aQj" firstAttribute="leading" secondItem="Cr0-s1-cvO" secondAttribute="leading" constant="5" id="Oa6-Hx-ihM"/>
                                                             <constraint firstAttribute="width" constant="80" id="b2H-BC-0DY"/>
@@ -285,7 +286,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="Cr0-s1-cvO" firstAttribute="top" secondItem="p8O-QP-43h" secondAttribute="top" id="1Pf-2Z-ckk"/>
                                                     <constraint firstItem="vLQ-kh-kqj" firstAttribute="leading" secondItem="Cr0-s1-cvO" secondAttribute="trailing" constant="5" id="61O-Oq-Z5w"/>
@@ -333,7 +334,7 @@ United Arab Emirates</string>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="VVr-m2-30m" firstAttribute="top" secondItem="Kgi-TK-Sa1" secondAttribute="top" constant="7.5" id="39d-Ad-gFD"/>
                                                     <constraint firstAttribute="bottom" secondItem="zgu-wr-vq8" secondAttribute="bottom" id="G8Z-va-0uh"/>
@@ -342,6 +343,7 @@ United Arab Emirates</string>
                                                     <constraint firstItem="zgu-wr-vq8" firstAttribute="top" secondItem="bmB-lF-oTp" secondAttribute="bottom" constant="15.5" id="Nns-yR-UQz"/>
                                                     <constraint firstItem="bmB-lF-oTp" firstAttribute="leading" secondItem="VVr-m2-30m" secondAttribute="trailing" constant="10" id="OnM-6y-le4"/>
                                                     <constraint firstItem="VVr-m2-30m" firstAttribute="leading" secondItem="Kgi-TK-Sa1" secondAttribute="leading" id="fHY-dS-FGB"/>
+                                                    <constraint firstItem="zgu-wr-vq8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VVr-m2-30m" secondAttribute="bottom" constant="7.5" id="nz2-Qd-kob"/>
                                                     <constraint firstAttribute="trailing" secondItem="zgu-wr-vq8" secondAttribute="trailing" id="pdi-iD-IJi"/>
                                                     <constraint firstAttribute="trailing" secondItem="bmB-lF-oTp" secondAttribute="trailing" id="sMe-ZJ-fcl"/>
                                                 </constraints>
@@ -376,7 +378,7 @@ United Arab Emirates</string>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="J5c-eW-9Vv" firstAttribute="top" secondItem="Y8v-gp-phx" secondAttribute="top" constant="16.5" id="2KH-ZO-hmC"/>
                                                     <constraint firstItem="klU-DZ-qM0" firstAttribute="leading" secondItem="Y8v-gp-phx" secondAttribute="leading" id="HGd-jn-sWj"/>
@@ -430,7 +432,7 @@ United Arab Emirates</string>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="WEO-gz-Nb3" firstAttribute="leading" secondItem="JsC-FQ-QF0" secondAttribute="leading" id="F1x-9g-wcM"/>
                                                     <constraint firstItem="4tv-bV-KCF" firstAttribute="top" secondItem="JsC-FQ-QF0" secondAttribute="top" constant="10" id="Hgu-3c-nX4"/>
@@ -471,7 +473,7 @@ United Arab Emirates</string>
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="HLY-CB-Wng" firstAttribute="leading" secondItem="Io7-ti-KJ6" secondAttribute="leading" constant="10" id="3HY-1B-y0Z"/>
                                                     <constraint firstAttribute="trailing" secondItem="9NU-rc-9U2" secondAttribute="trailing" id="AWd-RF-8w1"/>
@@ -483,7 +485,7 @@ United Arab Emirates</string>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Io7-ti-KJ6" secondAttribute="bottom" id="3qf-5U-mw8"/>
                                             <constraint firstItem="V4M-lV-FNZ" firstAttribute="top" secondItem="huh-BT-rtE" secondAttribute="top" constant="10" id="3yJ-Y7-2pf"/>
@@ -528,7 +530,8 @@ United Arab Emirates</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0XT-Kw-DhD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KZ0-xR-gtO" secondAttribute="trailing" id="2pI-Fq-Cc6"/>
                             <constraint firstItem="pOx-1j-Y1r" firstAttribute="top" secondItem="KZ0-xR-gtO" secondAttribute="bottom" id="3w3-dG-AwW"/>
@@ -538,7 +541,6 @@ United Arab Emirates</string>
                             <constraint firstItem="pOx-1j-Y1r" firstAttribute="leading" secondItem="0XT-Kw-DhD" secondAttribute="leading" id="djP-tP-p3C"/>
                             <constraint firstItem="pOx-1j-Y1r" firstAttribute="bottom" secondItem="0XT-Kw-DhD" secondAttribute="bottom" id="uWX-an-jU9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="0XT-Kw-DhD"/>
                     </view>
                     <navigationItem key="navigationItem" id="MlS-ff-95K"/>
                     <size key="freeformSize" width="320" height="920"/>
@@ -572,12 +574,12 @@ United Arab Emirates</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tV2-Zn-jAI">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-fp-OsN">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-fp-OsN">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="hah-5t-aQ8"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="clickToBack:" destination="xvC-Of-wnK" eventType="touchUpInside" id="gFm-AQ-K12"/>
@@ -624,7 +626,7 @@ United Arab Emirates</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
                                                     <constraint firstItem="rsa-qc-QoB" firstAttribute="leading" secondItem="hi8-Li-KWJ" secondAttribute="leading" constant="10" id="2bf-6d-wOx"/>
                                                     <constraint firstItem="rsa-qc-QoB" firstAttribute="top" secondItem="hi8-Li-KWJ" secondAttribute="top" constant="10" id="SGg-Lt-XYy"/>
@@ -678,7 +680,7 @@ United Arab Emirates</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="JBO-ur-Ejq" secondAttribute="bottom" id="Ics-QV-zHs"/>
                                                     <constraint firstAttribute="height" constant="50" id="Pc0-5q-cCp"/>
@@ -719,7 +721,7 @@ United Arab Emirates</string>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTI-og-j65" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                         <rect key="frame" x="45" y="15.5" width="49" height="19"/>
                                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
-                                                                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" systemColor="systemGrayColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -746,7 +748,7 @@ United Arab Emirates</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstItem="iMH-2d-QzU" firstAttribute="leading" secondItem="jTI-og-j65" secondAttribute="trailing" id="3FU-bS-Bes"/>
                                                                     <constraint firstItem="zI5-LR-Dry" firstAttribute="leading" secondItem="N3Q-sZ-0s9" secondAttribute="leading" id="M3o-zA-0iU"/>
@@ -775,7 +777,7 @@ United Arab Emirates</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="1Uj-X9-w2r"/>
                                                             <constraint firstAttribute="bottom" secondItem="O9B-Z9-wTl" secondAttribute="bottom" id="5HQ-4d-4oE"/>
@@ -992,7 +994,7 @@ United Arab Emirates</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="ON0-Cv-AOW" secondAttribute="bottom" id="1gb-xn-qKW"/>
                                                     <constraint firstItem="GhI-af-UkL" firstAttribute="leading" secondItem="ekK-43-zan" secondAttribute="trailing" constant="10" id="3mF-Mi-nLK"/>
@@ -1036,7 +1038,7 @@ United Arab Emirates</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="YEt-n8-97O" secondAttribute="bottom" id="S0n-wp-9ep"/>
                                                     <constraint firstItem="YEt-n8-97O" firstAttribute="top" secondItem="6qd-cz-Wc5" secondAttribute="top" id="Trh-nY-Nb5"/>
@@ -1071,7 +1073,7 @@ United Arab Emirates</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="73C-Kz-rSY" firstAttribute="leading" secondItem="f6P-AO-li4" secondAttribute="leading" constant="10" id="I0A-kP-BKf"/>
                                                     <constraint firstAttribute="trailing" secondItem="73C-Kz-rSY" secondAttribute="trailing" constant="10" id="kvq-NK-Bu0"/>
@@ -1146,7 +1148,7 @@ United Arab Emirates</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="v27-8r-EvO" firstAttribute="top" secondItem="PUR-ju-MGM" secondAttribute="top" id="2Bj-SU-Zj3"/>
                                             <constraint firstItem="RNg-5r-WFU" firstAttribute="top" secondItem="PUR-ju-MGM" secondAttribute="bottom" constant="10" id="2cY-Dy-MNs"/>
@@ -1212,7 +1214,8 @@ United Arab Emirates</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="43T-KY-mdT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="43T-KY-mdT" firstAttribute="bottom" secondItem="chV-K0-leF" secondAttribute="bottom" id="50v-80-V2f"/>
                             <constraint firstItem="chV-K0-leF" firstAttribute="leading" secondItem="43T-KY-mdT" secondAttribute="leading" id="FG6-P9-7vb"/>
@@ -1222,7 +1225,6 @@ United Arab Emirates</string>
                             <constraint firstItem="chV-K0-leF" firstAttribute="trailing" secondItem="43T-KY-mdT" secondAttribute="trailing" id="Wxw-2Y-Pe0"/>
                             <constraint firstItem="tV2-Zn-jAI" firstAttribute="top" secondItem="43T-KY-mdT" secondAttribute="top" constant="20" id="bSs-Ys-TQF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="43T-KY-mdT"/>
                     </view>
                     <size key="freeformSize" width="320" height="779"/>
                     <connections>
@@ -1261,7 +1263,7 @@ United Arab Emirates</string>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <state key="normal" title="Cancel">
-                                        <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleColor" systemColor="systemGrayColor"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -1303,7 +1305,7 @@ United Arab Emirates</string>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="sYh-ZT-PP3" firstAttribute="leading" secondItem="KWb-Bw-7gn" secondAttribute="leading" constant="10" id="FlX-bh-4bh"/>
                                 <constraint firstItem="giT-5D-JgD" firstAttribute="centerY" secondItem="KWb-Bw-7gn" secondAttribute="centerY" id="Tcw-c5-YbG"/>
@@ -1322,6 +1324,7 @@ United Arab Emirates</string>
                             </connections>
                         </tableView>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="nnZ-zx-lOQ"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="mdr-v3-bWn" firstAttribute="trailing" secondItem="nnZ-zx-lOQ" secondAttribute="trailing" id="6Gg-cL-I0R"/>
@@ -1332,7 +1335,6 @@ United Arab Emirates</string>
                         <constraint firstItem="nnZ-zx-lOQ" firstAttribute="trailing" secondItem="KWb-Bw-7gn" secondAttribute="trailing" id="YWN-Ib-mhd"/>
                         <constraint firstItem="nnZ-zx-lOQ" firstAttribute="bottom" secondItem="mdr-v3-bWn" secondAttribute="bottom" id="nGP-YO-6HC"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="nnZ-zx-lOQ"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="-864" y="880"/>
@@ -1348,19 +1350,19 @@ United Arab Emirates</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmk-Zl-r5u">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsX-gR-Mwz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsX-gR-Mwz">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="SYD-wZ-nhY"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="clickToBack:" destination="I2q-3d-hNc" eventType="touchUpInside" id="HFG-Xy-UXJ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer a friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AX-gN-iIq" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="106.5" y="12.5" width="107.5" height="19"/>
+                                        <rect key="frame" x="112" y="12.5" width="96.5" height="19"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1392,7 +1394,7 @@ United Arab Emirates</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Value Friendship" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nt-sL-FL7" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="211" width="300" height="28.5"/>
+                                        <rect key="frame" x="10" y="211" width="300" height="28"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1404,7 +1406,7 @@ United Arab Emirates</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's share with your friends to make the UAE more healthier." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-iA-JqG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="249.5" width="280" height="42.5"/>
+                                        <rect key="frame" x="20" y="249" width="280" height="42"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1416,7 +1418,7 @@ United Arab Emirates</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-Wr-mbE" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="322" width="280" height="50"/>
+                                        <rect key="frame" x="20" y="321" width="280" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcv-8g-ymc" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="180" y="0.0" width="100" height="50"/>
@@ -1451,7 +1453,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstItem="vQg-A1-EFD" firstAttribute="top" secondItem="TGw-Wr-mbE" secondAttribute="top" id="539-2x-42w"/>
                                             <constraint firstAttribute="bottom" secondItem="Kcv-8g-ymc" secondAttribute="bottom" id="5mW-Fe-BDF"/>
@@ -1475,7 +1477,7 @@ United Arab Emirates</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Lfr-iA-JqG" secondAttribute="trailing" constant="20" id="7nj-Mn-d2u"/>
                                     <constraint firstItem="6nt-sL-FL7" firstAttribute="leading" secondItem="4tf-M2-wYk" secondAttribute="leading" constant="10" id="CYF-Ia-TeR"/>
@@ -1492,7 +1494,8 @@ United Arab Emirates</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uzB-7Z-lBz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4tf-M2-wYk" firstAttribute="leading" secondItem="uzB-7Z-lBz" secondAttribute="leading" id="0Iu-pK-r03"/>
                             <constraint firstItem="4tf-M2-wYk" firstAttribute="top" secondItem="Qmk-Zl-r5u" secondAttribute="bottom" id="8qO-FB-1CH"/>
@@ -1502,7 +1505,6 @@ United Arab Emirates</string>
                             <constraint firstItem="Qmk-Zl-r5u" firstAttribute="top" secondItem="uzB-7Z-lBz" secondAttribute="top" constant="20" id="wnq-mM-TPN"/>
                             <constraint firstItem="Qmk-Zl-r5u" firstAttribute="leading" secondItem="uzB-7Z-lBz" secondAttribute="leading" id="yoU-PY-SD9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="uzB-7Z-lBz"/>
                     </view>
                     <size key="freeformSize" width="320" height="600"/>
                     <connections>
@@ -1527,12 +1529,12 @@ United Arab Emirates</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vr9-9G-Q9w">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efe-JW-Mkx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efe-JW-Mkx">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="0fi-z0-mfM"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="clickToBack:" destination="QTZ-YI-pjs" eventType="touchUpInside" id="3QP-HU-hxl"/>
@@ -1587,20 +1589,21 @@ United Arab Emirates</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Th3-KP-UFI" customClass="FSPagerView" customModule="FSPagerView">
-                                <rect key="frame" x="0.0" y="115" width="320" height="406"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="115" width="320" height="415.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="QTZ-YI-pjs" id="DiF-0U-iwB"/>
                                     <outlet property="delegate" destination="QTZ-YI-pjs" id="BvS-cA-Ivp"/>
                                 </connections>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="ScA-wT-65z">
-                                <rect key="frame" x="124.5" y="521" width="71" height="37"/>
+                                <rect key="frame" x="80" y="530.5" width="160" height="27.5"/>
                                 <color key="pageIndicatorTintColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xYr-JB-Tjb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="F4z-R3-KsB" firstAttribute="top" secondItem="Vr9-9G-Q9w" secondAttribute="bottom" constant="10" id="0jr-HG-pak"/>
                             <constraint firstItem="Vr9-9G-Q9w" firstAttribute="leading" secondItem="xYr-JB-Tjb" secondAttribute="leading" id="Abl-Ml-Sk2"/>
@@ -1619,7 +1622,6 @@ United Arab Emirates</string>
                             <constraint firstItem="ScA-wT-65z" firstAttribute="top" secondItem="Th3-KP-UFI" secondAttribute="bottom" id="wCE-Al-dYK"/>
                             <constraint firstItem="hsp-yy-uta" firstAttribute="leading" secondItem="xYr-JB-Tjb" secondAttribute="leading" id="zn1-JI-klQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xYr-JB-Tjb"/>
                     </view>
                     <connections>
                         <outlet property="myPageControl" destination="ScA-wT-65z" id="vvw-ZG-X85"/>
@@ -1646,7 +1648,7 @@ United Arab Emirates</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="515"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoF-9Y-tiy">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="515"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="513.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4Mh-W8-pXD">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
@@ -1666,7 +1668,7 @@ United Arab Emirates</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This coupon will get you 20% discount on all restaurant and hotel booking of Burj Al Arab" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INH-gO-r7r" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="260" width="300" height="28.5"/>
+                                                <rect key="frame" x="10" y="260" width="300" height="28"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1678,7 +1680,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAA0067" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7s-VR-cen" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="298.5" width="300" height="47"/>
+                                                <rect key="frame" x="10" y="298" width="300" height="47"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="Sic-Qm-Y5i"/>
                                                 </constraints>
@@ -1693,14 +1695,14 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-fH-jsU">
-                                                <rect key="frame" x="10" y="298.5" width="300" height="47"/>
+                                                <rect key="frame" x="10" y="298" width="300" height="47"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                 <connections>
                                                     <action selector="clickToCopyCode:" destination="OTy-EY-Sap" eventType="touchUpInside" id="ANN-7f-wN3"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onetime Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-iG-Klc" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="345.5" width="300" height="16.5"/>
+                                                <rect key="frame" x="10" y="345" width="300" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1712,20 +1714,20 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code_black" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-Zs-uba">
-                                                <rect key="frame" x="137.5" y="372" width="45.5" height="19"/>
+                                                <rect key="frame" x="137.5" y="371.5" width="45.5" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45.5" id="Dhu-7P-ZFI"/>
                                                     <constraint firstAttribute="height" constant="19" id="jyB-Tj-KHB"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="dRq-6d-3jg">
-                                                <rect key="frame" x="10" y="411" width="300" height="1"/>
+                                                <rect key="frame" x="10" y="410.5" width="300" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="BZ4-b6-qrC"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10% Discount Burj Al Arab" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svu-9J-oyU" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="432" width="300" height="21.5"/>
+                                                <rect key="frame" x="10" y="431.5" width="300" height="21"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1737,7 +1739,7 @@ United Arab Emirates</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6he-2D-iZm" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="463.5" width="300" height="28.5"/>
+                                                <rect key="frame" x="10" y="462.5" width="300" height="28"/>
                                                 <string key="text">Please show this code on app when visiting
 Emax store to avail discount.</string>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="12"/>
@@ -1796,7 +1798,8 @@ Emax store to avail discount.</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mvR-eq-NFT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dM1-w1-HP0" firstAttribute="trailing" secondItem="mvR-eq-NFT" secondAttribute="trailing" id="4lw-hU-dnb"/>
                             <constraint firstAttribute="bottom" secondItem="EN5-u1-vge" secondAttribute="bottom" id="5pV-ri-9Ac"/>
@@ -1807,7 +1810,6 @@ Emax store to avail discount.</string>
                             <constraint firstItem="EN5-u1-vge" firstAttribute="top" secondItem="Mlm-TF-we2" secondAttribute="top" id="rVF-dE-U8F"/>
                             <constraint firstItem="dM1-w1-HP0" firstAttribute="top" secondItem="mvR-eq-NFT" secondAttribute="top" id="vGR-Y0-ZK6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="mvR-eq-NFT"/>
                     </view>
                     <size key="freeformSize" width="320" height="515"/>
                     <connections>
@@ -1832,12 +1834,12 @@ Emax store to avail discount.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-8U-aUh">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-13-ikT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-13-ikT">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="2L6-lT-PeC"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="clickToBack:" destination="hx6-dB-J6v" eventType="touchUpInside" id="Caj-Tk-axy"/>
@@ -1875,7 +1877,8 @@ Emax store to avail discount.</string>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eqw-dP-Yrd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FyF-E4-Cxw" firstAttribute="trailing" secondItem="eqw-dP-Yrd" secondAttribute="trailing" id="3Mo-6g-cx4"/>
                             <constraint firstItem="FyF-E4-Cxw" firstAttribute="top" secondItem="1nH-8U-aUh" secondAttribute="bottom" id="5nS-Ag-PXP"/>
@@ -1885,7 +1888,6 @@ Emax store to avail discount.</string>
                             <constraint firstItem="1nH-8U-aUh" firstAttribute="leading" secondItem="2IO-5n-yRL" secondAttribute="leading" id="gG6-QV-nCf"/>
                             <constraint firstAttribute="bottom" secondItem="FyF-E4-Cxw" secondAttribute="bottom" id="tjl-xM-Ps3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eqw-dP-Yrd"/>
                     </view>
                     <connections>
                         <outlet property="tblView" destination="FyF-E4-Cxw" id="q6P-Rh-ODp"/>
@@ -1927,12 +1929,12 @@ Emax store to avail discount.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhP-so-7ES">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lot-cf-McK">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lot-cf-McK">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="m97-nF-3dV"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="clickToBack:" destination="HOD-Ji-m8X" eventType="touchUpInside" id="JYF-gS-jQ0"/>
@@ -2036,7 +2038,7 @@ Emax store to avail discount.</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="vFv-Td-r87" firstAttribute="top" secondItem="jEM-gM-6Rf" secondAttribute="top" constant="20" id="3xO-YA-ic3"/>
                                     <constraint firstAttribute="trailing" secondItem="vFv-Td-r87" secondAttribute="trailing" constant="20" id="7ha-KD-qS5"/>
@@ -2047,7 +2049,8 @@ Emax store to avail discount.</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XZo-fN-ina"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UhP-so-7ES" firstAttribute="top" secondItem="XZo-fN-ina" secondAttribute="top" constant="20" id="1Q6-fO-Q0j"/>
                             <constraint firstItem="eMp-qI-QL1" firstAttribute="leading" secondItem="XZo-fN-ina" secondAttribute="leading" constant="10" id="4Gw-LH-GMQ"/>
@@ -2066,7 +2069,6 @@ Emax store to avail discount.</string>
                             <constraint firstItem="jEM-gM-6Rf" firstAttribute="centerY" secondItem="fwM-Kp-GYN" secondAttribute="centerY" id="pS7-pW-l9c"/>
                             <constraint firstItem="UmV-PI-PgQ" firstAttribute="leading" secondItem="XZo-fN-ina" secondAttribute="leading" id="rzW-66-vtx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XZo-fN-ina"/>
                     </view>
                     <connections>
                         <outlet property="noDataView" destination="jEM-gM-6Rf" id="cmB-Go-hhy"/>
@@ -2092,12 +2094,12 @@ Emax store to avail discount.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlF-Hi-PXT">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3R-h3-6sH">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3R-h3-6sH">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="SSS-yJ-And"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="clickToBack:" destination="Kdz-v3-vAe" eventType="touchUpInside" id="9Uz-P0-WVc"/>
@@ -2147,7 +2149,8 @@ Emax store to avail discount.</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="sZY-Kh-1uV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YRM-XB-La4" firstAttribute="centerY" secondItem="nnp-Yc-Zcx" secondAttribute="centerY" id="0gM-Cw-bjH"/>
                             <constraint firstItem="sZY-Kh-1uV" firstAttribute="trailing" secondItem="YRM-XB-La4" secondAttribute="trailing" constant="20" id="16r-Dw-Fb7"/>
@@ -2163,7 +2166,6 @@ Emax store to avail discount.</string>
                             <constraint firstItem="dhE-sm-6Yx" firstAttribute="top" secondItem="jlF-Hi-PXT" secondAttribute="bottom" id="aKa-b5-SqH"/>
                             <constraint firstItem="MEk-ti-TiO" firstAttribute="trailing" secondItem="sZY-Kh-1uV" secondAttribute="trailing" constant="50" id="lYE-mk-SS4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="sZY-Kh-1uV"/>
                     </view>
                     <connections>
                         <outlet property="noDataLbl" destination="YRM-XB-La4" id="cyX-A7-YZZ"/>
@@ -2175,6 +2177,116 @@ Emax store to avail discount.</string>
             <point key="canvasLocation" x="1328" y="1439"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1AX-gN-iIq">
+            <size key="intrinsicContentSize" width="96.5" height="19"/>
+        </designable>
+        <designable name="35y-Jm-Ceq">
+            <size key="intrinsicContentSize" width="116.5" height="19"/>
+        </designable>
+        <designable name="4tv-bV-KCF">
+            <size key="intrinsicContentSize" width="131" height="19"/>
+        </designable>
+        <designable name="6he-2D-iZm">
+            <size key="intrinsicContentSize" width="234.5" height="28"/>
+        </designable>
+        <designable name="6nt-sL-FL7">
+            <size key="intrinsicContentSize" width="217.5" height="28"/>
+        </designable>
+        <designable name="F4z-R3-KsB">
+            <size key="intrinsicContentSize" width="51.5" height="30.5"/>
+        </designable>
+        <designable name="HLY-CB-Wng">
+            <size key="intrinsicContentSize" width="89.5" height="19"/>
+        </designable>
+        <designable name="INH-gO-r7r">
+            <size key="intrinsicContentSize" width="479" height="14"/>
+        </designable>
+        <designable name="J5c-eW-9Vv">
+            <size key="intrinsicContentSize" width="212.5" height="16.5"/>
+        </designable>
+        <designable name="K46-40-vU1">
+            <size key="intrinsicContentSize" width="132.5" height="16.5"/>
+        </designable>
+        <designable name="Kcv-8g-ymc">
+            <size key="intrinsicContentSize" width="60" height="33"/>
+        </designable>
+        <designable name="KgF-hQ-62y">
+            <size key="intrinsicContentSize" width="101" height="19"/>
+        </designable>
+        <designable name="Lfr-iA-JqG">
+            <size key="intrinsicContentSize" width="491" height="21"/>
+        </designable>
+        <designable name="Mej-aL-ezv">
+            <size key="intrinsicContentSize" width="107" height="31"/>
+        </designable>
+        <designable name="PBr-EF-tpn">
+            <size key="intrinsicContentSize" width="18.5" height="19"/>
+        </designable>
+        <designable name="Uhn-qX-uLy">
+            <size key="intrinsicContentSize" width="137" height="19"/>
+        </designable>
+        <designable name="YRM-XB-La4">
+            <size key="intrinsicContentSize" width="223.5" height="19"/>
+        </designable>
+        <designable name="Zfm-iG-Klc">
+            <size key="intrinsicContentSize" width="91" height="16.5"/>
+        </designable>
+        <designable name="bmB-lF-oTp">
+            <size key="intrinsicContentSize" width="238.5" height="33"/>
+        </designable>
+        <designable name="dze-ED-H2K">
+            <size key="intrinsicContentSize" width="102" height="16.5"/>
+        </designable>
+        <designable name="eMp-qI-QL1">
+            <size key="intrinsicContentSize" width="51.5" height="30.5"/>
+        </designable>
+        <designable name="gXQ-69-7g0">
+            <size key="intrinsicContentSize" width="45.5" height="19"/>
+        </designable>
+        <designable name="giT-5D-JgD">
+            <size key="intrinsicContentSize" width="50" height="31"/>
+        </designable>
+        <designable name="jTI-og-j65">
+            <size key="intrinsicContentSize" width="18.5" height="19"/>
+        </designable>
+        <designable name="k7s-VR-cen">
+            <size key="intrinsicContentSize" width="168.5" height="47"/>
+        </designable>
+        <designable name="l94-Xx-mhN">
+            <size key="intrinsicContentSize" width="36" height="31"/>
+        </designable>
+        <designable name="nVB-Dm-NT1">
+            <size key="intrinsicContentSize" width="66.5" height="14"/>
+        </designable>
+        <designable name="q8P-Yy-efo">
+            <size key="intrinsicContentSize" width="77.5" height="19"/>
+        </designable>
+        <designable name="qMO-uv-bmW">
+            <size key="intrinsicContentSize" width="72.5" height="19"/>
+        </designable>
+        <designable name="sNM-rh-zoG">
+            <size key="intrinsicContentSize" width="101" height="19"/>
+        </designable>
+        <designable name="svu-9J-oyU">
+            <size key="intrinsicContentSize" width="215.5" height="21"/>
+        </designable>
+        <designable name="tIk-cl-ENe">
+            <size key="intrinsicContentSize" width="56" height="31"/>
+        </designable>
+        <designable name="vFv-Td-r87">
+            <size key="intrinsicContentSize" width="236" height="19"/>
+        </designable>
+        <designable name="vLQ-kh-kqj">
+            <size key="intrinsicContentSize" width="86" height="16.5"/>
+        </designable>
+        <designable name="vQg-A1-EFD">
+            <size key="intrinsicContentSize" width="180" height="16.5"/>
+        </designable>
+        <designable name="wzA-nG-72C">
+            <size key="intrinsicContentSize" width="145" height="19"/>
+        </designable>
+    </designables>
     <resources>
         <image name="address_pin" width="38" height="37"/>
         <image name="back" width="8" height="14"/>
@@ -2192,5 +2304,17 @@ Emax store to avail discount.</string>
         <image name="refer_friend_bg" width="376" height="191"/>
         <image name="temp_flag" width="25" height="18"/>
         <image name="username" width="38" height="37"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

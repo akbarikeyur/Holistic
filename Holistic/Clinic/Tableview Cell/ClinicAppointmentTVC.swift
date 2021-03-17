@@ -49,7 +49,11 @@ class ClinicAppointmentTVC: UITableViewCell {
         serviceNameLbl.text = dict.ServiceName
         userNameLbl.text = dict.PatientName
         orgNameLbl.text = dict.OrganisationName
+        
         statusBtn.setTitle(dict.AppointmentStatus, for: .normal)
+        statusBtn.setImage(UIImage(named: getStatusImage(dict.AppointmentStatusInt)), for: .normal)
+        statusBtn.titleLabel?.textColor = getStatusColor(dict.AppointmentStatusInt)
+        statusView.backgroundColor = getStatusColor(dict.AppointmentStatusInt)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -24,7 +24,9 @@ class MobileLoginVC: UIViewController {
 
         // Do any additional setup after loading the view.
         configUI()
-        
+        if Platform.isSimulator {
+            phoneTxt.text = "567674146"
+        }
         if getCountryData().count == 0 {
             AppDelegate().sharedDelegate().serviceCallToGetCountry()
         }

@@ -23,6 +23,7 @@ struct API {
     static let EMAIL_LOGIN               =       BASE_URL + "user/loginwithemail"
     static let MOBILE_LOGIN              =       BASE_URL + "user/login"
     static let FORGOT_PASSWORD           =       BASE_URL + "user/forgetPassword"
+    static let UPLOAD_IMAGE              =       BASE_URL + "user/updateProfilePicture"
     static let UPDATE_PROFILE            =       BASE_URL + "user/updateProfile"
     static let GET_USER_DETAIL           =       BASE_URL + "user/getUserDetails"
     
@@ -122,7 +123,7 @@ public class APIManager {
     func toJson(_ array : [[String:Any]]) -> String {
         var jsonString : String = ""
         do {
-            if let postData : NSData = try JSONSerialization.data(withJSONObject: array, options: JSONSerialization.WritingOptions.prettyPrinted) as NSData {
+            if let postData : NSData = try JSONSerialization.data(withJSONObject: array, options: JSONSerialization.WritingOptions.prettyPrinted) as? NSData {
                 jsonString = NSString(data: postData as Data, encoding: String.Encoding.utf8.rawValue)! as String
             }
         } catch {

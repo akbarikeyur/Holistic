@@ -69,28 +69,7 @@ class ProfileVC: UIViewController {
         }
         phoneLbl.text = AppModel.shared.currentUser.phone_number
         
-        addressLbl.text = AppModel.shared.currentUser.room_no
-        if AppModel.shared.currentUser.floor != "" {
-            if addressLbl.text != "" {
-                addressLbl.text = addressLbl.text! + ", " + AppModel.shared.currentUser.floor
-            }else{
-                addressLbl.text = AppModel.shared.currentUser.floor
-            }
-        }
-        if AppModel.shared.currentUser.building_address != "" {
-            if addressLbl.text != "" {
-                addressLbl.text = addressLbl.text! + ", " + AppModel.shared.currentUser.building_address
-            }else{
-                addressLbl.text = AppModel.shared.currentUser.building_address
-            }
-        }
-        if AppModel.shared.currentUser.street_address != "" {
-            if addressLbl.text != "" {
-                addressLbl.text = addressLbl.text! + ", " + AppModel.shared.currentUser.street_address
-            }else{
-                addressLbl.text = AppModel.shared.currentUser.street_address
-            }
-        }
+        addressLbl.text = getUserAddress(AppModel.shared.currentUser)
     }
     
     //MARK:- Button click event

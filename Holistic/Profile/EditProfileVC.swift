@@ -102,6 +102,9 @@ class EditProfileVC: UploadImageVC {
     override func selectedImage(choosenImage: UIImage) {
         profileImage = choosenImage
         profileImg.image = choosenImage
+        ProfileAPIManager.shared.serviceCallToUploadProfileImage(["user_id":AppModel.shared.currentUser.id!], choosenImage) {
+            AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
+        }
     }
     
     @IBAction func clickToSelectPhoneCode(_ sender: UIButton) {
@@ -136,18 +139,18 @@ class EditProfileVC: UploadImageVC {
         else if phoneTxt.text?.trimmed == "" {
             displayToast("Please enter phone number")
         }
-        else if addressTxt.text?.trimmed == "" {
-            displayToast("Please enter address")
-        }
-        else if buildingNameTxt.text?.trimmed == "" {
-            displayToast("Please enter building name")
-        }
-        else if floorTxt.text?.trimmed == "" {
-            displayToast("Please enter floor number")
-        }
-        else if roomTxt.text?.trimmed == "" {
-            displayToast("Please enter room number")
-        }
+//        else if addressTxt.text?.trimmed == "" {
+//            displayToast("Please enter address")
+//        }
+//        else if buildingNameTxt.text?.trimmed == "" {
+//            displayToast("Please enter building name")
+//        }
+//        else if floorTxt.text?.trimmed == "" {
+//            displayToast("Please enter floor number")
+//        }
+//        else if roomTxt.text?.trimmed == "" {
+//            displayToast("Please enter room number")
+//        }
         else if countryTxt.text?.trimmed == "" {
             displayToast("Please select country")
         }
@@ -193,7 +196,7 @@ class EditProfileVC: UploadImageVC {
                 }
                 param["answers"] = arrData
                 printData(param)
-                ProfileAPIManager.shared.serviceCallToUpdateProfile(param, profileImage) {
+                ProfileAPIManager.shared.serviceCallToUpdateProfile(param) {
                     AppDelegate().sharedDelegate().serviceCallToGetUserDetail()
                     self.navigationController?.popViewController(animated: true)
                 }

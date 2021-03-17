@@ -56,11 +56,12 @@ struct ClinicUserModel {
 }
 
 struct AppointmentModel {
-    var AppointmentStatus, AppointmentStatusInt, BookedByPatientID, StartDateTime, PatientName, PatientID, ServiceName, OrganisationName : String!
+    var AppointmentStatus, BookedByPatientID, StartDateTime, PatientName, PatientID, ServiceName, OrganisationName : String!
+    var AppointmentStatusInt : Int!
     
     init(_ dict : [String : Any]) {
         AppointmentStatus = AppModel.shared.getStringValue(dict, "AppointmentStatus")
-        AppointmentStatusInt = AppModel.shared.getStringValue(dict, "AppointmentStatusInt")
+        AppointmentStatusInt = AppModel.shared.getIntValue(dict, "AppointmentStatusInt")
         BookedByPatientID = AppModel.shared.getStringValue(dict, "BookedByPatientID")
         StartDateTime = AppModel.shared.getStringValue(dict, "StartDateTime")
         PatientName = AppModel.shared.getStringValue(dict, "PatientName")
@@ -75,7 +76,7 @@ struct AppointmentModel {
 }
 
 struct PrescriptionModel {
-    var RxName, RxDosageUnit, RxDosageFrequencyInfo, RxNameWithDuration, RxDosageInstruction, RxDurationUnit, RxDosageStrength : String!
+    var RxName, RxDosageUnit, RxDosageFrequencyInfo, RxNameWithDuration, RxDosageInstruction, RxDurationUnit, RxDosageStrength, StartDate : String!
     var RxDuration : Double!
     
     
@@ -88,10 +89,11 @@ struct PrescriptionModel {
         RxDosageStrength = dict["RxDosageStrength"] as? String ?? ""
         RxDuration = AppModel.shared.getDoubleValue(dict, "RxDuration")
         RxDurationUnit = dict["RxDurationUnit"] as? String ?? ""
+        StartDate = dict["StartDate"] as? String ?? ""
     }
     
     func dictionary() -> [String : Any] {
-        return ["RxName" : RxName!, "RxDosageUnit" : RxDosageUnit!, "RxDosageFrequencyInfo" : RxDosageFrequencyInfo!, "RxNameWithDuration" : RxNameWithDuration!, "RxDosageInstruction" : RxDosageInstruction!, "RxDosageStrength" : RxDosageStrength!, "RxDuration" : RxDuration!, "RxDurationUnit" : RxDurationUnit!]
+        return ["RxName" : RxName!, "RxDosageUnit" : RxDosageUnit!, "RxDosageFrequencyInfo" : RxDosageFrequencyInfo!, "RxNameWithDuration" : RxNameWithDuration!, "RxDosageInstruction" : RxDosageInstruction!, "RxDosageStrength" : RxDosageStrength!, "RxDuration" : RxDuration!, "RxDurationUnit" : RxDurationUnit!, "StartDate":StartDate!]
     }
 }
 

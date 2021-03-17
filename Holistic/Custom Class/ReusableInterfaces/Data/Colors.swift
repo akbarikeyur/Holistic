@@ -15,6 +15,8 @@ var OrangeColor = colorFromHex(hex: "FF7900")
 var PurpleBorderColor = colorFromHex(hex: "ADADDC")
 var WhiteColor = colorFromHex(hex: "FFFFFF")
 var GreenColor = colorFromHex(hex: "669900")
+var RedColor = colorFromHex(hex: "ED5454")
+var BlueColor = colorFromHex(hex: "4A68DB")
 
 enum ColorType : Int32 {
     case Clear = 0

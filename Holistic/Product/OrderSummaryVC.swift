@@ -32,7 +32,8 @@ class OrderSummaryVC: UIViewController {
         registerTableViewMethod()
         
         contactLbl.text = AppModel.shared.currentUser.phone_number
-        shipToLbl.text = AppModel.shared.currentUser.room_no + ", " + AppModel.shared.currentUser.floor + ", " + AppModel.shared.currentUser.building_address + ", " + AppModel.shared.currentUser.street_address
+        
+        shipToLbl.text = getUserAddress(AppModel.shared.currentUser)
         
         var price = 0.0
         for tempData in arrCartData {
