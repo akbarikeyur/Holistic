@@ -120,6 +120,11 @@ class HomeVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func clickToSearch(_ sender: Any) {
+        let vc : GlobalSearchVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "GlobalSearchVC") as! GlobalSearchVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func clickToHideToolTip(_ sender: Any) {
         if infoTip != nil {
             infoTip.dismiss()

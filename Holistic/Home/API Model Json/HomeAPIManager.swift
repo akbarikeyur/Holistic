@@ -84,4 +84,20 @@ static let shared = HomeAPIManager()
             }
         }
     }
+    
+    func serviceCallToGlobalSearch(_ param : [String : Any], _ completion: @escaping (_ data : [String : Any]) -> Void) {
+        APIManager.shared.callPostRequest(API.GLOBAL_SEARCH, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? String, status == "success" {
+                if let data = dict["data"] as? [String : Any] {
+                    completion(data)
+                    return
+                }
+                else{
+                    completion([String : Any]())
+                    return
+                }
+            }
+        }
+    }
 }

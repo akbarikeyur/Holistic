@@ -34,6 +34,9 @@ struct RestaurantModel {
                 get_restaurant_media.append(MediaModel.init(temp))
             }
         }
+        else if let temp = dict["get_single_media"] as? [String : Any] {
+            get_restaurant_media.append(MediaModel.init(temp))
+        }
         get_restaurant_category = [CategoryModel]()
         if let tempData = dict["get_restaurant_category"] as? [[String : Any]] {
             for temp in tempData {

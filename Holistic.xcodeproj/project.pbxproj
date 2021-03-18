@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18462858260218E9005F921F /* GlobalSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18462857260218E9005F921F /* GlobalSearchVC.swift */; };
+		18575F822603431A00770493 /* SingleLableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18575F802603431A00770493 /* SingleLableVC.swift */; };
+		18575F832603431A00770493 /* SingleLableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18575F812603431A00770493 /* SingleLableVC.xib */; };
 		185DBD5D25E3FB3E007AEC96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185DBD5C25E3FB3E007AEC96 /* GoogleService-Info.plist */; };
 		188D4E57255071A000DE6715 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D4E56255071A000DE6715 /* ProfileVC.swift */; };
 		1898D9FA25700168003C1CBE /* ClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898D9F925700168003C1CBE /* ClinicVC.swift */; };
@@ -225,6 +228,9 @@
 
 /* Begin PBXFileReference section */
 		059EB8287ED303FB69D1DABE /* Pods_Holistic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holistic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18462857260218E9005F921F /* GlobalSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSearchVC.swift; sourceTree = "<group>"; };
+		18575F802603431A00770493 /* SingleLableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLableVC.swift; sourceTree = "<group>"; };
+		18575F812603431A00770493 /* SingleLableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLableVC.xib; sourceTree = "<group>"; };
 		185DBD5C25E3FB3E007AEC96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		188D4E56255071A000DE6715 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		1898D9F925700168003C1CBE /* ClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicVC.swift; sourceTree = "<group>"; };
@@ -746,6 +752,7 @@
 				79D6D00D2543F40A00945D7C /* MissedTaskTabVC.swift */,
 				79D6D0112543FFB100945D7C /* StatisticsTabVC.swift */,
 				79C980F925CC39DF005107EC /* NotificationVC.swift */,
+				18462857260218E9005F921F /* GlobalSearchVC.swift */,
 				79BC8378254311E0004A0B49 /* API Model Json */,
 				79BC837325430FF1004A0B49 /* Tableview Cell */,
 				79BC83682542FF1F004A0B49 /* Collectionview Cell */,
@@ -781,6 +788,8 @@
 				18B435AA2543544A00757513 /* ExpandCollapseTVC.xib */,
 				7952829125CD043A000876B2 /* NotificationTVC.swift */,
 				7952829225CD043A000876B2 /* NotificationTVC.xib */,
+				18575F802603431A00770493 /* SingleLableVC.swift */,
+				18575F812603431A00770493 /* SingleLableVC.xib */,
 			);
 			path = "Tableview Cell";
 			sourceTree = "<group>";
@@ -1142,6 +1151,7 @@
 				79D6D00A2543ECE700945D7C /* missed_task.json in Resources */,
 				7938F2B7254953340002A276 /* BannerImageCVC.xib in Resources */,
 				18B435AC2543544A00757513 /* ExpandCollapseTVC.xib in Resources */,
+				18575F832603431A00770493 /* SingleLableVC.xib in Resources */,
 				7938F2B0254947EC0002A276 /* ProductListTVC.xib in Resources */,
 				798249D925485B470035AB9E /* Restaurant.storyboard in Resources */,
 				1898DA0025700544003C1CBE /* MyCodeTVC.xib in Resources */,
@@ -1283,6 +1293,7 @@
 				79EFD6272542C44A006D06FB /* CollectionView.swift in Sources */,
 				79EFD6222542C44A006D06FB /* Fonts.swift in Sources */,
 				79EFD60E2542C44A006D06FB /* Utility.swift in Sources */,
+				18575F822603431A00770493 /* SingleLableVC.swift in Sources */,
 				79961B2825D80E1400C498F3 /* WelcomeCVC.swift in Sources */,
 				79BC836E25430784004A0B49 /* HolisticLifestyleTabVC.swift in Sources */,
 				793EA15E25CAA40400815A42 /* ProfileModel.swift in Sources */,
@@ -1351,6 +1362,7 @@
 				79EFD6162542C44A006D06FB /* String+RUI.swift in Sources */,
 				798249D525483BD60035AB9E /* HotelPackageTVC.swift in Sources */,
 				79F218362547EE1000D981C1 /* SideMenuTVC.swift in Sources */,
+				18462858260218E9005F921F /* GlobalSearchVC.swift in Sources */,
 				79C8F2AE254A908700481BB8 /* ContactInformationVC.swift in Sources */,
 				794EDD2525669F0C00F867EB /* LoyalityPointCVC.swift in Sources */,
 				79D6D00E2543F40A00945D7C /* MissedTaskTabVC.swift in Sources */,
@@ -1545,7 +1557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
@@ -1553,7 +1565,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";
@@ -1569,14 +1581,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Holistic/Holistic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 7ZN22873S4;
 				INFOPLIST_FILE = Holistic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = org.holisticlifestyle.com.HolisticLifestyle;
 				PRODUCT_NAME = "Holistic Lifestyle";
 				SWIFT_OBJC_BRIDGING_HEADER = "Holistic/Custom Class/Objective C/Holistic-Bridging-Header.h";

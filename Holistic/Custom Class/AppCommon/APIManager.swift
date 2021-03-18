@@ -27,6 +27,8 @@ struct API {
     static let UPDATE_PROFILE            =       BASE_URL + "user/updateProfile"
     static let GET_USER_DETAIL           =       BASE_URL + "user/getUserDetails"
     
+    static let GLOBAL_SEARCH             =       BASE_URL + "user/globalSearch"
+    
     static let GET_FLOWER_LIFE           =       BASE_URL + "lifestyle/floweroflife"
     static let GET_TASK_LIST             =       BASE_URL + "lifestyle/getTasks"
     static let MAKE_TASK_COMPLETE        =       BASE_URL + "lifestyle/complete_task"
@@ -286,5 +288,27 @@ public class APIManager {
                     break
             }
         }
+    }
+}
+
+struct JSONStringArrayEncoding: ParameterEncoding {
+    private let jsonArray: [[String: String]]
+
+    init(jsonArray: [[String: String]]) {
+        self.jsonArray = jsonArray
+    }
+
+    func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var urlRequest = try urlRequest.asURLRequest()
+
+        let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [])
+
+        if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
+
+        urlRequest.httpBody = data
+
+        return urlRequest
     }
 }

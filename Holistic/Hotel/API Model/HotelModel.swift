@@ -35,6 +35,9 @@ struct HotelModel {
                 get_hotels_media.append(MediaModel.init(temp))
             }
         }
+        else if let temp = dict["get_single_media"] as? [String : Any] {
+            get_hotels_media.append(MediaModel.init(temp))
+        }
         get_packages = [PackageModel]()
         if let tempData = dict["get_packages"] as? [[String : Any]] {
             for temp in tempData {

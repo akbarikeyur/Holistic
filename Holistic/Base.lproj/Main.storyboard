@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atb-Kb-hCe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atb-Kb-hCe">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -19,7 +20,7 @@
         <!--LaunchVC-->
         <scene sceneID="EVQ-YI-8gU">
             <objects>
-                <viewController storyboardIdentifier="LaunchVC" id="yZh-Wp-85p" customClass="LaunchVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchVC" id="yZh-Wp-85p" customClass="LaunchVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RVy-b8-5VX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +51,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ybM-AT-zP4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wde-16-ggE" firstAttribute="centerX" secondItem="RVy-b8-5VX" secondAttribute="centerX" id="37r-BV-BpK"/>
                             <constraint firstItem="j1B-lg-RM6" firstAttribute="leading" secondItem="ybM-AT-zP4" secondAttribute="leading" constant="10" id="AXz-PE-b2N"/>
@@ -64,7 +66,6 @@
                             <constraint firstItem="Edj-4Y-0EZ" firstAttribute="top" secondItem="Wde-16-ggE" secondAttribute="bottom" constant="20" id="mr1-Yz-UYz"/>
                             <constraint firstItem="ybM-AT-zP4" firstAttribute="trailing" secondItem="j1B-lg-RM6" secondAttribute="trailing" constant="10" id="pTu-si-xoz"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ybM-AT-zP4"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Qh-jx-Qji"/>
                     <connections>
@@ -81,7 +82,7 @@
         <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="WelcomeVC" id="BYZ-38-t0r" customClass="WelcomeVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="BYZ-38-t0r" customClass="WelcomeVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +103,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="QFE-qe-eMw" secondAttribute="trailing" constant="5" id="70h-EJ-pRa"/>
                                             <constraint firstAttribute="bottom" secondItem="QFE-qe-eMw" secondAttribute="bottom" constant="5" id="GzY-IN-9UJ"/>
@@ -123,7 +124,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="eT5-ZE-sVr" secondAttribute="trailing" constant="5" id="06m-sP-hwU"/>
                                             <constraint firstAttribute="bottom" secondItem="eT5-ZE-sVr" secondAttribute="bottom" constant="5" id="8Ux-bO-Rrd"/>
@@ -144,7 +145,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="D8c-OL-9tx" secondAttribute="bottom" constant="5" id="4di-BO-dp2"/>
                                             <constraint firstAttribute="trailing" secondItem="D8c-OL-9tx" secondAttribute="trailing" constant="5" id="SNd-Ix-wUY"/>
@@ -165,7 +166,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="zCb-dQ-Bok" firstAttribute="top" secondItem="Qt4-Rk-rYy" secondAttribute="top" constant="5" id="5Xo-Fc-vyJ"/>
                                             <constraint firstAttribute="trailing" secondItem="zCb-dQ-Bok" secondAttribute="trailing" constant="5" id="DaK-xc-xar"/>
@@ -186,7 +187,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="0xU-ws-zkm" secondAttribute="trailing" constant="5" id="Fbd-9U-JL6"/>
                                             <constraint firstItem="0xU-ws-zkm" firstAttribute="top" secondItem="fBb-tT-Hx1" secondAttribute="top" constant="5" id="GCc-KZ-Rxu"/>
@@ -207,7 +208,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Z1r-Ih-UEe" firstAttribute="leading" secondItem="iIe-f5-7UK" secondAttribute="leading" constant="5" id="PaM-zV-O0S"/>
                                             <constraint firstAttribute="trailing" secondItem="Z1r-Ih-UEe" secondAttribute="trailing" constant="5" id="Quv-U4-2NS"/>
@@ -216,7 +217,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="tg6-wC-BCa" firstAttribute="top" secondItem="tvm-GX-IrE" secondAttribute="top" id="3aP-Dq-NFj"/>
                                     <constraint firstItem="fBb-tT-Hx1" firstAttribute="width" secondItem="Buh-6D-Ucg" secondAttribute="width" id="43a-IE-CUT"/>
@@ -261,14 +262,14 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="rJv-pF-C2S">
-                                <rect key="frame" x="0.0" y="451" width="320" height="37"/>
+                                <rect key="frame" x="0.0" y="460.5" width="320" height="27.5"/>
                                 <color key="pageIndicatorTintColor" red="0.80784313730000001" green="0.77647058820000003" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRz-iu-RzL">
                                 <rect key="frame" x="0.0" y="498" width="320" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEM-9x-oba" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEM-9x-oba" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Kv9-lI-peU"/>
@@ -287,7 +288,7 @@
                                             <action selector="clickToSkip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oKp-bp-vyI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXL-7u-cBf" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXL-7u-cBf" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="250" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="bSj-Xm-YjH"/>
@@ -307,7 +308,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="68V-Ou-Kun"/>
                                     <constraint firstItem="uEM-9x-oba" firstAttribute="top" secondItem="fRz-iu-RzL" secondAttribute="top" id="C91-Et-aeC"/>
@@ -319,7 +320,8 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fRz-iu-RzL" secondAttribute="trailing" id="35g-c0-5oe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tvm-GX-IrE" secondAttribute="trailing" constant="5" id="7Az-wh-ZBF"/>
@@ -335,7 +337,6 @@
                             <constraint firstItem="pUA-BQ-7NJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fTC-hQ-Q5e"/>
                             <constraint firstItem="fRz-iu-RzL" firstAttribute="top" secondItem="rJv-pF-C2S" secondAttribute="bottom" constant="10" id="wTQ-rp-mFb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="DD0-ao-kZo"/>
                     <connections>
@@ -357,13 +358,13 @@
         <!--Mobile LoginVC-->
         <scene sceneID="gvE-f0-5xR">
             <objects>
-                <viewController storyboardIdentifier="MobileLoginVC" id="qV7-K8-9Wt" customClass="MobileLoginVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MobileLoginVC" id="qV7-K8-9Wt" customClass="MobileLoginVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOF-Lm-47R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zy-Pt-Orj" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="20" y="124.5" width="280" height="35.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zy-Pt-Orj" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                <rect key="frame" x="20" y="125" width="280" height="35"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -374,7 +375,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Phone Number to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sjH-ta-yQG" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Phone Number to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sjH-ta-yQG" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="165" width="280" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -386,7 +387,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7h-85-C1a" customClass="View" customModule="Holistic" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7h-85-C1a" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="234" width="280" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCr-nB-Amw">
@@ -399,10 +400,10 @@
                                                     <constraint firstAttribute="height" constant="20" id="sYf-sZ-tLm"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOR-7I-GuA" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOR-7I-GuA" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="15.5" width="34.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
-                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -417,7 +418,7 @@
                                                     <action selector="clickToSelectCountryCode:" destination="qV7-K8-9Wt" eventType="touchUpInside" id="ehu-3k-zbf"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJM-Ba-qYg" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJM-Ba-qYg" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                 <rect key="frame" x="89.5" y="5" width="1" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="j9B-aC-lDu"/>
@@ -429,7 +430,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="QOR-7I-GuA" firstAttribute="leading" secondItem="t5z-ui-Jsd" secondAttribute="trailing" constant="10" id="2Ha-UU-dbK"/>
                                             <constraint firstItem="t5z-ui-Jsd" firstAttribute="leading" secondItem="HCr-nB-Amw" secondAttribute="leading" constant="15" id="2xv-D5-cOd"/>
@@ -446,7 +447,7 @@
                                             <constraint firstItem="0XO-zA-J3M" firstAttribute="leading" secondItem="HCr-nB-Amw" secondAttribute="leading" id="sMG-5S-mJC"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000 0000 000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUy-sE-z1K" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000 0000 000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUy-sE-z1K" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="100.5" y="0.0" width="169.5" height="50"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -458,7 +459,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="QUy-sE-z1K" secondAttribute="bottom" id="7el-WU-Ugk"/>
                                     <constraint firstAttribute="bottom" secondItem="HCr-nB-Amw" secondAttribute="bottom" id="Ipj-Ct-SKx"/>
@@ -481,7 +482,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-AN-JOX" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-AN-JOX" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="304" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.62352941176470589" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -503,14 +504,14 @@
                                     <action selector="clickToSignIn:" destination="qV7-K8-9Wt" eventType="touchUpInside" id="zXE-Vm-vOL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-Y7-qU8" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-Y7-qU8" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="518" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0Rb-SD-fYE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                 <state key="normal" title="If you are not already a member, Sign Up">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -522,7 +523,7 @@
                                     <action selector="clickToSignup:" destination="qV7-K8-9Wt" eventType="touchUpInside" id="xxU-HL-LjX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFW-Uf-hOT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFW-Uf-hOT">
                                 <rect key="frame" x="0.0" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EQe-G1-zht"/>
@@ -535,7 +536,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="76Y-9q-BEF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="76Y-9q-BEF" firstAttribute="trailing" secondItem="7zy-Pt-Orj" secondAttribute="trailing" constant="20" id="3wT-OA-RTz"/>
                             <constraint firstItem="76Y-9q-BEF" firstAttribute="trailing" secondItem="gaM-Y7-qU8" secondAttribute="trailing" constant="20" id="8wK-hV-fBc"/>
@@ -555,7 +557,6 @@
                             <constraint firstItem="sjH-ta-yQG" firstAttribute="top" secondItem="7zy-Pt-Orj" secondAttribute="bottom" constant="5" id="js7-BS-vhI"/>
                             <constraint firstItem="mFW-Uf-hOT" firstAttribute="leading" secondItem="76Y-9q-BEF" secondAttribute="leading" id="qQn-g9-5O3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="76Y-9q-BEF"/>
                     </view>
                     <navigationItem key="navigationItem" id="4JP-Ss-S2c"/>
                     <connections>
@@ -572,12 +573,12 @@
         <!--Select UserVC-->
         <scene sceneID="oBX-Gd-E00">
             <objects>
-                <viewController storyboardIdentifier="SelectUserVC" id="hLO-Pp-k0s" customClass="SelectUserVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectUserVC" id="hLO-Pp-k0s" customClass="SelectUserVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKw-C3-Iaf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-WT-IFh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-WT-IFh">
                                 <rect key="frame" x="0.0" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CvG-sl-PsB"/>
@@ -589,8 +590,8 @@
                                     <action selector="clickToBack:" destination="hLO-Pp-k0s" eventType="touchUpInside" id="kOO-PS-Cgp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNt-In-eNC" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="109" y="29.5" width="102" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNt-In-eNC" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                <rect key="frame" x="113.5" y="29.5" width="93" height="21"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -609,7 +610,7 @@
                                     <outlet property="delegate" destination="hLO-Pp-k0s" id="aUV-we-0gB"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elb-oT-mWM" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elb-oT-mWM" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="498" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -632,7 +633,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2Gf-dn-Fee"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S7f-eB-pdP" firstAttribute="leading" secondItem="2Gf-dn-Fee" secondAttribute="leading" id="5TT-BP-Gkc"/>
                             <constraint firstItem="2Gf-dn-Fee" firstAttribute="trailing" secondItem="elb-oT-mWM" secondAttribute="trailing" constant="20" id="AsF-Gy-qay"/>
@@ -646,7 +648,6 @@
                             <constraint firstItem="2Gf-dn-Fee" firstAttribute="bottom" secondItem="elb-oT-mWM" secondAttribute="bottom" constant="20" id="lMl-gR-O6h"/>
                             <constraint firstItem="pNt-In-eNC" firstAttribute="centerY" secondItem="bqG-WT-IFh" secondAttribute="centerY" id="tqJ-fD-B7P"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2Gf-dn-Fee"/>
                     </view>
                     <connections>
                         <outlet property="tblView" destination="S7f-eB-pdP" id="esB-Ge-Yvs"/>
@@ -659,24 +660,24 @@
         <!--VerificationVC-->
         <scene sceneID="r0u-Cx-1Tb">
             <objects>
-                <viewController storyboardIdentifier="OTPVerificationVC" id="q2c-ni-JWV" customClass="OTPVerificationVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OTPVerificationVC" id="q2c-ni-JWV" customClass="OTPVerificationVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wkn-Ec-SU8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgz-uT-Tlp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgz-uT-Tlp">
                                 <rect key="frame" x="0.0" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="HMK-1y-mZf"/>
                                     <constraint firstAttribute="height" constant="50" id="ws1-Do-dSy"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="clickToBack:" destination="q2c-ni-JWV" eventType="touchUpInside" id="taS-Fq-Vq9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAI-xD-C88" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAI-xD-C88" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="194" width="280" height="35"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -688,7 +689,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="my3-8f-JGs" customClass="View" customModule="Holistic" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="my3-8f-JGs" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="259" width="280" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLK-G7-gt4">
@@ -699,7 +700,7 @@
                                         </constraints>
                                         <state key="normal" image="fingerprint"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfQ-1w-Xte" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfQ-1w-Xte" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -711,7 +712,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="pLK-G7-gt4" firstAttribute="leading" secondItem="my3-8f-JGs" secondAttribute="leading" constant="10" id="52d-Ud-lRw"/>
                                     <constraint firstItem="pLK-G7-gt4" firstAttribute="centerY" secondItem="my3-8f-JGs" secondAttribute="centerY" id="Lo0-pq-8A2"/>
@@ -733,7 +734,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7g-nj-KU7" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7g-nj-KU7" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="329" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -756,7 +757,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ent-hP-SMZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="my3-8f-JGs" firstAttribute="leading" secondItem="Ent-hP-SMZ" secondAttribute="leading" constant="20" id="1AB-wA-Il0"/>
                             <constraint firstItem="sgz-uT-Tlp" firstAttribute="top" secondItem="Ent-hP-SMZ" secondAttribute="top" constant="20" id="1aC-5g-3tb"/>
@@ -770,7 +772,6 @@
                             <constraint firstItem="B7g-nj-KU7" firstAttribute="top" secondItem="my3-8f-JGs" secondAttribute="bottom" constant="20" id="y0P-VB-md2"/>
                             <constraint firstItem="sgz-uT-Tlp" firstAttribute="leading" secondItem="Ent-hP-SMZ" secondAttribute="leading" id="yUd-o4-2gj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ent-hP-SMZ"/>
                     </view>
                     <connections>
                         <outlet property="otpTxt" destination="MfQ-1w-Xte" id="gWH-XN-35I"/>
@@ -783,7 +784,7 @@
         <!--Custom Tab Bar Controller-->
         <scene sceneID="Arg-S8-A8b">
             <objects>
-                <tabBarController storyboardIdentifier="CustomTabBarController" id="EDn-7i-ggX" customClass="CustomTabBarController" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CustomTabBarController" id="EDn-7i-ggX" customClass="CustomTabBarController" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pat-7p-W3n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -801,8 +802,8 @@
                     <view key="view" contentMode="scaleToFill" id="Kkd-QJ-5KT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2ou-CX-Ghy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cex-85-eR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -812,12 +813,12 @@
         <!--Side MenuVC-->
         <scene sceneID="Jg7-PC-paf">
             <objects>
-                <viewController storyboardIdentifier="SideMenuVC" id="dqQ-LJ-PzZ" customClass="SideMenuVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuVC" id="dqQ-LJ-PzZ" customClass="SideMenuVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F8n-ct-UtE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-zi-nQ1" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-zi-nQ1" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="270" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Mms-HB-eFq"/>
@@ -839,7 +840,7 @@
                                     <action selector="clickToClose:" destination="dqQ-LJ-PzZ" eventType="touchUpInside" id="0AM-y4-raz"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-NA-9k9" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-NA-9k9" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="225" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MiI-bw-3nc"/>
@@ -861,7 +862,7 @@
                                     <action selector="clickToSetting:" destination="dqQ-LJ-PzZ" eventType="touchUpInside" id="sui-iV-sIl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Helen Herry," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEY-IK-USy" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Helen Herry," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEY-IK-USy" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="60" width="300" height="29.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -873,10 +874,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="helen@dummy.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-GP-2Pv" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="helen@dummy.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-GP-2Pv" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="89.5" width="300" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
-                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
@@ -894,7 +895,8 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OKf-Mt-fzw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oEY-IK-USy" firstAttribute="top" secondItem="SJe-zi-nQ1" secondAttribute="bottom" id="0Zk-dP-I2t"/>
                             <constraint firstItem="YPC-ZA-13U" firstAttribute="leading" secondItem="OKf-Mt-fzw" secondAttribute="leading" id="Wgq-1G-Awu"/>
@@ -911,7 +913,6 @@
                             <constraint firstItem="SJe-zi-nQ1" firstAttribute="leading" secondItem="LVR-NA-9k9" secondAttribute="trailing" constant="5" id="xQF-Ug-xyz"/>
                             <constraint firstItem="SJe-zi-nQ1" firstAttribute="centerY" secondItem="LVR-NA-9k9" secondAttribute="centerY" id="zeF-ni-5Jc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="OKf-Mt-fzw"/>
                     </view>
                     <connections>
                         <outlet property="emailLbl" destination="b5v-GP-2Pv" id="xM1-G8-W3l"/>
@@ -926,12 +927,12 @@
         <!--Email LoginVC-->
         <scene sceneID="v0Q-S9-qKx">
             <objects>
-                <viewController storyboardIdentifier="EmailLoginVC" id="ynF-eY-E8X" customClass="EmailLoginVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmailLoginVC" id="ynF-eY-E8X" customClass="EmailLoginVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gcB-pa-872">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gl-ib-Xzd" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gl-ib-Xzd" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="103" width="280" height="35"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -943,7 +944,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your credentials to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LxB-ea-1Tr" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your credentials to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LxB-ea-1Tr" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="143" width="280" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -955,7 +956,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7O-ja-3dG" customClass="View" customModule="Holistic" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7O-ja-3dG" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="212" width="280" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnF-65-5zj">
@@ -966,7 +967,7 @@
                                         </constraints>
                                         <state key="normal" image="email"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1z-zC-Vuw" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1z-zC-Vuw" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -978,7 +979,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="L1z-zC-Vuw" firstAttribute="top" secondItem="C7O-ja-3dG" secondAttribute="top" id="S8d-2K-VFp"/>
                                     <constraint firstItem="WnF-65-5zj" firstAttribute="leading" secondItem="C7O-ja-3dG" secondAttribute="leading" constant="10" id="V1W-W9-LkM"/>
@@ -1000,7 +1001,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yi1-bF-1jb" customClass="View" customModule="Holistic" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yi1-bF-1jb" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="272" width="280" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZr-Av-yg8">
@@ -1011,7 +1012,7 @@
                                         </constraints>
                                         <state key="normal" image="password"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ESI-oD-4G7" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ESI-oD-4G7" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="58" y="0.0" width="182" height="50"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1034,7 +1035,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="hZr-Av-yg8" firstAttribute="leading" secondItem="yi1-bF-1jb" secondAttribute="leading" constant="10" id="6Fc-dG-p9z"/>
                                     <constraint firstItem="v0m-yf-efI" firstAttribute="leading" secondItem="ESI-oD-4G7" secondAttribute="trailing" id="DIn-lR-uWW"/>
@@ -1059,10 +1060,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0xK-00-1MA" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="20" y="342" width="86.5" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0xK-00-1MA" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                <rect key="frame" x="20" y="342" width="79.5" height="14"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
-                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -1072,14 +1073,14 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkf-A8-PqF">
-                                <rect key="frame" x="111.5" y="333.5" width="51" height="31"/>
+                                <rect key="frame" x="104.5" y="333.5" width="51" height="31"/>
                                 <color key="onTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqc-oe-CaE" customClass="Button" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="196" y="335.5" width="104" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqc-oe-CaE" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                <rect key="frame" x="201" y="336" width="99" height="26"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <state key="normal" title="Forgot Password?">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -1091,7 +1092,7 @@
                                     <action selector="clickToForgotPassword:" destination="ynF-eY-E8X" eventType="touchUpInside" id="5Zy-Fg-d9t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWB-Zt-fKg" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWB-Zt-fKg" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="389.5" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1113,14 +1114,14 @@
                                     <action selector="clickToSignIn:" destination="ynF-eY-E8X" eventType="touchUpInside" id="vdx-ZQ-tQQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8y-NH-NeK" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8y-NH-NeK" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="488" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="f0l-fF-1pH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <state key="normal" title="If not a member yet, Sign up">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -1132,14 +1133,14 @@
                                     <action selector="clickToSignup:" destination="ynF-eY-E8X" eventType="touchUpInside" id="iss-NV-ppv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W8-YA-Zdk" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W8-YA-Zdk" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="518" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="v7D-39-xtX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <state key="normal" title="If already a member in Clincia App, Click Here">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -1152,7 +1153,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TDC-wT-0n0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Kqc-oe-CaE" firstAttribute="centerY" secondItem="qkf-A8-PqF" secondAttribute="centerY" id="2Rc-5J-ZGX"/>
                             <constraint firstItem="TDC-wT-0n0" firstAttribute="trailing" secondItem="sWB-Zt-fKg" secondAttribute="trailing" constant="20" id="6JT-Y2-mfv"/>
@@ -1182,7 +1184,6 @@
                             <constraint firstItem="TDC-wT-0n0" firstAttribute="trailing" secondItem="LxB-ea-1Tr" secondAttribute="trailing" constant="20" id="yzq-RH-u0a"/>
                             <constraint firstItem="6W8-YA-Zdk" firstAttribute="leading" secondItem="TDC-wT-0n0" secondAttribute="leading" constant="10" id="zYS-af-70x"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TDC-wT-0n0"/>
                     </view>
                     <navigationItem key="navigationItem" id="7CH-6A-s54"/>
                     <connections>
@@ -1218,25 +1219,25 @@
         <!--Forgot PasswordVC-->
         <scene sceneID="4fd-VU-o1M">
             <objects>
-                <viewController storyboardIdentifier="ForgotPasswordVC" id="XiJ-2w-xmR" customClass="ForgotPasswordVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordVC" id="XiJ-2w-xmR" customClass="ForgotPasswordVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JDF-UN-TUK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7m-Xa-3zf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7m-Xa-3zf">
                                 <rect key="frame" x="0.0" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="ehE-b7-WoU"/>
                                     <constraint firstAttribute="height" constant="50" id="gOc-I2-Liu"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="clickToBack:" destination="XiJ-2w-xmR" eventType="touchUpInside" id="tbe-z5-FWk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAA-Iy-xas" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                <rect key="frame" x="20" y="174" width="280" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAA-Iy-xas" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                <rect key="frame" x="20" y="175" width="280" height="35"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1247,7 +1248,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your registered email address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xfo-5j-bSs" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your registered email address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xfo-5j-bSs" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="210" width="280" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -1259,7 +1260,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW0-zN-x8a" customClass="View" customModule="Holistic" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW0-zN-x8a" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="259" width="280" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHl-va-L08">
@@ -1270,7 +1271,7 @@
                                         </constraints>
                                         <state key="normal" image="email"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5is-kO-QU5" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5is-kO-QU5" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -1282,7 +1283,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="MHl-va-L08" firstAttribute="centerY" secondItem="NW0-zN-x8a" secondAttribute="centerY" id="4ue-OH-Svs"/>
                                     <constraint firstAttribute="trailing" secondItem="5is-kO-QU5" secondAttribute="trailing" constant="10" id="5mK-SE-Rf6"/>
@@ -1304,7 +1305,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-Z2-J82" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-Z2-J82" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="20" y="329" width="280" height="50"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1327,7 +1328,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8dA-Sd-iul"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I7m-Xa-3zf" firstAttribute="leading" secondItem="8dA-Sd-iul" secondAttribute="leading" id="6rr-aD-90N"/>
                             <constraint firstItem="8dA-Sd-iul" firstAttribute="trailing" secondItem="lf5-Z2-J82" secondAttribute="trailing" constant="20" id="72J-Bx-OBU"/>
@@ -1344,7 +1346,6 @@
                             <constraint firstItem="xfo-5j-bSs" firstAttribute="top" secondItem="xAA-Iy-xas" secondAttribute="bottom" id="ofS-Aq-X7w"/>
                             <constraint firstItem="xAA-Iy-xas" firstAttribute="leading" secondItem="8dA-Sd-iul" secondAttribute="leading" constant="20" id="veT-Mg-dZg"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8dA-Sd-iul"/>
                     </view>
                     <connections>
                         <outlet property="emailTxt" destination="5is-kO-QU5" id="jeB-TF-JRf"/>
@@ -1357,7 +1358,7 @@
         <!--SignupVC-->
         <scene sceneID="V8E-Yz-bpZ">
             <objects>
-                <viewController storyboardIdentifier="SignupVC" id="pLk-ms-qY0" customClass="SignupVC" customModule="Holistic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" id="pLk-ms-qY0" customClass="SignupVC" customModule="Holistic_Lifestyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C8O-ex-CLj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1037"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1366,10 +1367,10 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="1017"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcG-nF-L2T">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1017"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1016"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laG-xf-P1L" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="40" width="280" height="35.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laG-xf-P1L" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="40" width="280" height="35"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1380,8 +1381,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pxG-sy-1Bn" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="80.5" width="280" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pxG-sy-1Bn" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="80" width="280" height="19"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1392,8 +1393,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If already a member in Clincia App, use same email, password and phone number to synch your Clincia data." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUu-IA-str" customClass="Label" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="104.5" width="280" height="42.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If already a member in Clincia App, use same email, password and phone number to synch your Clincia data." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUu-IA-str" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="104" width="280" height="42"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1404,8 +1405,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enT-Vr-iaN" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="177" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enT-Vr-iaN" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="176" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGZ-MR-J8A">
                                                         <rect key="frame" x="10" y="6.5" width="38" height="37"/>
@@ -1415,7 +1416,7 @@
                                                         </constraints>
                                                         <state key="normal" image="username"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6c-Tv-xDl" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6c-Tv-xDl" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1427,7 +1428,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="XGZ-MR-J8A" firstAttribute="centerY" secondItem="enT-Vr-iaN" secondAttribute="centerY" id="8aF-YB-HLq"/>
                                                     <constraint firstItem="S6c-Tv-xDl" firstAttribute="leading" secondItem="XGZ-MR-J8A" secondAttribute="trailing" constant="10" id="V3u-dJ-tG7"/>
@@ -1449,8 +1450,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwS-G9-2yb" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="237" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwS-G9-2yb" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="236" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Z-X8-MWR">
                                                         <rect key="frame" x="10" y="6.5" width="38" height="37"/>
@@ -1460,7 +1461,7 @@
                                                         </constraints>
                                                         <state key="normal" image="email"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-RA-bnO" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-RA-bnO" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1472,7 +1473,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="Z8Z-X8-MWR" firstAttribute="centerY" secondItem="IwS-G9-2yb" secondAttribute="centerY" id="39i-VQ-7Ak"/>
                                                     <constraint firstAttribute="height" constant="50" id="Ebu-nT-Htb"/>
@@ -1494,8 +1495,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swm-wt-9jT" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="297" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swm-wt-9jT" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="296" width="280" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjL-HC-76P">
                                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="50"/>
@@ -1507,10 +1508,10 @@
                                                                     <constraint firstAttribute="height" constant="20" id="tqH-po-R2G"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sji-7u-zZ5" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sji-7u-zZ5" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                 <rect key="frame" x="50" y="15.5" width="34.5" height="19"/>
                                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
-                                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -1525,7 +1526,7 @@
                                                                     <action selector="clickToSelectPhoneCode:" destination="pLk-ms-qY0" eventType="touchUpInside" id="whG-Ke-V9V"/>
                                                                 </connections>
                                                             </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NJm-F6-DGI" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NJm-F6-DGI" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                 <rect key="frame" x="89.5" y="5" width="1" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="1" id="eh4-BC-7fD"/>
@@ -1537,7 +1538,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="NJm-F6-DGI" firstAttribute="leading" secondItem="4DB-lx-USX" secondAttribute="trailing" id="4D9-it-i0L"/>
                                                             <constraint firstItem="NJm-F6-DGI" firstAttribute="top" secondItem="sjL-HC-76P" secondAttribute="top" constant="5" id="5Rc-5Y-6zK"/>
@@ -1554,7 +1555,7 @@
                                                             <constraint firstItem="sji-7u-zZ5" firstAttribute="centerY" secondItem="sjL-HC-76P" secondAttribute="centerY" id="ygO-yP-s6v"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000 0000 000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNm-8y-miY" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000 0000 000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNm-8y-miY" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="100.5" y="0.0" width="169.5" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1566,7 +1567,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="XNm-8y-miY" firstAttribute="leading" secondItem="sjL-HC-76P" secondAttribute="trailing" constant="10" id="8RX-2d-4ID"/>
                                                     <constraint firstAttribute="trailing" secondItem="XNm-8y-miY" secondAttribute="trailing" constant="10" id="FlG-v6-Itm"/>
@@ -1589,8 +1590,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwf-8A-ad5" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="357" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwf-8A-ad5" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="356" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgj-bk-ET4">
                                                         <rect key="frame" x="10" y="6.5" width="38" height="37"/>
@@ -1600,7 +1601,7 @@
                                                         </constraints>
                                                         <state key="normal" image="address_pin"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-3d-84q" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-3d-84q" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1634,10 +1635,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abY-vn-tVt" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="417" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abY-vn-tVt" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="416" width="280" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Building Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXH-TC-xPM" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Building Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXH-TC-xPM" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="260" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1669,10 +1670,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhY-cM-eay" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="477" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhY-cM-eay" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="476" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Floor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xB7-UY-ngk" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Floor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xB7-UY-ngk" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1704,10 +1705,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJD-xe-xXD" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="165" y="477" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJD-xe-xXD" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="165" y="476" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Room No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPY-IL-9ts" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Room No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPY-IL-9ts" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1739,8 +1740,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIo-uD-rB2" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="537" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIo-uD-rB2" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="536" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmB-pg-cze">
                                                         <rect key="frame" x="10" y="6.5" width="38" height="37"/>
@@ -1750,7 +1751,7 @@
                                                         </constraints>
                                                         <state key="normal" image="country"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-5r-ckf" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-5r-ckf" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="190" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1769,7 +1770,7 @@
                                                             <action selector="clickToSelectCountry:" destination="pLk-ms-qY0" eventType="touchUpInside" id="mr8-g9-75i"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGN-Pf-E9B" customClass="ImageView" customModule="Holistic" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGN-Pf-E9B" customClass="ImageView" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="249" y="5" width="1" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="UYi-4s-X4Z"/>
@@ -1781,7 +1782,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="bGN-Pf-E9B" secondAttribute="trailing" constant="30" id="1rm-tk-aZW"/>
                                                     <constraint firstItem="Bmi-5r-ckf" firstAttribute="leading" secondItem="HmB-pg-cze" secondAttribute="trailing" constant="10" id="36O-OL-pkD"/>
@@ -1810,10 +1811,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vda-NH-4bQ" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="597" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vda-NH-4bQ" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="596" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXd-sa-BiP" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXd-sa-BiP" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1825,7 +1826,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="xXd-sa-BiP" secondAttribute="trailing" constant="10" id="GHq-Ep-kIY"/>
                                                     <constraint firstAttribute="bottom" secondItem="xXd-sa-BiP" secondAttribute="bottom" id="PC1-xO-8f5"/>
@@ -1845,10 +1846,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksh-7U-tzF" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="165" y="597" width="135" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksh-7U-tzF" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="165" y="596" width="135" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLd-g6-V8q" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLd-g6-V8q" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="0.0" width="115" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1860,7 +1861,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="LLd-g6-V8q" secondAttribute="bottom" id="8Ev-qw-2kh"/>
                                                     <constraint firstAttribute="height" constant="50" id="K4f-az-EG4"/>
@@ -1880,8 +1881,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-pn-9og" customClass="View" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="657" width="280" height="50"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-pn-9og" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="656" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBc-um-D8E">
                                                         <rect key="frame" x="10" y="6.5" width="38" height="37"/>
@@ -1891,7 +1892,7 @@
                                                         </constraints>
                                                         <state key="normal" image="aboutus"/>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How did you find about us" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tL-HB-8ZP" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="How did you find about us" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tL-HB-8ZP" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                         <rect key="frame" x="58" y="0.0" width="212" height="50"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1903,7 +1904,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="HBc-um-D8E" firstAttribute="leading" secondItem="fQh-pn-9og" secondAttribute="leading" constant="10" id="4MI-XC-Xbw"/>
                                                     <constraint firstAttribute="bottom" secondItem="7tL-HB-8ZP" secondAttribute="bottom" id="5d8-bT-FCc"/>
@@ -1926,12 +1927,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zVB-d6-Mt3">
-                                                <rect key="frame" x="0.0" y="717" width="320" height="110"/>
+                                                <rect key="frame" x="0.0" y="716" width="320" height="110"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZH-RH-RX3">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                                         <subviews>
-                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0By-9K-j1H" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0By-9K-j1H" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="0.0" width="280" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-MN-4kc">
@@ -1942,7 +1943,7 @@
                                                                         </constraints>
                                                                         <state key="normal" image="password"/>
                                                                     </button>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-5K-HGg" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-5K-HGg" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                         <rect key="frame" x="58" y="0.0" width="182" height="50"/>
                                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1965,7 +1966,7 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="44f-IA-JiV" secondAttribute="trailing" id="Azb-bU-XWk"/>
                                                                     <constraint firstItem="44f-IA-JiV" firstAttribute="leading" secondItem="Mna-5K-HGg" secondAttribute="trailing" id="Crd-8v-AHJ"/>
@@ -1990,7 +1991,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUo-12-RVa" customClass="View" customModule="Holistic" customModuleProvider="target">
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUo-12-RVa" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="60" width="280" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbh-ln-89n">
@@ -2001,7 +2002,7 @@
                                                                         </constraints>
                                                                         <state key="normal" image="password"/>
                                                                     </button>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhU-7S-WCS" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhU-7S-WCS" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                                                         <rect key="frame" x="58" y="0.0" width="182" height="50"/>
                                                                         <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -2025,7 +2026,7 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstItem="lDM-Ma-77A" firstAttribute="leading" secondItem="yhU-7S-WCS" secondAttribute="trailing" id="0eu-b6-wlw"/>
                                                                     <constraint firstAttribute="height" constant="50" id="2pY-IH-B8j"/>
@@ -2051,7 +2052,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="cUo-12-RVa" secondAttribute="bottom" id="31m-dq-iGO"/>
                                                             <constraint firstAttribute="trailing" secondItem="cUo-12-RVa" secondAttribute="trailing" constant="20" id="4ZV-Dc-zNh"/>
@@ -2065,8 +2066,8 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOh-Fh-HYe" customClass="Button" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="867" width="280" height="50"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOh-Fh-HYe" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="866" width="280" height="50"/>
                                                 <color key="backgroundColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="zcE-8n-kOy"/>
@@ -2087,14 +2088,14 @@
                                                     <action selector="clickToSignup:" destination="pLk-ms-qY0" eventType="touchUpInside" id="Wzg-Ct-5Ms"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-2h-QLa" customClass="Button" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="947" width="280" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-2h-QLa" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="946" width="280" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="nXw-dm-3Lj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="14"/>
                                                 <state key="normal" title="Already member? Sign in">
-                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -2106,14 +2107,14 @@
                                                     <action selector="clickToLogin:" destination="pLk-ms-qY0" eventType="touchUpInside" id="kik-fE-jks"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqY-iO-jrG" customClass="Button" customModule="Holistic" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="977" width="300" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqY-iO-jrG" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="976" width="300" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ukt-jQ-kcN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                                 <state key="normal" title="If already a member in Clincia App, Click Here">
-                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -2126,7 +2127,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Swm-wt-9jT" firstAttribute="leading" secondItem="HcG-nF-L2T" secondAttribute="leading" constant="20" id="1E8-zU-PdM"/>
                                             <constraint firstAttribute="trailing" secondItem="EJD-xe-xXD" secondAttribute="trailing" constant="20" id="2NH-Bj-BhW"/>
@@ -2198,14 +2199,14 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jsP-MO-RSd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NY3-s3-Nqp" firstAttribute="leading" secondItem="jsP-MO-RSd" secondAttribute="leading" id="Awr-hu-Ygi"/>
                             <constraint firstItem="NY3-s3-Nqp" firstAttribute="top" secondItem="jsP-MO-RSd" secondAttribute="top" constant="20" id="FaQ-tB-eEL"/>
                             <constraint firstItem="NY3-s3-Nqp" firstAttribute="trailing" secondItem="jsP-MO-RSd" secondAttribute="trailing" id="ZdI-ia-cHx"/>
                             <constraint firstItem="NY3-s3-Nqp" firstAttribute="bottom" secondItem="jsP-MO-RSd" secondAttribute="bottom" id="i3u-d7-U9k"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="jsP-MO-RSd"/>
                     </view>
                     <size key="freeformSize" width="320" height="1037"/>
                     <connections>
@@ -2240,14 +2241,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coY-ua-dw1">
                             <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-75-zR1" customClass="Button" customModule="Holistic" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-75-zR1" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                     <rect key="frame" x="255" y="9.5" width="60" height="31"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="jru-Xz-M7N"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <state key="normal" title="Cancel">
-                                        <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleColor" systemColor="systemGrayColor"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
@@ -2259,7 +2260,7 @@
                                         <action selector="clickToCloseSearchView:" destination="pLk-ms-qY0" eventType="touchUpInside" id="GQl-Wl-cmJ"/>
                                     </connections>
                                 </button>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RoD-O8-uyS" customClass="TextField" customModule="Holistic" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RoD-O8-uyS" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                     <rect key="frame" x="10" y="7" width="235" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="UnJ-m5-gTb"/>
@@ -2289,7 +2290,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="RoD-O8-uyS" firstAttribute="centerY" secondItem="coY-ua-dw1" secondAttribute="centerY" id="0l1-Qe-cGV"/>
                                 <constraint firstItem="cEO-75-zR1" firstAttribute="centerY" secondItem="coY-ua-dw1" secondAttribute="centerY" id="NaB-wu-zbf"/>
@@ -2308,6 +2309,7 @@
                             </connections>
                         </tableView>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="c1R-HA-329"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="4nM-uz-fAp" firstAttribute="leading" secondItem="c1R-HA-329" secondAttribute="leading" id="Aop-aP-BgK"/>
@@ -2318,7 +2320,6 @@
                         <constraint firstItem="4nM-uz-fAp" firstAttribute="top" secondItem="coY-ua-dw1" secondAttribute="bottom" id="cM1-Eg-jj7"/>
                         <constraint firstItem="c1R-HA-329" firstAttribute="trailing" secondItem="coY-ua-dw1" secondAttribute="trailing" id="gFl-QR-a5J"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="c1R-HA-329"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="4386" y="1062"/>
@@ -2360,6 +2361,107 @@
             <point key="canvasLocation" x="-574" y="137"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0xK-00-1MA">
+            <size key="intrinsicContentSize" width="79.5" height="14"/>
+        </designable>
+        <designable name="2BB-AN-JOX">
+            <size key="intrinsicContentSize" width="66" height="33"/>
+        </designable>
+        <designable name="6W8-YA-Zdk">
+            <size key="intrinsicContentSize" width="247" height="26"/>
+        </designable>
+        <designable name="6gl-ib-Xzd">
+            <size key="intrinsicContentSize" width="208.5" height="35"/>
+        </designable>
+        <designable name="7zy-Pt-Orj">
+            <size key="intrinsicContentSize" width="208.5" height="35"/>
+        </designable>
+        <designable name="B7g-nj-KU7">
+            <size key="intrinsicContentSize" width="83" height="33"/>
+        </designable>
+        <designable name="Kqc-oe-CaE">
+            <size key="intrinsicContentSize" width="99" height="26"/>
+        </designable>
+        <designable name="LVR-NA-9k9">
+            <size key="intrinsicContentSize" width="20" height="22"/>
+        </designable>
+        <designable name="LxB-ea-1Tr">
+            <size key="intrinsicContentSize" width="241" height="19"/>
+        </designable>
+        <designable name="MUu-IA-str">
+            <size key="intrinsicContentSize" width="584.5" height="14"/>
+        </designable>
+        <designable name="MXL-7u-cBf">
+            <size key="intrinsicContentSize" width="38" height="33"/>
+        </designable>
+        <designable name="NdR-2h-QLa">
+            <size key="intrinsicContentSize" width="158" height="29"/>
+        </designable>
+        <designable name="QOR-7I-GuA">
+            <size key="intrinsicContentSize" width="18.5" height="19"/>
+        </designable>
+        <designable name="QOh-Fh-HYe">
+            <size key="intrinsicContentSize" width="86" height="33"/>
+        </designable>
+        <designable name="RqY-iO-jrG">
+            <size key="intrinsicContentSize" width="247" height="26"/>
+        </designable>
+        <designable name="SJe-zi-nQ1">
+            <size key="intrinsicContentSize" width="12.5" height="22"/>
+        </designable>
+        <designable name="b5v-GP-2Pv">
+            <size key="intrinsicContentSize" width="140" height="19"/>
+        </designable>
+        <designable name="cAI-xD-C88">
+            <size key="intrinsicContentSize" width="138.5" height="35"/>
+        </designable>
+        <designable name="cEO-75-zR1">
+            <size key="intrinsicContentSize" width="50" height="31"/>
+        </designable>
+        <designable name="elb-oT-mWM">
+            <size key="intrinsicContentSize" width="92" height="33"/>
+        </designable>
+        <designable name="gaM-Y7-qU8">
+            <size key="intrinsicContentSize" width="256" height="29"/>
+        </designable>
+        <designable name="l8y-NH-NeK">
+            <size key="intrinsicContentSize" width="153" height="26"/>
+        </designable>
+        <designable name="laG-xf-P1L">
+            <size key="intrinsicContentSize" width="108" height="35"/>
+        </designable>
+        <designable name="lf5-Z2-J82">
+            <size key="intrinsicContentSize" width="162" height="33"/>
+        </designable>
+        <designable name="oEY-IK-USy">
+            <size key="intrinsicContentSize" width="168" height="29.5"/>
+        </designable>
+        <designable name="pNt-In-eNC">
+            <size key="intrinsicContentSize" width="93" height="21"/>
+        </designable>
+        <designable name="pxG-sy-1Bn">
+            <size key="intrinsicContentSize" width="132" height="19"/>
+        </designable>
+        <designable name="sWB-Zt-fKg">
+            <size key="intrinsicContentSize" width="66" height="33"/>
+        </designable>
+        <designable name="sjH-ta-yQG">
+            <size key="intrinsicContentSize" width="271" height="19"/>
+        </designable>
+        <designable name="sji-7u-zZ5">
+            <size key="intrinsicContentSize" width="18.5" height="19"/>
+        </designable>
+        <designable name="uEM-9x-oba">
+            <size key="intrinsicContentSize" width="36" height="33"/>
+        </designable>
+        <designable name="xAA-Iy-xas">
+            <size key="intrinsicContentSize" width="218.5" height="35"/>
+        </designable>
+        <designable name="xfo-5j-bSs">
+            <size key="intrinsicContentSize" width="253.5" height="19"/>
+        </designable>
+    </designables>
     <resources>
         <image name="aboutus" width="38" height="37"/>
         <image name="address_pin" width="38" height="37"/>
@@ -2388,5 +2490,14 @@
         <image name="settings" width="20" height="20"/>
         <image name="temp_flag" width="25" height="18"/>
         <image name="username" width="38" height="37"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
