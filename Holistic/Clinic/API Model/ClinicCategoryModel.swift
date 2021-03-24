@@ -75,6 +75,21 @@ struct AppointmentModel {
     }
 }
 
+struct PrescriptionSectionModel {
+    var date : String!
+    var prescription : [PrescriptionModel]!
+    
+    init(_ dict : [String  :Any]) {
+        date = dict["date"] as? String ?? ""
+        prescription = [PrescriptionModel]()
+        if let tempData = dict["prescription"] as? [[String : Any]] {
+            for temp in tempData {
+                prescription.append(PrescriptionModel.init(temp))
+            }
+        }
+    }
+}
+
 struct PrescriptionModel {
     var RxName, RxDosageUnit, RxDosageFrequencyInfo, RxNameWithDuration, RxDosageInstruction, RxDurationUnit, RxDosageStrength, StartDate : String!
     var RxDuration : Double!

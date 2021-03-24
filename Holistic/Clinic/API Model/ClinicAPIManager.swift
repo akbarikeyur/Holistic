@@ -92,6 +92,7 @@ public class ClinicAPIManager {
     
     func serviceCallToGetDietPlan(_ completion: @escaping (_ data : [[String : Any]]) -> Void) {
         ClinicAPIManager.shared.callGetRequest((CLINIC_API.GET_DIET_PLAN + "&patientID=" + getClinicUserId()), true) { (dict) in
+            printData(dict)
             if let temp = dict["data"] as? [[String : Any]] {
                 completion(temp)
             }else{

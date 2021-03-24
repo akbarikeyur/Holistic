@@ -25,6 +25,7 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
     var missedTask = 0
     var completedTask = 0
     var totalTask = 0
+    var loyalPoint = 0
     var arrStatistic = [StatisticModel]()
     
     var arrDates = [String]()
@@ -52,6 +53,8 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
         totalLbl.text = String(totalTask)
         completedLbl.text = String(completedTask)
         missedLbl.text = String(missedTask)
+        loyalPointLbl.text = String(loyalPoint)
+        
         var botomPercentage = ""
         if(completedTask == 0 && missedTask == 0){
             percentageLbl.text = "0%"
@@ -206,6 +209,9 @@ class StatisticsTabVC: UIViewController, ChartViewDelegate {
 extension StatisticsTabVC {
     
     func serviceCallToGetStatistics() {
+        if fromDate == nil || toDate == nil {
+            return
+        }
         var param = [String : Any]()
         param["user_id"] = AppModel.shared.currentUser.id
         param["start_date"] = getDateStringFromDate(date: fromDate!, format: "yyyy-MM-dd")
@@ -215,7 +221,7 @@ extension StatisticsTabVC {
             self.missedTask = AppModel.shared.getIntValue(dict, "vMissedTask")
             self.completedTask = AppModel.shared.getIntValue(dict, "vCompletedTask")
             self.totalTask = AppModel.shared.getIntValue(dict, "vTotalTask")
-            
+            self.loyalPoint = AppModel.shared.getIntValue(dict, "vLoyaltyPoints")
             self.arrStatistic = [StatisticModel]()
             if let data = dict["data"] as? [[String : Any]] {
                 for temp in data {

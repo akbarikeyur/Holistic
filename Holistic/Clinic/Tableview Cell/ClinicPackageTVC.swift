@@ -11,6 +11,7 @@ import UIKit
 class ClinicPackageTVC: UITableViewCell {
 
     @IBOutlet weak var titleLbl: Label!
+    @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var dateLbl: Label!
     @IBOutlet weak var descLbl: Label!
     @IBOutlet weak var appointmentTxt: TextField!
@@ -26,16 +27,17 @@ class ClinicPackageTVC: UITableViewCell {
 
     func setupDetails(_ dict : ClinicPackageModel) {
         titleLbl.text = dict.PatientName
-        let strDate = dict.PackageSoldOnDate.components(separatedBy: "T").first!
-        dateLbl.text = ""
-        if let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd") {
-            dateLbl.text = "Sold on " + getDateStringFromDate(date: date, format: "EEE") + ", " + getDateStringFromDate(date: date, format: "dd-MMM-yyyy")
-            if getDifferentTimeAgo(date) != "" {
-                dateLbl.text = dateLbl.text! + " (" + getDifferentTimeAgo(date) + ")"
-            }
-        }else{
-            dateLbl.text = "Sold on " + strDate
-        }
+        dateView.isHidden = true
+//        let strDate = dict.PackageSoldOnDate.components(separatedBy: "T").first!
+//        dateLbl.text = ""
+//        if let date = getDateFromDateString(date: strDate, format: "yyyy-MM-dd") {
+//            dateLbl.text = "Sold on " + getDateStringFromDate(date: date, format: "EEE") + ", " + getDateStringFromDate(date: date, format: "dd-MMM-yyyy")
+//            if getDifferentTimeAgo(date) != "" {
+//                dateLbl.text = dateLbl.text! + " (" + getDifferentTimeAgo(date) + ")"
+//            }
+//        }else{
+//            dateLbl.text = "Sold on " + strDate
+//        }
         descLbl.text = dict.PackageName
         if dict.PackageIsCompleted == 1 {
             onGoingBtn.setTitle("Completed", for: .normal)
@@ -49,8 +51,8 @@ class ClinicPackageTVC: UITableViewCell {
             onGoingBtn.backgroundColor = OrangeColor
         }
         orgNameLbl.text = dict.OrganisationName
-        progressLbl.text = String(Int((dict.PackageServiceTotalCount / dict.PackageServiceCompletedCount) * 100)) + "%"
-        progressBar.progress = Float((dict.PackageServiceTotalCount / dict.PackageServiceCompletedCount) * 100)
+        progressLbl.text = String(Int(dict.PackageServiceCompletedCount * 100 / dict.PackageServiceTotalCount)) + "%"
+        progressBar.progress = Float(dict.PackageServiceCompletedCount * 100 / dict.PackageServiceTotalCount) / 100
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -82,6 +82,7 @@ class MobileLoginVC: UIViewController {
             param["countrycode"] = self.selectedCountry.phonecode
             param["phonenumber"] = phoneTxt.text?.replacingOccurrences(of: " ", with: "")
             param["remember_token"] = getPushToken()
+            printData(param)
             LoginAPIManager.shared.serviceCallToMobileLogin(param) { (dict) in
                 
                 if let is_clincia = dict["is_clincia"] as? Bool {

@@ -59,7 +59,11 @@ open class DatePickerManager: NSObject, UIPickerViewDelegate, UIPickerViewDataSo
     @objc open func showPicker(title: String?, picker:((_ picker: UIDatePicker) -> Void)?, completion:DatePickerDateCompletion?) {
         let datePicker = UIDatePicker()
         datePicker.timeZone = self.timeZone
-        
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
         picker?(datePicker)
         
         self.showPicker(title: title, view: datePicker) { (cancel) in

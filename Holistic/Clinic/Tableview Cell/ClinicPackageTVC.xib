@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -28,7 +29,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pp-Qz-PJm" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                         <rect key="frame" x="10" y="5" width="300" height="217"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ms Maryam Najjeeb Al Filli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-Cj-mbM" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ms Maryam Najjeeb Al Filli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-Cj-mbM" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="280" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -40,24 +41,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-gS-4Ax">
-                                <rect key="frame" x="10" y="39" width="17" height="18"/>
-                                <color key="tintColor" red="0.96717911960000003" green="0.61462306980000003" blue="0.1157381311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="calendar"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sold on Sun, 18-Oct-2020 (3 days ago)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-FR-z8U" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
-                                <rect key="frame" x="37" y="41" width="225.5" height="14"/>
-                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
-                                <color key="textColor" red="1" green="0.47450980392156861" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Heal( Kiver Therapy 4 sessions, Visceral Therapy 4 sessions)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qY-ib-Inh" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7vm-I3-yfI">
+                                <rect key="frame" x="0.0" y="29" width="300" height="33"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bke-ie-vA6">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-gS-4Ax">
+                                                <rect key="frame" x="10" y="10" width="17" height="18"/>
+                                                <color key="tintColor" red="0.96717911960000003" green="0.61462306980000003" blue="0.1157381311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="calendar"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sold on Sun, 18-Oct-2020 (3 days ago)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-FR-z8U" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                                                <rect key="frame" x="37" y="12" width="210" height="14"/>
+                                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.47450980392156861" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qSV-FR-z8U" firstAttribute="leading" secondItem="aRm-gS-4Ax" secondAttribute="trailing" constant="10" id="7gG-K5-wE0"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qSV-FR-z8U" secondAttribute="trailing" constant="10" id="M6K-B8-gPV"/>
+                                            <constraint firstAttribute="bottom" secondItem="aRm-gS-4Ax" secondAttribute="bottom" constant="5" id="ddp-ch-6ym"/>
+                                            <constraint firstItem="aRm-gS-4Ax" firstAttribute="top" secondItem="bke-ie-vA6" secondAttribute="top" constant="10" id="lH8-9A-xJU"/>
+                                            <constraint firstAttribute="height" constant="33" id="ldU-Rp-l9V"/>
+                                            <constraint firstItem="qSV-FR-z8U" firstAttribute="top" secondItem="aRm-gS-4Ax" secondAttribute="top" constant="2" id="o50-xJ-TjA"/>
+                                            <constraint firstItem="aRm-gS-4Ax" firstAttribute="leading" secondItem="bke-ie-vA6" secondAttribute="leading" constant="10" id="rpl-fd-OOc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Deep Heal( Kiver Therapy 4 sessions, Visceral Therapy 4 sessions)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qY-ib-Inh" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="67" width="280" height="28.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -69,17 +90,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X8U-fn-Yzy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8U-fn-Yzy">
                                 <rect key="frame" x="10" y="105.5" width="40" height="2"/>
-                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="8d4-c9-MxY"/>
                                     <constraint firstAttribute="height" constant="2" id="Sva-4G-Qp6"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Appointments to be Made" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uv0-rt-wiG" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Appointments to be Made" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uv0-rt-wiG" customClass="TextField" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="117.5" width="190" height="35"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="IeQ-e0-eOF"/>
                                 </constraints>
@@ -101,7 +122,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiP-Ac-E9u" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiP-Ac-E9u" customClass="Button" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="210" y="117.5" width="80" height="35"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.37647058823529411" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -119,7 +140,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-v4-fmY">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-v4-fmY">
                                 <rect key="frame" x="10" y="162.5" width="13.5" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="13.5" id="OnG-ev-cbq"/>
@@ -128,10 +149,10 @@
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="medical_gray">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holistic Healing Medical Center" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEv-NB-avl" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Holistic Healing Medical Center" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEv-NB-avl" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="33.5" y="162.5" width="256.5" height="14.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -143,15 +164,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fWB-e2-cI3">
-                                <rect key="frame" x="10" y="196" width="230" height="2"/>
-                                <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="trackTintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fWB-e2-cI3">
+                                <rect key="frame" x="10" y="195" width="230" height="4"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                <color key="trackTintColor" systemColor="systemGray6Color"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4o-0y-bgJ" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="30%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4o-0y-bgJ" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="256" y="187.5" width="34" height="19"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="16"/>
-                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
@@ -161,19 +182,17 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="7qY-ib-Inh" secondAttribute="trailing" constant="10" id="1Os-Qf-Lka"/>
+                            <constraint firstItem="7vm-I3-yfI" firstAttribute="leading" secondItem="2pp-Qz-PJm" secondAttribute="leading" id="1yu-Rn-cIx"/>
                             <constraint firstItem="aiP-Ac-E9u" firstAttribute="leading" secondItem="Uv0-rt-wiG" secondAttribute="trailing" constant="10" id="6qQ-FG-00A"/>
+                            <constraint firstItem="7vm-I3-yfI" firstAttribute="top" secondItem="f3N-Cj-mbM" secondAttribute="bottom" id="8L5-Wh-asi"/>
                             <constraint firstItem="aiP-Ac-E9u" firstAttribute="top" secondItem="Uv0-rt-wiG" secondAttribute="top" id="9oF-vZ-iTb"/>
-                            <constraint firstItem="7qY-ib-Inh" firstAttribute="top" secondItem="qSV-FR-z8U" secondAttribute="bottom" constant="12" id="9pl-m5-v3G"/>
-                            <constraint firstItem="qSV-FR-z8U" firstAttribute="top" secondItem="aRm-gS-4Ax" secondAttribute="top" constant="2" id="AGn-XC-9d3"/>
                             <constraint firstAttribute="trailing" secondItem="fWB-e2-cI3" secondAttribute="trailing" constant="60" id="B75-SY-cFz"/>
                             <constraint firstItem="Uv0-rt-wiG" firstAttribute="top" secondItem="X8U-fn-Yzy" secondAttribute="bottom" constant="10" id="BOG-Za-B7q"/>
                             <constraint firstItem="cEv-NB-avl" firstAttribute="leading" secondItem="qO2-v4-fmY" secondAttribute="trailing" constant="10" id="IBB-LA-pc9"/>
-                            <constraint firstItem="aRm-gS-4Ax" firstAttribute="leading" secondItem="2pp-Qz-PJm" secondAttribute="leading" constant="10" id="PWR-7F-cTz"/>
                             <constraint firstItem="f3N-Cj-mbM" firstAttribute="top" secondItem="2pp-Qz-PJm" secondAttribute="top" constant="10" id="PdK-rX-6pv"/>
-                            <constraint firstItem="qSV-FR-z8U" firstAttribute="leading" secondItem="aRm-gS-4Ax" secondAttribute="trailing" constant="10" id="QSi-ae-qBM"/>
                             <constraint firstItem="Uv0-rt-wiG" firstAttribute="leading" secondItem="2pp-Qz-PJm" secondAttribute="leading" constant="10" id="Ra1-pH-ZsL"/>
                             <constraint firstItem="V4o-0y-bgJ" firstAttribute="centerY" secondItem="fWB-e2-cI3" secondAttribute="centerY" id="Rxn-EZ-8Mt"/>
                             <constraint firstItem="fWB-e2-cI3" firstAttribute="leading" secondItem="2pp-Qz-PJm" secondAttribute="leading" constant="10" id="TMI-Za-aWe"/>
@@ -181,8 +200,7 @@
                             <constraint firstAttribute="trailing" secondItem="V4o-0y-bgJ" secondAttribute="trailing" constant="10" id="YkK-6p-Gwq"/>
                             <constraint firstAttribute="bottom" secondItem="V4o-0y-bgJ" secondAttribute="bottom" constant="10.5" id="Zux-7O-Hd7"/>
                             <constraint firstItem="V4o-0y-bgJ" firstAttribute="top" secondItem="cEv-NB-avl" secondAttribute="bottom" constant="10.5" id="aoh-4s-3bF"/>
-                            <constraint firstItem="qSV-FR-z8U" firstAttribute="top" secondItem="f3N-Cj-mbM" secondAttribute="bottom" constant="12" id="bJY-MC-IhI"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qSV-FR-z8U" secondAttribute="trailing" constant="10" id="cfW-qU-u7K"/>
+                            <constraint firstAttribute="trailing" secondItem="7vm-I3-yfI" secondAttribute="trailing" id="cqI-Ll-XZw"/>
                             <constraint firstItem="cEv-NB-avl" firstAttribute="top" secondItem="Uv0-rt-wiG" secondAttribute="bottom" constant="10" id="cws-rA-2Gq"/>
                             <constraint firstItem="qO2-v4-fmY" firstAttribute="leading" secondItem="2pp-Qz-PJm" secondAttribute="leading" constant="10" id="d21-1o-7aI"/>
                             <constraint firstAttribute="trailing" secondItem="f3N-Cj-mbM" secondAttribute="trailing" constant="10" id="deL-kP-yrj"/>
@@ -191,6 +209,7 @@
                             <constraint firstAttribute="trailing" secondItem="aiP-Ac-E9u" secondAttribute="trailing" constant="10" id="jFQ-Cf-jXa"/>
                             <constraint firstItem="7qY-ib-Inh" firstAttribute="leading" secondItem="2pp-Qz-PJm" secondAttribute="leading" constant="10" id="pf0-Db-RuA"/>
                             <constraint firstItem="aiP-Ac-E9u" firstAttribute="bottom" secondItem="Uv0-rt-wiG" secondAttribute="bottom" id="qGj-IN-kYb"/>
+                            <constraint firstItem="7qY-ib-Inh" firstAttribute="top" secondItem="7vm-I3-yfI" secondAttribute="bottom" constant="5" id="rPp-ez-Tz9"/>
                             <constraint firstItem="f3N-Cj-mbM" firstAttribute="leading" secondItem="2pp-Qz-PJm" secondAttribute="leading" constant="10" id="urC-gF-1sN"/>
                             <constraint firstItem="X8U-fn-Yzy" firstAttribute="top" secondItem="7qY-ib-Inh" secondAttribute="bottom" constant="10" id="yYX-25-5b4"/>
                         </constraints>
@@ -209,11 +228,12 @@
                     <constraint firstItem="2pp-Qz-PJm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bqJ-YU-duE"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="appointmentTxt" destination="Uv0-rt-wiG" id="JpR-04-cdj"/>
                 <outlet property="dateLbl" destination="qSV-FR-z8U" id="g9N-Zr-l1H"/>
+                <outlet property="dateView" destination="bke-ie-vA6" id="gJm-v4-g6J"/>
                 <outlet property="descLbl" destination="7qY-ib-Inh" id="8BV-Si-fyf"/>
                 <outlet property="onGoingBtn" destination="aiP-Ac-E9u" id="OQo-GS-eQk"/>
                 <outlet property="orgNameLbl" destination="cEv-NB-avl" id="80j-G5-HGi"/>
@@ -224,8 +244,40 @@
             <point key="canvasLocation" x="133" y="154"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="7qY-ib-Inh">
+            <size key="intrinsicContentSize" width="355" height="14"/>
+        </designable>
+        <designable name="V4o-0y-bgJ">
+            <size key="intrinsicContentSize" width="34" height="19"/>
+        </designable>
+        <designable name="aiP-Ac-E9u">
+            <size key="intrinsicContentSize" width="46" height="26"/>
+        </designable>
+        <designable name="cEv-NB-avl">
+            <size key="intrinsicContentSize" width="168.5" height="14"/>
+        </designable>
+        <designable name="f3N-Cj-mbM">
+            <size key="intrinsicContentSize" width="189.5" height="19"/>
+        </designable>
+        <designable name="qSV-FR-z8U">
+            <size key="intrinsicContentSize" width="210" height="14"/>
+        </designable>
+    </designables>
     <resources>
         <image name="calendar" width="17" height="17"/>
         <image name="medical_gray" width="13.5" height="13.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

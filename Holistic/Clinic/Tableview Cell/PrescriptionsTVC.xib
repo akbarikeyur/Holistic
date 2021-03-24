@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,17 +19,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrescriptionsTVC" id="KGk-i7-Jjw" customClass="PrescriptionsTVC" customModule="Holistic" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrescriptionsTVC" id="KGk-i7-Jjw" customClass="PrescriptionsTVC" customModule="Holistic_Lifestyle" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-qg-DQl" customClass="View" customModule="Holistic" customModuleProvider="target">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-qg-DQl" customClass="View" customModule="Holistic_Lifestyle" customModuleProvider="target">
                         <rect key="frame" x="10" y="5" width="300" height="117"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chandanasavam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yay-Le-LzV" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Chandanasavam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yay-Le-LzV" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="280" height="16.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -40,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-t7-KlU">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-t7-KlU">
                                 <rect key="frame" x="9" y="31.5" width="15" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="V4z-71-TrH"/>
@@ -48,7 +49,7 @@
                                 </constraints>
                                 <state key="normal" image="ic_size"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30ml  |  Once or twice a day" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03m-Mm-edr" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="30ml  |  Once or twice a day" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03m-Mm-edr" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="30" y="35.5" width="260" height="14.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -60,16 +61,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eed-mp-qBa">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eed-mp-qBa">
                                 <rect key="frame" x="10" y="55" width="15" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="iO8-sL-Hgv"/>
                                     <constraint firstAttribute="height" constant="22" id="rAP-gf-XjA"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
                                 <state key="normal" image="clock_orange"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Day (s)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-GT-LN0" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10 Day (s)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-GT-LN0" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="30" y="58" width="260" height="14.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -81,13 +82,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-tS-LZN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-tS-LZN">
                                 <rect key="frame" x="0.0" y="81.5" width="300" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Zdo-28-JHq"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After lunch and dinner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txt-zz-P3y" customClass="Label" customModule="Holistic" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="After lunch and dinner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txt-zz-P3y" customClass="Label" customModule="Holistic_Lifestyle" customModuleProvider="target">
                                 <rect key="frame" x="35" y="92.5" width="265" height="14.5"/>
                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="12"/>
                                 <color key="textColor" red="0.92156862750000001" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,7 +100,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Fa-qsn">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Fa-qsn">
                                 <rect key="frame" x="10" y="92.5" width="14.5" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="14.5" id="L2w-jz-Dod"/>
@@ -112,11 +113,12 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="03m-Mm-edr" firstAttribute="top" secondItem="yay-Le-LzV" secondAttribute="bottom" constant="9" id="38E-PM-Omr"/>
                             <constraint firstItem="bqR-GT-LN0" firstAttribute="top" secondItem="03m-Mm-edr" secondAttribute="bottom" constant="8" id="6oq-w5-0DW"/>
                             <constraint firstItem="eed-mp-qBa" firstAttribute="leading" secondItem="VDT-qg-DQl" secondAttribute="leading" constant="10" id="8P2-bf-eVH"/>
+                            <constraint firstItem="eed-mp-qBa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lbS-t7-KlU" secondAttribute="bottom" constant="1.5" id="APx-uv-2rI"/>
                             <constraint firstAttribute="trailing" secondItem="03m-Mm-edr" secondAttribute="trailing" constant="10" id="B2P-pW-cZj"/>
                             <constraint firstItem="2G5-Fa-qsn" firstAttribute="top" secondItem="NjW-tS-LZN" secondAttribute="bottom" constant="10" id="Ciu-Al-Fmo"/>
                             <constraint firstItem="Txt-zz-P3y" firstAttribute="leading" secondItem="2G5-Fa-qsn" secondAttribute="trailing" constant="10.5" id="EJi-Hz-tcN"/>
@@ -152,7 +154,7 @@
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65v-I8-Omw">
                         <rect key="frame" x="10" y="126" width="300" height="1"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="dJJ-v7-e1G"/>
                         </constraints>
@@ -168,8 +170,8 @@
                     <constraint firstAttribute="trailing" secondItem="65v-I8-Omw" secondAttribute="trailing" constant="10" id="tFh-6H-MQB"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dietBtn" destination="2G5-Fa-qsn" id="W8p-Ih-ujb"/>
                 <outlet property="dietLbl" destination="Txt-zz-P3y" id="wyG-9D-Pnt"/>
@@ -180,10 +182,33 @@
             <point key="canvasLocation" x="133" y="154"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="03m-Mm-edr">
+            <size key="intrinsicContentSize" width="150" height="14"/>
+        </designable>
+        <designable name="Txt-zz-P3y">
+            <size key="intrinsicContentSize" width="118.5" height="14"/>
+        </designable>
+        <designable name="bqR-GT-LN0">
+            <size key="intrinsicContentSize" width="53.5" height="14"/>
+        </designable>
+        <designable name="yay-Le-LzV">
+            <size key="intrinsicContentSize" width="105.5" height="16.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="clock_orange" width="14.5" height="14.5"/>
         <image name="dash_line" width="344" height="1"/>
         <image name="diet" width="14.5" height="16"/>
         <image name="ic_size" width="7" height="13.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
